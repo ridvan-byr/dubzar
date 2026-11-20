@@ -64,3 +64,19 @@ def test_bytes_to_mono_16k_downmixes_and_resamples():
     assert out.dtype == np.float32
     assert len(out) == 1600
     assert abs(float(out[800]) - 0.5) < 0.01
+
+
+def test_queue_chunks_yields_arrays_until_none():
+    # iter(q.get, None) crashes on numpy arrays (array == None is elementwise).
+    import queue
+
+    from dubzar.capture import queue_chunks
+
+    q: queue.Queue = queue.Queue()
+    a, b = np.ones(4, dtype=np.float32), np.zeros(4, dtype=np.float32)
+    q.put(a)
+    q.put(b)
+    q.put(None)
+
+    assert [c is x for c, x in zip(queue_chunks(q), (a, b))] == [True, True]
+    assert q.empty()

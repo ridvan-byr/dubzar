@@ -57,3 +57,39 @@ def test_asks_model_to_filter_non_speech():
     WhisperTranscriber(model=model).transcribe(ONE_SECOND)
 
     assert model.calls[0]["vad_filter"] is True
+
+
+def test_falls_back_to_cpu_when_gpu_libraries_are_missing():
+    class GpuBrokenModel:
+        def transcribe(self, audio, **kwargs):
+            raise RuntimeError("Library cublas64_12.dll is not found or cannot be loaded")
+
+    created: list[str] = []
+
+    def factory(device: str):
+        created.append(device)
+        return GpuBrokenModel() if device == "auto" else FakeWhisperModel(["Hello"])
+
+    transcriber = WhisperTranscriber(device="auto", model_factory=factory)
+
+    result = transcriber.transcribe(ONE_SECOND)
+    again = transcriber.transcribe(ONE_SECOND)
+
+    assert result is not None and result.text == "Hello"
+    assert again is not None
+    assert created == ["auto", "cpu"]  # fell back once, then stayed on the CPU
+
+
+def test_cpu_failure_is_not_swallowed():
+    class BrokenModel:
+        def transcribe(self, audio, **kwargs):
+            raise RuntimeError("out of memory")
+
+    transcriber = WhisperTranscriber(device="cpu", model_factory=lambda device: BrokenModel())
+
+    try:
+        transcriber.transcribe(ONE_SECOND)
+    except RuntimeError as exc:
+        assert "out of memory" in str(exc)
+    else:
+        raise AssertionError("expected RuntimeError")

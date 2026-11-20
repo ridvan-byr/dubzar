@@ -11,6 +11,9 @@ dependencies = [
     "PySide6>=6.6",
 ]
 
+[project.scripts]
+dubzar = "dubzar.cli:main"
+
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 asr = ["faster-whisper>=1.0"]
