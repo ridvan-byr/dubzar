@@ -49,7 +49,8 @@ def main() -> int:
 
     pixels = np.asarray(shot)
     mean, spread = float(pixels.mean()), float(pixels.std())
-    print(f"\nyakalama: {w}x{h}, {took_ms:.0f} ms, ortalama parlaklık {mean:.1f}, değişim {spread:.1f}")
+    print(f"\nÖNDEKİ PENCERE: {title}")
+    print(f"yakalama: {w}x{h}, {took_ms:.0f} ms, ortalama parlaklık {mean:.1f}, değişim {spread:.1f}")
     if mean < 2 and spread < 2:
         print("SONUÇ: görüntü SİYAH geldi, bu modda ekran yakalanamıyor.")
     else:
