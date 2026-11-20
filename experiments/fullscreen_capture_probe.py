@@ -3,7 +3,7 @@
 Usage:  python experiments/fullscreen_capture_probe.py
 1. Start the game, turn its subtitles ON, get to a scene with a spoken, subtitled line. (Run this from a
    terminal you started BEFORE the game; do not alt-tab afterwards.)
-2. The probe waits 15 s (long enough to start a conversation in the game), takes ONE screenshot of the lower
+2. The probe waits 30 s (time to switch to the game and reach a subtitled line), takes ONE screenshot of the lower
    part of the screen, and tells you whether it came back black and what Windows OCR read.
 Nothing is sent anywhere; the screenshot is saved next to this file (experiments/probe_out/).
 """
@@ -18,7 +18,18 @@ from PIL import ImageGrab
 
 HERE = Path(__file__).parent
 OUT = HERE / "probe_out"
-WAIT_S = 15
+WAIT_S = 30
+
+
+def foreground_window_title() -> str:
+    """Which window is in front at the moment of the capture (so we know what was measured)."""
+    import ctypes
+
+    user32 = ctypes.windll.user32
+    hwnd = user32.GetForegroundWindow()
+    buffer = ctypes.create_unicode_buffer(256)
+    user32.GetWindowTextW(hwnd, buffer, 256)
+    return buffer.value or "(başlıksız pencere)"
 
 
 def main() -> int:
@@ -26,6 +37,7 @@ def main() -> int:
     for left in range(WAIT_S, 0, -1):
         print(f"\r{left:2d} sn sonra ekran yakalanacak (oyunda altyazılı bir konuşma olsun)…", end="", flush=True)
         time.sleep(1)
+    title = foreground_window_title()
     started = time.perf_counter()
     shot = ImageGrab.grab()
     took_ms = (time.perf_counter() - started) * 1000
