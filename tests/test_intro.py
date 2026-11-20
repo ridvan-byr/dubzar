@@ -102,3 +102,26 @@ def test_showing_again_restarts_the_animation(qapp):
 
     assert intro.progress("dP") < 1.0 and intro.message == "y"
     intro.hide()
+
+
+def test_closing_the_intro_unloads_its_qml_so_shutdown_prints_no_errors(qapp):
+    """Quitting used to print a wall of 'Cannot read property ... of null' from Intro.qml: the model was destroyed
+    while the view still evaluated bindings against it."""
+    from PySide6.QtCore import QCoreApplication, qInstallMessageHandler
+
+    from dubzar.ui.intro import IntroWindow
+
+    messages = []
+    previous = qInstallMessageHandler(lambda mode, context, message: messages.append(message))
+    try:
+        window = IntroWindow(animations=True)
+        window.show_hint("ile ayarları aç", "auto", keys=["Ctrl", "Shift", "D"])
+        QCoreApplication.processEvents()
+        window.close()
+        window._model = None                      # what tearing the objects down at exit does
+        for _ in range(5):
+            QCoreApplication.processEvents()
+    finally:
+        qInstallMessageHandler(previous)
+
+    assert not [m for m in messages if "TypeError" in m], messages

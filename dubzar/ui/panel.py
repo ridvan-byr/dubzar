@@ -87,5 +87,10 @@ class PanelWindow:
     def hide(self) -> None:
         self._root.setProperty("open", False)  # the window hides when the fade-out finishes
 
+    def close(self) -> None:
+        """Final teardown (see IntroWindow.close): unload the QML before the objects it binds to go away."""
+        self.view.hide()
+        self.view.setSource(QUrl())
+
     def toggle(self, screen: QRect) -> None:
         self.hide() if self.is_open else self.show(screen)

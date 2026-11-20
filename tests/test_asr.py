@@ -193,3 +193,46 @@ def test_cpu_threads_default_means_use_the_library_default(monkeypatch):
     WhisperTranscriber(device="cpu").load()
 
     assert seen["cpu_threads"] == 0  # 0 = CTranslate2's own default (all it wants): fine for a scan with the game closed
+
+
+class DoubtfulLanguageModel:
+    """First pass (language left to the model) guesses another language with low certainty; a second pass told
+    to expect English reads it. Records each call's ``language`` argument."""
+
+    def __init__(self, guessed="ar", probability=0.69, text="Keep your head down."):
+        self.guessed, self.probability, self.text = guessed, probability, text
+        self.languages: list = []
+
+    def transcribe(self, audio, **kwargs):
+        language = kwargs.get("language")
+        self.languages.append(language)
+        if language is None:
+            info = SimpleNamespace(language=self.guessed, language_probability=self.probability)
+        else:
+            info = SimpleNamespace(language=language, language_probability=1.0)
+        return iter([SimpleNamespace(text=self.text)]), info
+
+
+def test_a_doubtful_language_guess_is_retried_as_english_instead_of_dropped():
+    """Music and effects make Whisper guess 'ar' at 0.69 for a perfectly English line."""
+    model = DoubtfulLanguageModel(guessed="ar", probability=0.69)
+
+    result = WhisperTranscriber(model=model).transcribe(ONE_SECOND)
+
+    assert result is not None and result.text == "Keep your head down."
+    assert model.languages == [None, "en"]
+
+
+def test_a_confident_other_language_is_still_rejected_without_a_second_pass():
+    """A game voiced in Chinese must not get English-sounding garbage subtitles."""
+    model = DoubtfulLanguageModel(guessed="zh", probability=0.97)
+
+    assert WhisperTranscriber(model=model).transcribe(ONE_SECOND) is None
+    assert model.languages == [None]
+
+
+def test_english_needs_no_second_pass():
+    model = DoubtfulLanguageModel(guessed="en", probability=0.95)
+
+    assert WhisperTranscriber(model=model).transcribe(ONE_SECOND) is not None
+    assert model.languages == [None]

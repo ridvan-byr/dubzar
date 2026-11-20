@@ -10,6 +10,7 @@ from dubzar.errors import ModelMissingError
 log = logging.getLogger(__name__)
 
 SR = 16000
+LANGUAGE_DOUBT = 0.8   # below this, a guess of another language is not trusted (music and effects fool it)
 
 
 @dataclass(frozen=True)
@@ -72,12 +73,17 @@ class WhisperTranscriber:
             ) from exc
 
     def _run(self, samples: np.ndarray) -> tuple[str, str, float]:
-        segments, info = self._get_model().transcribe(
-            np.asarray(samples, dtype=np.float32), vad_filter=True
-        )
+        audio = np.asarray(samples, dtype=np.float32)
+        segments, info = self._get_model().transcribe(audio, vad_filter=True)
+        language = info.language
+        if language != self._source_language and getattr(info, "language_probability", 1.0) < LANGUAGE_DOUBT:
+            # An unsure "Arabic" on a line with music is usually English: read it as English and let the confidence
+            # check decide. A confident other language (a game voiced in Chinese) is still rejected.
+            segments, info = self._get_model().transcribe(audio, vad_filter=True, language=self._source_language)
+            language = self._source_language
         parts = list(segments)
         text = " ".join(s.text.strip() for s in parts).strip()
-        return text, info.language, _confidence(parts)
+        return text, language, _confidence(parts)
 
     def transcribe(self, samples: np.ndarray) -> Transcription | None:
         try:

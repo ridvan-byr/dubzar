@@ -231,6 +231,8 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     try:
         app.exec()
     finally:
+        panel.close()       # unload the windows' QML first, so quitting prints no "of null" errors
+        intro.close()
         hotkey.stop()
         if screen_source is not None:
             screen_source.stop()
