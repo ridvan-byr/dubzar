@@ -3,11 +3,12 @@ name = "dubzar"
 version = "0.1.0"
 description = "Dubzar: universal Turkish subtitles and dubbing for games"
 requires-python = ">=3.11"
-dependencies = ["numpy>=1.26", "scipy>=1.11"]
+dependencies = ["numpy>=1.26", "scipy>=1.11", "soundfile>=0.12"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 asr = ["faster-whisper>=1.0"]
+translate = ["transformers>=4.40", "torch", "sentencepiece", "sacremoses"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
