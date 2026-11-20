@@ -48,6 +48,12 @@ def _screen(value: Any) -> str:
     raise ValueError(f"screen must be 'auto', 'primary' or a number >= 1, got {value!r}")
 
 
+def _panel_screen(value: Any) -> str:
+    if value == "other":
+        return value
+    return _screen(value)
+
+
 def _hotkey(value: Any) -> str:
     parse_hotkey(value)  # raises ValueError when it is not a usable hotkey
     return value
@@ -72,6 +78,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "background_color": ("#000000", _hex_color),
     "background_opacity": (60, _int_between(0, 100)),  # percent
     "screen": ("auto", _screen),
+    "panel_screen": ("other", _panel_screen),  # where the settings panel opens; "other" = not the game's
     "hotkey": ("Ctrl+Shift+D", _hotkey),
     "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }

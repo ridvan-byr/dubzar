@@ -72,6 +72,10 @@ class SettingsController(QObject):
     def screen(self) -> str:
         return self._s.screen
 
+    @Property(str, notify=changed)
+    def panelScreen(self) -> str:
+        return self._s.panel_screen
+
     @Property(list, notify=changed)
     def hotkeyParts(self) -> list:
         return self._s.hotkey.split("+")
@@ -161,6 +165,14 @@ class SettingsController(QObject):
         order = ["auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
         current = self._s.screen if self._s.screen in order else "auto"
         self._s.screen = order[(order.index(current) + 1) % len(order)]
+        self.activity.emit()
+
+    @Slot()
+    def cyclePanelScreen(self) -> None:
+        """other -> auto -> primary -> 2 -> ... -> other, limited to the screens that exist."""
+        order = ["other", "auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
+        current = self._s.panel_screen if self._s.panel_screen in order else "other"
+        self._s.panel_screen = order[(order.index(current) + 1) % len(order)]
         self.activity.emit()
 
     @Slot()

@@ -364,7 +364,7 @@ Item {
                 Hair {}
                 RowLayout {
                     Layout.fillWidth: true
-                    Lbl { text: "Ekran"; Layout.fillWidth: true }
+                    Lbl { text: "Altyazı ekranı"; Layout.fillWidth: true }
                     Rectangle {
                         id: screenPill
                         implicitWidth: screenText.implicitWidth + 24
@@ -391,6 +391,41 @@ Item {
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
                             onClicked: ctl.cycleScreen()
+                        }
+                    }
+                }
+
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Lbl { text: "Panel ekranı"; Layout.fillWidth: true }
+                    Rectangle {
+                        id: panelPill
+                        implicitWidth: panelText.implicitWidth + 24
+                        implicitHeight: 26
+                        radius: 13
+                        color: dz.surface
+                        border.color: dz.hairline
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Panel ekranını seç"
+                        Keys.onSpacePressed: ctl.cyclePanelScreen()
+                        Keys.onReturnPressed: ctl.cyclePanelScreen()
+                        Text {
+                            id: panelText
+                            anchors.centerIn: parent
+                            color: dz.text
+                            font.family: ctl.sansFamily
+                            font.pixelSize: 12
+                            text: ctl.panelScreen === "other" ? "Diğer ekran"
+                                : ctl.panelScreen === "auto" ? "Oyunun ekranı"
+                                : ctl.panelScreen === "primary" ? "Ana ekran" : ctl.panelScreen + ". ekran"
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.cyclePanelScreen()
                         }
                     }
                 }

@@ -289,3 +289,22 @@ def test_showing_the_panel_never_takes_keyboard_focus_from_the_game(qapp):
     window = PanelWindow(ctl)
 
     assert window.view.flags() & Qt.WindowDoesNotAcceptFocus
+
+
+def test_panel_screen_defaults_to_the_other_screen_and_cycles(qapp):
+    settings = Settings()
+    ctl = SettingsController(settings, screen_count=3)
+
+    visited = [settings.panel_screen]
+    for _ in range(5):
+        ctl.cyclePanelScreen()
+        visited.append(settings.panel_screen)
+
+    assert visited == ["other", "auto", "primary", "2", "3", "other"]
+
+
+def test_panel_screen_rejects_nonsense():
+    import pytest
+    with pytest.raises(ValueError):
+        Settings(panel_screen="left")
+    assert Settings(panel_screen="other").panel_screen == "other"

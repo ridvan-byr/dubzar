@@ -164,3 +164,13 @@ def test_foreground_monitor_origin_is_a_point_or_none_on_this_machine():
     origin = foreground_monitor_origin()
 
     assert origin is None or (len(origin) == 2 and all(isinstance(v, int) for v in origin))
+
+
+def test_other_screen_avoids_the_games_screen():
+    assert pick_screen_index(TWO_SCREENS, (-1920, 0), "other") == 0  # game on screen 2 -> panel on primary
+    assert pick_screen_index(TWO_SCREENS, (0, 0), "other") == 1      # game on primary -> panel on the other
+
+
+def test_other_screen_falls_back_to_the_games_screen_when_alone():
+    assert pick_screen_index([(0, 0)], (0, 0), "other") == 0
+    assert pick_screen_index(TWO_SCREENS, None, "other") == 1  # game unknown: assume primary

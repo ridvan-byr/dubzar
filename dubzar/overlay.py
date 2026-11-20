@@ -30,10 +30,14 @@ def pick_screen_index(screen_origins: list[tuple[int, int]],
     """Index into ``screen_origins`` (top-left of each screen; index 0 is the primary).
 
     Never fails: an unknown monitor or a screen number that is not plugged in
-    falls back to the primary screen.
+    falls back to the primary screen. ``other`` is a screen the game is not on (for the settings
+    panel, so it never covers the game).
     """
-    if setting == "auto":
-        return screen_origins.index(monitor_origin) if monitor_origin in screen_origins else 0
+    if setting in ("auto", "other"):
+        game = screen_origins.index(monitor_origin) if monitor_origin in screen_origins else 0
+        if setting == "auto":
+            return game
+        return next((i for i in range(len(screen_origins)) if i != game), game)  # alone: stay on the game's
     if setting.isdigit() and int(setting) - 1 < len(screen_origins):
         return int(setting) - 1
     return 0

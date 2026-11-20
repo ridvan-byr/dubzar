@@ -77,7 +77,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
             panel.hide()
             return
         overlay.set_preview(PREVIEW_TEXT)  # so the user sees what they are adjusting
-        panel.show(target_screen(settings.screen))
+        panel.show(target_screen(settings.panel_screen))
 
     bridge.toggle_panel.connect(toggle_panel)
 
