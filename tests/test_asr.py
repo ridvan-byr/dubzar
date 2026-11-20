@@ -1,6 +1,7 @@
 from types import SimpleNamespace
 
 import numpy as np
+import pytest
 
 from dubzar.asr import Transcription, WhisperTranscriber
 
@@ -122,3 +123,38 @@ def test_existing_callers_still_work_without_confidence():
     assert Transcription("a", "en", 1.0).confidence == 1.0
     result = WhisperTranscriber(model=FakeWhisperModel(["Hello"])).transcribe(ONE_SECOND)
     assert result is not None and result.confidence == 1.0  # segments without scores count as fully confident
+
+
+# --- models are never downloaded behind the user's back ---------------------------------------
+from dubzar.errors import ModelMissingError  # noqa: E402
+
+
+def test_load_creates_the_model_now_so_problems_show_up_before_the_game_starts():
+    created: list[str] = []
+
+    def factory(device: str):
+        created.append(device)
+        return FakeWhisperModel(["Hi"])
+
+    transcriber = WhisperTranscriber(device="cpu", model_factory=factory)
+    transcriber.load()
+    transcriber.transcribe(ONE_SECOND)
+
+    assert created == ["cpu"]  # loaded once, reused
+
+
+def test_a_missing_model_without_download_permission_is_a_clear_error():
+    def factory(device: str):
+        raise OSError("Cannot find an appropriate cached snapshot folder")
+
+    transcriber = WhisperTranscriber(model_size="small", model_factory=factory)
+
+    with pytest.raises(ModelMissingError) as info:
+        transcriber.load()
+
+    assert "small" in str(info.value) and "--allow-download" in str(info.value)
+
+
+def test_download_is_off_unless_explicitly_allowed():
+    assert WhisperTranscriber()._allow_download is False
+    assert WhisperTranscriber(allow_download=True)._allow_download is True

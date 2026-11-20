@@ -5,6 +5,8 @@ from typing import Any, Callable, Protocol
 
 import numpy as np
 
+from dubzar.errors import ModelMissingError
+
 log = logging.getLogger(__name__)
 
 SR = 16000
@@ -34,22 +36,37 @@ class WhisperTranscriber:
 
     def __init__(self, model_size: str = "small", device: str = "auto",
                  source_language: str = "en", model: Any = None,
-                 model_factory: Callable[[str], Any] | None = None):
+                 model_factory: Callable[[str], Any] | None = None, allow_download: bool = False):
         self._model_size = model_size
         self._device = device
         self._source_language = source_language
         self._model = model
+        self._allow_download = allow_download
         self._factory = model_factory or self._default_factory
 
     def _default_factory(self, device: str) -> Any:
         from faster_whisper import WhisperModel
 
-        return WhisperModel(self._model_size, device=device)
+        return WhisperModel(self._model_size, device=device, local_files_only=not self._allow_download)
 
     def _get_model(self) -> Any:
         if self._model is None:
             self._model = self._factory(self._device)
         return self._model
+
+    def load(self) -> None:
+        """Create the model now (slow), so a missing model shows up before the game starts.
+
+        Models are only downloaded when ``allow_download`` is set; otherwise a missing model
+        raises ``ModelMissingError`` with the flag that grants the download.
+        """
+        try:
+            self._get_model()
+        except (OSError, ValueError) as exc:
+            raise ModelMissingError(
+                f"Whisper modeli '{self._model_size}' bu bilgisayarda yok. İndirmek için --allow-download "
+                f"ile yeniden çalıştırın. ({exc})"
+            ) from exc
 
     def _run(self, samples: np.ndarray) -> tuple[str, str, float]:
         segments, info = self._get_model().transcribe(

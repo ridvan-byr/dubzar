@@ -1,6 +1,8 @@
 import re
 from typing import Callable, Protocol, Sequence
 
+from dubzar.errors import ModelMissingError
+
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
 
 
@@ -8,6 +10,14 @@ class Translator(Protocol):
     def translate(self, text: str, context: Sequence[str] = ()) -> str:
         """Translate English ``text`` to Turkish. ``context`` holds earlier lines
         of the same scene for translators that can use it."""
+
+
+def _make_pipeline(local_only: bool) -> Callable[[str], str]:
+    """The real Opus-MT translation function (text -> text); a seam so tests need no model."""
+    from transformers import pipeline
+
+    pipe = pipeline("translation", model=MODEL_NAME, model_kwargs={"local_files_only": local_only})
+    return lambda text: pipe(text, max_length=256)[0]["translation_text"]
 
 
 class OpusMtTranslator:
@@ -21,17 +31,25 @@ class OpusMtTranslator:
     """
 
     def __init__(self, glossary: dict[str, str] | None = None,
-                 backend: Callable[[str], str] | None = None):
+                 backend: Callable[[str], str] | None = None, allow_download: bool = False):
         self._glossary = glossary or {}
         self._backend = backend
+        self._allow_download = allow_download
 
     def _get_backend(self) -> Callable[[str], str]:
         if self._backend is None:
-            from transformers import pipeline
-
-            pipe = pipeline("translation", model=MODEL_NAME)
-            self._backend = lambda text: pipe(text, max_length=256)[0]["translation_text"]
+            self._backend = _make_pipeline(not self._allow_download)
         return self._backend
+
+    def load(self) -> None:
+        """Create the model now (slow). Downloads only happen with ``allow_download``."""
+        try:
+            self._get_backend()
+        except (OSError, ValueError) as exc:
+            raise ModelMissingError(
+                f"Çeviri modeli ({MODEL_NAME}) bu bilgisayarda yok. İndirmek için --allow-download "
+                f"ile yeniden çalıştırın. ({exc})"
+            ) from exc
 
     def translate(self, text: str, context: Sequence[str] = ()) -> str:
         text = text.strip()
