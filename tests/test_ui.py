@@ -433,3 +433,17 @@ def test_close_button_closes_the_panel(qapp):
     QTest.mouseClick(window.view, Qt.LeftButton, Qt.NoModifier, point)
 
     assert wait_until(lambda: not window.is_open, 1.0)
+
+
+def test_plain_live_status_is_not_shown_in_the_header(qapp):
+    ctl = SettingsController(Settings(), animations=False)
+    ctl.set_live(True)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 800, 600))
+    wait_until(lambda: window.view.isExposed(), 1.0)
+    label = window.view.rootObject().findChild(QQuickItem, "statusLabel")
+
+    assert not label.isVisible()                     # "Canlı" added nothing the user needs
+    ctl.set_scan_progress(40, 100)
+    assert wait_until(lambda: label.isVisible(), 1.0)  # but progress is worth showing
+    window.view.hide()

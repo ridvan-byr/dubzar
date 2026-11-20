@@ -282,8 +282,15 @@ Item {
                         Accessible.role: Accessible.Graphic
                         Accessible.name: "Dubzar"
                     }
-                    Rectangle { width: 6; height: 6; radius: 3; color: dz.accent }
-                    Lbl { text: ctl.status; Layout.fillWidth: true; elide: Text.ElideRight }
+                    Rectangle { width: 6; height: 6; radius: 3; color: dz.accent; visible: ctl.status !== "Canlı" }
+                    Lbl {  // plain "Canlı" is not shown (it said nothing useful); scan progress still is
+                        objectName: "statusLabel"
+                        text: ctl.status
+                        visible: ctl.status !== "Canlı"
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+                    Item { Layout.fillWidth: true; visible: ctl.status === "Canlı" }
                     Rectangle {
                         id: closeBtn
                         objectName: "closeButton"
