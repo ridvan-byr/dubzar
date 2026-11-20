@@ -157,3 +157,44 @@ def test_reads_compressed_formats(audio_dir, store, ext):
 
     assert (report.indexed, report.failed) == (1, 0)
     assert store.get_cue(f"voice{ext}") is not None
+
+
+def test_no_speech_files_are_not_transcribed_again_on_rerun(audio_dir, store):
+    write_wav(audio_dir / "grunt.wav", synth_line(1))
+    transcriber = FakeTranscriber(result=None)
+    scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
+
+    second = scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
+
+    assert transcriber.calls == 1
+    assert second.skipped_no_speech == 1
+
+
+def test_retry_skipped_transcribes_them_again(audio_dir, store):
+    write_wav(audio_dir / "grunt.wav", synth_line(1))
+    transcriber = FakeTranscriber(result=None)
+    scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
+    transcriber.result = Transcription("hello", "en", 3.0)  # e.g. a better model now hears speech
+
+    report = scan_folder(str(audio_dir), store, transcriber, PrefixTranslator(), retry_skipped=True)
+
+    assert transcriber.calls == 2
+    assert report.indexed == 1
+    assert store.get_cue("grunt.wav") is not None
+
+
+def test_failed_files_are_retried_on_rerun(audio_dir, store):
+    write_wav(audio_dir / "a.wav", synth_line(1))
+
+    class FlakyOnce(FakeTranscriber):
+        def transcribe(self, samples):
+            self.calls += 1
+            if self.calls == 1:
+                raise RuntimeError("model crashed")
+            return self.result
+
+    transcriber = FlakyOnce()
+    first = scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
+    second = scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
+
+    assert (first.failed, second.indexed) == (1, 1)

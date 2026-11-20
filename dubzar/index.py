@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS hashes (
     anchor  INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_hashes_hash ON hashes(hash);
+CREATE TABLE IF NOT EXISTS skipped (digest TEXT PRIMARY KEY);
 """
 
 
@@ -66,6 +67,16 @@ class IndexStore:
                     [(h, cue.line_id, anchor) for h, anchor in hashes],
                 )
         return True
+
+    def add_skipped(self, digest: str) -> None:
+        """Remember audio that had no usable speech so a re-run does not transcribe it again."""
+        with self._lock, self._db:
+            self._db.execute("INSERT OR IGNORE INTO skipped VALUES (?)", (digest,))
+
+    def is_skipped(self, digest: str) -> bool:
+        with self._lock:
+            row = self._db.execute("SELECT 1 FROM skipped WHERE digest = ?", (digest,)).fetchone()
+        return row is not None
 
     def count_lines(self) -> int:
         with self._lock:
