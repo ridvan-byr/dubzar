@@ -7,10 +7,13 @@
 2. Dublaj öncesi TTS motor karşılaştırması (`docs/TTS_BAKEOFF.md`), sonra Aşama 2 planı (karakter sesi, duygu, süre eşleme, dublaj klipleri).
 3. Oyun motoru arşivlerinden ses çıkarma bağdaştırıcıları (Wwise, FMOD, Unity, Unreal) için ayrı plan.
 
-## Altyazı katmanı ayarları (kullanıcı isteği, ana hattan sonra)
-- Altyazı konumunu ayarlama (sürükleyerek veya kaydırma değerleriyle; şimdilik yalnızca üst / orta / alt).
-- ~~Altyazının hangi ekranda görüneceğini seçme~~ — YAPILDI: `--screen auto|primary|N` (varsayılan auto = oyunun/ön plandaki pencerenin ekranı).
-- Bu ayarlar için küçük bir ayar penceresi ve ayarların dosyada saklanması.
+## Altyazı katmanı ayarları ve panel
+- ~~Altyazı konumunu ayarlama~~ — YAPILDI (panelde mini ekranda sürükle, yön tuşlarıyla da).
+- ~~Hangi ekranda görüneceğini seçme~~ — YAPILDI (`auto` = oyunun ekranı, `primary`, 1, 2, ...).
+- ~~Ayar paneli, kısayolla açılma, ayarların kaydedilmesi~~ — YAPILDI (Ctrl+Shift+D; boyut, renkler, opaklık, altyazı aç/kapat, varsayılana dön).
+- Panelde kısayolu değiştirebilme (şimdilik ayar dosyasından: `%APPDATA%\Dubzar\settings.json`).
+- Yazı tiplerini (DM Sans, Instrument Serif) uygulamayla paketlemek. Şimdi Segoe UI ve Georgia yedekleri kullanılıyor. İndirme izni ve OFL lisans doğrulaması gerekir.
+- "Dublaj" anahtarı dublaj gelene kadar "yakında" olarak soluk; dublaj bitince `dubbing_available=True` yapılacak.
 
 ## Küçük iyileştirmeler ve açık işler
 - ~~Konuşma olmayan dosyalar tarama yeniden başlatılınca tekrar tanınıyor~~ — YAPILDI: atlanan dosyalar hatırlanıyor; daha iyi model sonrası `scan --retry-skipped`.

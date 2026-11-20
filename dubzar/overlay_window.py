@@ -1,18 +1,18 @@
-"""The on-screen subtitle window: frameless, always on top, click-through, never takes focus."""
+"""The on-screen subtitle window: frameless, always on top, click-through, never takes focus.
+
+It follows a live ``Settings`` object: colors, size, position, screen and the
+subtitles on/off switch all apply the moment they change.
+"""
 
 import time
 
 from PySide6.QtCore import Qt, QTimer
-from PySide6.QtGui import QGuiApplication
+from PySide6.QtGui import QColor, QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from dubzar.models import Cue
-from dubzar.overlay import (
-    OverlaySettings,
-    SubtitleTimeline,
-    foreground_monitor_origin,
-    pick_screen_index,
-)
+from dubzar.overlay import SubtitleTimeline, foreground_monitor_origin, pick_screen_index
+from dubzar.settings import Settings
 
 TICK_MS = 100
 SCREEN_WIDTH_FRACTION = 0.8
@@ -20,10 +20,11 @@ EDGE_MARGIN_FRACTION = 0.06
 
 
 class OverlayWindow(QWidget):
-    def __init__(self, settings: OverlaySettings):
+    def __init__(self, settings: Settings):
         super().__init__()
         self._settings = settings
         self._timeline = SubtitleTimeline()
+        self._preview: str | None = None
         self.setWindowFlags(
             Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool
             | Qt.WindowTransparentForInput | Qt.WindowDoesNotAcceptFocus
@@ -32,14 +33,11 @@ class OverlayWindow(QWidget):
         self.setAttribute(Qt.WA_ShowWithoutActivating)
 
         self._label = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
-        self._label.setStyleSheet(
-            f"color: {settings.color}; background: rgba(0, 0, 0, 150);"
-            f"border-radius: 8px; padding: 8px 16px; font-size: {settings.font_size}px;"
-            "font-weight: 600;"
-        )
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
         layout.addWidget(self._label)
+        self._restyle()
+        settings.on_change(self._on_setting_changed)
 
         self._timer = QTimer(self)
         self._timer.timeout.connect(self.tick)
@@ -49,6 +47,15 @@ class OverlayWindow(QWidget):
     def text(self) -> str:
         return self._label.text()
 
+    @property
+    def label_style(self) -> str:
+        return self._label.styleSheet()
+
+    def set_preview(self, text: str | None) -> None:
+        """Show ``text`` until cleared (``None``), e.g. while the settings panel is open."""
+        self._preview = text
+        self.tick()
+
     def show_cue(self, cue: Cue, now: float | None = None) -> None:
         now = time.monotonic() if now is None else now
         self._timeline.show(cue, now)
@@ -56,8 +63,8 @@ class OverlayWindow(QWidget):
 
     def tick(self, now: float | None = None) -> None:
         now = time.monotonic() if now is None else now
-        text = self._timeline.current(now)
-        if text is None:
+        text = self._preview if self._preview is not None else self._timeline.current(now)
+        if text is None or not self._settings.subtitles_enabled:
             self._label.setText("")
             self.hide()
             return
@@ -66,52 +73,45 @@ class OverlayWindow(QWidget):
             self._place()
             self.show()
 
+    def _on_setting_changed(self, name: str) -> None:
+        self._restyle()
+        if name == "subtitles_enabled":
+            self.tick()
+        elif self.isVisible():
+            self._place()
+
+    def _restyle(self) -> None:
+        s = self._settings
+        bg = QColor(s.background_color)
+        self._label.setStyleSheet(
+            f"color: {s.text_color}; background: rgba({bg.red()}, {bg.green()}, {bg.blue()}, "
+            f"{s.background_opacity / 100:g}); border-radius: 8px; padding: 8px 16px; "
+            f"font-size: {s.font_size}px; font-weight: 600;"
+        )
+
     def _place(self) -> None:
         screens = QGuiApplication.screens()  # index 0 is the primary screen
         origins = [(s.geometry().x(), s.geometry().y()) for s in screens]
         index = pick_screen_index(origins, foreground_monitor_origin(), self._settings.screen)
         screen = screens[index].geometry()
-        width = int(screen.width() * SCREEN_WIDTH_FRACTION)
-        self._label.setFixedWidth(width)
+        self._label.setFixedWidth(int(screen.width() * SCREEN_WIDTH_FRACTION))
         self.adjustSize()
-        x = screen.x() + (screen.width() - self.width()) // 2
         margin = int(screen.height() * EDGE_MARGIN_FRACTION)
-        y = {
-            "top": screen.y() + margin,
-            "center": screen.y() + (screen.height() - self.height()) // 2,
-            "bottom": screen.y() + screen.height() - self.height() - margin,
-        }[self._settings.position]
-        self.move(x, y)
+        room = max(0, screen.height() - self.height() - 2 * margin)
+        self.move(screen.x() + (screen.width() - self.width()) // 2,
+                  screen.y() + margin + int(self._settings.vertical * room))
 
 
 def _demo() -> None:
     """Show sample subtitles for a few seconds: python -m dubzar.overlay_window"""
-    import ctypes
     import sys
 
     from PySide6.QtWidgets import QApplication
 
     app = QApplication(sys.argv)
-    window = OverlayWindow(OverlaySettings())
-    samples = ["Merhaba, bu bir altyazı denemesidir.", "İkinci satır: oyunun üstünde görünmeli."]
-    state = {"i": 0}
-
-    def next_cue():
-        if state["i"] >= len(samples):
-            app.quit()
-            return
-        window.show_cue(Cue(f"demo{state['i']}", "", samples[state["i"]], 2.0))
-        if state["i"] == 0 and sys.platform == "win32":
-            ex = ctypes.windll.user32.GetWindowLongW(int(window.winId()), -20) & 0xFFFFFFFF
-            flags = {"TRANSPARENT": 0x20, "TOPMOST": 0x8, "LAYERED": 0x80000,
-                     "NOACTIVATE": 0x08000000, "TOOLWINDOW": 0x80}
-            print({name: bool(ex & bit) for name, bit in flags.items()}, flush=True)
-        state["i"] += 1
-
-    timer = QTimer()
-    timer.timeout.connect(next_cue)
-    timer.start(3000)
-    next_cue()
+    window = OverlayWindow(Settings())
+    window.show_cue(Cue("demo", "", "Merhaba, bu bir altyazı denemesidir.", 4.0))
+    QTimer.singleShot(5500, app.quit)
     app.exec()
 
 
