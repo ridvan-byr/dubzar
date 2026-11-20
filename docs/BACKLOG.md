@@ -9,7 +9,7 @@
 
 ## Altyazı katmanı ayarları (kullanıcı isteği, ana hattan sonra)
 - Altyazı konumunu ayarlama (sürükleyerek veya kaydırma değerleriyle; şimdilik yalnızca üst / orta / alt).
-- Altyazının hangi ekranda görüneceğini seçme. Varsayılan: ön plandaki pencerenin (oyunun) bulunduğu ekran. Şimdi her zaman ana ekran.
+- ~~Altyazının hangi ekranda görüneceğini seçme~~ — YAPILDI: `--screen auto|primary|N` (varsayılan auto = oyunun/ön plandaki pencerenin ekranı).
 - Bu ayarlar için küçük bir ayar penceresi ve ayarların dosyada saklanması.
 
 ## Küçük iyileştirmeler ve açık işler

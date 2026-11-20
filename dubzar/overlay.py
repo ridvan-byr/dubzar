@@ -29,15 +29,60 @@ class SubtitleTimeline:
 
 @dataclass(frozen=True)
 class OverlaySettings:
+    """``screen``: "auto" (the screen the foreground window/game is on), "primary",
+    or a 1-based screen number such as "2"."""
+
     font_size: int = 28
     position: str = "bottom"
     color: str = "#ffffff"
+    screen: str = "auto"
 
     def __post_init__(self) -> None:
         if self.position not in POSITIONS:
             raise ValueError(f"position must be one of {POSITIONS}, got {self.position!r}")
         if self.font_size <= 0:
             raise ValueError("font_size must be positive")
+        if self.screen not in ("auto", "primary") and not (self.screen.isdigit() and int(self.screen) >= 1):
+            raise ValueError(f"screen must be 'auto', 'primary' or a number >= 1, got {self.screen!r}")
+
+
+def pick_screen_index(screen_origins: list[tuple[int, int]],
+                      monitor_origin: tuple[int, int] | None, setting: str) -> int:
+    """Index into ``screen_origins`` (top-left of each screen; index 0 is the primary).
+
+    Never fails: an unknown monitor or a screen number that is not plugged in
+    falls back to the primary screen.
+    """
+    if setting == "auto":
+        return screen_origins.index(monitor_origin) if monitor_origin in screen_origins else 0
+    if setting.isdigit() and int(setting) - 1 < len(screen_origins):
+        return int(setting) - 1
+    return 0
+
+
+def foreground_monitor_origin() -> tuple[int, int] | None:
+    """Top-left corner of the monitor the foreground window is on, or None if unknown."""
+    if sys.platform != "win32":
+        return None
+    from ctypes import wintypes
+
+    class MONITORINFO(ctypes.Structure):
+        _fields_ = [("cbSize", wintypes.DWORD), ("rcMonitor", wintypes.RECT),
+                    ("rcWork", wintypes.RECT), ("dwFlags", wintypes.DWORD)]
+
+    user32 = ctypes.windll.user32
+    user32.GetForegroundWindow.restype = wintypes.HWND
+    user32.MonitorFromWindow.argtypes = [wintypes.HWND, wintypes.DWORD]
+    user32.MonitorFromWindow.restype = wintypes.HANDLE
+    user32.GetMonitorInfoW.argtypes = [wintypes.HANDLE, ctypes.POINTER(MONITORINFO)]
+    hwnd = user32.GetForegroundWindow()
+    if not hwnd:
+        return None
+    monitor = user32.MonitorFromWindow(hwnd, 2)  # MONITOR_DEFAULTTONEAREST
+    info = MONITORINFO(cbSize=ctypes.sizeof(MONITORINFO))
+    if not monitor or not user32.GetMonitorInfoW(monitor, ctypes.byref(info)):
+        return None
+    return int(info.rcMonitor.left), int(info.rcMonitor.top)
 
 
 def is_exclusive_fullscreen(notification_state: int) -> bool:

@@ -75,3 +75,44 @@ def test_window_shows_cue_and_hides_it_after_its_time(qapp):
     window.tick(now=2.0)
     assert window.text == ""
     assert not window.isVisible()
+
+
+# --- screen choice -----------------------------------------------------------
+from dubzar.overlay import foreground_monitor_origin, pick_screen_index  # noqa: E402
+
+TWO_SCREENS = [(0, 0), (-1920, 0)]  # primary at the origin, a second one on its left
+
+
+def test_auto_picks_the_screen_the_foreground_window_is_on():
+    assert pick_screen_index(TWO_SCREENS, (-1920, 0), "auto") == 1
+    assert pick_screen_index(TWO_SCREENS, (0, 0), "auto") == 0
+
+
+def test_auto_falls_back_to_primary_when_the_monitor_is_unknown():
+    assert pick_screen_index(TWO_SCREENS, None, "auto") == 0
+    assert pick_screen_index(TWO_SCREENS, (5000, 5000), "auto") == 0
+
+
+def test_primary_always_means_the_first_screen():
+    assert pick_screen_index(TWO_SCREENS, (-1920, 0), "primary") == 0
+
+
+def test_numbered_screen_is_one_based_and_never_crashes():
+    assert pick_screen_index(TWO_SCREENS, None, "2") == 1
+    assert pick_screen_index(TWO_SCREENS, None, "3") == 0  # unplugged monitor: use primary
+
+
+@pytest.mark.parametrize("bad", ["left", "0", "-1", ""])
+def test_invalid_screen_setting_is_rejected(bad):
+    with pytest.raises(ValueError):
+        OverlaySettings(screen=bad)
+
+
+def test_screen_defaults_to_auto():
+    assert OverlaySettings().screen == "auto"
+
+
+def test_foreground_monitor_origin_is_a_point_or_none_on_this_machine():
+    origin = foreground_monitor_origin()
+
+    assert origin is None or (len(origin) == 2 and all(isinstance(v, int) for v in origin))

@@ -73,3 +73,16 @@ def test_run_with_empty_index_tells_user_to_scan_first(tmp_path, capsys):
 
     assert code == 2
     assert "scan" in capsys.readouterr().err
+
+
+def test_run_rejects_an_invalid_screen_setting(tmp_path, capsys):
+    db = tmp_path / "game.db"
+    store = IndexStore(str(db))
+    store.add_line(Cue("a", "x", "y", 1.0), [(1, 1)], "d")
+    store.close()
+
+    code = main(["run", "--index", str(db), "--screen", "left"],
+                audio_chunks=iter([]), on_cue=lambda c: None)
+
+    assert code == 2
+    assert "screen" in capsys.readouterr().err.lower()
