@@ -6,6 +6,7 @@ from PySide6.QtCore import QRect, Qt, QUrl
 from PySide6.QtQuick import QQuickView
 
 from dubzar.ui.controller import SettingsController
+from dubzar.ui.fonts import load_bundled_fonts
 
 QML_FILE = Path(__file__).with_name("Panel.qml")
 EDGE = 24  # distance from the screen edge, in pixels
@@ -14,6 +15,7 @@ EDGE = 24  # distance from the screen edge, in pixels
 class PanelWindow:
     def __init__(self, controller: SettingsController):
         self._controller = controller
+        load_bundled_fonts()  # before the QML reads the font family names
         self.view = QQuickView()
         self.view.setFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool)
         self.view.setColor(Qt.transparent)

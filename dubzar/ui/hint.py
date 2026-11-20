@@ -21,7 +21,7 @@ class HintToast(QWidget):
         self._label = QLabel(alignment=Qt.AlignCenter)
         self._label.setStyleSheet(
             "color: #F7F5F0; background: rgba(43, 38, 34, 0.96); border: 1px solid #4A423B;"
-            "border-radius: 15px; padding: 6px 16px; font-size: 13px;"
+            "border-radius: 15px; padding: 6px 16px; font-size: 13px; font-family: 'DM Sans', 'Segoe UI';"
         )
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)

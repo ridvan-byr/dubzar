@@ -182,3 +182,33 @@ def test_dragging_the_position_pad_moves_the_subtitle(qapp, panel):
     QTest.mouseClick(window.view, Qt.LeftButton, Qt.NoModifier, top)
 
     assert wait_until(lambda: settings.vertical < 0.3)
+
+
+def test_bundled_fonts_register_and_cover_turkish_text(qapp):
+    from PySide6.QtGui import QFont, QFontMetricsF
+
+    from dubzar.ui.fonts import load_bundled_fonts
+
+    families = load_bundled_fonts()
+
+    assert "DM Sans" in families and "Instrument Serif" in families
+    for family in ("DM Sans", "Instrument Serif"):
+        metrics = QFontMetricsF(QFont(family))
+        missing = [c for c in "ğĞşŞİıöÖüÜçÇâ·…" if not metrics.inFontUcs4(ord(c))]
+        assert not missing, f"{family} lacks {missing}"
+
+
+def test_controller_prefers_the_bundled_fonts_once_loaded(qapp):
+    from dubzar.ui.fonts import load_bundled_fonts
+
+    load_bundled_fonts()
+    ctl = SettingsController(Settings())
+
+    assert (ctl.sansFamily, ctl.serifFamily) == ("DM Sans", "Instrument Serif")
+
+
+def test_font_files_ship_with_their_licenses():
+    from dubzar.ui.fonts import FONT_DIR
+
+    names = {p.name for p in FONT_DIR.iterdir()}
+    assert {"DMSans.ttf", "InstrumentSerif-Italic.ttf", "OFL-DMSans.txt", "OFL-InstrumentSerif.txt"} <= names
