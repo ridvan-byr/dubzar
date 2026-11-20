@@ -4,9 +4,11 @@ import warnings
 from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
+from dubzar.textsplit import split_pieces
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
 # The repository also holds TensorFlow/Flax copies of the weights; we only ever need the PyTorch ones.
+TRANSLATION_VERSION = "2"  # bump when the way text is prepared or translated changes: remembered lines are then redone
 NUM_BEAMS = 4  # Opus-MT default; fewer beams are faster but a little less accurate
 UNNEEDED_FILES = ["tf_model.h5", "*.h5", "flax_model*", "*.msgpack", "*.zip", "*.md"]
 
@@ -76,9 +78,13 @@ class OpusMtTranslator:
             ) from exc
 
     def translate(self, text: str, context: Sequence[str] = ()) -> str:
-        text = text.strip()
-        if not text:
-            return ""
+        parts = []
+        for piece in split_pieces(text):  # one sentence at a time; the speaker's name stays out of the model
+            body = self._translate_sentence(piece.text)
+            parts.append(f"{piece.speaker}: {body}" if piece.speaker else body)
+        return " ".join(part for part in parts if part)
+
+    def _translate_sentence(self, text: str) -> str:
         protected, restore = self._protect_terms(text)
         translated = self._get_backend()(protected)
         for placeholder, target in restore.items():

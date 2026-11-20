@@ -131,3 +131,29 @@ def test_translator_passes_its_cpu_thread_limit_to_the_model(monkeypatch):
     OpusMtTranslator().load()
 
     assert seen == [2, 0]
+
+
+def test_each_sentence_goes_to_the_model_separately():
+    seen = []
+    translator = OpusMtTranslator(backend=lambda text: seen.append(text) or "T(" + text + ")")
+
+    result = translator.translate("You think this is a game? People die out here.")
+
+    assert seen == ["You think this is a game?", "People die out here."]
+    assert result == "T(You think this is a game?) T(People die out here.)"
+
+
+def test_speaker_name_never_reaches_the_model_and_is_put_back():
+    seen = []
+    translator = OpusMtTranslator(backend=lambda text: seen.append(text) or "çeviri")
+
+    result = translator.translate("Brian: But the count was good.")
+
+    assert seen == ["But the count was good."]
+    assert result == "Brian: çeviri"
+
+
+def test_several_speakers_in_one_subtitle():
+    translator = OpusMtTranslator(backend=lambda text: "[" + text + "]")
+
+    assert translator.translate("Brian: Hello there. Donnie: Hi, Brian.") == "Brian: [Hello there.] Donnie: [Hi, Brian.]"

@@ -37,7 +37,7 @@ def subtitle_text(lines: list[str]) -> str | None:
 
 def _normal(text: str) -> str:
     # capital I, lower-case l, 1 and | look alike to OCR
-    return re.sub(r"[Il1|]", "l", text.lower())
+    return re.sub(r"[il1|]", "l", text.lower())
 
 
 def same_subtitle(a: str, b: str) -> bool:

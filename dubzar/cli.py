@@ -5,6 +5,7 @@
 """
 
 import argparse
+import hashlib
 import json
 import logging
 import sys
@@ -17,10 +18,11 @@ from dubzar.asr import Transcriber, WhisperTranscriber
 from dubzar.errors import ModelMissingError
 from dubzar.index import IndexStore
 from dubzar.live import LivePipeline
+from dubzar.memory import MemoizedTranslator, TranslationMemory
 from dubzar.models import Cue
 from dubzar.scan import scan_folder
-from dubzar.settings import Settings, load_settings
-from dubzar.translate import OpusMtTranslator, ThreadSafeTranslator, Translator
+from dubzar.settings import Settings, default_settings_path, load_settings
+from dubzar.translate import MODEL_NAME, TRANSLATION_VERSION, OpusMtTranslator, ThreadSafeTranslator, Translator
 
 POSITIONS = {"top": 0.0, "center": 0.5, "bottom": 1.0}
 
@@ -39,6 +41,15 @@ def _load_glossary(path: str | None) -> dict[str, str]:
     return data
 
 
+def _open_memory(path: str | None, glossary: dict[str, str]) -> TranslationMemory:
+    """The translation memory: a line translated once is answered from this file from then on. Entries belong to
+    this model, this way of translating and this glossary, so changing any of them starts fresh."""
+    file = Path(path) if path else default_settings_path().with_name("translations.db")
+    file.parent.mkdir(parents=True, exist_ok=True)
+    glossary_id = hashlib.sha256(json.dumps(glossary, sort_keys=True).encode("utf-8")).hexdigest()[:10]
+    return TranslationMemory(file, f"{MODEL_NAME}|v{TRANSLATION_VERSION}|{glossary_id}")
+
+
 def _build_models(args, glossary: dict[str, str], transcriber: Transcriber | None,
                   translator: Translator | None) -> tuple[Transcriber, Translator]:
     """The real models unless fakes are injected. A model that is not on this computer is never
@@ -48,9 +59,9 @@ def _build_models(args, glossary: dict[str, str], transcriber: Transcriber | Non
                                          allow_download=args.allow_download, cpu_threads=args.cpu_threads)
         transcriber.load()
     if translator is None:
-        translator = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download,
-                                      threads=args.cpu_threads)
-        translator.load()
+        model = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download, threads=args.cpu_threads)
+        model.load()
+        translator = MemoizedTranslator(model, _open_memory(getattr(args, "memory", None), glossary))
     return transcriber, ThreadSafeTranslator(translator)
 
 
@@ -156,6 +167,8 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--cpu-threads", type=int, default=threads_default,
                        help="modellerin kullanacağı işlemci iş parçacığı sayısı; 0 = kütüphane varsayılanı "
                             f"(varsayılan: {threads_default}; canlı modda oyuna çekirdek kalsın diye düşük)")
+        p.add_argument("--memory", help="çeviri belleği dosyası: bir kez çevrilen satır bir daha çevrilmez "
+                                        "(varsayılan: %%APPDATA%%/Dubzar/translations.db)")
         p.add_argument("--allow-download", action="store_true",
                        help="eksik modelleri indirmeye izin ver (varsayılan: indirme yok, eksikse hata verir)")
         p.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
