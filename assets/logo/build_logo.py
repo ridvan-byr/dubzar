@@ -55,6 +55,70 @@ def wordmark_path(text: str, size_px: int, x: float, baseline: float) -> tuple[s
     return "".join(d), path.boundingRect().right()
 
 
+D_H = 264.0  # height of the D mark in its own units
+TEXT_ASCENDER_RATIO = 0.48  # tallest small letter as a fraction of the D's height
+
+
+def reveal_geometry(align: str):
+    """Layout of the big-D lockup. ``align``: "baseline" (letters sit on the D's bottom edge)
+    or "pip" (letters' x-height is centred on the D's pip line)."""
+    probe_font = QFont("Instrument Serif")
+    probe_font.setItalic(True)
+    probe_font.setPixelSize(204)
+    b = QPainterPath(); b.addText(0, 0, probe_font, "b")
+    x = QPainterPath(); x.addText(0, 0, probe_font, "x")
+    asc204, xh204 = -b.boundingRect().top(), -x.boundingRect().top()
+    size = round(204 * (D_H * TEXT_ASCENDER_RATIO) / asc204)
+    xh = xh204 * size / 204
+    margin, gap = 60.0, 20.0
+    d_left, d_bottom = margin, margin + D_H
+    text_x = d_left + 232 + gap
+    baseline = d_bottom if align == "baseline" else (margin + D_H / 2) + xh / 2
+    word, right = wordmark_path("ubzar", size, text_x, baseline)
+    return dict(margin=margin, d_left=d_left, d_bottom=d_bottom, text_x=text_x, word=word, right=right,
+                width=right + margin, height=margin * 2 + D_H, gap=gap)
+
+
+def d_markup(g: dict, extra: str = "") -> str:
+    # mark() is drawn in a 512 box with the D at x 140..372, y 124..388; move it to d_left / d_bottom
+    return mark(AMBER, f"translate({g['d_left'] - 140:.2f} {g['d_bottom'] - 388:.2f})") if not extra else extra
+
+
+# reveal timing (milliseconds) and easing, shared with the preview script
+EASE = "cubic-bezier(.2,.8,.2,1)"
+D_IN_MS = 360
+WORD_DELAY_MS, WORD_MS, WORD_FADE_MS = 520, 720, 280
+
+
+def reveal_svgs(g: dict) -> tuple[str, str]:
+    """(animated SVG, final-state SVG) for the big-D reveal described by ``reveal_geometry``."""
+    word_w = g["right"] - g["text_x"]
+    clip_x = g["d_left"] + 232 + 4                       # letters emerge from the D's right edge
+    slide = word_w + g["gap"] + 40                       # far enough left to be fully hidden behind the clip
+    lead = g["width"] / 2 - (g["d_left"] + 116)          # the D starts centred, then glides to its place
+    d = f'<path d="{D_PATH}" fill="{AMBER}" fill-rule="evenodd" transform="translate({g["d_left"] - 140:.2f} {g["d_bottom"] - 388:.2f})"/>'
+    word = f'<path d="{g["word"]}" fill="{CREAM}"/>'
+    w, h = int(g["width"]), int(g["height"])
+    css = (
+        f".d{{transform-box:fill-box;transform-origin:50% 50%;animation:dIn {D_IN_MS}ms {EASE} both}}"
+        f"@keyframes dIn{{from{{opacity:0;transform:scale(.88)}}to{{opacity:1;transform:none}}}}"
+        f".lead{{animation:lead {WORD_MS}ms {EASE} {WORD_DELAY_MS}ms both}}"
+        f"@keyframes lead{{from{{transform:translateX({lead:.1f}px)}}to{{transform:none}}}}"
+        f".slide{{animation:slide {WORD_MS}ms {EASE} {WORD_DELAY_MS}ms both}}"
+        f"@keyframes slide{{from{{transform:translateX({-slide:.1f}px)}}to{{transform:none}}}}"
+        f".word{{animation:fade {WORD_FADE_MS}ms linear {WORD_DELAY_MS}ms both}}"
+        f"@keyframes fade{{from{{opacity:0}}to{{opacity:1}}}}"
+        f"@media (prefers-reduced-motion:reduce){{.d,.lead,.slide,.word{{animation:none}}}}"
+    )
+    animated = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" role="img" aria-label="Dubzar">'
+        f"<style>{css}</style>"
+        f'<defs><clipPath id="c"><rect x="{clip_x:.1f}" y="0" width="{w - clip_x:.1f}" height="{h}"/></clipPath></defs>'
+        f'<g class="lead"><g class="d">{d}</g><g clip-path="url(#c)"><g class="slide"><g class="word">{word}</g></g></g></g></svg>\n'
+    )
+    return animated, svg(w, h, d + word)
+
+
 def main() -> None:
     app = QGuiApplication(sys.argv)
     load_bundled_fonts()
@@ -113,6 +177,10 @@ def main() -> None:
     d_line = (f'<path d="{outer}{inner}" fill="{AMBER}" fill-rule="evenodd"/>'
               f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{pip_r:.2f}" fill="{AMBER}"/>')
     finish("dubzar-wordmark-line.svg", d_line, w)
+    g = reveal_geometry("baseline")
+    animated, final = reveal_svgs(g)
+    (OUT / "dubzar-reveal.svg").write_text(animated, encoding="utf-8")
+    (OUT / "dubzar-reveal-final.svg").write_text(final, encoding="utf-8")
     print("written:", *sorted(p.name for p in OUT.glob("dubzar-*.svg")))
 
 
