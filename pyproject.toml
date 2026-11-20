@@ -8,6 +8,7 @@ dependencies = ["numpy>=1.26", "scipy>=1.11"]
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 asr = ["faster-whisper>=1.0"]
+translate = ["transformers>=4.40", "torch", "sentencepiece", "sacremoses"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
