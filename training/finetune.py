@@ -60,6 +60,11 @@ def main() -> int:
     ap.add_argument("--freeze-encoder", action="store_true", help="train only the decoder (gentler, less forgetting)")
     ap.add_argument("--out", default=str(ROOT / "models_ft" / "opus-mt-en-tr-games"))
     ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--replay", help="English-only file; the untuned model translates it and those pairs are mixed "
+                                     "in, so ordinary Turkish is not forgotten")
+    ap.add_argument("--save", action="store_true", help="write the tuned model to --out")
+    ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--final-only", action="store_true", help="measure only before and after training (faster)")
     args = ap.parse_args()
     sys.stdout.reconfigure(errors="replace", encoding="utf-8")
     random.seed(args.seed)
@@ -75,10 +80,15 @@ def main() -> int:
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = AutoModelForSeq2SeqLM.from_pretrained(folder, dtype=torch.float32).to(device)  # the checkpoint is float16: training in it overflows
 
-    pairs = read_pairs(args.pairs)
+    seen, pairs = set(), []
+    for en, tr in read_pairs(args.pairs):
+        key = "".join(c for c in en.lower() if c.isalnum())
+        if key not in seen:
+            seen.add(key)
+            pairs.append((en, tr))
     random.shuffle(pairs)
     dev, train = pairs[: len(pairs) // 10], pairs[len(pairs) // 10:]
-    print(f"{len(train)} eğitim, {len(dev)} doğrulama çifti, cihaz: {device}", flush=True)
+    probe = [l.strip() for l in (ROOT / "training" / "probe_en.txt").read_text(encoding="utf-8").splitlines() if l.strip()]
 
     @torch.inference_mode()
     def translate(sentence: str) -> str:
@@ -90,18 +100,28 @@ def main() -> int:
     def pipeline(text: str) -> str:  # the same per-sentence path the app uses
         return " ".join((f"{p.speaker}: " if p.speaker else "") + translate(p.text) for p in split_pieces(text))
 
+    base_probe = [translate(s) for s in probe]          # what the untuned model says: the yardstick for forgetting
+    if args.replay:
+        replay_src = [l.strip() for l in Path(args.replay).read_text(encoding="utf-8").splitlines() if l.strip()]
+        train += [(s, translate(s)) for s in replay_src]
+    print(f"{len(train)} eğitim ({len(train) - (len(replay_src) if args.replay else 0)} oyun + "
+          f"{len(replay_src) if args.replay else 0} tekrar), {len(dev)} doğrulama, cihaz: {device}", flush=True)
+
     def score(name, items, refs, show=()):
         outs = [pipeline(e) for e in items]
         value = sum(chrf(o, r) for o, r in zip(outs, refs)) / len(refs)
         for i in show:
-            print(f"      {items[i]}  ->  {outs[i]}")
+            if not args.quiet:
+                print(f"      {items[i]}  ->  {outs[i]}")
         return value
 
     def report(label):
         t = score("test", [l for _, l, _ in TESTSET], REFS, show=(0, 1, 3, 4, 22, 38))
         d = score("dev", [e for e, _ in dev], [t_ for _, t_ in dev])
         g = score("general", [e for e, _ in GENERAL], [t_ for _, t_ in GENERAL])
-        print(f"[{label}] zor satırlar (test) {t:5.1f} | doğrulama {d:5.1f} | genel konuşma {g:5.1f}", flush=True)
+        kept = sum(chrf(translate(s), b) for s, b in zip(probe, base_probe)) / len(probe)   # 100 = unchanged
+        print(f"[{label}] zor satırlar (test) {t:5.1f} | doğrulama {d:5.1f} | genel konuşma {g:5.1f} | "
+              f"eski davranışı koruma {kept:5.1f}", flush=True)
 
     report("eğitimsiz")
 
@@ -130,12 +150,14 @@ def main() -> int:
             optimizer.step(); scheduler.step(); optimizer.zero_grad()
             total += loss.item() * len(batch)
         print(f"-- tur {epoch}: eğitim kaybı {total / len(train):.3f} ({time.time() - started:.0f} sn)", flush=True)
-        report(f"tur {epoch}")
+        if not args.final_only or epoch == args.epochs:
+            report(f"tur {epoch}")
 
-    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    model.save_pretrained(args.out)
-    tok.save_pretrained(args.out)
-    print("kaydedildi:", args.out)
+    if args.save:
+        Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+        model.save_pretrained(args.out)
+        tok.save_pretrained(args.out)
+        print("kaydedildi:", args.out)
     return 0
 
 

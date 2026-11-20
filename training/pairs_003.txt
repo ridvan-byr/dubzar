@@ -1,0 +1,237 @@
+The prophecy speaks of a hero born under a red moon. ||| Kehanet, kızıl bir ayın altında doğan bir kahramandan söz ediyor.
+Only the elder knows the way through the mountains. ||| Dağların arasından geçen yolu yalnızca ihtiyar biliyor.
+The innkeeper says there's a room upstairs. ||| Hancı yukarıda bir oda olduğunu söylüyor.
+Your reward is waiting in the castle. ||| Ödülün şatoda seni bekliyor.
+Slay the beast and bring me its heart. ||| Canavarı öldür ve bana kalbini getir.
+The witch lives deep in the swamp. ||| Cadı bataklığın derinlerinde yaşıyor.
+Cast a spell on the gate. ||| Kapıya bir büyü yap.
+I can't spell this word. ||| Bu kelimeyi hecelemeyi bilmiyorum.
+The spell wore off an hour ago. ||| Büyünün etkisi bir saat önce geçti.
+Mages gather at the tower at dusk. ||| Büyücüler alacakaranlıkta kuleye toplanır.
+The blade is enchanted with fire. ||| Bıçak ateş büyüsüyle kutsanmış.
+Your armor is badly damaged. ||| Zırhın ağır hasar görmüş.
+Equip the sword and shield. ||| Kılıcı ve kalkanı kuşan.
+The merchant sells potions and scrolls. ||| Tüccar iksirler ve tomarlar satıyor.
+You don't have enough gold. ||| Yeterli altının yok.
+That chest is locked. You need a key. ||| O sandık kilitli. Anahtar lazım.
+The goblins stole our supplies. ||| Goblinler erzağımızı çaldı.
+The orcs are marching on the village. ||| Orklar köye yürüyor.
+Defend the gate at all costs. ||| Kapıyı ne pahasına olursa olsun savun.
+The wall will not hold much longer. ||| Sur daha fazla dayanmaz.
+Sound the alarm! The enemy is here! ||| Alarmı çalın! Düşman geldi!
+Archers, take aim! ||| Okçular, nişan alın!
+Fire! ||| Ateş!
+Raise the banners. We march at dawn. ||| Sancakları kaldırın. Şafakta yürüyoruz.
+For the kingdom! ||| Krallık için!
+Our king has fallen. ||| Kralımız düştü.
+The throne is empty. ||| Taht boş.
+Who dares enter my chamber? ||| Odama girmeye kim cüret ediyor?
+Bow before your queen. ||| Kraliçenin önünde eğilin.
+I'll fetch my bow and arrows. ||| Yayımı ve oklarımı getireyim.
+The ship's bow was torn apart. ||| Geminin pruvası parçalanmıştı.
+He gave a deep bow. ||| Derin bir reverans yaptı.
+The knight kneels before the altar. ||| Şövalye sunağın önünde diz çöküyor.
+The old magic is fading. ||| Eski büyü sönüyor.
+Dark forces are stirring in the north. ||| Kuzeyde karanlık güçler kıpırdanıyor.
+The cave is guarded by a troll. ||| Mağarayı bir trol koruyor.
+Light the torch. It's too dark in here. ||| Meşaleyi yak. Burası çok karanlık.
+The light is fading. ||| Işık sönüyor.
+That bag is light as a feather. ||| O çanta tüy gibi hafif.
+Don't underestimate the little thief. ||| Küçük hırsızı hafife alma.
+Sneak past the guards. ||| Nöbetçilerin yanından sessizce geç.
+Pick the lock. ||| Kilidi aç.
+Poison the wine. ||| Şarabı zehirle.
+I swear fealty to the crown. ||| Tacın sadakat yeminini ediyorum.
+The dwarves forged this axe. ||| Cüceler bu baltayı dövmüş.
+Elves never forget a debt. ||| Elfler bir borcu asla unutmaz.
+The map shows a hidden valley. ||| Harita gizli bir vadiyi gösteriyor.
+We need more firewood. ||| Daha çok odun lazım.
+Set up camp by the river. ||| Nehrin yanında kamp kurun.
+Take the first watch. ||| İlk nöbeti sen tut.
+The fire is going out. ||| Ateş sönüyor.
+I'll hunt for food at dawn. ||| Şafakta yiyecek avlamaya çıkacağım.
+The wolves are circling. ||| Kurtlar etrafımızı sarıyor.
+Run through the forest. Don't stop! ||| Ormanın içinden koş. Durma!
+The bridge collapsed behind us. ||| Köprü arkamızda çöktü.
+Level up! You've learned a new skill. ||| Seviye atladın! Yeni bir yetenek öğrendin.
+You gained fifty experience points. ||| Elli deneyim puanı kazandın.
+Quest updated. ||| Görev güncellendi.
+New quest available. ||| Yeni görev mevcut.
+You have been defeated. ||| Yenildin.
+Respawning in three seconds. ||| Üç saniye içinde yeniden doğuyorsun.
+Checkpoint reached. ||| Kontrol noktasına ulaşıldı.
+The boss has a second phase. ||| Patronun ikinci bir evresi var.
+Watch the boss's health bar. ||| Patronun can çubuğuna dikkat et.
+Use your special ability now! ||| Özel yeteneğini şimdi kullan!
+Your ability is on cooldown. ||| Yeteneğin bekleme süresinde.
+Don't pull aggro. ||| Düşmanın dikkatini üzerine çekme.
+The loot is worth the risk. ||| Ganimet riske değer.
+Craft a healing potion from herbs. ||| Otlardan bir iyileştirme iksiri üret.
+Your inventory is full. ||| Envanterin dolu.
+Drop the heavy items to move faster. ||| Daha hızlı hareket etmek için ağır eşyaları bırak.
+Save your progress before the fight. ||| Savaştan önce ilerlemeni kaydet.
+That enemy is too strong for you. ||| O düşman senin için fazla güçlü.
+The monster drops rare items. ||| Canavar nadir eşyalar düşürüyor.
+There's a hidden passage behind the bookcase. ||| Kitaplığın arkasında gizli bir geçit var.
+Something is moving in the shadows. ||| Gölgelerde bir şey hareket ediyor.
+Did you hear that scream? ||| O çığlığı duydun mu?
+Don't look behind you. ||| Arkana bakma.
+It's coming for us. ||| Bizim için geliyor.
+We have to get out of this house. ||| Bu evden çıkmamız lazım.
+The doors won't open. ||| Kapılar açılmıyor.
+The lights keep flickering. ||| Işıklar sürekli titriyor.
+Someone has been living here. ||| Biri burada yaşıyormuş.
+There's blood on the walls. ||| Duvarlarda kan var.
+Whatever you do, don't go in the basement. ||| Ne yaparsan yap, bodruma girme.
+I can hear whispering. ||| Fısıltılar duyuyorum.
+The radio is playing by itself. ||| Radyo kendi kendine çalıyor.
+They're not human anymore. ||| Artık insan değiller.
+The infection spreads fast. ||| Enfeksiyon hızla yayılıyor.
+Aim for the head. ||| Kafaya nişan al.
+Don't get bitten. ||| Isırılma.
+We're running out of ammo and food. ||| Cephanemiz da yiyeceğimiz de tükeniyor.
+Barricade the doors. ||| Kapıları barikatla.
+There are hundreds of them out there. ||| Dışarıda yüzlercesi var.
+The generator is out of fuel. ||| Jeneratörün yakıtı bitti.
+We need to find a safe place to sleep. ||| Uyumak için güvenli bir yer bulmamız lazım.
+I haven't seen another survivor in weeks. ||| Haftalardır başka bir hayatta kalan görmedim.
+Radio says there's a camp to the north. ||| Telsize göre kuzeyde bir kamp var.
+Stay quiet. They can hear us. ||| Sessiz kal. Bizi duyabilirler.
+Throw a bottle to distract them. ||| Dikkatlerini dağıtmak için bir şişe at.
+Use the crowbar. ||| Levyeyi kullan.
+Boil the water before you drink it. ||| İçmeden önce suyu kaynat.
+The medicine is almost gone. ||| İlaç neredeyse bitti.
+It's been three hundred days since the outbreak. ||| Salgından bu yana üç yüz gün geçti.
+Yo ho ho and a bottle of rum! ||| Yo ho ho, bir de şişe rom!
+All hands on deck! ||| Herkes güverteye!
+The captain's cabin is locked. ||| Kaptanın kamarası kilitli.
+Weigh anchor and set sail. ||| Demiri alın ve yelken açın.
+A ship on the horizon! ||| Ufukta bir gemi var!
+Fire the cannons! ||| Topları ateşleyin!
+Prepare to board them. ||| Onlara abordaj yapmaya hazırlanın.
+Strike the colors. We surrender. ||| Bayrağı indirin. Teslim oluyoruz.
+Walk the plank! ||| Tahtada yürü!
+The treasure is buried on the island. ||| Define adada gömülü.
+Follow the map to the red cross. ||| Haritayı izleyip kırmızı artıya git.
+Dig here. ||| Burayı kaz.
+We're taking on water! ||| İçeri su alıyoruz!
+Bail out the hold. ||| Ambarı boşaltın.
+The storm is tearing the sails apart. ||| Fırtına yelkenleri parçalıyor.
+The wind is picking up. ||| Rüzgâr kuvvetleniyor.
+Hard to starboard! ||| Sancağa yatır!
+Steady as she goes. ||| Aynı rotada devam.
+The crew is getting restless. ||| Mürettebat huzursuzlanıyor.
+We're running low on rum. ||| Romumuz azalıyor.
+Navigate by the stars. ||| Yıldızlara göre yön bul.
+The fog is thick tonight. ||| Bu gece sis çok yoğun.
+Smugglers use this cove at night. ||| Kaçakçılar bu koyu geceleri kullanıyor.
+The harbor master wants a bribe. ||| Liman müdürü rüşvet istiyor.
+Lower the lifeboats. ||| Cankurtaran botlarını indirin.
+Abandon ship! ||| Gemiyi terk edin!
+I've sailed these waters for thirty years. ||| Bu sularda otuz yıldır yelken açıyorum.
+She's a fine ship. ||| Güzel bir gemi o.
+The sea is calm today. ||| Deniz bugün sakin.
+Cast off the lines. ||| Halatları çözün.
+We're coming into port. ||| Limana giriyoruz.
+The tide won't wait for us. ||| Gelgit bizi beklemez.
+He's the best sailor on the coast. ||| Kıyıdaki en iyi denizci o.
+The legends say the ship is cursed. ||| Efsanelere göre gemi lanetli.
+A ghost ship appeared out of the mist. ||| Sisin içinden bir hayalet gemi çıktı.
+The mermaid sang to the sailors. ||| Deniz kızı denizcilere şarkı söyledi.
+The kraken pulled the ship under. ||| Kraken gemiyi dibe çekti.
+Lock and load. ||| Doldurun ve hazır olun.
+Chart a course for the island. ||| Adaya bir rota çiz.
+Man the cannons. ||| Toplara geçin.
+I've got a score to settle with that captain. ||| O kaptanla halletmem gereken bir hesap var.
+This map is a fake. ||| Bu harita sahte.
+Anyone who touches it dies. ||| Ona dokunan ölür.
+Welcome to the arena! ||| Arenaya hoş geldiniz!
+The crowd is roaring. ||| Kalabalık kükrüyor.
+First blood goes to the challenger. ||| İlk kanı meydan okuyan akıttı.
+He's down! Is he getting up? ||| Yere düştü! Kalkacak mı?
+Finish him! ||| Bitir onu!
+Victory is ours! ||| Zafer bizim!
+You fight well for a rookie. ||| Çaylak için iyi dövüşüyorsun.
+Round two. Fight! ||| İkinci raunt. Dövüş!
+He threw the first punch. ||| İlk yumruğu o attı.
+Keep your guard up. ||| Savunmanı açık bırakma.
+Duck! ||| Eğil!
+He's wide open. Now! ||| Tamamen açık. Şimdi!
+That was a cheap shot. ||| Bu alçakça bir vuruştu.
+Tap out. It's over. ||| Pes et. Bitti.
+The referee stopped the fight. ||| Hakem dövüşü durdurdu.
+The belt is mine. ||| Kemer benim.
+He's the reigning champion. ||| Şu anki şampiyon o.
+Train harder. ||| Daha sert antrenman yap.
+Warm up before the race. ||| Yarıştan önce ısın.
+Take your positions. ||| Yerlerinizi alın.
+On your marks. Get set. Go! ||| Yerlerinize. Hazır. Başla!
+He crossed the finish line first. ||| Bitiş çizgisini ilk o geçti.
+She broke the world record. ||| Dünya rekorunu kırdı.
+The crowd goes wild! ||| Kalabalık çıldırıyor!
+What a goal! ||| Ne gol ama!
+He's offside! ||| Ofsayt!
+The referee blew the whistle. ||| Hakem düdüğü çaldı.
+Penalty kick! ||| Penaltı!
+It's a draw. ||| Berabere.
+They won by a single point. ||| Tek puanla kazandılar.
+The home team is losing badly. ||| Ev sahibi takım kötü kaybediyor.
+Extra time is about to begin. ||| Uzatmalar başlamak üzere.
+Pit stop! Change the tires! ||| Pit durağı! Lastikleri değiştirin!
+He's lost the lead on the last lap. ||| Son turda liderliği kaybetti.
+Hairpin turn ahead. Brake early. ||| İleride firkete viraj var. Erken fren yap.
+Nitro! Hit the nitro! ||| Nitro! Nitroyu bas!
+The track is slick with rain. ||| Pist yağmurdan kaygan.
+He spun out on the corner. ||| Virajda savruldu.
+It's a photo finish. ||| Fotoğraf finişi.
+The engine blew on the final stretch. ||| Motor son düzlükte patladı.
+Pole position goes to the rookie. ||| Pole pozisyonu çaylağın.
+Full throttle! ||| Tam gaz!
+The stadium is packed tonight. ||| Stadyum bu gece dolu.
+That's a foul! ||| Bu faul!
+He's out of the game. ||| Oyundan çıktı.
+The coach called a timeout. ||| Antrenör mola aldı.
+We need a miracle. ||| Bir mucizeye ihtiyacımız var.
+It's the final minute of the game. ||| Maçın son dakikası.
+The score is tied. ||| Skor eşit.
+He made the shot at the buzzer. ||| Son saniyede atışı soktu.
+Nice catch! ||| Güzel yakalayış!
+Strike three. You're out. ||| Üçüncü vuruş. Dışarıdasın.
+Home run! ||| Sayı koşusu!
+He's on a winning streak. ||| Galibiyet serisinde.
+Retirement is just around the corner. ||| Emeklilik kapıda.
+The robot looks almost human. ||| Robot neredeyse insan gibi görünüyor.
+Activate the defense system. ||| Savunma sistemini etkinleştir.
+Core temperature rising. ||| Çekirdek sıcaklığı yükseliyor.
+Engage the autopilot. ||| Otopilotu devreye al.
+Weapons are charged and ready. ||| Silahlar şarj edildi ve hazır.
+Incoming transmission from Earth. ||| Dünya'dan gelen bir iletim var.
+The ship's AI is malfunctioning. ||| Geminin yapay zekâsı arızalanıyor.
+Seal the airlock. ||| Hava kilidini kapat.
+Gravity is failing. ||| Yerçekimi kayboluyor.
+We're drifting off course. ||| Rotadan sapıyoruz.
+Fuel cells are at twelve percent. ||| Yakıt hücreleri yüzde on iki.
+Launch the escape pods. ||| Kaçış kapsüllerini fırlat.
+The planet's atmosphere is toxic. ||| Gezegenin atmosferi zehirli.
+I'm reading no signs of life. ||| Hiçbir yaşam belirtisi göremiyorum.
+Prepare for atmospheric entry. ||| Atmosfere giriş için hazırlanın.
+The colony has gone silent. ||| Koloniden ses seda çıkmıyor.
+They're not from this world. ||| Bu dünyadan değiller.
+We come in peace. ||| Barış için geldik.
+The corporation owns everything in this city. ||| Bu şehirdeki her şeyin sahibi şirket.
+Jack in. The net is waiting. ||| Bağlan. Ağ seni bekliyor.
+His implant is glitching. ||| İmplantı arızalı.
+Hack the terminal. ||| Terminale sız.
+The firewall is too strong. ||| Güvenlik duvarı çok güçlü.
+Wipe the hard drive. ||| Sabit diski sil.
+I've got root access. ||| Kök erişimim var.
+Trace the signal back to its source. ||| Sinyali kaynağına kadar izle.
+The data is encrypted. ||| Veri şifreli.
+We have thirty seconds before they lock us out. ||| Bizi dışarıda bırakmalarına otuz saniye var.
+Neon lights reflected in the rain. ||| Neon ışıkları yağmura yansıyordu.
+The streets belong to the gangs now. ||| Sokaklar artık çetelerin.
+Cyberware costs a fortune. ||| Siber donanım bir servete mal oluyor.
+Don't trust the drones. ||| Dronlara güvenme.
+He sold his memories for rent money. ||| Kira parası için anılarını sattı.
+The city is rotting from the inside. ||| Şehir içeriden çürüyor.
+We're not heroes. We're survivors. ||| Biz kahraman değiliz. Hayatta kalanlarız.

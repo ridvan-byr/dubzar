@@ -1,0 +1,206 @@
+Press any button to continue. ||| Devam etmek için herhangi bir tuşa basın.
+Hold the trigger to aim. ||| Nişan almak için tetiği basılı tutun.
+Press X to interact. ||| Etkileşim için X'e bas.
+Tap to jump. ||| Zıplamak için dokun.
+Use the left stick to move. ||| Hareket etmek için sol analogu kullan.
+Hold to sprint. ||| Koşmak için basılı tut.
+Press and hold to open the door. ||| Kapıyı açmak için basılı tut.
+Hit the button as fast as you can. ||| Düğmeye olabildiğince hızlı bas.
+Mash the button to break free. ||| Kurtulmak için tuşa art arda bas.
+Aim at the weak point. ||| Zayıf noktaya nişan al.
+Time your dodge. ||| Kaçışını zamanla.
+Block incoming attacks. ||| Gelen saldırıları engelle.
+Charge your attack for more damage. ||| Daha fazla hasar için saldırını şarj et.
+Combo meter full. ||| Kombo göstergesi dolu.
+Perfect timing! ||| Mükemmel zamanlama!
+Mission complete. ||| Görev tamamlandı.
+Mission failed. ||| Görev başarısız.
+Objective updated. ||| Hedef güncellendi.
+Reach the extraction point. ||| Tahliye noktasına ulaş.
+Follow the marker. ||| İşareti takip et.
+Return to the safehouse. ||| Güvenli eve dön.
+Talk to the contact. ||| Bağlantı kişisiyle konuş.
+Steal the car. ||| Arabayı çal.
+Lose the cops. ||| Polisten kurtul.
+Wanted level cleared. ||| Aranma seviyesi sıfırlandı.
+You are being chased. ||| Kovalanıyorsun.
+You are out of bounds. Return to the mission area. ||| Sınır dışındasın. Görev alanına dön.
+Game saved. Do not turn off the power. ||| Oyun kaydedildi. Cihazı kapatmayın.
+Autosave in progress. ||| Otomatik kayıt yapılıyor.
+Loading... ||| Yükleniyor...
+Connection lost. ||| Bağlantı kesildi.
+Reconnecting to the server. ||| Sunucuya yeniden bağlanılıyor.
+Press Start to begin. ||| Başlamak için Start'a bas.
+Select a difficulty level. ||| Bir zorluk seviyesi seç.
+Easy, Normal, or Hard. ||| Kolay, Normal ya da Zor.
+Your progress will be lost. Are you sure? ||| İlerlemen kaybolacak. Emin misin?
+New game. ||| Yeni oyun.
+Continue. ||| Devam.
+Load game. ||| Oyunu yükle.
+Settings. ||| Ayarlar.
+Controls. ||| Kontroller.
+Audio. ||| Ses.
+Subtitles are on. ||| Altyazılar açık.
+Brightness. ||| Parlaklık.
+Resolution. ||| Çözünürlük.
+Quit to the main menu? ||| Ana menüye çıkılsın mı?
+Exit the game. ||| Oyundan çık.
+Achievement unlocked. ||| Başarım açıldı.
+Trophy earned. ||| Kupa kazanıldı.
+You found a hidden item. ||| Gizli bir eşya buldun.
+New item added to the inventory. ||| Envantere yeni bir eşya eklendi.
+You can't carry any more. ||| Daha fazla taşıyamazsın.
+This door is locked from the other side. ||| Bu kapı diğer taraftan kilitli.
+You need the red keycard. ||| Kırmızı anahtar karta ihtiyacın var.
+Access denied. ||| Erişim reddedildi.
+Access granted. ||| Erişim onaylandı.
+Enter the password. ||| Parolayı gir.
+Incorrect code. ||| Yanlış kod.
+Press the lever to lower the bridge. ||| Köprüyü indirmek için kolu çek.
+Find a way across. ||| Karşıya geçmenin bir yolunu bul.
+Solve the puzzle to proceed. ||| İlerlemek için bulmacayı çöz.
+Combine the two items. ||| İki eşyayı birleştir.
+Examine the note. ||| Notu incele.
+Read the journal. ||| Günlüğü oku.
+The note reads: "Meet me at midnight." ||| Notta şöyle yazıyor: "Gece yarısı bende buluş."
+Collect all the pieces. ||| Tüm parçaları topla.
+Defeat all enemies to open the door. ||| Kapıyı açmak için tüm düşmanları yen.
+Survive for three minutes. ||| Üç dakika hayatta kal.
+Protect the convoy. ||| Konvoyu koru.
+Escort the VIP to the safe zone. ||| VIP'i güvenli bölgeye götür.
+Do not alert the guards. ||| Nöbetçileri uyandırma.
+You have been spotted. ||| Görüldün.
+Stealth mode activated. ||| Gizlilik modu etkinleştirildi.
+Enemy alerted. ||| Düşman uyarıldı.
+Take out the lights. ||| Işıkları söndür.
+Distract the guard with a noise. ||| Nöbetçinin dikkatini bir sesle dağıt.
+Stay in the shadows. ||| Gölgelerde kal.
+Sneak behind the enemy. ||| Düşmanın arkasına sessizce geç.
+Perform a silent takedown. ||| Sessiz bir saldırı yap.
+Ammo low. ||| Mermi azaldı.
+Reload your weapon. ||| Silahını doldur.
+Switch weapons. ||| Silah değiştir.
+Throw a grenade. ||| El bombası at.
+Use a health pack. ||| Sağlık paketi kullan.
+Health critical. ||| Can kritik.
+Your shield is down. ||| Kalkanın düştü.
+You are poisoned. ||| Zehirlendin.
+You are on fire! ||| Yanıyorsun!
+You are drowning! ||| Boğuluyorsun!
+Take a deep breath. ||| Derin bir nefes al.
+Swim to the surface. ||| Yüzeye doğru yüz.
+Climb the ladder. ||| Merdiveni tırman.
+Jump across the gap. ||| Boşluğun karşısına zıpla.
+Grab the ledge. ||| Çıkıntıya tutun.
+Slide under the barrier. ||| Bariyerin altından kay.
+Crouch to enter. ||| Girmek için çömel.
+Vault over the fence. ||| Çitin üzerinden atla.
+Drive to the marked location. ||| İşaretli konuma sür.
+Park the vehicle. ||| Aracı park et.
+Refuel at the next gas station. ||| Sonraki benzinlikte yakıt al.
+Fix the engine before the race. ||| Yarıştan önce motoru onar.
+Upgrade your car. ||| Arabanı geliştir.
+Choose your fighter. ||| Dövüşçünü seç.
+Select a character. ||| Karakter seç.
+Customize your loadout. ||| Teçhizatını özelleştir.
+Choose a class. ||| Sınıf seç.
+Spend your skill points. ||| Yetenek puanlarını harca.
+Unlock the next area. ||| Sonraki bölgenin kilidini aç.
+Trade with the merchant. ||| Tüccarla ticaret yap.
+Sell your items. ||| Eşyalarını sat.
+Buy the upgrade for five hundred coins. ||| Geliştirmeyi beş yüz jetona satın al.
+You received a reward. ||| Bir ödül aldın.
+Daily bonus claimed. ||| Günlük bonus alındı.
+Welcome back, commander. ||| Tekrar hoş geldiniz, komutan.
+Ready to deploy. ||| Konuşlanmaya hazır.
+Match found. ||| Maç bulundu.
+Waiting for players. ||| Oyuncular bekleniyor.
+Your team is ahead by two points. ||| Takımın iki puan önde.
+Victory! Your team wins. ||| Zafer! Takımın kazandı.
+Defeat. Better luck next time. ||| Yenilgi. Bir dahaki sefere bol şans.
+Rematch? ||| Rövanş?
+Good game. ||| İyi oyundu.
+Well played. ||| İyi oynadın.
+Noob. ||| Çaylak.
+Nice try. ||| İyi deneme.
+Lag is killing me. ||| Gecikme beni öldürüyor.
+Don't camp in the corner. ||| Köşede kamp yapma.
+Cover the objective. ||| Hedefi koru.
+Capture the flag. ||| Bayrağı ele geçir.
+Defend the base. ||| Üssü savun.
+Push the payload. ||| Yükü ilerlet.
+Hold the point. ||| Noktayı tut.
+Revive your teammate. ||| Takım arkadaşını canlandır.
+Call for backup. ||| Destek çağır.
+Ping the enemy. ||| Düşmanı işaretle.
+Get to the choppers! ||| Helikopterlere!
+Welcome to the jungle. ||| Ormana hoş geldin.
+Welcome to the city of angels. ||| Meleklerin şehrine hoş geldin.
+Tonight on the news: a daring robbery downtown. ||| Bu akşam haberlerde: şehir merkezinde cesur bir soygun.
+Traffic is backed up on the interstate. ||| Şehirler arası yolda trafik tıkandı.
+The weather forecast calls for heavy rain. ||| Hava tahmini şiddetli yağış öngörüyor.
+You're listening to the best hits of the eighties. ||| Seksenlerin en iyi hitlerini dinliyorsunuz.
+Next up, a song for all the lovers out there. ||| Sırada, dışarıdaki tüm âşıklar için bir şarkı var.
+This call may be recorded for quality purposes. ||| Bu görüşme kalite amacıyla kaydedilebilir.
+The number you have dialed is not in service. ||| Aradığınız numara hizmet dışıdır.
+Please hold. Your call is important to us. ||| Lütfen bekleyin. Aramanız bizim için önemlidir.
+Attention, passengers. The flight to Miami is delayed. ||| Dikkat, yolcular. Miami uçuşu rötarlı.
+Please fasten your seat belts. ||| Lütfen emniyet kemerlerinizi bağlayın.
+We are experiencing some turbulence. ||| Hafif bir türbülans yaşıyoruz.
+Ladies and gentlemen, welcome aboard. ||| Bayanlar ve baylar, uçağa hoş geldiniz.
+The doors are closing. ||| Kapılar kapanıyor.
+Mind the gap between the train and the platform. ||| Tren ile peron arasındaki boşluğa dikkat edin.
+This is your captain speaking. ||| Kaptanınız konuşuyor.
+Breaking news: the mayor has resigned. ||| Son dakika: belediye başkanı istifa etti.
+Stay tuned for more details. ||| Ayrıntılar için bizi izlemeye devam edin.
+Back after the break. ||| Aradan sonra döneceğiz.
+Welcome back to the show. ||| Programa tekrar hoş geldiniz.
+Our next guest needs no introduction. ||| Sıradaki konuğumuz tanıtıma gerek duymuyor.
+Let's go to the live feed. ||| Canlı yayına geçelim.
+This just in. ||| Az önce gelen habere göre.
+Police are asking for the public's help. ||| Polis halktan yardım istiyor.
+The suspect was last seen heading north. ||| Şüpheli en son kuzeye giderken görüldü.
+Residents are advised to stay indoors. ||| Sakinlerin evlerinde kalması öneriliyor.
+The storm is expected to hit by midnight. ||| Fırtınanın gece yarısına kadar vurması bekleniyor.
+Roads are closed due to flooding. ||| Yollar sel nedeniyle kapalı.
+Power is out across the city. ||| Şehrin her yerinde elektrik kesik.
+Emergency services are on the scene. ||| Acil servisler olay yerinde.
+The fire is under control. ||| Yangın kontrol altında.
+Stand clear of the doors. ||| Kapılardan uzak durun.
+Authorized personnel only. ||| Yalnızca yetkili personel.
+No trespassing. ||| Girmek yasaktır.
+Beware of dog. ||| Köpek var, dikkat.
+Danger. High voltage. ||| Tehlike. Yüksek gerilim.
+Keep off the grass. ||| Çimlere basmayın.
+Out of order. ||| Arızalı.
+Open twenty-four hours. ||| Yirmi dört saat açık.
+Closed for renovation. ||| Tadilat nedeniyle kapalı.
+Wet floor. ||| Zemin ıslak.
+Wanted: dead or alive. ||| Aranıyor: ölü ya da diri.
+Reward: five thousand dollars. ||| Ödül: beş bin dolar.
+Last chance gas station. ||| Son şans benzinliği.
+Welcome to Las Venturas. ||| Las Venturas'a hoş geldiniz.
+Population: three hundred. ||| Nüfus: üç yüz.
+Exit only. ||| Yalnızca çıkış.
+Dead end. ||| Çıkmaz sokak.
+Speed limit forty. ||| Hız sınırı kırk.
+Yield. ||| Yol ver.
+Stop. ||| Dur.
+Slow children at play. ||| Yavaş, çocuklar oynuyor.
+Under construction. ||| İnşaat halinde.
+Parking for customers only. ||| Yalnızca müşteri otoparkı.
+Please wait to be seated. ||| Lütfen yönlendirilmeyi bekleyin.
+Today's special: grilled salmon. ||| Günün yemeği: ızgara somon.
+No outside food or drink. ||| Dışarıdan yiyecek ve içecek getirmek yasaktır.
+Thank you for shopping with us. ||| Bizi tercih ettiğiniz için teşekkür ederiz.
+Everything must go. ||| Her şey elden çıkarılıyor.
+Buy one, get one free. ||| Bir alana bir bedava.
+Limited time offer. ||| Sınırlı süreli teklif.
+Subscribe and hit the bell. ||| Abone ol ve zili aç.
+Like, share, and comment. ||| Beğen, paylaş ve yorum yap.
+Link in the description. ||| Bağlantı açıklamada.
+Thanks for watching. ||| İzlediğiniz için teşekkürler.
+See you in the next episode. ||| Bir sonraki bölümde görüşürüz.
+Previously on the show. ||| Daha önce bu programda.
+To be continued. ||| Devam edecek.
+The end. ||| Son.
