@@ -65,17 +65,54 @@ def main() -> None:
     word, right = wordmark_path("Dubzar", 204, 285, 268.8)
     body = mark(AMBER, "translate(-86 -80.4) scale(0.9)") + f'<path d="{word}" fill="{CREAM}"/>'
     (OUT / "dubzar-lockup.svg").write_text(svg(int(right + 40), 300, body), encoding="utf-8")
-    # integrated wordmark: the geometric D-pip is the capital D, followed by "ubzar" in italic serif
-    probe = QPainterPath()
-    f = QFont("Instrument Serif"); f.setItalic(True); f.setPixelSize(204)
-    probe.addText(0, 0, f, "b")
-    ascender = -probe.boundingRect().top()            # height of the tallest lower-case letter above the baseline
-    k = ascender / 264                                # scale the D (264 units tall) to that height
-    baseline, d_left = ascender + 40, 40.0  # 40 units of room above the tallest letter
-    d_width = 232 * k
-    rest, right = wordmark_path("ubzar", 204, d_left + d_width + 14, baseline)
-    d_mark = mark(AMBER, f"translate({d_left - 140 * k:.2f} {baseline - 388 * k:.2f}) scale({k:.4f})")
-    (OUT / "dubzar-wordmark.svg").write_text(svg(int(right + 40), int(baseline + 40), d_mark + f'<path d="{rest}" fill="{CREAM}"/>'), encoding="utf-8")
+    # integrated wordmarks: a D drawn to the serif's own measurements, then "ubzar" in Instrument Serif Italic
+    size = 204
+    font = QFont("Instrument Serif")
+    font.setItalic(True)
+    font.setPixelSize(size)
+
+    def box(ch: str):
+        q = QPainterPath()
+        q.addText(0, 0, font, ch)
+        return q, q.boundingRect()
+
+    _, d_box = box("D")
+    _, b_box = box("b")
+    x_height = -box("x")[1].top()
+    cap = -d_box.top()                                   # the font's real capital height
+    stem_path, _ = box("l")
+    band = QPainterPath()
+    band.addRect(-500, -x_height * 0.45, 1000, 3)
+    serif_stem = stem_path.intersected(band).boundingRect().width()  # thick stem of the letters, ~14 px
+
+    baseline = -b_box.top() + 40                          # 40 px of room above the tallest letter
+    left, gap = 40.0, 12.0
+    height = int(baseline + 40)
+
+    def finish(name: str, d_markup: str, d_width: float) -> None:
+        rest, right = wordmark_path("ubzar", size, left + d_width + gap, baseline)
+        body = d_markup + f'<path d="{rest}" fill="{CREAM}"/>'
+        (OUT / name).write_text(svg(int(right + 40), height, body), encoding="utf-8")
+
+    # A: the solid D-pip, scaled so its height is the capital height and its width is the font's own D
+    k = cap / 264
+    finish("dubzar-wordmark-solid.svg",
+           mark(AMBER, f"translate({left - 140 * k:.2f} {baseline - 388 * k:.2f}) scale({k:.4f})"), 232 * k)
+
+    # B: a light D (strokes ~1.7x the serif stem) with a solid pip inside, so it sits in the same weight family
+    h, w, s = cap, cap * 0.84, serif_stem * 1.7
+    r = h / 2
+    top, x0 = baseline - h, left
+    outer = f"M{x0:.2f} {top:.2f}H{x0 + w - r:.2f}A{r:.2f} {r:.2f} 0 0 1 {x0 + w - r:.2f} {baseline:.2f}H{x0:.2f}Z"
+    ri = r - s
+    inner = (f"M{x0 + s:.2f} {top + s:.2f}H{x0 + w - r:.2f}A{ri:.2f} {ri:.2f} 0 0 1 {x0 + w - r:.2f} "
+             f"{baseline - s:.2f}H{x0 + s:.2f}Z")
+    pip_r = h * 0.15
+    cx = x0 + s + (w - 2 * s) * 0.56
+    cy = top + h / 2
+    d_line = (f'<path d="{outer}{inner}" fill="{AMBER}" fill-rule="evenodd"/>'
+              f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{pip_r:.2f}" fill="{AMBER}"/>')
+    finish("dubzar-wordmark-line.svg", d_line, w)
     print("written:", *sorted(p.name for p in OUT.glob("dubzar-*.svg")))
 
 
