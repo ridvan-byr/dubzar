@@ -32,8 +32,8 @@ log = logging.getLogger(__name__)
 
 PREVIEW_TEXT = "Sessiz ol… Birisi geliyor."
 EXCLUSIVE_WARNING = (
-    "Uyarı: tam ekran (exclusive) bir oyun algılandı, altyazı görünmeyebilir. "
-    "Oyunu 'pencereli tam ekran' (borderless) modda çalıştırın."
+    "Bilgi: tam ekran (exclusive) bir oyun algılandı. Çoğu oyunda altyazı görünür; görünmezse "
+    "oyunu 'pencereli tam ekran' (borderless) modda çalıştırın."
 )
 
 

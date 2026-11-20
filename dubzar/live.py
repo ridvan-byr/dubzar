@@ -24,7 +24,8 @@ AUDIO_FLOOR = 1e-3         # peak below this (about -60 dB) counts as silence
 MAX_BACKLOG = 3          # segments waiting for recognition; older ones are stale and dropped
 MIN_AUDIO_S = 0.25        # shorter than this is a click or a breath, not a line
 LEARN_MIN_S = 0.8         # only learn lines long enough to be recognised again reliably
-LEARN_MAX_S = 12.05       # longer means the segmenter had to cut it: not a whole line
+LEARN_MAX_S = 6.0         # longer is usually a forced cut with music/ambience mixed in: not a clean line
+LEARN_MIN_CONFIDENCE = 0.75  # a shaky transcript must not become a permanent fingerprint
 
 
 class LiveEngine:
@@ -74,7 +75,8 @@ class LiveEngine:
         digest = hashlib.sha256(samples.tobytes()).hexdigest()
         cue = Cue("live/" + digest[:12], transcription.text, text_tr, duration)
         self._on_cue(cue)
-        learned = bool(hashes) and LEARN_MIN_S <= duration <= LEARN_MAX_S
+        learned = (bool(hashes) and LEARN_MIN_S <= duration <= LEARN_MAX_S
+                   and transcription.confidence >= LEARN_MIN_CONFIDENCE)
         if learned:
             self._store.add_line(cue, hashes, digest)
         log.info("parça %.1f sn: '%s' → '%s' gösterildi (güven %.2f)%s", duration, transcription.text, text_tr,

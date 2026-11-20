@@ -6,6 +6,16 @@ import sys
 from dubzar.models import Cue
 
 TAIL_S = 0.5  # a subtitle stays this long after its line ends
+READ_CHARS_PER_S = 12.0   # comfortable reading speed for subtitles
+READ_BASE_S = 1.0         # time to notice a subtitle before reading it
+MIN_SHOW_S = 1.5
+
+
+def show_time(text: str, duration_s: float) -> float:
+    """How long a subtitle needs: its reading time, but never longer than the line itself and
+    never shorter than ``MIN_SHOW_S`` (a 12 s audio cut must not keep a 3-word subtitle up for 12 s)."""
+    reading = max(MIN_SHOW_S, READ_BASE_S + len(text) / READ_CHARS_PER_S)
+    return min(duration_s, reading) if duration_s >= MIN_SHOW_S else MIN_SHOW_S
 _QUNS_RUNNING_D3D_FULL_SCREEN = 3  # SHQUERYUSERNOTIFICATIONSTATE value
 
 
@@ -17,9 +27,9 @@ class SubtitleTimeline:
         self._until = 0.0
 
     def show(self, cue: Cue, now: float) -> None:
-        """Replace whatever is showing with ``cue``; it ends ``duration_s + TAIL_S`` later."""
+        """Replace whatever is showing with ``cue``; it ends ``show_time + TAIL_S`` later."""
         self._text = cue.text_tr
-        self._until = now + cue.duration_s + TAIL_S
+        self._until = now + show_time(cue.text_tr, cue.duration_s) + TAIL_S
 
     def current(self, now: float) -> str | None:
         return self._text if self._text is not None and now < self._until else None

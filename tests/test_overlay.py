@@ -18,13 +18,31 @@ def test_returns_none_before_any_cue():
     assert SubtitleTimeline().current(now=0.0) is None
 
 
+LONG_TEXT = "Burada olanlar hakkında kimseye tek kelime etme, anlaştık mı?"  # 60 chars: reading time 6 s
+
+
 def test_text_visible_until_duration_plus_tail():
     timeline = SubtitleTimeline()
-    timeline.show(cue(duration=2.0), now=10.0)
+    timeline.show(cue(LONG_TEXT, duration=2.0), now=10.0)
 
-    assert timeline.current(now=10.0) == "merhaba"
-    assert timeline.current(now=12.4) == "merhaba"
+    assert timeline.current(now=10.0) == LONG_TEXT
+    assert timeline.current(now=12.4) == LONG_TEXT
     assert timeline.current(now=12.6) is None
+
+
+def test_short_text_does_not_outstay_a_long_segment():
+    timeline = SubtitleTimeline()
+    timeline.show(cue("Orada neredeyse hiç yer yok.", duration=12.0), now=0.0)  # a 12 s cut, 28 chars
+
+    assert timeline.current(now=2.0) == "Orada neredeyse hiç yer yok."
+    assert timeline.current(now=4.5) is None  # about 3.3 s of reading time plus the tail, not 12.5 s
+
+
+def test_very_short_text_still_stays_long_enough_to_read():
+    timeline = SubtitleTimeline()
+    timeline.show(cue("Hayır!", duration=5.0), now=0.0)
+
+    assert timeline.current(now=1.9) == "Hayır!"
 
 
 def test_new_cue_replaces_old_immediately():
@@ -33,7 +51,7 @@ def test_new_cue_replaces_old_immediately():
     timeline.show(cue("ikinci", 1.0), now=1.0)
 
     assert timeline.current(now=1.1) == "ikinci"
-    assert timeline.current(now=2.6) is None  # the second cue's own end, not the first's
+    assert timeline.current(now=3.1) is None  # the second cue's own end (min 1.5 s + tail), not the first's
 
 
 @pytest.mark.parametrize("state,expected", [
