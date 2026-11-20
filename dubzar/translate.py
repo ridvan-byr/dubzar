@@ -33,7 +33,9 @@ def _make_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
         torch.set_num_threads(threads)  # by default torch takes every core, which starves a running game
     folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
     tokenizer = AutoTokenizer.from_pretrained(folder)
-    model = AutoModelForSeq2SeqLM.from_pretrained(folder).eval()
+    # The checkpoint is stored as float16, which the processor handles slowly: float32 is about 30% faster on a
+    # CPU (same translations, measured) for roughly half a gigabyte more memory.
+    model = AutoModelForSeq2SeqLM.from_pretrained(folder, dtype=torch.float32).eval()
 
     def translate(text: str) -> str:
         inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=256)

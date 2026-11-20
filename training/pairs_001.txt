@@ -1,0 +1,270 @@
+The count is off by two crates. ||| Sayımda iki sandık eksik çıkıyor.
+Count the cash again before we leave. ||| Çıkmadan önce parayı bir kez daha say.
+We counted every bullet. Nothing is missing. ||| Her mermiyi saydık. Eksik yok.
+Count me out. I'm not doing this. ||| Beni sayma. Ben bunu yapmayacağım.
+Don't count on it. ||| Buna güvenme.
+You can count on me. ||| Bana güvenebilirsin.
+The final count was three hundred men. ||| Son sayıma göre üç yüz adam vardı.
+The count of Monte Cristo hid his treasure on an island. ||| Monte Kristo Kontu hazinesini bir adada saklamıştı.
+Tell the count his carriage is ready. ||| Kont'a arabasının hazır olduğunu söyle.
+The drop is at midnight, under the bridge. ||| Teslimat gece yarısı, köprünün altında.
+We lost the drop. Someone talked. ||| Teslimatı kaçırdık. Biri ağzından kaçırdı.
+Drop your weapons and get on the ground. ||| Silahlarınızı bırakın ve yere yatın.
+Don't drop the package, it's fragile. ||| Paketi düşürme, kırılgan.
+Prices are going to drop next month. ||| Fiyatlar gelecek ay düşecek.
+Drop me off at the corner. ||| Beni köşede bırak.
+He dropped the charges against us. ||| Bize karşı davayı düşürdü.
+The cops are all over this block. The heat is unbearable. ||| Polis bütün mahalleyi sarmış. Baskı dayanılmaz.
+Let things cool down. The heat will pass. ||| İşler yatışsın. Baskı geçer.
+Turn up the heat, the engine is freezing. ||| Isıyı artır, motor donuyor.
+We can't stay here. Too much heat. ||| Burada kalamayız. Çok fazla polis ilgisi var.
+I'm packing heat tonight. ||| Bu gece üstümde silah var.
+That was the score of a lifetime. ||| O, hayatımın en büyük vurgunuydu.
+We're planning one last score and then we're out. ||| Son bir vurgun planlıyoruz, sonra çekiliyoruz.
+What's the score? Who's winning? ||| Durum ne? Kim kazanıyor?
+We have a score to settle. ||| Halledecek bir hesabımız var.
+He keeps the diamonds in a safe in his office. ||| Elmasları ofisindeki kasada tutuyor.
+Is it safe to talk here? ||| Burada konuşmak güvenli mi?
+Stay safe out there. ||| Dışarıda kendine dikkat et.
+Safe house is two miles north. ||| Güvenli ev iki mil kuzeyde.
+He cracked the safe in under a minute. ||| Kasayı bir dakikadan kısa sürede açtı.
+I want my cut, and I want it now. ||| Payımı istiyorum, hem de hemen.
+Everyone gets an equal cut. ||| Herkes eşit pay alır.
+Cut the engine. Quiet. ||| Motoru kapat. Sessiz ol.
+Cut the rope before it pulls us under. ||| İp bizi dibe çekmeden kes onu.
+Cut it out. You're driving me crazy. ||| Kes şunu. Beni çıldırtıyorsun.
+She cut me off in the middle of the sentence. ||| Cümlemin ortasında sözümü kesti.
+The bank closes at five. ||| Banka beşte kapanıyor.
+We sat on the river bank and watched the boats. ||| Nehir kıyısında oturup tekneleri izledik.
+I bank on your silence. ||| Susmana güveniyorum.
+We're gonna hit the bank on Monday. ||| Pazartesi bankayı vuracağız.
+Run! They're coming! ||| Koş! Geliyorlar!
+I'll run the cameras from the van. ||| Kameraları minibüsten yöneteceğim.
+He runs this whole town. ||| Bu kasabayı o yönetiyor.
+We're running low on ammo. ||| Cephanemiz azalıyor.
+Run it by me one more time. ||| Bir kez daha anlat bana.
+The engine runs rough in the cold. ||| Motor soğukta düzensiz çalışıyor.
+He ran out on us when things got ugly. ||| İşler çirkinleşince bizi terk edip gitti.
+Don't run your mouth in front of strangers. ||| Yabancıların yanında ağzını açıp konuşma.
+This isn't a game. Somebody's life is at stake. ||| Bu bir oyun değil. Birinin hayatı söz konusu.
+Game over. You lost. ||| Oyun bitti. Kaybettin.
+He's game for anything. ||| Her şeye hazır biri.
+Two can play that game. ||| Bu oyunu iki kişi oynayabilir.
+The big game is on Saturday. ||| Büyük maç cumartesi.
+We hunt game in the woods. ||| Ormanda av hayvanı avlarız.
+Wreck on the highway. Traffic is stopped. ||| Otoyolda kaza var. Trafik durdu.
+He wrecked my car on purpose. ||| Arabamı kasten parçaladı.
+After that night, I was a wreck. ||| O geceden sonra perişan olmuştum.
+Grab the wheel. I'm hit! ||| Direksiyonu tut. Vuruldum!
+Who's at the wheel? ||| Direksiyonda kim var?
+The ship's wheel is broken. ||| Geminin dümeni kırık.
+Dock the boat and tie it off. ||| Tekneyi yanaştır ve bağla.
+The dock workers went on strike. ||| Rıhtım işçileri greve gitti.
+The captain ordered us to dock at dawn. ||| Kaptan şafakta yanaşmamızı emretti.
+Lay low for a few days. ||| Birkaç gün ortalıkta görünme.
+We'll lay low until the storm passes. ||| Fırtına geçene kadar saklanacağız.
+Lay down your arms. ||| Silahlarınızı yere bırakın.
+He's got a mean left hook. ||| Sol kroşesi acımasız.
+She hung her coat on the hook. ||| Ceketini askıya astı.
+He got me hooked on that stuff. ||| Beni o şeye bağımlı yaptı.
+The deal is off. ||| Anlaşma bozuldu.
+It's a done deal. ||| İş bitti, anlaşıldı.
+What's the big deal? ||| Ne var bunda bu kadar?
+Deal with it. ||| Alış buna.
+The dealer shuffled the cards. ||| Krupiye kartları karıştırdı.
+We need a tank for this fight. ||| Bu savaş için bir tanka ihtiyacımız var.
+The fuel tank is almost empty. ||| Yakıt deposu neredeyse boş.
+Our tank takes the hits so you can heal. ||| Tankımız darbeleri alıyor, sen de iyileşebilesin.
+There's a bug in the system. ||| Sistemde bir hata var.
+Someone planted a bug in the room. ||| Biri odaya dinleme cihazı yerleştirmiş.
+Charge! ||| Hücum!
+They charged us double. ||| Bizden iki kat para aldılar.
+He's been charged with murder. ||| Cinayetle suçlandı.
+Charge the battery before we go. ||| Gitmeden pili şarj et.
+Fire another round. ||| Bir el daha ateş et.
+I'll buy the next round. ||| Bir sonraki turu ben ısmarlıyorum.
+The second round is about to begin. ||| İkinci raunt başlamak üzere.
+Take cover! ||| Siper alın!
+Cover me while I move. ||| Ben hareket ederken beni koru.
+He used the florist as a cover. ||| Çiçekçiyi paravan olarak kullandı.
+Her cover is blown. ||| Kimliği deşifre oldu.
+I need a clip for this gun. ||| Bu silah için şarjöre ihtiyacım var.
+Take the shot. Now! ||| Ateş et. Şimdi!
+Nice shot! ||| Güzel atış!
+I'll pay for the shots. ||| İçkileri ben ödeyeceğim.
+He's got a lead on the shipment. ||| Sevkiyatla ilgili bir ipucu buldu.
+Lead the way. ||| Yolu göster.
+You're in the lead, don't slow down. ||| Önde sensin, yavaşlama.
+That's a hit! Direct hit! ||| İsabet! Tam isabet!
+The boss put a hit on him. ||| Patron onun için suikast emri verdi.
+The song was a huge hit. ||| Şarkı büyük bir hit oldu.
+He's the mark. Don't let him see you. ||| Hedef o. Seni görmesin.
+Their mark is a rich widow. ||| Hedefleri zengin bir dul.
+The fence will pay us tomorrow. ||| Çaldığımız malları alan adam yarın bize ödeyecek.
+Climb over the fence. ||| Çitin üzerinden aş.
+Someone's tailing us. ||| Biri bizi takip ediyor.
+Shake the tail before you come in. ||| İçeri girmeden önce peşindekini at.
+He's wearing a wire. ||| Üzerinde dinleme cihazı var.
+Don't wire the money until I say so. ||| Ben söylemeden parayı gönderme.
+The crew is waiting on the pier. ||| Mürettebat iskelede bekliyor.
+My crew trusts me. ||| Ekibim bana güveniyor.
+I'm putting a crew together. ||| Bir ekip kuruyorum.
+We stashed the money in the cellar. ||| Parayı mahzene sakladık.
+Where's your stash? ||| Saklandığın yer neresi?
+The ring was worth a fortune. ||| Yüzük bir servet ediyordu.
+They broke up a smuggling ring. ||| Bir kaçakçılık şebekesini çökerttiler.
+The phone is ringing. ||| Telefon çalıyor.
+Pipe down! ||| Sesini kes!
+Burn it all. Leave no trace. ||| Hepsini yak. İz bırakma.
+We're burned. Get out! ||| Yandık. Çıkın!
+He burned me on the last deal. ||| Son anlaşmada beni dolandırdı.
+Tap the phone line. ||| Telefon hattını dinle.
+He tapped me on the shoulder. ||| Omzuma dokundu.
+The bar on the corner is empty. ||| Köşedeki bar boş.
+We bar the door at night. ||| Geceleri kapıyı sürgüleriz.
+The cops raided the club. ||| Polis kulübe baskın yaptı.
+The joint is clean. ||| Mekan temiz.
+Pass me that joint. ||| Şunu uzat bana.
+The detective closed the case. ||| Dedektif dosyayı kapattı.
+He's got a record a mile long. ||| Sabıka kaydı çok kabarık.
+Record this conversation. ||| Bu konuşmayı kaydet.
+Everything's on the record. ||| Her şey kayıtlı.
+Pitch the tent over there. ||| Çadırı şuraya kur.
+He pitched me a crazy idea. ||| Bana çılgın bir fikir sundu.
+Light the fuse and run. ||| Fitili ateşle ve kaç.
+The fuse is blown. ||| Sigorta attı.
+Stay frosty. ||| Tetikte kal.
+Eyes up. Movement on the ridge. ||| Gözünüzü açın. Sırtta hareket var.
+Hold your fire! ||| Ateş etmeyin!
+Hold the line! ||| Hattı koruyun!
+Hold on tight. ||| Sıkı tutun.
+Fall back to the second position. ||| İkinci mevziye çekilin.
+Flank them from the left. ||| Onları soldan kuşatın.
+Reload! I'm out! ||| Doldur! Mermim bitti!
+Man down! Medic! ||| Yaralı var! Sıhhiyeci!
+Contact left! ||| Solda temas var!
+Fire in the hole! ||| Patlıyor, uzaklaşın!
+Secure the perimeter. ||| Çevreyi güvene alın.
+We've got incoming. ||| Üzerimize ateş geliyor.
+Roger that. Moving out. ||| Anlaşıldı. Harekete geçiyoruz.
+Copy. We're on our way. ||| Aldım. Yoldayız.
+Negative. The target is gone. ||| Olumsuz. Hedef gitti.
+Good to go on my mark. ||| İşaretimle harekete geçin.
+All clear. Move up. ||| Temiz. İlerleyin.
+Radio silence until we hit the beach. ||| Sahile çıkana kadar telsiz sessizliği.
+The enemy is dug in on the hill. ||| Düşman tepede siper almış.
+We outnumber them three to one. ||| Sayıca onlardan üç kat fazlayız.
+Their defenses are crumbling. ||| Savunmaları çöküyor.
+I swear on my mother's grave. ||| Annemin mezarı üzerine yemin ederim.
+By the gods, what is that creature? ||| Tanrılar aşkına, bu yaratık da ne?
+Your quest ends here, adventurer. ||| Macerana burada son, maceracı.
+The ancient seal has been broken. ||| Kadim mühür kırıldı.
+Only the chosen one can wield this blade. ||| Bu kılıcı yalnızca seçilmiş kişi kullanabilir.
+Heal me, I'm almost dead! ||| Beni iyileştir, ölmek üzereyim!
+Watch out! He's got a shield. ||| Dikkat! Kalkanı var.
+The dragon sleeps beneath the mountain. ||| Ejderha dağın altında uyuyor.
+Gather your party. We leave at dawn. ||| Grubunu topla. Şafakta yola çıkıyoruz.
+I need more mana. ||| Daha fazla mana lazım.
+This potion tastes like feet. ||| Bu iksirin tadı ayak gibi.
+The king is dead. Long live the king. ||| Kral öldü. Yaşasın kral.
+Beware the forest after dark. ||| Karanlık çöktükten sonra ormandan sakın.
+You shall not pass. ||| Geçemezsin.
+She's cursed. Stay away from her. ||| Lanetli o. Uzak dur ondan.
+The village was burned to the ground. ||| Köy yerle bir edildi.
+My blade is yours, my lord. ||| Kılıcım emrinizde, lordum.
+Systems are offline. We're losing power. ||| Sistemler çevrimdışı. Enerji kaybediyoruz.
+Warning. Hull breach on deck three. ||| Uyarı. Üçüncü güvertede gövde hasarı.
+Open a channel to the station. ||| İstasyonla bir kanal aç.
+We're picking up a strange signal. ||| Garip bir sinyal alıyoruz.
+Jump to hyperspace now! ||| Hemen hiper uzaya atla!
+The AI has gone rogue. ||| Yapay zekâ kontrolden çıktı.
+Scan the area for life signs. ||| Bölgeyi yaşam belirtileri için tara.
+Shields are down to ten percent. ||| Kalkanlar yüzde ona düştü.
+They're hacking into our network. ||| Ağımıza sızıyorlar.
+Oxygen levels are critical. ||| Oksijen seviyesi kritik.
+We're not alone out here. ||| Burada yalnız değiliz.
+Cut the power to section four. ||| Dördüncü bölümün enerjisini kes.
+Download complete. Uploading now. ||| İndirme tamamlandı. Yükleniyor.
+You've got to be kidding me. ||| Dalga geçiyor olmalısın.
+Are you out of your mind? ||| Aklını mı kaçırdın?
+Give me a break. ||| Yapma ya.
+Cut me some slack. ||| Bana biraz anlayış göster.
+Knock it off. ||| Bırak şunu.
+I'm all ears. ||| Seni dinliyorum.
+That's a load of crap. ||| Bunlar saçmalık.
+He's full of it. ||| Palavra atıyor.
+Mind your own business. ||| Kendi işine bak.
+Get lost. ||| Kaybol.
+Take it easy. ||| Sakin ol.
+Not a chance. ||| Hiç şansı yok.
+No way! ||| Olamaz!
+You bet. ||| Elbette.
+Say again? ||| Tekrar eder misin?
+Don't mention it. ||| Lafı bile olmaz.
+Here we go again. ||| Yine başlıyoruz.
+That's the last straw. ||| Bardağı taşıran son damla bu.
+It's now or never. ||| Ya şimdi ya hiç.
+He's been through hell. ||| Cehennemi yaşadı.
+We're in deep trouble. ||| Başımız büyük belada.
+It's not over yet. ||| Daha bitmedi.
+Time is money. ||| Zaman nakittir.
+Don't get your hopes up. ||| Çok umutlanma.
+Let's call it a night. ||| Bu geceye bu kadar yeter.
+I owe you one. ||| Sana bir borcum var.
+You're on your own. ||| Kendi başınasın.
+Keep your voice down. ||| Sesini alçak tut.
+Look out! ||| Dikkat et!
+Be careful with that. ||| Ona dikkat et.
+Follow me and stay close. ||| Beni takip et ve yakın dur.
+Don't look back. ||| Arkana bakma.
+Where do you think you're going? ||| Nereye gittiğini sanıyorsun?
+Sit tight. Help is coming. ||| Sabret. Yardım geliyor.
+I can't breathe. ||| Nefes alamıyorum.
+Please, I have a family. ||| Lütfen, bir ailem var.
+I never meant to hurt anyone. ||| Kimseyi incitmek istemedim.
+It wasn't your fault. ||| Senin suçun değildi.
+I'm sorry for your loss. ||| Başın sağ olsun.
+I'll never forgive myself. ||| Kendimi asla affetmeyeceğim.
+We did it. We actually did it. ||| Başardık. Gerçekten başardık.
+You've changed, you know that? ||| Değişmişsin, biliyor musun?
+I trusted you. ||| Sana güvenmiştim.
+Tell me the truth. ||| Bana doğruyu söyle.
+What do you want from me? ||| Benden ne istiyorsun?
+Why are you doing this? ||| Bunu neden yapıyorsun?
+Because it's the right thing to do. ||| Çünkü yapılması gereken şey bu.
+Time to pay the piper. ||| Bedelini ödeme vakti.
+The boss is not a patient man. ||| Patron sabırlı bir adam değildir.
+He's a ghost. Nobody's seen him in years. ||| O bir hayalet. Yıllardır kimse onu görmedi.
+Nothing personal, it's just business. ||| Kişisel bir şey değil, sadece iş.
+You made your bed, now lie in it. ||| Ektiğini biçersin.
+Loose lips sink ships. ||| Gevezeliğin bedeli ağır olur.
+The walls have ears. ||| Duvarların kulağı var.
+Keep your friends close and your enemies closer. ||| Dostlarını yakın, düşmanlarını daha da yakın tut.
+Welcome aboard, captain. ||| Gemiye hoş geldiniz, kaptan.
+Hoist the sails! ||| Yelkenleri açın!
+Land ho! ||| Kara göründü!
+Drop anchor. ||| Demir at.
+The tide is turning. ||| Gelgit değişiyor.
+Engine's overheating. Slow down. ||| Motor aşırı ısınıyor. Yavaşla.
+Buckle up. This is going to be a bumpy ride. ||| Kemerini tak. Yol engebeli olacak.
+Step on it! They're gaining on us. ||| Gazla! Bize yetişiyorlar.
+Hit the brakes! ||| Fren yap!
+Take the next exit. ||| Bir sonraki çıkıştan çık.
+We've got a flat tire. ||| Lastik patladı.
+Floor it. ||| Sonuna kadar bas.
+Mind the gap. ||| Boşluğa dikkat.
+Nice work, rookie. ||| Aferin, çaylak.
+You're hired. ||| İşe alındın.
+You're fired. ||| Kovuldun.
+You're under arrest. ||| Tutuklusun.
+You have the right to remain silent. ||| Susma hakkına sahipsin.
+Put your hands where I can see them. ||| Ellerini görebileceğim yerde tut.
+Stop right there! ||| Orada dur!
+Freeze! Police! ||| Kımıldama! Polis!
+I want a lawyer. ||| Avukat istiyorum.
+Bail has been set at ten thousand dollars. ||| Kefalet bedeli on bin dolar olarak belirlendi.
+The judge dismissed the case. ||| Hâkim davayı reddetti.
+The witness refused to testify. ||| Tanık ifade vermeyi reddetti.
+He took the fall for all of us. ||| Hepimizin yerine suçu üstlendi.
+They're going to flip on you. ||| Seni ele verecekler.
+Don't snitch. ||| Ispiyonculuk yapma.

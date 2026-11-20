@@ -7,3 +7,4 @@ bakeoff_out/
 experiments/probe_out/
 experiments/CLEANUP_MANIFEST.md
 experiments/translation_compare_t*.md
+models_ft/
