@@ -134,3 +134,10 @@ def test_remove_line_deletes_the_cue_its_hashes_and_frees_the_digest(store):
     assert [r[0] for r in store.lookup([10])] == ["b1"]
     assert not store.has_digest("d1")  # the same audio can be indexed again later
     assert store.remove_line("a1") is False  # already gone
+
+
+def test_line_id_for_digest(store):
+    store.add_line(Cue("a1", "x", "y", 1.0), [(10, 1)], "d1")
+
+    assert store.line_id_for_digest("d1") == "a1"
+    assert store.line_id_for_digest("nope") is None

@@ -8,7 +8,7 @@ import soundfile as sf
 
 from dubzar.asr import Transcriber
 from dubzar.audio import to_mono_16k
-from dubzar.fingerprint import fingerprint
+from dubzar.fingerprint import Matcher, fingerprint
 from dubzar.index import IndexStore
 from dubzar.models import Cue
 from dubzar.translate import Translator
@@ -16,6 +16,8 @@ from dubzar.translate import Translator
 log = logging.getLogger(__name__)
 
 AUDIO_EXTENSIONS = {".wav", ".ogg", ".mp3", ".flac"}
+LIVE_PREFIX = "live/"  # line ids the live mode creates; a scanned file replaces them
+SR = 16000
 
 
 @dataclass(frozen=True)
@@ -65,8 +67,12 @@ def _process(path: Path, line_id: str, store: IndexStore, transcriber: Transcrib
     data, sr = sf.read(str(path), dtype="float32", always_2d=True)
     samples = to_mono_16k(data, sr)
     digest = hashlib.sha256(samples.tobytes()).hexdigest()
-    if store.has_digest(digest):
-        return "skipped_duplicate"
+    existing = store.line_id_for_digest(digest)
+    superseded = set()
+    if existing is not None:
+        if not existing.startswith(LIVE_PREFIX):
+            return "skipped_duplicate"
+        superseded.add(existing)  # identical audio the live mode learned: the file takes over
 
     if not retry_skipped and store.is_skipped(digest):
         return "skipped_no_speech"
@@ -80,6 +86,21 @@ def _process(path: Path, line_id: str, store: IndexStore, transcriber: Transcrib
         store.add_skipped(digest)
         return "skipped_no_speech"
 
+    superseded |= _live_lines_for(samples, store)
+    for old_id in superseded:  # only after the file is known to be good, so nothing is lost on failure
+        store.remove_line(old_id)
     cue = Cue(line_id, transcription.text, text_tr, transcription.duration_s)
     store.add_line(cue, hashes, digest)
     return "indexed"
+
+
+def _live_lines_for(samples, store: IndexStore) -> set[str]:
+    """Live-learned lines whose audio is (a slightly different cut of) this file."""
+    if not store.has_live_lines():
+        return set()
+    found = set()
+    for window in (samples[: 3 * SR], samples[-3 * SR:]):
+        result = Matcher(store.lookup).feed(window)
+        if result is not None and result.line_id.startswith(LIVE_PREFIX):
+            found.add(result.line_id)
+    return found
