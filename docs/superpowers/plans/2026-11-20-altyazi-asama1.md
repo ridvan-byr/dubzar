@@ -32,37 +32,37 @@
 
 ## Dosya yapısı
 
-- `dubly/models.py` — `Cue`, `MatchResult` veri sınıfları.
-- `dubly/index.py` — SQLite indeks (`IndexStore`).
-- `dubly/audio.py` — ses okuma ve 16 kHz mono'ya çevirme.
-- `dubly/fingerprint.py` — parmak izi çıkarma + akışlı eşleştirici (`Matcher`).
-- `dubly/asr.py` — `Transcriber` arayüzü + faster-whisper uygulaması.
-- `dubly/translate.py` — `Translator` arayüzü + Opus-MT uygulaması, sözlük desteği.
-- `dubly/scan.py` — tarama hattı.
-- `dubly/capture.py` — WASAPI loopback yakalama.
-- `dubly/overlay.py` — altyazı zamanlama modeli (`SubtitleTimeline`) + PySide6 penceresi.
-- `dubly/__main__.py` — `scan` ve `run` komutları.
+- `dubzar/models.py` — `Cue`, `MatchResult` veri sınıfları.
+- `dubzar/index.py` — SQLite indeks (`IndexStore`).
+- `dubzar/audio.py` — ses okuma ve 16 kHz mono'ya çevirme.
+- `dubzar/fingerprint.py` — parmak izi çıkarma + akışlı eşleştirici (`Matcher`).
+- `dubzar/asr.py` — `Transcriber` arayüzü + faster-whisper uygulaması.
+- `dubzar/translate.py` — `Translator` arayüzü + Opus-MT uygulaması, sözlük desteği.
+- `dubzar/scan.py` — tarama hattı.
+- `dubzar/capture.py` — WASAPI loopback yakalama.
+- `dubzar/overlay.py` — altyazı zamanlama modeli (`SubtitleTimeline`) + PySide6 penceresi.
+- `dubzar/__main__.py` — `scan` ve `run` komutları.
 - `docs/LICENSES.md` — kullanılan modellerin doğrulanmış lisansları.
 - `tests/` — her modül için `test_<modül>.py`.
 
 ### Task 1: Proje iskeleti ve veri modeli
 
 **Files:**
-- Create: `pyproject.toml`, `dubly/__init__.py`, `dubly/models.py`, `tests/test_models.py`
+- Create: `pyproject.toml`, `dubzar/__init__.py`, `dubzar/models.py`, `tests/test_models.py`
 
 **Interfaces:**
 - Produces: `Cue(line_id: str, text_src: str, text_tr: str, duration_s: float, speaker: str | None = None)` (frozen dataclass); `MatchResult(line_id: str, offset_frames: int, votes: int)`.
 
-- [ ] **Step 1:** `git init`, `pyproject.toml` (Python ≥3.11, pytest dev bağımlılığı), boş `dubly/__init__.py`.
+- [ ] **Step 1:** `git init`, `pyproject.toml` (Python ≥3.11, pytest dev bağımlılığı), boş `dubzar/__init__.py`.
 - [ ] **Step 2: Failing test** `test_cue_is_immutable_and_roundtrips`: `Cue("a1","hi","selam",1.2)` oluştur, `dataclasses.replace(cue, text_tr="x").text_tr == "x"`, orijinal değişmez; alan atamak `FrozenInstanceError` fırlatır.
 - [ ] **Step 3:** `pytest tests/test_models.py -v` → FAIL (ImportError).
-- [ ] **Step 4:** `dubly/models.py` içinde iki veri sınıfını yaz.
+- [ ] **Step 4:** `dubzar/models.py` içinde iki veri sınıfını yaz.
 - [ ] **Step 5:** Test PASS. Commit: `feat: project skeleton and data models`.
 
 ### Task 2: Parmak izi ve akışlı eşleştirici
 
 **Files:**
-- Create: `dubly/audio.py`, `dubly/fingerprint.py`, `tests/test_fingerprint.py`
+- Create: `dubzar/audio.py`, `dubzar/fingerprint.py`, `tests/test_fingerprint.py`
 
 **Interfaces:**
 - Consumes: `MatchResult` (Task 1).
@@ -81,7 +81,7 @@
 ### Task 3: İndeks deposu
 
 **Files:**
-- Create: `dubly/index.py`, `tests/test_index.py`
+- Create: `dubzar/index.py`, `tests/test_index.py`
 
 **Interfaces:**
 - Consumes: `Cue` (Task 1).
@@ -95,7 +95,7 @@
 ### Task 4: Konuşma tanıma sarmalayıcı
 
 **Files:**
-- Create: `dubly/asr.py`, `tests/test_asr.py`, `docs/LICENSES.md`
+- Create: `dubzar/asr.py`, `tests/test_asr.py`, `docs/LICENSES.md`
 
 **Interfaces:**
 - Produces: `class Transcriber(Protocol): transcribe(self, samples: np.ndarray) -> Transcription | None`; `@dataclass Transcription(text: str, language: str, duration_s: float)`; `class WhisperTranscriber(model_size: str = "small", device: str = "auto")` faster-whisper kullanır; konuşma bulunmazsa veya dil `en` değilse `None` döner.
@@ -108,7 +108,7 @@
 ### Task 5: Çeviri sarmalayıcı
 
 **Files:**
-- Create: `dubly/translate.py`, `tests/test_translate.py`
+- Create: `dubzar/translate.py`, `tests/test_translate.py`
 - Modify: `docs/LICENSES.md`
 
 **Interfaces:**
@@ -121,7 +121,7 @@
 ### Task 6: Tarama hattı
 
 **Files:**
-- Create: `dubly/scan.py`, `tests/test_scan.py`
+- Create: `dubzar/scan.py`, `tests/test_scan.py`
 
 **Interfaces:**
 - Consumes: `Transcriber`, `Translator`, `IndexStore.add_line/has_digest`, `fingerprint`, `to_mono_16k`.
@@ -134,7 +134,7 @@
 ### Task 7: Loopback yakalama ve çalışma anı döngüsü
 
 **Files:**
-- Create: `dubly/capture.py`, `tests/test_capture.py`
+- Create: `dubzar/capture.py`, `tests/test_capture.py`
 
 **Interfaces:**
 - Consumes: `Matcher` (Task 2), `IndexStore.get_cue`.
@@ -142,13 +142,13 @@
 
 - [ ] **Step 1: Failing tests** `run_matching` için (yakalama cihazı olmadan, sentetik parçalarla): `test_emits_cue_once_per_line`; `test_no_cue_for_unmatched_audio`; `test_two_different_lines_emit_two_cues`.
 - [ ] **Step 2:** FAIL → `run_matching` uygula → PASS.
-- [ ] **Step 3:** `LoopbackCapture`'ı PyAudioWPatch ile uygula; cihaz değişikliğinde yeniden bağlanma ve hata günlüğü. Elle doğrulama: bir ses çalarken `python -m dubly run` ile parçaların geldiğini gör (otomatik test yok, donanım gerektirir).
+- [ ] **Step 3:** `LoopbackCapture`'ı PyAudioWPatch ile uygula; cihaz değişikliğinde yeniden bağlanma ve hata günlüğü. Elle doğrulama: bir ses çalarken `python -m dubzar run` ile parçaların geldiğini gör (otomatik test yok, donanım gerektirir).
 - [ ] **Step 4:** Commit: `feat: loopback capture and matching loop`.
 
 ### Task 8: Altyazı zamanlaması ve katman penceresi
 
 **Files:**
-- Create: `dubly/overlay.py`, `tests/test_overlay.py`
+- Create: `dubzar/overlay.py`, `tests/test_overlay.py`
 
 **Interfaces:**
 - Consumes: `Cue`.
@@ -163,11 +163,11 @@
 ### Task 9: Komut satırı ve uçtan uca duman testi
 
 **Files:**
-- Create: `dubly/__main__.py`, `tests/test_cli.py`
+- Create: `dubzar/__main__.py`, `tests/test_cli.py`
 
 **Interfaces:**
 - Consumes: Task 1–8'in tümü.
-- Produces: `python -m dubly scan <ses_klasörü> --index <dosya.db> [--glossary <json>]` ve `python -m dubly run --index <dosya.db>`; `main(argv: list[str]) -> int`.
+- Produces: `python -m dubzar scan <ses_klasörü> --index <dosya.db> [--glossary <json>]` ve `python -m dubzar run --index <dosya.db>`; `main(argv: list[str]) -> int`.
 
 - [ ] **Step 1: Failing test** `test_scan_then_match_end_to_end`: sentetik klasör + sahte model ile `scan`, ardından aynı sesi `run_matching`'e besle → beklenen Türkçe metin `on_cue` ile gelir.
 - [ ] **Step 2:** FAIL → komutları bağla (`scan`: model yükle, ilerleme çubuğu; `run`: yakalamayı + katmanı başlat, Ctrl+C ile temiz kapan) → PASS.

@@ -2,7 +2,7 @@ import dataclasses
 
 import pytest
 
-from trdub.models import Cue, MatchResult
+from dubzar.models import Cue, MatchResult
 
 
 def test_cue_is_immutable_and_roundtrips():
