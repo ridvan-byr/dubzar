@@ -33,6 +33,8 @@ class SettingsController(QObject):
         self._screen_count = screen_count
         self._animations = animations
         self._status = status
+        self._live = False
+        self._scan = (0, 0)
         self._dubbing_available = dubbing_available
         settings.on_change(lambda _name: self.changed.emit())
 
@@ -94,10 +96,22 @@ class SettingsController(QObject):
 
     @Property(str, notify=changed)
     def status(self) -> str:
-        return self._status
+        """What the panel's header says: scan progress, live mode, or the idle text."""
+        done, total = self._scan
+        if 0 < done < total:
+            return f"Öğreniyor {done * 100 // total}%"
+        return "Canlı" if self._live else self._status
 
     def set_status(self, text: str) -> None:
         self._status = text
+        self.changed.emit()
+
+    def set_live(self, live: bool) -> None:
+        self._live = live
+        self.changed.emit()
+
+    def set_scan_progress(self, done: int, total: int) -> None:
+        self._scan = (done, total)
         self.changed.emit()
 
     @Slot(bool)

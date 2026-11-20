@@ -202,3 +202,43 @@ def test_font_files_ship_with_their_licenses():
 
     names = {p.name for p in FONT_DIR.iterdir()}
     assert {"DMSans.ttf", "InstrumentSerif-Italic.ttf", "OFL-DMSans.txt", "OFL-InstrumentSerif.txt"} <= names
+
+
+def test_status_shows_scan_percentage_while_scanning(qapp):
+    ctl = SettingsController(Settings())
+    ctl.set_live(True)
+
+    ctl.set_scan_progress(34, 100)
+
+    assert ctl.status == "Öğreniyor 34%"
+
+
+def test_status_is_live_when_nothing_is_being_scanned(qapp):
+    ctl = SettingsController(Settings())
+
+    assert ctl.status == "Dinleniyor"  # nothing running yet
+    ctl.set_live(True)
+    assert ctl.status == "Canlı"
+    ctl.set_scan_progress(0, 0)  # a scan that has not started yet
+    assert ctl.status == "Canlı"
+
+
+def test_status_goes_back_to_live_when_the_scan_finishes(qapp):
+    ctl = SettingsController(Settings())
+    ctl.set_live(True)
+    ctl.set_scan_progress(99, 100)
+    assert ctl.status == "Öğreniyor 99%"
+
+    ctl.set_scan_progress(100, 100)
+
+    assert ctl.status == "Canlı"
+
+
+def test_status_change_notifies_the_panel(qapp):
+    ctl = SettingsController(Settings())
+    seen = []
+    ctl.changed.connect(lambda: seen.append(1))
+
+    ctl.set_scan_progress(10, 100)
+
+    assert seen == [1]
