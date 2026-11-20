@@ -1,4 +1,5 @@
 import logging
+import math
 from dataclasses import dataclass
 from typing import Any, Callable, Protocol
 
@@ -14,6 +15,7 @@ class Transcription:
     text: str
     language: str
     duration_s: float
+    confidence: float = 1.0  # 0..1; low means the recognition is doubtful (noise, music, very short)
 
 
 class Transcriber(Protocol):
@@ -49,22 +51,35 @@ class WhisperTranscriber:
             self._model = self._factory(self._device)
         return self._model
 
-    def _run(self, samples: np.ndarray) -> tuple[str, str]:
+    def _run(self, samples: np.ndarray) -> tuple[str, str, float]:
         segments, info = self._get_model().transcribe(
             np.asarray(samples, dtype=np.float32), vad_filter=True
         )
-        text = " ".join(s.text.strip() for s in segments).strip()
-        return text, info.language
+        parts = list(segments)
+        text = " ".join(s.text.strip() for s in parts).strip()
+        return text, info.language, _confidence(parts)
 
     def transcribe(self, samples: np.ndarray) -> Transcription | None:
         try:
-            text, language = self._run(samples)
+            text, language, confidence = self._run(samples)
         except RuntimeError as exc:
             if self._device == "cpu":
                 raise
             log.warning("GPU transcription failed (%s); switching to CPU", exc)
             self._device, self._model = "cpu", None
-            text, language = self._run(samples)
+            text, language, confidence = self._run(samples)
         if not text or language != self._source_language:
             return None
-        return Transcription(text, language, len(samples) / SR)
+        return Transcription(text, language, len(samples) / SR, confidence)
+
+
+def _confidence(segments: list) -> float:
+    """exp(mean avg_logprob) * (1 - mean no_speech_prob), clamped to 0..1.
+
+    Segments without scores (test fakes) count as fully confident.
+    """
+    if not segments:
+        return 1.0
+    logprob = sum(getattr(s, "avg_logprob", 0.0) for s in segments) / len(segments)
+    no_speech = sum(getattr(s, "no_speech_prob", 0.0) for s in segments) / len(segments)
+    return max(0.0, min(1.0, math.exp(logprob) * (1.0 - no_speech)))

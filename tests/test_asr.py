@@ -93,3 +93,32 @@ def test_cpu_failure_is_not_swallowed():
         assert "out of memory" in str(exc)
     else:
         raise AssertionError("expected RuntimeError")
+
+
+class ScoredModel:
+    """Like FakeWhisperModel but its segments carry faster-whisper's own quality numbers."""
+
+    def __init__(self, avg_logprob: float, no_speech_prob: float, language: str = "en"):
+        self._avg, self._nsp, self._language = avg_logprob, no_speech_prob, language
+
+    def transcribe(self, audio, **kwargs):
+        segments = iter([SimpleNamespace(text="Hello", avg_logprob=self._avg, no_speech_prob=self._nsp)])
+        return segments, SimpleNamespace(language=self._language, language_probability=0.99)
+
+
+def test_confidence_is_high_for_a_confident_segment():
+    result = WhisperTranscriber(model=ScoredModel(-0.1, 0.01)).transcribe(ONE_SECOND)
+
+    assert result is not None and result.confidence >= 0.85
+
+
+def test_confidence_is_low_for_a_doubtful_segment():
+    result = WhisperTranscriber(model=ScoredModel(-1.5, 0.5)).transcribe(ONE_SECOND)
+
+    assert result is not None and result.confidence < 0.2
+
+
+def test_existing_callers_still_work_without_confidence():
+    assert Transcription("a", "en", 1.0).confidence == 1.0
+    result = WhisperTranscriber(model=FakeWhisperModel(["Hello"])).transcribe(ONE_SECOND)
+    assert result is not None and result.confidence == 1.0  # segments without scores count as fully confident
