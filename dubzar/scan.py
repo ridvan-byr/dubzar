@@ -32,12 +32,16 @@ def scan_folder(
     transcriber: Transcriber,
     translator: Translator,
     on_progress: Callable[[int, int], None] = lambda done, total: None,
+    retry_skipped: bool = False,
 ) -> ScanReport:
     """Index every audio file under ``folder``; safe to re-run after an interruption.
 
     ``line_id`` is the file's path relative to ``folder`` (with ``/`` separators).
-    Audio already in the index (same content) is skipped before any model runs.
-    A file that cannot be read or processed is counted as failed and the scan goes on.
+    Audio already in the index (same content) is skipped before any model runs, and
+    so is audio that earlier had no usable speech, unless ``retry_skipped`` is set
+    (use it after switching to a better speech model).
+    A file that cannot be read or processed is counted as failed and the scan goes on;
+    it is tried again on the next run.
     """
     root = Path(folder)
     files = sorted(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in AUDIO_EXTENSIONS)
@@ -46,7 +50,7 @@ def scan_folder(
     for done, path in enumerate(files, start=1):
         line_id = path.relative_to(root).as_posix()
         try:
-            outcome = _process(path, line_id, store, transcriber, translator)
+            outcome = _process(path, line_id, store, transcriber, translator, retry_skipped)
         except Exception:
             log.exception("scan failed for %s", line_id)
             outcome = "failed"
@@ -56,22 +60,24 @@ def scan_folder(
     return ScanReport(**counts)
 
 
-def _process(path: Path, line_id: str, store: IndexStore,
-             transcriber: Transcriber, translator: Translator) -> str:
+def _process(path: Path, line_id: str, store: IndexStore, transcriber: Transcriber,
+             translator: Translator, retry_skipped: bool) -> str:
     data, sr = sf.read(str(path), dtype="float32", always_2d=True)
     samples = to_mono_16k(data, sr)
     digest = hashlib.sha256(samples.tobytes()).hexdigest()
     if store.has_digest(digest):
         return "skipped_duplicate"
 
+    if not retry_skipped and store.is_skipped(digest):
+        return "skipped_no_speech"
+
     hashes = fingerprint(samples)
     if not hashes:  # silence or too short: nothing the matcher could ever recognise
         return "skipped_no_speech"
     transcription = transcriber.transcribe(samples)
-    if transcription is None:
-        return "skipped_no_speech"
-    text_tr = translator.translate(transcription.text).strip()
+    text_tr = translator.translate(transcription.text).strip() if transcription else ""
     if not text_tr:
+        store.add_skipped(digest)
         return "skipped_no_speech"
 
     cue = Cue(line_id, transcription.text, text_tr, transcription.duration_s)

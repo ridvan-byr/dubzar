@@ -86,3 +86,19 @@ def test_run_rejects_an_invalid_screen_setting(tmp_path, capsys):
 
     assert code == 2
     assert "screen" in capsys.readouterr().err.lower()
+
+
+def test_scan_retry_skipped_flag_reprocesses_skipped_files(audio_dir, tmp_path):
+    from dubzar.asr import Transcription
+
+    db = str(tmp_path / "game.db")
+    deaf = FakeTranscriber(result=None)
+    main(["scan", str(audio_dir), "--index", db], transcriber=deaf, translator=PrefixTranslator())
+    hearing = FakeTranscriber(result=Transcription("hello", "en", 3.0))
+
+    main(["scan", str(audio_dir), "--index", db], transcriber=hearing, translator=PrefixTranslator())
+    assert hearing.calls == 0  # remembered as skipped
+    main(["scan", str(audio_dir), "--index", db, "--retry-skipped"],
+         transcriber=hearing, translator=PrefixTranslator())
+
+    assert hearing.calls == 2

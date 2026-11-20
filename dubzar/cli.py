@@ -56,6 +56,7 @@ def _cmd_scan(args, transcriber: Transcriber | None, translator: Translator | No
         report = scan_folder(
             str(folder), store, transcriber, translator,
             on_progress=lambda done, total: print(f"\r{done}/{total}", end="", flush=True),
+            retry_skipped=args.retry_skipped,
         )
     finally:
         store.close()
@@ -156,6 +157,8 @@ def build_parser() -> argparse.ArgumentParser:
     scan.add_argument("--index", required=True, help="indeks dosyası (.db)")
     scan.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
     scan.add_argument("--whisper-model", default="small", help="tiny, small, medium ... (varsayılan: small)")
+    scan.add_argument("--retry-skipped", action="store_true",
+                      help="önceden konuşmasız diye atlanan dosyaları yeniden dene (daha iyi model sonrası)")
 
     run = sub.add_parser("run", help="oyun sesini dinle ve altyazıyı göster")
     run.add_argument("--index", required=True, help="scan ile oluşturulmuş indeks dosyası")

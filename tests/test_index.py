@@ -106,3 +106,19 @@ def test_store_can_be_used_from_another_thread(store):
 
     assert seen[0] == [("a1", 1, 0)]
     assert seen[1] is not None
+
+
+def test_skipped_digests_are_remembered_across_reopening(tmp_path):
+    path = str(tmp_path / "game.db")
+    first = IndexStore(path)
+    assert not first.is_skipped("grunt")
+    first.add_skipped("grunt")
+    first.add_skipped("grunt")  # recording twice is harmless
+    first.close()
+
+    second = IndexStore(path)
+
+    assert second.is_skipped("grunt")
+    assert not second.has_digest("grunt")  # skipped is not the same as indexed
+    assert second.count_lines() == 0
+    second.close()

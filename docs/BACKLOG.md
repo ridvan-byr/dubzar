@@ -13,7 +13,7 @@
 - Bu ayarlar için küçük bir ayar penceresi ve ayarların dosyada saklanması.
 
 ## Küçük iyileştirmeler ve açık işler
-- Konuşma olmayan dosyalar tarama yeniden başlatılınca tekrar tanınıyor; atlanan dosyaların özetini ayrı tabloda tutmak.
+- ~~Konuşma olmayan dosyalar tarama yeniden başlatılınca tekrar tanınıyor~~ — YAPILDI: atlanan dosyalar hatırlanıyor; daha iyi model sonrası `scan --retry-skipped`.
 - Gerçek çeviri modeli (Opus-MT) duman testi çalıştırılmadı (`pytest -m slow`; `torch` ve büyük model indirmesi gerekir). Sözlük yer tutucularının gerçek modelde bozulup bozulmadığı bilinmiyor.
 - Ses cihazı değişince (hoparlör/kulaklık) yeniden bağlanma elle denenmedi.
 - Müzik ve efekt altında eşleşme dayanıklılığı gerçek oyun sesiyle ölçülmedi (10 dB sentetik gürültüde 10 oy, alt sınır 8).
