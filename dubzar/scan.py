@@ -1,5 +1,8 @@
 import hashlib
 import logging
+import re
+import threading
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -35,6 +38,10 @@ def scan_folder(
     translator: Translator,
     on_progress: Callable[[int, int], None] = lambda done, total: None,
     retry_skipped: bool = False,
+    should_pause: Callable[[], bool] = lambda: False,
+    pause_poll_s: float = 0.5,
+    stop_event: threading.Event | None = None,
+    natural_order: bool = True,
 ) -> ScanReport:
     """Index every audio file under ``folder``; safe to re-run after an interruption.
 
@@ -44,12 +51,19 @@ def scan_folder(
     (use it after switching to a better speech model).
     A file that cannot be read or processed is counted as failed and the scan goes on;
     it is tried again on the next run.
+
+    ``should_pause`` is polled before each file; while it is true the scan waits (the game is running).
+    ``stop_event`` ends the scan cleanly after the current file. ``natural_order`` scans mission2 before
+    mission10, so progress follows the story instead of the alphabet.
     """
     root = Path(folder)
-    files = sorted(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in AUDIO_EXTENSIONS)
+    files = [p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in AUDIO_EXTENSIONS]
+    files.sort(key=_natural_key if natural_order else None)
     counts = {"indexed": 0, "skipped_duplicate": 0, "skipped_no_speech": 0, "failed": 0}
 
     for done, path in enumerate(files, start=1):
+        if _wait_while_paused(should_pause, pause_poll_s, stop_event):
+            break
         line_id = path.relative_to(root).as_posix()
         try:
             outcome = _process(path, line_id, store, transcriber, translator, retry_skipped)
@@ -58,8 +72,25 @@ def scan_folder(
             outcome = "failed"
         counts[outcome] += 1
         on_progress(done, len(files))
+        if stop_event is not None and stop_event.is_set():
+            break
 
     return ScanReport(**counts)
+
+
+def _natural_key(path: Path) -> list:
+    """Sort key where numbers compare as numbers: mission2 < mission10."""
+    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", path.as_posix().lower())]
+
+
+def _wait_while_paused(should_pause: Callable[[], bool], poll_s: float,
+                       stop_event: threading.Event | None) -> bool:
+    """Block while paused. Returns True if the scan was asked to stop meanwhile."""
+    while should_pause():
+        if stop_event is not None and stop_event.is_set():
+            return True
+        time.sleep(poll_s)
+    return stop_event is not None and stop_event.is_set()
 
 
 def _process(path: Path, line_id: str, store: IndexStore, transcriber: Transcriber,
