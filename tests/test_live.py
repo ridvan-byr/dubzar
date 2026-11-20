@@ -111,3 +111,126 @@ def test_different_lines_are_learned_separately_and_both_hit_later(store):
     live.process(segment(2, 1.5))
 
     assert transcriber.calls == 2 and store.count_lines() == 2
+
+
+# --- the pipeline: instant cues for known lines + live recognition for unknown ones ------------
+import threading  # noqa: E402
+import time  # noqa: E402
+
+from dubzar.live import MAX_BACKLOG, LivePipeline  # noqa: E402
+
+
+def silence(seconds: float) -> np.ndarray:
+    return np.zeros(int(seconds * SR), dtype=np.float32)
+
+
+def wait_until(condition, timeout=5.0):
+    end = time.monotonic() + timeout
+    while time.monotonic() < end:
+        if condition():
+            return True
+        time.sleep(0.005)
+    return condition()
+
+
+def pipeline(store, transcriber=None, **kwargs):
+    cues: list[Cue] = []
+    return LivePipeline(store, transcriber or FakeTranscriber(), PrefixTranslator(), cues.append, **kwargs), cues
+
+
+def play(pl, audio, cues=None, chunk=1600):
+    """Feed audio in 100 ms chunks; if ``cues`` is given, return the stream time (s) at which each new cue showed up."""
+    seen_at: list[float] = []
+    for i in range(0, len(audio), chunk):
+        before = len(cues) if cues is not None else 0
+        pl.feed(audio[i : i + chunk])
+        if cues is not None and len(cues) > before:
+            seen_at.extend([(i + chunk) / SR] * (len(cues) - before))
+    return seen_at
+
+
+def line(seed: float = 1, seconds: float = 1.5):
+    return np.concatenate([silence(0.3), synth_line(seed, seconds), silence(1.0)])
+
+
+def test_unknown_line_is_recognised_after_it_ends_and_then_learned(store):
+    transcriber = FakeTranscriber()
+    pl, cues = pipeline(store, transcriber)
+
+    play(pl, line())
+    pl.close()
+
+    assert len(cues) == 1 and cues[0].line_id.startswith("live/")
+    assert transcriber.calls == 1 and store.count_lines() == 1
+
+
+def test_known_line_shows_instantly_and_the_live_path_does_not_repeat_it(store):
+    # the line starts at 0.3 s and lasts 1.5 s; a known line must show up long before it ends
+    transcriber = FakeTranscriber()
+    pl, cues = pipeline(store, transcriber)
+    play(pl, line())
+    assert wait_until(lambda: len(cues) == 1)
+
+    gap = 3.5  # a line does not repeat within a couple of seconds; the matcher is muted for 3 s after a cue
+    shown_at = play(pl, np.concatenate([silence(gap), line()]), cues)
+    pl.close()
+
+    assert len(cues) == 2 and transcriber.calls == 1  # no second recognition, no duplicate cue
+    assert shown_at and shown_at[0] - gap < 1.0  # 0.3 s of silence + a few hundred ms of the line, not the full 1.8 s
+
+
+def test_a_known_line_can_be_shown_again_later(store):
+    pl, cues = pipeline(store)
+    play(pl, line())
+    assert wait_until(lambda: len(cues) == 1)
+
+    play(pl, np.concatenate([line(), silence(3.0), line()]))
+    pl.close()
+
+    assert len(cues) == 3  # learned once, then shown instantly twice
+
+
+def test_an_engine_error_does_not_stop_the_pipeline(store):
+    class FlakyOnce(FakeTranscriber):
+        def transcribe(self, samples):
+            self.calls += 1
+            if self.calls == 1:
+                raise RuntimeError("translation model is missing")
+            return self.result
+
+    pl, cues = pipeline(store, FlakyOnce())
+
+    play(pl, np.concatenate([line(1), line(2)]))
+    pl.close()
+
+    assert len(cues) == 1  # the first line was lost to the error, the second one still worked
+
+
+def test_close_flushes_a_line_that_was_still_being_collected(store):
+    pl, cues = pipeline(store)
+
+    play(pl, np.concatenate([silence(0.3), synth_line(1, 1.5)]))  # no trailing silence yet
+    assert cues == []
+    pl.close()
+
+    assert len(cues) == 1
+
+
+def test_backlog_is_bounded_when_recognition_is_slower_than_speech(store):
+    release = threading.Event()
+    handled: list[int] = []
+
+    class Slow(FakeTranscriber):
+        def transcribe(self, samples):
+            release.wait(5)
+            handled.append(1)
+            return self.result
+
+    pl, cues = pipeline(store, Slow())
+    audio = np.concatenate([line(seed) for seed in range(1, 11)])  # ten distinct lines
+
+    play(pl, audio)
+    release.set()
+    pl.close()
+
+    assert len(handled) <= MAX_BACKLOG + 1  # stale lines are dropped, not shown ten seconds late
