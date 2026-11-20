@@ -3,14 +3,18 @@
 Öncelik: **altyazı ve dublajın tam çalışması.** Aşağıdaki ayar ve iyileştirmeler ondan sonra gelir.
 
 ## Ana hat (önce bunlar)
+0. **Canlı mod + ilerleyen tarama** (Aşama 1b): kullanıcı beklemeden hemen altyazı görsün. Plan: `docs/superpowers/plans/2026-11-20-canli-mod-ilerleyen-tarama.md`.
 1. Task 9: komut satırı (`scan`, `run`) ve gerçek bir oyunla altyazı duman testi.
 2. Dublaj öncesi TTS motor karşılaştırması (`docs/TTS_BAKEOFF.md`), sonra Aşama 2 planı (karakter sesi, duygu, süre eşleme, dublaj klipleri).
 3. Oyun motoru arşivlerinden ses çıkarma bağdaştırıcıları (Wwise, FMOD, Unity, Unreal) için ayrı plan.
 
-## Altyazı katmanı ayarları (kullanıcı isteği, ana hattan sonra)
-- Altyazı konumunu ayarlama (sürükleyerek veya kaydırma değerleriyle; şimdilik yalnızca üst / orta / alt).
-- ~~Altyazının hangi ekranda görüneceğini seçme~~ — YAPILDI: `--screen auto|primary|N` (varsayılan auto = oyunun/ön plandaki pencerenin ekranı).
-- Bu ayarlar için küçük bir ayar penceresi ve ayarların dosyada saklanması.
+## Altyazı katmanı ayarları ve panel
+- ~~Altyazı konumunu ayarlama~~ — YAPILDI (panelde mini ekranda sürükle, yön tuşlarıyla da).
+- ~~Hangi ekranda görüneceğini seçme~~ — YAPILDI (`auto` = oyunun ekranı, `primary`, 1, 2, ...).
+- ~~Ayar paneli, kısayolla açılma, ayarların kaydedilmesi~~ — YAPILDI (Ctrl+Shift+D; boyut, renkler, opaklık, altyazı aç/kapat, varsayılana dön).
+- Panelde kısayolu değiştirebilme (şimdilik ayar dosyasından: `%APPDATA%\Dubzar\settings.json`).
+- Yazı tiplerini (DM Sans, Instrument Serif) uygulamayla paketlemek. Şimdi Segoe UI ve Georgia yedekleri kullanılıyor. İndirme izni ve OFL lisans doğrulaması gerekir.
+- "Dublaj" anahtarı dublaj gelene kadar "yakında" olarak soluk; dublaj bitince `dubbing_available=True` yapılacak.
 
 ## Küçük iyileştirmeler ve açık işler
 - ~~Konuşma olmayan dosyalar tarama yeniden başlatılınca tekrar tanınıyor~~ — YAPILDI: atlanan dosyalar hatırlanıyor; daha iyi model sonrası `scan --retry-skipped`.
@@ -20,3 +24,8 @@
 - Ürüne CC-BY-4.0 kaynak belirtmesi (Helsinki-NLP / OPUS-MT) için "Hakkında" ekranı eklenmeli.
 - `main` dalındaki ilk commit mesajında hâlâ eski "Dubly" adı var (geçmiş yeniden yazılmadı).
 - Resmi marka ve alan adı kontrolü (Dubzar): TÜRKPATENT sorgusu, `.com`/`.io` alınabilirliği.
+
+## Logo
+- Açık zeminli sürüm (işaret amber, yazı grafit) henüz üretilmedi.
+- ~~Açılış animasyonunu uygulamada oynatmak~~ — YAPILDI (`dubzar/ui/Intro.qml`): oyun açılınca D belirir, harfler D'nin arkasından açılır, sonra kısayol ipucu çıkar.
+- Logo için bir tasarımcının optik ince ayarı (köşe yarıçapları, nokta oranı) ürün satışından önce düşünülmeli.

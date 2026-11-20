@@ -2,12 +2,10 @@
 
 import ctypes
 import sys
-from dataclasses import dataclass
 
 from dubzar.models import Cue
 
 TAIL_S = 0.5  # a subtitle stays this long after its line ends
-POSITIONS = ("top", "center", "bottom")
 _QUNS_RUNNING_D3D_FULL_SCREEN = 3  # SHQUERYUSERNOTIFICATIONSTATE value
 
 
@@ -25,25 +23,6 @@ class SubtitleTimeline:
 
     def current(self, now: float) -> str | None:
         return self._text if self._text is not None and now < self._until else None
-
-
-@dataclass(frozen=True)
-class OverlaySettings:
-    """``screen``: "auto" (the screen the foreground window/game is on), "primary",
-    or a 1-based screen number such as "2"."""
-
-    font_size: int = 28
-    position: str = "bottom"
-    color: str = "#ffffff"
-    screen: str = "auto"
-
-    def __post_init__(self) -> None:
-        if self.position not in POSITIONS:
-            raise ValueError(f"position must be one of {POSITIONS}, got {self.position!r}")
-        if self.font_size <= 0:
-            raise ValueError("font_size must be positive")
-        if self.screen not in ("auto", "primary") and not (self.screen.isdigit() and int(self.screen) >= 1):
-            raise ValueError(f"screen must be 'auto', 'primary' or a number >= 1, got {self.screen!r}")
 
 
 def pick_screen_index(screen_origins: list[tuple[int, int]],

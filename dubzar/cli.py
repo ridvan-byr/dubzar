@@ -2,29 +2,20 @@
 
 import argparse
 import json
-import queue
-import signal
 import sys
-import threading
 from pathlib import Path
 from typing import Callable, Iterable
 
 import numpy as np
 
 from dubzar.asr import Transcriber, WhisperTranscriber
-from dubzar.capture import LoopbackCapture, queue_chunks, run_matching
+from dubzar.capture import run_matching
 from dubzar.fingerprint import Matcher
 from dubzar.index import IndexStore
 from dubzar.models import Cue
-from dubzar.overlay import OverlaySettings, detect_exclusive_fullscreen
+from dubzar.settings import Settings, load_settings
 from dubzar.scan import scan_folder
 from dubzar.translate import OpusMtTranslator, Translator
-
-EXCLUSIVE_WARNING = (
-    "Uyarı: tam ekran (exclusive) bir oyun algılandı, altyazı görünmeyebilir. "
-    "Oyunu 'pencereli tam ekran' (borderless) modda çalıştırın."
-)
-
 
 def _error(message: str) -> int:
     print(f"Hata: {message}", file=sys.stderr)
@@ -77,11 +68,25 @@ def _open_existing_index(path: str) -> IndexStore | None:
     return store
 
 
+POSITIONS = {"top": 0.0, "center": 0.5, "bottom": 1.0}
+
+
+def _settings_for_run(args) -> Settings:
+    """Saved settings, with any command-line flags applied on top (not saved by the flags themselves)."""
+    settings = load_settings(args.settings_file)
+    if args.font_size is not None:
+        settings.font_size = args.font_size
+    if args.position is not None:
+        settings.vertical = POSITIONS[args.position]
+    if args.screen is not None:
+        settings.screen = args.screen
+    return settings
+
+
 def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None,
              on_cue: Callable[[Cue], None] | None) -> int:
     try:
-        settings = OverlaySettings(font_size=args.font_size, position=args.position,
-                                   screen=args.screen)
+        settings = _settings_for_run(args)
     except ValueError as exc:
         return _error(str(exc))
     store = _open_existing_index(args.index)
@@ -92,60 +97,11 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None,
         if audio_chunks is not None:  # tests and offline replay: no capture, no window
             run_matching(audio_chunks, matcher, store, on_cue or (lambda cue: None))
             return 0
-        return _run_live(store, matcher, settings)
+        from dubzar.app import run_live  # imports Qt, which the other commands do not need
+
+        return run_live(store, matcher, settings)
     finally:
         store.close()
-
-
-def _run_live(store: IndexStore, matcher: Matcher, settings: OverlaySettings) -> int:
-    from PySide6.QtCore import QObject, QTimer, Signal
-    from PySide6.QtWidgets import QApplication
-
-    from dubzar.overlay_window import OverlayWindow
-
-    class Bridge(QObject):  # carries cues from the matching thread to the GUI thread
-        cue = Signal(object)
-
-    app = QApplication(sys.argv)
-    window = OverlayWindow(settings)
-    bridge = Bridge()
-    bridge.cue.connect(window.show_cue)
-
-    audio: queue.Queue = queue.Queue()
-    worker = threading.Thread(
-        target=run_matching,
-        args=(queue_chunks(audio), matcher, store, bridge.cue.emit),
-        daemon=True,
-    )
-    worker.start()
-    capture = LoopbackCapture(audio.put)
-    capture.start()
-
-    warned = False
-
-    def check_fullscreen() -> None:
-        nonlocal warned
-        if not warned and detect_exclusive_fullscreen():
-            warned = True
-            print(EXCLUSIVE_WARNING, flush=True)
-
-    check_fullscreen()
-    fullscreen_timer = QTimer()
-    fullscreen_timer.timeout.connect(check_fullscreen)
-    fullscreen_timer.start(5000)
-    signal.signal(signal.SIGINT, lambda *_: app.quit())
-    wakeup = QTimer()  # lets Python run the Ctrl+C handler while Qt owns the loop
-    wakeup.timeout.connect(lambda: None)
-    wakeup.start(200)
-
-    print("Dinleniyor. Çıkmak için Ctrl+C.", flush=True)
-    try:
-        app.exec()
-    finally:
-        capture.stop()
-        audio.put(None)
-        worker.join(timeout=2)
-    return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -162,10 +118,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     run = sub.add_parser("run", help="oyun sesini dinle ve altyazıyı göster")
     run.add_argument("--index", required=True, help="scan ile oluşturulmuş indeks dosyası")
-    run.add_argument("--font-size", type=int, default=28)
-    run.add_argument("--position", choices=("top", "center", "bottom"), default="bottom")
-    run.add_argument("--screen", default="auto",
-                     help="altyazının ekranı: auto (oyunun ekranı), primary veya 1, 2, ... (varsayılan: auto)")
+    run.add_argument("--font-size", type=int, help="bu çalıştırma için yazı boyutu (kayıtlı ayarı geçersiz kılar)")
+    run.add_argument("--position", choices=tuple(POSITIONS), help="bu çalıştırma için konum: top, center, bottom")
+    run.add_argument("--screen", help="bu çalıştırma için ekran: auto (oyunun ekranı), primary veya 1, 2, ...")
+    run.add_argument("--settings-file", help="ayar dosyası (varsayılan: %%APPDATA%%/Dubzar/settings.json)")
     return parser
 
 

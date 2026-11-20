@@ -26,4 +26,7 @@ markers = ["slow: needs real models or hardware"]
 addopts = "-m 'not slow'"
 
 [tool.setuptools]
-packages = ["dubzar"]
+packages = ["dubzar", "dubzar.ui"]
+
+[tool.setuptools.package-data]
+"dubzar.ui" = ["*.qml", "*.svg", "*.ico", "fonts/*"]

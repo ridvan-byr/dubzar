@@ -4,7 +4,6 @@ import pytest
 
 from dubzar.models import Cue
 from dubzar.overlay import (
-    OverlaySettings,
     SubtitleTimeline,
     detect_exclusive_fullscreen,
     is_exclusive_fullscreen,
@@ -37,14 +36,6 @@ def test_new_cue_replaces_old_immediately():
     assert timeline.current(now=2.6) is None  # the second cue's own end, not the first's
 
 
-def test_settings_defaults_and_validation():
-    assert OverlaySettings() == OverlaySettings(font_size=28, position="bottom", color="#ffffff")
-    with pytest.raises(ValueError):
-        OverlaySettings(position="left")
-    with pytest.raises(ValueError):
-        OverlaySettings(font_size=0)
-
-
 @pytest.mark.parametrize("state,expected", [
     (1, False), (2, False), (3, True), (4, False), (5, False), (6, False), (7, False),
 ])
@@ -66,14 +57,81 @@ def qapp():
 
 def test_window_shows_cue_and_hides_it_after_its_time(qapp):
     from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
 
-    window = OverlayWindow(OverlaySettings())
+    window = OverlayWindow(Settings())
     window.show_cue(cue("selam", 1.0), now=0.0)
     window.tick(now=0.5)
     assert window.text == "selam"
 
     window.tick(now=2.0)
     assert window.text == ""
+    assert not window.isVisible()
+
+
+def test_window_follows_settings_live(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    settings = Settings()
+    window = OverlayWindow(settings)
+    window.show_cue(cue("selam", 60.0), now=0.0)
+    window.tick(now=1.0)
+
+    settings.text_color = "#FFD166"
+    settings.background_color = "#102030"
+    settings.background_opacity = 50
+    settings.font_size = 40
+
+    style = window.label_style
+    assert "#FFD166" in style and "40px" in style
+    assert "rgba(16, 32, 48, 0.5)" in style
+
+
+def test_window_moves_with_the_vertical_setting(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    settings = Settings(vertical=0.0)
+    window = OverlayWindow(settings)
+    window.show_cue(cue("selam", 60.0), now=0.0)
+    top = window.y()
+
+    settings.vertical = 1.0
+
+    assert window.y() > top
+
+
+def test_turning_subtitles_off_hides_the_window_and_on_brings_it_back(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    settings = Settings()
+    window = OverlayWindow(settings)
+    window.show_cue(cue("selam", 60.0), now=0.0)
+    window.tick(now=1.0)
+    assert window.isVisible()
+
+    settings.subtitles_enabled = False
+    window.tick(now=1.1)
+    assert not window.isVisible()
+
+    settings.subtitles_enabled = True
+    window.tick(now=1.2)
+    assert window.isVisible()
+
+
+def test_preview_text_stays_up_until_cleared_even_with_no_cue(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    window.set_preview("Örnek altyazı")
+    window.tick(now=999.0)
+    assert window.text == "Örnek altyazı" and window.isVisible()
+
+    window.set_preview(None)
+    window.tick(now=999.0)
     assert not window.isVisible()
 
 
@@ -100,16 +158,6 @@ def test_primary_always_means_the_first_screen():
 def test_numbered_screen_is_one_based_and_never_crashes():
     assert pick_screen_index(TWO_SCREENS, None, "2") == 1
     assert pick_screen_index(TWO_SCREENS, None, "3") == 0  # unplugged monitor: use primary
-
-
-@pytest.mark.parametrize("bad", ["left", "0", "-1", ""])
-def test_invalid_screen_setting_is_rejected(bad):
-    with pytest.raises(ValueError):
-        OverlaySettings(screen=bad)
-
-
-def test_screen_defaults_to_auto():
-    assert OverlaySettings().screen == "auto"
 
 
 def test_foreground_monitor_origin_is_a_point_or_none_on_this_machine():
