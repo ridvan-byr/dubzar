@@ -26,5 +26,5 @@
 
 ## Logo
 - Açık zeminli sürüm (işaret amber, yazı grafit) henüz üretilmedi.
-- Açılış animasyonunu uygulamada oynatmak (şimdi yalnızca SVG olarak var; ipucunda statik D işareti kullanılıyor). Qt Quick'te yeniden kurulmalı.
+- ~~Açılış animasyonunu uygulamada oynatmak~~ — YAPILDI (`dubzar/ui/Intro.qml`): oyun açılınca D belirir, harfler D'nin arkasından açılır, sonra kısayol ipucu çıkar.
 - Logo için bir tasarımcının optik ince ayarı (köşe yarıçapları, nokta oranı) ürün satışından önce düşünülmeli.

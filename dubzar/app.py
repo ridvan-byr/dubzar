@@ -16,7 +16,7 @@ from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
 from dubzar.settings import Settings
 from dubzar.ui.controller import SettingsController
-from dubzar.ui.hint import HintToast
+from dubzar.ui.intro import IntroWindow
 from dubzar.ui.panel import PanelWindow
 from dubzar.ui.saver import SettingsSaver
 from dubzar.ui.screens import target_screen
@@ -42,7 +42,7 @@ def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)
     overlay = OverlayWindow(settings)
     panel = PanelWindow(controller)
-    toast = HintToast(animations)
+    intro = IntroWindow(animations)
     saver = SettingsSaver(settings)
     bridge = _Bridge()
 
@@ -60,11 +60,11 @@ def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
 
     hotkey = GlobalHotkey(bridge.toggle_panel.emit)
     if hotkey.start(settings.hotkey):
-        toast.show_hint(f"Dubzar etkin · {settings.hotkey} ile ayarları aç", settings.screen)
+        intro.show_hint("ile ayarları aç", settings.screen, keys=settings.hotkey.split("+"))
     else:
         print(f"Uyarı: {settings.hotkey} kısayolu başka bir program tarafından kullanılıyor. "
               "Ayarlar dosyasından başka bir kısayol seçin.", flush=True)
-        toast.show_hint("Dubzar etkin · kısayol kullanımda, ayarlar paneli açılamaz", settings.screen, 8000)
+        intro.show_hint("Kısayol kullanımda, ayarlar paneli açılamaz", settings.screen, 8000)
 
     audio: queue.Queue = queue.Queue()
     worker = threading.Thread(

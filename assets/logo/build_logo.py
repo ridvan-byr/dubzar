@@ -139,13 +139,19 @@ def reveal_svgs(g: dict) -> tuple[str, str]:
     )
     return animated, svg(w, h, word + d)
 
-def tight_logo(g: dict) -> str:
-    """The final lockup cropped to its own bounds (no margins), for use inside the app."""
+def tight_logo_parts(g: dict) -> tuple[str, str, str]:
+    """(full lockup, D layer only, letters layer only), all with the same cropped viewBox so
+    the layers can be stacked and animated independently inside the app."""
     left, top = g["d_left"], g["margin"]
     box = f"{left:.1f} {top:.1f} {g['right'] - left:.1f} {D_H:.1f}"
-    body = f'<path d="{g["word"]}" fill="{CREAM}"/>' + d_markup(g)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}" role="img" aria-label="Dubzar">{body}</svg>'
-            + chr(10))
+    nl = chr(10)
+
+    def wrap(body: str) -> str:
+        return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}" role="img" aria-label="Dubzar">{body}</svg>' + nl
+
+    word = f'<path d="{g["word"]}" fill="{CREAM}"/>'
+    d = d_markup(g)
+    return wrap(word + d), wrap(d), wrap(word)
 
 
 def write_ico(badge_svg: Path, target: Path) -> None:
@@ -237,8 +243,9 @@ def main() -> None:
     animated, final = reveal_svgs(g)
     (OUT / "dubzar-reveal.svg").write_text(animated, encoding="utf-8")
     (OUT / "dubzar-reveal-final.svg").write_text(final, encoding="utf-8")
-    UI_DIR.joinpath("dubzar-logo.svg").write_text(tight_logo(g), encoding="utf-8")
-    UI_DIR.joinpath("dubzar-mark.svg").write_text((OUT / "dubzar-mark.svg").read_text(encoding="utf-8"), encoding="utf-8")
+    full, d_only, word_only = tight_logo_parts(g)
+    for name, content in (("dubzar-logo.svg", full), ("dubzar-logo-d.svg", d_only), ("dubzar-logo-word.svg", word_only)):
+        UI_DIR.joinpath(name).write_text(content, encoding="utf-8")
     write_ico(OUT / "dubzar-badge.svg", UI_DIR / "dubzar.ico")
     print("written:", *sorted(p.name for p in OUT.glob("dubzar-*.svg")))
 

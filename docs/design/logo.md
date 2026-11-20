@@ -14,7 +14,13 @@ Logo açılışta büyük D belirir, "ubzar" harfleri D'nin yuvarlak silüetinin
 | `build_logo.py` | Hepsini üretir: `python assets/logo/build_logo.py`. Yazı, Instrument Serif Italic'ten eğriye çevrilir. |
 
 Uygulamanın içinde kullanılanlar `dubzar/ui/` altına üretilir: `dubzar-logo.svg` (kenar boşluksuz, panel başlığı),
-`dubzar-mark.svg` (açılış ipucu), `dubzar.ico` (Windows ikonu: 16, 24, 32, 48, 64, 128, 256 piksel).
+`dubzar-logo-d.svg` ve `dubzar-logo-word.svg` (aynı viewBox'lı iki katman, açılış animasyonu için), `dubzar.ico` (Windows ikonu: 16, 24, 32, 48, 64, 128, 256 piksel).
+
+## Açılış animasyonu uygulamada
+`dubzar/ui/Intro.qml` + `intro.py`. Qt'de SVG kırpma ve CSS animasyonu yok; aynı görüntü şöyle elde edilir: harfler,
+D'nin zar noktasının sağından başlayan bir dikdörtgenle kırpılır ve D harflerin **üstüne** çizilir. D opak olduğu için
+harfler yalnızca D'nin yuvarlak silüetinin dışında görünür (tarayıcıdaki SVG kırpmasıyla aynı sonuç).
+Windows'ta animasyonlar kapalıysa son hâl hemen gösterilir, sonra pencere kaybolur.
 
 ## Ayarlar (elle ayarlandı)
 D yüksekliğinin yaklaşık yarısı kadar küçük harfler (170 px, D = 264 birim), aralık 1, yazı D'nin tabanından 6 birim yukarıda.

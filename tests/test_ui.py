@@ -16,7 +16,6 @@ from PySide6.QtWidgets import QApplication  # noqa: E402
 
 from dubzar.settings import Settings, load_settings  # noqa: E402
 from dubzar.ui.controller import SettingsController  # noqa: E402
-from dubzar.ui.hint import HintToast  # noqa: E402
 from dubzar.ui.panel import PanelWindow  # noqa: E402
 from dubzar.ui.saver import SettingsSaver  # noqa: E402
 
@@ -114,15 +113,6 @@ def test_saver_flush_with_no_changes_writes_nothing(qapp, tmp_path):
     SettingsSaver(Settings(), path).flush()
 
     assert not path.exists()
-
-
-def test_hint_toast_shows_text_and_fades_away(qapp):
-    toast = HintToast(animations=False)
-
-    toast.show_hint("Dubzar etkin · Ctrl+Shift+D ile ayarları aç", hold_ms=50)
-    assert toast.isVisible() and "Ctrl+Shift+D" in toast.text
-
-    assert wait_until(lambda: not toast.isVisible())
 
 
 @pytest.fixture
