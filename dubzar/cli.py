@@ -78,6 +78,11 @@ def _open_existing_index(path: str) -> IndexStore | None:
 
 def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None,
              on_cue: Callable[[Cue], None] | None) -> int:
+    try:
+        settings = OverlaySettings(font_size=args.font_size, position=args.position,
+                                   screen=args.screen)
+    except ValueError as exc:
+        return _error(str(exc))
     store = _open_existing_index(args.index)
     if store is None:
         return 2
@@ -86,8 +91,7 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None,
         if audio_chunks is not None:  # tests and offline replay: no capture, no window
             run_matching(audio_chunks, matcher, store, on_cue or (lambda cue: None))
             return 0
-        return _run_live(store, matcher, OverlaySettings(
-            font_size=args.font_size, position=args.position))
+        return _run_live(store, matcher, settings)
     finally:
         store.close()
 
@@ -157,6 +161,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--index", required=True, help="scan ile oluşturulmuş indeks dosyası")
     run.add_argument("--font-size", type=int, default=28)
     run.add_argument("--position", choices=("top", "center", "bottom"), default="bottom")
+    run.add_argument("--screen", default="auto",
+                     help="altyazının ekranı: auto (oyunun ekranı), primary veya 1, 2, ... (varsayılan: auto)")
     return parser
 
 

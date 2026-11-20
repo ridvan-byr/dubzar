@@ -7,7 +7,12 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from dubzar.models import Cue
-from dubzar.overlay import OverlaySettings, SubtitleTimeline
+from dubzar.overlay import (
+    OverlaySettings,
+    SubtitleTimeline,
+    foreground_monitor_origin,
+    pick_screen_index,
+)
 
 TICK_MS = 100
 SCREEN_WIDTH_FRACTION = 0.8
@@ -62,7 +67,10 @@ class OverlayWindow(QWidget):
             self.show()
 
     def _place(self) -> None:
-        screen = QGuiApplication.primaryScreen().geometry()
+        screens = QGuiApplication.screens()  # index 0 is the primary screen
+        origins = [(s.geometry().x(), s.geometry().y()) for s in screens]
+        index = pick_screen_index(origins, foreground_monitor_origin(), self._settings.screen)
+        screen = screens[index].geometry()
         width = int(screen.width() * SCREEN_WIDTH_FRACTION)
         self._label.setFixedWidth(width)
         self.adjustSize()
