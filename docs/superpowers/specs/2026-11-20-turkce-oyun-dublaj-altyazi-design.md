@@ -66,11 +66,13 @@ Zamanlama kuralları: çeviri orijinal süreye sığar; gerekirse ses en fazla %
 
 #### Karakter sesi uyumu (gereksinim: "saçma çıkmamalı")
 - **Konuşmacıyı bul:** Ses dosyası adı/klasörü ve ses benzerliği (speaker diarization / embedding) ile her karakterin repliklerini grupla.
-- **Ses profili çıkar:** Her karakter için orijinal sesten cinsiyet, yaklaşık yaş, perde (pitch), tını ve konuşma hızı çıkarılır. Profil, uygun Türkçe sese eşlenir (ücretsiz/ticari lisanslı bir ses havuzundan seçim, ya da lisansı uygunsa ses uyarlama).
+- **Ses profili çıkar:** Her karakter için orijinal sesten cinsiyet, yaklaşık yaş, perde (pitch), tını ve konuşma hızı çıkarılır. Profil, uygun Türkçe sese eşlenir: ticari lisanslı, doğal bir Türkçe ses havuzundan (veya metinle tarif edilen bir sesten) orijinale **yakın** bir ses seçilir.
+  - **Karar (kullanıcı): ses klonlama yok.** Seslendirme sanatçısının sesi birebir taklit edilmez. Sanatçının ses kaydı hiçbir TTS/ses dönüştürme modeline referans olarak verilmez; yalnızca sayısal özellikler (cinsiyet, yaş aralığı, perde, tını, hız) çıkarılır. Gerekçe: sanatçı ve yapımcı hakları açısından hukuki risk, ve ürünün ticari satışı.
+  - Hedef: robotik olmayan, doğal, karaktere "yakın" ton. Robotik (eski nesil) sentezleyici kabul edilmez.
 - **Tutarlılık:** Bir karakter oyun boyunca hep aynı sesle konuşur. Aynı karakter bölümler arasında farklı sesle çıkmaz.
 - **Ton ve duygu:** Her replik için duygu/ton (fısıltı, bağırış, alay, üzüntü) orijinal sesin enerji ve perdesinden ve bağlamdan (LLM etiketi) çıkarılır, TTS'e ipucu olarak verilir.
   - Duygu kaynağı: ses özellikleri (perde, şiddet, hız, duraklama), duygu tanıma modeli ve çeviri sırasında bağlamdan LLM etiketi.
-  - Türkçe sese aktarma yolları (hangisinin kullanılacağı karşılaştırmayla belli olur): (1) duygu kontrollü TTS, (2) orijinal repliği referans/stil örneği olarak veren TTS, (3) nötr Türkçe üretip orijinalin perde ve şiddet eğrisini uygulamak (yedek).
+  - Türkçe sese aktarma yolları (hangisinin kullanılacağı karşılaştırmayla belli olur): (1) duygu kontrollü TTS, (2) duygu ve şiddet etiketleriyle yönlendirilen TTS (orijinal ses referans olarak VERİLMEZ, klonlama yok), (3) nötr Türkçe üretip orijinalin perde ve şiddet eğrisinden çıkarılan sayısal parametreleri uygulamak (yedek).
   - **Beklenti sınırı:** Hafif ve orta duygu (kızgın, üzgün, heyecanlı) hedeflenir. Ağlama, çığlık, nefes nefese konuşma gibi uç durumlar zayıf kalabilir; bunlarda kalite kapısı devreye girip yalnızca altyazı gösterilir. "Aktör kalitesi" sözü verilmez.
   - **Ön koşul, Aşama 2 başlamadan önce — TTS motor karşılaştırması:** Aynı yaklaşık 20 replik (nötr, öfkeli, fısıltı, üzgün) adaylarla seslendirilir. Ölçütler: Türkçe doğallık, duygu aktarımı, karakter sesi tutarlılığı, hız, ticari lisans (her aday için doğrulanır, bkz. `docs/LICENSES.md`). Sonuç dinlenip motor seçilir, karşılaştırma notları `docs/TTS_BAKEOFF.md` içine yazılır. Sonuç duyulmadan duygulu dublaj taahhüdü verilmez.
 - **Kalite kapısı:** Üretilen klip süre, anlaşılırlık ve ses benzerliği kontrolünden geçer. Kalite eşiğinin altında kalanlar yeniden üretilir; olmazsa o replik için yalnızca altyazı gösterilir (saçma dublaj yerine altyazı).
@@ -86,7 +88,7 @@ Sesi olmayan oyunlar için metin yakalama / OCR altyazısı; ek motorlar için d
 - İlk sürüm Windows.
 
 ## Açık kararlar (builder'a / kullanıcıya kalan)
-- Hangi çeviri / TTS / ses uyarlama motorları (Türkçe kalitesi ve lisans için test edilerek seçilecek; karakter ses uyumu için kritik).
+- Hangi çeviri / TTS motorları (klonlama gerektirmeyen, ses seçimi veya metinle ses tarifi destekleyenler) (Türkçe kalitesi ve lisans için test edilerek seçilecek; karakter ses uyumu için kritik).
 - Tarama süresi hedefi (büyük oyunlarda saatler sürebilir) ve kullanıcıya nasıl gösterileceği.
 - Hazır indeksleri (çeviri metni + parmak izi) paylaşmak taramayı kısaltır ama telif açısından gri alandır; ilk sürümde yapılmaz, sonra karar verilir.
 - Fiyatlandırma modeli.
