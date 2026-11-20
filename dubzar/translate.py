@@ -5,6 +5,9 @@ from typing import Callable, Protocol, Sequence
 from dubzar.errors import ModelMissingError
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
+# The repository also holds TensorFlow/Flax copies of the weights; we only ever need the PyTorch ones.
+NUM_BEAMS = 4  # Opus-MT default; fewer beams are faster but a little less accurate
+UNNEEDED_FILES = ["tf_model.h5", "*.h5", "flax_model*", "*.msgpack", "*.zip", "*.md"]
 
 
 class Translator(Protocol):
@@ -15,10 +18,24 @@ class Translator(Protocol):
 
 def _make_pipeline(local_only: bool) -> Callable[[str], str]:
     """The real Opus-MT translation function (text -> text); a seam so tests need no model."""
-    from transformers import pipeline
+    import torch
+    from huggingface_hub import snapshot_download
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-    pipe = pipeline("translation", model=MODEL_NAME, model_kwargs={"local_files_only": local_only})
-    return lambda text: pipe(text, max_length=256)[0]["translation_text"]
+    # Resolving the folder ourselves keeps "no download" honest: with local_only the call fails instead of
+    # touching the network, and the model below then reads plain local files. (transformers 5 removed the
+    # "translation" pipeline shortcut, so the model and tokenizer are used directly.)
+    folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
+    tokenizer = AutoTokenizer.from_pretrained(folder)
+    model = AutoModelForSeq2SeqLM.from_pretrained(folder).eval()
+
+    def translate(text: str) -> str:
+        inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=256)
+        with torch.inference_mode():
+            output = model.generate(**inputs, max_length=256, num_beams=NUM_BEAMS)
+        return tokenizer.decode(output[0], skip_special_tokens=True)
+
+    return translate
 
 
 class OpusMtTranslator:
