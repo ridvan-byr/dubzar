@@ -47,6 +47,17 @@ class IndexStore:
             row = self._db.execute("SELECT 1 FROM lines WHERE digest = ?", (digest,)).fetchone()
         return row is not None
 
+    def line_id_for_digest(self, digest: str) -> str | None:
+        with self._lock:
+            row = self._db.execute("SELECT line_id FROM lines WHERE digest = ?", (digest,)).fetchone()
+        return row[0] if row else None
+
+    def has_live_lines(self) -> bool:
+        """True when the live mode has learned at least one line (their ids start with ``live/``)."""
+        with self._lock:
+            row = self._db.execute("SELECT 1 FROM lines WHERE line_id LIKE 'live/%' LIMIT 1").fetchone()
+        return row is not None
+
     def add_line(self, cue: Cue, hashes: list[tuple[int, int]], content_digest: str) -> bool:
         """Store a line and its ``(hash, anchor_frame)`` pairs.
 
@@ -67,6 +78,13 @@ class IndexStore:
                     [(h, cue.line_id, anchor) for h, anchor in hashes],
                 )
         return True
+
+    def remove_line(self, line_id: str) -> bool:
+        """Delete a line with its fingerprints; its audio digest becomes free to index again."""
+        with self._lock, self._db:
+            self._db.execute("DELETE FROM hashes WHERE line_id = ?", (line_id,))
+            removed = self._db.execute("DELETE FROM lines WHERE line_id = ?", (line_id,)).rowcount
+        return removed > 0
 
     def add_skipped(self, digest: str) -> None:
         """Remember audio that had no usable speech so a re-run does not transcribe it again."""

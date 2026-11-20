@@ -122,3 +122,22 @@ def test_skipped_digests_are_remembered_across_reopening(tmp_path):
     assert not second.has_digest("grunt")  # skipped is not the same as indexed
     assert second.count_lines() == 0
     second.close()
+
+
+def test_remove_line_deletes_the_cue_its_hashes_and_frees_the_digest(store):
+    store.add_line(Cue("a1", "x", "y", 1.0), [(10, 1)], "d1")
+    store.add_line(Cue("b1", "x", "y", 1.0), [(10, 2)], "d2")
+
+    assert store.remove_line("a1") is True
+
+    assert store.get_cue("a1") is None
+    assert [r[0] for r in store.lookup([10])] == ["b1"]
+    assert not store.has_digest("d1")  # the same audio can be indexed again later
+    assert store.remove_line("a1") is False  # already gone
+
+
+def test_line_id_for_digest(store):
+    store.add_line(Cue("a1", "x", "y", 1.0), [(10, 1)], "d1")
+
+    assert store.line_id_for_digest("d1") == "a1"
+    assert store.line_id_for_digest("nope") is None

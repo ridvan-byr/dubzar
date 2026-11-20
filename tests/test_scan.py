@@ -198,3 +198,59 @@ def test_failed_files_are_retried_on_rerun(audio_dir, store):
     second = scan_folder(str(audio_dir), store, transcriber, PrefixTranslator())
 
     assert (first.failed, second.indexed) == (1, 1)
+
+
+# --- scanning vs. lines the live mode already learned -------------------------------------
+from dubzar.live import LiveEngine  # noqa: E402
+from dubzar.segmenter import Segment  # noqa: E402
+
+
+def learn_live(store, seed: int, seconds: float = 1.5, pad_s: float = 0.0):
+    pad = np.zeros(int(pad_s * SR), dtype=np.float32)
+    samples = np.concatenate([pad, synth_line(seed, seconds)])
+    live = LiveEngine(store, FakeTranscriber(), PrefixTranslator(), lambda cue: None)
+    cue = live.process(Segment(samples, 0.0, len(samples) / SR))
+    assert cue is not None and store.get_cue(cue.line_id) is not None, "live mode should have learned it"
+    return cue
+
+
+def test_scan_replaces_a_live_learned_line_for_identical_audio(audio_dir, store):
+    # Review Focus 3: no double records and no double subtitles once the file is scanned.
+    live_cue = learn_live(store, 1)
+    write_wav(audio_dir / "a.wav", synth_line(1, 1.5))
+
+    report = scan_folder(str(audio_dir), store, FakeTranscriber(), PrefixTranslator())
+
+    assert report.indexed == 1
+    assert store.count_lines() == 1
+    assert store.get_cue("a.wav") is not None and store.get_cue(live_cue.line_id) is None
+
+
+def test_scan_replaces_a_live_line_learned_from_a_slightly_different_segment(audio_dir, store):
+    live_cue = learn_live(store, 1, pad_s=0.2)  # live segments carry some context, so the bytes differ
+    write_wav(audio_dir / "a.wav", synth_line(1, 1.5))
+
+    scan_folder(str(audio_dir), store, FakeTranscriber(), PrefixTranslator())
+
+    assert store.count_lines() == 1
+    assert store.get_cue("a.wav") is not None and store.get_cue(live_cue.line_id) is None
+
+
+def test_scan_keeps_unrelated_live_lines(audio_dir, store):
+    other = learn_live(store, 2)
+    write_wav(audio_dir / "a.wav", synth_line(1, 1.5))
+
+    scan_folder(str(audio_dir), store, FakeTranscriber(), PrefixTranslator())
+
+    assert store.count_lines() == 2
+    assert store.get_cue(other.line_id) is not None and store.get_cue("a.wav") is not None
+
+
+def test_a_scanned_file_is_never_removed_by_another_scanned_file(audio_dir, store):
+    write_wav(audio_dir / "a.wav", synth_line(1, 1.5))
+    scan_folder(str(audio_dir), store, FakeTranscriber(), PrefixTranslator())
+    write_wav(audio_dir / "b.wav", np.concatenate([np.zeros(3200, dtype=np.float32), synth_line(1, 1.5)]))
+
+    scan_folder(str(audio_dir), store, FakeTranscriber(), PrefixTranslator())
+
+    assert store.get_cue("a.wav") is not None  # only live-learned lines are superseded

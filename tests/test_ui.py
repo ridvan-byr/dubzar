@@ -202,3 +202,90 @@ def test_font_files_ship_with_their_licenses():
 
     names = {p.name for p in FONT_DIR.iterdir()}
     assert {"DMSans.ttf", "InstrumentSerif-Italic.ttf", "OFL-DMSans.txt", "OFL-InstrumentSerif.txt"} <= names
+
+
+def test_status_shows_scan_percentage_while_scanning(qapp):
+    ctl = SettingsController(Settings())
+    ctl.set_live(True)
+
+    ctl.set_scan_progress(34, 100)
+
+    assert ctl.status == "Öğreniyor 34%"
+
+
+def test_status_is_live_when_nothing_is_being_scanned(qapp):
+    ctl = SettingsController(Settings())
+
+    assert ctl.status == "Dinleniyor"  # nothing running yet
+    ctl.set_live(True)
+    assert ctl.status == "Canlı"
+    ctl.set_scan_progress(0, 0)  # a scan that has not started yet
+    assert ctl.status == "Canlı"
+
+
+def test_status_goes_back_to_live_when_the_scan_finishes(qapp):
+    ctl = SettingsController(Settings())
+    ctl.set_live(True)
+    ctl.set_scan_progress(99, 100)
+    assert ctl.status == "Öğreniyor 99%"
+
+    ctl.set_scan_progress(100, 100)
+
+    assert ctl.status == "Canlı"
+
+
+def test_status_change_notifies_the_panel(qapp):
+    ctl = SettingsController(Settings())
+    seen = []
+    ctl.changed.connect(lambda: seen.append(1))
+
+    ctl.set_scan_progress(10, 100)
+
+    assert seen == [1]
+
+
+# --- the panel closes itself so it never stays on the screen by accident ---------------------------
+def test_panel_closes_itself_after_a_period_without_interaction(qapp):
+    ctl = SettingsController(Settings(), animations=False, idle_close_ms=120)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 1280, 720))
+    assert window.is_open
+
+    assert wait_until(lambda: not window.is_open, 3.0)
+    assert wait_until(lambda: not window.view.isVisible(), 3.0)
+
+
+def test_using_the_panel_keeps_it_open(qapp):
+    ctl = SettingsController(Settings(), animations=False, idle_close_ms=250)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 1280, 720))
+
+    for size in range(30, 40):  # ~0.6 s of dragging a slider: far longer than the idle limit
+        ctl.setFontSize(size)
+        wait_until(lambda: False, 0.06)
+    assert window.is_open
+
+    assert wait_until(lambda: not window.is_open, 3.0)  # and once the user stops, it still closes
+
+
+# --- harmless Qt/Windows chatter must not bury the real messages -----------------------------------
+def test_qt_geometry_chatter_is_dropped_but_real_messages_are_kept(capsys):
+    from dubzar.app import qt_message_filter
+
+    chatter = ("QWindowsWindow::setGeometry: Unable to set geometry 1536x54+192+854 on "
+               "QWidgetWindow/OverlayWindowClassWindow. Resulting geometry 1920x68+192+854")
+    qt_message_filter(None, None, chatter)
+    qt_message_filter(None, None, "QML error: something real went wrong")
+
+    err = capsys.readouterr().err
+    assert "Unable to set geometry" not in err
+    assert "something real went wrong" in err
+
+
+def test_showing_the_panel_never_takes_keyboard_focus_from_the_game(qapp):
+    from PySide6.QtCore import Qt
+
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl)
+
+    assert window.view.flags() & Qt.WindowDoesNotAcceptFocus

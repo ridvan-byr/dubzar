@@ -53,6 +53,15 @@ def _hotkey(value: Any) -> str:
     return value
 
 
+def _optional_exe_name(value: Any) -> str | None:
+    if value is None:
+        return None
+    if (not isinstance(value, str) or not value.lower().endswith(".exe")
+            or "/" in value or chr(92) in value or value.lower() == ".exe"):
+        raise ValueError(f"game_exe must be a plain file name like GTA5.exe, got {value!r}")
+    return value
+
+
 # name -> (default, validator that returns the normalised value or raises ValueError)
 _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "subtitles_enabled": (True, _boolean),
@@ -64,6 +73,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "background_opacity": (60, _int_between(0, 100)),  # percent
     "screen": ("auto", _screen),
     "hotkey": ("Ctrl+Shift+D", _hotkey),
+    "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }
 
 

@@ -1,7 +1,12 @@
-"""Command line: ``python -m dubzar scan <audio_dir> --index game.db`` then ``... run --index game.db``."""
+"""Command line.
+
+``python -m dubzar run --index game.db``   live subtitles; the index grows as the game talks
+``python -m dubzar scan <audio_dir> --index game.db``   scan extracted voice files into the index
+"""
 
 import argparse
 import json
+import logging
 import sys
 from pathlib import Path
 from typing import Callable, Iterable
@@ -9,13 +14,16 @@ from typing import Callable, Iterable
 import numpy as np
 
 from dubzar.asr import Transcriber, WhisperTranscriber
-from dubzar.capture import run_matching
-from dubzar.fingerprint import Matcher
+from dubzar.errors import ModelMissingError
 from dubzar.index import IndexStore
+from dubzar.live import LivePipeline
 from dubzar.models import Cue
-from dubzar.settings import Settings, load_settings
 from dubzar.scan import scan_folder
-from dubzar.translate import OpusMtTranslator, Translator
+from dubzar.settings import Settings, load_settings
+from dubzar.translate import OpusMtTranslator, ThreadSafeTranslator, Translator
+
+POSITIONS = {"top": 0.0, "center": 0.5, "bottom": 1.0}
+
 
 def _error(message: str) -> int:
     print(f"Hata: {message}", file=sys.stderr)
@@ -31,6 +39,21 @@ def _load_glossary(path: str | None) -> dict[str, str]:
     return data
 
 
+def _build_models(args, glossary: dict[str, str], transcriber: Transcriber | None,
+                  translator: Translator | None) -> tuple[Transcriber, Translator]:
+    """The real models unless fakes are injected. A model that is not on this computer is never
+    downloaded unless ``--allow-download`` was given; ``ModelMissingError`` carries the explanation."""
+    if transcriber is None:
+        transcriber = WhisperTranscriber(model_size=args.whisper_model, device=args.device,
+                                         allow_download=args.allow_download, cpu_threads=args.cpu_threads)
+        transcriber.load()
+    if translator is None:
+        translator = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download,
+                                      threads=args.cpu_threads)
+        translator.load()
+    return transcriber, ThreadSafeTranslator(translator)
+
+
 def _cmd_scan(args, transcriber: Transcriber | None, translator: Translator | None) -> int:
     folder = Path(args.folder)
     if not folder.is_dir():
@@ -39,8 +62,10 @@ def _cmd_scan(args, transcriber: Transcriber | None, translator: Translator | No
         glossary = _load_glossary(args.glossary)
     except (OSError, ValueError) as exc:
         return _error(f"glossary okunamadı: {exc}")
-    transcriber = transcriber or WhisperTranscriber(model_size=args.whisper_model)
-    translator = translator or OpusMtTranslator(glossary=glossary)
+    try:
+        transcriber, translator = _build_models(args, glossary, transcriber, translator)
+    except ModelMissingError as exc:
+        return _error(str(exc))
 
     store = IndexStore(args.index)
     try:
@@ -56,21 +81,6 @@ def _cmd_scan(args, transcriber: Transcriber | None, translator: Translator | No
     return 0
 
 
-def _open_existing_index(path: str) -> IndexStore | None:
-    if not Path(path).is_file():
-        _error(f"indeks dosyası yok: {path}. Önce 'scan' komutunu çalıştırın.")
-        return None
-    store = IndexStore(path)
-    if store.count_lines() == 0:
-        store.close()
-        _error("indeks boş. Önce 'scan' komutuyla ses klasörünü tarayın.")
-        return None
-    return store
-
-
-POSITIONS = {"top": 0.0, "center": 0.5, "bottom": 1.0}
-
-
 def _settings_for_run(args) -> Settings:
     """Saved settings, with any command-line flags applied on top (not saved by the flags themselves)."""
     settings = load_settings(args.settings_file)
@@ -80,26 +90,55 @@ def _settings_for_run(args) -> Settings:
         settings.vertical = POSITIONS[args.position]
     if args.screen is not None:
         settings.screen = args.screen
+    if args.game_exe is not None:
+        settings.game_exe = args.game_exe
     return settings
 
 
-def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None,
-             on_cue: Callable[[Cue], None] | None) -> int:
+def _configure_logging(debug: bool) -> None:
+    """--debug prints what the live mode does (levels, segments, why a subtitle was or was not shown)."""
+    logging.basicConfig(level=logging.INFO if debug else logging.WARNING, format="%(asctime)s %(message)s",
+                        datefmt="%H:%M:%S", force=True)
+
+
+def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[Cue], None] | None,
+             transcriber: Transcriber | None, translator: Translator | None) -> int:
+    _configure_logging(args.debug)
     try:
         settings = _settings_for_run(args)
-    except ValueError as exc:
+        glossary = _load_glossary(args.glossary)
+    except (OSError, ValueError) as exc:
         return _error(str(exc))
-    store = _open_existing_index(args.index)
-    if store is None:
-        return 2
-    matcher = Matcher(store.lookup)
+    if args.game_exe and not args.audio_dir:
+        return _error("--game-exe yalnızca --audio-dir ile anlamlı: arka plan taraması için ses klasörü gerekir.")
+    if args.audio_dir and not settings.game_exe:
+        return _error("--audio-dir için oyunun süreç adı da gerekir (--game-exe GTA5.exe): "
+                      "tarama, oyun çalışırken duraklar.")
+    if args.audio_dir and not Path(args.audio_dir).is_dir():
+        return _error(f"ses klasörü bulunamadı: {args.audio_dir}")
+    try:
+        transcriber, translator = _build_models(args, glossary, transcriber, translator)
+    except ModelMissingError as exc:
+        return _error(str(exc))
+
+    store = IndexStore(args.index)  # created when it does not exist yet: live mode needs no prior scan
     try:
         if audio_chunks is not None:  # tests and offline replay: no capture, no window
-            run_matching(audio_chunks, matcher, store, on_cue or (lambda cue: None))
+            pipeline = LivePipeline(store, transcriber, translator, on_cue or (lambda cue: None))
+            for chunk in audio_chunks:
+                pipeline.feed(chunk)
+            pipeline.close()
             return 0
         from dubzar.app import run_live  # imports Qt, which the other commands do not need
 
-        return run_live(store, matcher, settings)
+        def make_scan_transcriber() -> Transcriber:
+            scanner_model = WhisperTranscriber(model_size=args.scan_model, device="auto",
+                                               allow_download=args.allow_download, cpu_threads=args.cpu_threads)
+            scanner_model.load()
+            return scanner_model
+
+        return run_live(store, args.index, settings, transcriber, translator,
+                        audio_dir=args.audio_dir, make_scan_transcriber=make_scan_transcriber)
     finally:
         store.close()
 
@@ -108,16 +147,33 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="dubzar", description="Türkçe oyun altyazısı ve dublajı")
     sub = parser.add_subparsers(dest="command", required=True)
 
+    def model_flags(p, whisper_default: str, device_default: str, threads_default: int) -> None:
+        p.add_argument("--whisper-model", default=whisper_default,
+                       help=f"tiny, base, small ... (varsayılan: {whisper_default})")
+        p.add_argument("--device", choices=("cpu", "auto"), default=device_default,
+                       help=f"konuşma tanıma cihazı; auto ekran kartını dener (varsayılan: {device_default})")
+        p.add_argument("--cpu-threads", type=int, default=threads_default,
+                       help="modellerin kullanacağı işlemci iş parçacığı sayısı; 0 = kütüphane varsayılanı "
+                            f"(varsayılan: {threads_default}; canlı modda oyuna çekirdek kalsın diye düşük)")
+        p.add_argument("--allow-download", action="store_true",
+                       help="eksik modelleri indirmeye izin ver (varsayılan: indirme yok, eksikse hata verir)")
+        p.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
+
     scan = sub.add_parser("scan", help="oyunun ses dosyalarını tara ve altyazı indeksi oluştur")
     scan.add_argument("folder", help="çıkarılmış ses dosyalarının klasörü")
     scan.add_argument("--index", required=True, help="indeks dosyası (.db)")
-    scan.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
-    scan.add_argument("--whisper-model", default="small", help="tiny, small, medium ... (varsayılan: small)")
+    model_flags(scan, "small", "auto", 0)
     scan.add_argument("--retry-skipped", action="store_true",
                       help="önceden konuşmasız diye atlanan dosyaları yeniden dene (daha iyi model sonrası)")
 
-    run = sub.add_parser("run", help="oyun sesini dinle ve altyazıyı göster")
-    run.add_argument("--index", required=True, help="scan ile oluşturulmuş indeks dosyası")
+    run = sub.add_parser("run", help="oyun sesini dinle ve Türkçe altyazıyı canlı göster; indeks oynadıkça büyür")
+    run.add_argument("--index", required=True, help="indeks dosyası (yoksa oluşturulur)")
+    model_flags(run, "tiny", "cpu", 2)
+    run.add_argument("--debug", action="store_true",
+                     help="ne olduğunu yaz: ses seviyesi, yakalanan parçalar, tanıma sonucu, altyazı neden gösterilmedi")
+    run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
+    run.add_argument("--game-exe", help="oyunun süreç adı (örn. GTA5.exe): çalışırken arka plan taraması bekler")
+    run.add_argument("--scan-model", default="small", help="arka plan taraması için Whisper modeli (varsayılan: small)")
     run.add_argument("--font-size", type=int, help="bu çalıştırma için yazı boyutu (kayıtlı ayarı geçersiz kılar)")
     run.add_argument("--position", choices=tuple(POSITIONS), help="bu çalıştırma için konum: top, center, bottom")
     run.add_argument("--screen", help="bu çalıştırma için ekran: auto (oyunun ekranı), primary veya 1, 2, ...")
@@ -132,4 +188,4 @@ def main(argv: list[str] | None = None, *, transcriber: Transcriber | None = Non
     args = build_parser().parse_args(argv)
     if args.command == "scan":
         return _cmd_scan(args, transcriber, translator)
-    return _cmd_run(args, audio_chunks, on_cue)
+    return _cmd_run(args, audio_chunks, on_cue, transcriber, translator)

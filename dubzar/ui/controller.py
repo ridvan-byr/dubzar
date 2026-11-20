@@ -25,15 +25,19 @@ class SettingsController(QObject):
 
     changed = Signal()
     closeRequested = Signal()
+    activity = Signal()  # the user did something in the panel: keeps it from closing itself
 
     def __init__(self, settings: Settings, screen_count: int = 1, animations: bool = True,
-                 status: str = "Dinleniyor", dubbing_available: bool = False):
+                 status: str = "Dinleniyor", dubbing_available: bool = False, idle_close_ms: int = 8000):
         super().__init__()
         self._s = settings
         self._screen_count = screen_count
         self._animations = animations
         self._status = status
+        self._live = False
+        self._scan = (0, 0)
         self._dubbing_available = dubbing_available
+        self._idle_close_ms = idle_close_ms
         settings.on_change(lambda _name: self.changed.emit())
 
     @Property(bool, notify=changed)
@@ -80,6 +84,10 @@ class SettingsController(QObject):
     def serifFamily(self) -> str:
         return first_available(SERIF_FAMILIES)
 
+    @Property(int, constant=True)
+    def idleCloseMs(self) -> int:
+        return self._idle_close_ms
+
     @Property(bool, constant=True)
     def dubbingAvailable(self) -> bool:
         return self._dubbing_available
@@ -94,39 +102,58 @@ class SettingsController(QObject):
 
     @Property(str, notify=changed)
     def status(self) -> str:
-        return self._status
+        """What the panel's header says: scan progress, live mode, or the idle text."""
+        done, total = self._scan
+        if 0 < done < total:
+            return f"Öğreniyor {done * 100 // total}%"
+        return "Canlı" if self._live else self._status
 
     def set_status(self, text: str) -> None:
         self._status = text
         self.changed.emit()
 
+    def set_live(self, live: bool) -> None:
+        self._live = live
+        self.changed.emit()
+
+    def set_scan_progress(self, done: int, total: int) -> None:
+        self._scan = (done, total)
+        self.changed.emit()
+
     @Slot(bool)
     def setSubtitlesEnabled(self, value: bool) -> None:
         self._s.subtitles_enabled = value
+        self.activity.emit()
 
     @Slot(bool)
     def setDubbingEnabled(self, value: bool) -> None:
         self._s.dubbing_enabled = value
+        self.activity.emit()
 
     @Slot(int)
     def setFontSize(self, value: int) -> None:
         self._s.font_size = int(value)
+        self.activity.emit()
 
     @Slot(float)
     def setVertical(self, value: float) -> None:
         self._s.vertical = min(1.0, max(0.0, float(value)))
+        self.activity.emit()
 
     @Slot(str)
     def setTextColor(self, value: str) -> None:
         self._s.text_color = value
+        self.activity.emit()
 
     @Slot(str)
     def setBackgroundColor(self, value: str) -> None:
         self._s.background_color = value
+        self.activity.emit()
 
     @Slot(int)
     def setBackgroundOpacity(self, value: int) -> None:
         self._s.background_opacity = int(value)
+        self.activity.emit()
 
     @Slot()
     def cycleScreen(self) -> None:
@@ -134,10 +161,12 @@ class SettingsController(QObject):
         order = ["auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
         current = self._s.screen if self._s.screen in order else "auto"
         self._s.screen = order[(order.index(current) + 1) % len(order)]
+        self.activity.emit()
 
     @Slot()
     def resetToDefaults(self) -> None:
         self._s.reset()
+        self.activity.emit()
 
     @Slot()
     def close(self) -> None:

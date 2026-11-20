@@ -17,7 +17,9 @@ class PanelWindow:
         self._controller = controller
         load_bundled_fonts()  # before the QML reads the font family names
         self.view = QQuickView()
-        self.view.setFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool)
+        # DoesNotAcceptFocus: showing the panel must never pull the keyboard focus away from the game
+        # (a game that loses focus can minimise, pause or stall). The mouse still works when the cursor is free.
+        self.view.setFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool | Qt.WindowDoesNotAcceptFocus)
         self.view.setColor(Qt.transparent)
         fmt = self.view.format()
         fmt.setAlphaBufferSize(8)
@@ -51,7 +53,6 @@ class PanelWindow:
         self.view.setPosition(screen.x() + screen.width() - self.view.width() - EDGE,
                               screen.y() + (screen.height() - self.view.height()) // 2)
         self.view.show()
-        self.view.requestActivate()
         self._root.setProperty("open", True)
 
     def hide(self) -> None:

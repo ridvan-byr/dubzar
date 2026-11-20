@@ -1,26 +1,34 @@
-"""The live app: listens to the game, shows subtitles, opens the settings panel on a hotkey."""
+"""The live app: listens to the game, shows subtitles, learns, and opens the settings panel on a hotkey."""
 
+import logging
 import queue
 import signal
 import sys
 import threading
+from typing import Callable
 
-from PySide6.QtCore import QObject, QTimer, Signal
+from PySide6.QtCore import QObject, QTimer, Signal, qInstallMessageHandler
 from PySide6.QtWidgets import QApplication
 
-from dubzar.capture import LoopbackCapture, queue_chunks, run_matching
-from dubzar.fingerprint import Matcher
+from dubzar.asr import Transcriber
+from dubzar.background import BackgroundScanner
+from dubzar.capture import LoopbackCapture, queue_chunks
 from dubzar.hotkey import GlobalHotkey
 from dubzar.index import IndexStore
+from dubzar.live import LivePipeline
 from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
+from dubzar.priority import lower_priority
 from dubzar.settings import Settings
+from dubzar.translate import Translator
 from dubzar.ui.controller import SettingsController
 from dubzar.ui.intro import IntroWindow
 from dubzar.ui.panel import PanelWindow
 from dubzar.ui.saver import SettingsSaver
 from dubzar.ui.screens import target_screen
 from dubzar.ui.system import animations_enabled
+
+log = logging.getLogger(__name__)
 
 PREVIEW_TEXT = "Sessiz ol… Birisi geliyor."
 EXCLUSIVE_WARNING = (
@@ -29,17 +37,31 @@ EXCLUSIVE_WARNING = (
 )
 
 
+def qt_message_filter(mode, context, message: str) -> None:
+    """Print Qt's messages, except the harmless "Unable to set geometry" chatter the overlay triggers
+    when Windows applies its own size limits (the subtitle still shows in the right place)."""
+    if "Unable to set geometry" in message:
+        return
+    print(message, file=sys.stderr, flush=True)
+
+
 class _Bridge(QObject):
-    """Carries events from worker threads (matching, hotkey) to the GUI thread."""
+    """Carries events from worker threads (recognition, hotkey, background scan) to the GUI thread."""
 
     cue = Signal(object)
     toggle_panel = Signal()
+    scan_progress = Signal(int, int)
 
 
-def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
+def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
+             translator: Translator, *, audio_dir: str | None = None,
+             make_scan_transcriber: Callable[[], Transcriber] | None = None) -> int:
+    qInstallMessageHandler(qt_message_filter)
+    lower_priority()  # the game must always win when the processor is busy
     app = QApplication(sys.argv)
     animations = animations_enabled()
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)
+    controller.set_live(True)
     overlay = OverlayWindow(settings)
     panel = PanelWindow(controller)
     intro = IntroWindow(animations)
@@ -47,6 +69,7 @@ def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
     bridge = _Bridge()
 
     bridge.cue.connect(overlay.show_cue)
+    bridge.scan_progress.connect(controller.set_scan_progress)
     panel.on_closed(lambda: overlay.set_preview(None))
 
     def toggle_panel() -> None:
@@ -66,15 +89,27 @@ def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
               "Ayarlar dosyasından başka bir kısayol seçin.", flush=True)
         intro.show_hint("Kısayol kullanımda, ayarlar paneli açılamaz", settings.screen, 8000)
 
+    pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit)
     audio: queue.Queue = queue.Queue()
-    worker = threading.Thread(
-        target=run_matching,
-        args=(queue_chunks(audio), matcher, store, bridge.cue.emit),
-        daemon=True,
-    )
-    worker.start()
+
+    def feed_pipeline() -> None:
+        for chunk in queue_chunks(audio):
+            try:
+                pipeline.feed(chunk)
+            except Exception:
+                log.exception("audio chunk handling failed")
+
+    feeder = threading.Thread(target=feed_pipeline, name="dubzar-feed", daemon=True)
+    feeder.start()
     capture = LoopbackCapture(audio.put)
     capture.start()
+
+    scanner: BackgroundScanner | None = None
+    if audio_dir and settings.game_exe and make_scan_transcriber is not None:
+        scanner = BackgroundScanner(audio_dir, store_path, make_scan_transcriber, lambda: translator,
+                                    settings.game_exe, bridge.scan_progress.emit)
+        scanner.start()
+        print(f"Arka plan taraması etkin: {settings.game_exe} çalışırken bekler.", flush=True)
 
     warned = False
 
@@ -93,13 +128,16 @@ def run_live(store: IndexStore, matcher: Matcher, settings: Settings) -> int:
     wakeup.timeout.connect(lambda: None)
     wakeup.start(200)
 
-    print("Dinleniyor. Çıkmak için Ctrl+C.", flush=True)
+    print("Canlı mod: oyun sesi dinleniyor, altyazı gösteriliyor ve öğreniliyor. Çıkmak için Ctrl+C.", flush=True)
     try:
         app.exec()
     finally:
         hotkey.stop()
         capture.stop()
         audio.put(None)
-        worker.join(timeout=2)
+        feeder.join(2)
+        pipeline.close(2)
+        if scanner is not None:
+            scanner.stop()
         saver.flush()
     return 0

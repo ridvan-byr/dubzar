@@ -91,3 +91,18 @@ def test_load_corrupt_file_gives_defaults(tmp_path):
     path.write_text("{not json")
 
     assert load_settings(path) == Settings()
+
+
+def test_game_exe_defaults_to_none_and_accepts_an_exe_name():
+    s = Settings()
+    assert s.game_exe is None
+
+    s.game_exe = "GTA5_Enhanced.exe"
+
+    assert s.game_exe == "GTA5_Enhanced.exe"
+
+
+@pytest.mark.parametrize("bad", ["", "game", "a" + chr(92) + "b.exe", "a/b.exe"])
+def test_game_exe_must_be_a_plain_exe_file_name(bad):
+    with pytest.raises(ValueError):
+        Settings(game_exe=bad)
