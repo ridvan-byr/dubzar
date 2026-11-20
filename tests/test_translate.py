@@ -82,7 +82,7 @@ def test_translator_asks_for_local_files_only_unless_downloads_are_allowed(monke
 
     seen = []
 
-    def fake_pipeline(local_only):
+    def fake_pipeline(local_only, threads=0):
         seen.append(local_only)
         return lambda text: text
 
@@ -119,3 +119,15 @@ def test_thread_safe_translator_serialises_calls_from_several_threads():
 
     assert running["max"] == 1  # the live path and the background scan never run the model at the same time
     assert shared.translate("x") == "X"
+
+
+def test_translator_passes_its_cpu_thread_limit_to_the_model(monkeypatch):
+    import dubzar.translate as translate
+
+    seen = []
+    monkeypatch.setattr(translate, "_make_pipeline", lambda local_only, threads=0: seen.append(threads) or (lambda text: text))
+
+    OpusMtTranslator(threads=2).load()
+    OpusMtTranslator().load()
+
+    assert seen == [2, 0]

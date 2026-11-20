@@ -192,3 +192,69 @@ def test_models_are_only_allowed_to_download_when_asked(tmp_path, monkeypatch):
     main(["run", "--index", str(tmp_path / "b.db"), "--allow-download"], audio_chunks=iter([]), on_cue=lambda c: None)
 
     assert seen == [("FakeWhisper", False), ("FakeOpus", False), ("FakeWhisper", True), ("FakeOpus", True)]
+
+
+def test_run_limits_cpu_threads_so_the_game_keeps_its_cores(tmp_path, monkeypatch):
+    import dubzar.cli as cli
+
+    seen: dict = {}
+
+    class Fake:
+        def __init__(self, **kwargs):
+            seen[type(self).__name__] = kwargs
+
+        def load(self):
+            pass
+
+        def transcribe(self, samples):
+            return None
+
+        def translate(self, text, context=()):
+            return text
+
+    class W(Fake):
+        pass
+
+    class T(Fake):
+        pass
+
+    monkeypatch.setattr(cli, "WhisperTranscriber", W)
+    monkeypatch.setattr(cli, "OpusMtTranslator", T)
+
+    main(["run", "--index", str(tmp_path / "a.db")], audio_chunks=iter([]), on_cue=lambda c: None)
+    assert seen["W"]["cpu_threads"] == 2 and seen["T"]["threads"] == 2
+
+    main(["run", "--index", str(tmp_path / "b.db"), "--cpu-threads", "4"], audio_chunks=iter([]), on_cue=lambda c: None)
+    assert seen["W"]["cpu_threads"] == 4 and seen["T"]["threads"] == 4
+
+
+def test_scan_uses_all_cores_by_default_because_the_game_is_closed(tmp_path, audio_dir, monkeypatch):
+    import dubzar.cli as cli
+
+    seen: dict = {}
+
+    class Fake:
+        def __init__(self, **kwargs):
+            seen[type(self).__name__] = kwargs
+
+        def load(self):
+            pass
+
+        def transcribe(self, samples):
+            return None
+
+        def translate(self, text, context=()):
+            return text
+
+    class W(Fake):
+        pass
+
+    class T(Fake):
+        pass
+
+    monkeypatch.setattr(cli, "WhisperTranscriber", W)
+    monkeypatch.setattr(cli, "OpusMtTranslator", T)
+
+    main(["scan", str(audio_dir), "--index", str(tmp_path / "s.db")])
+
+    assert seen["W"]["cpu_threads"] == 0 and seen["T"]["threads"] == 0

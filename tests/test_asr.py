@@ -158,3 +158,38 @@ def test_a_missing_model_without_download_permission_is_a_clear_error():
 def test_download_is_off_unless_explicitly_allowed():
     assert WhisperTranscriber()._allow_download is False
     assert WhisperTranscriber(allow_download=True)._allow_download is True
+
+
+# --- the app must not starve the game of CPU ---------------------------------------------------------
+def test_whisper_is_given_a_cpu_thread_limit(monkeypatch):
+    import sys
+    import types
+
+    seen: dict = {}
+
+    class RecordingModel:
+        def __init__(self, size, **kwargs):
+            seen.update(kwargs)
+
+    monkeypatch.setitem(sys.modules, "faster_whisper", types.SimpleNamespace(WhisperModel=RecordingModel))
+
+    WhisperTranscriber(device="cpu", cpu_threads=2).load()
+
+    assert seen["cpu_threads"] == 2
+
+
+def test_cpu_threads_default_means_use_the_library_default(monkeypatch):
+    import sys
+    import types
+
+    seen: dict = {}
+
+    class RecordingModel:
+        def __init__(self, size, **kwargs):
+            seen.update(kwargs)
+
+    monkeypatch.setitem(sys.modules, "faster_whisper", types.SimpleNamespace(WhisperModel=RecordingModel))
+
+    WhisperTranscriber(device="cpu").load()
+
+    assert seen["cpu_threads"] == 0  # 0 = CTranslate2's own default (all it wants): fine for a scan with the game closed

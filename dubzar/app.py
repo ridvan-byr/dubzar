@@ -18,6 +18,7 @@ from dubzar.index import IndexStore
 from dubzar.live import LivePipeline
 from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
+from dubzar.priority import lower_priority
 from dubzar.settings import Settings
 from dubzar.translate import Translator
 from dubzar.ui.controller import SettingsController
@@ -56,6 +57,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
              translator: Translator, *, audio_dir: str | None = None,
              make_scan_transcriber: Callable[[], Transcriber] | None = None) -> int:
     qInstallMessageHandler(qt_message_filter)
+    lower_priority()  # the game must always win when the processor is busy
     app = QApplication(sys.argv)
     animations = animations_enabled()
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)

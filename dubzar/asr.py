@@ -36,18 +36,21 @@ class WhisperTranscriber:
 
     def __init__(self, model_size: str = "small", device: str = "auto",
                  source_language: str = "en", model: Any = None,
-                 model_factory: Callable[[str], Any] | None = None, allow_download: bool = False):
+                 model_factory: Callable[[str], Any] | None = None, allow_download: bool = False,
+                 cpu_threads: int = 0):
         self._model_size = model_size
         self._device = device
         self._source_language = source_language
         self._model = model
         self._allow_download = allow_download
+        self._cpu_threads = cpu_threads  # 0 = the library default; a small number keeps cores free for the game
         self._factory = model_factory or self._default_factory
 
     def _default_factory(self, device: str) -> Any:
         from faster_whisper import WhisperModel
 
-        return WhisperModel(self._model_size, device=device, local_files_only=not self._allow_download)
+        return WhisperModel(self._model_size, device=device, local_files_only=not self._allow_download,
+                            cpu_threads=self._cpu_threads)
 
     def _get_model(self) -> Any:
         if self._model is None:

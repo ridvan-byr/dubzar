@@ -280,3 +280,12 @@ def test_qt_geometry_chatter_is_dropped_but_real_messages_are_kept(capsys):
     err = capsys.readouterr().err
     assert "Unable to set geometry" not in err
     assert "something real went wrong" in err
+
+
+def test_showing_the_panel_never_takes_keyboard_focus_from_the_game(qapp):
+    from PySide6.QtCore import Qt
+
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl)
+
+    assert window.view.flags() & Qt.WindowDoesNotAcceptFocus

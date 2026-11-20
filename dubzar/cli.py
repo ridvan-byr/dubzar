@@ -45,10 +45,11 @@ def _build_models(args, glossary: dict[str, str], transcriber: Transcriber | Non
     downloaded unless ``--allow-download`` was given; ``ModelMissingError`` carries the explanation."""
     if transcriber is None:
         transcriber = WhisperTranscriber(model_size=args.whisper_model, device=args.device,
-                                         allow_download=args.allow_download)
+                                         allow_download=args.allow_download, cpu_threads=args.cpu_threads)
         transcriber.load()
     if translator is None:
-        translator = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download)
+        translator = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download,
+                                      threads=args.cpu_threads)
         translator.load()
     return transcriber, ThreadSafeTranslator(translator)
 
@@ -132,7 +133,7 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[
 
         def make_scan_transcriber() -> Transcriber:
             scanner_model = WhisperTranscriber(model_size=args.scan_model, device="auto",
-                                               allow_download=args.allow_download)
+                                               allow_download=args.allow_download, cpu_threads=args.cpu_threads)
             scanner_model.load()
             return scanner_model
 
@@ -146,11 +147,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="dubzar", description="Türkçe oyun altyazısı ve dublajı")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    def model_flags(p, whisper_default: str, device_default: str) -> None:
+    def model_flags(p, whisper_default: str, device_default: str, threads_default: int) -> None:
         p.add_argument("--whisper-model", default=whisper_default,
                        help=f"tiny, base, small ... (varsayılan: {whisper_default})")
         p.add_argument("--device", choices=("cpu", "auto"), default=device_default,
                        help=f"konuşma tanıma cihazı; auto ekran kartını dener (varsayılan: {device_default})")
+        p.add_argument("--cpu-threads", type=int, default=threads_default,
+                       help="modellerin kullanacağı işlemci iş parçacığı sayısı; 0 = kütüphane varsayılanı "
+                            f"(varsayılan: {threads_default}; canlı modda oyuna çekirdek kalsın diye düşük)")
         p.add_argument("--allow-download", action="store_true",
                        help="eksik modelleri indirmeye izin ver (varsayılan: indirme yok, eksikse hata verir)")
         p.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
@@ -158,13 +162,13 @@ def build_parser() -> argparse.ArgumentParser:
     scan = sub.add_parser("scan", help="oyunun ses dosyalarını tara ve altyazı indeksi oluştur")
     scan.add_argument("folder", help="çıkarılmış ses dosyalarının klasörü")
     scan.add_argument("--index", required=True, help="indeks dosyası (.db)")
-    model_flags(scan, "small", "auto")
+    model_flags(scan, "small", "auto", 0)
     scan.add_argument("--retry-skipped", action="store_true",
                       help="önceden konuşmasız diye atlanan dosyaları yeniden dene (daha iyi model sonrası)")
 
     run = sub.add_parser("run", help="oyun sesini dinle ve Türkçe altyazıyı canlı göster; indeks oynadıkça büyür")
     run.add_argument("--index", required=True, help="indeks dosyası (yoksa oluşturulur)")
-    model_flags(run, "tiny", "cpu")
+    model_flags(run, "tiny", "cpu", 2)
     run.add_argument("--debug", action="store_true",
                      help="ne olduğunu yaz: ses seviyesi, yakalanan parçalar, tanıma sonucu, altyazı neden gösterilmedi")
     run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
