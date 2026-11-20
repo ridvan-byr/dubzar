@@ -11,8 +11,9 @@ from PySide6.QtCore import QObject, QTimer, Signal, qInstallMessageHandler
 from PySide6.QtWidgets import QApplication
 
 from dubzar.asr import Transcriber
-from dubzar.background import BackgroundScanner
+from dubzar.background import BackgroundScanner, is_process_running
 from dubzar.capture import LoopbackCapture, queue_chunks
+from dubzar.gamewatch import GameWatcher
 from dubzar.hotkey import GlobalHotkey
 from dubzar.index import IndexStore
 from dubzar.live import LivePipeline
@@ -21,6 +22,7 @@ from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
 from dubzar.settings import Settings
 from dubzar.translate import Translator
+from dubzar.ui.backdrop import Backdrop
 from dubzar.ui.controller import SettingsController
 from dubzar.ui.intro import IntroWindow
 from dubzar.ui.panel import PanelWindow
@@ -30,6 +32,8 @@ from dubzar.ui.system import animations_enabled
 
 log = logging.getLogger(__name__)
 
+HINT_DELAY_MS = 6000   # after the game process appears: let its window come up before the hint shows
+GAME_POLL_MS = 3000
 PREVIEW_TEXT = "Sessiz ol… Birisi geliyor."
 EXCLUSIVE_WARNING = (
     "Bilgi: tam ekran (exclusive) bir oyun algılandı. Çoğu oyunda altyazı görünür; görünmezse "
@@ -65,29 +69,45 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     overlay = OverlayWindow(settings)
     panel = PanelWindow(controller)
     intro = IntroWindow(animations)
+    backdrop = Backdrop(animations)
     saver = SettingsSaver(settings)
     bridge = _Bridge()
 
     bridge.cue.connect(overlay.show_cue)
     bridge.scan_progress.connect(controller.set_scan_progress)
     panel.on_closed(lambda: overlay.set_preview(None))
+    panel.on_closed(backdrop.dismiss)
 
     def toggle_panel() -> None:
         if panel.is_open:
             panel.hide()
             return
+        panel_screen = target_screen(settings.panel_screen)
+        if panel_screen == target_screen("auto"):  # the panel is over the game: veil it like Steam's overlay does
+            backdrop.show_on(panel_screen)         # (before the preview and the panel, so they stay above it)
         overlay.set_preview(PREVIEW_TEXT)  # so the user sees what they are adjusting
-        panel.show(target_screen(settings.panel_screen))
+        panel.show(panel_screen)
 
     bridge.toggle_panel.connect(toggle_panel)
 
     hotkey = GlobalHotkey(bridge.toggle_panel.emit)
-    if hotkey.start(settings.hotkey):
-        intro.show_hint("ile ayarları aç", settings.screen, keys=settings.hotkey.split("+"))
-    else:
+    hotkey_ok = hotkey.start(settings.hotkey)
+
+    def show_hint() -> None:
+        if hotkey_ok:
+            intro.show_hint("ile ayarları aç", settings.screen, keys=settings.hotkey.split("+"))
+        else:
+            intro.show_hint("Kısayol kullanımda, ayarlar paneli açılamaz", settings.screen, 8000)
+
+    if not hotkey_ok:
         print(f"Uyarı: {settings.hotkey} kısayolu başka bir program tarafından kullanılıyor. "
               "Ayarlar dosyasından başka bir kısayol seçin.", flush=True)
-        intro.show_hint("Kısayol kullanımda, ayarlar paneli açılamaz", settings.screen, 8000)
+    watcher = None
+    if settings.game_exe:  # like NVIDIA/Discord: the hint appears when the game opens, then fades away
+        exe = settings.game_exe
+        watcher = GameWatcher(lambda: is_process_running(exe), lambda: QTimer.singleShot(HINT_DELAY_MS, show_hint))
+    else:  # the game is unknown: show the hint once now
+        show_hint()
 
     pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit)
     audio: queue.Queue = queue.Queue()
@@ -120,6 +140,11 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
             print(EXCLUSIVE_WARNING, flush=True)
 
     check_fullscreen()
+    game_timer = QTimer()
+    if watcher is not None:
+        watcher.tick()
+        game_timer.timeout.connect(watcher.tick)
+        game_timer.start(GAME_POLL_MS)
     fullscreen_timer = QTimer()
     fullscreen_timer.timeout.connect(check_fullscreen)
     fullscreen_timer.start(5000)
