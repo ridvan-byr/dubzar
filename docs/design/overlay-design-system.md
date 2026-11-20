@@ -9,7 +9,7 @@ tek vurgu rengi. Hiçbir markanın kimliği kopyalanmaz.
 2. **Gölge yok, basamak var:** Derinlik zemin ve yüzey renk farkıyla, ince çizgiyle kurulur.
 3. **Hap şekli:** Etkileşimli her kontrol tam yuvarlak (`pill`). Panel kartı 16 px.
 4. **İnce yazı:** Gövde 400, vurgu 500. Kalın (600+) kullanılmaz.
-5. **Bir imza anı:** İtalik serif yalnızca "Dubzar" yazısında.
+5. **Bir imza anı:** Logo (büyük D + küçük italik serif "ubzar") yalnızca panel başlığında ve açılış ipucunda (bkz. `docs/design/logo.md`).
 6. **Hareket sakin:** Ease-out, kısa süre, sekme veya zıplama yok. Azaltılmış hareket tercihine uyulur.
 
 ## Renkler
@@ -30,7 +30,7 @@ taşır (kapalı anahtarın yuvarlağı `muted`, açık olan `accent`, kaydırı
 
 ## Yazı tipleri
 - Gövde ve etiket: **DM Sans** 400/500. Etiket 11,5–12 px, gövde 12,5–13 px.
-- İmza: **Instrument Serif** italik, 22 px (yalnızca "Dubzar").
+- Logo yazısı eğriye çevrilmiş Instrument Serif Italic'tir; arayüzde yazı tipi olarak kullanılmaz.
 - Tuş ve değerler: DM Sans (mono kullanılmaz, yön B'nin yumuşaklığını bozar).
 - Türkçe karakterler (ğ ş İ ı ö ü ç) tüm yazı tiplerinde doğrulanmalıdır. Yazı tipleri uygulamayla paketlenir; lisanslar `docs/LICENSES.md`'ye eklenir.
 

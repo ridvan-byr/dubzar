@@ -23,3 +23,8 @@
 - Ürüne CC-BY-4.0 kaynak belirtmesi (Helsinki-NLP / OPUS-MT) için "Hakkında" ekranı eklenmeli.
 - `main` dalındaki ilk commit mesajında hâlâ eski "Dubly" adı var (geçmiş yeniden yazılmadı).
 - Resmi marka ve alan adı kontrolü (Dubzar): TÜRKPATENT sorgusu, `.com`/`.io` alınabilirliği.
+
+## Logo
+- Açık zeminli sürüm (işaret amber, yazı grafit) henüz üretilmedi.
+- Açılış animasyonunu uygulamada oynatmak (şimdi yalnızca SVG olarak var; ipucunda statik D işareti kullanılıyor). Qt Quick'te yeniden kurulmalı.
+- Logo için bir tasarımcının optik ince ayarı (köşe yarıçapları, nokta oranı) ürün satışından önce düşünülmeli.

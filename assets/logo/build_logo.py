@@ -5,18 +5,23 @@ converted to outlines, so the SVG needs no font installed.
 """
 
 import os
+import struct
 import sys
 from pathlib import Path
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from PySide6.QtGui import QFont, QGuiApplication, QPainterPath  # noqa: E402
+from PySide6.QtCore import QBuffer, QByteArray, QIODevice, QRectF, Qt  # noqa: E402
+from PySide6.QtGui import QFont, QGuiApplication, QImage, QPainter, QPainterPath  # noqa: E402
+from PySide6.QtSvg import QSvgRenderer  # noqa: E402
 
 from dubzar.ui.fonts import load_bundled_fonts  # noqa: E402
 
 AMBER, GRAPHITE, CREAM = "#FFB224", "#0E0F11", "#F7F5F0"
 OUT = Path(__file__).parent
+UI_DIR = Path(__file__).resolve().parents[2] / "dubzar" / "ui"  # logo + icon shipped inside the package
+ICON_SIZES = (16, 24, 32, 48, 64, 128, 256)
 
 # D: stem 64 wide, bowl 64 wide at the right, round pip as the counter. Box 140..372 x 124..388.
 D_PATH = "M140 124H240A132 132 0 0 1 240 388H140Z M256 204A52 52 0 1 0 256 308A52 52 0 1 0 256 204Z"
@@ -134,6 +139,42 @@ def reveal_svgs(g: dict) -> tuple[str, str]:
     )
     return animated, svg(w, h, word + d)
 
+def tight_logo(g: dict) -> str:
+    """The final lockup cropped to its own bounds (no margins), for use inside the app."""
+    left, top = g["d_left"], g["margin"]
+    box = f"{left:.1f} {top:.1f} {g['right'] - left:.1f} {D_H:.1f}"
+    body = f'<path d="{g["word"]}" fill="{CREAM}"/>' + d_markup(g)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}" role="img" aria-label="Dubzar">{body}</svg>'
+            + chr(10))
+
+
+def write_ico(badge_svg: Path, target: Path) -> None:
+    """Windows icon with PNG-compressed entries (supported since Vista) at every standard size."""
+    renderer = QSvgRenderer(str(badge_svg))
+    pngs = []
+    for size in ICON_SIZES:
+        image = QImage(size, size, QImage.Format_ARGB32)
+        image.fill(Qt.transparent)
+        painter = QPainter(image)
+        painter.setRenderHint(QPainter.Antialiasing)
+        renderer.render(painter, QRectF(0, 0, size, size))
+        painter.end()
+        data = QByteArray()
+        buffer = QBuffer(data)
+        buffer.open(QIODevice.WriteOnly)
+        image.save(buffer, "PNG")
+        pngs.append((size, bytes(data)))
+    header = struct.pack("<HHH", 0, 1, len(pngs))
+    offset = 6 + 16 * len(pngs)
+    entries, blobs = b"", b""
+    for size, png in pngs:
+        side = 0 if size >= 256 else size
+        entries += struct.pack("<BBBBHHII", side, side, 0, 0, 1, 32, len(png), offset)
+        offset += len(png)
+        blobs += png
+    target.write_bytes(header + entries + blobs)
+
+
 def main() -> None:
     app = QGuiApplication(sys.argv)
     load_bundled_fonts()
@@ -196,6 +237,9 @@ def main() -> None:
     animated, final = reveal_svgs(g)
     (OUT / "dubzar-reveal.svg").write_text(animated, encoding="utf-8")
     (OUT / "dubzar-reveal-final.svg").write_text(final, encoding="utf-8")
+    UI_DIR.joinpath("dubzar-logo.svg").write_text(tight_logo(g), encoding="utf-8")
+    UI_DIR.joinpath("dubzar-mark.svg").write_text((OUT / "dubzar-mark.svg").read_text(encoding="utf-8"), encoding="utf-8")
+    write_ico(OUT / "dubzar-badge.svg", UI_DIR / "dubzar.ico")
     print("written:", *sorted(p.name for p in OUT.glob("dubzar-*.svg")))
 
 

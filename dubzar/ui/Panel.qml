@@ -246,12 +246,16 @@ Item {
                 RowLayout {
                     Layout.fillWidth: true
                     spacing: 9
-                    Text {
-                        text: "Dubzar"
-                        color: dz.text
-                        font.family: ctl.serifFamily
-                        font.italic: true
-                        font.pixelSize: 22
+                    Image {
+                        id: logo
+                        source: "dubzar-logo.svg"
+                        sourceSize.height: 64
+                        fillMode: Image.PreserveAspectFit
+                        smooth: true
+                        Layout.preferredHeight: 30
+                        Layout.preferredWidth: Math.round(implicitWidth * 30 / Math.max(1, implicitHeight))
+                        Accessible.role: Accessible.Graphic
+                        Accessible.name: "Dubzar"
                     }
                     Rectangle { width: 6; height: 6; radius: 3; color: dz.accent }
                     Lbl { text: ctl.status; Layout.fillWidth: true }
