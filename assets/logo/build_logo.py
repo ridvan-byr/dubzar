@@ -56,6 +56,7 @@ def wordmark_path(text: str, size_px: int, x: float, baseline: float) -> tuple[s
 
 
 D_H = 264.0  # height of the D mark in its own units
+TEXT_SIZE, TEXT_GAP, TEXT_DY = 170, 1.0, -6.0  # tuned by hand in the reveal tuner
 TEXT_ASCENDER_RATIO = 0.48  # tallest small letter as a fraction of the D's height
 
 
@@ -68,12 +69,12 @@ def reveal_geometry(align: str):
     b = QPainterPath(); b.addText(0, 0, probe_font, "b")
     x = QPainterPath(); x.addText(0, 0, probe_font, "x")
     asc204, xh204 = -b.boundingRect().top(), -x.boundingRect().top()
-    size = round(204 * (D_H * TEXT_ASCENDER_RATIO) / asc204)
+    size = TEXT_SIZE
     xh = xh204 * size / 204
-    margin, gap = 60.0, 20.0
+    margin, gap = 60.0, TEXT_GAP
     d_left, d_bottom = margin, margin + D_H
     text_x = d_left + 232 + gap
-    baseline = d_bottom if align == "baseline" else (margin + D_H / 2) + xh / 2
+    baseline = d_bottom + TEXT_DY if align == "baseline" else (margin + D_H / 2) + xh / 2
     word, right = wordmark_path("ubzar", size, text_x, baseline)
     return dict(margin=margin, d_left=d_left, d_bottom=d_bottom, text_x=text_x, word=word, right=right,
                 width=right + margin, height=margin * 2 + D_H, gap=gap)
@@ -91,14 +92,27 @@ WORD_DELAY_MS, WORD_MS, WORD_FADE_MS = 520, 720, 280
 
 
 def reveal_svgs(g: dict) -> tuple[str, str]:
-    """(animated SVG, final-state SVG) for the big-D reveal described by ``reveal_geometry``."""
+    """(animated SVG, final-state SVG): the letters slide out from behind the D's rounded right edge.
+
+    The letters are clipped to "everything right of the hole, except the D's own silhouette", so they
+    are hidden by the D (never seen through the pip) and appear exactly where its curve ends.
+    The D is drawn after the letters so a 1.5-unit overlap hides the anti-aliasing seam.
+    """
+    import math
+
     word_w = g["right"] - g["text_x"]
-    clip_x = g["d_left"] + 232 + 4                       # letters emerge from the D's right edge
-    slide = word_w + g["gap"] + 40                       # far enough left to be fully hidden behind the clip
-    lead = g["width"] / 2 - (g["d_left"] + 116)          # the D starts centred, then glides to its place
-    d = f'<path d="{D_PATH}" fill="{AMBER}" fill-rule="evenodd" transform="translate({g["d_left"] - 140:.2f} {g["d_bottom"] - 388:.2f})"/>'
-    word = f'<path d="{g["word"]}" fill="{CREAM}"/>'
     w, h = int(g["width"]), int(g["height"])
+    left, bottom = g["d_left"], g["d_bottom"]
+    cx, cy, radius = left + 100, bottom - 132, 132.0     # centre and radius of the D's round bowl
+    x_c = left + 175                                      # right of the pip's hole (which ends at left + 166)
+    r_clip = radius - 1.5
+    half = math.sqrt(r_clip**2 - (x_c - cx) ** 2)
+    clip_d = (f"M{x_c:.2f} 0H{w}V{h}H{x_c:.2f}Z "
+              f"M{x_c:.2f} {cy - half:.2f}A{r_clip} {r_clip} 0 0 1 {x_c:.2f} {cy + half:.2f}Z")
+    slide = (g["text_x"] + word_w) - x_c + 24             # starts fully hidden left of the clip
+    lead = g["width"] / 2 - (left + 116)                  # the D starts centred, then glides to its place
+    d = f'<path d="{D_PATH}" fill="{AMBER}" fill-rule="evenodd" transform="translate({left - 140:.2f} {bottom - 388:.2f})"/>'
+    word = f'<path d="{g["word"]}" fill="{CREAM}"/>'
     css = (
         f".d{{transform-box:fill-box;transform-origin:50% 50%;animation:dIn {D_IN_MS}ms {EASE} both}}"
         f"@keyframes dIn{{from{{opacity:0;transform:scale(.88)}}to{{opacity:1;transform:none}}}}"
@@ -110,14 +124,15 @@ def reveal_svgs(g: dict) -> tuple[str, str]:
         f"@keyframes fade{{from{{opacity:0}}to{{opacity:1}}}}"
         f"@media (prefers-reduced-motion:reduce){{.d,.lead,.slide,.word{{animation:none}}}}"
     )
+    nl = chr(10)
     animated = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" role="img" aria-label="Dubzar">'
         f"<style>{css}</style>"
-        f'<defs><clipPath id="c"><rect x="{clip_x:.1f}" y="0" width="{w - clip_x:.1f}" height="{h}"/></clipPath></defs>'
-        f'<g class="lead"><g class="d">{d}</g><g clip-path="url(#c)"><g class="slide"><g class="word">{word}</g></g></g></g></svg>\n'
+        f'<defs><clipPath id="c"><path d="{clip_d}" clip-rule="evenodd"/></clipPath></defs>'
+        f'<g class="lead"><g clip-path="url(#c)"><g class="slide"><g class="word">{word}</g></g></g>'
+        f'<g class="d">{d}</g></g></svg>{nl}'
     )
-    return animated, svg(w, h, d + word)
-
+    return animated, svg(w, h, word + d)
 
 def main() -> None:
     app = QGuiApplication(sys.argv)
