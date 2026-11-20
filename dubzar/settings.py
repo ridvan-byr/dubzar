@@ -73,7 +73,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "subtitles_enabled": (True, _boolean),
     "dubbing_enabled": (True, _boolean),
     "font_size": (28, _int_between(12, 96)),
-    "vertical": (0.88, _float_between(0.0, 1.0)),  # subtitle position: 0 = top, 1 = bottom
+    "vertical": (0.80, _float_between(0.0, 1.0)),  # subtitle position: 0 = top, 1 = bottom
     "text_color": ("#FFFFFF", _hex_color),
     "background_color": ("#000000", _hex_color),
     "background_opacity": (60, _int_between(0, 100)),  # percent

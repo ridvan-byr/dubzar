@@ -7,7 +7,8 @@ subtitles on/off switch all apply the moment they change.
 import time
 
 from PySide6.QtCore import Qt, QTimer
-from PySide6.QtGui import QColor, QGuiApplication
+from PySide6.QtCore import QRect
+from PySide6.QtGui import QColor, QFontMetrics, QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from dubzar.models import Cue
@@ -17,6 +18,7 @@ from dubzar.settings import Settings
 TICK_MS = 100
 SCREEN_WIDTH_FRACTION = 0.8
 EDGE_MARGIN_FRACTION = 0.06
+PAD_X, PAD_Y = 18, 8     # inside the box, around the text (must match the stylesheet)
 
 
 class OverlayWindow(QWidget):
@@ -85,16 +87,26 @@ class OverlayWindow(QWidget):
         bg = QColor(s.background_color)
         self._label.setStyleSheet(
             f"color: {s.text_color}; background: rgba({bg.red()}, {bg.green()}, {bg.blue()}, "
-            f"{s.background_opacity / 100:g}); border-radius: 8px; padding: 8px 16px; "
+            f"{s.background_opacity / 100:g}); border-radius: 10px; padding: {PAD_Y}px {PAD_X}px; "
             f"font-size: {s.font_size}px; font-weight: 600;"
         )
+
+    def _box_width(self, max_width: int) -> int:
+        """The box hugs its text (like a video subtitle) instead of spanning the screen; long text wraps at max_width."""
+        font = self._label.font()
+        font.setPixelSize(self._settings.font_size)
+        font.setWeight(font.Weight.DemiBold)
+        metrics = QFontMetrics(font)
+        inner = max_width - 2 * PAD_X
+        wrapped = metrics.boundingRect(QRect(0, 0, inner, 10_000), Qt.TextWordWrap | Qt.AlignCenter, self._label.text())
+        return min(max_width, wrapped.width() + 2 * PAD_X + 4)  # +4: slack so the last word never wraps by a pixel
 
     def _place(self) -> None:
         screens = QGuiApplication.screens()  # index 0 is the primary screen
         origins = [(s.geometry().x(), s.geometry().y()) for s in screens]
         index = pick_screen_index(origins, foreground_monitor_origin(), self._settings.screen)
         screen = screens[index].geometry()
-        self._label.setFixedWidth(int(screen.width() * SCREEN_WIDTH_FRACTION))
+        self._label.setFixedWidth(self._box_width(int(screen.width() * SCREEN_WIDTH_FRACTION)))
         self.adjustSize()
         margin = int(screen.height() * EDGE_MARGIN_FRACTION)
         room = max(0, screen.height() - self.height() - 2 * margin)

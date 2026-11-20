@@ -192,3 +192,24 @@ def test_other_screen_avoids_the_games_screen():
 def test_other_screen_falls_back_to_the_games_screen_when_alone():
     assert pick_screen_index([(0, 0)], (0, 0), "other") == 0
     assert pick_screen_index(TWO_SCREENS, None, "other") == 1  # game unknown: assume primary
+
+
+def test_box_hugs_short_text_and_grows_for_long_text(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    window.show_cue(cue("Hayır!", 60.0), now=0.0)
+    short = window.width()
+    window.show_cue(cue("Ve şey, duyduğuma göre pek fazla yokmuş, bunu da kimseye söyleme sakın.", 60.0), now=0.0)
+    longer = window.width()
+
+    screen_w = qapp.primaryScreen().geometry().width()
+    assert short < screen_w * 0.2          # a bar spanning the screen for one word looked wrong
+    assert short < longer <= screen_w * 0.8
+
+
+def test_default_position_sits_above_the_games_own_subtitles():
+    from dubzar.settings import Settings
+
+    assert Settings().vertical <= 0.82
