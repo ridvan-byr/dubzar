@@ -46,7 +46,8 @@ Başarı ölçütü: karakter konuşmaya başladığı anda Türkçe ses (ve alt
 
 
 ### Temel ilke: ağır iş oyundan önce, oyun sırasında yalnızca hafif katman
-Kullanıcı oyun oynarken ekran kartı zaten dolu. Bu yüzden ses tanıma, çeviri ve ses üretimi oyun açıkken çalıştırılmaz. Bunlar "tarama" adımında, oyun kapalıyken bir kez yapılır. Oyun sırasında yalnızca ses parmak izi eşleştirmesi (işlemcide, çok hafif) ve hazır klibin / altyazının gösterilmesi çalışır.
+Kullanıcı oyun oynarken ekran kartı zaten dolu. Bu yüzden ağır işler (ses tanıma, çeviri, ses üretimi) oyun açıkken ekran kartını kullanmaz; "tarama" adımında, oyun kapalıyken yapılır. Oyun sırasında hafif katman çalışır: ses parmak izi eşleştirmesi (işlemcide) ve hazır altyazı/klip gösterimi.
+**Ama kullanıcı taramayı beklemez:** bkz. Aşama 1b (ilerleyen hibrit). Tarama bir ön koşul değil, arka planda ilerleyen bir iyileştirmedir.
 
 ### Aşama 1 — Altyazı (önce bu yapılacak, kullanıcı isteği)
 Altyazı, dublajla aynı tarama altyapısından çıkar:
@@ -54,7 +55,35 @@ Altyazı, dublajla aynı tarama altyapısından çıkar:
 2. **Oyun sırasında:** Çıkış sesinin ilk 200–300 ms'si indeksle eşleştirilir ve altyazı anında gösterilir. Oyuna ek yük binmez, gecikme yoktur.
 3. Şeffaf, oyun üstünde duran, tıklanamayan bir katman altyazıyı gösterir. Boyut, konum, renk ayarlanabilir. Anti-cheat riskini azaltmak için oyuna kanca atılmaz.
 
-**Yedek canlı mod:** Taranamayan oyunlar için oyun sesi yakalanır (WASAPI loopback), küçük modeller düşük öncelikle çalışır. 1–2 sn altyazı gecikmesi kabul edilir. Dublaj bu modda yapılmaz.
+### Aşama 1b — Kur ve hemen oyna: ilerleyen hibrit (kullanıcı beklemesin)
+**Sorun (ölçüldü, 2026-11-20, bu geliştirme bilgisayarı):** Konuşma tanıma adımı, küçük modelle (`tiny`) işlemcide ortalama 2,9 sn'lik
+bir repliği 0,53 sn'de işliyor (gerçek zamandan ~5,5 kat hızlı). Örnek hesap: 100.000 kısa replik, yalnızca bu adım için ~15 saat
+(replik sayısı varsayımsal). Daha kaliteli model birkaç kat yavaş (ölçülmedi); çeviri ve parmak izi üstüne biner. Ekran kartı şu an
+kullanılamıyor (CUDA kütüphanesi eksik, işlemciye düşüyor). Ses üretimi (TTS) gerçek zamandan yavaş: 1,4–2 kat. Kullanıcı kurup
+saatlerce bekleyemez.
+
+**Akış:**
+1. **Kur, oyunu seç, hemen oyna.** Altyazı **canlı modda** çalışır: oyun sesi yakalanır (WASAPI loopback), konuşma parçalara ayrılır (VAD),
+   küçük modelle tanınır, çevrilir ve gösterilir. Hedef gecikme ≤ 2 sn.
+2. **Oyun kendini öğrenir.** Canlı modda tanınan her replik, parmak iziyle birlikte indekse eklenir. Aynı replik tekrar gelince
+   önce indeks denenir (hızlı yol): eşleşirse tanıma atlanır, altyazı gecikmesiz çıkar.
+3. **Arka plan taraması.** Oyun çalışmıyorken ve ekran kartı boşken, çıkarılmış ses dosyaları önceliğe göre taranır: hikâye
+   sırası ve en son oynanan bölüme yakın dosyalar önce. Yarıda kesilebilir, devam eder (bkz. Aşama 1 taraması), ilerleme yüzdesi gösterilir.
+4. **Oyun çalışırken** arka plan taraması duraklar. Canlı mod varsayılan olarak yalnızca işlemcide küçük model kullanır;
+   ekran kartı kullanımı ayardan açılır. Oyunun akıcılığına etkisi ölçülür ve raporlanır.
+
+**Kabul ölçütleri:** kurulumdan sonra ilk altyazı ≤ 2 dakika içinde; canlı gecikme ≤ 2 sn; tarama kesilince kayıp yok; canlı mod oyunun
+görüntü akıcılığını belirgin düşürmez (ölçülecek, eşik gerçek oyun testinden sonra belirlenir).
+
+**Riskler:** (a) müzik ve gürültü altında tanıma zayıflar; düşük güvenli parça için yanlış altyazı yerine altyazı gösterilmez;
+(b) çok kısa replikler ("Hey!") yanlış tanınabilir; (c) canlı parçanın sınırları orijinal replik dosyasıyla birebir aynı olmayabilir:
+canlıdan öğrenilen kayıt ile sonradan taramayla gelen aynı replik çift kayıt olmamalı, birleştirme kuralı planda tanımlıdır;
+(d) canlı mod oyunda ekran kartı/işlemci yükler; etkisi gerçek oyunda ölçülmeden vaat edilmez.
+
+**Dublaj için sonuç:** Tüm oyunu kullanıcının bilgisayarında baştan üretmek pratik değildir (10 saatlik diyalog ≈ 15–20 saatlik üretim). Seçenekler:
+(a) oynarken önündeki birkaç repliği önceden üretip yetiştirmek (gecikme ve ekran kartı rekabeti riski);
+(b) oyun başına önceden hazırlanmış paketler (hukuki gri alan, sunucu maliyeti, düşük fiyat hedefiyle çelişir).
+Karar, dublaja geçmeden önce verilir. Netleşmeden dublaj taahhüdü verilmez.
 
 ### Aşama 2 — Dublaj
 Aynı indekse Türkçe ses klipleri eklenir:
@@ -82,14 +111,16 @@ Zamanlama kuralları: çeviri orijinal süreye sığar; gerekirse ses en fazla %
 Sesi olmayan oyunlar için metin yakalama / OCR altyazısı; ek motorlar için dosya değiştirme; sinematikler için lip-sync araştırması.
 
 ## Karar notları (benim kararlarım, itiraz edebilirsin)
-- Altyazı da tarama tabanlı çıkar (canlı mod yalnızca yedek). Gerekçe: kullanıcı oyun oynarken GPU zaten dolu, ağır modelleri oyun sırasında çalıştırmak oyunu bozar. Kullanıcı bu yönü onayladı.
+- Altyazı **ilerleyen hibrit** olarak çıkar: önce canlı mod (hemen kullanılır), arka plan taraması indeksi büyütür. Gerekçe: oyun sırasında ağır modeller oyunu bozar, ama tam tarama saatler sürer ve kullanıcı bekleyemez (ölçüm Aşama 1b'de). Kullanıcı bu yönü onayladı (2026-11-20).
 - Tamamen açık kaynak, yerel modeller: geliştirme ücretsiz, kullanıcıya bulut faturası yok.
 - **Ticari lisans:** Ürün satılacağı için her model lisansı ticari kullanıma uygun olmalı. Hatırladığıma göre NLLB (çeviri) ve XTTS (ses klonlama) ticari kullanıma kapalı. Bunlar seçilmeyecek. Whisper, Opus-MT, Piper gibi adaylar seçilmeden önce lisansları tek tek doğrulanacak.
 - İlk sürüm Windows.
 
 ## Açık kararlar (builder'a / kullanıcıya kalan)
 - Hangi çeviri / TTS motorları (klonlama gerektirmeyen, ses seçimi veya metinle ses tarifi destekleyenler) (Türkçe kalitesi ve lisans için test edilerek seçilecek; karakter ses uyumu için kritik).
-- Tarama süresi hedefi (büyük oyunlarda saatler sürebilir) ve kullanıcıya nasıl gösterileceği.
+- Arka plan taramasının önceliklendirme kuralı (hikâye sırası nereden bilinecek: dosya adları, kullanıcının son oynadığı bölüm) ve oyun çalışırken duraklatma eşiği.
+- Ekran kartı kullanımının varsayılanı (şimdi kapalı) ve Whisper için CUDA kütüphanesi kurulumu (şu an eksik).
+- Dublajın üretim modeli: oynarken yetiştirme mi, hazır paket mi (Aşama 1b, "Dublaj için sonuç").
 - Hazır indeksleri (çeviri metni + parmak izi) paylaşmak taramayı kısaltır ama telif açısından gri alandır; ilk sürümde yapılmaz, sonra karar verilir.
 - Fiyatlandırma modeli.
 - Uygulama teknolojisi (masaüstü uygulama için öneri: Python çekirdek + Electron/Tauri arayüz; builder netleştirir).

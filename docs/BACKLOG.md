@@ -3,6 +3,7 @@
 Öncelik: **altyazı ve dublajın tam çalışması.** Aşağıdaki ayar ve iyileştirmeler ondan sonra gelir.
 
 ## Ana hat (önce bunlar)
+0. **Canlı mod + ilerleyen tarama** (Aşama 1b): kullanıcı beklemeden hemen altyazı görsün. Plan: `docs/superpowers/plans/2026-11-20-canli-mod-ilerleyen-tarama.md`.
 1. Task 9: komut satırı (`scan`, `run`) ve gerçek bir oyunla altyazı duman testi.
 2. Dublaj öncesi TTS motor karşılaştırması (`docs/TTS_BAKEOFF.md`), sonra Aşama 2 planı (karakter sesi, duygu, süre eşleme, dublaj klipleri).
 3. Oyun motoru arşivlerinden ses çıkarma bağdaştırıcıları (Wwise, FMOD, Unity, Unreal) için ayrı plan.
