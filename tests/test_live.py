@@ -308,3 +308,20 @@ def test_pipeline_reports_the_audio_level_when_debugging(store, caplog):
     pl.close()
 
     assert "ses seviyesi" in caplog.text
+
+
+def test_pipeline_uses_the_segmenter_it_is_given(store):
+    from dubzar.segmenter import SpeechSegmenter
+
+    seen = []
+
+    class Spy(SpeechSegmenter):
+        def feed(self, chunk):
+            seen.append(len(chunk))
+            return super().feed(chunk)
+
+    pipeline = LivePipeline(store, FakeTranscriber(), PrefixTranslator(), lambda cue: None, segmenter=Spy())
+    pipeline.feed(np.zeros(1600, dtype=np.float32))
+    pipeline.close()
+
+    assert seen == [1600]

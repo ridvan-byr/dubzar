@@ -20,6 +20,7 @@ from dubzar.live import LivePipeline
 from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
+from dubzar.segmenter import SpeechSegmenter
 from dubzar.settings import Settings
 from dubzar.translate import Translator
 from dubzar.ui.backdrop import Backdrop
@@ -55,6 +56,19 @@ class _Bridge(QObject):
     cue = Signal(object)
     toggle_panel = Signal()
     scan_progress = Signal(int, int)
+
+
+def make_segmenter() -> SpeechSegmenter:
+    """Cut speech with a neural voice detector (ignores music and ambience, so lines end when the voice
+    does); if it cannot be loaded, fall back to plain loudness."""
+    try:
+        from dubzar.vad import WINDOW, SileroSpeechDetector
+
+        return SpeechSegmenter(frame=WINDOW, is_speech=SileroSpeechDetector().is_speech, min_speech_s=0.3,
+                               end_silence_s=0.5, max_segment_s=8.0)
+    except Exception:
+        log.warning("voice detector unavailable; falling back to loudness-based cutting", exc_info=True)
+        return SpeechSegmenter(end_silence_s=0.5, max_segment_s=8.0)
 
 
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
@@ -109,7 +123,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     else:  # the game is unknown: show the hint once now
         show_hint()
 
-    pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit)
+    pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit, segmenter=make_segmenter())
     audio: queue.Queue = queue.Queue()
 
     def feed_pipeline() -> None:

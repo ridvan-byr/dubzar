@@ -89,3 +89,38 @@ def test_no_silent_segment_appears_after_a_forced_cut():
 
     assert len(segments) >= 1
     assert all(float(np.abs(s.samples).max()) > 0.05 for s in segments)
+
+
+def _voice_over_music(voice_seconds_at: list[tuple[float, float]], total: float) -> np.ndarray:
+    """Steady music (-26 dB: far above the energy threshold, so an energy segmenter never sees quiet)
+    with louder 'voice' bursts (amplitude 0.3) at the given (start, end) times."""
+    t = np.arange(int(total * SR)) / SR
+    audio = (0.05 * np.sin(2 * np.pi * 220 * t)).astype(np.float32)
+    for start, end in voice_seconds_at:
+        a, b = int(start * SR), int(end * SR)
+        audio[a:b] += (0.3 * np.sin(2 * np.pi * 440 * t[a:b])).astype(np.float32)
+    return audio
+
+
+def _is_voice(frame: np.ndarray) -> bool:
+    return float(np.max(np.abs(frame))) > 0.15  # stands in for the neural VAD: ignores the steady music
+
+
+def test_custom_classifier_cuts_lines_even_when_music_never_goes_quiet():
+    audio = _voice_over_music([(1.0, 3.0), (6.0, 8.0)], total=10.0)
+
+    energy_only = run(audio)
+    custom = run(audio, frame=512, is_speech=_is_voice, end_silence_s=0.5)
+
+    assert len(energy_only) == 1 and length(energy_only[0]) > 9   # music glues everything into one cut
+    assert len(custom) == 2
+    assert 1.8 < length(custom[0]) < 3.0 and 1.8 < length(custom[1]) < 3.0
+
+
+def test_classifier_decides_the_frame_size_not_the_caller_chunking():
+    audio = _voice_over_music([(1.0, 3.0)], total=5.0)
+
+    a = run(audio, chunk=1600, frame=512, is_speech=_is_voice)
+    b = run(audio, chunk=777, frame=512, is_speech=_is_voice)
+
+    assert [(s.start_s, s.end_s) for s in a] == [(s.start_s, s.end_s) for s in b]

@@ -100,11 +100,12 @@ class LivePipeline:
     """
 
     def __init__(self, store: IndexStore, transcriber: Transcriber, translator: Translator,
-                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6):
+                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6,
+                 segmenter: SpeechSegmenter | None = None):
         self._store = store
         self._on_cue = on_cue
         self._matcher = Matcher(store.lookup)
-        self._segmenter = SpeechSegmenter()
+        self._segmenter = segmenter or SpeechSegmenter()
         self._engine = LiveEngine(store, transcriber, translator, self._engine_cue, min_confidence)
         self._elapsed = 0.0                    # seconds of audio fed so far
         self._quiet_until: dict[str, float] = {}   # do not re-trigger a line while it is still playing
