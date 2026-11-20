@@ -66,6 +66,11 @@ class OverlayWindow(QWidget):
         self._timeline.show(cue, now)
         self.tick(now)
 
+    def clear_cue(self) -> None:
+        """The game's own subtitle is gone: take ours down too."""
+        self._timeline.clear()
+        self.tick()
+
     def tick(self, now: float | None = None) -> None:
         now = time.monotonic() if now is None else now
         text = self._preview if self._preview is not None else self._timeline.current(now)

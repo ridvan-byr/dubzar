@@ -20,6 +20,9 @@ from dubzar.live import LivePipeline
 from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
+from dubzar.screen import (band_box, exclude_from_capture, foreground_is_fullscreen, foreground_monitor_rect,
+                           foreground_process_name, game_in_front, grab)
+from dubzar.screen_source import ScreenSubtitleSource
 from dubzar.segmenter import SpeechSegmenter
 from dubzar.settings import Settings
 from dubzar.translate import Translator
@@ -54,6 +57,7 @@ class _Bridge(QObject):
     """Carries events from worker threads (recognition, hotkey, background scan) to the GUI thread."""
 
     cue = Signal(object)
+    clear = Signal()
     toggle_panel = Signal()
     scan_progress = Signal(int, int)
 
@@ -71,9 +75,29 @@ def make_segmenter() -> SpeechSegmenter:
         return SpeechSegmenter(end_silence_s=0.5, max_segment_s=8.0)
 
 
+def make_screen_source(settings: Settings, translator: Translator, bridge) -> ScreenSubtitleSource | None:
+    """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable."""
+    try:
+        from dubzar.ocr import WindowsOcr
+
+        ocr = WindowsOcr()
+    except Exception as exc:
+        log.warning("ekrandaki altyazı okuma kullanılamıyor (%s); yalnızca ses dinlenecek", exc)
+        return None
+    log.info("ekrandaki altyazı okuma hazır (OCR dili: %s)", ocr.language)
+
+    def grab_frame():
+        if not game_in_front(settings.game_exe, foreground_process_name(), foreground_is_fullscreen()):
+            return None
+        rect = foreground_monitor_rect()
+        return grab(band_box(rect)) if rect else None
+
+    return ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit)
+
+
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
              translator: Translator, *, audio_dir: str | None = None,
-             make_scan_transcriber: Callable[[], Transcriber] | None = None) -> int:
+             make_scan_transcriber: Callable[[], Transcriber] | None = None, screen_ocr: bool = True) -> int:
     qInstallMessageHandler(qt_message_filter)
     lower_priority()  # the game must always win when the processor is busy
     app = QApplication(sys.argv)
@@ -88,6 +112,9 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     bridge = _Bridge()
 
     bridge.cue.connect(overlay.show_cue)
+    bridge.clear.connect(overlay.clear_cue)
+    for window in (overlay, backdrop, panel.view, intro.view):  # our own subtitle must never be read back by OCR
+        exclude_from_capture(int(window.winId()))
     bridge.scan_progress.connect(controller.set_scan_progress)
     panel.on_closed(lambda: overlay.set_preview(None))
     panel.on_closed(backdrop.dismiss)
@@ -123,7 +150,11 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     else:  # the game is unknown: show the hint once now
         show_hint()
 
-    pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit, segmenter=make_segmenter())
+    screen_source = make_screen_source(settings, translator, bridge) if screen_ocr else None
+    pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit, segmenter=make_segmenter(),
+                            skip_recognition=(lambda: screen_source.active) if screen_source else (lambda: False))
+    if screen_source is not None:
+        screen_source.start()
     audio: queue.Queue = queue.Queue()
 
     def feed_pipeline() -> None:
@@ -172,6 +203,8 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         app.exec()
     finally:
         hotkey.stop()
+        if screen_source is not None:
+            screen_source.stop()
         capture.stop()
         audio.put(None)
         feeder.join(2)

@@ -325,3 +325,22 @@ def test_pipeline_uses_the_segmenter_it_is_given(store):
     pipeline.close()
 
     assert seen == [1600]
+
+
+def test_recognition_rests_while_the_screen_source_shows_the_games_subtitles(store):
+    transcriber = FakeTranscriber()
+    live, cues = engine(store, transcriber, skip_recognition=lambda: True)
+
+    assert live.process(segment(1, 3.0)) is None
+    assert transcriber.calls == 0 and cues == []
+
+
+def test_recognition_runs_again_when_the_screen_source_goes_quiet(store):
+    resting = {"on": True}
+    transcriber = FakeTranscriber()
+    live, cues = engine(store, transcriber, skip_recognition=lambda: resting["on"])
+
+    live.process(segment(1, 3.0))
+    resting["on"] = False
+
+    assert live.process(segment(2, 3.0)) is not None and transcriber.calls == 1

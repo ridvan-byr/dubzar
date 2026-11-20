@@ -138,7 +138,8 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[
             return scanner_model
 
         return run_live(store, args.index, settings, transcriber, translator,
-                        audio_dir=args.audio_dir, make_scan_transcriber=make_scan_transcriber)
+                        audio_dir=args.audio_dir, make_scan_transcriber=make_scan_transcriber,
+                        screen_ocr=not args.no_screen_ocr)
     finally:
         store.close()
 
@@ -171,6 +172,8 @@ def build_parser() -> argparse.ArgumentParser:
     model_flags(run, "tiny", "cpu", 2)
     run.add_argument("--debug", action="store_true",
                      help="ne olduğunu yaz: ses seviyesi, yakalanan parçalar, tanıma sonucu, altyazı neden gösterilmedi")
+    run.add_argument("--no-screen-ocr", action="store_true",
+                     help="oyunun ekrandaki altyazısını okuma (varsayılan: açık; yalnızca ses dinlenir)")
     run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
     run.add_argument("--game-exe", help="oyunun süreç adı (örn. GTA5.exe): çalışırken arka plan taraması bekler")
     run.add_argument("--scan-model", default="small", help="arka plan taraması için Whisper modeli (varsayılan: small)")

@@ -9,6 +9,7 @@ TAIL_S = 0.5  # a subtitle stays this long after its line ends
 READ_CHARS_PER_S = 12.0   # comfortable reading speed for subtitles
 READ_BASE_S = 1.0         # time to notice a subtitle before reading it
 MIN_SHOW_S = 1.5
+MAX_FOLLOW_S = 20.0       # a subtitle that follows the screen is dropped after this even if no clear signal came
 
 
 def show_time(text: str, duration_s: float) -> float:
@@ -29,7 +30,11 @@ class SubtitleTimeline:
     def show(self, cue: Cue, now: float) -> None:
         """Replace whatever is showing with ``cue``; it ends ``show_time + TAIL_S`` later."""
         self._text = cue.text_tr
-        self._until = now + show_time(cue.text_tr, cue.duration_s) + TAIL_S
+        self._until = (now + MAX_FOLLOW_S if cue.until_cleared
+                       else now + show_time(cue.text_tr, cue.duration_s) + TAIL_S)
+
+    def clear(self) -> None:
+        self._text = None
 
     def current(self, now: float) -> str | None:
         return self._text if self._text is not None and now < self._until else None

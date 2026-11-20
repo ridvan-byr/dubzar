@@ -222,3 +222,31 @@ def test_subtitle_uses_the_bundled_font_not_the_system_default(qapp):
     window = OverlayWindow(Settings())
 
     assert "font-family" in window.label_style and "DM Sans" in window.label_style
+
+
+def test_cue_that_follows_the_screen_stays_until_cleared():
+    timeline = SubtitleTimeline()
+    timeline.show(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+
+    assert timeline.current(now=9.0) == "Merhaba dostum"   # no reading-time cap: the game still shows it
+    timeline.clear()
+    assert timeline.current(now=9.1) is None
+
+
+def test_followed_cue_still_has_a_safety_limit():
+    timeline = SubtitleTimeline()
+    timeline.show(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+
+    assert timeline.current(now=60.0) is None   # the clear signal can be lost; never leave text up forever
+
+
+def test_window_clear_cue_hides_the_subtitle(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    window.show_cue(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+    assert window.isVisible()
+
+    window.clear_cue()
+    assert not window.isVisible()

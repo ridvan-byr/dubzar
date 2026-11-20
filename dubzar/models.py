@@ -10,6 +10,7 @@ class Cue:
     text_tr: str
     duration_s: float
     speaker: str | None = None
+    until_cleared: bool = False   # shown while the game's own subtitle is on screen, not for a fixed time
 
 
 @dataclass(frozen=True)
