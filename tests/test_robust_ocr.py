@@ -108,3 +108,48 @@ def test_english_mangled_by_the_turkish_engine_is_still_repaired():
     lines = RobustOcr(reader, VOCAB).read(FRAME)
 
     assert "ı" not in texts(lines)[0]
+
+
+class LineReader:
+    """Each call returns a prepared list of lines (text, y), so a test can make each variant wrong somewhere else."""
+
+    def __init__(self, *readings):
+        self.readings = list(readings)
+
+    def read(self, image):
+        lines = self.readings.pop(0) if self.readings else []
+        return [OcrLine(text, 0.5, y) for text, y in lines]
+
+
+def test_the_best_reading_of_each_line_is_taken_from_a_different_variant():
+    """On a real frame one variant read line 3 perfectly and lost line 4, another did the opposite."""
+    one = [("Keep your head down", 0.2), ("and stay quiet", 0.5), ("zzz qqq", 0.8)]
+    two = [("Kecp yoor hoad dowm", 0.2), ("and stay quiet", 0.5), ("right now", 0.8)]
+    three = [("Keep your head down", 0.2), ("and stay quicl", 0.5)]
+    reader = LineReader(one, two, three, [], [], [])
+
+    lines = RobustOcr(reader, VOCAB, good_enough=1.01).read(FRAME)
+
+    assert [l.text for l in sorted(lines, key=lambda l: l.center_y)] == [
+        "Keep your head down", "and stay quiet", "right now"]
+
+
+def test_a_line_seen_by_only_one_variant_and_garbled_is_dropped():
+    reader = LineReader([("Keep your head down", 0.2), ("r 11", 0.8)], [("Keep your head down", 0.2)], [], [], [], [])
+
+    lines = RobustOcr(reader, VOCAB, good_enough=1.01).read(FRAME)
+
+    assert [l.text for l in lines] == ["Keep your head down"]
+
+
+def test_the_merged_reading_competes_with_the_best_whole_reading():
+    """Merging lines is not always better: when one variant read everything well, a patchwork must not replace it."""
+    whole = [("Keep your head down", 0.2), ("and stay quiet", 0.5), ("right now", 0.8)]
+    noisy_a = [("Keep your hcad down", 0.2), ("stay", 0.5)]
+    noisy_b = [("Keep your head", 0.21), ("and stay quiet", 0.52), ("zzz", 0.79)]
+    reader = LineReader(whole, noisy_a, noisy_b, [], [], [])
+
+    lines = RobustOcr(reader, VOCAB, good_enough=1.01).read(FRAME)
+
+    assert [l.text for l in sorted(lines, key=lambda l: l.center_y)] == [
+        "Keep your head down", "and stay quiet", "right now"]

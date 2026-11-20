@@ -72,6 +72,7 @@ class RobustOcr:
     GOOD_ENOUGH = 0.85           # share of real words at which no further variant is tried
     GARBAGE_PENALTY = 0.6        # an unknown word costs this much of a known word's credit
     AGREEMENT_BONUS = 1.0        # each further variant that reads the same text is worth this much credit
+    LINE_GAP = 0.07              # lines of different readings closer than this (share of the picture) are the same line
 
     def __init__(self, reader, vocab: Vocabulary | None = None, good_enough: float = GOOD_ENOUGH):
         self._reader = reader
@@ -107,16 +108,51 @@ class RobustOcr:
         the reading with the most real words, helped by how many variants agree on it, wins."""
         seen: dict[str, tuple[list[OcrLine], float]] = {}
         votes: dict[str, int] = {}
+        readings: list[list[OcrLine]] = []
         for _, variant in imageprep.variants(image):
             lines = self._clean(self._reader.read(variant))
             if not lines:
                 continue
+            readings.append(lines)
             key = self._key(lines)
             votes[key] = votes.get(key, 0) + 1
             seen.setdefault(key, (lines, self._score(lines)))
             if votes[key] >= 2 and text_quality(" ".join(l.text for l in lines), self._vocab) >= self._good_enough:
                 return seen[key][0]
-        if not seen:
+        if not readings:
             return []
-        winner = max(seen, key=lambda k: seen[k][1] + self.AGREEMENT_BONUS * (votes[k] - 1))
-        return seen[winner][0]
+        whole = max(seen, key=lambda k: seen[k][1] + self.AGREEMENT_BONUS * (votes[k] - 1))
+        best_whole = seen[whole][0]
+        merged = self._merge(readings)
+        # the patchwork of best lines against the best single reading: whichever holds more real words wins
+        return merged if self._score(merged) > self._score(best_whole) else best_whole
+
+    def _merge(self, readings: list[list[OcrLine]]) -> list[OcrLine]:
+        """No two variants agreed on the whole text, but each is usually right about some lines (on a real in-game
+        frame one variant read line three perfectly and lost line four, another the other way round). So the lines
+        of all readings are grouped by where they sit, and for each line the best candidate wins."""
+        lines = sorted((l for reading in readings for l in reading), key=lambda l: l.center_y)
+        clusters: list[list[OcrLine]] = []
+        for line in lines:
+            if clusters and line.center_y - clusters[-1][-1].center_y <= self.LINE_GAP:
+                clusters[-1].append(line)
+            else:
+                clusters.append([line])
+        merged = []
+        for cluster in clusters:
+            groups: dict[str, list[OcrLine]] = {}
+            for line in cluster:
+                groups.setdefault(self._key([line]), []).append(line)
+
+            def value(key: str) -> float:
+                first = groups[key][0]
+                return self._score([first]) + self.AGREEMENT_BONUS * (len(groups[key]) - 1)
+
+            winner = max(groups, key=value)
+            best = groups[winner][0]
+            alone = len(groups[winner]) == 1
+            if alone and (self._score([best]) <= 0 or text_quality(best.text, self._vocab) < 0.6):
+                continue                                   # garbage that only one variant produced
+            merged.append(OcrLine(best.text, sum(l.center_x for l in groups[winner]) / len(groups[winner]),
+                                  sum(l.center_y for l in groups[winner]) / len(groups[winner])))
+        return merged

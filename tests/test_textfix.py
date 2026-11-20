@@ -92,3 +92,53 @@ def test_rare_words_are_replaced_by_much_commoner_lookalikes(real_like, read, ex
 ])
 def test_real_rare_words_and_names_stay(real_like, text):
     assert fix_text(text, real_like) == text
+
+
+# --- found on a real in-game frame: the game's apostrophe is read as l ! : and words run together ---------------
+@pytest.fixture(scope="module")
+def game_vocab():
+    words = ("i've i'm picked up quite a collection in my travels chaotic times like these people line of work trade "
+             "freely sure you can find something to your liking quick hand the sure").split()
+    return Vocabulary({w: -6.0 - (i % 7) * 0.5 for i, w in enumerate(words)})
+
+
+@pytest.mark.parametrize("read,expected", [
+    ("Ilve picked up", "I've picked up"),                 # the apostrophe read as l
+    ("Itve picked up", "I've picked up"),
+    ("lJve picked up", "I've picked up"),
+    ("Ilm sure you can find", "I'm sure you can find"),
+    ("I m sure you can find", "I'm sure you can find"),   # the apostrophe lost: a lone I and an m
+    ("you can't", "you can't"),
+])
+def test_the_games_apostrophe_misread_as_letters_is_repaired(game_vocab, read, expected):
+    assert fix_text(read, game_vocab) == expected
+
+
+@pytest.mark.parametrize("read,expected", [
+    ("In chaotictimes like", "In chaotic times like"),
+    ("people trade freely tradefreely", "people trade freely trade freely"),
+    ("a collectionin my travels", "a collection in my travels"),
+    ("find somethingto your liking", "find something to your liking"),
+    ("in mytravels", "in my travels"),
+])
+def test_words_that_ran_together_are_split_back_apart(game_vocab, read, expected):
+    assert fix_text(read, game_vocab) == expected
+
+
+def test_a_word_is_only_split_when_every_part_is_a_real_word(game_vocab):
+    assert fix_text("the Zhangwei trade", game_vocab) == "the Zhangwei trade"      # a name stays whole
+
+
+def test_stray_capitals_inside_a_word_are_lowered(game_vocab):
+    assert fix_text("something to your liKing", game_vocab) == "something to your liking"
+    assert fix_text("tHe line", game_vocab) == "the line"
+
+
+@pytest.mark.parametrize("read,expected", [
+    ("the nest. in the week", "the nest. In the week"),       # a new sentence starts with a capital
+    ("the nest! all week", "the nest! All week"),
+    ("Wait... all week", "Wait... all week"),                  # an ellipsis may continue the sentence
+    ("the nest, all week", "the nest, all week"),
+])
+def test_a_word_right_after_a_sentence_end_gets_its_capital(real_like, read, expected):
+    assert fix_text(read, real_like) == expected

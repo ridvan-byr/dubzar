@@ -26,6 +26,12 @@ FOLD = str.maketrans("ıİşŞğĞçÇöÖüÜâîû", "iIsSgGcCoOuUaiu")       
 QUOTES = str.maketrans({"’": "'", "‘": "'", "´": "'", "`": "'", "“": '"', "”": '"', "–": "-", "—": "-"})
 STRAY = set("•§¤~^¬°¦*#@_=+<>{}\\·")
 RUN = re.compile(r"[A-Za-z0-9'|\[\]]+")
+# Some game fonts draw the apostrophe as a big tick that OCR reads as a letter or a mark: I've -> Ilve, don't -> don!t
+APOSTROPHE_MARK = re.compile(r"(?<=[A-Za-z])[!:;|](?=(?:s|t|m|d|ll|ve|re)\b)")
+LONE_I_SUFFIX = re.compile(r"\b[Il1|]\s+(m|ve|d)\b")             # "I m" : the apostrophe was dropped
+I_CONTRACTION = re.compile(r"^[Il1|][lIJtij1!:;|](ve|m)$")          # Ilve, Itve, lJve, Ilm
+SPLIT_PENALTY = 1.0
+SHORT_PARTS = TWO_LETTER_WORDS | {"a", "i"}
 
 # What each observed character may really be (lower case). Only used on words that are not real words.
 LOOKALIKES = {
@@ -124,6 +130,37 @@ def _variants(core: str, restricted: bool):
                     yield (low.replace(pattern, replacement) if core.islower() else core.replace(pattern, replacement)), 1
 
 
+def _segment(core: str, vocab: Vocabulary) -> str | None:
+    """Words that ran together ("tradefreely") split into the real words they are made of, or None."""
+    low = core.lower()
+    n = len(low)
+    if n < 5 or not low.isalpha():
+        return None
+    best: list[tuple[float, list[int]] | None] = [None] * (n + 1)
+    best[0] = (0.0, [])
+    for end in range(1, n + 1):
+        for start in range(max(0, end - 14), end):
+            before = best[start]
+            part = low[start:end]
+            if before is None or len(before[1]) >= 3 or not vocab.known(part):
+                continue
+            if len(part) < 3 and part not in SHORT_PARTS:
+                continue
+            value = before[0] + vocab.logp(part) - SPLIT_PENALTY
+            if best[end] is None or value > best[end][0]:
+                best[end] = (value, before[1] + [end - start])
+    if best[n] is None or len(best[n][1]) < 2:
+        return None
+    lengths = best[n][1]
+    if min(lengths) <= 2 and n < 6:
+        return None
+    parts, position = [], 0
+    for length in lengths:
+        parts.append(core[position: position + length])
+        position += length
+    return " ".join(parts)
+
+
 def _match_case(original: str, fixed: str) -> str:
     if original.isupper() and len(original) > 1:
         return fixed.upper()
@@ -142,8 +179,12 @@ def _fix_word(token: str, vocab: Vocabulary, sentence_start: bool) -> str:
     if low in NEVER_WORDS:
         fixed = NEVER_WORDS[low]
         return lead + (fixed[0].upper() + fixed[1:] if core[0].isupper() or fixed[0] == "I" else fixed) + trail
+    if any(c.isupper() for c in core[1:]) and not core.isupper() and _is_word(vocab, low):
+        return lead + core[0] + core[1:].lower() + trail          # liKing, tHe: stray capitals inside a real word
     capitalised = core[0].isupper() and not core.isupper()
     known = _is_word(vocab, low)
+    if not known and I_CONTRACTION.match(core):
+        return lead + "I'" + ("ve" if low.endswith("ve") else "m") + trail     # Ilve -> I've, Ilm -> I'm
     if known and (capitalised or core.isupper() or vocab.logp(low) >= RARE_LOGP):
         return token                                   # a normal word, or a name that may be one
     if core.isupper() and len(core) <= 3:
@@ -156,6 +197,10 @@ def _fix_word(token: str, vocab: Vocabulary, sentence_start: bool) -> str:
         value = vocab.logp(cand_low) - CHANGE_PENALTY * changes
         if best_value is None or value > best_value:
             best, best_value = candidate, value
+    if best is None and not known and not capitalised:
+        split = _segment(core, vocab)
+        if split:
+            return lead + (split[0].upper() + split[1:] if sentence_start else split) + trail
     if best is None or (known and best_value <= vocab.logp(low) + RARE_MARGIN):
         return token
     best = _match_case(core, best)
@@ -175,11 +220,17 @@ def fix_text(text: str, vocab: Vocabulary | None = None) -> str:
     """The text with common OCR misreadings repaired; unchanged words stay exactly as they were."""
     vocab = vocab or default_vocabulary()
     text = text.translate(FOLD).translate(QUOTES)
+    text = LONE_I_SUFFIX.sub(lambda m: "I'" + m.group(1), APOSTROPHE_MARK.sub("'", text))
     if vocab is not None:
         pieces, last = [], 0
         for match, start in _sentence_starts(text):
             pieces.append(text[last: match.start()])
-            pieces.append(_fix_word(match.group(), vocab, start))
+            word = _fix_word(match.group(), vocab, start)
+            before = text[: match.start()].rstrip()
+            if (before and before[-1] in ".!?" and not before.endswith("..") and word[:1].islower()
+                    and word.isalpha() and len(word) > 1):
+                word = word[0].upper() + word[1:]          # a new sentence begins here
+            pieces.append(word)
             last = match.end()
         pieces.append(text[last:])
         text = "".join(pieces)

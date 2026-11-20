@@ -26,11 +26,31 @@ def _line_ok(line: str) -> bool:
     return sum(c in TURKISH_ONLY for c in line) < 2  # our own Turkish text, not the game's
 
 
+NAME_CONNECTORS = {"of", "the", "de", "van", "von", "la", "le", "da", "bin", "al", "and"}
+
+
+def _looks_like_speaker(line: str, next_line: str) -> bool:
+    """A character's name on a line of its own above their words: short, every word capitalised, no punctuation, and
+    the next line starts a new sentence (so it is not the first half of one)."""
+    words = line.split()
+    if not 1 <= len(words) <= 4 or len(line) > 32 or any(c in line for c in ".,!?;:"):
+        return False
+    if len(words) == 1 and len(words[0]) < 3:
+        return False
+    if not all(w[0].isupper() or w.lower() in NAME_CONNECTORS for w in words):
+        return False
+    return bool(next_line) and next_line[0].isupper()
+
+
 def subtitle_text(lines: list[str]) -> str | None:
-    """The lines that look like subtitle text, joined; None when nothing on screen looks like a subtitle."""
+    """The lines that look like subtitle text, joined; None when nothing on screen looks like a subtitle.
+    A speaker's name on its own first line becomes "Name: words", so it is never translated as if it were speech."""
     kept = [line.strip() for line in lines if _line_ok(line)]
     if not any(len(line.split()) >= MIN_WORDS for line in kept):  # a lone token is a logo or a sign, not speech
         return None
+    if len(kept) >= 3 or (len(kept) == 2 and len(kept[1].split()) >= 3):
+        if _looks_like_speaker(kept[0], kept[1]):
+            kept = [kept[0] + ":"] + kept[1:]
     text = re.sub(r"\s+", " ", " ".join(kept)).strip()
     return text if len(text) >= MIN_CHARS else None
 

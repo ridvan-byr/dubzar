@@ -1,4 +1,4 @@
-from dubzar.subtitle_tracker import SubtitleTracker, Update
+from dubzar.subtitle_tracker import SubtitleTracker, Update, subtitle_text
 
 LINE = "Donnie: Just like that. Just like ol' Donnie does it."
 
@@ -70,3 +70,28 @@ def test_a_different_text_only_seen_once_does_not_replace_the_current_subtitle()
     back = t.update([LINE])
 
     assert flash.text is None and back == Update(None, False)
+
+
+def test_a_speaker_name_on_its_own_line_is_kept_apart_from_the_words():
+    lines = ["Quick Hand Zhang",
+             "I've picked up quite a collection in my travels. In chaotic times like",
+             "these, people in my line of work trade freely."]
+
+    text = subtitle_text(lines)
+
+    assert text == ("Quick Hand Zhang: I've picked up quite a collection in my travels. "
+                    "In chaotic times like these, people in my line of work trade freely.")
+
+
+def test_a_title_case_first_line_alone_is_not_a_speaker():
+    assert subtitle_text(["Quick Hand Zhang"]) == "Quick Hand Zhang"
+
+
+def test_a_first_line_that_is_part_of_a_sentence_is_not_a_speaker():
+    lines = ["Hold on, I think I can see", "something moving over there."]
+
+    assert subtitle_text(lines) == "Hold on, I think I can see something moving over there."
+
+
+def test_a_first_line_that_ends_a_sentence_is_not_a_speaker():
+    assert subtitle_text(["Go Away Now!", "I mean it, leave."]) == "Go Away Now! I mean it, leave."
