@@ -78,9 +78,9 @@ def make_segmenter() -> SpeechSegmenter:
 def make_screen_source(settings: Settings, translator: Translator, bridge) -> ScreenSubtitleSource | None:
     """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable."""
     try:
-        from dubzar.ocr import WindowsOcr
+        from dubzar.ocr import RobustOcr, WindowsOcr
 
-        ocr = WindowsOcr()
+        ocr = RobustOcr(WindowsOcr())   # several preparations of the picture, dictionary repair, best reading wins
     except Exception as exc:
         log.warning("ekrandaki altyazı okuma kullanılamıyor (%s); yalnızca ses dinlenecek", exc)
         return None

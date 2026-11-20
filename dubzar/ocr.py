@@ -5,6 +5,9 @@ from dataclasses import dataclass
 
 import numpy as np
 
+from dubzar import imageprep
+from dubzar.textfix import TURKISH_LETTERS, Vocabulary, fix_text, text_quality, word_counts
+
 PREFERRED_LANGUAGES = ("en-US", "en-GB", "en")   # English subtitles; any installed Latin-script engine is the fallback
 
 
@@ -59,3 +62,61 @@ class WindowsOcr:
             bottom = max(w.bounding_rect.y + w.bounding_rect.height for w in words)
             lines.append(OcrLine(line.text, (left + right) / 2 / width, (top + bottom) / 2 / height))
         return lines
+
+
+class RobustOcr:
+    """Reads a subtitle picture reliably: tries the picture as it is, and if the result does not look like English,
+    the same picture prepared in other ways (enlarged, letters separated from the scene), repairs the usual
+    misreadings, and keeps the reading with the most real words. Cheap when the first reading is already good."""
+
+    GOOD_ENOUGH = 0.85           # share of real words at which no further variant is tried
+    GARBAGE_PENALTY = 0.6        # an unknown word costs this much of a known word's credit
+    AGREEMENT_BONUS = 1.0        # each further variant that reads the same text is worth this much credit
+
+    def __init__(self, reader, vocab: Vocabulary | None = None, good_enough: float = GOOD_ENOUGH):
+        self._reader = reader
+        self._vocab = vocab
+        self._good_enough = good_enough
+
+    @property
+    def language(self) -> str:
+        return getattr(self._reader, "language", "?")
+
+    def _clean(self, lines: list[OcrLine]) -> list[OcrLine]:
+        cleaned = []
+        for line in lines:
+            fixed = fix_text(line.text, self._vocab)
+            if sum(c in TURKISH_LETTERS for c in line.text) >= 2 and text_quality(fixed, self._vocab) < 0.6:
+                fixed = line.text.strip()     # it really is Turkish: keep the letters, folding would only mangle it
+            if fixed:
+                cleaned.append(OcrLine(fixed, line.center_x, line.center_y))
+        return cleaned
+
+    def _score(self, lines: list[OcrLine]) -> float:
+        credit, total = word_counts(" ".join(l.text for l in lines), self._vocab)
+        return credit - self.GARBAGE_PENALTY * (total - credit)
+
+    @staticmethod
+    def _key(lines: list[OcrLine]) -> str:
+        """What makes two readings 'the same': the letters, ignoring case, punctuation and spacing."""
+        return "".join(c for c in " ".join(l.text for l in lines).lower() if c.isalnum())
+
+    def read(self, image: np.ndarray) -> list[OcrLine]:
+        """One reading, however clean, may be a fragment of the line (every word valid, half of them missing): it is
+        trusted only when a second, differently prepared picture reads the same. Otherwise every variant is tried and
+        the reading with the most real words, helped by how many variants agree on it, wins."""
+        seen: dict[str, tuple[list[OcrLine], float]] = {}
+        votes: dict[str, int] = {}
+        for _, variant in imageprep.variants(image):
+            lines = self._clean(self._reader.read(variant))
+            if not lines:
+                continue
+            key = self._key(lines)
+            votes[key] = votes.get(key, 0) + 1
+            seen.setdefault(key, (lines, self._score(lines)))
+            if votes[key] >= 2 and text_quality(" ".join(l.text for l in lines), self._vocab) >= self._good_enough:
+                return seen[key][0]
+        if not seen:
+            return []
+        winner = max(seen, key=lambda k: seen[k][1] + self.AGREEMENT_BONUS * (votes[k] - 1))
+        return seen[winner][0]
