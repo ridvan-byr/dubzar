@@ -117,6 +117,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         exclude_from_capture(int(window.winId()))
     bridge.scan_progress.connect(controller.set_scan_progress)
     panel.on_closed(lambda: overlay.set_preview(None))
+    controller.quitRequested.connect(app.quit)
     panel.on_closed(backdrop.dismiss)
 
     def veil_game_screen(panel_screen) -> None:

@@ -447,3 +447,18 @@ def test_plain_live_status_is_not_shown_in_the_header(qapp):
     ctl.set_scan_progress(40, 100)
     assert wait_until(lambda: label.isVisible(), 1.0)  # but progress is worth showing
     window.view.hide()
+
+
+def test_panel_has_a_way_to_quit_the_whole_program(qapp):
+    """Started from a shortcut there is no console to press Ctrl+C in."""
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 800, 600))
+    wait_until(lambda: window.view.isExposed(), 1.0)
+    asked = []
+    ctl.quitRequested.connect(lambda: asked.append(1))
+
+    QTest.mouseClick(window.view, Qt.LeftButton, Qt.NoModifier, center_of(window, "quitButton"))
+
+    assert asked == [1]
+    window.view.hide()

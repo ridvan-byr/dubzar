@@ -512,6 +512,35 @@ Item {
                         }
                     }
                 }
+
+                Item {
+                    objectName: "quitButton"
+                    Layout.alignment: Qt.AlignRight
+                    implicitWidth: quitText.implicitWidth + 8
+                    implicitHeight: 22
+                    activeFocusOnTab: true
+                    Accessible.role: Accessible.Button
+                    Accessible.name: "Dubzar'dan çık"
+                    Keys.onSpacePressed: ctl.quitApp()
+                    Keys.onReturnPressed: ctl.quitApp()
+                    Text {
+                        id: quitText
+                        anchors.centerIn: parent
+                        text: "Dubzar'dan çık"
+                        color: quitMouse.containsMouse ? dz.text : dz.muted
+                        font.family: ctl.sansFamily
+                        font.pixelSize: 11
+                        font.underline: quitMouse.containsMouse
+                    }
+                    FocusRing {}
+                    MouseArea {
+                        id: quitMouse
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: ctl.quitApp()
+                    }
+                }
             }
         }
     }

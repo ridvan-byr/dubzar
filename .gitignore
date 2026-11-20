@@ -9,3 +9,4 @@ experiments/CLEANUP_MANIFEST.md
 experiments/translation_compare_t*.md
 models_ft/
 models_ct2/
+dist/

@@ -1,0 +1,45 @@
+DUBZAR  -  oyunlara Türkçe altyazı
+=====================================
+
+Bu ne?
+  Oyunun İngilizce konuşmasını/altyazısını okur, Türkçe altyazıyı oyunun
+  üzerinde gösterir. Oyunun dosyalarına ya da belleğine DOKUNMAZ; yalnızca
+  bilgisayarın çıkış sesini dinler ve ekrandaki altyazı bölgesine bakar.
+  Her şey bu bilgisayarda çalışır, hiçbir şey internete gönderilmez.
+  (Oyuna müdahale etmediği için hesap riski çok düşüktür, ama hiçbir anti-hile
+  sistemi için garanti verilemez; çevrimiçi/rekabetçi oyunlarda kendi
+  sorumluluğunuzda kullanın.)
+
+Kurulum
+  1. Zip'i bir klasöre TAMAMEN çıkarın (içinden çift tıklamayın).
+  2. Kur.bat dosyasına çift tıklayın ve soruları yanıtlayın.
+     - Python 3.12 yoksa kurulum, izninizle kurar.
+     - Yaklaşık 600 MB paket + 550 MB model indirilir (internet gerekir).
+  3. Bittiğinde masaüstünde Dubzar simgesi (logodaki "D") belirir.
+
+Kullanım
+  - Dubzar simgesine çift tıklayın, sonra oyunu açın.
+  - Ctrl+Shift+D : ayarlar paneli (altyazı boyutu, konumu, renkleri, açma/kapama).
+    Paneli üst kısmından sürükleyebilirsiniz.
+  - Çıkmak için panelde "Dubzar'dan çık".
+  - Oyunu "tam ekran" ya da "pencereli tam ekran" çalıştırabilirsiniz.
+  - Altyazı, oyunun KENDİ İngilizce altyazısı açıksa en doğru ve en hızlı
+    çıkar (oyunun altyazı ayarını açın). Altyazı yoksa ses dinlenir; bu daha
+    yavaş ve daha az doğrudur.
+
+Bilmeniz gerekenler (erken sürüm)
+  - Ses dinleme, Windows'un varsayılan çıkış cihazından (hoparlör/kulaklık)
+    çalan sesi alır. Oyun başka bir cihaza çalıyorsa ses alınamaz.
+  - Çeviri küçük bir yerel model olduğu için bazen yanlış çıkar. Bir satır
+    bir kez çevrilince hatırlanır ve tekrar çevrilmez.
+  - Sorun olursa: Başlat menüsünden "Dubzar (hata ayiklama)" ile açın ve
+    çıktıyı gönderin; ya da %APPDATA%\Dubzar\dubzar.log dosyasını paylaşın.
+
+Kaldırma
+  Kaldir.bat dosyasına çift tıklayın (ayarlarınızı ve modelleri silmek
+  isteyip istemediğinizi sorar).
+
+Lisanslar
+  Çeviri: Helsinki-NLP OPUS-MT (CC-BY-4.0). Konuşma tanıma: Whisper tiny
+  (MIT). Yazı tipleri: DM Sans, Instrument Serif (SIL OFL). Ayrıntı:
+  app\LISANSLAR.md

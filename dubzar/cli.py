@@ -1,6 +1,7 @@
 """Command line.
 
-``python -m dubzar run --index game.db``   live subtitles; the index grows as the game talks
+``python -m dubzar setup --allow-download``   download the models once (the installer does this)
+``python -m dubzar run``   live subtitles; the index grows as the game talks (the shortcut runs this)
 ``python -m dubzar scan <audio_dir> --index game.db``   scan extracted voice files into the index
 """
 
@@ -8,6 +9,7 @@ import argparse
 import hashlib
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 from typing import Callable, Iterable
@@ -25,6 +27,27 @@ from dubzar.settings import Settings, default_settings_path, load_settings
 from dubzar.translate import MODEL_NAME, TRANSLATION_VERSION, OpusMtTranslator, ThreadSafeTranslator, Translator
 
 POSITIONS = {"top": 0.0, "center": 0.5, "bottom": 1.0}
+
+
+def default_index_path() -> str:
+    base = os.environ.get("APPDATA") or str(Path.home())
+    return str(Path(base) / "Dubzar" / "live.db")
+
+
+def default_log_path() -> Path:
+    return Path(default_index_path()).with_name("dubzar.log")
+
+
+def redirect_output_if_windowless(log_file: Path | str):
+    """Started from a shortcut with pythonw there is no console: ``print`` would crash on a missing stdout, and any
+    error would vanish. Send both streams to a log file instead. Returns the open file, or None with a console."""
+    if sys.stdout is not None and sys.stderr is not None:
+        return None
+    path = Path(log_file)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    handle = open(path, "a", encoding="utf-8", buffering=1)
+    sys.stdout = sys.stderr = handle
+    return handle
 
 
 def _error(message: str) -> int:
@@ -112,8 +135,28 @@ def _configure_logging(debug: bool) -> None:
                         datefmt="%H:%M:%S", force=True)
 
 
+def _cmd_setup(args, transcriber: Transcriber | None, translator: Translator | None) -> int:
+    """Fetch the two models the app needs. The installer runs this after the user agreed to the download."""
+    if not args.allow_download:
+        return _error("modeller yalnızca izninizle indirilir: --allow-download ile yeniden çalıştırın.")
+    steps = (
+        ("konuşma tanıma modeli (~75 MB)", lambda: WhisperTranscriber(
+            model_size="tiny", device="cpu", allow_download=True).load()),
+        ("çeviri modeli (~480 MB) ve hızlı biçime dönüştürme", lambda: OpusMtTranslator(allow_download=True).load()),
+    )
+    for name, step in steps:
+        print(f"İndiriliyor: {name} …", flush=True)
+        try:
+            step()
+        except Exception as exc:  # noqa: BLE001 - tell the installer what failed, with the reason
+            return _error(f"{name} hazırlanamadı: {exc}")
+    print("Hazır: modeller bu bilgisayarda.", flush=True)
+    return 0
+
+
 def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[Cue], None] | None,
              transcriber: Transcriber | None, translator: Translator | None) -> int:
+    redirect_output_if_windowless(args.log_file or default_log_path())
     _configure_logging(args.debug)
     try:
         settings = _settings_for_run(args)
@@ -132,6 +175,7 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[
     except ModelMissingError as exc:
         return _error(str(exc))
 
+    Path(args.index).parent.mkdir(parents=True, exist_ok=True)  # first run: the app's data folder does not exist yet
     store = IndexStore(args.index)  # created when it does not exist yet: live mode needs no prior scan
     try:
         if audio_chunks is not None:  # tests and offline replay: no capture, no window
@@ -173,6 +217,9 @@ def build_parser() -> argparse.ArgumentParser:
                        help="eksik modelleri indirmeye izin ver (varsayılan: indirme yok, eksikse hata verir)")
         p.add_argument("--glossary", help="terim sözlüğü JSON dosyası: {\"İngilizce\": \"Türkçe\"}")
 
+    setup = sub.add_parser("setup", help="gerekli modelleri bir kez indir (kurulum bunu çalıştırır)")
+    setup.add_argument("--allow-download", action="store_true", help="indirmeye izin ver (zorunlu)")
+
     scan = sub.add_parser("scan", help="oyunun ses dosyalarını tara ve altyazı indeksi oluştur")
     scan.add_argument("folder", help="çıkarılmış ses dosyalarının klasörü")
     scan.add_argument("--index", required=True, help="indeks dosyası (.db)")
@@ -181,7 +228,10 @@ def build_parser() -> argparse.ArgumentParser:
                       help="önceden konuşmasız diye atlanan dosyaları yeniden dene (daha iyi model sonrası)")
 
     run = sub.add_parser("run", help="oyun sesini dinle ve Türkçe altyazıyı canlı göster; indeks oynadıkça büyür")
-    run.add_argument("--index", required=True, help="indeks dosyası (yoksa oluşturulur)")
+    run.add_argument("--index", default=default_index_path(),
+                     help="indeks dosyası (yoksa oluşturulur; varsayılan: %%APPDATA%%/Dubzar/live.db)")
+    run.add_argument("--log-file", help="konsol yoksa (kısayoldan başlatınca) çıktının yazılacağı dosya "
+                                        "(varsayılan: %%APPDATA%%/Dubzar/dubzar.log)")
     model_flags(run, "tiny", "cpu", 2)
     run.add_argument("--debug", action="store_true",
                      help="ne olduğunu yaz: ses seviyesi, yakalanan parçalar, tanıma sonucu, altyazı neden gösterilmedi")
@@ -202,6 +252,8 @@ def main(argv: list[str] | None = None, *, transcriber: Transcriber | None = Non
          on_cue: Callable[[Cue], None] | None = None) -> int:
     """Entry point. The keyword arguments let tests inject fakes instead of real models/devices."""
     args = build_parser().parse_args(argv)
+    if args.command == "setup":
+        return _cmd_setup(args, transcriber, translator)
     if args.command == "scan":
         return _cmd_scan(args, transcriber, translator)
     return _cmd_run(args, audio_chunks, on_cue, transcriber, translator)

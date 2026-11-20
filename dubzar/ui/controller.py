@@ -25,6 +25,7 @@ class SettingsController(QObject):
 
     changed = Signal()
     closeRequested = Signal()
+    quitRequested = Signal()   # leave the program (there may be no console to press Ctrl+C in)
     dragStarted = Signal()   # the user grabbed the panel's header
     dragMoved = Signal()     # ... and moved the cursor
     activity = Signal()  # the user did something in the panel: keeps it from closing itself
@@ -168,6 +169,10 @@ class SettingsController(QObject):
         current = self._s.screen if self._s.screen in order else "auto"
         self._s.screen = order[(order.index(current) + 1) % len(order)]
         self.activity.emit()
+
+    @Slot()
+    def quitApp(self) -> None:
+        self.quitRequested.emit()
 
     @Slot()
     def dragStart(self) -> None:

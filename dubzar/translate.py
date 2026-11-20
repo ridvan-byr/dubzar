@@ -49,12 +49,13 @@ def _make_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
 
 
 def _make_ct2_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
+    # Only sentencepiece is needed at run time. Importing the transformers library just for its tokenizer cost about
+    # twenty seconds at every start; it is imported only for the one-time conversion below.
     import ctranslate2
+    import sentencepiece
     from huggingface_hub import snapshot_download
-    from transformers import AutoTokenizer
 
     folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
-    tokenizer = AutoTokenizer.from_pretrained(folder)
     model_dir = ct2_model_dir()
     if not (model_dir / "model.bin").exists():
         log.info("çeviri modeli hızlı biçime çevriliyor (yalnızca bir kez, birkaç saniye)")
@@ -64,11 +65,16 @@ def _make_ct2_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], st
         ctranslate2.converters.TransformersConverter(folder).convert(str(partial), quantization="int8")
         partial.rename(model_dir)  # only a finished conversion ever gets the real name
     translator = ctranslate2.Translator(str(model_dir), device="cpu", compute_type="int8", intra_threads=threads)
+    source_spm, target_spm = sentencepiece.SentencePieceProcessor(), sentencepiece.SentencePieceProcessor()
+    source_spm.Load(str(Path(folder) / "source.spm"))
+    target_spm.Load(str(Path(folder) / "target.spm"))
 
     def translate(text: str) -> str:
-        source = tokenizer.convert_ids_to_tokens(tokenizer.encode(text, truncation=True, max_length=256))
-        best = translator.translate_batch([source], beam_size=NUM_BEAMS, max_decoding_length=256)[0].hypotheses[0]
-        return tokenizer.decode(tokenizer.convert_tokens_to_ids(best), skip_special_tokens=True)
+        # What the Marian tokenizer does: sentencepiece pieces of the source (the model's vocabulary maps them to ids)
+        # plus the end marker; the output pieces are joined by the target sentencepiece model.
+        pieces = source_spm.encode(text, out_type=str)[:255] + ["</s>"]
+        best = translator.translate_batch([pieces], beam_size=NUM_BEAMS, max_decoding_length=256)[0].hypotheses[0]
+        return target_spm.decode_pieces([piece for piece in best if piece not in ("</s>", "<pad>")])
 
     return translate
 
