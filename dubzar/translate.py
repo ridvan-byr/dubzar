@@ -1,5 +1,6 @@
 import re
 import threading
+import warnings
 from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
@@ -25,6 +26,7 @@ def _make_pipeline(local_only: bool) -> Callable[[str], str]:
     # Resolving the folder ourselves keeps "no download" honest: with local_only the call fails instead of
     # touching the network, and the model below then reads plain local files. (transformers 5 removed the
     # "translation" pipeline shortcut, so the model and tokenizer are used directly.)
+    warnings.filterwarnings("ignore", message=".*sacremoses.*")  # optional helper this model does not need
     folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
     tokenizer = AutoTokenizer.from_pretrained(folder)
     model = AutoModelForSeq2SeqLM.from_pretrained(folder).eval()

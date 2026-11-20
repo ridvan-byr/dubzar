@@ -266,3 +266,17 @@ def test_using_the_panel_keeps_it_open(qapp):
     assert window.is_open
 
     assert wait_until(lambda: not window.is_open, 3.0)  # and once the user stops, it still closes
+
+
+# --- harmless Qt/Windows chatter must not bury the real messages -----------------------------------
+def test_qt_geometry_chatter_is_dropped_but_real_messages_are_kept(capsys):
+    from dubzar.app import qt_message_filter
+
+    chatter = ("QWindowsWindow::setGeometry: Unable to set geometry 1536x54+192+854 on "
+               "QWidgetWindow/OverlayWindowClassWindow. Resulting geometry 1920x68+192+854")
+    qt_message_filter(None, None, chatter)
+    qt_message_filter(None, None, "QML error: something real went wrong")
+
+    err = capsys.readouterr().err
+    assert "Unable to set geometry" not in err
+    assert "something real went wrong" in err

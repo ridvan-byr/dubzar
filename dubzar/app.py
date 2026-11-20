@@ -7,7 +7,7 @@ import sys
 import threading
 from typing import Callable
 
-from PySide6.QtCore import QObject, QTimer, Signal
+from PySide6.QtCore import QObject, QTimer, Signal, qInstallMessageHandler
 from PySide6.QtWidgets import QApplication
 
 from dubzar.asr import Transcriber
@@ -36,6 +36,14 @@ EXCLUSIVE_WARNING = (
 )
 
 
+def qt_message_filter(mode, context, message: str) -> None:
+    """Print Qt's messages, except the harmless "Unable to set geometry" chatter the overlay triggers
+    when Windows applies its own size limits (the subtitle still shows in the right place)."""
+    if "Unable to set geometry" in message:
+        return
+    print(message, file=sys.stderr, flush=True)
+
+
 class _Bridge(QObject):
     """Carries events from worker threads (recognition, hotkey, background scan) to the GUI thread."""
 
@@ -47,6 +55,7 @@ class _Bridge(QObject):
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
              translator: Translator, *, audio_dir: str | None = None,
              make_scan_transcriber: Callable[[], Transcriber] | None = None) -> int:
+    qInstallMessageHandler(qt_message_filter)
     app = QApplication(sys.argv)
     animations = animations_enabled()
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)
