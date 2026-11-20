@@ -213,3 +213,12 @@ def test_default_position_sits_above_the_games_own_subtitles():
     from dubzar.settings import Settings
 
     assert Settings().vertical <= 0.82
+
+
+def test_subtitle_uses_the_bundled_font_not_the_system_default(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+
+    assert "font-family" in window.label_style and "DM Sans" in window.label_style

@@ -8,12 +8,14 @@ import time
 
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtCore import QRect
-from PySide6.QtGui import QColor, QFontMetrics, QGuiApplication
+from PySide6.QtGui import QColor, QFont, QFontMetrics, QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from dubzar.models import Cue
 from dubzar.overlay import SubtitleTimeline, foreground_monitor_origin, pick_screen_index
 from dubzar.settings import Settings
+from dubzar.ui.controller import SANS_FAMILIES, first_available
+from dubzar.ui.fonts import load_bundled_fonts
 
 TICK_MS = 100
 SCREEN_WIDTH_FRACTION = 0.8
@@ -34,6 +36,7 @@ class OverlayWindow(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setAttribute(Qt.WA_ShowWithoutActivating)
 
+        load_bundled_fonts()  # before the stylesheet names the family
         self._label = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -88,12 +91,12 @@ class OverlayWindow(QWidget):
         self._label.setStyleSheet(
             f"color: {s.text_color}; background: rgba({bg.red()}, {bg.green()}, {bg.blue()}, "
             f"{s.background_opacity / 100:g}); border-radius: 10px; padding: {PAD_Y}px {PAD_X}px; "
-            f"font-size: {s.font_size}px; font-weight: 600;"
+            f"font-family: '{first_available(SANS_FAMILIES)}'; font-size: {s.font_size}px; font-weight: 600;"
         )
 
     def _box_width(self, max_width: int) -> int:
         """The box hugs its text (like a video subtitle) instead of spanning the screen; long text wraps at max_width."""
-        font = self._label.font()
+        font = QFont(first_available(SANS_FAMILIES))
         font.setPixelSize(self._settings.font_size)
         font.setWeight(font.Weight.DemiBold)
         metrics = QFontMetrics(font)
