@@ -3,7 +3,7 @@ name = "dubzar"
 version = "0.1.0"
 description = "Dubzar: universal Turkish subtitles and dubbing for games"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
