@@ -1,0 +1,18 @@
+[project]
+name = "trdub"
+version = "0.1.0"
+description = "Dubzar: universal Turkish subtitles and dubbing for games"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["slow: needs real models or hardware"]
+addopts = "-m 'not slow'"
+
+[tool.setuptools]
+packages = ["trdub"]
