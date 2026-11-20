@@ -250,3 +250,18 @@ def test_window_clear_cue_hides_the_subtitle(qapp):
 
     window.clear_cue()
     assert not window.isVisible()
+
+
+def test_overlay_reports_where_it_is_so_the_veil_can_leave_it_clear(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    seen = []
+    window.placed.connect(seen.append)
+
+    window.show_cue(Cue("a", "x", "Merhaba dostum, nasılsın bugün?", 30.0))
+    assert seen and not seen[-1].isNull() and seen[-1] == window.geometry()
+
+    window.clear_cue()
+    assert seen[-1].isNull()                       # hidden: nothing to keep clear

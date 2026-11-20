@@ -211,7 +211,7 @@ Item {
     Timer {
         id: idle
         interval: ctl.idleCloseMs
-        running: root.open
+        running: root.open && ctl.idleCloseMs > 0
         onTriggered: { if (hover.hovered) idle.restart(); else ctl.close() }
     }
 
@@ -283,12 +283,32 @@ Item {
                         Accessible.name: "Dubzar"
                     }
                     Rectangle { width: 6; height: 6; radius: 3; color: dz.accent }
-                    Lbl { text: ctl.status; Layout.fillWidth: true }
-                    Row {
-                        spacing: 3
-                        Repeater {
-                            model: ctl.hotkeyParts
-                            delegate: Key { required property string modelData; text: modelData }
+                    Lbl { text: ctl.status; Layout.fillWidth: true; elide: Text.ElideRight }
+                    Rectangle {
+                        id: closeBtn
+                        objectName: "closeButton"
+                        implicitWidth: 24
+                        implicitHeight: 24
+                        radius: 12
+                        color: closeMouse.containsMouse ? dz.surface : "transparent"
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Paneli kapat"
+                        Keys.onSpacePressed: ctl.close()
+                        Keys.onReturnPressed: ctl.close()
+                        Text {
+                            anchors.centerIn: parent
+                            text: "✕"
+                            color: dz.muted
+                            font.pixelSize: 11
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            id: closeMouse
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.close()
                         }
                     }
                 }
@@ -476,7 +496,14 @@ Item {
                         }
                     }
                     Item { Layout.fillWidth: true }
-                    Lbl { text: "Esc ile kapat" }
+                    Lbl { text: "Kapat" }   // the panel takes no keyboard focus (the game keeps it): the hotkey or the cross closes it
+                    Row {
+                        spacing: 3
+                        Repeater {
+                            model: ctl.hotkeyParts
+                            delegate: Key { required property string modelData; text: modelData }
+                        }
+                    }
                 }
             }
         }

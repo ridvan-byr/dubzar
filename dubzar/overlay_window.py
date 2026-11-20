@@ -6,8 +6,7 @@ subtitles on/off switch all apply the moment they change.
 
 import time
 
-from PySide6.QtCore import Qt, QTimer
-from PySide6.QtCore import QRect
+from PySide6.QtCore import QRect, Qt, QTimer, Signal
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
@@ -24,6 +23,8 @@ PAD_X, PAD_Y = 18, 8     # inside the box, around the text (must match the style
 
 
 class OverlayWindow(QWidget):
+    placed = Signal(QRect)   # where the subtitle is now (a null rectangle when it is hidden)
+
     def __init__(self, settings: Settings):
         super().__init__()
         self._settings = settings
@@ -77,11 +78,13 @@ class OverlayWindow(QWidget):
         if text is None or not self._settings.subtitles_enabled:
             self._label.setText("")
             self.hide()
+            self.placed.emit(QRect())
             return
         if text != self._label.text() or not self.isVisible():
             self._label.setText(text)
             self._place()
             self.show()
+            self.placed.emit(self.geometry())
 
     def _on_setting_changed(self, name: str) -> None:
         self._restyle()
@@ -120,6 +123,8 @@ class OverlayWindow(QWidget):
         room = max(0, screen.height() - self.height() - 2 * margin)
         self.move(screen.x() + (screen.width() - self.width()) // 2,
                   screen.y() + margin + int(self._settings.vertical * room))
+        if self.isVisible():
+            self.placed.emit(self.geometry())
 
 
 def _demo() -> None:

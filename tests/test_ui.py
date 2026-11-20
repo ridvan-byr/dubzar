@@ -408,3 +408,28 @@ def test_mouse_drag_on_the_header_really_moves_the_panel(qapp):
 
     assert (window.view.x(), window.view.y()) == (start[0] + 60, start[1] + 40)
     window.view.hide()
+
+
+def test_panel_no_longer_closes_itself_by_default(qapp):
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 800, 600))
+    wait_until(lambda: window.view.isExposed(), 1.0)
+
+    assert ctl.idleCloseMs == 0
+    time.sleep(0.4)
+    qapp.processEvents()
+    assert window.is_open
+    window.view.hide()
+
+
+def test_close_button_closes_the_panel(qapp):
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 800, 600))
+    wait_until(lambda: window.view.isExposed(), 1.0)
+    point = center_of(window, "closeButton")
+
+    QTest.mouseClick(window.view, Qt.LeftButton, Qt.NoModifier, point)
+
+    assert wait_until(lambda: not window.is_open, 1.0)

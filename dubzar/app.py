@@ -7,7 +7,7 @@ import sys
 import threading
 from typing import Callable
 
-from PySide6.QtCore import QObject, QTimer, Signal, qInstallMessageHandler
+from PySide6.QtCore import QObject, QRect, QTimer, Signal, qInstallMessageHandler
 from PySide6.QtWidgets import QApplication
 
 from dubzar.asr import Transcriber
@@ -122,9 +122,19 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     def veil_game_screen(panel_screen) -> None:
         """Like the Steam overlay: when the panel is over the game, the game's screen is dimmed behind it."""
         if panel_screen == target_screen("auto"):
+            backdrop.set_clear_rect(QRect())
             backdrop.show_on(panel_screen)
         else:
             backdrop.dismiss()
+
+    def bring_to_front() -> None:
+        """Windows that do not take focus are not brought forward by show(): without this the panel stayed under the
+        veil (measured: subtitle > veil > panel). Wanted, from the top: panel, subtitle preview, veil."""
+        overlay.raise_()
+        panel.raise_to_top()
+
+    # the veil leaves the subtitle preview clear, so its colours are judged over the real picture
+    overlay.placed.connect(lambda rect: backdrop.set_clear_rect(rect) if backdrop.isVisible() else None)
 
     def toggle_panel() -> None:
         if panel.is_open:
@@ -134,6 +144,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         veil_game_screen(panel_screen)      # before the preview and the panel, so they stay above the veil
         overlay.set_preview(PREVIEW_TEXT)  # so the user sees what they are adjusting
         panel.show(panel_screen)
+        bring_to_front()
 
     def follow_panel_screen_setting(name: str) -> None:
         """Picking another screen in the panel moves the open panel there at once (it used to wait for the next open)."""
@@ -142,8 +153,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         panel_screen = target_screen(settings.panel_screen)
         veil_game_screen(panel_screen)
         panel.move_to(panel_screen)
-        overlay.raise_()
-        panel.view.raise_()
+        bring_to_front()
 
     settings.on_change(follow_panel_screen_setting)
 

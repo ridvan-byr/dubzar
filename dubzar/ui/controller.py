@@ -30,7 +30,7 @@ class SettingsController(QObject):
     activity = Signal()  # the user did something in the panel: keeps it from closing itself
 
     def __init__(self, settings: Settings, screen_count: int = 1, animations: bool = True,
-                 status: str = "Dinleniyor", dubbing_available: bool = False, idle_close_ms: int = 8000):
+                 status: str = "Dinleniyor", dubbing_available: bool = False, idle_close_ms: int = 0):  # 0 = the panel stays until it is closed
         super().__init__()
         self._s = settings
         self._screen_count = screen_count

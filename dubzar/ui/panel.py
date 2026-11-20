@@ -60,6 +60,10 @@ class PanelWindow:
         self.view.show()
         self._root.setProperty("open", True)
 
+    def raise_to_top(self) -> None:
+        """A window that does not take focus is not brought forward by show(): without this it stays under the veil."""
+        self.view.raise_()
+
     def move_to(self, screen: QRect) -> None:
         """Put the panel at its usual place on ``screen``, also while it is open (the screen setting changed)."""
         self.view.setPosition(screen.x() + screen.width() - self.view.width() - EDGE,
