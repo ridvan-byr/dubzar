@@ -1,6 +1,7 @@
 """Game audio capture (WASAPI loopback) and the live matching loop."""
 
 import logging
+import queue
 import threading
 from typing import Callable, Iterable
 
@@ -21,6 +22,15 @@ def bytes_to_mono_16k(data: bytes, channels: int, sr: int) -> np.ndarray:
     """Convert interleaved int16 PCM bytes to mono float32 at 16 kHz."""
     pcm = np.frombuffer(data, dtype=np.int16).reshape(-1, channels)
     return to_mono_16k(pcm.astype(np.float32) / 32768.0, sr)
+
+
+def queue_chunks(q: "queue.Queue[np.ndarray | None]") -> Iterable[np.ndarray]:
+    """Yield chunks from ``q`` until a ``None`` sentinel arrives (checked with ``is``)."""
+    while True:
+        item = q.get()
+        if item is None:
+            return
+        yield item
 
 
 def run_matching(chunks: Iterable[np.ndarray], matcher: Matcher, store: IndexStore,

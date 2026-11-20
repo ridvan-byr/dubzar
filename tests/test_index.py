@@ -78,3 +78,31 @@ def test_matcher_works_on_top_of_the_store(store):
     result = matcher.feed(LINES["B"][: int(0.3 * SR)])
 
     assert result is not None and result.line_id == "B"
+
+
+def test_count_lines(store):
+    assert store.count_lines() == 0
+
+    store.add_line(Cue("a1", "x", "y", 1.0), [(10, 1)], "d1")
+    store.add_line(Cue("a2", "x", "y", 1.0), [(10, 1)], "d1")  # duplicate, ignored
+
+    assert store.count_lines() == 1
+
+
+def test_store_can_be_used_from_another_thread(store):
+    # `run` opens the index on the main thread but matches on a worker thread.
+    import threading
+
+    store.add_line(Cue("a1", "x", "y", 1.0), [(10, 1)], "d1")
+    seen: list = []
+
+    def worker():
+        seen.append(store.lookup([10]))
+        seen.append(store.get_cue("a1"))
+
+    t = threading.Thread(target=worker)
+    t.start()
+    t.join()
+
+    assert seen[0] == [("a1", 1, 0)]
+    assert seen[1] is not None
