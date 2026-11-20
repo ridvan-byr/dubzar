@@ -69,6 +69,10 @@ Zamanlama kuralları: çeviri orijinal süreye sığar; gerekirse ses en fazla %
 - **Ses profili çıkar:** Her karakter için orijinal sesten cinsiyet, yaklaşık yaş, perde (pitch), tını ve konuşma hızı çıkarılır. Profil, uygun Türkçe sese eşlenir (ücretsiz/ticari lisanslı bir ses havuzundan seçim, ya da lisansı uygunsa ses uyarlama).
 - **Tutarlılık:** Bir karakter oyun boyunca hep aynı sesle konuşur. Aynı karakter bölümler arasında farklı sesle çıkmaz.
 - **Ton ve duygu:** Her replik için duygu/ton (fısıltı, bağırış, alay, üzüntü) orijinal sesin enerji ve perdesinden ve bağlamdan (LLM etiketi) çıkarılır, TTS'e ipucu olarak verilir.
+  - Duygu kaynağı: ses özellikleri (perde, şiddet, hız, duraklama), duygu tanıma modeli ve çeviri sırasında bağlamdan LLM etiketi.
+  - Türkçe sese aktarma yolları (hangisinin kullanılacağı karşılaştırmayla belli olur): (1) duygu kontrollü TTS, (2) orijinal repliği referans/stil örneği olarak veren TTS, (3) nötr Türkçe üretip orijinalin perde ve şiddet eğrisini uygulamak (yedek).
+  - **Beklenti sınırı:** Hafif ve orta duygu (kızgın, üzgün, heyecanlı) hedeflenir. Ağlama, çığlık, nefes nefese konuşma gibi uç durumlar zayıf kalabilir; bunlarda kalite kapısı devreye girip yalnızca altyazı gösterilir. "Aktör kalitesi" sözü verilmez.
+  - **Ön koşul, Aşama 2 başlamadan önce — TTS motor karşılaştırması:** Aynı yaklaşık 20 replik (nötr, öfkeli, fısıltı, üzgün) adaylarla seslendirilir. Ölçütler: Türkçe doğallık, duygu aktarımı, karakter sesi tutarlılığı, hız, ticari lisans (her aday için doğrulanır, bkz. `docs/LICENSES.md`). Sonuç dinlenip motor seçilir, karşılaştırma notları `docs/TTS_BAKEOFF.md` içine yazılır. Sonuç duyulmadan duygulu dublaj taahhüdü verilmez.
 - **Kalite kapısı:** Üretilen klip süre, anlaşılırlık ve ses benzerliği kontrolünden geçer. Kalite eşiğinin altında kalanlar yeniden üretilir; olmazsa o replik için yalnızca altyazı gösterilir (saçma dublaj yerine altyazı).
 - Gürültü/efekt: Efektli sesler (robot, canavar, telsiz) için orijinaldeki efekt zinciri kabaca taklit edilir; yapılamıyorsa o replik altyazıya düşer.
 
