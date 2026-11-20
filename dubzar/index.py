@@ -68,6 +68,13 @@ class IndexStore:
                 )
         return True
 
+    def remove_line(self, line_id: str) -> bool:
+        """Delete a line with its fingerprints; its audio digest becomes free to index again."""
+        with self._lock, self._db:
+            self._db.execute("DELETE FROM hashes WHERE line_id = ?", (line_id,))
+            removed = self._db.execute("DELETE FROM lines WHERE line_id = ?", (line_id,)).rowcount
+        return removed > 0
+
     def add_skipped(self, digest: str) -> None:
         """Remember audio that had no usable speech so a re-run does not transcribe it again."""
         with self._lock, self._db:
