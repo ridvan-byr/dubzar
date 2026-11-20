@@ -6,6 +6,8 @@ import queue
 import threading
 from typing import Callable
 
+import numpy as np
+
 from dubzar.asr import Transcriber
 from dubzar.fingerprint import Matcher, fingerprint
 from dubzar.index import IndexStore
@@ -16,6 +18,9 @@ from dubzar.translate import Translator
 log = logging.getLogger(__name__)
 
 MATCHER_WINDOW_S = 3.0    # how much recent audio the streaming matcher keeps (Matcher's own default)
+LEVEL_REPORT_S = 2.0       # how often the audio level is logged
+SILENT_WARNING_S = 10.0    # no audio at all for this long: tell the user
+AUDIO_FLOOR = 1e-3         # peak below this (about -60 dB) counts as silence
 MAX_BACKLOG = 3          # segments waiting for recognition; older ones are stale and dropped
 MIN_AUDIO_S = 0.25        # shorter than this is a click or a breath, not a line
 LEARN_MIN_S = 0.8         # only learn lines long enough to be recognised again reliably
@@ -49,21 +54,31 @@ class LiveEngine:
         hashes = fingerprint(samples)
         known = self._known_cue(samples) if hashes else None
         if known is not None:
+            log.info("parça %.1f sn: indekste bulundu → %s", duration, known.text_tr)
             self._on_cue(known)
             return known
 
         transcription = self._transcriber.transcribe(samples)
-        if transcription is None or transcription.confidence < self._min_confidence:
+        if transcription is None:
+            log.info("parça %.1f sn: konuşma bulunamadı (sessizlik, müzik ya da İngilizce dışı)", duration)
+            return None
+        if transcription.confidence < self._min_confidence:
+            log.info("parça %.1f sn: '%s' güven %.2f < %.2f → gösterilmedi",
+                     duration, transcription.text, transcription.confidence, self._min_confidence)
             return None
         text_tr = self._translator.translate(transcription.text).strip()
         if not text_tr:
+            log.info("parça %.1f sn: '%s' çevirisi boş → gösterilmedi", duration, transcription.text)
             return None
 
         digest = hashlib.sha256(samples.tobytes()).hexdigest()
         cue = Cue("live/" + digest[:12], transcription.text, text_tr, duration)
         self._on_cue(cue)
-        if hashes and LEARN_MIN_S <= duration <= LEARN_MAX_S:
+        learned = bool(hashes) and LEARN_MIN_S <= duration <= LEARN_MAX_S
+        if learned:
             self._store.add_line(cue, hashes, digest)
+        log.info("parça %.1f sn: '%s' → '%s' gösterildi (güven %.2f)%s", duration, transcription.text, text_tr,
+                 transcription.confidence, ", öğrenildi" if learned else "")
         return cue
 
     def _known_cue(self, samples) -> Cue | None:
@@ -94,11 +109,17 @@ class LivePipeline:
         self._instant_at: dict[str, float] = {}    # when the matcher last showed each line
         self._segments: queue.Queue = queue.Queue()
         self._current: Segment | None = None
+        self._level_peak = 0.0           # loudest sample since the last level report
+        self._heard_audio = False        # has anything above the noise floor arrived yet?
+        self._next_report = LEVEL_REPORT_S
+        self._warned_silent = False
+        self._segment_count = 0
         self._worker = threading.Thread(target=self._work, name="dubzar-live", daemon=True)
         self._worker.start()
 
     def feed(self, chunk) -> None:
         self._elapsed += len(chunk) / SR
+        self._watch_level(chunk)
         result = self._matcher.feed(chunk)
         if result is not None:
             self._matcher.reset()
@@ -106,6 +127,7 @@ class LivePipeline:
             if cue is not None and self._elapsed >= self._quiet_until.get(cue.line_id, 0.0):
                 self._quiet_until[cue.line_id] = self._elapsed + cue.duration_s
                 self._instant_at[cue.line_id] = self._elapsed
+                log.info("bilinen replik anında gösterildi → %s", cue.text_tr)
                 self._on_cue(cue)
         for segment in self._segmenter.feed(chunk):
             self._enqueue(segment)
@@ -117,7 +139,25 @@ class LivePipeline:
         self._segments.put(None)
         self._worker.join(timeout)
 
+    def _watch_level(self, chunk) -> None:
+        """Log the audio level, and say so (once) if no game audio arrives at all."""
+        if len(chunk):
+            self._level_peak = max(self._level_peak, float(np.max(np.abs(chunk))))
+        if self._level_peak > AUDIO_FLOOR:
+            self._heard_audio = True
+        if self._elapsed >= self._next_report:
+            db = 20 * np.log10(self._level_peak + 1e-9)
+            log.info("ses seviyesi (son %.0f sn): tepe %.0f dB; şimdiye dek %d parça", LEVEL_REPORT_S, db, self._segment_count)
+            self._level_peak = 0.0
+            self._next_report += LEVEL_REPORT_S
+        if not self._heard_audio and not self._warned_silent and self._elapsed >= SILENT_WARNING_S:
+            self._warned_silent = True
+            log.warning("Uyarı: %.0f saniyedir oyun sesi alınmıyor. Oyunun sesi Windows'un varsayılan çıkış "
+                        "cihazından (hoparlör/kulaklık) mi çalıyor? Cihaz seçimini kontrol edin.", SILENT_WARNING_S)
+
     def _enqueue(self, segment: Segment) -> None:
+        self._segment_count += 1
+        log.info("konuşma parçası yakalandı: %.1f sn", len(segment.samples) / SR)
         while self._segments.qsize() >= MAX_BACKLOG:  # recognition is behind: stale lines are not worth showing
             try:
                 self._segments.get_nowait()

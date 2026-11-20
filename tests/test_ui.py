@@ -242,3 +242,27 @@ def test_status_change_notifies_the_panel(qapp):
     ctl.set_scan_progress(10, 100)
 
     assert seen == [1]
+
+
+# --- the panel closes itself so it never stays on the screen by accident ---------------------------
+def test_panel_closes_itself_after_a_period_without_interaction(qapp):
+    ctl = SettingsController(Settings(), animations=False, idle_close_ms=120)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 1280, 720))
+    assert window.is_open
+
+    assert wait_until(lambda: not window.is_open, 3.0)
+    assert wait_until(lambda: not window.view.isVisible(), 3.0)
+
+
+def test_using_the_panel_keeps_it_open(qapp):
+    ctl = SettingsController(Settings(), animations=False, idle_close_ms=250)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 1280, 720))
+
+    for size in range(30, 40):  # ~0.6 s of dragging a slider: far longer than the idle limit
+        ctl.setFontSize(size)
+        wait_until(lambda: False, 0.06)
+    assert window.is_open
+
+    assert wait_until(lambda: not window.is_open, 3.0)  # and once the user stops, it still closes

@@ -208,6 +208,18 @@ Item {
         }
     }
 
+    Timer {
+        id: idle
+        interval: ctl.idleCloseMs
+        running: root.open
+        onTriggered: { if (hover.hovered) idle.restart(); else ctl.close() }
+    }
+
+    Connections {
+        target: ctl
+        function onActivity() { idle.restart() }
+    }
+
     Item {
         id: card
         x: 16
@@ -223,6 +235,8 @@ Item {
             }
         }
         Behavior on y { NumberAnimation { duration: dz.ms; easing.type: Easing.OutCubic } }
+
+        HoverHandler { id: hover }
 
         Rectangle {
             anchors.fill: parent

@@ -6,6 +6,7 @@
 
 import argparse
 import json
+import logging
 import sys
 from pathlib import Path
 from typing import Callable, Iterable
@@ -93,8 +94,15 @@ def _settings_for_run(args) -> Settings:
     return settings
 
 
+def _configure_logging(debug: bool) -> None:
+    """--debug prints what the live mode does (levels, segments, why a subtitle was or was not shown)."""
+    logging.basicConfig(level=logging.INFO if debug else logging.WARNING, format="%(asctime)s %(message)s",
+                        datefmt="%H:%M:%S", force=True)
+
+
 def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[Cue], None] | None,
              transcriber: Transcriber | None, translator: Translator | None) -> int:
+    _configure_logging(args.debug)
     try:
         settings = _settings_for_run(args)
         glossary = _load_glossary(args.glossary)
@@ -157,6 +165,8 @@ def build_parser() -> argparse.ArgumentParser:
     run = sub.add_parser("run", help="oyun sesini dinle ve Türkçe altyazıyı canlı göster; indeks oynadıkça büyür")
     run.add_argument("--index", required=True, help="indeks dosyası (yoksa oluşturulur)")
     model_flags(run, "tiny", "cpu")
+    run.add_argument("--debug", action="store_true",
+                     help="ne olduğunu yaz: ses seviyesi, yakalanan parçalar, tanıma sonucu, altyazı neden gösterilmedi")
     run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
     run.add_argument("--game-exe", help="oyunun süreç adı (örn. GTA5.exe): çalışırken arka plan taraması bekler")
     run.add_argument("--scan-model", default="small", help="arka plan taraması için Whisper modeli (varsayılan: small)")

@@ -234,3 +234,69 @@ def test_backlog_is_bounded_when_recognition_is_slower_than_speech(store):
     pl.close()
 
     assert len(handled) <= MAX_BACKLOG + 1  # stale lines are dropped, not shown ten seconds late
+
+
+# --- diagnostics: the user must be able to see WHY no subtitle appeared ---------------------------
+import logging  # noqa: E402
+
+
+def test_engine_explains_a_doubtful_recognition(store, caplog):
+    doubtful = FakeTranscriber(result=Transcription("hello", "en", 1.5, confidence=0.3))
+    live, cues = engine(store, doubtful)
+
+    with caplog.at_level(logging.INFO, logger="dubzar.live"):
+        live.process(segment(1, 1.5))
+
+    text = caplog.text
+    assert "hello" in text and "0.30" in text and "gösterilmedi" in text
+
+
+def test_engine_explains_when_nothing_was_recognised(store, caplog):
+    live, cues = engine(store, FakeTranscriber(result=None))
+
+    with caplog.at_level(logging.INFO, logger="dubzar.live"):
+        live.process(segment(7, 3.0))
+
+    assert "konuşma bulunamadı" in caplog.text
+
+
+def test_engine_logs_what_it_showed_and_learned(store, caplog):
+    live, cues = engine(store)
+
+    with caplog.at_level(logging.INFO, logger="dubzar.live"):
+        live.process(segment(1, 1.5))
+        live.process(segment(1, 1.5))
+
+    assert "TR:hello" in caplog.text and "öğrenildi" in caplog.text and "indekste" in caplog.text
+
+
+def test_pipeline_warns_once_when_no_game_audio_arrives(store, caplog):
+    pl, cues = pipeline(store)
+
+    with caplog.at_level(logging.WARNING, logger="dubzar.live"):
+        play(pl, silence(12.0))  # twelve seconds of dead silence from the capture device
+        play(pl, silence(5.0))
+    pl.close()
+
+    warnings = [r for r in caplog.records if r.levelno == logging.WARNING and "ses" in r.getMessage()]
+    assert len(warnings) == 1  # said once, not every chunk
+
+
+def test_pipeline_does_not_warn_when_audio_is_arriving(store, caplog):
+    pl, cues = pipeline(store)
+
+    with caplog.at_level(logging.WARNING, logger="dubzar.live"):
+        play(pl, np.concatenate([synth_line(1, 12.0), silence(1.0)]))
+    pl.close()
+
+    assert not [r for r in caplog.records if r.levelno == logging.WARNING and "alınmıyor" in r.getMessage()]
+
+
+def test_pipeline_reports_the_audio_level_when_debugging(store, caplog):
+    pl, cues = pipeline(store)
+
+    with caplog.at_level(logging.INFO, logger="dubzar.live"):
+        play(pl, np.concatenate([synth_line(1, 4.5), silence(0.5)]))
+    pl.close()
+
+    assert "ses seviyesi" in caplog.text
