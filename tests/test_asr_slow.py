@@ -15,7 +15,7 @@ pytestmark = pytest.mark.slow
 _SPEAK = (
     "Add-Type -AssemblyName System.Speech; "
     "$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; "
-    "$s.SetOutputToWaveFile($args[0]); $s.Speak('Hello, this is a test.'); $s.Dispose()"
+    "$s.SetOutputToWaveFile('{path}'); $s.Speak('Hello, this is a test.'); $s.Dispose()"
 )
 
 
@@ -23,7 +23,8 @@ _SPEAK = (
 def test_real_model_transcribes_english_speech(tmp_path):
     pytest.importorskip("faster_whisper")
     wav = tmp_path / "speech.wav"
-    subprocess.run(["powershell", "-NoProfile", "-Command", _SPEAK, str(wav)], check=True)
+    script = _SPEAK.format(path=wav)
+    subprocess.run(["powershell", "-NoProfile", "-Command", script], check=True)
     sr, data = wavfile.read(wav)
     samples = to_mono_16k(data.astype("float32") / 32768.0, sr)
 
