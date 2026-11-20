@@ -1,6 +1,10 @@
+import logging
+import os
 import re
+import shutil
 import threading
 import warnings
+from pathlib import Path
 from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
@@ -8,9 +12,13 @@ from dubzar.textsplit import split_pieces
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
 # The repository also holds TensorFlow/Flax copies of the weights; we only ever need the PyTorch ones.
-TRANSLATION_VERSION = "2"  # bump when the way text is prepared or translated changes: remembered lines are then redone
+TRANSLATION_VERSION = "3"  # bump when the way text is prepared or translated changes: remembered lines are then redone
 NUM_BEAMS = 4  # Opus-MT default; fewer beams are faster but a little less accurate
 UNNEEDED_FILES = ["tf_model.h5", "*.h5", "flax_model*", "*.msgpack", "*.zip", "*.md"]
+
+
+log = logging.getLogger(__name__)
+CT2_FOLDER_NAME = "opus-mt-tc-big-en-tr-int8-v1"
 
 
 class Translator(Protocol):
@@ -19,8 +27,53 @@ class Translator(Protocol):
         of the same scene for translators that can use it."""
 
 
+def ct2_model_dir() -> Path:
+    """Where the converted (int8) model lives: next to the app's other data, not in the Hugging Face cache."""
+    base = os.environ.get("LOCALAPPDATA") or str(Path.home() / ".local" / "share")
+    return Path(base) / "Dubzar" / "models" / CT2_FOLDER_NAME
+
+
 def _make_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
-    """The real Opus-MT translation function (text -> text); a seam so tests need no model."""
+    """The real Opus-MT translation function (text -> text); a seam so tests need no model.
+
+    CTranslate2 with int8 weights is about six times faster and needs a seventh of the memory of the plain PyTorch
+    model, with the same translations (measured: experiments/ct2_benchmark.py). If it cannot start for any reason
+    other than the model being absent, the PyTorch model is used instead."""
+    try:
+        return _make_ct2_pipeline(local_only, threads)
+    except (OSError, ValueError):
+        raise                      # the model is not on this computer: the caller explains how to get it
+    except Exception as exc:
+        log.warning("CTranslate2 çeviri motoru başlatılamadı (%s); PyTorch kullanılıyor (daha yavaş)", exc)
+        return _make_torch_pipeline(local_only, threads)
+
+
+def _make_ct2_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
+    import ctranslate2
+    from huggingface_hub import snapshot_download
+    from transformers import AutoTokenizer
+
+    folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
+    tokenizer = AutoTokenizer.from_pretrained(folder)
+    model_dir = ct2_model_dir()
+    if not (model_dir / "model.bin").exists():
+        log.info("çeviri modeli hızlı biçime çevriliyor (yalnızca bir kez, birkaç saniye)")
+        model_dir.parent.mkdir(parents=True, exist_ok=True)
+        partial = model_dir.with_name(model_dir.name + ".partial")
+        shutil.rmtree(partial, ignore_errors=True)
+        ctranslate2.converters.TransformersConverter(folder).convert(str(partial), quantization="int8")
+        partial.rename(model_dir)  # only a finished conversion ever gets the real name
+    translator = ctranslate2.Translator(str(model_dir), device="cpu", compute_type="int8", intra_threads=threads)
+
+    def translate(text: str) -> str:
+        source = tokenizer.convert_ids_to_tokens(tokenizer.encode(text, truncation=True, max_length=256))
+        best = translator.translate_batch([source], beam_size=NUM_BEAMS, max_decoding_length=256)[0].hypotheses[0]
+        return tokenizer.decode(tokenizer.convert_tokens_to_ids(best), skip_special_tokens=True)
+
+    return translate
+
+
+def _make_torch_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
     import torch
     from huggingface_hub import snapshot_download
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
