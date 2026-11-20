@@ -1,4 +1,5 @@
 import re
+import threading
 from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
@@ -71,3 +72,15 @@ class OpusMtTranslator:
             if count:
                 restore[placeholder] = self._glossary[term]
         return text, restore
+
+
+class ThreadSafeTranslator:
+    """Lets the live path and the background scan share one translator (and one loaded model)."""
+
+    def __init__(self, inner: Translator):
+        self._inner = inner
+        self._lock = threading.Lock()
+
+    def translate(self, text: str, context: Sequence[str] = ()) -> str:
+        with self._lock:
+            return self._inner.translate(text, context)

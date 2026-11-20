@@ -92,3 +92,30 @@ def test_translator_asks_for_local_files_only_unless_downloads_are_allowed(monke
     OpusMtTranslator(allow_download=True).load()
 
     assert seen == [True, False]
+
+
+def test_thread_safe_translator_serialises_calls_from_several_threads():
+    import threading
+    import time
+
+    from dubzar.translate import ThreadSafeTranslator
+
+    running = {"now": 0, "max": 0}
+
+    class Slow:
+        def translate(self, text, context=()):
+            running["now"] += 1
+            running["max"] = max(running["max"], running["now"])
+            time.sleep(0.02)
+            running["now"] -= 1
+            return text.upper()
+
+    shared = ThreadSafeTranslator(Slow())
+    threads = [threading.Thread(target=shared.translate, args=("a",)) for _ in range(6)]
+    for th in threads:
+        th.start()
+    for th in threads:
+        th.join()
+
+    assert running["max"] == 1  # the live path and the background scan never run the model at the same time
+    assert shared.translate("x") == "X"
