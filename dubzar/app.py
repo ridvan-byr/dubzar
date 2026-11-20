@@ -119,15 +119,33 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     panel.on_closed(lambda: overlay.set_preview(None))
     panel.on_closed(backdrop.dismiss)
 
+    def veil_game_screen(panel_screen) -> None:
+        """Like the Steam overlay: when the panel is over the game, the game's screen is dimmed behind it."""
+        if panel_screen == target_screen("auto"):
+            backdrop.show_on(panel_screen)
+        else:
+            backdrop.dismiss()
+
     def toggle_panel() -> None:
         if panel.is_open:
             panel.hide()
             return
         panel_screen = target_screen(settings.panel_screen)
-        if panel_screen == target_screen("auto"):  # the panel is over the game: veil it like Steam's overlay does
-            backdrop.show_on(panel_screen)         # (before the preview and the panel, so they stay above it)
+        veil_game_screen(panel_screen)      # before the preview and the panel, so they stay above the veil
         overlay.set_preview(PREVIEW_TEXT)  # so the user sees what they are adjusting
         panel.show(panel_screen)
+
+    def follow_panel_screen_setting(name: str) -> None:
+        """Picking another screen in the panel moves the open panel there at once (it used to wait for the next open)."""
+        if name != "panel_screen" or not panel.is_open:
+            return
+        panel_screen = target_screen(settings.panel_screen)
+        veil_game_screen(panel_screen)
+        panel.move_to(panel_screen)
+        overlay.raise_()
+        panel.view.raise_()
+
+    settings.on_change(follow_panel_screen_setting)
 
     bridge.toggle_panel.connect(toggle_panel)
 

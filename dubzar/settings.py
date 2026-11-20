@@ -78,7 +78,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "background_color": ("#000000", _hex_color),
     "background_opacity": (60, _int_between(0, 100)),  # percent
     "screen": ("auto", _screen),
-    "panel_screen": ("other", _panel_screen),  # where the settings panel opens; "other" = not the game's
+    "panel_screen": ("auto", _panel_screen),  # where the settings panel opens; "auto" = the game's screen
     "hotkey": ("Ctrl+Shift+D", _hotkey),
     "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }

@@ -9,7 +9,8 @@ os.environ.setdefault("QT_QPA_FONTDIR", "C:/Windows/Fonts")
 
 pytest.importorskip("PySide6.QtQuick")
 
-from PySide6.QtCore import QPointF, QRect, Qt  # noqa: E402
+from PySide6.QtCore import QPoint, QPointF, QRect, Qt  # noqa: E402
+from PySide6.QtGui import QGuiApplication  # noqa: E402
 from PySide6.QtQuick import QQuickItem  # noqa: E402
 from PySide6.QtTest import QTest  # noqa: E402
 from PySide6.QtWidgets import QApplication  # noqa: E402
@@ -291,7 +292,7 @@ def test_showing_the_panel_never_takes_keyboard_focus_from_the_game(qapp):
     assert window.view.flags() & Qt.WindowDoesNotAcceptFocus
 
 
-def test_panel_screen_defaults_to_the_other_screen_and_cycles(qapp):
+def test_panel_follows_the_game_by_default_and_cycles_through_the_screens(qapp):
     settings = Settings()
     ctl = SettingsController(settings, screen_count=3)
 
@@ -300,7 +301,16 @@ def test_panel_screen_defaults_to_the_other_screen_and_cycles(qapp):
         ctl.cyclePanelScreen()
         visited.append(settings.panel_screen)
 
-    assert visited == ["other", "auto", "primary", "2", "3", "other"]
+    assert visited == ["auto", "primary", "2", "3", "other", "auto"]
+
+
+def test_single_screen_has_no_other_screen_to_cycle_to(qapp):
+    settings = Settings()
+    ctl = SettingsController(settings, screen_count=1)
+
+    ctl.cyclePanelScreen(); ctl.cyclePanelScreen()
+
+    assert settings.panel_screen == "auto"
 
 
 def test_panel_screen_rejects_nonsense():
@@ -308,3 +318,93 @@ def test_panel_screen_rejects_nonsense():
     with pytest.raises(ValueError):
         Settings(panel_screen="left")
     assert Settings(panel_screen="other").panel_screen == "other"
+
+
+# --- the panel can be dragged by its header, and follows the screen setting while open --------------------------
+class FakeCursor:
+    def __init__(self, x, y):
+        self.pos_ = (x, y)
+
+    def __call__(self):
+        from PySide6.QtCore import QPoint
+        return QPoint(*self.pos_)
+
+
+def test_dragging_the_header_moves_the_panel_with_the_cursor(qapp):
+    cursor = FakeCursor(500, 500)
+    ctl = SettingsController(Settings())
+    window = PanelWindow(ctl, cursor_pos=cursor)
+    window.view.setPosition(100, 100)
+
+    ctl.dragStart()
+    cursor.pos_ = (560, 540)
+    ctl.dragMove()
+
+    assert (window.view.x(), window.view.y()) == (160, 140)
+    cursor.pos_ = (500, 500)
+    ctl.dragMove()
+    assert (window.view.x(), window.view.y()) == (100, 100)       # relative to where the grab began, not cumulative
+
+
+def test_dragging_cannot_lose_the_panel_off_screen(qapp):
+    from PySide6.QtGui import QGuiApplication
+
+    cursor = FakeCursor(500, 500)
+    ctl = SettingsController(Settings())
+    window = PanelWindow(ctl, cursor_pos=cursor)
+    window.view.setPosition(100, 100)
+    desktop = QRect()
+    for screen in QGuiApplication.screens():
+        desktop = desktop.united(screen.geometry())
+
+    ctl.dragStart()
+    cursor.pos_ = (500 + 100000, 500 + 100000)
+    ctl.dragMove()
+
+    assert window.view.x() < desktop.right() and window.view.y() < desktop.bottom()
+    cursor.pos_ = (500 - 100000, 500 - 100000)
+    ctl.dragMove()
+    assert window.view.x() + window.view.width() > desktop.left() and window.view.y() >= desktop.top() - 1
+
+
+def test_dragging_counts_as_activity_so_the_panel_does_not_close_itself(qapp):
+    ctl = SettingsController(Settings())
+    PanelWindow(ctl, cursor_pos=FakeCursor(0, 0))
+    seen = []
+    ctl.activity.connect(lambda: seen.append(1))
+
+    ctl.dragStart(); ctl.dragMove()
+
+    assert seen
+
+
+def test_panel_moves_to_another_screen_while_open(qapp):
+    ctl = SettingsController(Settings())
+    window = PanelWindow(ctl)
+    first, second = QRect(0, 0, 1000, 800), QRect(1000, 0, 1200, 900)
+
+    window.show(first)
+    window.move_to(second)
+
+    assert second.contains(window.view.x(), window.view.y())
+
+
+def test_mouse_drag_on_the_header_really_moves_the_panel(qapp):
+    """End to end: real mouse events on the QML header handle, not a direct call into the controller."""
+    cursor = FakeCursor(700, 300)
+    ctl = SettingsController(Settings(), animations=False)
+    window = PanelWindow(ctl, cursor_pos=cursor)
+    screen = QGuiApplication.primaryScreen().geometry()   # the drag is kept on the desktop, so use the real one
+    window.show(screen)
+    wait_until(lambda: window.view.isExposed(), 1.0)
+    window.view.setPosition(screen.x() + 100, screen.y() + 50)
+    start = (window.view.x(), window.view.y())
+    handle = center_of(window, "dragHandle")
+
+    QTest.mousePress(window.view, Qt.LeftButton, Qt.NoModifier, handle)
+    cursor.pos_ = (760, 340)
+    QTest.mouseMove(window.view, handle + QPoint(30, 20))
+    QTest.mouseRelease(window.view, Qt.LeftButton, Qt.NoModifier, handle + QPoint(30, 20))
+
+    assert (window.view.x(), window.view.y()) == (start[0] + 60, start[1] + 40)
+    window.view.hide()

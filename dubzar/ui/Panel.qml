@@ -250,6 +250,17 @@ Item {
             focus: root.open
             Keys.onEscapePressed: ctl.close()
 
+            MouseArea {  // the header is the handle: drag it to move the panel
+                objectName: "dragHandle"
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                height: 62
+                cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
+                onPressed: ctl.dragStart()
+                onPositionChanged: if (pressed) ctl.dragMove()
+            }
+
             ColumnLayout {
                 id: col
                 x: 16

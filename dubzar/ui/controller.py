@@ -25,6 +25,8 @@ class SettingsController(QObject):
 
     changed = Signal()
     closeRequested = Signal()
+    dragStarted = Signal()   # the user grabbed the panel's header
+    dragMoved = Signal()     # ... and moved the cursor
     activity = Signal()  # the user did something in the panel: keeps it from closing itself
 
     def __init__(self, settings: Settings, screen_count: int = 1, animations: bool = True,
@@ -168,10 +170,22 @@ class SettingsController(QObject):
         self.activity.emit()
 
     @Slot()
+    def dragStart(self) -> None:
+        self.dragStarted.emit()
+        self.activity.emit()
+
+    @Slot()
+    def dragMove(self) -> None:
+        self.dragMoved.emit()
+        self.activity.emit()
+
+    @Slot()
     def cyclePanelScreen(self) -> None:
-        """other -> auto -> primary -> 2 -> ... -> other, limited to the screens that exist."""
-        order = ["other", "auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
-        current = self._s.panel_screen if self._s.panel_screen in order else "other"
+        """auto -> primary -> 2 -> ... -> other -> auto, limited to the screens that exist."""
+        order = ["auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
+        if self._screen_count > 1:
+            order.append("other")   # "a screen the game is not on" means nothing with a single screen
+        current = self._s.panel_screen if self._s.panel_screen in order else "auto"
         self._s.panel_screen = order[(order.index(current) + 1) % len(order)]
         self.activity.emit()
 
