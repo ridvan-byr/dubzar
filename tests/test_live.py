@@ -69,6 +69,14 @@ def test_low_confidence_is_neither_shown_nor_learned(store):
     assert cues == [] and store.count_lines() == 0
 
 
+def test_middling_confidence_is_shown_but_not_learned(store):
+    middling = FakeTranscriber(result=Transcription("hello", "en", 3.0, confidence=0.65))
+    live, cues = engine(store, middling)
+
+    assert live.process(segment(1, 3.0)) is not None and len(cues) == 1
+    assert store.count_lines() == 0  # a shaky transcript must not become a permanent fingerprint
+
+
 def test_confidence_at_the_threshold_is_accepted(store):
     ok = FakeTranscriber(result=Transcription("hello", "en", 1.5, confidence=0.6))
     live, cues = engine(store, ok, min_confidence=0.6)
@@ -76,7 +84,7 @@ def test_confidence_at_the_threshold_is_accepted(store):
     assert live.process(segment(1, 1.5)) is not None
 
 
-@pytest.mark.parametrize("seconds", [0.5, 13.0])
+@pytest.mark.parametrize("seconds", [0.5, 7.0])
 def test_segment_too_short_or_too_long_is_shown_but_not_learned(store, seconds):
     live, cues = engine(store)
 
@@ -300,3 +308,39 @@ def test_pipeline_reports_the_audio_level_when_debugging(store, caplog):
     pl.close()
 
     assert "ses seviyesi" in caplog.text
+
+
+def test_pipeline_uses_the_segmenter_it_is_given(store):
+    from dubzar.segmenter import SpeechSegmenter
+
+    seen = []
+
+    class Spy(SpeechSegmenter):
+        def feed(self, chunk):
+            seen.append(len(chunk))
+            return super().feed(chunk)
+
+    pipeline = LivePipeline(store, FakeTranscriber(), PrefixTranslator(), lambda cue: None, segmenter=Spy())
+    pipeline.feed(np.zeros(1600, dtype=np.float32))
+    pipeline.close()
+
+    assert seen == [1600]
+
+
+def test_recognition_rests_while_the_screen_source_shows_the_games_subtitles(store):
+    transcriber = FakeTranscriber()
+    live, cues = engine(store, transcriber, skip_recognition=lambda: True)
+
+    assert live.process(segment(1, 3.0)) is None
+    assert transcriber.calls == 0 and cues == []
+
+
+def test_recognition_runs_again_when_the_screen_source_goes_quiet(store):
+    resting = {"on": True}
+    transcriber = FakeTranscriber()
+    live, cues = engine(store, transcriber, skip_recognition=lambda: resting["on"])
+
+    live.process(segment(1, 3.0))
+    resting["on"] = False
+
+    assert live.process(segment(2, 3.0)) is not None and transcriber.calls == 1

@@ -24,7 +24,8 @@ AUDIO_FLOOR = 1e-3         # peak below this (about -60 dB) counts as silence
 MAX_BACKLOG = 3          # segments waiting for recognition; older ones are stale and dropped
 MIN_AUDIO_S = 0.25        # shorter than this is a click or a breath, not a line
 LEARN_MIN_S = 0.8         # only learn lines long enough to be recognised again reliably
-LEARN_MAX_S = 12.05       # longer means the segmenter had to cut it: not a whole line
+LEARN_MAX_S = 6.0         # longer is usually a forced cut with music/ambience mixed in: not a clean line
+LEARN_MIN_CONFIDENCE = 0.75  # a shaky transcript must not become a permanent fingerprint
 
 
 class LiveEngine:
@@ -37,13 +38,15 @@ class LiveEngine:
     """
 
     def __init__(self, store: IndexStore, transcriber: Transcriber, translator: Translator,
-                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6, min_votes: int = 8):
+                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6, min_votes: int = 8,
+                 skip_recognition: Callable[[], bool] = lambda: False):
         self._store = store
         self._transcriber = transcriber
         self._translator = translator
         self._on_cue = on_cue
         self._min_confidence = min_confidence
         self._min_votes = min_votes
+        self._skip_recognition = skip_recognition  # true while the game's own subtitles are being read from the screen
 
     def process(self, segment: Segment) -> Cue | None:
         samples = segment.samples
@@ -58,6 +61,9 @@ class LiveEngine:
             self._on_cue(known)
             return known
 
+        if self._skip_recognition():
+            log.info("parça %.1f sn: ekrandaki altyazı okunuyor, ses tanıma dinleniyor", duration)
+            return None
         transcription = self._transcriber.transcribe(samples)
         if transcription is None:
             log.info("parça %.1f sn: konuşma bulunamadı (sessizlik, müzik ya da İngilizce dışı)", duration)
@@ -74,7 +80,8 @@ class LiveEngine:
         digest = hashlib.sha256(samples.tobytes()).hexdigest()
         cue = Cue("live/" + digest[:12], transcription.text, text_tr, duration)
         self._on_cue(cue)
-        learned = bool(hashes) and LEARN_MIN_S <= duration <= LEARN_MAX_S
+        learned = (bool(hashes) and LEARN_MIN_S <= duration <= LEARN_MAX_S
+                   and transcription.confidence >= LEARN_MIN_CONFIDENCE)
         if learned:
             self._store.add_line(cue, hashes, digest)
         log.info("parça %.1f sn: '%s' → '%s' gösterildi (güven %.2f)%s", duration, transcription.text, text_tr,
@@ -98,12 +105,15 @@ class LivePipeline:
     """
 
     def __init__(self, store: IndexStore, transcriber: Transcriber, translator: Translator,
-                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6):
+                 on_cue: Callable[[Cue], None], min_confidence: float = 0.6,
+                 segmenter: SpeechSegmenter | None = None,
+                 skip_recognition: Callable[[], bool] = lambda: False):
         self._store = store
         self._on_cue = on_cue
         self._matcher = Matcher(store.lookup)
-        self._segmenter = SpeechSegmenter()
-        self._engine = LiveEngine(store, transcriber, translator, self._engine_cue, min_confidence)
+        self._segmenter = segmenter or SpeechSegmenter()
+        self._engine = LiveEngine(store, transcriber, translator, self._engine_cue, min_confidence,
+                                  skip_recognition=skip_recognition)
         self._elapsed = 0.0                    # seconds of audio fed so far
         self._quiet_until: dict[str, float] = {}   # do not re-trigger a line while it is still playing
         self._instant_at: dict[str, float] = {}    # when the matcher last showed each line

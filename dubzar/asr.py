@@ -1,6 +1,8 @@
 import logging
 import math
+import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Callable, Protocol
 
 import numpy as np
@@ -10,6 +12,7 @@ from dubzar.errors import ModelMissingError
 log = logging.getLogger(__name__)
 
 SR = 16000
+LANGUAGE_DOUBT = 0.8   # below this, a guess of another language is not trusted (music and effects fool it)
 
 
 @dataclass(frozen=True)
@@ -23,6 +26,13 @@ class Transcription:
 class Transcriber(Protocol):
     def transcribe(self, samples: np.ndarray) -> Transcription | None:
         """Transcribe 16 kHz mono audio; None when there is no usable speech."""
+
+
+def installed_whisper(size: str) -> str | None:
+    """The folder of a Whisper model the installer put next to the app's data, or None (then the usual cache is used)."""
+    base = os.environ.get("LOCALAPPDATA") or str(Path.home() / ".local" / "share")
+    folder = Path(base) / "Dubzar" / "models" / f"faster-whisper-{size}"
+    return str(folder) if (folder / "model.bin").exists() else None
 
 
 class WhisperTranscriber:
@@ -49,7 +59,7 @@ class WhisperTranscriber:
     def _default_factory(self, device: str) -> Any:
         from faster_whisper import WhisperModel
 
-        return WhisperModel(self._model_size, device=device, local_files_only=not self._allow_download,
+        return WhisperModel(installed_whisper(self._model_size) or self._model_size, device=device, local_files_only=not self._allow_download,
                             cpu_threads=self._cpu_threads)
 
     def _get_model(self) -> Any:
@@ -72,12 +82,17 @@ class WhisperTranscriber:
             ) from exc
 
     def _run(self, samples: np.ndarray) -> tuple[str, str, float]:
-        segments, info = self._get_model().transcribe(
-            np.asarray(samples, dtype=np.float32), vad_filter=True
-        )
+        audio = np.asarray(samples, dtype=np.float32)
+        segments, info = self._get_model().transcribe(audio, vad_filter=True)
+        language = info.language
+        if language != self._source_language and getattr(info, "language_probability", 1.0) < LANGUAGE_DOUBT:
+            # An unsure "Arabic" on a line with music is usually English: read it as English and let the confidence
+            # check decide. A confident other language (a game voiced in Chinese) is still rejected.
+            segments, info = self._get_model().transcribe(audio, vad_filter=True, language=self._source_language)
+            language = self._source_language
         parts = list(segments)
         text = " ".join(s.text.strip() for s in parts).strip()
-        return text, info.language, _confidence(parts)
+        return text, language, _confidence(parts)
 
     def transcribe(self, samples: np.ndarray) -> Transcription | None:
         try:

@@ -14,7 +14,7 @@
 ## Altyazı katmanı ayarları ve panel
 - ~~Altyazı konumunu ayarlama~~ — YAPILDI (panelde mini ekranda sürükle, yön tuşlarıyla da).
 - ~~Hangi ekranda görüneceğini seçme~~ — YAPILDI (`auto` = oyunun ekranı, `primary`, 1, 2, ...).
-- ~~Ayar paneli, kısayolla açılma, ayarların kaydedilmesi~~ — YAPILDI (Ctrl+Shift+D; boyut, renkler, opaklık, altyazı aç/kapat, varsayılana dön).
+- ~~Ayar paneli, kısayolla açılma, ayarların kaydedilmesi~~ — YAPILDI (Ctrl+Alt+D; boyut, renkler, opaklık, altyazı aç/kapat, varsayılana dön).
 - Panelde kısayolu değiştirebilme (şimdilik ayar dosyasından: `%APPDATA%\Dubzar\settings.json`).
 - Yazı tiplerini (DM Sans, Instrument Serif) uygulamayla paketlemek. Şimdi Segoe UI ve Georgia yedekleri kullanılıyor. İndirme izni ve OFL lisans doğrulaması gerekir.
 - "Dublaj" anahtarı dublaj gelene kadar "yakında" olarak soluk; dublaj bitince `dubbing_available=True` yapılacak.

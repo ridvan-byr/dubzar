@@ -211,7 +211,7 @@ Item {
     Timer {
         id: idle
         interval: ctl.idleCloseMs
-        running: root.open
+        running: root.open && ctl.idleCloseMs > 0
         onTriggered: { if (hover.hovered) idle.restart(); else ctl.close() }
     }
 
@@ -250,6 +250,17 @@ Item {
             focus: root.open
             Keys.onEscapePressed: ctl.close()
 
+            MouseArea {  // the header is the handle: drag it to move the panel
+                objectName: "dragHandle"
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                height: 62
+                cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
+                onPressed: ctl.dragStart()
+                onPositionChanged: if (pressed) ctl.dragMove()
+            }
+
             ColumnLayout {
                 id: col
                 x: 16
@@ -271,13 +282,40 @@ Item {
                         Accessible.role: Accessible.Graphic
                         Accessible.name: "Dubzar"
                     }
-                    Rectangle { width: 6; height: 6; radius: 3; color: dz.accent }
-                    Lbl { text: ctl.status; Layout.fillWidth: true }
-                    Row {
-                        spacing: 3
-                        Repeater {
-                            model: ctl.hotkeyParts
-                            delegate: Key { required property string modelData; text: modelData }
+                    Rectangle { width: 6; height: 6; radius: 3; color: dz.accent; visible: ctl.status !== "Canlı" }
+                    Lbl {  // plain "Canlı" is not shown (it said nothing useful); scan progress still is
+                        objectName: "statusLabel"
+                        text: ctl.status
+                        visible: ctl.status !== "Canlı"
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+                    Item { Layout.fillWidth: true; visible: ctl.status === "Canlı" }
+                    Rectangle {
+                        id: closeBtn
+                        objectName: "closeButton"
+                        implicitWidth: 24
+                        implicitHeight: 24
+                        radius: 12
+                        color: closeMouse.containsMouse ? dz.surface : "transparent"
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Paneli kapat"
+                        Keys.onSpacePressed: ctl.close()
+                        Keys.onReturnPressed: ctl.close()
+                        Text {
+                            anchors.centerIn: parent
+                            text: "✕"
+                            color: dz.muted
+                            font.pixelSize: 11
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            id: closeMouse
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.close()
                         }
                     }
                 }
@@ -364,7 +402,7 @@ Item {
                 Hair {}
                 RowLayout {
                     Layout.fillWidth: true
-                    Lbl { text: "Ekran"; Layout.fillWidth: true }
+                    Lbl { text: "Altyazı ekranı"; Layout.fillWidth: true }
                     Rectangle {
                         id: screenPill
                         implicitWidth: screenText.implicitWidth + 24
@@ -393,6 +431,82 @@ Item {
                             onClicked: ctl.cycleScreen()
                         }
                     }
+                }
+
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Lbl { text: "Panel ekranı"; Layout.fillWidth: true }
+                    Rectangle {
+                        id: panelPill
+                        implicitWidth: panelText.implicitWidth + 24
+                        implicitHeight: 26
+                        radius: 13
+                        color: dz.surface
+                        border.color: dz.hairline
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Panel ekranını seç"
+                        Keys.onSpacePressed: ctl.cyclePanelScreen()
+                        Keys.onReturnPressed: ctl.cyclePanelScreen()
+                        Text {
+                            id: panelText
+                            anchors.centerIn: parent
+                            color: dz.text
+                            font.family: ctl.sansFamily
+                            font.pixelSize: 12
+                            text: ctl.panelScreen === "other" ? "Diğer ekran"
+                                : ctl.panelScreen === "auto" ? "Oyunun ekranı"
+                                : ctl.panelScreen === "primary" ? "Ana ekran" : ctl.panelScreen + ". ekran"
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.cyclePanelScreen()
+                        }
+                    }
+                }
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Lbl { text: "Hız modu"; Layout.fillWidth: true }
+                    Rectangle {
+                        id: modePill
+                        objectName: "modePill"
+                        implicitWidth: modeText.implicitWidth + 24
+                        implicitHeight: 26
+                        radius: 13
+                        color: dz.surface
+                        border.color: dz.hairline
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Hız modunu seç"
+                        Keys.onSpacePressed: ctl.cyclePerformance()
+                        Keys.onReturnPressed: ctl.cyclePerformance()
+                        Text {
+                            id: modeText
+                            anchors.centerIn: parent
+                            color: dz.text
+                            font.family: ctl.sansFamily
+                            font.pixelSize: 12
+                            text: ctl.performanceLabel
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.cyclePerformance()
+                        }
+                    }
+                }
+                Text {
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                    color: dz.muted
+                    font.family: ctl.sansFamily
+                    font.pixelSize: 11
+                    text: ctl.performanceHint
                 }
 
                 RowLayout {
@@ -430,7 +544,43 @@ Item {
                         }
                     }
                     Item { Layout.fillWidth: true }
-                    Lbl { text: "Esc ile kapat" }
+                    Lbl { text: "Kapat" }   // the panel takes no keyboard focus (the game keeps it): the hotkey or the cross closes it
+                    Row {
+                        spacing: 3
+                        Repeater {
+                            model: ctl.hotkeyParts
+                            delegate: Key { required property string modelData; text: modelData }
+                        }
+                    }
+                }
+
+                Item {
+                    objectName: "quitButton"
+                    Layout.alignment: Qt.AlignRight
+                    implicitWidth: quitText.implicitWidth + 8
+                    implicitHeight: 22
+                    activeFocusOnTab: true
+                    Accessible.role: Accessible.Button
+                    Accessible.name: "Dubzar'dan çık"
+                    Keys.onSpacePressed: ctl.quitApp()
+                    Keys.onReturnPressed: ctl.quitApp()
+                    Text {
+                        id: quitText
+                        anchors.centerIn: parent
+                        text: "Dubzar'dan çık"
+                        color: quitMouse.containsMouse ? dz.text : dz.muted
+                        font.family: ctl.sansFamily
+                        font.pixelSize: 11
+                        font.underline: quitMouse.containsMouse
+                    }
+                    FocusRing {}
+                    MouseArea {
+                        id: quitMouse
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: ctl.quitApp()
+                    }
                 }
             }
         }

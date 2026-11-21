@@ -1,0 +1,244 @@
+Soldiers, this is the day we've trained for. ||| Askerler, bugün için eğitim aldık.
+The enemy has crossed the river. ||| Düşman nehri geçti.
+We're pinned down behind the wall. ||| Duvarın arkasında sıkışıp kaldık.
+I need air support, grid four-seven. ||| Hava desteği lazım, kare dört-yedi.
+The bridge must not fall into enemy hands. ||| Köprü düşmanın eline geçmemeli.
+Dig in and hold the position. ||| Siper kazın ve mevziyi tutun.
+Mortar fire! Get down! ||| Havan ateşi! Yere yatın!
+Their tanks are rolling in from the east. ||| Tankları doğudan ilerliyor.
+Fall in! Form up! ||| Sıraya girin! Düzen alın!
+Sergeant, take your squad to the left flank. ||| Çavuş, takımını sol kanada götür.
+We've got wounded here. I need a medic! ||| Burada yaralılarımız var. Sıhhiyeci lazım!
+Hold your ground. Reinforcements are coming. ||| Yerinizi koruyun. Takviye geliyor.
+This is Alpha One. Do you copy? ||| Burası Alfa Bir. Duyuyor musunuz?
+Command, we've lost contact with Bravo team. ||| Komuta, Bravo timiyle bağlantıyı kaybettik.
+Mission accomplished. Return to base. ||| Görev tamamlandı. Üsse dönün.
+The war is over, but nobody told the soldiers. ||| Savaş bitti ama askerlere kimse söylemedi.
+He earned a medal for bravery. ||| Cesareti için madalya aldı.
+I've seen things no man should see. ||| Hiçbir insanın görmemesi gereken şeyler gördüm.
+My unit was wiped out in the first hour. ||| Birliğim ilk saatte yok edildi.
+We fight so that others don't have to. ||| Başkaları savaşmak zorunda kalmasın diye savaşıyoruz.
+They shot down our helicopter. ||| Helikopterimizi düşürdüler.
+Bail out! Bail out! ||| Atla! Atla!
+We're taking heavy fire! ||| Yoğun ateş altındayız!
+Cease fire! Cease fire! ||| Ateşi kesin! Ateşi kesin!
+The convoy is under attack. ||| Konvoya saldırı var.
+Smoke grenade out! ||| Dumanlı el bombası atıldı!
+Frag out! ||| Bomba atıldı!
+Stay low and keep moving. ||| Alçak kal ve hareket etmeye devam et.
+Sniper on the rooftop! ||| Çatıda keskin nişancı var!
+Breach and clear. ||| İçeri gir ve temizle.
+The hostages are on the third floor. ||| Rehineler üçüncü katta.
+Negotiate. Buy us some time. ||| Pazarlık et. Bize biraz zaman kazandır.
+He's got a bomb strapped to his chest. ||| Göğsüne bomba bağlanmış.
+Defuse it. Cut the red wire. ||| Etkisiz hale getir. Kırmızı teli kes.
+Which wire? There are three! ||| Hangi tel? Üç tane var!
+It's a fake. It's a fake! ||| Sahte. Sahte bu!
+We lost him. He slipped through the checkpoint. ||| Onu kaybettik. Kontrol noktasından sıyrıldı.
+Intel says they're moving at night. ||| İstihbarata göre geceleri hareket ediyorlar.
+We need eyes in the sky. ||| Gökyüzünde gözlere ihtiyacımız var.
+Drone footage confirms the target. ||| Drone görüntüleri hedefi doğruluyor.
+Weapons free. ||| Ateş serbest.
+All units, converge on the building. ||| Tüm birimler, binaya yönelin.
+Hostile contact. Twelve o'clock! ||| Düşman teması. On iki yönünde!
+He's taken cover behind the truck. ||| Kamyonun arkasına siper aldı.
+Reloading! Cover me! ||| Dolduruyorum! Beni koru!
+I'm hit! I'm hit! ||| Vuruldum! Vuruldum!
+Hang in there, buddy. ||| Dayan dostum.
+Don't you die on me! ||| Sakın bana ölme!
+Tell my wife I love her. ||| Karıma onu sevdiğimi söyle.
+I'm not leaving without you. ||| Sensiz gitmiyorum.
+Extraction is two minutes out. ||| Tahliye iki dakika uzakta.
+We're gonna make it. We're gonna make it. ||| Başaracağız. Başaracağız.
+With great power comes great responsibility. ||| Büyük güç, büyük sorumluluk getirir.
+The city needs a hero. ||| Şehrin bir kahramana ihtiyacı var.
+He can fly. Did you see that? ||| Uçabiliyor. Gördün mü?
+I'm not just a regular guy anymore. ||| Artık sıradan biri değilim.
+Nobody can know who I really am. ||| Kimse gerçekte kim olduğumu bilmemeli.
+The mask is part of who I am. ||| Maske kim olduğumun bir parçası.
+Villains don't think they're villains. ||| Kötüler kendilerini kötü sanmaz.
+He wants to destroy the city. ||| Şehri yok etmek istiyor.
+The whole city is in danger. ||| Bütün şehir tehlikede.
+Evacuate the building now! ||| Binayı hemen tahliye edin!
+Save the civilians first. ||| Önce siviller kurtarılsın.
+I can't do this alone. ||| Bunu tek başıma yapamam.
+We'll fight together. ||| Birlikte savaşacağız.
+Your powers are growing stronger. ||| Güçlerin güçleniyor.
+I've lost control of my abilities. ||| Yeteneklerimin kontrolünü kaybettim.
+Don't be afraid of what you are. ||| Ne olduğundan korkma.
+It's a gift, not a curse. ||| Bu bir lütuf, lanet değil.
+The lab experiment went horribly wrong. ||| Laboratuvar deneyi korkunç şekilde ters gitti.
+He was never the same after the accident. ||| Kazadan sonra bir daha eskisi gibi olmadı.
+The mayor is working with the villain. ||| Belediye başkanı kötü adamla çalışıyor.
+Who's behind the mask? ||| Maskenin arkasında kim var?
+It was you all along. ||| Baştan beri sendin.
+How could you betray us? ||| Bize nasıl ihanet edersin?
+I thought we were friends. ||| Arkadaş olduğumuzu sanıyordum.
+We were. Then you chose a side. ||| Öyleydik. Sonra sen bir taraf seçtin.
+Everything I did, I did for the people. ||| Yaptığım her şeyi halk için yaptım.
+You're no better than he is. ||| Sen de ondan farklı değilsin.
+That's enough. It ends now. ||| Yeter. Bu şimdi bitiyor.
+Stand down. That's an order. ||| Geri çekil. Bu bir emir.
+I don't take orders from you. ||| Senden emir almam.
+Who put you in charge? ||| Seni kim sorumlu yaptı?
+I'm in charge here. ||| Burada sorumlu benim.
+Let me handle this. ||| Bunu bana bırak.
+You're making a mistake. ||| Hata yapıyorsun.
+It's too late to turn back now. ||| Geri dönmek için artık çok geç.
+I made my choice. ||| Seçimimi yaptım.
+You can't save everyone. ||| Herkesi kurtaramazsın.
+Some things are worth dying for. ||| Bazı şeyler uğruna ölmeye değer.
+I did what I had to do. ||| Yapmam gerekeni yaptım.
+Was it worth it? ||| Buna değdi mi?
+Hey, what's up? ||| Hey, ne haber?
+Long time no see. ||| Uzun zamandır görüşemedik.
+How have you been? ||| Nasılsın, neler yapıyorsun?
+Not bad. You? ||| Fena değil. Sen?
+Can't complain. ||| Şikâyetçi değilim.
+What brings you here? ||| Seni buraya ne getirdi?
+I was in the neighborhood. ||| Mahalledeydim.
+Make yourself at home. ||| Rahat ol, kendi evin gibi.
+Can I get you something to drink? ||| Sana içecek bir şey getireyim mi?
+Have a seat. ||| Otur lütfen.
+Let me introduce my friend. ||| Arkadaşımı tanıştırayım.
+Nice to meet you. ||| Tanıştığımıza memnun oldum.
+Pleasure's all mine. ||| Memnuniyet bana ait.
+What do you do for a living? ||| Ne iş yapıyorsun?
+I'm between jobs right now. ||| Şu sıralar işsizim.
+I work nights at the diner. ||| Lokantada gece vardiyasında çalışıyorum.
+My boss is a nightmare. ||| Patronum tam bir kâbus.
+I'm up for a promotion. ||| Terfi için adayım.
+They laid me off last week. ||| Geçen hafta beni işten çıkardılar.
+I need this job. ||| Bu işe ihtiyacım var.
+Rent is killing me. ||| Kira beni eziyor.
+Money doesn't grow on trees. ||| Para ağaçta yetişmiyor.
+I'm broke. ||| Meteliksizim.
+Can you lend me twenty bucks? ||| Bana yirmi dolar borç verir misin?
+I'll pay you back, I promise. ||| Geri ödeyeceğim, söz veriyorum.
+That's a rip-off. ||| Bu tam bir kazık.
+It's on sale this week. ||| Bu hafta indirimde.
+Do you take credit cards? ||| Kredi kartı kabul ediyor musunuz?
+Keep the receipt. ||| Fişi sakla.
+I'd like to return this. ||| Bunu iade etmek istiyorum.
+It doesn't fit. ||| Üzerime olmadı.
+Do you have this in a larger size? ||| Bunun daha büyük bedeni var mı?
+It looks great on you. ||| Üzerinde harika duruyor.
+I'm just looking, thanks. ||| Sadece bakıyorum, teşekkürler.
+Where is the restroom? ||| Tuvalet nerede?
+Excuse me, is this seat taken? ||| Affedersiniz, bu yer dolu mu?
+Could I see the menu, please? ||| Menüye bakabilir miyim lütfen?
+I'll have the steak, medium rare. ||| Biftek alayım, orta pişmiş.
+Check, please. ||| Hesap lütfen.
+The service here is terrible. ||| Buradaki servis berbat.
+Delicious. My compliments to the chef. ||| Nefis. Şefe tebriklerimi iletin.
+I'm allergic to nuts. ||| Fıstığa alerjim var.
+Do you have any vegetarian options? ||| Vejetaryen seçenekleriniz var mı?
+Can we get separate checks? ||| Hesapları ayrı alabilir miyiz?
+Happy birthday! ||| Doğum günün kutlu olsun!
+Congratulations on your wedding. ||| Düğününüz kutlu olsun.
+Merry Christmas! ||| Mutlu Noeller!
+I'm so proud of you. ||| Seninle çok gurur duyuyorum.
+You deserve it. ||| Hak ettin.
+Good luck out there. ||| Orada bol şans.
+Break a leg. ||| Bol şans, başarılar.
+Don't worry. It'll all work out. ||| Merak etme. Her şey yoluna girecek.
+I believe in you. ||| Sana inanıyorum.
+Don't give up. ||| Pes etme.
+You can do this. ||| Bunu yapabilirsin.
+I'm scared. ||| Korkuyorum.
+It's okay to be scared. ||| Korkmak normal.
+I'm so tired of running. ||| Kaçmaktan çok yoruldum.
+I need some time alone. ||| Biraz yalnız kalmaya ihtiyacım var.
+I just want to go home. ||| Sadece eve gitmek istiyorum.
+Home is where the heart is. ||| Yuva, kalbin olduğu yerdir.
+We were happy once. ||| Bir zamanlar mutluyduk.
+I miss her every day. ||| Onu her gün özlüyorum.
+Time heals everything. ||| Zaman her şeyi iyileştirir.
+Some wounds never heal. ||| Bazı yaralar hiç kapanmaz.
+Life isn't fair. ||| Hayat adil değil.
+I was young and stupid. ||| Gençtim ve aptaldım.
+I made a terrible mistake. ||| Korkunç bir hata yaptım.
+I'm so sorry. I really am. ||| Çok özür dilerim. Gerçekten.
+Please forgive me. ||| Lütfen beni affet.
+I forgive you. ||| Seni affediyorum.
+We can start over. ||| Baştan başlayabiliriz.
+I love you. ||| Seni seviyorum.
+I love you too. ||| Ben de seni seviyorum.
+Will you marry me? ||| Benimle evlenir misin?
+Yes! A thousand times yes! ||| Evet! Bin kere evet!
+We're going to have a baby. ||| Bir bebeğimiz olacak.
+She has her mother's eyes. ||| Annesinin gözlerini almış.
+Dad, I need to tell you something. ||| Baba, sana bir şey söylemem lazım.
+Come here and give me a hug. ||| Gel buraya, bana sarıl.
+Be good for your mother. ||| Annene karşı uslu ol.
+Brush your teeth and go to bed. ||| Dişlerini fırçala ve yat.
+Do your homework first. ||| Önce ödevini yap.
+The teacher wants to see your parents. ||| Öğretmen ailenle görüşmek istiyor.
+I got an A on the test! ||| Sınavdan A aldım!
+Class is dismissed. ||| Ders bitti.
+Don't be late for school. ||| Okula geç kalma.
+He's the new kid in class. ||| Sınıfın yeni çocuğu o.
+Prom is next Friday. ||| Balo önümüzdeki cuma.
+Nobody invited me. ||| Beni kimse davet etmedi.
+She's way out of your league. ||| O senin harcın değil.
+Quit stalling and ask her out. ||| Oyalanmayı bırak da ona çıkma teklif et.
+It's not you, it's me. ||| Sorun sende değil, bende.
+We need to talk. ||| Konuşmamız lazım.
+I think we should see other people. ||| Bence başkalarıyla görüşmeliyiz.
+I never want to see you again. ||| Seni bir daha hiç görmek istemiyorum.
+You're impossible! ||| Sen çekilmezsin!
+Leave me alone. ||| Beni rahat bırak.
+Why does this always happen to me? ||| Bu hep neden beni buluyor?
+Just my luck. ||| Benim şansım işte.
+Lucky break! ||| Şans bu!
+You got lucky. ||| Şanslıydın.
+Say cheese! ||| Gülümse!
+Smile for the camera. ||| Kameraya gülümse.
+Let me take a picture. ||| Bir fotoğraf çekeyim.
+That's hilarious. ||| Çok komik.
+You crack me up. ||| Beni güldürüyorsun.
+I'm just kidding. ||| Şaka yapıyorum.
+That's not funny. ||| Bu komik değil.
+Is this a joke? ||| Bu bir şaka mı?
+Seriously? ||| Cidden mi?
+You must be joking. ||| Şaka yapıyor olmalısın.
+Are you serious right now? ||| Şu an ciddi misin?
+I'm dead serious. ||| Hem de çok ciddiyim.
+Trust me. ||| Bana güven.
+Believe it or not, it's true. ||| İster inan ister inanma, doğru.
+I can't believe my eyes. ||| Gözlerime inanamıyorum.
+That's impossible. ||| Bu imkânsız.
+Wait, what? ||| Dur, ne?
+You've lost me. ||| Beni kaybettin, anlamadım.
+Could you repeat that? ||| Tekrar eder misin?
+I didn't catch your name. ||| Adını anlamadım.
+Speak up. I can't hear you. ||| Yüksek sesle konuş. Seni duyamıyorum.
+Let me think. ||| Düşüneyim.
+Give me a second. ||| Bana bir saniye ver.
+Just a moment, please. ||| Bir dakika lütfen.
+Hold on a sec. ||| Bir saniye bekle.
+Hang on. I'm coming. ||| Bekle. Geliyorum.
+Hurry up! We're late! ||| Acele et! Geç kaldık!
+Take your time. ||| Acele etme.
+There's no rush. ||| Acele yok.
+Better late than never. ||| Geç olsun da güç olmasın.
+It's about time. ||| Bu işin sırası gelmişti.
+At last! ||| Sonunda!
+What a relief. ||| Ne büyük rahatlama.
+Thank goodness. ||| Allah'a şükür.
+Oh no. Not again. ||| Olamaz. Yine mi.
+This can't be happening. ||| Bu olamaz.
+What a mess. ||| Ne karmaşa.
+Look at this place. It's a dump. ||| Şuraya bak. Çöplük gibi.
+It's freezing in here. ||| Burası buz gibi.
+It's boiling hot today. ||| Bugün hava kavuruyor.
+The sun is setting. ||| Güneş batıyor.
+Look at the stars. ||| Yıldızlara bak.
+It's a beautiful night. ||| Güzel bir gece.
+Let's take a walk. ||| Hadi yürüyüşe çıkalım.
+I need some fresh air. ||| Biraz temiz havaya ihtiyacım var.
+What time is it? ||| Saat kaç?
+It's half past nine. ||| Dokuz buçuk.
+See you tomorrow morning. ||| Yarın sabah görüşürüz.
+Sleep tight. ||| İyi uykular.
+Sweet dreams. ||| Tatlı rüyalar.

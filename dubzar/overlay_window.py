@@ -6,24 +6,30 @@ subtitles on/off switch all apply the moment they change.
 
 import time
 
-from PySide6.QtCore import Qt, QTimer
-from PySide6.QtGui import QColor, QGuiApplication
+from PySide6.QtCore import QRect, Qt, QTimer, Signal
+from PySide6.QtGui import QColor, QFont, QFontMetrics, QGuiApplication
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from dubzar.models import Cue
 from dubzar.overlay import SubtitleTimeline, foreground_monitor_origin, pick_screen_index
 from dubzar.settings import Settings
+from dubzar.ui.controller import SANS_FAMILIES, first_available
+from dubzar.ui.fonts import load_bundled_fonts
 
 TICK_MS = 100
 SCREEN_WIDTH_FRACTION = 0.8
 EDGE_MARGIN_FRACTION = 0.06
+PAD_X, PAD_Y = 18, 8     # inside the box, around the text (must match the stylesheet)
 
 
 class OverlayWindow(QWidget):
+    placed = Signal(QRect)   # where the subtitle is now (a null rectangle when it is hidden)
+
     def __init__(self, settings: Settings):
         super().__init__()
         self._settings = settings
         self._timeline = SubtitleTimeline()
+        self._note_timeline = SubtitleTimeline()     # the objective / quest line: a small card above the subtitle
         self._preview: str | None = None
         self.setWindowFlags(
             Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool
@@ -32,9 +38,14 @@ class OverlayWindow(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setAttribute(Qt.WA_ShowWithoutActivating)
 
+        load_bundled_fonts()  # before the stylesheet names the family
         self._label = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
+        self._note = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
+        self._note.hide()
+        layout.setSpacing(6)
+        layout.addWidget(self._note)
         layout.addWidget(self._label)
         self._restyle()
         settings.on_change(self._on_setting_changed)
@@ -61,17 +72,34 @@ class OverlayWindow(QWidget):
         self._timeline.show(cue, now)
         self.tick(now)
 
+    def show_note(self, cue: Cue, now: float | None = None) -> None:
+        now = time.monotonic() if now is None else now
+        self._note_timeline.show(cue, now)
+        self.tick(now)
+
+    def clear_cue(self) -> None:
+        """The game's own subtitle is gone: take ours down too."""
+        self._timeline.clear()
+        self.tick()
+
     def tick(self, now: float | None = None) -> None:
         now = time.monotonic() if now is None else now
         text = self._preview if self._preview is not None else self._timeline.current(now)
-        if text is None or not self._settings.subtitles_enabled:
+        note = None if self._preview is not None else self._note_timeline.current(now)
+        if (text is None and note is None) or not self._settings.subtitles_enabled:
             self._label.setText("")
+            self._note.setText("")
             self.hide()
+            self.placed.emit(QRect())
             return
-        if text != self._label.text() or not self.isVisible():
-            self._label.setText(text)
+        if (text or "") != self._label.text() or (note or "") != self._note.text() or not self.isVisible():
+            self._label.setText(text or "")
+            self._label.setVisible(text is not None)
+            self._note.setText(note or "")
+            self._note.setVisible(note is not None)
             self._place()
             self.show()
+            self.placed.emit(self.geometry())
 
     def _on_setting_changed(self, name: str) -> None:
         self._restyle()
@@ -83,23 +111,40 @@ class OverlayWindow(QWidget):
     def _restyle(self) -> None:
         s = self._settings
         bg = QColor(s.background_color)
+        self._note.setStyleSheet(
+            f"color: {s.text_color}; background: rgba(20, 20, 20, 0.72); border-radius: 8px; "
+            f"padding: {PAD_Y - 3}px {PAD_X - 4}px; font-family: '{first_available(SANS_FAMILIES)}'; "
+            f"font-size: {max(12, int(s.font_size * 0.62))}px; font-weight: 500;")
         self._label.setStyleSheet(
             f"color: {s.text_color}; background: rgba({bg.red()}, {bg.green()}, {bg.blue()}, "
-            f"{s.background_opacity / 100:g}); border-radius: 8px; padding: 8px 16px; "
-            f"font-size: {s.font_size}px; font-weight: 600;"
+            f"{s.background_opacity / 100:g}); border-radius: 10px; padding: {PAD_Y}px {PAD_X}px; "
+            f"font-family: '{first_available(SANS_FAMILIES)}'; font-size: {s.font_size}px; font-weight: 600;"
         )
+
+    def _box_width(self, max_width: int) -> int:
+        """The box hugs its text (like a video subtitle) instead of spanning the screen; long text wraps at max_width."""
+        font = QFont(first_available(SANS_FAMILIES))
+        font.setPixelSize(self._settings.font_size)
+        font.setWeight(font.Weight.DemiBold)
+        metrics = QFontMetrics(font)
+        inner = max_width - 2 * PAD_X
+        wrapped = metrics.boundingRect(QRect(0, 0, inner, 10_000), Qt.TextWordWrap | Qt.AlignCenter, self._label.text())
+        return min(max_width, wrapped.width() + 2 * PAD_X + 4)  # +4: slack so the last word never wraps by a pixel
 
     def _place(self) -> None:
         screens = QGuiApplication.screens()  # index 0 is the primary screen
         origins = [(s.geometry().x(), s.geometry().y()) for s in screens]
         index = pick_screen_index(origins, foreground_monitor_origin(), self._settings.screen)
         screen = screens[index].geometry()
-        self._label.setFixedWidth(int(screen.width() * SCREEN_WIDTH_FRACTION))
+        self._label.setFixedWidth(self._box_width(int(screen.width() * SCREEN_WIDTH_FRACTION)))
+        self._note.setFixedWidth(min(int(screen.width() * 0.5), max(self._label.width(), 360)))
         self.adjustSize()
         margin = int(screen.height() * EDGE_MARGIN_FRACTION)
         room = max(0, screen.height() - self.height() - 2 * margin)
         self.move(screen.x() + (screen.width() - self.width()) // 2,
                   screen.y() + margin + int(self._settings.vertical * room))
+        if self.isVisible():
+            self.placed.emit(self.geometry())
 
 
 def _demo() -> None:

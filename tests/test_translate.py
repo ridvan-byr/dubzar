@@ -131,3 +131,76 @@ def test_translator_passes_its_cpu_thread_limit_to_the_model(monkeypatch):
     OpusMtTranslator().load()
 
     assert seen == [2, 0]
+
+
+def test_each_sentence_goes_to_the_model_separately():
+    seen = []
+    translator = OpusMtTranslator(backend=lambda text: seen.append(text) or "T(" + text + ")")
+
+    result = translator.translate("You think this is a game? People die out here.")
+
+    assert seen == ["You think this is a game?", "People die out here."]
+    assert result == "T(You think this is a game?) T(People die out here.)"
+
+
+def test_speaker_name_never_reaches_the_model_and_is_put_back():
+    seen = []
+    translator = OpusMtTranslator(backend=lambda text: seen.append(text) or "çeviri")
+
+    result = translator.translate("Brian: But the count was good.")
+
+    assert seen == ["But the count was good."]
+    assert result == "Brian: çeviri"
+
+
+def test_several_speakers_in_one_subtitle():
+    translator = OpusMtTranslator(backend=lambda text: "[" + text + "]")
+
+    assert translator.translate("Brian: Hello there. Donnie: Hi, Brian.") == "Brian: [Hello there.] Donnie: [Hi, Brian.]"
+
+
+# --- the fast CTranslate2 backend, with the PyTorch one as the fallback ---------------------------
+def test_fast_backend_is_preferred(monkeypatch):
+    import dubzar.translate as translate
+
+    monkeypatch.setattr(translate, "_make_ct2_pipeline", lambda local_only, threads=0: (lambda text: "ct2:" + text))
+    monkeypatch.setattr(translate, "_make_torch_pipeline", lambda local_only, threads=0: (lambda text: "torch:" + text))
+
+    assert translate._make_pipeline(True, 2)("hi") == "ct2:hi"
+
+
+def test_falls_back_to_pytorch_when_the_fast_backend_cannot_start(monkeypatch, caplog):
+    import dubzar.translate as translate
+
+    def broken(local_only, threads=0):
+        raise RuntimeError("conversion failed")
+
+    monkeypatch.setattr(translate, "_make_ct2_pipeline", broken)
+    monkeypatch.setattr(translate, "_make_torch_pipeline", lambda local_only, threads=0: (lambda text: "torch:" + text))
+
+    assert translate._make_pipeline(True, 0)("hi") == "torch:hi"
+    assert "CTranslate2" in caplog.text
+
+
+def test_missing_model_is_not_hidden_by_the_fallback(monkeypatch):
+    import dubzar.translate as translate
+
+    def missing(local_only, threads=0):
+        raise OSError("not in the local cache")
+
+    monkeypatch.setattr(translate, "_make_ct2_pipeline", missing)
+    monkeypatch.setattr(translate, "_make_torch_pipeline", lambda *a, **k: pytest.fail("must not be tried"))
+
+    with pytest.raises(OSError):
+        translate._make_pipeline(True, 0)
+
+
+def test_converted_model_folder_sits_next_to_the_apps_other_data(monkeypatch, tmp_path):
+    import dubzar.translate as translate
+
+    monkeypatch.setenv("LOCALAPPDATA", str(tmp_path))
+
+    folder = translate.ct2_model_dir()
+
+    assert folder.parent == tmp_path / "Dubzar" / "models"
+    assert "int8" in folder.name

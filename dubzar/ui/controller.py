@@ -3,6 +3,7 @@
 from PySide6.QtCore import Property, QObject, Signal, Slot
 from PySide6.QtGui import QFontDatabase
 
+from dubzar.performance import ORDER, profile_for
 from dubzar.settings import Settings
 
 
@@ -25,10 +26,13 @@ class SettingsController(QObject):
 
     changed = Signal()
     closeRequested = Signal()
+    quitRequested = Signal()   # leave the program (there may be no console to press Ctrl+C in)
+    dragStarted = Signal()   # the user grabbed the panel's header
+    dragMoved = Signal()     # ... and moved the cursor
     activity = Signal()  # the user did something in the panel: keeps it from closing itself
 
     def __init__(self, settings: Settings, screen_count: int = 1, animations: bool = True,
-                 status: str = "Dinleniyor", dubbing_available: bool = False, idle_close_ms: int = 8000):
+                 status: str = "Dinleniyor", dubbing_available: bool = False, idle_close_ms: int = 0):  # 0 = the panel stays until it is closed
         super().__init__()
         self._s = settings
         self._screen_count = screen_count
@@ -71,6 +75,18 @@ class SettingsController(QObject):
     @Property(str, notify=changed)
     def screen(self) -> str:
         return self._s.screen
+
+    @Property(str, notify=changed)
+    def panelScreen(self) -> str:
+        return self._s.panel_screen
+
+    @Property(str, notify=changed)
+    def performanceLabel(self) -> str:
+        return profile_for(self._s.performance).label
+
+    @Property(str, notify=changed)
+    def performanceHint(self) -> str:
+        return profile_for(self._s.performance).hint
 
     @Property(list, notify=changed)
     def hotkeyParts(self) -> list:
@@ -161,6 +177,36 @@ class SettingsController(QObject):
         order = ["auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
         current = self._s.screen if self._s.screen in order else "auto"
         self._s.screen = order[(order.index(current) + 1) % len(order)]
+        self.activity.emit()
+
+    @Slot()
+    def quitApp(self) -> None:
+        self.quitRequested.emit()
+
+    @Slot()
+    def dragStart(self) -> None:
+        self.dragStarted.emit()
+        self.activity.emit()
+
+    @Slot()
+    def dragMove(self) -> None:
+        self.dragMoved.emit()
+        self.activity.emit()
+
+    @Slot()
+    def cyclePanelScreen(self) -> None:
+        """auto -> primary -> 2 -> ... -> other -> auto, limited to the screens that exist."""
+        order = ["auto", "primary"] + [str(n) for n in range(2, self._screen_count + 1)]
+        if self._screen_count > 1:
+            order.append("other")   # "a screen the game is not on" means nothing with a single screen
+        current = self._s.panel_screen if self._s.panel_screen in order else "auto"
+        self._s.panel_screen = order[(order.index(current) + 1) % len(order)]
+        self.activity.emit()
+
+    @Slot()
+    def cyclePerformance(self) -> None:
+        """light -> medium -> high -> light."""
+        self._s.performance = ORDER[(ORDER.index(self._s.performance) + 1) % len(ORDER)]
         self.activity.emit()
 
     @Slot()

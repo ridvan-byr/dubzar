@@ -48,8 +48,20 @@ def _screen(value: Any) -> str:
     raise ValueError(f"screen must be 'auto', 'primary' or a number >= 1, got {value!r}")
 
 
+def _panel_screen(value: Any) -> str:
+    if value == "other":
+        return value
+    return _screen(value)
+
+
 def _hotkey(value: Any) -> str:
     parse_hotkey(value)  # raises ValueError when it is not a usable hotkey
+    return value
+
+
+def _performance(value: Any) -> str:
+    if value not in ("light", "medium", "high"):
+        raise ValueError(f"performance must be 'light', 'medium' or 'high', got {value!r}")
     return value
 
 
@@ -62,17 +74,22 @@ def _optional_exe_name(value: Any) -> str | None:
     return value
 
 
+OLD_DEFAULT_HOTKEY = "Ctrl+Shift+D"       # browsers use it (bookmark all tabs); the default is now Ctrl+Alt+D
+
+
 # name -> (default, validator that returns the normalised value or raises ValueError)
 _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "subtitles_enabled": (True, _boolean),
     "dubbing_enabled": (True, _boolean),
     "font_size": (28, _int_between(12, 96)),
-    "vertical": (0.88, _float_between(0.0, 1.0)),  # subtitle position: 0 = top, 1 = bottom
+    "vertical": (0.80, _float_between(0.0, 1.0)),  # subtitle position: 0 = top, 1 = bottom
     "text_color": ("#FFFFFF", _hex_color),
     "background_color": ("#000000", _hex_color),
     "background_opacity": (60, _int_between(0, 100)),  # percent
     "screen": ("auto", _screen),
-    "hotkey": ("Ctrl+Shift+D", _hotkey),
+    "panel_screen": ("auto", _panel_screen),  # where the settings panel opens; "auto" = the game's screen
+    "hotkey": ("Ctrl+Alt+D", _hotkey),
+    "performance": ("light", _performance),  # how often the screen is read and by what; see dubzar.performance
     "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }
 
@@ -141,6 +158,8 @@ def load_settings(path: Path | str | None = None) -> Settings:
                 setattr(settings, name, data[name])
             except ValueError as exc:
                 log.warning("ignoring invalid setting %s: %s", name, exc)
+    if settings.hotkey == OLD_DEFAULT_HOTKEY:
+        settings.hotkey = _SPEC["hotkey"][0]     # saved by an older version: that default clashed with browsers
     return settings
 
 

@@ -258,3 +258,58 @@ def test_scan_uses_all_cores_by_default_because_the_game_is_closed(tmp_path, aud
     main(["scan", str(audio_dir), "--index", str(tmp_path / "s.db")])
 
     assert seen["W"]["cpu_threads"] == 0 and seen["T"]["threads"] == 0
+
+
+# --- friendly start: no required flags, a log file when there is no console, and a setup command ---------------
+def test_run_needs_no_index_flag_and_uses_the_app_data_folder(tmp_path, monkeypatch):
+    monkeypatch.setenv("APPDATA", str(tmp_path))
+
+    code = main(["run", "--settings-file", str(tmp_path / "s.json")], audio_chunks=chunks(synth_line(1)[:SR]),
+                on_cue=lambda cue: None, transcriber=FakeTranscriber(), translator=PrefixTranslator())
+
+    assert code == 0
+    assert (tmp_path / "Dubzar" / "live.db").exists()
+
+
+def test_without_a_console_output_goes_to_the_log_file(tmp_path, monkeypatch):
+    """A shortcut that starts the app with pythonw has no stdout: printing must not crash, and must be kept."""
+    import sys
+
+    from dubzar import cli
+
+    log = tmp_path / "dubzar.log"
+    monkeypatch.setattr(sys, "stdout", None)
+    monkeypatch.setattr(sys, "stderr", None)
+
+    handle = cli.redirect_output_if_windowless(log)
+    print("merhaba günlük", flush=True)
+    print("hata", file=sys.stderr, flush=True)
+    handle.close()
+
+    text = log.read_text(encoding="utf-8")
+    assert "merhaba günlük" in text and "hata" in text
+
+
+def test_with_a_console_nothing_is_redirected(tmp_path):
+    from dubzar import cli
+
+    assert cli.redirect_output_if_windowless(tmp_path / "x.log") is None
+    assert not (tmp_path / "x.log").exists()
+
+
+def test_setup_downloads_both_models_only_with_the_flag(tmp_path, monkeypatch, capsys):
+    from types import SimpleNamespace
+
+    from dubzar import cli
+
+    loaded = []
+    monkeypatch.setattr(cli, "WhisperTranscriber",
+                        lambda **k: SimpleNamespace(load=lambda: loaded.append(("whisper", k["allow_download"]))))
+    monkeypatch.setattr(cli, "OpusMtTranslator",
+                        lambda **k: SimpleNamespace(load=lambda: loaded.append(("opus", k["allow_download"]))))
+
+    refused = main(["setup"])
+    done = main(["setup", "--allow-download"])
+
+    assert refused == 2 and "--allow-download" in capsys.readouterr().err
+    assert done == 0 and loaded == [("whisper", True), ("opus", True)]

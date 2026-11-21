@@ -18,13 +18,31 @@ def test_returns_none_before_any_cue():
     assert SubtitleTimeline().current(now=0.0) is None
 
 
+LONG_TEXT = "Burada olanlar hakkında kimseye tek kelime etme, anlaştık mı?"  # 60 chars: reading time 6 s
+
+
 def test_text_visible_until_duration_plus_tail():
     timeline = SubtitleTimeline()
-    timeline.show(cue(duration=2.0), now=10.0)
+    timeline.show(cue(LONG_TEXT, duration=2.0), now=10.0)
 
-    assert timeline.current(now=10.0) == "merhaba"
-    assert timeline.current(now=12.4) == "merhaba"
+    assert timeline.current(now=10.0) == LONG_TEXT
+    assert timeline.current(now=12.4) == LONG_TEXT
     assert timeline.current(now=12.6) is None
+
+
+def test_short_text_does_not_outstay_a_long_segment():
+    timeline = SubtitleTimeline()
+    timeline.show(cue("Orada neredeyse hiç yer yok.", duration=12.0), now=0.0)  # a 12 s cut, 28 chars
+
+    assert timeline.current(now=2.0) == "Orada neredeyse hiç yer yok."
+    assert timeline.current(now=4.5) is None  # about 3.3 s of reading time plus the tail, not 12.5 s
+
+
+def test_very_short_text_still_stays_long_enough_to_read():
+    timeline = SubtitleTimeline()
+    timeline.show(cue("Hayır!", duration=5.0), now=0.0)
+
+    assert timeline.current(now=1.9) == "Hayır!"
 
 
 def test_new_cue_replaces_old_immediately():
@@ -33,7 +51,7 @@ def test_new_cue_replaces_old_immediately():
     timeline.show(cue("ikinci", 1.0), now=1.0)
 
     assert timeline.current(now=1.1) == "ikinci"
-    assert timeline.current(now=2.6) is None  # the second cue's own end, not the first's
+    assert timeline.current(now=3.1) is None  # the second cue's own end (min 1.5 s + tail), not the first's
 
 
 @pytest.mark.parametrize("state,expected", [
@@ -164,3 +182,86 @@ def test_foreground_monitor_origin_is_a_point_or_none_on_this_machine():
     origin = foreground_monitor_origin()
 
     assert origin is None or (len(origin) == 2 and all(isinstance(v, int) for v in origin))
+
+
+def test_other_screen_avoids_the_games_screen():
+    assert pick_screen_index(TWO_SCREENS, (-1920, 0), "other") == 0  # game on screen 2 -> panel on primary
+    assert pick_screen_index(TWO_SCREENS, (0, 0), "other") == 1      # game on primary -> panel on the other
+
+
+def test_other_screen_falls_back_to_the_games_screen_when_alone():
+    assert pick_screen_index([(0, 0)], (0, 0), "other") == 0
+    assert pick_screen_index(TWO_SCREENS, None, "other") == 1  # game unknown: assume primary
+
+
+def test_box_hugs_short_text_and_grows_for_long_text(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    window.show_cue(cue("Hayır!", 60.0), now=0.0)
+    short = window.width()
+    window.show_cue(cue("Ve şey, duyduğuma göre pek fazla yokmuş, bunu da kimseye söyleme sakın.", 60.0), now=0.0)
+    longer = window.width()
+
+    screen_w = qapp.primaryScreen().geometry().width()
+    assert short < screen_w * 0.2          # a bar spanning the screen for one word looked wrong
+    assert short < longer <= screen_w * 0.8
+
+
+def test_default_position_sits_above_the_games_own_subtitles():
+    from dubzar.settings import Settings
+
+    assert Settings().vertical <= 0.82
+
+
+def test_subtitle_uses_the_bundled_font_not_the_system_default(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+
+    assert "font-family" in window.label_style and "DM Sans" in window.label_style
+
+
+def test_cue_that_follows_the_screen_stays_until_cleared():
+    timeline = SubtitleTimeline()
+    timeline.show(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+
+    assert timeline.current(now=9.0) == "Merhaba dostum"   # no reading-time cap: the game still shows it
+    timeline.clear()
+    assert timeline.current(now=9.1) is None
+
+
+def test_followed_cue_still_has_a_safety_limit():
+    timeline = SubtitleTimeline()
+    timeline.show(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+
+    assert timeline.current(now=60.0) is None   # the clear signal can be lost; never leave text up forever
+
+
+def test_window_clear_cue_hides_the_subtitle(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    window.show_cue(Cue("ocr/1", "Hello there my friend", "Merhaba dostum", 0.0, until_cleared=True), now=0.0)
+    assert window.isVisible()
+
+    window.clear_cue()
+    assert not window.isVisible()
+
+
+def test_overlay_reports_where_it_is_so_the_veil_can_leave_it_clear(qapp):
+    from dubzar.overlay_window import OverlayWindow
+    from dubzar.settings import Settings
+
+    window = OverlayWindow(Settings())
+    seen = []
+    window.placed.connect(seen.append)
+
+    window.show_cue(Cue("a", "x", "Merhaba dostum, nasılsın bugün?", 30.0))
+    assert seen and not seen[-1].isNull() and seen[-1] == window.geometry()
+
+    window.clear_cue()
+    assert seen[-1].isNull()                       # hidden: nothing to keep clear

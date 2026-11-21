@@ -105,3 +105,9 @@ class IntroWindow:
     def hide(self) -> None:
         QMetaObject.invokeMethod(self._root, "stop", Qt.DirectConnection)
         self.view.hide()
+
+    def close(self) -> None:
+        """Final teardown: unload the QML while its model still exists. Otherwise, as the program quits and the model
+        is destroyed first, the view keeps evaluating bindings against nothing and prints a wall of errors."""
+        self.view.hide()
+        self.view.setSource(QUrl())

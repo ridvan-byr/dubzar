@@ -4,3 +4,13 @@ __pycache__/
 *.db
 .pytest_cache/
 bakeoff_out/
+experiments/probe_out/
+experiments/CLEANUP_MANIFEST.md
+experiments/translation_compare_t*.md
+models_ft/
+models_ct2/
+dist/
+experiments/real_frames/
+experiments/llama_cpp_bin/
+experiments/ort_gpu_env/
+experiments/gpu_pkg_test_env/
