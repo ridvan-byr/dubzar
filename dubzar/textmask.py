@@ -9,6 +9,7 @@ STEP = 2                  # look at every second pixel: letters are still severa
 BRIGHT_FLOOR = 150        # letters are never darker than this
 OUTLINE_REACH = 2         # a letter pixel sits within this many (small) pixels of a dark one
 CHANGE_THRESHOLD = 0.4    # share of text-like pixels that differ from the last reading
+STILL_THRESHOLD = 0.5    # text-like pixels that moved more than this since the last look are not a subtitle
 MIN_PIXELS = 30          # fewer text-like pixels than this: no subtitle
 
 
@@ -29,16 +30,25 @@ def mask_distance(a: np.ndarray, b: np.ndarray) -> float:
 
 class TextChangeWatcher:
     """``changed(frame)`` says whether the text-like pixels differ from those of the last *committed* frame (the last
-    one that was actually read). ``commit()`` makes the frame just looked at the new reference."""
+    one that was actually read) and have stayed put since the look before. A subtitle stands still for seconds, while
+    bright, dark-edged shapes in a moving game scene are somewhere else on every look: only the still ones count.
+    ``commit()`` makes the frame just looked at the new reference."""
 
-    def __init__(self, threshold: float = CHANGE_THRESHOLD, min_pixels: int = MIN_PIXELS):
+    def __init__(self, threshold: float = CHANGE_THRESHOLD, min_pixels: int = MIN_PIXELS,
+                 still_threshold: float = STILL_THRESHOLD):
         self._threshold = threshold
         self._min_pixels = min_pixels
+        self._still = still_threshold
         self._reference: np.ndarray | None = None
         self._latest: np.ndarray | None = None
+        self._previous: np.ndarray | None = None
 
     def changed(self, frame: np.ndarray) -> bool:
-        self._latest = text_mask(frame)
+        self._previous, self._latest = self._latest, text_mask(frame)
+        if self._previous is None or self._previous.shape != self._latest.shape:
+            return False                                   # nothing to compare with yet
+        if mask_distance(self._previous, self._latest) > self._still:
+            return False                                   # still moving: not text (or not settled yet)
         if self._reference is None:
             return int(self._latest.sum()) >= self._min_pixels
         if max(int(self._latest.sum()), int(self._reference.sum())) < self._min_pixels:

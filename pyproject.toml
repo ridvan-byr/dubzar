@@ -1,6 +1,6 @@
 [project]
 name = "dubzar"
-version = "0.2.0"
+version = "0.2.1"
 description = "Dubzar: universal Turkish subtitles and dubbing for games"
 requires-python = ">=3.11"
 dependencies = [
