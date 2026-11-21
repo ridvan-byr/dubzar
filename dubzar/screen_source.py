@@ -115,11 +115,14 @@ class ScreenSubtitleSource:
                 changed = self._watcher.changed(frame)
         if changed:
             self._last_change_at = now
-        if changed and self._event_at is None:
-            self._event_at = now
+        settling = getattr(self._watcher, "settling", False)
+        if (changed or settling) and self._event_at is None:
+            self._event_at = now                           # the first sighting counts, not the confirmation
         # Read when the strip changed, when a decision is still pending (a second sighting, or a subtitle that may
         # have gone), and now and then anyway. Never otherwise: reading costs half a second of two cores.
         if not (changed or self._tracker.unsettled or now - self._last_read_at >= HEARTBEAT_S):
+            if not settling:
+                self._event_at = None                      # it was not a subtitle after all: forget the first sighting
             return
         reason = "değişim" if changed else "doğrulama" if self._tracker.unsettled else "nabız"
         self._watcher.commit()

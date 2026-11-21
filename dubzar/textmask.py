@@ -11,6 +11,10 @@ OUTLINE_REACH = 2         # a letter pixel sits within this many (small) pixels 
 CHANGE_THRESHOLD = 0.4    # share of text-like pixels that differ from the last reading
 STILL_THRESHOLD = 0.5    # text-like pixels that moved more than this since the last look are not a subtitle
 NEW_TEXT_PIXELS = 100     # this many text-like pixels appearing (or vanishing) is a new subtitle even beside lasting HUD text
+FAST_PIXELS = 250         # enough new text-like pixels, in one wide band, are accepted at the first look
+FAST_SHARE = 0.7
+LINE_BAND = 0.35
+FAST_WIDTH = 0.15
 MIN_PIXELS = 30          # fewer text-like pixels than this: no subtitle
 
 
@@ -27,6 +31,22 @@ def mask_distance(a: np.ndarray, b: np.ndarray) -> float:
     """0 for identical masks, 1 for masks with nothing in common."""
     union = int((a | b).sum())
     return 0.0 if union == 0 else 1.0 - int((a & b).sum()) / union
+
+
+def looks_like_a_line_of_text(reference: np.ndarray | None, latest: np.ndarray) -> bool:
+    """The new text-like pixels form one wide, low band: the look of a subtitle line, not of a moving scene."""
+    base = ndimage.binary_dilation(reference) if reference is not None and reference.shape == latest.shape else None
+    added = latest & ~base if base is not None else latest
+    total = int(added.sum())
+    if total < FAST_PIXELS:
+        return False
+    rows = added.sum(axis=1)
+    window = max(8, int(LINE_BAND * latest.shape[0]))
+    best = int(np.convolve(rows, np.ones(window, dtype=int), mode="valid").max()) if len(rows) >= window else total
+    if best < FAST_SHARE * total:
+        return False                                       # spread over the picture
+    columns = np.flatnonzero(added.sum(axis=0))
+    return len(columns) > 0 and (columns[-1] - columns[0]) >= FAST_WIDTH * latest.shape[1]
 
 
 def _appeared_or_vanished(reference: np.ndarray, latest: np.ndarray) -> int:
@@ -50,15 +70,18 @@ class TextChangeWatcher:
         self._reference: np.ndarray | None = None
         self._latest: np.ndarray | None = None
         self._previous: np.ndarray | None = None
+        self._before: np.ndarray | None = None
         self.strictness = 1           # grows while readings keep finding nothing new (a busy background): fewer small alarms
         self.settling = False         # True: the picture just turned from calm to different - look again right away
 
     def changed(self, frame: np.ndarray) -> bool:
-        self._previous, self._latest = self._latest, text_mask(frame)
+        self._before, self._previous, self._latest = self._previous, self._latest, text_mask(frame)
         self.settling = False
         if self._previous is None or self._previous.shape != self._latest.shape:
             return False                                   # nothing to compare with yet
         if mask_distance(self._previous, self._latest) > self._still:
+            if self._fast_accept():
+                return True
             # moving: not text, or text that has only just appeared. It is worth a quick second look only when the
             # look before was calm (a subtitle appearing); a scene that never settles is looked at once per poll.
             if self._reference is None:
@@ -77,6 +100,12 @@ class TextChangeWatcher:
             return True
         # A quest line that stays on screen makes the share of change small: count the pixels instead
         return _appeared_or_vanished(self._reference, self._latest) >= NEW_TEXT_PIXELS * self.strictness
+
+    def _fast_accept(self) -> bool:
+        """A subtitle line appeared in a calm picture: no need to wait a second look to see that it stands still."""
+        calm = (self._before is not None and self._before.shape == self._previous.shape
+                and mask_distance(self._before, self._previous) <= self._still)       # the look before was not moving
+        return calm and looks_like_a_line_of_text(self._previous, self._latest)
 
     def commit(self) -> None:
         self._reference = self._latest
