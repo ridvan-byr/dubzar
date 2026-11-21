@@ -6,6 +6,7 @@ listening: no speech model runs while this source finds subtitles.
 
 import hashlib
 import logging
+import queue
 import threading
 import time
 from typing import Callable, Protocol, Sequence
@@ -62,6 +63,9 @@ class ScreenSubtitleSource:
         self._stop = threading.Event()
         self._thread: threading.Thread | None = None
         self.ocr_calls = 0
+        self._pending: queue.Queue = queue.Queue()
+        self._epoch = 0                         # grows when the subtitle is cleared: older queued cues are stale
+        self._worker: threading.Thread | None = None
 
     @property
     def blocked(self) -> bool:
@@ -117,6 +121,7 @@ class ScreenSubtitleSource:
         update = self._tracker.update(texts, trusted)
         if update.cleared:
             log.info("oyunun altyazısı ekrandan kalktı")
+            self._epoch += 1
             self._on_clear()
             self._event_at = None
         if update.text:
@@ -132,6 +137,30 @@ class ScreenSubtitleSource:
         return min(BACKOFF_CAP_S, max(base, self._poll_s * (2 ** min(self._wasted, 4))))   # the larger, not the product
 
     def _show(self, text: str) -> None:
+        if self._worker is not None:                       # translating takes a few tenths of a second: do it beside
+            self._pending.put((text, self._epoch, self._event_at))   # the reading, so the next subtitle is read meanwhile
+            self._event_at = None
+            return
+        self._emit(text, self._event_at)
+        self._event_at = None
+
+    def _translate_loop(self) -> None:
+        while not self._stop.is_set():
+            try:
+                item = self._pending.get(timeout=0.2)
+            except queue.Empty:
+                continue
+            while not self._pending.empty():               # a newer subtitle is already waiting: the older one has
+                item = self._pending.get_nowait()          # left the screen, skip it
+            text, epoch, event_at = item
+            if epoch != self._epoch:
+                continue                                   # cleared since: do not show a ghost
+            try:
+                self._emit(text, event_at)
+            except Exception:
+                log.exception("subtitle translation failed")
+
+    def _emit(self, text: str, event_at: float | None) -> None:
         translated = self._translations.get(text)
         if translated is None:
             translated = self._translator.translate(text).strip()
@@ -140,9 +169,8 @@ class ScreenSubtitleSource:
                 self._translations.pop(next(iter(self._translations)))
         if not translated:
             return
-        if self._event_at is not None:
-            self.last_latency_s = self._clock() - self._event_at
-            self._event_at = None
+        if event_at is not None:
+            self.last_latency_s = self._clock() - event_at
             log.info("altyazı gecikmesi: ekranda belirdikten ~%.2f sn sonra gösterildi", self.last_latency_s)
         log.info("oyunun altyazısı okundu: '%s' → '%s'", text, translated)
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
@@ -150,12 +178,15 @@ class ScreenSubtitleSource:
 
     def start(self) -> None:
         self._thread = threading.Thread(target=self._run, name="dubzar-screen", daemon=True)
+        self._worker = threading.Thread(target=self._translate_loop, name="dubzar-screen-translate", daemon=True)
         self._thread.start()
+        self._worker.start()
 
     def stop(self) -> None:
         self._stop.set()
-        if self._thread is not None:
-            self._thread.join(2)
+        for thread in (self._thread, self._worker):
+            if thread is not None:
+                thread.join(2)
 
     def _run(self) -> None:
         while not self._stop.wait(self.current_wait):

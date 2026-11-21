@@ -202,3 +202,35 @@ def test_the_delay_from_appearing_to_showing_is_recorded():
     source.poll_once()
 
     assert source.last_latency_s == pytest.approx(0.0, abs=1e-6)
+
+
+def test_translation_runs_beside_reading_so_a_slow_translation_does_not_hold_back_the_next_subtitle():
+    import threading
+    import time
+
+    slow = threading.Event()
+
+    class SlowTranslate:
+        def translate(self, text, context=()):
+            if text == LINE:
+                slow.wait(2)                                       # the first subtitle takes long to translate
+            return "TR: " + text
+
+    cues = []
+    ocr = FakeOcr(LINE, OTHER)
+    source = ScreenSubtitleSource(lambda: FRAME, ocr, SlowTranslate(), cues.append, lambda: None,
+                                  watcher=Watcher(True, True))
+    source.start()
+    try:
+        deadline = time.time() + 2
+        while ocr.calls < 2 and time.time() < deadline:
+            time.sleep(0.01)
+        assert ocr.calls >= 2                                       # the second subtitle was read while the first
+        slow.set()                                                  # was still being translated
+        deadline = time.time() + 2
+        while not cues and time.time() < deadline:
+            time.sleep(0.01)
+    finally:
+        source.stop()
+
+    assert [c.text_src for c in cues][-1] == OTHER
