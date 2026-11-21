@@ -20,6 +20,10 @@ GEMMA_PROMPT = ("Translate the following English video game subtitle into natura
 
 
 def madlad(device: str, threads: int):
+    import os
+
+    import torch                                                     # its folder holds the CUDA 12 libraries (cublas)
+    os.add_dll_directory(str(Path(torch.__file__).parent / "lib"))
     import ctranslate2
     import sentencepiece as spm
     from huggingface_hub import snapshot_download
@@ -31,13 +35,18 @@ def madlad(device: str, threads: int):
 
     def run(text: str) -> str:
         tokens = sp.encode("<2tr> " + text, out_type=str)
-        out = translator.translate_batch([tokens], beam_size=4, max_decoding_length=256)
+        out = translator.translate_batch([tokens], beam_size=4, max_decoding_length=int(len(tokens) * 2.5) + 8,
+                                         repetition_penalty=1.3, no_repeat_ngram_size=3)
         return sp.decode(out[0].hypotheses[0])
 
     return run
 
 
 def gemma(gpu_layers: int, threads: int):
+    import os
+
+    import torch                                                     # its folder holds the CUDA 12 libraries
+    os.add_dll_directory(str(Path(torch.__file__).parent / "lib"))
     from huggingface_hub import snapshot_download
     from llama_cpp import Llama
 
@@ -50,6 +59,23 @@ def gemma(gpu_layers: int, threads: int):
         out = llm.create_chat_completion(messages=[{"role": "user", "content": GEMMA_PROMPT.format(text=text)}],
                                          temperature=0.0, max_tokens=200)
         return out["choices"][0]["message"]["content"].strip()
+
+    return run
+
+
+def gemma_server(port: int = 8099):
+    """Gemma 4 served by the official llama.cpp server on this machine."""
+    import json
+    import urllib.request
+
+    def run(text: str) -> str:
+        body = json.dumps({"messages": [{"role": "user", "content": GEMMA_PROMPT.format(text=text)}],
+                           "temperature": 0, "max_tokens": 200,
+                           "chat_template_kwargs": {"enable_thinking": False}}).encode()
+        request = urllib.request.Request(f"http://127.0.0.1:{port}/v1/chat/completions", body,
+                                         {"Content-Type": "application/json"})
+        with urllib.request.urlopen(request, timeout=120) as reply:
+            return json.load(reply)["choices"][0]["message"]["content"].strip()
 
     return run
 
@@ -69,7 +95,7 @@ def main() -> int:
     args = ap.parse_args()
     sys.stdout.reconfigure(errors="replace", encoding="utf-8")
     makers = {"opus": lambda: opus(args.threads), "madlad-gpu": lambda: madlad("cuda", args.threads),
-              "madlad-cpu": lambda: madlad("cpu", args.threads), "gemma-gpu": lambda: gemma(-1, args.threads),
+              "madlad-cpu": lambda: madlad("cpu", args.threads), "gemma-gpu": lambda: gemma(-1, args.threads), "gemma-server": gemma_server,
               "gemma-cpu": lambda: gemma(0, args.threads)}
     results = {}
     for name in args.models:
