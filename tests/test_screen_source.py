@@ -35,9 +35,20 @@ class Translate:
         return "TR: " + text
 
 
+class AlwaysChanged:
+    """These tests use flat pictures without any text-like pixels: treat every picture as changed, so each poll reads."""
+
+    def changed(self, frame):
+        return True
+
+    def commit(self):
+        pass
+
+
 def make(frames, ocr_script, **kw):
     frames = list(frames)
     cues, clears = [], []
+    kw.setdefault("watcher", AlwaysChanged())
     source = ScreenSubtitleSource(lambda: frames.pop(0) if frames else PICTURE, FakeOcr(ocr_script), Translate(),
                                   cues.append, lambda: clears.append(1), **kw)
     return source, cues, clears
@@ -97,12 +108,3 @@ def test_no_monitor_means_nothing_happens():
     source.poll_once()
 
     assert cues == [] and not source.blocked
-
-
-def test_an_unchanged_picture_is_not_read_again():
-    source, cues, _ = make([PICTURE] * 6, [[line(TEXT)]])
-
-    for _ in range(6):
-        source.poll_once()
-
-    assert source.ocr_calls == 1

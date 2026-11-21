@@ -85,22 +85,27 @@ def make_reader():
     Windows engine behind it as a safety net; either alone when the other is unavailable; None when neither is."""
     from dubzar import ocr as ocr_module
 
-    windows = primary = None
+    windows = windows_engine = primary = None
     try:
-        windows = ocr_module.RobustOcr(ocr_module.WindowsOcr())   # several preparations, dictionary repair, best wins
+        windows_engine = ocr_module.WindowsOcr()
     except Exception as exc:  # noqa: BLE001
         log.info("Windows OCR yok (%s)", exc)
     try:
         from dubzar.ocr_rapid import RapidOcr
 
-        primary = RapidOcr(threads=2)
+        # Readings are rare now (only when the subtitle changes), so a short burst on 4 threads (0.38 s instead of
+        # 0.66 s on 2) is worth it; the process runs at below-normal priority, the game keeps its cores.
+        primary = RapidOcr(threads=4)
     except Exception as exc:  # noqa: BLE001
         log.info("RapidOCR yok (%s)", exc)
-    if primary is not None and windows is not None:
-        return ocr_module.CascadeOcr(primary, windows)
+    if primary is not None and windows_engine is not None:
+        # two preparations are enough as a safety net behind RapidOCR (and cheaper)
+        return ocr_module.CascadeOcr(primary, ocr_module.RobustOcr(windows_engine, max_variants=2))
     if primary is not None:
         return ocr_module.CascadeOcr(primary, _NoReader())
-    return windows
+    if windows_engine is not None:
+        return ocr_module.RobustOcr(windows_engine)          # on its own it keeps all its preparations
+    return None
 
 
 def make_screen_source(settings: Settings, translator: Translator, bridge) -> ScreenSubtitleSource | None:

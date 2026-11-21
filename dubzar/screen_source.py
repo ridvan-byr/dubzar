@@ -14,22 +14,23 @@ import numpy as np
 
 from dubzar.models import Cue
 from dubzar.layout import dialogue_block
-from dubzar.ocr import OcrLine, central_lines
+from dubzar.ocr import CONFIDENT, OcrLine, central_lines
 from dubzar.screen import is_black
 from dubzar.subtitle_tracker import SubtitleTracker, subtitle_text
+from dubzar.textfix import text_quality
+from dubzar.textmask import TextChangeWatcher
 from dubzar.translate import Translator
 
 log = logging.getLogger(__name__)
 
-SLOW_READING_FACTOR = 1.5    # after a slow reading wait this many times as long before the next one
-
-
-def next_wait(poll_s: float, last_read_s: float) -> float:
-    """A reading that takes long must not be followed at once by another: a game would be starved."""
-    return max(poll_s, SLOW_READING_FACTOR * last_read_s)
+HEARTBEAT_S = 3.0           # read the strip at least this often even if it looks unchanged (a safety net)
+BACKOFF_CAP_S = 1.5         # the longest pause between looks when readings keep finding nothing
+IDLE_AFTER_S = 15.0         # no subtitle seen for this long: plain gameplay, look less often
+IDLE_POLL_S = 0.6           # (a look is a screenshot, about 50 ms; subtitles are on screen for seconds)
+DICTIONARY_TRUST = 0.97     # a reading this entirely made of real English words ...
+TRUST_MIN_WORDS = 5         # ... and long enough not to be a fragment, is believed without a second reading
 HOLD_ACTIVE_S = 8.0         # after the last subtitle was seen, keep speech recognition resting this long
 BLACK_LIMIT = 10            # consecutive black frames before we conclude capture is blocked
-IDLE_SIGNATURE_DIFF = 0.5   # mean pixel change below this: the picture is unchanged, reuse the last OCR result
 
 
 class Reader(Protocol):
@@ -38,8 +39,8 @@ class Reader(Protocol):
 
 class ScreenSubtitleSource:
     def __init__(self, grab_frame: Callable[[], np.ndarray | None], ocr: Reader, translator: Translator,
-                 on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.35,
-                 black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic):
+                 on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.2,
+                 black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic, watcher=None):
         self._grab = grab_frame
         self._ocr = ocr
         self._translator = translator
@@ -51,8 +52,11 @@ class ScreenSubtitleSource:
         self._tracker = SubtitleTracker()
         self._black = 0
         self._last_seen = float("-inf")
-        self._last_signature: np.ndarray | None = None
-        self._last_lines: list[OcrLine] = []
+        self._watcher = watcher or TextChangeWatcher()
+        self._last_read_at = float("-inf")
+        self._wasted = 0                        # readings in a row that found no subtitle
+        self._event_at: float | None = None     # when the strip first changed for the subtitle now being waited for
+        self.last_latency_s: float | None = None
         self._translations: dict[str, str] = {}
         self._stop = threading.Event()
         self._thread: threading.Thread | None = None
@@ -82,27 +86,43 @@ class ScreenSubtitleSource:
             log.info("ekran görüntüsü yeniden geliyor: oyunun altyazısı okunuyor")
         self._black = 0
 
-        lines = self._lines_for(frame)
+        now = self._clock()
+        changed = self._watcher.changed(frame)             # a few milliseconds: did the text-like pixels change?
+        if changed and self._event_at is None:
+            self._event_at = now
+        # Read when the strip changed, when a decision is still pending (a second sighting, or a subtitle that may
+        # have gone), and now and then anyway. Never otherwise: reading costs half a second of two cores.
+        if not (changed or self._tracker.unsettled or now - self._last_read_at >= HEARTBEAT_S):
+            return
+        self._watcher.commit()
+        self._last_read_at = now
+        self.ocr_calls += 1
+        lines = list(self._ocr.read(frame))
         block = sorted(dialogue_block(central_lines(lines)), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
         texts = [l.text for l in block]
-        if subtitle_text(texts) is not None:
+        found = subtitle_text(texts) is not None
+        if found:
             self._last_seen = self._clock()
-        update = self._tracker.update(texts)
+        text = subtitle_text(texts)
+        trusted = bool(block) and all(l.confidence >= CONFIDENT for l in block)         # the reader is sure
+        if not trusted and text is not None and len(text.split()) >= TRUST_MIN_WORDS:
+            trusted = text_quality(text) >= DICTIONARY_TRUST                            # or the text is plainly English
+        update = self._tracker.update(texts, trusted)
         if update.cleared:
             log.info("oyunun altyazısı ekrandan kalktı")
             self._on_clear()
+            self._event_at = None
         if update.text:
             self._show(update.text)
+        self._wasted = 0 if (found or self._tracker.unsettled) else self._wasted + 1
 
-    def _lines_for(self, frame: np.ndarray) -> list[OcrLine]:
-        signature = frame[::8, ::8].astype(np.int16)
-        if (self._last_signature is not None and signature.shape == self._last_signature.shape
-                and float(np.abs(signature - self._last_signature).mean()) < IDLE_SIGNATURE_DIFF):
-            return self._last_lines
-        self.ocr_calls += 1
-        lines = list(self._ocr.read(frame))
-        self._last_signature, self._last_lines = signature, lines
-        return lines
+    @property
+    def current_wait(self) -> float:
+        """How long to pause before the next look: the normal rhythm, longer while readings keep finding nothing (a
+        busy scene without subtitles must not make us read all the time)."""
+        quiet = self._clock() - self._last_seen >= IDLE_AFTER_S and not self._tracker.unsettled
+        base = max(self._poll_s, IDLE_POLL_S) if quiet else self._poll_s
+        return min(BACKOFF_CAP_S, max(base, self._poll_s * (2 ** min(self._wasted, 4))))   # the larger, not the product
 
     def _show(self, text: str) -> None:
         translated = self._translations.get(text)
@@ -113,6 +133,10 @@ class ScreenSubtitleSource:
                 self._translations.pop(next(iter(self._translations)))
         if not translated:
             return
+        if self._event_at is not None:
+            self.last_latency_s = self._clock() - self._event_at
+            self._event_at = None
+            log.info("altyazı gecikmesi: ekranda belirdikten ~%.2f sn sonra gösterildi", self.last_latency_s)
         log.info("oyunun altyazısı okundu: '%s' → '%s'", text, translated)
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
         self._on_cue(Cue("ocr/" + digest, text, translated, 0.0, until_cleared=True))
@@ -127,11 +151,8 @@ class ScreenSubtitleSource:
             self._thread.join(2)
 
     def _run(self) -> None:
-        wait = self._poll_s
-        while not self._stop.wait(wait):
-            started = time.perf_counter()
+        while not self._stop.wait(self.current_wait):
             try:
                 self.poll_once()
             except Exception:
                 log.exception("screen subtitle read failed")
-            wait = next_wait(self._poll_s, time.perf_counter() - started)

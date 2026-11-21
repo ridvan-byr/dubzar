@@ -75,7 +75,15 @@ class SubtitleTracker:
         self._candidate_count = 0
         self._gone = 0
 
-    def update(self, lines: list[str]) -> Update:
+    @property
+    def unsettled(self) -> bool:
+        """True while the tracker is waiting for another reading to decide: a candidate that needs a second sighting,
+        or a subtitle that may have gone away. The caller must keep reading then, whatever else it sees."""
+        return self._candidate is not None or (self._current is not None and self._gone > 0)
+
+    def update(self, lines: list[str], trusted: bool = False) -> Update:
+        """``trusted``: the reader is confident about these lines, so a new subtitle is shown at once instead of after
+        a second sighting (that second reading is the largest part of the delay)."""
         text = subtitle_text(lines)
         if text is None:
             self._candidate, self._candidate_count = None, 0
@@ -93,7 +101,7 @@ class SubtitleTracker:
             self._candidate_count += 1
         else:
             self._candidate, self._candidate_count = text, 1
-        if self._candidate_count >= 2:
+        if self._candidate_count >= 2 or trusted:
             self._current = text
             self._candidate, self._candidate_count = None, 0
             return Update(text, False)

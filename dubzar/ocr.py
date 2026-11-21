@@ -1,6 +1,7 @@
 """Windows' built-in text recognition (no download, no GPU): reads the text in a screenshot."""
 
 import asyncio
+import itertools
 import re
 from dataclasses import dataclass
 
@@ -103,10 +104,12 @@ class RobustOcr:
     AGREEMENT_BONUS = 1.0        # each further variant that reads the same text is worth this much credit
     LINE_GAP = 0.07              # lines of different readings closer than this (share of the picture) are the same line
 
-    def __init__(self, reader, vocab: Vocabulary | None = None, good_enough: float = GOOD_ENOUGH):
+    def __init__(self, reader, vocab: Vocabulary | None = None, good_enough: float = GOOD_ENOUGH,
+                 max_variants: int | None = None):
         self._reader = reader
         self._vocab = vocab
         self._good_enough = good_enough
+        self._max_variants = max_variants      # as a safety net behind a better reader, two preparations are enough
 
     @property
     def language(self) -> str:
@@ -131,7 +134,7 @@ class RobustOcr:
         seen: dict[str, tuple[list[OcrLine], float]] = {}
         votes: dict[str, int] = {}
         readings: list[list[OcrLine]] = []
-        for _, variant in imageprep.variants(image):
+        for _, variant in itertools.islice(imageprep.variants(image), self._max_variants):
             lines = self._clean(self._reader.read(variant))
             if not lines:
                 continue
@@ -224,13 +227,20 @@ class CascadeOcr:
                 continue
             taken.add(match)
             other = second[match]
-            merged.append(other if reading_score([other], self._vocab) > reading_score([line], self._vocab) else line)
+            merged.append(self._vouch(other) if reading_score([other], self._vocab) > reading_score([line], self._vocab) else line)
         for i, line in enumerate(second):
             if (i not in taken and not any(abs(line.center_y - m.center_y) <= self.LINE_GAP for m in merged)
                     and not self._repeats(line, merged)
                     and text_quality(line.text, self._vocab) >= 0.6 and reading_score([line], self._vocab) > 0):
-                merged.append(line)               # a line the primary missed entirely
+                merged.append(self._vouch(line))  # a line the primary missed entirely
         return merged
+
+    def _vouch(self, line: OcrLine) -> OcrLine:
+        """A fallback line has no confidence of its own. One that reads as ordinary English is vouched for by the
+        dictionary, so the caller does not have to read the picture a second time to be sure of it."""
+        if line.confidence == 0.0 and text_quality(line.text, self._vocab) >= 0.85:
+            return OcrLine(line.text, line.center_x, line.center_y, line.height, CONFIDENT)
+        return line
 
     @staticmethod
     def _repeats(line: OcrLine, lines: list[OcrLine]) -> bool:

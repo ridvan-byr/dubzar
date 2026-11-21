@@ -48,13 +48,6 @@ def test_a_hud_hint_above_the_dialogue_is_not_translated_with_it():
     assert [c.text_src for c in cues] == ["Laswell: How many? Ghost: There's a cove with four boats."]
 
 
-def test_polling_slows_down_when_a_reading_is_slow_so_a_game_is_not_starved():
-    from dubzar.screen_source import next_wait
-
-    assert next_wait(poll_s=0.35, last_read_s=0.05) == 0.35          # a fast reading: the normal rhythm
-    assert next_wait(poll_s=0.35, last_read_s=0.60) == pytest.approx(0.9)   # a slow one: wait a multiple of it
-
-
 def test_the_app_prefers_rapidocr_with_windows_behind_it_and_degrades_gracefully(monkeypatch):
     import dubzar.app as app
     import dubzar.ocr as ocr

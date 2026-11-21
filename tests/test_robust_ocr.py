@@ -272,3 +272,29 @@ def test_corner_text_like_a_watermark_neither_triggers_the_fallback_nor_gets_mat
     lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
 
     assert fallback.calls == 0 and texts(lines) == ["Keep your head down and stay quiet"]
+
+
+def test_a_fallback_line_that_reads_as_english_comes_back_as_trusted_so_no_second_reading_is_needed():
+    primary = Lines(("Ju Yeah, t' how B plants work", 0.30, 0.54), ("keep your head down and stay quiet", 0.60, 0.98))
+    fallback = Lines(("Keep your head down and stay quiet right now", 0.30, 0.0))
+
+    lines = sorted(CascadeOcr(primary, fallback, VOCAB).read(FRAME), key=lambda l: l.center_y)
+
+    assert lines[0].text.startswith("Keep your head") and lines[0].confidence >= 0.9
+
+
+def test_a_fallback_line_that_does_not_read_as_english_stays_untrusted():
+    primary = Lines(("zzzz qqqq", 0.30, 0.50),)
+    fallback = Lines(("Keep yoor hcad", 0.30, 0.0),)
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert all(l.confidence < 0.9 for l in lines)
+
+
+def test_a_fallback_reader_can_be_limited_to_a_few_variants():
+    reader = ScriptedReader("zzz qqq", "xxx yyy", "vvv www", "uuu ttt", "sss rrr", "ppp ooo")
+
+    RobustOcr(reader, VOCAB, max_variants=2).read(FRAME)
+
+    assert reader.calls == 2
