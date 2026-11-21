@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
+from dubzar.gameterms import match_prompt, memory_lookup
 from dubzar.textsplit import split_pieces
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
@@ -159,6 +160,15 @@ class OpusMtTranslator:
         return " ".join(part for part in parts if part)
 
     def _translate_sentence(self, text: str) -> str:
+        known = memory_lookup(text)               # a very common interface line: its fixed translation
+        if known:
+            return known
+        prompt = match_prompt(text, self._translate_plain)       # "Press E to open the door."
+        if prompt:
+            return prompt
+        return self._translate_plain(text)
+
+    def _translate_plain(self, text: str) -> str:
         protected, restore = self._protect_terms(text)
         translated = self._get_backend()(protected)
         for placeholder, target in restore.items():
