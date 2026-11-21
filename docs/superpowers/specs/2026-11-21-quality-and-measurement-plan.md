@@ -117,6 +117,47 @@ ChatGPT'nin önerdiği listenin kartlardan doğrulanan hâli. Hiçbirinde İngil
 
 **Sıra:** önce Hy-MT2 1.8B (4 GB indirme, **kullanıcı izni gerekir**), iyi çıkarsa 7B. Lisans okuması ilk adımda.
 
+**Sonuç 1: Hy-MT2-1.8B (22 Kasım 2026, RTX 4060, transformers, bf16, açgözlü çözümleme).** Lisans: `LICENSE.txt` düz Apache-2.0 (okundu). 120 satırlık kıyas (`experiments/mt_bench_llm.py`, raporlar `mt_bench_hymt2_report.md` ve `mt_bench_hymt2_terms_style_report.md`):
+
+| | chrF | satır başına süre | VRAM |
+|---|---|---|---|
+| Opus-MT (CPU, int8) | **66,7** | ~110 ms | ~0 |
+| Hy-MT2-1.8B | 62,0 | 800 ms | 3,6 GB |
+| Hy-MT2-1.8B + sözlük + "sen" üslubu | 62,4 | 660 ms | 3,6 GB |
+
+- Opus-MT'den 5+ puan iyi satır 28, 5+ puan kötü 48, yakın 44.
+- **Güçlü yanı:** ekran okuma gürültüsüne dayanıklı ("n0w" → "Şimdi"), argo ("freaking awesome" → "inanılmaz derecede harikaydı"), kısa cümleler ("Not now", "Nice shot"), sözlük ve üslup talimatını gerçekten uyguluyor ("save" → "Kaydetmeden çıkmak istiyor musun?", "Siper bul", emir kipinde "sen").
+- **Zayıf yanı:** kısa ünlemlerde ciddi hatalar ("Cover me!" → "Kapıyı kapatın!"/"Siperimi aç!", "Hold your fire!" → "Sakin olun!"), "ride" → "atlı araba", deyim kaçırıyor ("son of a gun"). Sözlük küçük modelde **sızabiliyor**: "Press R to reload." → "Doldur deme, araba." (sözlükteki iki kelime çevirinin içine girmiş).
+- **Hüküm:** Opus-MT'nin yerine geçmez (kalite düşük, 6-7 kat yavaş). "Yüksek" modda düzeltici/ikinci aşama olarak şimdilik zayıf aday; önce Opus-MT üstüne kural katmanı daha ucuz ve daha etkili görünüyor. 7B'yi (GGUF/FP8, 8 GB'a sığması için) ve Gemma 4 12B'yi aynı kıyasla denemeden bu karar kesinleşmez.
+- **Kısıtlar (dürüstlük):** referanslar Claude'dan; çözümleme açgözlü (kartın önerdiği örnekleme değil); transformers ile ölçüldü, llama.cpp/vLLM ile daha hızlı olabilir ama Opus-MT'yi geçmesi beklenmez; sözlüğün birkaç terimi kıyas satırlarıyla örtüşüyor, yani sözlük sonucu yöntemin çalıştığını gösterir, genelleme başarısını değil.
+
+**Sonuç 2: Opus-MT'yi ayar oynayarak ne kadar iyileştirebiliriz? (22 Kasım 2026, 120 satırlık kıyas; `experiments/mt_variants.py`, `experiments/mt_rerank.py`)**
+
+| Ayar | chrF |
+|---|---|
+| şimdiki (int8, beam 4) | 66,7 |
+| beam 8 | 67,0 |
+| beam 8 + uzunluk cezası 1,3 | 67,5 |
+| float32 (int8 yuvarlaması yok), beam 4 / 8 | 66,8 / 66,6 |
+| 8-en-iyi içinden en benzer olanı seçmek (MBR) | +0,6 |
+| 8-en-iyi içinden Hy-MT2-1.8B'nin en olası bulduğunu seçmek | +1,4 |
+
+Hepsi gürültü ile yakın (±1): **kod çözme ayarı, sayısal doğruluk ve yeniden sıralama "belirgin" iyileştirme vermiyor; sınır modelin kendisi.** Bu yüzden kazanç girdi/çıktı işlemede (kurallar, sözlük, şablon) ve model uyarlamasında (ince ayar) aranmalı.
+
+**Bulgu (uygulamadaki sorun, düzeltilecek):** satırı cümlelere bölen ve "Ad: metin" başındaki adı çeviriden ayıran katman, arayüz ve görev yazılarında zarar veriyor: aynı model ham satırla çevrilince "arayuz" türü 58,7 yerine 67,2 çıkıyor. Muhtemel neden: "Difficulty: Hard", "Controls: …", "Optional: …" gibi etiketlerin konuşmacı adı sanılıp çeviriden ayrılması ("Difficulty: Sert"), ve "Low health. Find cover." gibi kısa cümlelerin ayrı ayrı çevrilmesi. Çözüm: konuşmacı adı kuralını sıkılaştırmak (bilinen arayüz etiketleri ve çok kelimeli/küçük harfli adlar hariç) ve ölçmek. Not: kıyasın "ocr" türü uygulamadaki ekran okuma düzeltmesini (`textfix.py`) **atlıyor**, yani gerçekte olduğundan kötü görünüyor.
+
+**Sonuç 3: kural katmanları uygulandı (22 Kasım 2026; `dubzar/gameterms.py`, `dubzar/textsplit.py`, `experiments/mt_rules_bench.py`).**
+
+| Katman | chrF | arayüz | görev |
+|---|---|---|---|
+| önce | 66,7 | 58,7 | 70,5 |
+| + etiket kuralı (arayüz etiketleri konuşmacı sayılmaz) | 68,0 | 65,7 | 73,1 |
+| + "Press E to …" şablonu | 68,4 | 68,9 | 73,1 |
+| + sık arayüz satırı belleği (**şişirilmiş**: 7 satır kıyasta var) | 69,7 | 77,8 | 73,8 |
+
+Dürüst okuma: etiket kuralı ve şablon gerçek kazanç (+1,7, arayüz ve görev yazılarında); bellek yalnızca birebir satırlarda çalışır, kıyastaki kazancı kıyas satırlarıyla örtüştüğü için abartılı. **Argo, kısa ünlem ve resmi türler hiç değişmedi**: onları bu katmanlar çözmez, ancak model uyarlaması ya da başka bir model.
+Şablon, modelin "to X" yapısını doğru çevirmesine dayanır ("to open the door" → "Kapıyı açmak için"); model amaç tümleci vermezse cümle modele bırakılır.
+
 ## Model eğitimi: ne, nasıl, riskler
 
 **Ne eğitilir:** Opus-MT (tc-big, ~230 milyon parametre) oyun diyaloğuna ince ayar (fine-tune). 8 GB'lık RTX 4060'ta mümkün; veri 20-100 bin satır ise birkaç saat. Sonra CTranslate2 int8 biçimine çevrilir (şimdiki gibi), çalışma hızı aynı kalır.
