@@ -106,3 +106,16 @@ def test_the_reference_only_moves_when_committed():
     assert look(watcher, with_subtitle(scene(2)), commit=False)               # seen but not read yet
 
     assert look(watcher, with_subtitle(scene(3)), commit=False)               # still "new": nothing was committed
+
+
+def test_a_subtitle_just_appearing_asks_for_a_quick_second_look_but_a_moving_scene_does_not():
+    watcher = TextChangeWatcher()
+    look(watcher, scene(1))
+    look(watcher, scene(2))
+    look(watcher, with_subtitle(scene(3)))
+    assert watcher.settling                                                   # calm, then text: look again at once
+
+    busy = TextChangeWatcher()
+    for seed in range(6):
+        look(busy, moving_scene(seed))
+    assert not busy.settling                                                  # never calm: no extra looks

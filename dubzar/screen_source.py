@@ -23,10 +23,11 @@ from dubzar.translate import Translator
 
 log = logging.getLogger(__name__)
 
+SETTLE_S = 0.04         # pause before the quick second look at something that just appeared
 HEARTBEAT_S = 3.0           # read the strip at least this often even if it looks unchanged (a safety net)
 BACKOFF_CAP_S = 1.5         # the longest pause between looks when readings keep finding nothing
 IDLE_AFTER_S = 15.0         # no subtitle seen for this long: plain gameplay, look less often
-IDLE_POLL_S = 0.6           # (a look is a screenshot, about 50 ms; subtitles are on screen for seconds)
+IDLE_POLL_S = 0.3           # (a look is a screenshot, about 50 ms; subtitles are on screen for seconds)
 DICTIONARY_TRUST = 0.97     # a reading this entirely made of real English words ...
 TRUST_MIN_WORDS = 5         # ... and long enough not to be a fragment, is believed without a second reading
 HOLD_ACTIVE_S = 8.0         # after the last subtitle was seen, keep speech recognition resting this long
@@ -39,7 +40,7 @@ class Reader(Protocol):
 
 class ScreenSubtitleSource:
     def __init__(self, grab_frame: Callable[[], np.ndarray | None], ocr: Reader, translator: Translator,
-                 on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.2,
+                 on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.12,
                  black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic, watcher=None):
         self._grab = grab_frame
         self._ocr = ocr
@@ -88,6 +89,12 @@ class ScreenSubtitleSource:
 
         now = self._clock()
         changed = self._watcher.changed(frame)             # a few milliseconds: did the text-like pixels change?
+        if not changed and getattr(self._watcher, "settling", False):
+            time.sleep(SETTLE_S)                           # something just appeared: is it standing still? ask now,
+            again = self._grab()                           # not one poll later
+            if again is not None:
+                frame = again
+                changed = self._watcher.changed(frame)
         if changed and self._event_at is None:
             self._event_at = now
         # Read when the strip changed, when a decision is still pending (a second sighting, or a subtitle that may

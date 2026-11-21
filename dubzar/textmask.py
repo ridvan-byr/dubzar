@@ -42,13 +42,22 @@ class TextChangeWatcher:
         self._reference: np.ndarray | None = None
         self._latest: np.ndarray | None = None
         self._previous: np.ndarray | None = None
+        self.settling = False         # True: the picture just turned from calm to different - look again right away
 
     def changed(self, frame: np.ndarray) -> bool:
         self._previous, self._latest = self._latest, text_mask(frame)
+        self.settling = False
         if self._previous is None or self._previous.shape != self._latest.shape:
             return False                                   # nothing to compare with yet
         if mask_distance(self._previous, self._latest) > self._still:
-            return False                                   # still moving: not text (or not settled yet)
+            # moving: not text, or text that has only just appeared. It is worth a quick second look only when the
+            # look before was calm (a subtitle appearing); a scene that never settles is looked at once per poll.
+            if self._reference is None:
+                self.settling = int(self._previous.sum()) < self._min_pixels
+            else:
+                self.settling = (self._reference.shape == self._previous.shape
+                                 and mask_distance(self._reference, self._previous) <= self._threshold)
+            return False
         if self._reference is None:
             return int(self._latest.sum()) >= self._min_pixels
         if max(int(self._latest.sum()), int(self._reference.sum())) < self._min_pixels:

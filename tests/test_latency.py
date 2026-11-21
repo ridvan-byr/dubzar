@@ -178,7 +178,7 @@ def test_readings_that_find_nothing_make_polling_back_off_and_finding_a_subtitle
     source.poll_once()
 
     assert backed_off >= 1.0                             # readings kept finding nothing: far apart
-    assert source.current_wait == 0.2                    # a subtitle appeared: the quick rhythm again
+    assert source.current_wait == 0.12                    # a subtitle appeared: the quick rhythm again
 
 
 def test_looking_is_slow_while_no_subtitle_has_been_seen_for_a_while_and_quick_during_a_conversation():
@@ -186,13 +186,13 @@ def test_looking_is_slow_while_no_subtitle_has_been_seen_for_a_while_and_quick_d
     now = {"t": 0.0}
     source, _, _ = make(FakeOcr(LINE), Watcher(True), clock=lambda: now["t"])
 
-    assert source.current_wait == 0.6                    # nothing seen yet: relaxed
+    assert source.current_wait == 0.3                    # nothing seen yet: relaxed
     source.poll_once()
-    assert source.current_wait == 0.2                    # a subtitle: quick
+    assert source.current_wait == 0.12                    # a subtitle: quick
     now["t"] += 14
-    assert source.current_wait == 0.2                    # a short pause in the conversation: still quick
+    assert source.current_wait == 0.12                    # a short pause in the conversation: still quick
     now["t"] += 10
-    assert source.current_wait == 0.6                    # a long quiet time: relaxed again
+    assert source.current_wait == 0.3                    # a long quiet time: relaxed again
 
 
 def test_the_delay_from_appearing_to_showing_is_recorded():
