@@ -105,10 +105,13 @@ class ScreenSubtitleSource:
         # have gone), and now and then anyway. Never otherwise: reading costs half a second of two cores.
         if not (changed or self._tracker.unsettled or now - self._last_read_at >= HEARTBEAT_S):
             return
+        reason = "değişim" if changed else "doğrulama" if self._tracker.unsettled else "nabız"
         self._watcher.commit()
         self._last_read_at = now
         self.ocr_calls += 1
+        began = time.perf_counter()
         lines = list(self._ocr.read(frame))
+        read_s = time.perf_counter() - began
         block = sorted(dialogue_block(central_lines(lines)), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
         texts = [l.text for l in block]
         found = subtitle_text(texts) is not None
@@ -119,6 +122,10 @@ class ScreenSubtitleSource:
         if not trusted and text is not None and len(text.split()) >= TRUST_MIN_WORDS:
             trusted = text_quality(text) >= DICTIONARY_TRUST                            # or the text is plainly English
         update = self._tracker.update(texts, trusted)
+        log.debug("okuma: sebep=%s, %.2f sn, satır=%d, güvenli=%s, yeni=%s, bekleyen=%s",
+                  reason, read_s, len(block), trusted, bool(update.text), self._tracker.unsettled)
+        if not update.text and not update.cleared and not self._tracker.unsettled:
+            self._event_at = None            # a change that brought nothing new must not inflate the next delay
         if update.cleared:
             log.info("oyunun altyazısı ekrandan kalktı")
             self._epoch += 1
@@ -163,7 +170,9 @@ class ScreenSubtitleSource:
     def _emit(self, text: str, event_at: float | None) -> None:
         translated = self._translations.get(text)
         if translated is None:
+            began = time.perf_counter()
             translated = self._translator.translate(text).strip()
+            log.debug("çeviri: %.2f sn (%d kelime)", time.perf_counter() - began, len(text.split()))
             self._translations[text] = translated
             if len(self._translations) > 200:
                 self._translations.pop(next(iter(self._translations)))
