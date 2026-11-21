@@ -41,3 +41,37 @@ def test_lines_without_a_known_height_still_group_sensibly():
     lines = [OcrLine("noise", 0.5, 0.02), OcrLine("a real sentence here", 0.5, 0.7), OcrLine("and its second line", 0.5, 0.85)]
 
     assert texts(dialogue_block(lines)) == ["a real sentence here", "and its second line"]
+
+
+def test_a_quest_line_that_stays_through_several_conversations_is_dropped_from_the_dialogue():
+    from dubzar.layout import StickyLines
+
+    sticky = StickyLines()
+    quest = OcrLine("Go to the club", 0.5, 0.80, 0.05)
+    talk = ["Keep your head down.", "We need more time.", "They are almost here.", "Stay close to me."]
+    kept = None
+    for step, said in enumerate(talk):
+        kept = sticky.filter([OcrLine(said, 0.5, 0.74, 0.05), quest], now=step * 2.0)
+
+    assert [l.text for l in kept] == [talk[-1]]                     # dialogue stays, the objective is gone
+
+
+def test_dialogue_and_speaker_names_are_never_taken_for_hud():
+    from dubzar.layout import StickyLines
+
+    sticky = StickyLines()
+    for step in range(8):
+        kept = sticky.filter([OcrLine("Nate:", 0.5, 0.70, 0.05), OcrLine(f"Line number {step} here.", 0.5, 0.76, 0.05)],
+                             now=step * 2.0)
+
+    assert [l.text for l in kept] == ["Nate:", "Line number 7 here."]
+
+
+def test_a_single_subtitle_shown_for_a_long_time_is_not_hud():
+    from dubzar.layout import StickyLines
+
+    sticky = StickyLines()
+    for step in range(10):
+        kept = sticky.filter([OcrLine("Keep your head down.", 0.5, 0.74, 0.05)], now=step * 2.0)
+
+    assert len(kept) == 1

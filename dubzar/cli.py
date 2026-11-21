@@ -133,6 +133,8 @@ def _configure_logging(debug: bool) -> None:
     """--debug prints what the live mode does (levels, segments, why a subtitle was or was not shown)."""
     logging.basicConfig(level=logging.INFO if debug else logging.WARNING, format="%(asctime)s %(message)s",
                         datefmt="%H:%M:%S", force=True)
+    if debug:
+        logging.getLogger("dubzar").setLevel(logging.DEBUG)        # our own detail (read times), not other libraries'
 
 
 def _cmd_setup(args, transcriber: Transcriber | None, translator: Translator | None) -> int:

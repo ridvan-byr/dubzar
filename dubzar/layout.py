@@ -22,3 +22,40 @@ def dialogue_block(lines: list[OcrLine]) -> list[OcrLine]:
         else:
             groups[-1].append(line)
     return max(groups, key=lambda g: (sum(len(l.text.split()) for l in g), g[-1].center_y))
+
+
+STICKY_OTHERS = 3         # a line that stayed while this many different things were said around it is not dialogue
+STICKY_SECONDS = 4.0
+FORGET_SECONDS = 12.0
+
+
+def _key(text: str) -> str:
+    return "".join(ch for ch in text.lower() if ch.isalnum())
+
+
+class StickyLines:
+    """Objective and quest lines stay on screen while people talk ('Go to the club' under every subtitle). A line that
+    has stayed through several different conversations is HUD, so it is taken out before the dialogue is chosen."""
+
+    def __init__(self):
+        self._seen: dict[str, list] = {}        # key -> [first seen, last seen, set of what was around it]
+
+    def filter(self, lines: list[OcrLine], now: float) -> list[OcrLine]:
+        for key in [k for k, rec in self._seen.items() if now - rec[1] > FORGET_SECONDS]:
+            del self._seen[key]
+        keys = [_key(l.text) for l in lines]
+        for line, key in zip(lines, keys):
+            if len(key) < 4 or line.text.rstrip().endswith(":"):
+                continue                                   # too short to be sure, or a speaker's name
+            around = frozenset(k for k in keys if k != key)
+            record = self._seen.setdefault(key, [now, now, set()])
+            record[1] = now
+            record[2].add(around)
+        kept = []
+        for line, key in zip(lines, keys):
+            record = self._seen.get(key)
+            sticky = (record is not None and now - record[0] >= STICKY_SECONDS
+                      and len(record[2] - {frozenset()}) >= STICKY_OTHERS)
+            if not sticky:
+                kept.append(line)
+        return kept

@@ -119,3 +119,15 @@ def test_a_subtitle_just_appearing_asks_for_a_quick_second_look_but_a_moving_sce
     for seed in range(6):
         look(busy, moving_scene(seed))
     assert not busy.settling                                                  # never calm: no extra looks
+
+
+def test_a_new_subtitle_is_noticed_even_beside_a_quest_line_that_stays():
+    """The objective text stays on screen for minutes: the share of change is small, the new letters are not."""
+    quest = with_subtitle(scene(1), x0=50, x1=1150, y0=290, period=10)         # a long lasting line at the bottom
+    watcher = TextChangeWatcher()
+    look(watcher, quest)
+    look(watcher, quest)
+
+    talking = with_subtitle(quest, x0=500, x1=650, y0=120, period=9)           # a short line of dialogue appears
+    assert mask_distance(text_mask(quest), text_mask(talking)) < 0.4            # by share it is a small change
+    assert look(watcher, talking) or look(watcher, talking)

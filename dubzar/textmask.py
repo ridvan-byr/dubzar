@@ -10,6 +10,7 @@ BRIGHT_FLOOR = 150        # letters are never darker than this
 OUTLINE_REACH = 2         # a letter pixel sits within this many (small) pixels of a dark one
 CHANGE_THRESHOLD = 0.4    # share of text-like pixels that differ from the last reading
 STILL_THRESHOLD = 0.5    # text-like pixels that moved more than this since the last look are not a subtitle
+NEW_TEXT_PIXELS = 100     # this many text-like pixels appearing (or vanishing) is a new subtitle even beside lasting HUD text
 MIN_PIXELS = 30          # fewer text-like pixels than this: no subtitle
 
 
@@ -26,6 +27,13 @@ def mask_distance(a: np.ndarray, b: np.ndarray) -> float:
     """0 for identical masks, 1 for masks with nothing in common."""
     union = int((a | b).sum())
     return 0.0 if union == 0 else 1.0 - int((a & b).sum()) / union
+
+
+def _appeared_or_vanished(reference: np.ndarray, latest: np.ndarray) -> int:
+    """The larger of: text-like pixels in ``latest`` that are not near any in ``reference``, and the other way round."""
+    appeared = int((latest & ~ndimage.binary_dilation(reference)).sum())
+    vanished = int((reference & ~ndimage.binary_dilation(latest)).sum())
+    return max(appeared, vanished)
 
 
 class TextChangeWatcher:
@@ -64,7 +72,10 @@ class TextChangeWatcher:
             return False                                   # nothing text-like then, nothing now
         if self._latest.shape != self._reference.shape:
             return True
-        return mask_distance(self._reference, self._latest) > self._threshold
+        if mask_distance(self._reference, self._latest) > self._threshold:
+            return True
+        # A quest line that stays on screen makes the share of change small: count the pixels instead
+        return _appeared_or_vanished(self._reference, self._latest) >= NEW_TEXT_PIXELS
 
     def commit(self) -> None:
         self._reference = self._latest

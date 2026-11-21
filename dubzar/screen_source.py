@@ -14,7 +14,7 @@ from typing import Callable, Protocol, Sequence
 import numpy as np
 
 from dubzar.models import Cue
-from dubzar.layout import dialogue_block
+from dubzar.layout import StickyLines, dialogue_block
 from dubzar.ocr import CONFIDENT, OcrLine, central_lines
 from dubzar.screen import is_black
 from dubzar.subtitle_tracker import SubtitleTracker, subtitle_text
@@ -52,6 +52,7 @@ class ScreenSubtitleSource:
         self._black_limit = black_limit
         self._clock = clock
         self._tracker = SubtitleTracker()
+        self._sticky = StickyLines()
         self._black = 0
         self._last_seen = float("-inf")
         self._watcher = watcher or TextChangeWatcher()
@@ -112,7 +113,7 @@ class ScreenSubtitleSource:
         began = time.perf_counter()
         lines = list(self._ocr.read(frame))
         read_s = time.perf_counter() - began
-        block = sorted(dialogue_block(central_lines(lines)), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
+        block = sorted(dialogue_block(self._sticky.filter(central_lines(lines), self._clock())), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
         texts = [l.text for l in block]
         found = subtitle_text(texts) is not None
         if found:
