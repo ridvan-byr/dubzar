@@ -68,3 +68,20 @@ def test_a_real_reading_of_a_rendered_subtitle():
     lines = RapidOcr().read(np.asarray(image))
 
     assert "keep your head down" in " ".join(l.text for l in lines).lower()
+
+
+def test_idle_spinning_is_switched_off_for_ocr_sessions():
+    pytest.importorskip("rapidocr")
+    from rapidocr.inference_engine.onnxruntime.main import OrtInferSession
+
+    import dubzar.ocr_rapid as rapid
+
+    rapid.stop_idle_spinning()
+    rapid.stop_idle_spinning()                                   # twice is harmless
+
+    class Cfg(dict):
+        __getattr__ = dict.get
+
+    options = OrtInferSession._init_sess_opts(Cfg(enable_cpu_mem_arena=False, intra_op_num_threads=2,
+                                                   inter_op_num_threads=1))
+    assert options.get_session_config_entry("session.intra_op.allow_spinning") == "0"

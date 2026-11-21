@@ -36,6 +36,24 @@ def engine_params(threads: int, det_max_side: int, model_dir: Path | None) -> di
     return params
 
 
+def stop_idle_spinning() -> None:
+    """onnxruntime's worker threads busy-wait for work after every run: about one core burned between readings, which
+    the game needs. Switch that off for the sessions RapidOCR creates (it exposes no setting for it)."""
+    from rapidocr.inference_engine.onnxruntime.main import OrtInferSession
+
+    if getattr(OrtInferSession, "_dubzar_no_spin", False):
+        return
+    original = OrtInferSession._init_sess_opts
+
+    def patched(cfg):
+        options = original(cfg)
+        options.add_session_config_entry("session.intra_op.allow_spinning", "0")
+        return options
+
+    OrtInferSession._init_sess_opts = staticmethod(patched)
+    OrtInferSession._dubzar_no_spin = True
+
+
 class RapidOcr:
     language = "en (PP-OCRv5)"
 
@@ -44,6 +62,7 @@ class RapidOcr:
             from rapidocr import RapidOCR
 
             logging.getLogger("RapidOCR").setLevel(logging.ERROR)
+            stop_idle_spinning()
             engine = RapidOCR(params=engine_params(threads, det_max_side, model_dir or bundled_model_dir()))
         self._engine = engine
 
