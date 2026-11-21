@@ -1,6 +1,7 @@
 """Windows' built-in text recognition (no download, no GPU): reads the text in a screenshot."""
 
 import asyncio
+import re
 from dataclasses import dataclass
 
 import numpy as np
@@ -16,6 +17,8 @@ class OcrLine:
     text: str
     center_x: float   # 0..1 across the image
     center_y: float   # 0..1 down the image
+    height: float = 0.0   # 0..1: how tall the line is (0 when unknown)
+    confidence: float = 0.0   # 0..1: how sure the reader is about this line (0 when it does not say)
 
 
 class WindowsOcr:
@@ -60,8 +63,34 @@ class WindowsOcr:
             right = max(w.bounding_rect.x + w.bounding_rect.width for w in words)
             top = min(w.bounding_rect.y for w in words)
             bottom = max(w.bounding_rect.y + w.bounding_rect.height for w in words)
-            lines.append(OcrLine(line.text, (left + right) / 2 / width, (top + bottom) / 2 / height))
+            lines.append(OcrLine(line.text, (left + right) / 2 / width, (top + bottom) / 2 / height,
+                                 (bottom - top) / height))
         return lines
+
+
+CONFIDENT = 0.9   # a reader's own confidence above which a line is only given the safe repairs
+CENTRAL_X = (0.2, 0.8)   # subtitles are centred; watermarks, minimaps and ammo counters sit at the sides
+
+
+def central_lines(lines: list[OcrLine]) -> list[OcrLine]:
+    return [l for l in lines if CENTRAL_X[0] <= l.center_x <= CENTRAL_X[1]]
+
+
+def clean_lines(lines: list[OcrLine], vocab: Vocabulary | None = None) -> list[OcrLine]:
+    """The usual repairs on each line (look-alike letters, run-together words, lost apostrophes)."""
+    cleaned = []
+    for line in lines:
+        fixed = fix_text(line.text, vocab, conservative=line.confidence >= CONFIDENT)
+        if sum(c in TURKISH_LETTERS for c in line.text) >= 2 and text_quality(fixed, vocab) < 0.6:
+            fixed = line.text.strip()     # it really is Turkish: keep the letters, folding would only mangle it
+        if fixed:
+            cleaned.append(OcrLine(fixed, line.center_x, line.center_y, line.height, line.confidence))
+    return cleaned
+
+
+def reading_score(lines: list[OcrLine], vocab: Vocabulary | None = None, garbage_penalty: float = 0.6) -> float:
+    credit, total = word_counts(" ".join(l.text for l in lines), vocab)
+    return credit - garbage_penalty * (total - credit)
 
 
 class RobustOcr:
@@ -84,14 +113,7 @@ class RobustOcr:
         return getattr(self._reader, "language", "?")
 
     def _clean(self, lines: list[OcrLine]) -> list[OcrLine]:
-        cleaned = []
-        for line in lines:
-            fixed = fix_text(line.text, self._vocab)
-            if sum(c in TURKISH_LETTERS for c in line.text) >= 2 and text_quality(fixed, self._vocab) < 0.6:
-                fixed = line.text.strip()     # it really is Turkish: keep the letters, folding would only mangle it
-            if fixed:
-                cleaned.append(OcrLine(fixed, line.center_x, line.center_y))
-        return cleaned
+        return clean_lines(lines, self._vocab)
 
     def _score(self, lines: list[OcrLine]) -> float:
         credit, total = word_counts(" ".join(l.text for l in lines), self._vocab)
@@ -154,5 +176,65 @@ class RobustOcr:
             if alone and (self._score([best]) <= 0 or text_quality(best.text, self._vocab) < 0.6):
                 continue                                   # garbage that only one variant produced
             merged.append(OcrLine(best.text, sum(l.center_x for l in groups[winner]) / len(groups[winner]),
-                                  sum(l.center_y for l in groups[winner]) / len(groups[winner])))
+                                  sum(l.center_y for l in groups[winner]) / len(groups[winner]), best.height))
         return merged
+
+
+class CascadeOcr:
+    """A good, fast primary reader with an older one as a safety net.
+
+    The primary's own confidence decides, not the dictionary (a name the dictionary has never seen is not a
+    misreading): when every line it read is confident, its reading is final and the fallback never runs. Otherwise the
+    fallback reads too, and line by line the doubtful primary lines are compared with it; a line only the fallback
+    found is added if it reads like English."""
+
+    LINE_GAP = 0.07     # lines of the two readings closer than this (share of the picture) are the same line
+    ACCEPT = 0.85       # for a primary that gives no confidence: the share of real words at which its reading is final
+
+    def __init__(self, primary, fallback, vocab: Vocabulary | None = None, confident: float = CONFIDENT):
+        self._primary, self._fallback, self._vocab, self._confident = primary, fallback, vocab, confident
+
+    @property
+    def language(self) -> str:
+        return getattr(self._primary, "language", "?")
+
+    def read(self, image: np.ndarray) -> list[OcrLine]:
+        first = central_lines(clean_lines(self._primary.read(image), self._vocab))
+        if first and self._final(first):
+            return first
+        second = central_lines(self._fallback.read(image))
+        if not first or not second:
+            return first or second
+        return self._combine(first, second)
+
+    def _final(self, lines: list[OcrLine]) -> bool:
+        if any(l.confidence > 0 for l in lines):                       # the reader says how sure it is: believe it
+            return all(l.confidence >= self._confident for l in lines)
+        return text_quality(" ".join(l.text for l in lines), self._vocab) >= self.ACCEPT   # it does not: ask the dictionary
+
+    def _combine(self, first: list[OcrLine], second: list[OcrLine]) -> list[OcrLine]:
+        taken: set[int] = set()
+        merged = []
+        for line in first:
+            match = min((i for i in range(len(second)) if i not in taken and
+                         abs(second[i].center_y - line.center_y) <= self.LINE_GAP),
+                        key=lambda i: abs(second[i].center_y - line.center_y), default=None)
+            if match is None or line.confidence >= self._confident:
+                merged.append(line)
+                continue
+            taken.add(match)
+            other = second[match]
+            merged.append(other if reading_score([other], self._vocab) > reading_score([line], self._vocab) else line)
+        for i, line in enumerate(second):
+            if (i not in taken and not any(abs(line.center_y - m.center_y) <= self.LINE_GAP for m in merged)
+                    and not self._repeats(line, merged)
+                    and text_quality(line.text, self._vocab) >= 0.6 and reading_score([line], self._vocab) > 0):
+                merged.append(line)               # a line the primary missed entirely
+        return merged
+
+    @staticmethod
+    def _repeats(line: OcrLine, lines: list[OcrLine]) -> bool:
+        """Most of this line's words are already in the result: another split of the same text, not a new line."""
+        known = {w for l in lines for w in re.findall(r"[a-z0-9']+", l.text.lower())}
+        mine = re.findall(r"[a-z0-9']+", line.text.lower())
+        return bool(mine) and sum(w in known for w in mine) / len(mine) >= 0.5

@@ -10,3 +10,4 @@ experiments/translation_compare_t*.md
 models_ft/
 models_ct2/
 dist/
+experiments/real_frames/

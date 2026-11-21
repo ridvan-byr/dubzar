@@ -8,8 +8,8 @@ from ctypes import wintypes
 import numpy as np
 
 WDA_EXCLUDEFROMCAPTURE = 0x11   # Windows 10 2004 and later
-BAND_X = (0.10, 0.90)           # the subtitle area: the lower middle of the monitor
-BAND_Y = (0.66, 0.97)
+BAND_X = (0.06, 0.94)           # the subtitle area: the lower part of the monitor, nearly its full width
+BAND_Y = (0.58, 1.00)           # down to the very edge: some games put the last line almost on it
 BLACK_MEAN, BLACK_STD = 2.0, 2.0
 
 

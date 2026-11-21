@@ -9,8 +9,8 @@ from dubzar.screen import band_box, is_black
 def test_band_covers_the_lower_middle_of_the_monitor():
     left, top, right, bottom = band_box((1920, 0, 3840, 1080))   # a second monitor to the right
 
-    assert left == 1920 + 192 and right == 1920 + 1728
-    assert 0.6 * 1080 <= top < bottom <= 1080
+    assert left == 1920 + int(1920 * 0.06) and right == 1920 + int(1920 * 0.94)
+    assert 0.5 * 1080 <= top < bottom <= 1080
 
 
 def test_band_works_for_a_monitor_left_of_the_primary():

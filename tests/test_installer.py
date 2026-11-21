@@ -30,10 +30,18 @@ def test_zip_has_the_installer_the_program_and_the_icon(built):
         assert f"{top}/{expected}" in files, expected
 
 
-def test_zip_carries_no_tests_caches_or_models(built):
+def test_zip_carries_the_two_text_reader_models_and_no_other_models(built):
+    from dubzar.ocr_rapid import DET_MODEL, REC_MODEL
+
+    shipped = sorted(n.split("/")[-1] for n in names(built) if "/models/" in n)
+
+    assert shipped == sorted([DET_MODEL, REC_MODEL])
+
+
+def test_zip_carries_no_tests_caches_or_large_weights(built):
     for name in names(built):
         assert "__pycache__" not in name and not name.endswith(".pyc")
-        assert "/tests/" not in name and "/experiments/" not in name and "/models/" not in name and "models_" not in name
+        assert "/tests/" not in name and "/experiments/" not in name and "models_" not in name
         assert not name.endswith((".gguf", ".safetensors", ".bin", ".db"))
 
 
@@ -44,6 +52,12 @@ def test_powershell_scripts_have_a_bom_and_batch_files_are_plain_ascii(built):
     for name in ("Kur.bat", "Kaldir.bat"):
         data = z.read(f"{build_zip.TOP}/{name}")
         assert all(b < 128 for b in data) and b"\r\n" in data
+
+
+def test_requirements_include_the_text_reader():
+    text = (ROOT / "installer" / "requirements.txt").read_text()
+
+    assert "rapidocr==" in text and "opencv-python-headless==" in text
 
 
 def test_requirements_are_pinned_and_the_qt_package_is_the_small_one():

@@ -142,3 +142,40 @@ def test_stray_capitals_inside_a_word_are_lowered(game_vocab):
 ])
 def test_a_word_right_after_a_sentence_end_gets_its_capital(real_like, read, expected):
     assert fix_text(read, real_like) == expected
+
+
+# --- a reader that is already right must not be "repaired" into being wrong (found on real frames) ----------------
+@pytest.fixture(scope="module")
+def frames_vocab():
+    scores = {"something": -7.7, "of": -4.0, "value": -9.0, "your": -5.6, "mind": -9.0, "dead": -8.9, "beat": -10.3,
+              "fia": -13.1, "sco": -12.1, "relies": -12.4, "chaotic": -12.7, "times": -8.4, "trade": -9.3,
+              "freely": -11.0, "south": -9.2, "america": -9.1, "i'm": -6.0, "like": -6.0, "the": -3.5, "in": -4.0}
+    return Vocabulary(scores)
+
+
+@pytest.mark.parametrize("text", ["the relics", "a deadbeat junkie", "the fiasco in Brazil"])
+def test_real_rare_words_are_not_split_or_swapped_when_the_reader_is_confident(frames_vocab, text):
+    assert fix_text(text, frames_vocab, conservative=True) == text
+
+
+def test_short_compounds_and_word_fragments_are_never_split(frames_vocab):
+    assert fix_text("a deadbeat", frames_vocab) == "a deadbeat"          # 8 letters: a real compound word
+    assert fix_text("the fiasco", frames_vocab) == "the fiasco"          # 'fia' and 'sco' are fragments, not words
+
+
+@pytest.mark.parametrize("read,expected", [
+    ("find somethingofvalue here", "find something of value here"),
+    ("In chaotictimes like", "In chaotic times like"),
+    ("SOUTHAMERICA", "SOUTH AMERICA"),
+])
+def test_long_run_together_words_are_split_even_when_confident(frames_vocab, read, expected):
+    assert fix_text(read, frames_vocab, conservative=True) == expected
+
+
+def test_the_games_apostrophe_is_repaired_even_when_confident(frames_vocab):
+    assert fix_text("I m like the", frames_vocab, conservative=True) == "I'm like the"
+
+
+def test_look_alike_swaps_are_for_doubtful_readings_only(frames_vocab):
+    assert fix_text("the rnind", frames_vocab, conservative=False) == "the mind"
+    assert fix_text("the rnind", frames_vocab, conservative=True) == "the rnind"

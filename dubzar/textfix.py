@@ -31,6 +31,8 @@ APOSTROPHE_MARK = re.compile(r"(?<=[A-Za-z])[!:;|](?=(?:s|t|m|d|ll|ve|re)\b)")
 LONE_I_SUFFIX = re.compile(r"\b[Il1|]\s+(m|ve|d)\b")             # "I m" : the apostrophe was dropped
 I_CONTRACTION = re.compile(r"^[Il1|][lIJtij1!:;|](ve|m)$")          # Ilve, Itve, lJve, Ilm
 SPLIT_PENALTY = 1.0
+SEG_MIN_LENGTH = 9        # shorter unknown words are real compounds (deadbeat), not two words run together
+SEG_MIN_MEAN_LOGP = -11.2  # the parts must be real, reasonably common words (not fragments like fia + sco)
 SHORT_PARTS = TWO_LETTER_WORDS | {"a", "i"}
 
 # What each observed character may really be (lower case). Only used on words that are not real words.
@@ -134,7 +136,7 @@ def _segment(core: str, vocab: Vocabulary) -> str | None:
     """Words that ran together ("tradefreely") split into the real words they are made of, or None."""
     low = core.lower()
     n = len(low)
-    if n < 5 or not low.isalpha():
+    if n < SEG_MIN_LENGTH or not low.isalpha():
         return None
     best: list[tuple[float, list[int]] | None] = [None] * (n + 1)
     best[0] = (0.0, [])
@@ -152,12 +154,12 @@ def _segment(core: str, vocab: Vocabulary) -> str | None:
     if best[n] is None or len(best[n][1]) < 2:
         return None
     lengths = best[n][1]
-    if min(lengths) <= 2 and n < 6:
-        return None
     parts, position = [], 0
     for length in lengths:
         parts.append(core[position: position + length])
         position += length
+    if sum(vocab.logp(p.lower()) for p in parts) / len(parts) < SEG_MIN_MEAN_LOGP:
+        return None
     return " ".join(parts)
 
 
@@ -167,7 +169,7 @@ def _match_case(original: str, fixed: str) -> str:
     return fixed
 
 
-def _fix_word(token: str, vocab: Vocabulary, sentence_start: bool) -> str:
+def _fix_word(token: str, vocab: Vocabulary, sentence_start: bool, conservative: bool = False) -> str:
     lead = token[: len(token) - len(token.lstrip("'"))]
     trail = token[len(token.rstrip("'")):] if token.rstrip("'") else ""
     core = token.strip("'")
@@ -189,6 +191,12 @@ def _fix_word(token: str, vocab: Vocabulary, sentence_start: bool) -> str:
         return token                                   # a normal word, or a name that may be one
     if core.isupper() and len(core) <= 3:
         return token                                   # an acronym
+    if conservative:                                   # the reader is confident: only the safe repairs
+        if not known and not capitalised:
+            split = _segment(core, vocab)
+            if split:
+                return lead + (split[0].upper() + split[1:] if sentence_start else split) + trail
+        return token
     best, best_value = None, None
     for candidate, changes in _variants(core, restricted=capitalised):
         cand_low = candidate.lower()
@@ -216,8 +224,10 @@ def _sentence_starts(text: str):
         yield match, (not before) or before[-1] in ".!?:" or before.endswith("-")
 
 
-def fix_text(text: str, vocab: Vocabulary | None = None) -> str:
-    """The text with common OCR misreadings repaired; unchanged words stay exactly as they were."""
+def fix_text(text: str, vocab: Vocabulary | None = None, conservative: bool = False) -> str:
+    """The text with common OCR misreadings repaired; unchanged words stay exactly as they were. ``conservative``
+    is for a reader that is confident about the line: it keeps rare real words as they are (``relics`` is not
+    ``relies``) and only fixes what cannot be a real word: lost apostrophes, stray capitals, run-together words."""
     vocab = vocab or default_vocabulary()
     text = text.translate(FOLD).translate(QUOTES)
     text = LONE_I_SUFFIX.sub(lambda m: "I'" + m.group(1), APOSTROPHE_MARK.sub("'", text))
@@ -225,7 +235,7 @@ def fix_text(text: str, vocab: Vocabulary | None = None) -> str:
         pieces, last = [], 0
         for match, start in _sentence_starts(text):
             pieces.append(text[last: match.start()])
-            word = _fix_word(match.group(), vocab, start)
+            word = _fix_word(match.group(), vocab, start, conservative)
             before = text[: match.start()].rstrip()
             if (before and before[-1] in ".!?" and not before.endswith("..") and word[:1].islower()
                     and word.isalpha() and len(word) > 1):

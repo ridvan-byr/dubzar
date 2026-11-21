@@ -153,3 +153,122 @@ def test_the_merged_reading_competes_with_the_best_whole_reading():
 
     assert [l.text for l in sorted(lines, key=lambda l: l.center_y)] == [
         "Keep your head down", "and stay quiet", "right now"]
+
+
+# --- the cascade: a fast, good primary reader, with the older one as a safety net -------------------------------
+from dubzar.ocr import CascadeOcr  # noqa: E402
+
+
+class Fixed:
+    def __init__(self, *texts, language="fixed"):
+        self.texts, self.calls, self.language = texts, 0, language
+
+    def read(self, image):
+        self.calls += 1
+        return [OcrLine(t, 0.5, 0.3 + 0.2 * i) for i, t in enumerate(self.texts) if t]
+
+
+def test_a_good_primary_reading_is_final_and_the_fallback_is_not_consulted():
+    primary, fallback = Fixed("Keep your head down and stay quiet."), Fixed("zzz")
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(lines) == ["Keep your head down and stay quiet."] and fallback.calls == 0
+
+
+def test_an_empty_primary_reading_falls_back():
+    primary, fallback = Fixed(), Fixed("Keep your head down.")
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(lines) == ["Keep your head down."]
+
+
+def test_a_doubtful_primary_reading_is_compared_with_the_fallback_and_the_better_one_wins():
+    primary, fallback = Fixed("Kecp yoor hoad dowm"), Fixed("Keep your head down and stay quiet.")
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(lines) == ["Keep your head down and stay quiet."]
+
+
+def test_the_primary_readings_get_the_same_repairs_as_everything_else():
+    primary, fallback = Fixed("Ilve picked up"), Fixed("")
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(lines)[0].startswith("I've")
+
+
+class Lines:
+    """A reader returning given (text, y, confidence) lines."""
+
+    def __init__(self, *items):
+        self.items, self.calls = items, 0
+
+    def read(self, image):
+        self.calls += 1
+        return [OcrLine(t, 0.5, y, 0.09, c) for t, y, c in self.items]
+
+
+def test_a_confident_primary_is_never_second_guessed_even_when_the_dictionary_does_not_know_its_words():
+    primary = Lines(("Omega Red: [in Russian accent] Find him.", 0.4, 0.97))
+    fallback = Lines(("Om go Red: Lin Russian acgntJ Find him.", 0.4, 0.0))
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(lines) == ["Omega Red: [in Russian accent] Find him."] and fallback.calls == 0
+
+
+def test_only_the_doubtful_line_is_replaced_from_the_fallback():
+    primary = Lines(("Ju Yeah, t' how B plants work", 0.30, 0.79), ("keep your head down and stay quiet", 0.60, 0.98))
+    fallback = Lines(("Keep your head down and stay quiet right now", 0.30, 0.0), ("zzzz qqqq", 0.60, 0.0))
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert texts(sorted(lines, key=lambda l: l.center_y)) == [
+        "Keep your head down and stay quiet right now", "keep your head down and stay quiet"]
+
+
+def test_a_line_only_the_fallback_found_is_added_when_it_reads_like_english():
+    primary = Lines(("Keep your head down", 0.30, 0.98), ("zz", 0.5, 0.40))
+    fallback = Lines(("Keep your head down", 0.30, 0.0), ("stay quiet right now", 0.80, 0.0))
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert "stay quiet right now" in texts(lines)
+
+
+def test_garbage_only_the_fallback_found_is_not_added():
+    primary = Lines(("zz", 0.5, 0.40))
+    fallback = Lines(("Keep your head down", 0.30, 0.0), ("qqq xxx zzz", 0.80, 0.0))
+
+    assert "qqq xxx zzz" not in texts(CascadeOcr(primary, fallback, VOCAB).read(FRAME))
+
+
+def test_a_fallback_line_that_repeats_what_the_primary_already_read_is_not_added_again():
+    """Two engines split the same text into lines differently; the second split must not be appended as new lines."""
+    primary = Lines(("Keep your head down and stay", 0.30, 0.98), ("quiet right now", 0.55, 0.60))
+    fallback = Lines(("Keep your head down", 0.25, 0.0), ("and stay quiet right now", 0.62, 0.0))
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    words = " ".join(texts(lines)).lower().split()
+    assert words.count("keep") == 1 and words.count("quiet") == 1
+
+
+def test_corner_text_like_a_watermark_neither_triggers_the_fallback_nor_gets_matched_with_real_lines():
+    primary = Lines(("Keep your head down and stay quiet", 0.40, 0.98), ("MKIceAnd", 0.62, 0.88))
+    primary.items = (primary.items[0], ("MKIceAnd", 0.62, 0.88))
+    corner = OcrLine("MKIceAnd", 0.92, 0.62, 0.09, 0.88)
+
+    class WithCorner(Lines):
+        def read(self, image):
+            return super().read(image) + [corner]
+
+    primary = WithCorner(("Keep your head down and stay quiet", 0.40, 0.98))
+    fallback = Lines(("Keep your head down", 0.40, 0.0), ("stay quiet", 0.62, 0.0))
+
+    lines = CascadeOcr(primary, fallback, VOCAB).read(FRAME)
+
+    assert fallback.calls == 0 and texts(lines) == ["Keep your head down and stay quiet"]

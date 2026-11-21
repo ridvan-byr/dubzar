@@ -75,16 +75,41 @@ def make_segmenter() -> SpeechSegmenter:
         return SpeechSegmenter(end_silence_s=0.5, max_segment_s=8.0)
 
 
+class _NoReader:
+    def read(self, image):
+        return []
+
+
+def make_reader():
+    """The best text reader this computer can run: RapidOCR (measured far better on real game frames), with the
+    Windows engine behind it as a safety net; either alone when the other is unavailable; None when neither is."""
+    from dubzar import ocr as ocr_module
+
+    windows = primary = None
+    try:
+        windows = ocr_module.RobustOcr(ocr_module.WindowsOcr())   # several preparations, dictionary repair, best wins
+    except Exception as exc:  # noqa: BLE001
+        log.info("Windows OCR yok (%s)", exc)
+    try:
+        from dubzar.ocr_rapid import RapidOcr
+
+        primary = RapidOcr(threads=2)
+    except Exception as exc:  # noqa: BLE001
+        log.info("RapidOCR yok (%s)", exc)
+    if primary is not None and windows is not None:
+        return ocr_module.CascadeOcr(primary, windows)
+    if primary is not None:
+        return ocr_module.CascadeOcr(primary, _NoReader())
+    return windows
+
+
 def make_screen_source(settings: Settings, translator: Translator, bridge) -> ScreenSubtitleSource | None:
     """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable."""
-    try:
-        from dubzar.ocr import RobustOcr, WindowsOcr
-
-        ocr = RobustOcr(WindowsOcr())   # several preparations of the picture, dictionary repair, best reading wins
-    except Exception as exc:
-        log.warning("ekrandaki altyazı okuma kullanılamıyor (%s); yalnızca ses dinlenecek", exc)
+    ocr = make_reader()
+    if ocr is None:
+        log.warning("ekrandaki altyazı okuma kullanılamıyor (ne RapidOCR ne Windows OCR çalışıyor); yalnızca ses dinlenecek")
         return None
-    log.info("ekrandaki altyazı okuma hazır (OCR dili: %s)", ocr.language)
+    log.info("ekrandaki altyazı okuma hazır (okuyucu: %s)", ocr.language)
 
     def grab_frame():
         if not game_in_front(settings.game_exe, foreground_process_name(), foreground_is_fullscreen()):

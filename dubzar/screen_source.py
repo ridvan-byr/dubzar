@@ -13,14 +13,20 @@ from typing import Callable, Protocol, Sequence
 import numpy as np
 
 from dubzar.models import Cue
-from dubzar.ocr import OcrLine
+from dubzar.layout import dialogue_block
+from dubzar.ocr import OcrLine, central_lines
 from dubzar.screen import is_black
 from dubzar.subtitle_tracker import SubtitleTracker, subtitle_text
 from dubzar.translate import Translator
 
 log = logging.getLogger(__name__)
 
-CENTER_X = (0.2, 0.8)       # subtitles sit in the middle; logos and map labels sit in the corners
+SLOW_READING_FACTOR = 1.5    # after a slow reading wait this many times as long before the next one
+
+
+def next_wait(poll_s: float, last_read_s: float) -> float:
+    """A reading that takes long must not be followed at once by another: a game would be starved."""
+    return max(poll_s, SLOW_READING_FACTOR * last_read_s)
 HOLD_ACTIVE_S = 8.0         # after the last subtitle was seen, keep speech recognition resting this long
 BLACK_LIMIT = 10            # consecutive black frames before we conclude capture is blocked
 IDLE_SIGNATURE_DIFF = 0.5   # mean pixel change below this: the picture is unchanged, reuse the last OCR result
@@ -77,8 +83,8 @@ class ScreenSubtitleSource:
         self._black = 0
 
         lines = self._lines_for(frame)
-        central = [l for l in lines if CENTER_X[0] <= l.center_x <= CENTER_X[1]]
-        texts = [l.text for l in central]
+        block = sorted(dialogue_block(central_lines(lines)), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
+        texts = [l.text for l in block]
         if subtitle_text(texts) is not None:
             self._last_seen = self._clock()
         update = self._tracker.update(texts)
@@ -121,8 +127,11 @@ class ScreenSubtitleSource:
             self._thread.join(2)
 
     def _run(self) -> None:
-        while not self._stop.wait(self._poll_s):
+        wait = self._poll_s
+        while not self._stop.wait(wait):
+            started = time.perf_counter()
             try:
                 self.poll_once()
             except Exception:
                 log.exception("screen subtitle read failed")
+            wait = next_wait(self._poll_s, time.perf_counter() - started)

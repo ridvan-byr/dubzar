@@ -23,6 +23,8 @@ EXTRA_NOTICE = """
 
 - **Çeviri modeli:** Helsinki-NLP / OPUS-MT (opus-mt-tc-big-en-tr), CC-BY-4.0.
   https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-tr
+- **Metin okuma:** RapidOCR (Apache-2.0) ve PaddleOCR'ın PP-OCR modelleri (Apache-2.0), `app/models/rapidocr/` içinde
+  paketle birlikte gelir.
 - **PySide6 (Qt for Python)** LGPL-3.0 ile lisanslıdır; kurulum sırasında PyPI'dan ayrı bir paket olarak indirilir,
   Dubzar ile birlikte kopyalanmaz.
 - Python paketleri kendi lisanslarıyla kurulur: faster-whisper (MIT), CTranslate2 (MIT), transformers (Apache-2.0),
@@ -41,6 +43,22 @@ def app_files():
             yield path, f"{TOP}/app/dubzar/{path.relative_to(ROOT / 'dubzar').as_posix()}"
 
 
+def rapidocr_models() -> list[Path]:
+    """The two model files the text reader needs, from the installed rapidocr package (the app ships them, so the
+    installer never downloads them from a third-party site)."""
+    import rapidocr
+
+    folder = Path(rapidocr.__file__).parent / "models"
+    sys.path.insert(0, str(ROOT))
+    from dubzar.ocr_rapid import DET_MODEL, REC_MODEL
+
+    files = [folder / DET_MODEL, folder / REC_MODEL]
+    missing = [f.name for f in files if not f.exists()]
+    if missing:
+        raise SystemExit(f"RapidOCR model files are missing ({missing}); run the app once so they are downloaded, then build.")
+    return files
+
+
 def build(out_dir: Path | None = None) -> Path:
     out_dir = out_dir or ROOT / "dist"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -50,6 +68,8 @@ def build(out_dir: Path | None = None) -> Path:
         for path, arc in app_files():
             z.write(path, arc)
         z.write(HERE / "requirements.txt", f"{TOP}/app/requirements.txt")
+        for model in rapidocr_models():
+            z.write(model, f"{TOP}/app/models/rapidocr/{model.name}")
         licenses = (ROOT / "docs" / "LICENSES.md").read_text(encoding="utf-8") + EXTRA_NOTICE
         z.writestr(f"{TOP}/app/LISANSLAR.md", licenses.encode("utf-8"))
         for name in ("kur.ps1", "kaldir.ps1"):
