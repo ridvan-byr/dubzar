@@ -153,6 +153,33 @@ def test_clicking_the_subtitle_toggle_turns_subtitles_off(qapp, panel):
     assert wait_until(lambda: settings.subtitles_enabled is False)
 
 
+def test_the_profile_toggle_shows_only_when_a_game_is_known_and_makes_its_settings_its_own(qapp):
+    from dubzar.profiles import ProfileManager
+
+    settings = Settings()
+    manager = ProfileManager(settings)
+    ctl = SettingsController(settings, screen_count=1, animations=False)
+    ctl.set_profiles(manager)
+    window = PanelWindow(ctl)
+    window.show(QRect(0, 0, 1280, 720))
+    wait_until(lambda: window.view.isExposed(), 1.0)
+    try:
+        toggle = window.view.rootObject().findChild(QQuickItem, "profileToggle")
+        assert toggle is not None and not toggle.isVisible()          # no game yet
+
+        manager.set_game("GTA5.exe")
+        assert wait_until(lambda: toggle.isVisible())
+        wait_until(lambda: False, 0.3)                                  # let the layout move the rows
+        assert ctl.profileGame == "gta5.exe" and ctl.profileOn is False
+
+        QTest.mouseClick(window.view, Qt.LeftButton, Qt.NoModifier, center_of(window, "profileToggle"))
+        assert wait_until(lambda: ctl.profileOn)
+        ctl.setFontSize(50)
+        assert manager.profiles["gta5.exe"]["font_size"] == 50 and manager.base["font_size"] == 28
+    finally:
+        window.view.hide()
+
+
 def test_reset_button_restores_the_defaults(qapp, panel):
     window, settings = panel
     settings.font_size = 44

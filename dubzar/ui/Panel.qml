@@ -323,6 +323,8 @@ Item {
                 Hair {}
                 Toggle { objectName: "subtitleToggle"; label: "Altyazı"; checked: ctl.subtitlesEnabled; onToggled: (v) => ctl.setSubtitlesEnabled(v) }
                 Toggle { label: ctl.dubbingAvailable ? "Dublaj" : "Dublaj · yakında"; available: ctl.dubbingAvailable; checked: ctl.dubbingEnabled; onToggled: (v) => ctl.setDubbingEnabled(v) }
+                Toggle { objectName: "profileToggle"; visible: ctl.profileGame !== ""; label: "Bu oyuna özel ayar"; checked: ctl.profileOn; onToggled: (v) => ctl.setProfileOn(v) }
+                Lbl { objectName: "profileGame"; visible: ctl.profileGame !== ""; text: ctl.profileGame; Layout.topMargin: -6 }
                 Hair {}
 
                 Lbl { text: "Konum" }

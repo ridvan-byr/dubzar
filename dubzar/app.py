@@ -32,6 +32,7 @@ from dubzar.ui.backdrop import Backdrop
 from dubzar.ui.controller import SettingsController
 from dubzar.ui.intro import IntroWindow
 from dubzar.ui.panel import PanelWindow
+from dubzar.profiles import GameTracker, ProfileManager
 from dubzar.ui.saver import SettingsSaver
 from dubzar.ui.screens import target_screen
 from dubzar.ui.system import animations_enabled
@@ -178,6 +179,15 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     animations = animations_enabled()
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)
     controller.set_live(True)
+    profiles = ProfileManager(settings)                     # before the saver: saving writes the base values
+    controller.set_profiles(profiles)
+    game_tracker = GameTracker(profiles, lambda: (foreground_process_name(), foreground_is_fullscreen()),
+                               is_process_running, lambda: settings.game_exe)
+    game_timer = QTimer()                                   # which game is in front decides whose settings are in use
+    game_timer.setInterval(2000)
+    game_timer.timeout.connect(game_tracker.tick)
+    game_timer.start()
+    game_tracker.tick()
     overlay = OverlayWindow(settings)
     panel = PanelWindow(controller)
     intro = IntroWindow(animations)
