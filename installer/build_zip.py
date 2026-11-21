@@ -4,6 +4,7 @@ Layout inside the zip (one top-level folder, so extracting does not scatter file
     Dubzar-Kurulum/Kur.bat, Kaldir.bat, kur.ps1, kaldir.ps1, OKU-BENI.txt
     Dubzar-Kurulum/app/dubzar/...       the program (no tests, no caches)
     Dubzar-Kurulum/app/requirements.txt, app/LISANSLAR.md
+    Dubzar-Kurulum/wheels/*.whl, models/...  the Python packages and the two models, so nothing is downloaded
 PowerShell scripts are written with a UTF-8 BOM (Windows PowerShell 5.1 would garble Turkish letters without it) and
 batch files with CRLF line endings.
 """
@@ -23,12 +24,14 @@ EXTRA_NOTICE = """
 
 - **Çeviri modeli:** Helsinki-NLP / OPUS-MT (opus-mt-tc-big-en-tr), CC-BY-4.0.
   https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-tr
+  Dubzar ile gelen sürüm bu modelin CTranslate2 biçimine dönüştürülmüş ve int8 olarak nicemlenmiş halidir (değiştirilmiştir);
+  özgün model Helsinki-NLP / Tiedemann ve ekibine aittir.
+- **Konuşma tanıma:** Whisper tiny (OpenAI, MIT), faster-whisper için CTranslate2 biçiminde (Systran).
 - **Metin okuma:** RapidOCR (Apache-2.0) ve PaddleOCR'ın PP-OCR modelleri (Apache-2.0), `app/models/rapidocr/` içinde
   paketle birlikte gelir.
-- **PySide6 (Qt for Python)** LGPL-3.0 ile lisanslıdır; kurulum sırasında PyPI'dan ayrı bir paket olarak indirilir,
-  Dubzar ile birlikte kopyalanmaz.
-- Python paketleri kendi lisanslarıyla kurulur: faster-whisper (MIT), CTranslate2 (MIT), transformers (Apache-2.0),
-  PyTorch (BSD), numpy/scipy (BSD) vb.
+- **PySide6 (Qt for Python)** LGPL-3.0 ile lisanslıdır; ayrı, değiştirilmemiş bir paket (`wheels/` klasörü) olarak
+  gelir ve kullanıcı tarafından yerine başka bir sürüm kurulabilir.
+- Python paketleri kendi lisanslarıyla kurulur: faster-whisper (MIT), CTranslate2 (MIT), numpy/scipy (BSD) vb.
 """
 
 
@@ -59,6 +62,26 @@ def rapidocr_models() -> list[Path]:
     return files
 
 
+WHEELS = ROOT / "dist" / "wheels"      # made by: pip wheel -r installer/requirements.txt -w dist/wheels
+
+
+def bundled_models() -> list[tuple[Path, str]]:
+    """(file, path inside the zip's models folder) for the translation model (already converted to int8, with its two
+    tokenizer files) and the Whisper tiny model, taken from this computer: the installer then downloads nothing."""
+    sys.path.insert(0, str(ROOT))
+    from dubzar.translate import CT2_FOLDER_NAME, MODEL_NAME, SPM_FILES, ct2_model_dir
+
+    hub = Path.home() / ".cache" / "huggingface" / "hub"
+    opus = sorted((hub / ("models--" + MODEL_NAME.replace("/", "--")) / "snapshots").glob("*"))
+    whisper = sorted((hub / "models--Systran--faster-whisper-tiny" / "snapshots").glob("*"))
+    if not opus or not whisper or not (ct2_model_dir() / "model.bin").exists():
+        raise SystemExit("The models are missing on this computer; run 'dubzar setup --allow-download' first, then build.")
+    files = [(ct2_model_dir() / n, f"{CT2_FOLDER_NAME}/{n}") for n in ("model.bin", "config.json", "shared_vocabulary.json")]
+    files += [(opus[-1] / n, f"{CT2_FOLDER_NAME}/{n}") for n in SPM_FILES]
+    files += [(f.resolve(), f"faster-whisper-tiny/{f.name}") for f in whisper[-1].iterdir()]
+    return files
+
+
 def build(out_dir: Path | None = None) -> Path:
     out_dir = out_dir or ROOT / "dist"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -70,6 +93,10 @@ def build(out_dir: Path | None = None) -> Path:
         z.write(HERE / "requirements.txt", f"{TOP}/app/requirements.txt")
         for model in rapidocr_models():
             z.write(model, f"{TOP}/app/models/rapidocr/{model.name}")
+        for wheel in sorted(WHEELS.glob("*.whl")):
+            z.write(wheel, f"{TOP}/wheels/{wheel.name}", compress_type=zipfile.ZIP_STORED)
+        for file, name in bundled_models():
+            z.write(file, f"{TOP}/models/{name}", compress_type=zipfile.ZIP_STORED)
         licenses = (ROOT / "docs" / "LICENSES.md").read_text(encoding="utf-8") + EXTRA_NOTICE
         z.writestr(f"{TOP}/app/LISANSLAR.md", licenses.encode("utf-8"))
         for name in ("kur.ps1", "kaldir.ps1"):

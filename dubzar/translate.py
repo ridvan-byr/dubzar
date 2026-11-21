@@ -33,6 +33,13 @@ def ct2_model_dir() -> Path:
     return Path(base) / "Dubzar" / "models" / CT2_FOLDER_NAME
 
 
+SPM_FILES = ("source.spm", "target.spm")
+
+
+def _ready_to_use(model_dir: Path) -> bool:
+    return (model_dir / "model.bin").exists() and all((model_dir / name).exists() for name in SPM_FILES)
+
+
 def _make_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], str]:
     """The real Opus-MT translation function (text -> text); a seam so tests need no model.
 
@@ -53,21 +60,27 @@ def _make_ct2_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], st
     # twenty seconds at every start; it is imported only for the one-time conversion below.
     import ctranslate2
     import sentencepiece
-    from huggingface_hub import snapshot_download
 
-    folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
     model_dir = ct2_model_dir()
-    if not (model_dir / "model.bin").exists():
+    if not _ready_to_use(model_dir):
+        # Not installed (the installer ships the converted model): fetch the original and convert it once. This
+        # path needs torch and transformers, which the installed app does not carry.
+        from huggingface_hub import snapshot_download
+
+        folder = snapshot_download(MODEL_NAME, local_files_only=local_only, ignore_patterns=UNNEEDED_FILES)
         log.info("çeviri modeli hızlı biçime çevriliyor (yalnızca bir kez, birkaç saniye)")
         model_dir.parent.mkdir(parents=True, exist_ok=True)
         partial = model_dir.with_name(model_dir.name + ".partial")
         shutil.rmtree(partial, ignore_errors=True)
         ctranslate2.converters.TransformersConverter(folder).convert(str(partial), quantization="int8")
+        for name in SPM_FILES:                   # the tokenizer files live beside the converted model
+            shutil.copy2(Path(folder) / name, partial / name)
+        shutil.rmtree(model_dir, ignore_errors=True)
         partial.rename(model_dir)  # only a finished conversion ever gets the real name
     translator = ctranslate2.Translator(str(model_dir), device="cpu", compute_type="int8", intra_threads=threads)
     source_spm, target_spm = sentencepiece.SentencePieceProcessor(), sentencepiece.SentencePieceProcessor()
-    source_spm.Load(str(Path(folder) / "source.spm"))
-    target_spm.Load(str(Path(folder) / "target.spm"))
+    source_spm.Load(str(model_dir / "source.spm"))
+    target_spm.Load(str(model_dir / "target.spm"))
 
     def translate(text: str) -> str:
         # What the Marian tokenizer does: sentencepiece pieces of the source (the model's vocabulary maps them to ids)

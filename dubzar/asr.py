@@ -1,6 +1,8 @@
 import logging
 import math
+import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Callable, Protocol
 
 import numpy as np
@@ -24,6 +26,13 @@ class Transcription:
 class Transcriber(Protocol):
     def transcribe(self, samples: np.ndarray) -> Transcription | None:
         """Transcribe 16 kHz mono audio; None when there is no usable speech."""
+
+
+def installed_whisper(size: str) -> str | None:
+    """The folder of a Whisper model the installer put next to the app's data, or None (then the usual cache is used)."""
+    base = os.environ.get("LOCALAPPDATA") or str(Path.home() / ".local" / "share")
+    folder = Path(base) / "Dubzar" / "models" / f"faster-whisper-{size}"
+    return str(folder) if (folder / "model.bin").exists() else None
 
 
 class WhisperTranscriber:
@@ -50,7 +59,7 @@ class WhisperTranscriber:
     def _default_factory(self, device: str) -> Any:
         from faster_whisper import WhisperModel
 
-        return WhisperModel(self._model_size, device=device, local_files_only=not self._allow_download,
+        return WhisperModel(installed_whisper(self._model_size) or self._model_size, device=device, local_files_only=not self._allow_download,
                             cpu_threads=self._cpu_threads)
 
     def _get_model(self) -> Any:

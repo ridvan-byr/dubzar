@@ -144,12 +144,12 @@ def _cmd_setup(args, transcriber: Transcriber | None, translator: Translator | N
     if not args.allow_download:
         return _error("modeller yalnızca izninizle indirilir: --allow-download ile yeniden çalıştırın.")
     steps = (
-        ("konuşma tanıma modeli (~75 MB)", lambda: WhisperTranscriber(
+        ("konuşma tanıma modeli", lambda: WhisperTranscriber(
             model_size="tiny", device="cpu", allow_download=True).load()),
-        ("çeviri modeli (~480 MB) ve hızlı biçime dönüştürme", lambda: OpusMtTranslator(allow_download=True).load()),
+        ("çeviri modeli", lambda: OpusMtTranslator(allow_download=True).load()),
     )
     for name, step in steps:
-        print(f"İndiriliyor: {name} …", flush=True)
+        print(f"Hazırlanıyor: {name} …", flush=True)
         try:
             step()
         except Exception as exc:  # noqa: BLE001 - tell the installer what failed, with the reason

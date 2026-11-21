@@ -39,9 +39,16 @@ Write-Host "Dubzar, oyunların İngilizce altyazısını/konuşmasını okuyup T
 Write-Host "Her şey bu bilgisayarda çalışır: ses ve ekran görüntüsü hiçbir yere gönderilmez."
 Write-Host "Oyunun dosyalarına ya da belleğine dokunmaz."
 Write-Host ""
-Write-Host "Kurulum sırasında internetten indirilecekler:"
-Write-Host "  - Python paketleri (yaklaşık 600 MB)"
-Write-Host "  - Konuşma tanıma ve çeviri modelleri (yaklaşık 550 MB)"
+$wheels = Join-Path $here "wheels"
+$bundledModels = Join-Path $here "models"
+$offline = (Test-Path $wheels) -and (Test-Path $bundledModels)
+if ($offline) {
+    Write-Host "Her şey bu klasörde hazır: kurulum için internetten bir şey indirilmez."
+} else {
+    Write-Host "Kurulum sırasında internetten indirilecekler:"
+    Write-Host "  - Python paketleri (yaklaşık 300 MB)"
+    Write-Host "  - Konuşma tanıma ve çeviri modelleri (yaklaşık 550 MB)"
+}
 Write-Host "Kurulum yeri: $InstallRoot"
 Write-Host ""
 if (-not (Ask "Devam edilsin mi?")) { Fail "Kurulum iptal edildi." }
@@ -95,9 +102,15 @@ if (-not $SkipPip) {
         Write-Host "Python ortamı oluşturuluyor..."
         Run $python @("-m", "venv", $venv) "Python ortamı oluşturma"
     }
-    Write-Host "Paketler indiriliyor ve kuruluyor (birkaç dakika sürebilir)..."
-    Run $venvPython @("-m", "pip", "install", "--upgrade", "pip") "pip güncelleme"
-    Run $venvPython @("-m", "pip", "install", "-r", (Join-Path $appTarget "requirements.txt")) "Paket kurulumu"
+    $requirements = Join-Path $appTarget "requirements.txt"
+    if ($offline) {
+        Write-Host "Paketler kuruluyor (internet gerekmez)..."
+        Run $venvPython @("-m", "pip", "install", "--no-index", "--find-links", $wheels, "-r", $requirements) "Paket kurulumu"
+    } else {
+        Write-Host "Paketler indiriliyor ve kuruluyor (birkaç dakika sürebilir)..."
+        Run $venvPython @("-m", "pip", "install", "--upgrade", "pip") "pip güncelleme"
+        Run $venvPython @("-m", "pip", "install", "-r", $requirements) "Paket kurulumu"
+    }
 }
 
 # --- 3b. Ekran kartı hızlandırması (isteğe bağlı, yalnızca NVIDIA kartı olanlara sorulur) -------------------
@@ -127,7 +140,16 @@ if ($wantGpu) {
 }
 
 # --- 4. Modeller ---------------------------------------------------------------------------------------------
-if (-not $SkipModels) {
+if (-not $SkipModels -and $offline) {
+    Write-Host "Modeller kopyalanıyor..."
+    $modelsTarget = Join-Path $InstallRoot "models"
+    New-Item -ItemType Directory -Force -Path $modelsTarget | Out-Null
+    robocopy $bundledModels $modelsTarget /E /NFL /NDL /NJH /NJS /NP | Out-Null
+    if ($LASTEXITCODE -ge 8) { Fail "Modeller kopyalanamadı (robocopy kodu $LASTEXITCODE)." }
+    $LASTEXITCODE = 0
+    Push-Location $appTarget
+    try { Run $venvPython @("-m", "dubzar", "setup", "--allow-download") "Model denetimi" } finally { Pop-Location }
+} elseif (-not $SkipModels) {
     Write-Host ""
     Write-Host "Şimdi modeller indirilecek (yaklaşık 550 MB): konuşma tanıma (Whisper tiny, MIT lisanslı) ve"
     Write-Host "çeviri (Helsinki-NLP OPUS-MT, CC-BY-4.0). Bunlar bu bilgisayarda saklanır."
