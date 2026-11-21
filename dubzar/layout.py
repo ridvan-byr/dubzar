@@ -41,6 +41,10 @@ class StickyLines:
         self._seen: dict[str, list] = {}        # key -> [first seen, last seen, set of what was around it]
 
     def filter(self, lines: list[OcrLine], now: float) -> list[OcrLine]:
+        return self.split(lines, now)[0]
+
+    def split(self, lines: list[OcrLine], now: float) -> tuple[list[OcrLine], list[OcrLine]]:
+        """(dialogue lines, HUD lines)"""
         for key in [k for k, rec in self._seen.items() if now - rec[1] > FORGET_SECONDS]:
             del self._seen[key]
         keys = [_key(l.text) for l in lines]
@@ -51,11 +55,10 @@ class StickyLines:
             record = self._seen.setdefault(key, [now, now, set()])
             record[1] = now
             record[2].add(around)
-        kept = []
+        kept, hud = [], []
         for line, key in zip(lines, keys):
             record = self._seen.get(key)
             sticky = (record is not None and now - record[0] >= STICKY_SECONDS
                       and len(record[2] - {frozenset()}) >= STICKY_OTHERS)
-            if not sticky:
-                kept.append(line)
-        return kept
+            (hud if sticky else kept).append(line)
+        return kept, hud

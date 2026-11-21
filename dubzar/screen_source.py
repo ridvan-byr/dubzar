@@ -17,7 +17,7 @@ from dubzar.models import Cue
 from dubzar.layout import StickyLines, dialogue_block
 from dubzar.ocr import CONFIDENT, OcrLine, central_lines
 from dubzar.screen import is_black
-from dubzar.subtitle_tracker import SubtitleTracker, subtitle_text
+from dubzar.subtitle_tracker import same_subtitle, SubtitleTracker, subtitle_text
 from dubzar.textfix import text_quality
 from dubzar.textmask import TextChangeWatcher
 from dubzar.translate import Translator
@@ -25,6 +25,7 @@ from dubzar.translate import Translator
 log = logging.getLogger(__name__)
 
 SETTLE_S = 0.04         # pause before the quick second look at something that just appeared
+NOTE_SHOW_S = 8.0          # a quest line is shown this long when it appears or changes (the game keeps it on screen)
 HEARTBEAT_S = 3.0           # read the strip at least this often even if it looks unchanged (a safety net)
 BACKOFF_CAP_S = 1.5         # the longest pause between looks when readings keep finding nothing
 IDLE_AFTER_S = 15.0         # no subtitle seen for this long: plain gameplay, look less often
@@ -42,7 +43,8 @@ class Reader(Protocol):
 class ScreenSubtitleSource:
     def __init__(self, grab_frame: Callable[[], np.ndarray | None], ocr: Reader, translator: Translator,
                  on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.12,
-                 black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic, watcher=None):
+                 black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic, watcher=None,
+                 on_note: Callable[[Cue], None] | None = None):
         self._grab = grab_frame
         self._ocr = ocr
         self._translator = translator
@@ -52,6 +54,8 @@ class ScreenSubtitleSource:
         self._black_limit = black_limit
         self._clock = clock
         self._tracker = SubtitleTracker()
+        self._on_note = on_note
+        self._last_note: str | None = None
         self._sticky = StickyLines()
         self._black = 0
         self._last_seen = float("-inf")
@@ -113,7 +117,10 @@ class ScreenSubtitleSource:
         began = time.perf_counter()
         lines = list(self._ocr.read(frame))
         read_s = time.perf_counter() - began
-        block = sorted(dialogue_block(self._sticky.filter(central_lines(lines), self._clock())), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
+        spoken, hud = self._sticky.split(central_lines(lines), self._clock())
+        if hud:
+            self._note(hud)
+        block = sorted(dialogue_block(spoken), key=lambda l: l.center_y)   # the dialogue, not a HUD hint
         texts = [l.text for l in block]
         found = subtitle_text(texts) is not None
         if found:
@@ -168,23 +175,44 @@ class ScreenSubtitleSource:
             except Exception:
                 log.exception("subtitle translation failed")
 
+    def _translate(self, text: str) -> str:
+        """One translation per line: two people talking at once are translated (and shown) apart."""
+        parts = []
+        for line in text.split("\n"):
+            cached = self._translations.get(line)
+            if cached is None:
+                began = time.perf_counter()
+                cached = self._translator.translate(line).strip()
+                log.debug("çeviri: %.2f sn (%d kelime)", time.perf_counter() - began, len(line.split()))
+                self._translations[line] = cached
+                if len(self._translations) > 200:
+                    self._translations.pop(next(iter(self._translations)))
+            if cached:
+                parts.append(cached)
+        return "\n".join(parts)
+
     def _emit(self, text: str, event_at: float | None) -> None:
-        translated = self._translations.get(text)
-        if translated is None:
-            began = time.perf_counter()
-            translated = self._translator.translate(text).strip()
-            log.debug("çeviri: %.2f sn (%d kelime)", time.perf_counter() - began, len(text.split()))
-            self._translations[text] = translated
-            if len(self._translations) > 200:
-                self._translations.pop(next(iter(self._translations)))
+        translated = self._translate(text)
         if not translated:
             return
         if event_at is not None:
             self.last_latency_s = self._clock() - event_at
             log.info("altyazı gecikmesi: ekranda belirdikten ~%.2f sn sonra gösterildi", self.last_latency_s)
-        log.info("oyunun altyazısı okundu: '%s' → '%s'", text, translated)
+        log.info("oyunun altyazısı okundu: '%s' → '%s'", text.replace("\n", " | "), translated.replace("\n", " | "))
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
         self._on_cue(Cue("ocr/" + digest, text, translated, 0.0, until_cleared=True))
+
+    def _note(self, hud_lines: list[OcrLine]) -> None:
+        """Objective and quest lines that stay on screen: translated once when they change, shown for a few seconds."""
+        text = subtitle_text([l.text for l in sorted(hud_lines, key=lambda l: l.center_y)])
+        if text is None or (self._last_note is not None and same_subtitle(text, self._last_note)):
+            return
+        self._last_note = text
+        translated = self._translate(text)
+        if translated and self._on_note is not None:
+            log.info("görev satırı okundu: '%s' → '%s'", text, translated.replace("\n", " | "))
+            digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
+            self._on_note(Cue("note/" + digest, text, translated, NOTE_SHOW_S))
 
     def start(self) -> None:
         self._thread = threading.Thread(target=self._run, name="dubzar-screen", daemon=True)

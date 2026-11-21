@@ -26,7 +26,8 @@ def _line_ok(line: str) -> bool:
     return sum(c in TURKISH_ONLY for c in line) < 2  # our own Turkish text, not the game's
 
 
-NAME_CONNECTORS = {"of", "the", "de", "van", "von", "la", "le", "da", "bin", "al", "and"}
+SPEAKER_PREFIX = re.compile(r"^[A-Z][\w'.-]*(?: [A-Za-z][\w'.-]*){0,3}: \S")   # "Nate: Yeah."
+NAME_CONNECTORS ={"of", "the", "de", "van", "von", "la", "le", "da", "bin", "al", "and"}
 
 
 def _looks_like_speaker(line: str, next_line: str) -> bool:
@@ -51,7 +52,18 @@ def subtitle_text(lines: list[str]) -> str | None:
     if len(kept) >= 3 or (len(kept) == 2 and len(kept[1].split()) >= 3):
         if _looks_like_speaker(kept[0], kept[1]):
             kept = [kept[0] + ":"] + kept[1:]
-    text = re.sub(r"\s+", " ", " ".join(kept)).strip()
+    speakers = sum(1 for line in kept if SPEAKER_PREFIX.match(line))
+    if speakers >= 2:
+        # two people talk at once: one line each, so they are translated apart and shown apart
+        entries: list[str] = []
+        for line in kept:
+            if SPEAKER_PREFIX.match(line) or not entries:
+                entries.append(line)
+            else:
+                entries[-1] += " " + line                  # the rest of the same person's wrapped sentence
+        text = "\n".join(re.sub(r"\s+", " ", entry).strip() for entry in entries)
+    else:
+        text = re.sub(r"\s+", " ", " ".join(kept)).strip()
     return text if len(text) >= MIN_CHARS else None
 
 

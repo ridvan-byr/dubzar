@@ -29,6 +29,7 @@ class OverlayWindow(QWidget):
         super().__init__()
         self._settings = settings
         self._timeline = SubtitleTimeline()
+        self._note_timeline = SubtitleTimeline()     # the objective / quest line: a small card above the subtitle
         self._preview: str | None = None
         self.setWindowFlags(
             Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool
@@ -41,6 +42,10 @@ class OverlayWindow(QWidget):
         self._label = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
+        self._note = QLabel(alignment=Qt.AlignCenter, wordWrap=True)
+        self._note.hide()
+        layout.setSpacing(6)
+        layout.addWidget(self._note)
         layout.addWidget(self._label)
         self._restyle()
         settings.on_change(self._on_setting_changed)
@@ -67,6 +72,11 @@ class OverlayWindow(QWidget):
         self._timeline.show(cue, now)
         self.tick(now)
 
+    def show_note(self, cue: Cue, now: float | None = None) -> None:
+        now = time.monotonic() if now is None else now
+        self._note_timeline.show(cue, now)
+        self.tick(now)
+
     def clear_cue(self) -> None:
         """The game's own subtitle is gone: take ours down too."""
         self._timeline.clear()
@@ -75,13 +85,18 @@ class OverlayWindow(QWidget):
     def tick(self, now: float | None = None) -> None:
         now = time.monotonic() if now is None else now
         text = self._preview if self._preview is not None else self._timeline.current(now)
-        if text is None or not self._settings.subtitles_enabled:
+        note = None if self._preview is not None else self._note_timeline.current(now)
+        if (text is None and note is None) or not self._settings.subtitles_enabled:
             self._label.setText("")
+            self._note.setText("")
             self.hide()
             self.placed.emit(QRect())
             return
-        if text != self._label.text() or not self.isVisible():
-            self._label.setText(text)
+        if (text or "") != self._label.text() or (note or "") != self._note.text() or not self.isVisible():
+            self._label.setText(text or "")
+            self._label.setVisible(text is not None)
+            self._note.setText(note or "")
+            self._note.setVisible(note is not None)
             self._place()
             self.show()
             self.placed.emit(self.geometry())
@@ -96,6 +111,10 @@ class OverlayWindow(QWidget):
     def _restyle(self) -> None:
         s = self._settings
         bg = QColor(s.background_color)
+        self._note.setStyleSheet(
+            f"color: {s.text_color}; background: rgba(20, 20, 20, 0.72); border-radius: 8px; "
+            f"padding: {PAD_Y - 3}px {PAD_X - 4}px; font-family: '{first_available(SANS_FAMILIES)}'; "
+            f"font-size: {max(12, int(s.font_size * 0.62))}px; font-weight: 500;")
         self._label.setStyleSheet(
             f"color: {s.text_color}; background: rgba({bg.red()}, {bg.green()}, {bg.blue()}, "
             f"{s.background_opacity / 100:g}); border-radius: 10px; padding: {PAD_Y}px {PAD_X}px; "
@@ -118,6 +137,7 @@ class OverlayWindow(QWidget):
         index = pick_screen_index(origins, foreground_monitor_origin(), self._settings.screen)
         screen = screens[index].geometry()
         self._label.setFixedWidth(self._box_width(int(screen.width() * SCREEN_WIDTH_FRACTION)))
+        self._note.setFixedWidth(min(int(screen.width() * 0.5), max(self._label.width(), 360)))
         self.adjustSize()
         margin = int(screen.height() * EDGE_MARGIN_FRACTION)
         room = max(0, screen.height() - self.height() - 2 * margin)

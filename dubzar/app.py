@@ -58,6 +58,7 @@ class _Bridge(QObject):
 
     cue = Signal(object)
     clear = Signal()
+    note = Signal(object)
     toggle_panel = Signal()
     scan_progress = Signal(int, int)
 
@@ -122,7 +123,8 @@ def make_screen_source(settings: Settings, translator: Translator, bridge) -> Sc
         rect = foreground_monitor_rect()
         return grab(band_box(rect)) if rect else None
 
-    return ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit)
+    return ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit,
+                                on_note=bridge.note.emit)
 
 
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
@@ -143,6 +145,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
 
     bridge.cue.connect(overlay.show_cue)
     bridge.clear.connect(overlay.clear_cue)
+    bridge.note.connect(overlay.show_note)
     for window in (overlay, backdrop, panel.view, intro.view):  # our own subtitle must never be read back by OCR
         exclude_from_capture(int(window.winId()))
     bridge.scan_progress.connect(controller.set_scan_progress)

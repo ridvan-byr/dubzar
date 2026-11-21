@@ -45,7 +45,7 @@ def test_a_hud_hint_above_the_dialogue_is_not_translated_with_it():
     source.poll_once()
     source.poll_once()
 
-    assert [c.text_src for c in cues] == ["Laswell: How many? Ghost: There's a cove with four boats."]
+    assert [c.text_src for c in cues] == ["Laswell: How many?\nGhost: There's a cove with four boats."]
 
 
 def test_the_app_prefers_rapidocr_with_windows_behind_it_and_degrades_gracefully(monkeypatch):
