@@ -13,3 +13,4 @@ dist/
 experiments/real_frames/
 experiments/llama_cpp_bin/
 experiments/ort_gpu_env/
+experiments/gpu_pkg_test_env/

@@ -109,14 +109,14 @@ if (-not $SkipPip -and (Get-Command nvidia-smi -ErrorAction SilentlyContinue)) {
         Write-Host ""
         Write-Host "NVIDIA ekran kartı bulundu. 'Yüksek' hız modu yazıyı ekran kartıyla okur: altyazı daha erken çıkar,"
         Write-Host "ama ekran kartını ve işlemciyi daha fazla kullanır (oyun başka cihazdaysa, örn. konsol, önerilir)."
-        Write-Host "Bunun için ek paketler indirilir (yaklaşık 1,5 GB)."
+        Write-Host "Bunun için ek paketler indirilir (yaklaşık 1,5 GB; diskte yaklaşık 2,5 GB yer tutar)."
         $wantGpu = Ask "Ekran kartı hızlandırması kurulsun mu?"
     }
 }
 if ($wantGpu) {
     Write-Host "Ekran kartı paketleri indiriliyor..."
     & $venvPython -m pip uninstall -y onnxruntime
-    & $venvPython -m pip install onnxruntime-gpu==1.23.2 nvidia-cudnn-cu12 nvidia-cublas-cu12 nvidia-cuda-runtime-cu12 nvidia-cufft-cu12 nvidia-curand-cu12
+    & $venvPython -m pip install onnxruntime-gpu==1.23.2 nvidia-cudnn-cu12==9.28.1.4 nvidia-cublas-cu12==12.9.2.10 nvidia-cuda-runtime-cu12==12.9.79 nvidia-cufft-cu12==11.4.1.4 nvidia-curand-cu12==10.3.10.19
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Ekran kartı hızlandırması kurulamadı; 'Yüksek' mod işlemciyle çalışacak. (Dubzar yine de çalışır.)" -ForegroundColor Yellow
         & $venvPython -m pip install onnxruntime==1.32.0

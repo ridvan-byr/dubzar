@@ -37,7 +37,7 @@ Bilmeniz gerekenler (erken sürüm)
     kartını ve işlemciyi daha fazla kullanır. Oyunu aynı bilgisayarda
     oynuyorsanız Hafif'i önerir, oyun başka cihazdaysa (konsol) Yüksek'i.
     Yüksek için kurulumda "ekran kartı hızlandırması" sorusuna E deyin
-    (NVIDIA kartı gerekir, yaklaşık 1,5 GB ek indirme).
+    (NVIDIA kartı gerekir, yaklaşık 1,5 GB ek indirme, diskte ~2,5 GB).
   - Sorun olursa: Başlat menüsünden "Dubzar (hata ayiklama)" ile açın ve
     çıktıyı gönderin; ya da %APPDATA%\Dubzar\dubzar.log dosyasını paylaşın.
 
