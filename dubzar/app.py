@@ -20,8 +20,9 @@ from dubzar.live import LivePipeline
 from dubzar.overlay import detect_exclusive_fullscreen
 from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
-from dubzar.screen import (band_box, exclude_from_capture, foreground_is_fullscreen, foreground_monitor_rect,
+from dubzar.screen import (band_box, corner_boxes, exclude_from_capture, foreground_is_fullscreen, foreground_monitor_rect,
                            foreground_process_name, game_in_front, grab)
+from dubzar.region_notes import RegionNoteSource
 from dubzar.screen_source import ScreenSubtitleSource
 from dubzar.segmenter import SpeechSegmenter
 from dubzar.settings import Settings
@@ -109,12 +110,31 @@ def make_reader():
     return None
 
 
-def make_screen_source(settings: Settings, translator: Translator, bridge) -> ScreenSubtitleSource | None:
+class _SharedReader:
+    """One OCR engine serves the subtitle band and the corners: one reading at a time."""
+
+    def __init__(self, reader):
+        self._reader, self._lock = reader, threading.Lock()
+        self.language = reader.language
+
+    def read(self, image):
+        with self._lock:
+            return self._reader.read(image)
+
+
+def make_screen_source(settings: Settings, translator: Translator, bridge):
+    """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable.
+    Returns (subtitle source, corner notes source)."""
+    return _make_screen_source(settings, translator, bridge)
+
+
+def _make_screen_source(settings: Settings, translator: Translator, bridge):
     """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable."""
     ocr = make_reader()
+    ocr = _SharedReader(ocr) if ocr is not None else None
     if ocr is None:
         log.warning("ekrandaki altyazı okuma kullanılamıyor (ne RapidOCR ne Windows OCR çalışıyor); yalnızca ses dinlenecek")
-        return None
+        return None, None
     log.info("ekrandaki altyazı okuma hazır (okuyucu: %s)", ocr.language)
 
     def grab_frame():
@@ -123,8 +143,15 @@ def make_screen_source(settings: Settings, translator: Translator, bridge) -> Sc
         rect = foreground_monitor_rect()
         return grab(band_box(rect)) if rect else None
 
-    return ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit,
-                                on_note=bridge.note.emit)
+    def grab_corners():
+        if not game_in_front(settings.game_exe, foreground_process_name(), foreground_is_fullscreen()):
+            return None
+        rect = foreground_monitor_rect()
+        return [grab(box) for box in corner_boxes(rect)] if rect else None
+
+    subtitles = ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit,
+                                     on_note=bridge.note.emit)
+    return subtitles, RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit)
 
 
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
@@ -212,11 +239,12 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     else:  # the game is unknown: show the hint once now
         show_hint()
 
-    screen_source = make_screen_source(settings, translator, bridge) if screen_ocr else None
+    screen_source, corner_source = make_screen_source(settings, translator, bridge) if screen_ocr else (None, None)
     pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit, segmenter=make_segmenter(),
                             skip_recognition=(lambda: screen_source.active) if screen_source else (lambda: False))
     if screen_source is not None:
         screen_source.start()
+        corner_source.start()
     audio: queue.Queue = queue.Queue()
 
     def feed_pipeline() -> None:
@@ -269,6 +297,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         hotkey.stop()
         if screen_source is not None:
             screen_source.stop()
+            corner_source.stop()
         capture.stop()
         audio.put(None)
         feeder.join(2)

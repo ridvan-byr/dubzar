@@ -26,6 +26,7 @@ log = logging.getLogger(__name__)
 
 SETTLE_S = 0.04         # pause before the quick second look at something that just appeared
 NOTE_SHOW_S = 8.0          # a quest line is shown this long when it appears or changes (the game keeps it on screen)
+MAX_STRICTNESS = 6          # a changed strip with nothing new makes the small-change rule this many times stricter
 HEARTBEAT_S = 3.0           # read the strip at least this often even if it looks unchanged (a safety net)
 BACKOFF_CAP_S = 1.5         # the longest pause between looks when readings keep finding nothing
 IDLE_AFTER_S = 15.0         # no subtitle seen for this long: plain gameplay, look less often
@@ -61,6 +62,7 @@ class ScreenSubtitleSource:
         self._last_seen = float("-inf")
         self._watcher = watcher or TextChangeWatcher()
         self._last_read_at = float("-inf")
+        self._noise = 0                         # changed-readings in a row that brought nothing new
         self._wasted = 0                        # readings in a row that found no subtitle
         self._event_at: float | None = None     # when the strip first changed for the subtitle now being waited for
         self.last_latency_s: float | None = None
@@ -141,6 +143,12 @@ class ScreenSubtitleSource:
             self._event_at = None
         if update.text:
             self._show(update.text)
+        if reason == "değişim" and not update.text and not update.cleared and not self._tracker.unsettled:
+            self._noise += 1                 # the strip 'changed' but nothing new was said: a moving background
+        elif update.text or update.cleared:
+            self._noise = 0
+        if hasattr(self._watcher, "strictness"):
+            self._watcher.strictness = min(MAX_STRICTNESS, 1 + self._noise)
         self._wasted = 0 if (found or self._tracker.unsettled) else self._wasted + 1
 
     @property

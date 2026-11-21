@@ -50,6 +50,7 @@ class TextChangeWatcher:
         self._reference: np.ndarray | None = None
         self._latest: np.ndarray | None = None
         self._previous: np.ndarray | None = None
+        self.strictness = 1           # grows while readings keep finding nothing new (a busy background): fewer small alarms
         self.settling = False         # True: the picture just turned from calm to different - look again right away
 
     def changed(self, frame: np.ndarray) -> bool:
@@ -75,7 +76,7 @@ class TextChangeWatcher:
         if mask_distance(self._reference, self._latest) > self._threshold:
             return True
         # A quest line that stays on screen makes the share of change small: count the pixels instead
-        return _appeared_or_vanished(self._reference, self._latest) >= NEW_TEXT_PIXELS
+        return _appeared_or_vanished(self._reference, self._latest) >= NEW_TEXT_PIXELS * self.strictness
 
     def commit(self) -> None:
         self._reference = self._latest

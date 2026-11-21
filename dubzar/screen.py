@@ -26,6 +26,17 @@ def band_box(monitor: tuple[int, int, int, int]) -> tuple[int, int, int, int]:
             left + int(width * BAND_X[1]), top + int(height * BAND_Y[1]))
 
 
+CORNER_X = ((0.02, 0.38), (0.62, 0.98))     # top left and top right: quest goals, objectives, notices
+CORNER_Y = (0.03, 0.30)
+
+
+def corner_boxes(monitor: tuple[int, int, int, int]) -> list[tuple[int, int, int, int]]:
+    left, top, right, bottom = monitor
+    width, height = right - left, bottom - top
+    return [(left + int(width * x0), top + int(height * CORNER_Y[0]),
+             left + int(width * x1), top + int(height * CORNER_Y[1])) for x0, x1 in CORNER_X]
+
+
 def is_black(frame: np.ndarray) -> bool:
     """A frame that is entirely dark and flat: capture is blocked (some exclusive-fullscreen modes), not a dark scene."""
     return float(frame.mean()) < BLACK_MEAN and float(frame.std()) < BLACK_STD

@@ -1,5 +1,7 @@
 """Where on the screen the dialogue is: of everything read in the subtitle area, which lines belong together."""
 
+from difflib import SequenceMatcher
+
 from dubzar.ocr import OcrLine
 
 MAX_GAP_LINES = 2.6      # lines closer than this many line heights belong to one block (name line, wrapped text)
@@ -29,6 +31,13 @@ STICKY_SECONDS = 4.0
 FORGET_SECONDS = 12.0
 
 
+def _looks_like_name(text: str) -> bool:
+    """A speaker's name on a line of its own ('BOO B1E', 'Nate Ryder'): short, no punctuation, every word capitalised."""
+    words = text.split()
+    return (1 <= len(words) <= 3 and len(text) <= 24 and not any(c in text for c in ".,!?;:")
+            and all(w[0].isupper() or w[0].isdigit() for w in words))
+
+
 def _key(text: str) -> str:
     return "".join(ch for ch in text.lower() if ch.isalnum())
 
@@ -49,16 +58,17 @@ class StickyLines:
             del self._seen[key]
         keys = [_key(l.text) for l in lines]
         for line, key in zip(lines, keys):
-            if len(key) < 4 or line.text.rstrip().endswith(":"):
+            if len(key) < 4 or line.text.rstrip().endswith(":") or _looks_like_name(line.text):
                 continue                                   # too short to be sure, or a speaker's name
-            around = frozenset(k for k in keys if k != key)
-            record = self._seen.setdefault(key, [now, now, set()])
+            around = " ".join(sorted(k for k in keys if k != key))
+            record = self._seen.setdefault(key, [now, now, []])
             record[1] = now
-            record[2].add(around)
+            if around and all(SequenceMatcher(None, around, old).ratio() < 0.6 for old in record[2]):
+                record[2].append(around)                   # something really different was said around it
         kept, hud = [], []
         for line, key in zip(lines, keys):
             record = self._seen.get(key)
             sticky = (record is not None and now - record[0] >= STICKY_SECONDS
-                      and len(record[2] - {frozenset()}) >= STICKY_OTHERS)
+                      and len(record[2]) >= STICKY_OTHERS)
             (hud if sticky else kept).append(line)
         return kept, hud

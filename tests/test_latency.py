@@ -234,3 +234,19 @@ def test_translation_runs_beside_reading_so_a_slow_translation_does_not_hold_bac
         source.stop()
 
     assert [c.text_src for c in cues][-1] == OTHER
+
+
+def test_readings_that_keep_finding_nothing_new_make_the_small_change_rule_stricter_until_news_arrives():
+    class Strict(Watcher):
+        strictness = 1
+
+    watcher = Strict(True, True, True, True, True)
+    source, cues, _ = make(FakeOcr(LINE, LINE, LINE, LINE, OTHER), watcher)
+
+    source.poll_once()
+    assert watcher.strictness == 1                                # news: the strip's text was new
+    for _ in range(3):
+        source.poll_once()                                        # 'changed' again and again, same subtitle
+    assert watcher.strictness == 4
+    source.poll_once()
+    assert watcher.strictness == 1 and [c.text_src for c in cues] == [LINE, OTHER]
