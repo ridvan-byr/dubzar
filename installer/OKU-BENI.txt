@@ -32,6 +32,12 @@ Bilmeniz gerekenler (erken sürüm)
     çalan sesi alır. Oyun başka bir cihaza çalıyorsa ses alınamaz.
   - Çeviri küçük bir yerel model olduğu için bazen yanlış çıkar. Bir satır
     bir kez çevrilince hatırlanır ve tekrar çevrilmez.
+  - Hız modu (ayarlar panelinde): Hafif (varsayılan, az işlemci), Orta, Yüksek.
+    Yüksek, yazıyı ekran kartıyla okur ve altyazıyı en erken gösterir; ekran
+    kartını ve işlemciyi daha fazla kullanır. Oyunu aynı bilgisayarda
+    oynuyorsanız Hafif'i önerir, oyun başka cihazdaysa (konsol) Yüksek'i.
+    Yüksek için kurulumda "ekran kartı hızlandırması" sorusuna E deyin
+    (NVIDIA kartı gerekir, yaklaşık 1,5 GB ek indirme).
   - Sorun olursa: Başlat menüsünden "Dubzar (hata ayiklama)" ile açın ve
     çıktıyı gönderin; ya da %APPDATA%\Dubzar\dubzar.log dosyasını paylaşın.
 

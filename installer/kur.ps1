@@ -1,5 +1,5 @@
 # Dubzar kurulumu. Çift tıklanan Kur.bat bunu çalıştırır.
-# Test için: -InstallRoot, -DesktopDir, -StartMenuDir, -SkipPip, -SkipModels, -Yes
+# Test için: -InstallRoot, -DesktopDir, -StartMenuDir, -SkipPip, -SkipModels, -Yes, -Gpu
 
 param(
     [string]$InstallRoot = (Join-Path $env:LOCALAPPDATA "Dubzar"),
@@ -7,7 +7,8 @@ param(
     [string]$StartMenuDir = (Join-Path ([Environment]::GetFolderPath("Programs")) "Dubzar"),
     [switch]$SkipPip,
     [switch]$SkipModels,
-    [switch]$Yes
+    [switch]$Yes,
+    [switch]$Gpu
 )
 
 $ErrorActionPreference = "Stop"
@@ -97,6 +98,32 @@ if (-not $SkipPip) {
     Write-Host "Paketler indiriliyor ve kuruluyor (birkaç dakika sürebilir)..."
     Run $venvPython @("-m", "pip", "install", "--upgrade", "pip") "pip güncelleme"
     Run $venvPython @("-m", "pip", "install", "-r", (Join-Path $appTarget "requirements.txt")) "Paket kurulumu"
+}
+
+# --- 3b. Ekran kartı hızlandırması (isteğe bağlı, yalnızca NVIDIA kartı olanlara sorulur) -------------------
+# "Yüksek" hız modu yazıyı ekran kartıyla okur (yaklaşık 6 kat hızlı). Kurulamazsa Dubzar işlemciyle çalışmaya devam eder.
+$wantGpu = $false
+if (-not $SkipPip -and (Get-Command nvidia-smi -ErrorAction SilentlyContinue)) {
+    if ($Gpu) { $wantGpu = $true }
+    elseif (-not $Yes) {
+        Write-Host ""
+        Write-Host "NVIDIA ekran kartı bulundu. 'Yüksek' hız modu yazıyı ekran kartıyla okur: altyazı daha erken çıkar,"
+        Write-Host "ama ekran kartını ve işlemciyi daha fazla kullanır (oyun başka cihazdaysa, örn. konsol, önerilir)."
+        Write-Host "Bunun için ek paketler indirilir (yaklaşık 1,5 GB)."
+        $wantGpu = Ask "Ekran kartı hızlandırması kurulsun mu?"
+    }
+}
+if ($wantGpu) {
+    Write-Host "Ekran kartı paketleri indiriliyor..."
+    & $venvPython -m pip uninstall -y onnxruntime
+    & $venvPython -m pip install onnxruntime-gpu==1.23.2 nvidia-cudnn-cu12 nvidia-cublas-cu12 nvidia-cuda-runtime-cu12 nvidia-cufft-cu12 nvidia-curand-cu12
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Ekran kartı hızlandırması kurulamadı; 'Yüksek' mod işlemciyle çalışacak. (Dubzar yine de çalışır.)" -ForegroundColor Yellow
+        & $venvPython -m pip install onnxruntime==1.32.0
+        $LASTEXITCODE = 0
+    } else {
+        Write-Host "Ekran kartı hızlandırması kuruldu. Ayarlar panelinde 'Hız modu'nu 'Yüksek' yapın."
+    }
 }
 
 # --- 4. Modeller ---------------------------------------------------------------------------------------------
