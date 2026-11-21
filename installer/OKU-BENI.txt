@@ -19,7 +19,7 @@ Kurulum
 
 Kullanım
   - Dubzar simgesine çift tıklayın, sonra oyunu açın.
-  - Ctrl+Shift+D : ayarlar paneli (altyazı boyutu, konumu, renkleri, açma/kapama).
+  - Ctrl+Alt+D : ayarlar paneli (altyazı boyutu, konumu, renkleri, açma/kapama).
     Paneli üst kısmından sürükleyebilirsiniz.
   - Çıkmak için panelde "Dubzar'dan çık".
   - Oyunu "tam ekran" ya da "pencereli tam ekran" çalıştırabilirsiniz.

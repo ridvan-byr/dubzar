@@ -74,6 +74,9 @@ def _optional_exe_name(value: Any) -> str | None:
     return value
 
 
+OLD_DEFAULT_HOTKEY = "Ctrl+Shift+D"       # browsers use it (bookmark all tabs); the default is now Ctrl+Alt+D
+
+
 # name -> (default, validator that returns the normalised value or raises ValueError)
 _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "subtitles_enabled": (True, _boolean),
@@ -85,7 +88,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "background_opacity": (60, _int_between(0, 100)),  # percent
     "screen": ("auto", _screen),
     "panel_screen": ("auto", _panel_screen),  # where the settings panel opens; "auto" = the game's screen
-    "hotkey": ("Ctrl+Shift+D", _hotkey),
+    "hotkey": ("Ctrl+Alt+D", _hotkey),
     "performance": ("light", _performance),  # how often the screen is read and by what; see dubzar.performance
     "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }
@@ -155,6 +158,8 @@ def load_settings(path: Path | str | None = None) -> Settings:
                 setattr(settings, name, data[name])
             except ValueError as exc:
                 log.warning("ignoring invalid setting %s: %s", name, exc)
+    if settings.hotkey == OLD_DEFAULT_HOTKEY:
+        settings.hotkey = _SPEC["hotkey"][0]     # saved by an older version: that default clashed with browsers
     return settings
 
 

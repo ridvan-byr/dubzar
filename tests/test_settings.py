@@ -10,7 +10,7 @@ def test_defaults():
 
     assert (s.subtitles_enabled, s.dubbing_enabled) == (True, True)
     assert (s.font_size, s.text_color, s.background_color, s.background_opacity) == (28, "#FFFFFF", "#000000", 60)
-    assert (s.screen, s.hotkey) == ("auto", "Ctrl+Shift+D")
+    assert (s.screen, s.hotkey) == ("auto", "Ctrl+Alt+D")
     assert 0.0 <= s.vertical <= 1.0
 
 
@@ -106,3 +106,23 @@ def test_game_exe_defaults_to_none_and_accepts_an_exe_name():
 def test_game_exe_must_be_a_plain_exe_file_name(bad):
     with pytest.raises(ValueError):
         Settings(game_exe=bad)
+
+
+def test_a_hotkey_saved_by_an_older_version_moves_to_the_new_default(tmp_path):
+    from dubzar.settings import load_settings
+
+    path = tmp_path / "settings.json"
+    path.write_text('{"hotkey": "Ctrl+Shift+D", "font_size": 30}', encoding="utf-8")
+
+    settings = load_settings(path)
+
+    assert settings.hotkey == "Ctrl+Alt+D" and settings.font_size == 30
+
+
+def test_a_hotkey_the_user_chose_is_kept(tmp_path):
+    from dubzar.settings import load_settings
+
+    path = tmp_path / "settings.json"
+    path.write_text('{"hotkey": "Ctrl+Alt+F9"}', encoding="utf-8")
+
+    assert load_settings(path).hotkey == "Ctrl+Alt+F9"
