@@ -1,0 +1,70 @@
+# Sahne bağlamı testi (GTA altyazıları)
+
+- Opus-MT 0.08 sn, Gemma 4 12B 0.93 sn, Gemma 4 + bağlam 1.53 sn (satır başına)
+
+| # | sahne | İngilizce | Opus-MT | Gemma 4 | Gemma 4 + bağlam |
+|---|---|---|---|---|---|
+| 1 | araba | You said we're going where? | Nereye gittiğimizi söyledin? | Nereye gittiğimizi mi söyledin? | Nereye gittiğimizi mi söyledin? |
+| 2 | araba | But why me? | Ama neden ben? | Ama neden ben? | Ama neden ben? |
+| 3 | araba | First, I need to get over to North Vice Ave, then after that at Rockridge. You can drive, right? | Önce North Vice Ave'e, ondan sonra da Rockridge'e gitmem gerekiyor. Araba kullanabilirsin, değil mi? | Önce North Vice Ave'e geçmem lazım, ondan sonra da Rockridge'e. Araba sürebiliyorsun, değil mi? | Önce North Vice Ave'e geçmem lazım, ondan sonra da Rockridge'e. Direksiyonu sen tutabilirsin, değil mi? |
+| 4 | araba | Why not? Shit, I always wanted a white driver. | Neden? Her zaman beyaz bir sürücü istemişimdir. | Neden olmasın? Lanet olsun, her zaman beyaz bir şoför istemiştim. | Neden olmasın? Lanet olsun, her zaman beyaz bir şoför istemiştim. |
+| 5 | araba | Head to North Vice Ave. | Kuzey Vice Ave'ye gidin. | North Vice Ave.'ye git. | North Vice Ave'ye geç. |
+| 6 | araba | Your girl fresh off the boat, right? | Kız arkadaşın tekneden yeni çıktı, değil mi? | Kız arkadaşın yeni gelmiş, değil mi? | Kızın yeni mi geldi, değil mi? |
+| 7 | araba | Nah, born and raised in Liberty City. | Hayır, Liberty City'de doğup büyüdü. | Yok, Liberty City'de doğup büyüdüm. | Yok, Liberty City'de doğup büyüdü. |
+| 8 | araba | Liberty City? Oh, hell nah, man, you can't tell a bitch | Liberty City mi? Oh, lanet olsun, dostum, bir orospuya söyleyemezsin | Liberty City mi? Ha, hayır abi, birine bir şey diyemezsin. | Liberty City mi? Yok canım, bir kadını ayırt edemezsin oğlum. |
+| 9 | araba | from Liberty City not a goddamn thing. | Liberty City'den bir şey çıkmadı. | Liberty City'den hiçbir şey yok. | Liberty City'li olduğunu bir türlü belli edemiyorsun lan. |
+| 10 | araba | They confrontational, argumentative, uncooperative. | Çelişkili, münakaşacı, işbirliği yapmazlar. | Çatışmacılar, tartışmacı ve iş birliğine kapalılar. | Çok kavgacı, çok laf atan, hiç iş birliği yapmıyorlar. |
+| 11 | araba | She born here too, so that mean that bitch don't need a Green | O da burada doğdu, yani o kaltağın yeşile ihtiyacı yok. | O da burada doğdu, yani o sürtüğün Yeşile ihtiyacı yok. | O da buralı, yani o sürtüğün Green'e ihtiyacı yok. |
+| 12 | araba | That ain't player, dog, nah... that's hard work. | Bu oyuncu değil, köpek, hayır... Bu zor bir iş. | O iş oyuncu işi değil dostum, hayır... o çok büyük emek ister. | O iş oyuncu işi değil dostum, hayır... o emek ister. |
+| 13 | araba | You see, a guy like me grew up hard. A real project, ghetto boy. | Benim gibi bir adam çok büyüdü. Gerçek bir proje, getto çocuğu. | Bak şimdi, benim gibi bir adam zor büyüdü. Tam bir proje çocuğu, mahalle çocuğu. | Bak, benim gibi bir adam zor büyüdü. Tam bir mahalle çocuğu, gerçek bir "project" çocuğu. |
+| 14 | araba | So I gotta get like you now? | Şimdi senin gibi mi olmalıyım? | Yani şimdi senin gibi mi olmam gerekiyor? | Yani şimdi senin gibi mi olmam lazım? |
+| 15 | araba | Man, this car ain't regular. Everything's custom. | Dostum, bu araba normal değil. Her şey gelenektir. | Vay be, bu araba sıradan değil. Her şeyi özel yapım. | Oğlum, bu araba sıradan değil. Her şeyi özel yapım. |
+| 16 | araba | High quality shit. | Yüksek kaliteli bok. | Kaliteli iş. | Kaliteli mal. |
+| 17 | araba | With time, anything is possible. | Zamanla her şey mümkün olur. | Zamanla her şey mümkün. | Zamanla her şey mümkün. |
+| 18 | mahalle | I been taking care of the hood, nigga. | Kaputu hallediyordum, zenci. | Mahallei kolluyorum, kardeşim. | Mahallei kolluyorum, kardeşim. |
+| 19 | mahalle | I ran with a lotta thugs and hustlers back in the day, | Zamanında bir sürü haydut ve üçkağıtçıyla koştum. | Eskiden çok fazla çete üyesi ve dolandırıcıyla takılırdım, | Eskiden çok fazla çete üyesi ve kaçakçıyla takılırdım. |
+| 20 | mahalle | and I learnt everything I know from a guy called Ducky. | Ve bildiğim her şeyi Ducky adında birinden öğrendim. | ve bildiğim her şeyi Ducky adında bir adamdan öğrendim. | ve bildiğim her şeyi Ducky adında bir adamdan öğrendim. |
+| 21 | mahalle | William Ducky Brown. | William Ducky Brown. | William Ducky Brown. | William Ducky Brown. |
+| 22 | mahalle | That nigga was one of Vice City's largest cocaine distributors, nigga. | O zenci Vice City'nin en büyük kokain dağıtıcılarından biriydi, zenci. | O herif Vice City'nin en büyük kokain satıcılarından biriydi, oğlum. | O herif Vice City'nin en büyük kokain satıcılarından biriydi, kardeşim. |
+| 23 | mahalle | And he got that way by having a relationship with the Cubans. | Ve bu şekilde Kübalılarla bir ilişki kurdu. | Ve bunu Kübelilerle ilişki kurarak başardı. | Ve Kübelilerle ilişki kurarak o noktaya geldi. |
+| 24 | mahalle | Who, at the time, had a sort of monopoly, | O zamanlar bir tür tekel sahibi olan, | O dönemde, bir nevi tekel kuran, | O dönemde bir nevi tekel kurmuş olan, |
+| 25 | mahalle | being one of the major, major importers. | Büyük, büyük ithalatçılardan biri olmak. | Büyük, çok büyük ithalatçılardan biri olmak. | çünkü o zamanlar en büyük ithalatçılardan biriydiler. |
+| 26 | mahalle | Now, you see, the coke game may done changed, | Kokain oyunu değişmiş olabilir. | Bak şimdi, oyunun kuralları değişmiş olabilir, | Şimdi, görüyorsun ya, kokain işi değişmiş olabilir, |
+| 27 | mahalle | but the relationships stay the same. | Ama ilişkiler aynı kalıyor. | ama ilişkiler aynı kalıyor. | ama ilişkiler aynı kalıyor. |
+| 28 | mahalle | Cubans fuck with the Haitians, | Kübalılar Haitililerle düzüşüyor. | Kübeliler Haitilerle takılır, | Kübalılar Haitilerle takılır. |
+| 29 | mahalle | See them stairs, pull in-front. | Merdivenleri görün, ön tarafa çekin. | Şu merdivenleri görüyorsun ya, önüne geç. | Şu merdivenleri görüyorsun ya, önüne geç. |
+| 30 | mahalle | Hey, go on and blow the horn for me. | Hey, devam et ve benim için korna çal. | Hey, hadi benim için korna çal. | Hadi, benim için korna çal. |
+| 31 | mahalle | Shit, nigga you got motherfuckers hot! | Lanet olsun, zenci herifler çok seksi! | Siktir, oğlum ortalığı birbirine kattın! | Siktir, oğlum adamları çıldırtıyorsun! |
+| 32 | mahalle | Man, come on down so I can get the fuck up outta here, dog. | Dostum, aşağı gel de buradan defolup gideyim, köpek. | Lan, hadi aşağı in de şu lanet olası yerden kurtulayım artık dostum. | Oğlum, hadi aşağı in de şu lanet olası yerden defedeyim, kanka. |
+| 33 | mahalle | Shit, he got my word, and I got his four. | Lanet olsun, sözümü tuttu, ben de dört tanesini aldım. | Lanet olsun, o benim sözümü aldı, ben de onun dört tanesini. | Lan, adamın sözü bende, benim dörtlüsü onda. |
+| 34 | mahalle | Matter of fact, go ahead and call him. | İşin aslı, devam et ve onu ara. | Aslında, hadi ara onu. | Aslında, hadi ara şunu. |
+| 35 | mahalle | Call him now and tell him come to the club, and I got him. | Onu hemen ara ve kulübe gelmesini söyle, ben de onu yakalayayım. | Şimdi ara ve kulübe gelmesini söyle, ben hallederim. | Şimdi ara, kulübe gelmesini söyle, hallederim. |
+| 36 | kulup | A'ight, I'll let him know. | Tamam, ona haber veririm. | Tamam, ona haber veririm. | Tamam, ona haber veririm. |
+| 37 | kulup | Alright, let's roll, nigga. | Tamam, gidelim, zenci. | Tamam, hadi başla bakalım dostum. | Tamam, hadi gidelim kardeşim. |
+| 38 | kulup | A'ight, Big Mikes by the river, Westbrook Drive in Salton. Let's hit the club and drop this munyun. | Tamam, nehir kenarındaki Big Mikes, Salton'daki Westbrook Drive. Kulübe gidip şu mununu bırakalım. | Tamamdır, Salton'daki Westbrook Drive üzerinde nehir kenarındaki Big Mike's. Hadi kulübe gidelim de şu işi bitirelim. | Tamamdır, Salton'daki Westbrook Drive'da nehir kenarındaki Big Mike's'a gidiyoruz. Kulübe geçip şu işi bitirelim. |
+| 39 | kulup | We really going to another strip club? Isn't that, like, a conflict of interest? | Gerçekten başka bir striptiz kulübüne mi gidiyoruz? Bu bir çıkar çatışması değil mi? | Gerçekten yine başka bir strip klübe mi gidiyoruz? Bu biraz, yani, çıkar çatışması değil mi? | Yine mi strip kulübüne gidiyoruz? Bu biraz çıkar çatışması değil mi? |
+| 40 | kulup | First of all, you in Vice City, nigga.. | Her şeyden önce, sen Vice City'desin zenci.. | Öncelikle, sen Vice City'desin lan... | Öncelikle, Vice City'desin lan oğlum... |
+| 41 | kulup | Second of all, this ain't no ordinary occasion. | İkincisi, bu sıradan bir olay değil. | İkincisi, bu sıradan bir durum değil. | İkincisi, bu sıradan bir durum değil. |
+| 42 | kulup | So what's the occasion? | Peki olay nedir? | Eee, özel bir durum mu var? | Eee, neyin özel günü? |
+| 43 | kulup | My dog, Big Mike, opening his new spot. | Köpeğim Koca Mike, yeni yerini açıyor. | Köpeğim Big Mike'ın yeni mekanını açıyoruz. | Kankam Big Mike'ın yeni mekanının açılışı. |
+| 44 | kulup | He got a whole new concept. | Tamamen yeni bir konsepte sahip. | Tamamen yeni bir konsept buldu. | Tamamen yeni bir konsepti var. |
+| 45 | kulup | I told him I'd stop by, bless him with a few racks. | Ona uğrayacağımı, birkaç rafla onu kutsayacağımı söyledim. | Ona uğrayıp bir miktar para vereceğimi söyledim, canı sağ olsun. | Ona uğrayıp bir miktar para takviyesi yapacağımı söyledim. |
+| 46 | kulup | How he talking, he finna bring the whole city out, nigga! | Nasıl konuşuyor, bütün şehri dışarı çıkarıyor, zenci! | O nasıl konuşuyor ya, bütün şehri ayağa kaldıracak adam! | O nasıl konuşuyor ya, bütün şehri buraya toplayacak adam! |
+| 47 | kulup | That's why I had to come collect some pocket money | Bu yüzden cep harçlığı almaya geldim. | İşte bu yüzden biraz harçlık toplamaya geldim. | İşte bu yüzden gelip biraz harçlık toplamak zorunda kaldım. |
+| 48 | kulup | before we showed up and showed out. | Biz ortaya çıkıp ortaya çıkmadan önce. | ortaya çıkıp hükmetmeden önce. | ortaya çıkıp fırtına gibi esmeden önce. |
+| 49 | kulup | How long we expecting to be out there, man? I'm kinda partied out. | Orada ne kadar kalmayı bekliyoruz, dostum? Ben biraz partiliyim. | Dışarıda ne kadar kalacağız dostum? Biraz yoruldum, enerjim tükendi. | Orada ne kadar kalacağız abi? Biraz yoruldum, tadım kaçtı. |
+| 50 | kulup | Ahh, you wanna go lay up with yo' woman, huh? | Ahh, gidip bir kadınla yatmak ister misin? | Ah, demekinle kadınla yatmak istiyorsun, ha? | Ah, kadının yanına gidip uzanmak istiyorsun, ha? |
+| 51 | kulup | Got you a fine ass Latina, | Sana güzel bir göt buldum Latina, | Sana fıstık gibi bir Latin kız buldum, | Sana fıstık gibi bir Latin buldum. |
+| 52 | kulup | gonna get you a body to body massage, lil' head rub, huh? | Sana vücut masajı yaptıracağım, kafanı ovalayacaksın, ha? | Sana şöyle güzel bir vücut masajı, üstüne de hafif bir kafa masajı yapayım, ha? | Sana vücut masajı, hafif bir kafa masajı falan yapacak, ha? |
+| 53 | kulup | Yeah.. I know exactly how that go. | Evet.. Bunun nasıl olduğunu çok iyi biliyorum. | Evet.. O işin nasıl döndüğünü çok iyi biliyorum. | Evet.. O işin nasıl döndüğünü çok iyi biliyorum. |
+| 54 | kulup | This look like a grand opening to you? | Bu sana büyük bir açılış gibi mi görünüyor? | Bu sana büyük bir açılış gibi mi görünüyor? | Bu sana büyük açılış gibi mi geliyor? |
+| 55 | kulup | We can park somewhere up here. | Burada bir yere park edebiliriz. | Burada bir yere park edebiliriz. | Yukarıda bir yere park edebiliriz. |
+| 56 | kulup | Here you got the stripper poles and you know we gotta have the high ceilings. | Burada striptiz direkleri var ve yüksek tavanlara sahip olmamız gerektiğini biliyorsun. | Burada çıplak dans direkleri var ve biliyorsun, tavanların yüksek olması gerekiyor. | Burada çıplak dans direkleri var ve biliyorsun ki tavanların yüksek olması lazım. |
+| 57 | kulup | You ain't even got no strippers in here, but it smells like ass. | Burada striptizci bile yok ama göt gibi kokuyor. | Burada çıplak dansçı bile yok ama her yer pislik kokuyor. | Burada çıplak dansçı bile yok ama resmen pislik gibi kokuyor. |
+| 58 | kulup | Man, you got the bar, where they gonna be sellin' hookahs and liquor. | Dostum, nargile ve likör satacakları barı aldın. | Oğlum, barı kaptın; nargile ve içki satacakları yer orası. | Oğlum, barın var; nargile ve içkiyi orada satacaklar. |
+| 59 | kulup | And you talkin' 'bout ass; this shit, right here's gon' knock you off yo' ass. | Ve sen de "kıç hakkında" konuşuyorsun; bu bok, işte tam burada, seni kıçından vuruyor. | Sen hala boş yapıyorsun; bu işin sonu seni fena patlatacak. | Bir de "koku" diyorsun; bu işin içinden sağ çıkamayacaksın, seni yerle bir edecek. |
+| 60 | kulup | What the fuck? You gon' have niggas out here swimmin'? | Bu da ne? Burada zenciler yüzüyor mu? | Ne oluyor lan? Adamları burada yüzdürecek misin? | Ne oluyor lan? Adamları burada yüzdirtecek misin? |
+| 61 | kulup | We ain't gon' be swimmin', you dummy, don't you see it? | Biz yüzmeye gitmiyoruz, seni aptal, görmüyor musun? | Yüzmeyeceğiz, aptal, görmüyor musun? | Yüzmeyeceğiz lan, aptal, görmüyor musun? |
+| 62 | kulup | Imagine boats, yachts, Seasharks, all coming from the water to the club. | Tekneleri, yatları, Seashark'ları hayal edin, hepsi sudan kulübe geliyor. | Denizden kulübe doğru gelen tekneleri, yatları, Seashark'ları hayal et. | Şu tekneleri, yatları, Seashark'ları düşün; hepsinin sudan kulübe geldiğini. |
+| 63 | kulup | Or, you could flip it around and come from the club, to the water. | Ya da onu ters çevirip kulüpten suya gelebilirsin. | Ya da tam tersini yapıp kulüpten suya doğru gelebilirsin. | Ya da tam tersini yapıp kulüpten denize doğru gelebilirsiniz. |
+| 64 | kulup | This the new wave, baby! | Bu yeni dalga, bebeğim! | Yeni dalga bu, bebeğim! | Yeni akım bu bebeğim! |
