@@ -21,6 +21,7 @@ log = logging.getLogger(__name__)
 
 NOTE_SHOW_S = 8.0
 DICTIONARY_TRUST = 0.9
+MIN_QUALITY = 0.8          # a note must be mostly real English words
 POLL_S = 0.5
 
 
@@ -28,13 +29,15 @@ class RegionNoteSource:
     """``grab_regions()`` returns one picture per watched region (or None while the game is not in front)."""
 
     def __init__(self, grab_regions: Callable[[], Sequence[np.ndarray] | None], ocr, translator,
-                 on_note: Callable[[Cue], None], poll_s: float = POLL_S, watcher_factory=TextChangeWatcher):
+                 on_note: Callable[[Cue], None], poll_s: float = POLL_S, watcher_factory=TextChangeWatcher,
+                 defer: Callable[[], bool] = lambda: False):
         self._grab = grab_regions
         self._ocr = ocr
         self._translator = translator
         self._on_note = on_note
         self._poll_s = poll_s
         self._factory = watcher_factory
+        self._defer = defer                    # true while the subtitle band needs the reader: corners can wait
         self._watchers: list = []
         self._last: list[str | None] = []
         self._pending: list[str | None] = []
@@ -44,6 +47,8 @@ class RegionNoteSource:
         self.ocr_calls = 0
 
     def poll_once(self) -> None:
+        if self._defer():
+            return
         frames = self._grab()
         if not frames:
             return
@@ -67,6 +72,9 @@ class RegionNoteSource:
         if text is None:
             self._pending[i] = None
             self._last[i] = None                           # the text went away: the next one is new
+            return
+        if text_quality(text) < MIN_QUALITY:
+            self._pending[i] = None                        # garbled or not English words (a video title, a logo)
             return
         sure = all(l.confidence >= CONFIDENT for l in block) or text_quality(text) >= DICTIONARY_TRUST
         if not sure and not (self._pending[i] and same_subtitle(self._pending[i], text)):

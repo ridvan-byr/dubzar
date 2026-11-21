@@ -247,6 +247,6 @@ def test_readings_that_keep_finding_nothing_new_make_the_small_change_rule_stric
     assert watcher.strictness == 1                                # news: the strip's text was new
     for _ in range(3):
         source.poll_once()                                        # 'changed' again and again, same subtitle
-    assert watcher.strictness == 4
+    assert watcher.strictness == 3
     source.poll_once()
     assert watcher.strictness == 1 and [c.text_src for c in cues] == [LINE, OTHER]

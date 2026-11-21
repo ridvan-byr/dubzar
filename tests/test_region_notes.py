@@ -70,7 +70,7 @@ def test_a_changed_objective_is_shown_again_and_a_vanished_one_is_forgotten():
 
 
 def test_a_doubtful_reading_is_confirmed_by_a_second_one_before_it_is_shown():
-    odd = ["Zorgon flimbar quizzle wobbly frumpet snorkel"]
+    odd = ["Find the courier near the old Zorgan docks"]            # mostly real words, but the reader is not sure
     source, notes = make(Reader(odd, confidence=0.3), True, False)
 
     source.poll_once()
@@ -94,3 +94,25 @@ def test_each_corner_is_watched_on_its_own():
     source.poll_once()
 
     assert [n.text_src for n in notes] == ["Find the missing courier", "Reach the safe house"]
+
+
+def test_garbled_text_such_as_a_video_title_is_not_shown():
+    source, notes = make(Reader(["TA SAN ANDREAS GamepIay WaIktnrougN FULL GAME 4K 6UFPS"]), True)
+
+    source.poll_once()
+
+    assert notes == []
+
+
+def test_corners_wait_while_the_subtitle_strip_needs_the_reader():
+    notes = []
+    busy = {"now": True}
+    source = RegionNoteSource(lambda: [FRAME], Reader(["Find the missing courier"]), Translate(), notes.append,
+                              watcher_factory=lambda: Scripted(True, True), defer=lambda: busy["now"])
+
+    source.poll_once()
+    assert source.ocr_calls == 0
+    busy["now"] = False
+    source.poll_once()
+
+    assert [n.text_src for n in notes] == ["Find the missing courier"]

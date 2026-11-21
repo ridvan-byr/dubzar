@@ -26,7 +26,8 @@ log = logging.getLogger(__name__)
 
 SETTLE_S = 0.04         # pause before the quick second look at something that just appeared
 NOTE_SHOW_S = 8.0          # a quest line is shown this long when it appears or changes (the game keeps it on screen)
-MAX_STRICTNESS = 6          # a changed strip with nothing new makes the small-change rule this many times stricter
+BUSY_S = 1.5                # corners wait this long after the subtitle strip changed
+MAX_STRICTNESS = 3          # a changed strip with nothing new makes the small-change rule this many times stricter
 HEARTBEAT_S = 3.0           # read the strip at least this often even if it looks unchanged (a safety net)
 BACKOFF_CAP_S = 1.5         # the longest pause between looks when readings keep finding nothing
 IDLE_AFTER_S = 15.0         # no subtitle seen for this long: plain gameplay, look less often
@@ -60,6 +61,7 @@ class ScreenSubtitleSource:
         self._sticky = StickyLines()
         self._black = 0
         self._last_seen = float("-inf")
+        self._last_change_at = float("-inf")
         self._watcher = watcher or TextChangeWatcher()
         self._last_read_at = float("-inf")
         self._noise = 0                         # changed-readings in a row that brought nothing new
@@ -78,6 +80,11 @@ class ScreenSubtitleSource:
     def blocked(self) -> bool:
         """Screenshots of the game come back black: this source cannot work in the current display mode."""
         return self._black >= self._black_limit
+
+    @property
+    def busy(self) -> bool:
+        """A subtitle is being read or has just changed: other readings should wait for the reader."""
+        return self._tracker.unsettled or self._clock() - self._last_change_at < BUSY_S
 
     @property
     def active(self) -> bool:
@@ -106,6 +113,8 @@ class ScreenSubtitleSource:
             if again is not None:
                 frame = again
                 changed = self._watcher.changed(frame)
+        if changed:
+            self._last_change_at = now
         if changed and self._event_at is None:
             self._event_at = now
         # Read when the strip changed, when a decision is still pending (a second sighting, or a subtitle that may

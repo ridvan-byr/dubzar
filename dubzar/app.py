@@ -151,7 +151,7 @@ def _make_screen_source(settings: Settings, translator: Translator, bridge):
 
     subtitles = ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit,
                                      on_note=bridge.note.emit)
-    return subtitles, RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit)
+    return subtitles, RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit, defer=lambda: subtitles.busy)
 
 
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,
