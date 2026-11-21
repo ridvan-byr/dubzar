@@ -6,6 +6,8 @@ doubles a subtitle strip, which made a reading take 1.9 s instead of 0.5 s on tw
 """
 
 import logging
+import os
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -21,7 +23,7 @@ def bundled_model_dir() -> Path:
     return Path(__file__).resolve().parent.parent / "models" / "rapidocr"
 
 
-def engine_params(threads: int, det_max_side: int, model_dir: Path | None) -> dict:
+def engine_params(threads: int, det_max_side: int, model_dir: Path | None, gpu: bool = False) -> dict:
     from rapidocr import LangRec, ModelType, OCRVersion
 
     params = {
@@ -30,6 +32,8 @@ def engine_params(threads: int, det_max_side: int, model_dir: Path | None) -> di
         "EngineConfig.onnxruntime.intra_op_num_threads": threads,
         "EngineConfig.onnxruntime.inter_op_num_threads": 1,
     }
+    if gpu:
+        params["EngineConfig.onnxruntime.use_cuda"] = True
     if model_dir is not None and (model_dir / DET_MODEL).exists() and (model_dir / REC_MODEL).exists():
         params["Det.model_path"] = str(model_dir / DET_MODEL)
         params["Rec.model_path"] = str(model_dir / REC_MODEL)
@@ -54,16 +58,73 @@ def stop_idle_spinning() -> None:
     OrtInferSession._dubzar_no_spin = True
 
 
+def _cuda_library_folders() -> list[str]:
+    """Folders that may hold the CUDA 12 / cuDNN 9 libraries: the nvidia pip packages and a torch installation."""
+    folders = []
+    for base in sys.path:
+        nvidia = Path(base) / "nvidia"
+        if nvidia.is_dir():
+            folders += [str(p) for p in nvidia.glob("*/bin") if p.is_dir()]
+        torch_lib = Path(base) / "torch" / "lib"
+        if torch_lib.is_dir():
+            folders.append(str(torch_lib))
+    return folders
+
+
+def _a_model_file(model_dir: Path) -> Path | None:
+    """A recognizer model to try the graphics card with: the shipped one, or the one the library keeps itself."""
+    shipped = model_dir / REC_MODEL
+    if shipped.exists():
+        return shipped
+    try:
+        import rapidocr
+
+        own = Path(rapidocr.__file__).parent / "models" / REC_MODEL
+        return own if own.exists() else None
+    except ImportError:
+        return None
+
+
+def cuda_ready(model: Path | None) -> bool:
+    """Can onnxruntime really run on the graphics card here? Looks for the libraries and tries a session."""
+    try:
+        import onnxruntime as ort
+
+        if "CUDAExecutionProvider" not in ort.get_available_providers():
+            return False
+        for folder in _cuda_library_folders():
+            try:
+                os.add_dll_directory(folder)
+                os.environ["PATH"] = folder + os.pathsep + os.environ.get("PATH", "")
+            except (OSError, AttributeError):
+                pass
+        if model is None or not Path(model).exists():
+            return False
+        session = ort.InferenceSession(str(model), providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
+        return session.get_providers()[0] == "CUDAExecutionProvider"
+    except Exception as exc:  # no card, no libraries, a driver that is too old: the processor reads instead
+        logging.getLogger(__name__).info("ekran kartıyla okuma kullanılamıyor: %s", exc)
+        return False
+
+
 class RapidOcr:
     language = "en (PP-OCRv5)"
 
-    def __init__(self, threads: int = 2, det_max_side: int = 1536, engine=None, model_dir: Path | None = None):
+    def __init__(self, threads: int = 2, det_max_side: int = 1536, engine=None, model_dir: Path | None = None,
+                 gpu: bool = False):
+        model_dir = model_dir or bundled_model_dir()
+        if gpu and not cuda_ready(_a_model_file(model_dir)):
+            logging.getLogger(__name__).info("ekran kartı bulunamadı: okuma işlemciyle yapılacak")
+            gpu = False
+        self.gpu = gpu
+        if gpu:
+            self.language = "en (PP-OCRv5, GPU)"
         if engine is None:
             from rapidocr import RapidOCR
 
             logging.getLogger("RapidOCR").setLevel(logging.ERROR)
             stop_idle_spinning()
-            engine = RapidOCR(params=engine_params(threads, det_max_side, model_dir or bundled_model_dir()))
+            engine = RapidOCR(params=engine_params(threads, det_max_side, model_dir, gpu))
         self._engine = engine
 
     def read(self, image: np.ndarray) -> list[OcrLine]:

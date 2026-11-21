@@ -59,6 +59,12 @@ def _hotkey(value: Any) -> str:
     return value
 
 
+def _performance(value: Any) -> str:
+    if value not in ("light", "medium", "high"):
+        raise ValueError(f"performance must be 'light', 'medium' or 'high', got {value!r}")
+    return value
+
+
 def _optional_exe_name(value: Any) -> str | None:
     if value is None:
         return None
@@ -80,6 +86,7 @@ _SPEC: dict[str, tuple[Any, Callable[[Any], Any]]] = {
     "screen": ("auto", _screen),
     "panel_screen": ("auto", _panel_screen),  # where the settings panel opens; "auto" = the game's screen
     "hotkey": ("Ctrl+Shift+D", _hotkey),
+    "performance": ("light", _performance),  # how often the screen is read and by what; see dubzar.performance
     "game_exe": (None, _optional_exe_name),  # the game's process; the background scan waits while it runs
 }
 

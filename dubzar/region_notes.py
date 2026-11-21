@@ -46,6 +46,9 @@ class RegionNoteSource:
         self._thread: threading.Thread | None = None
         self.ocr_calls = 0
 
+    def set_rhythm(self, poll_s: float) -> None:
+        self._poll_s = poll_s
+
     def poll_once(self) -> None:
         if self._defer():
             return

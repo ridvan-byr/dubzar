@@ -36,6 +36,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--module")
     ap.add_argument("--trials", type=int, default=6)
+    ap.add_argument("--performance", default="light", choices=("light", "medium", "high"))
     ap.add_argument("--frames", default="2,13,18,24,25,29,31")
     args = ap.parse_args()
     sys.stdout.reconfigure(errors="replace", encoding="utf-8")
@@ -46,7 +47,11 @@ def main() -> int:
 
     labels = json.load(open(ROOT / "experiments" / "real_frames" / "labels.json", encoding="utf-8"))
     bands = rf.load_bands(labels)
-    reader, translator = make_reader(), OpusMtTranslator(threads=2)
+    from dubzar.performance import profile_for
+
+    profile = profile_for(args.performance)
+    reader, translator = make_reader(profile), OpusMtTranslator(threads=2)
+    print("okuyucu:", getattr(reader, "language", "?"), "| mod:", profile.label)
     translator.load()
     source_class = load_source_class(args.module)
     rng = np.random.default_rng(1)
@@ -72,7 +77,8 @@ def main() -> int:
             cue_time.setdefault("t", time.perf_counter())
             shown.set()
 
-        source = source_class(grab, reader, translator, on_cue, lambda: None)
+        source = source_class(grab, reader, translator, on_cue, lambda: None, poll_s=profile.poll_s,
+                              idle_poll_s=profile.idle_poll_s)
         source.start()
         time.sleep(1.2)                          # the scene runs for a while, no subtitle
         start["t"] = time.perf_counter()         # the subtitle appears NOW

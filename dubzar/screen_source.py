@@ -46,13 +46,14 @@ class ScreenSubtitleSource:
     def __init__(self, grab_frame: Callable[[], np.ndarray | None], ocr: Reader, translator: Translator,
                  on_cue: Callable[[Cue], None], on_clear: Callable[[], None], poll_s: float = 0.12,
                  black_limit: int = BLACK_LIMIT, clock: Callable[[], float] = time.monotonic, watcher=None,
-                 on_note: Callable[[Cue], None] | None = None):
+                 on_note: Callable[[Cue], None] | None = None, idle_poll_s: float = IDLE_POLL_S):
         self._grab = grab_frame
         self._ocr = ocr
         self._translator = translator
         self._on_cue = on_cue
         self._on_clear = on_clear
         self._poll_s = poll_s
+        self._idle_poll_s = idle_poll_s
         self._black_limit = black_limit
         self._clock = clock
         self._tracker = SubtitleTracker()
@@ -80,6 +81,10 @@ class ScreenSubtitleSource:
     def blocked(self) -> bool:
         """Screenshots of the game come back black: this source cannot work in the current display mode."""
         return self._black >= self._black_limit
+
+    def set_rhythm(self, poll_s: float, idle_poll_s: float) -> None:
+        """A different performance mode was chosen: look at the strip at the new pace from now on."""
+        self._poll_s, self._idle_poll_s = poll_s, idle_poll_s
 
     @property
     def busy(self) -> bool:
@@ -168,7 +173,7 @@ class ScreenSubtitleSource:
         """How long to pause before the next look: the normal rhythm, longer while readings keep finding nothing (a
         busy scene without subtitles must not make us read all the time)."""
         quiet = self._clock() - self._last_seen >= IDLE_AFTER_S and not self._tracker.unsettled
-        base = max(self._poll_s, IDLE_POLL_S) if quiet else self._poll_s
+        base = max(self._poll_s, self._idle_poll_s) if quiet else self._poll_s
         return min(BACKOFF_CAP_S, max(base, self._poll_s * (2 ** min(self._wasted, 4))))   # the larger, not the product
 
     def _show(self, text: str) -> None:

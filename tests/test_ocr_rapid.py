@@ -85,3 +85,38 @@ def test_idle_spinning_is_switched_off_for_ocr_sessions():
     options = OrtInferSession._init_sess_opts(Cfg(enable_cpu_mem_arena=False, intra_op_num_threads=2,
                                                    inter_op_num_threads=1))
     assert options.get_session_config_entry("session.intra_op.allow_spinning") == "0"
+
+
+def test_gpu_parameters_are_added_only_when_asked_for(tmp_path):
+    pytest.importorskip("rapidocr")
+    import dubzar.ocr_rapid as rapid
+
+    plain = rapid.engine_params(threads=2, det_max_side=1536, model_dir=tmp_path)
+    gpu = rapid.engine_params(threads=2, det_max_side=1536, model_dir=tmp_path, gpu=True)
+
+    assert "EngineConfig.onnxruntime.use_cuda" not in plain
+    assert gpu["EngineConfig.onnxruntime.use_cuda"] is True
+
+
+def test_the_gpu_is_not_used_when_onnxruntime_has_no_cuda(monkeypatch):
+    import dubzar.ocr_rapid as rapid
+
+    class NoCuda:
+        @staticmethod
+        def get_available_providers():
+            return ["CPUExecutionProvider"]
+
+    monkeypatch.setitem(__import__("sys").modules, "onnxruntime", NoCuda)
+
+    assert rapid.cuda_ready(model=None) is False
+
+
+def test_a_reader_asked_for_the_gpu_falls_back_to_the_cpu_when_there_is_none(monkeypatch):
+    import dubzar.ocr_rapid as rapid
+
+    monkeypatch.setattr(rapid, "cuda_ready", lambda model: False)
+    engine = FakeEngine(FakeOutput(None, None))
+
+    reader = rapid.RapidOcr(threads=2, gpu=True, engine=engine)
+
+    assert reader.gpu is False and "GPU" not in reader.language

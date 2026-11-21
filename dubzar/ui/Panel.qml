@@ -470,6 +470,47 @@ Item {
 
                 RowLayout {
                     Layout.fillWidth: true
+                    Lbl { text: "Hız modu"; Layout.fillWidth: true }
+                    Rectangle {
+                        id: modePill
+                        objectName: "modePill"
+                        implicitWidth: modeText.implicitWidth + 24
+                        implicitHeight: 26
+                        radius: 13
+                        color: dz.surface
+                        border.color: dz.hairline
+                        activeFocusOnTab: true
+                        Accessible.role: Accessible.Button
+                        Accessible.name: "Hız modunu seç"
+                        Keys.onSpacePressed: ctl.cyclePerformance()
+                        Keys.onReturnPressed: ctl.cyclePerformance()
+                        Text {
+                            id: modeText
+                            anchors.centerIn: parent
+                            color: dz.text
+                            font.family: ctl.sansFamily
+                            font.pixelSize: 12
+                            text: ctl.performanceLabel
+                        }
+                        FocusRing {}
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: ctl.cyclePerformance()
+                        }
+                    }
+                }
+                Text {
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                    color: dz.muted
+                    font.family: ctl.sansFamily
+                    font.pixelSize: 11
+                    text: ctl.performanceHint
+                }
+
+                RowLayout {
+                    Layout.fillWidth: true
                     Layout.topMargin: 6
                     Rectangle {
                         id: resetBtn

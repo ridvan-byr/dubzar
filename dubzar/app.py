@@ -22,6 +22,7 @@ from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
 from dubzar.screen import (band_box, corner_boxes, exclude_from_capture, foreground_is_fullscreen, foreground_monitor_rect,
                            foreground_process_name, game_in_front, grab)
+from dubzar.performance import profile_for
 from dubzar.region_notes import RegionNoteSource
 from dubzar.screen_source import ScreenSubtitleSource
 from dubzar.segmenter import SpeechSegmenter
@@ -82,7 +83,7 @@ class _NoReader:
         return []
 
 
-def make_reader():
+def make_reader(profile=None):
     """The best text reader this computer can run: RapidOCR (measured far better on real game frames), with the
     Windows engine behind it as a safety net; either alone when the other is unavailable; None when neither is."""
     from dubzar import ocr as ocr_module
@@ -97,7 +98,7 @@ def make_reader():
 
         # Readings are rare now (only when the subtitle changes), so a short burst on 4 threads (0.38 s instead of
         # 0.66 s on 2) is worth it; the process runs at below-normal priority, the game keeps its cores.
-        primary = RapidOcr(threads=4)
+        primary = RapidOcr(threads=profile.ocr_threads if profile else 4, gpu=bool(profile and profile.gpu_ocr))
     except Exception as exc:  # noqa: BLE001
         log.info("RapidOCR yok (%s)", exc)
     if primary is not None and windows_engine is not None:
@@ -130,12 +131,13 @@ def make_screen_source(settings: Settings, translator: Translator, bridge):
 
 def _make_screen_source(settings: Settings, translator: Translator, bridge):
     """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable."""
-    ocr = make_reader()
+    profile = profile_for(settings.performance)
+    ocr = make_reader(profile)
     ocr = _SharedReader(ocr) if ocr is not None else None
     if ocr is None:
         log.warning("ekrandaki altyazı okuma kullanılamıyor (ne RapidOCR ne Windows OCR çalışıyor); yalnızca ses dinlenecek")
         return None, None
-    log.info("ekrandaki altyazı okuma hazır (okuyucu: %s)", ocr.language)
+    log.info("ekrandaki altyazı okuma hazır (okuyucu: %s, mod: %s)", ocr.language, profile.label)
 
     def grab_frame():
         if not game_in_front(settings.game_exe, foreground_process_name(), foreground_is_fullscreen()):
@@ -150,8 +152,21 @@ def _make_screen_source(settings: Settings, translator: Translator, bridge):
         return [grab(box) for box in corner_boxes(rect)] if rect else None
 
     subtitles = ScreenSubtitleSource(grab_frame, ocr, translator, bridge.cue.emit, bridge.clear.emit,
-                                     on_note=bridge.note.emit)
-    return subtitles, RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit, defer=lambda: subtitles.busy)
+                                     on_note=bridge.note.emit, poll_s=profile.poll_s, idle_poll_s=profile.idle_poll_s)
+    corners = RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit, poll_s=profile.corner_poll_s,
+                               defer=lambda: subtitles.busy)
+
+    def mode_changed(name: str) -> None:
+        if name != "performance":
+            return
+        chosen = profile_for(settings.performance)
+        subtitles.set_rhythm(chosen.poll_s, chosen.idle_poll_s)       # the pace changes at once;
+        corners.set_rhythm(chosen.corner_poll_s)
+        if chosen.gpu_ocr != profile.gpu_ocr:                          # the reader that does the work, at the next start
+            log.info("mod değişti: okuyucu (ekran kartı/işlemci) program yeniden başlayınca değişir")
+
+    settings.on_change(mode_changed)
+    return subtitles, corners
 
 
 def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber: Transcriber,

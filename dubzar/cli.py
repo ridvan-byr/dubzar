@@ -126,6 +126,8 @@ def _settings_for_run(args) -> Settings:
         settings.screen = args.screen
     if args.game_exe is not None:
         settings.game_exe = args.game_exe
+    if args.performance is not None:
+        settings.performance = args.performance
     return settings
 
 
@@ -242,6 +244,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
     run.add_argument("--game-exe", help="oyunun süreç adı (örn. GTA5.exe): çalışırken arka plan taraması bekler")
     run.add_argument("--scan-model", default="small", help="arka plan taraması için Whisper modeli (varsayılan: small)")
+    run.add_argument("--performance", choices=("light", "medium", "high"),
+                     help="bu çalıştırma için mod: light (varsayılan), medium, high (ekran kartıyla okur)")
     run.add_argument("--font-size", type=int, help="bu çalıştırma için yazı boyutu (kayıtlı ayarı geçersiz kılar)")
     run.add_argument("--position", choices=tuple(POSITIONS), help="bu çalıştırma için konum: top, center, bottom")
     run.add_argument("--screen", help="bu çalıştırma için ekran: auto (oyunun ekranı), primary veya 1, 2, ...")

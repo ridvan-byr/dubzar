@@ -3,6 +3,7 @@
 from PySide6.QtCore import Property, QObject, Signal, Slot
 from PySide6.QtGui import QFontDatabase
 
+from dubzar.performance import ORDER, profile_for
 from dubzar.settings import Settings
 
 
@@ -78,6 +79,14 @@ class SettingsController(QObject):
     @Property(str, notify=changed)
     def panelScreen(self) -> str:
         return self._s.panel_screen
+
+    @Property(str, notify=changed)
+    def performanceLabel(self) -> str:
+        return profile_for(self._s.performance).label
+
+    @Property(str, notify=changed)
+    def performanceHint(self) -> str:
+        return profile_for(self._s.performance).hint
 
     @Property(list, notify=changed)
     def hotkeyParts(self) -> list:
@@ -192,6 +201,12 @@ class SettingsController(QObject):
             order.append("other")   # "a screen the game is not on" means nothing with a single screen
         current = self._s.panel_screen if self._s.panel_screen in order else "auto"
         self._s.panel_screen = order[(order.index(current) + 1) % len(order)]
+        self.activity.emit()
+
+    @Slot()
+    def cyclePerformance(self) -> None:
+        """light -> medium -> high -> light."""
+        self._s.performance = ORDER[(ORDER.index(self._s.performance) + 1) % len(ORDER)]
         self.activity.emit()
 
     @Slot()
