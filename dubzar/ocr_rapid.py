@@ -107,6 +107,13 @@ def cuda_ready(model: Path | None) -> bool:
         return False
 
 
+def prepare_cuda_early() -> bool:
+    """Load the graphics card's libraries before ctranslate2 does. ctranslate2 ships its own, cut-down cuDNN under the
+    same file name; once it is in the process, onnxruntime's CUDA session finds the wrong one and the program dies
+    with 'Could not load symbol cudnnGetLibConfig'. Whoever loads cuDNN first wins, so the reader's side goes first."""
+    return cuda_ready(_a_model_file(bundled_model_dir()))
+
+
 class RapidOcr:
     language = "en (PP-OCRv5)"
 

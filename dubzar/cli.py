@@ -174,6 +174,10 @@ def _cmd_run(args, audio_chunks: Iterable[np.ndarray] | None, on_cue: Callable[[
                       "tarama, oyun çalışırken duraklar.")
     if args.audio_dir and not Path(args.audio_dir).is_dir():
         return _error(f"ses klasörü bulunamadı: {args.audio_dir}")
+    if settings.performance == "high" and not args.no_screen_ocr and audio_chunks is None:
+        from dubzar.ocr_rapid import prepare_cuda_early
+
+        prepare_cuda_early()          # before the models load: see its docstring
     try:
         transcriber, translator = _build_models(args, glossary, transcriber, translator)
     except ModelMissingError as exc:

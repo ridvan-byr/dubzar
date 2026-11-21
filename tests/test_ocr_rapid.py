@@ -120,3 +120,21 @@ def test_a_reader_asked_for_the_gpu_falls_back_to_the_cpu_when_there_is_none(mon
     reader = rapid.RapidOcr(threads=2, gpu=True, engine=engine)
 
     assert reader.gpu is False and "GPU" not in reader.language
+
+
+def test_the_graphics_card_libraries_are_loaded_before_the_translation_engine_in_high_mode(monkeypatch, tmp_path):
+    import dubzar.cli as cli
+    import dubzar.ocr_rapid as rapid
+
+    order = []
+    monkeypatch.setattr(rapid, "prepare_cuda_early", lambda: order.append("cuda"))
+    monkeypatch.setattr(cli, "_build_models", lambda *a, **k: order.append("models") or (None, None))
+    monkeypatch.setattr(cli, "IndexStore", lambda path: type("S", (), {"close": lambda self: None})())
+    monkeypatch.setattr("dubzar.app.run_live", lambda *a, **k: 0, raising=False)
+    settings_file = tmp_path / "settings.json"
+    settings_file.write_text('{"performance": "high"}', encoding="utf-8")
+
+    cli.main(["run", "--settings-file", str(settings_file), "--index", str(tmp_path / "i.db"), "--log-file",
+              str(tmp_path / "log.txt")])
+
+    assert order[:2] == ["cuda", "models"]
