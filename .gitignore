@@ -14,3 +14,6 @@ experiments/real_frames/
 experiments/llama_cpp_bin/
 experiments/ort_gpu_env/
 experiments/gpu_pkg_test_env/
+
+# placeholder game frames (not ours): never commit; replace with our own footage
+site/assets/oyun/
