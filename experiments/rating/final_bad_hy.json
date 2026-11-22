@@ -1,0 +1,206 @@
+[
+ [
+  "argo",
+  "That dude's got a screw loose.",
+  "O herifin başı belada.",
+  "O adamın bir sorunu var."
+ ],
+ [
+  "argo",
+  "She's been giving me the cold shoulder all week.",
+  "Bütün hafta boyunca bana soğuk bir omuz verdi.",
+  "Tüm hafta bana soğuk davranıyor."
+ ],
+ [
+  "argo",
+  "You're full of it, and you know it.",
+  "Sen bununla dolusun ve bunu biliyorsun.",
+  "Bundan dolayısın ve bunu biliyorsun."
+ ],
+ [
+  "argo",
+  "That guy is a snake in the grass.",
+  "Bu adam çimenlerin arasında bir yılan.",
+  "O adam çimenlerdeki bir yılan."
+ ],
+ [
+  "argo",
+  "She's out of her league and she knows it.",
+  "Kendi liginden çıktı ve bunu biliyor.",
+  "O, senin seviyenin dışında ve bunu biliyor."
+ ],
+ [
+  "argo",
+  "You think I was born yesterday?",
+  "Dün doğduğumu mu düşünüyorsun?",
+  "Dün doğduğumu mu sanıyorsun?"
+ ],
+ [
+  "argo",
+  "He kicked the bucket last winter.",
+  "Geçen kış kovayı tekmeledi.",
+  "Geçen kış vefat etti."
+ ],
+ [
+  "argo",
+  "Nice try, hotshot.",
+  "İyi denemeydi, yakışıklı.",
+  "Aferin, senatör."
+ ],
+ [
+  "argo",
+  "I'll be damned if I let you take the credit.",
+  "Eğer sana izin verirsem lanetlenirim.",
+  "Sana bu başarıyı almayı bırakamam."
+ ],
+ [
+  "argo",
+  "That's a load of garbage and you know it.",
+  "Bu bir yığın çöp ve bunu biliyorsun.",
+  "Bu tam bir saçmalık, sen de biliyorsun."
+ ],
+ [
+  "argo",
+  "This whole thing stinks.",
+  "Her şey berbat.",
+  "Bütün bu durum berbat."
+ ],
+ [
+  "argo",
+  "They were wasted before noon.",
+  "Öğleden önce boşa gitmişler.",
+  "Öğlenden önce boşa harcadılar."
+ ],
+ [
+  "argo",
+  "Talk about bad luck, huh?",
+  "Kötü şanstan bahsediyorsun, değil mi?",
+  "Şanssızlık hakkında konuşuyoruz, değil mi?"
+ ],
+ [
+  "argo",
+  "That's a rip-off and you know it.",
+  "Bu bir soygun ve bunu sen de biliyorsun.",
+  "Bu bir dolandırıcılık, sen de biliyorsun."
+ ],
+ [
+  "argo",
+  "Back off, or I swear I'll lose it.",
+  "Geri çekil yoksa yemin ederim kaybederim.",
+  "Kaç, yoksa yemin ederim ki patlatırım."
+ ],
+ [
+  "argo",
+  "You're a total pushover.",
+  "Tam bir çapkınsın.",
+  "Tam bir kolay lokma sensin."
+ ],
+ [
+  "argo",
+  "Take a hike, pal.",
+  "Yürüyüşe çık, dostum.",
+  "Git başka yerde, dostum."
+ ],
+ [
+  "argo",
+  "He's loaded, but he's cheap as hell.",
+  "Dolu ama çok ucuz.",
+  "Çok güçlü, ama aynı zamanda çok ucuz."
+ ],
+ [
+  "argo",
+  "We're toast if they find us here.",
+  "Bizi burada bulurlarsa kadeh kaldıracağız.",
+  "Eğer bizi burada bulurlarsa mahvoluruz."
+ ],
+ [
+  "argo",
+  "I ain't buying any of it.",
+  "Hiçbirini satın almıyorum.",
+  "Bundan hiçbirini almayacağım."
+ ],
+ [
+  "gorev",
+  "Take out the sniper on the roof.",
+  "Çatıdaki keskin nişancıyı çıkar.",
+  "Çatıdaki keskin nişancıyı çıkarın."
+ ],
+ [
+  "gorev",
+  "Search the ruins for ancient artifacts.",
+  "Harabeleri antik eserler için ara.",
+  "Harabelerde eski eserler arayın."
+ ],
+ [
+  "gorev",
+  "Hide in the cargo hold until the ship docks.",
+  "Gemi yanana kadar kargo ambarında saklan.",
+  "Geminin limana yanaşana kadar kargo bölmesinde saklan."
+ ],
+ [
+  "gorev",
+  "New quest: The Lost Heir.",
+  "Yeni Görev: Kayıp Kahraman.",
+  "Yeni görev: Kayıp Varis."
+ ],
+ [
+  "arayuz",
+  "New item acquired: Rusty Key",
+  "Satın alınan yeni ürün: Rusty Key",
+  "Yeni eşya elde edildi: Rusty Key"
+ ],
+ [
+  "arayuz",
+  "Apply changes?",
+  "Değişiklikleri uygulamak mı?",
+  "Değişiklikleri uyguluyor musun?"
+ ],
+ [
+  "arayuz",
+  "Master Volume",
+  "Ana Hacim",
+  "Usta Ses Seviyesi"
+ ],
+ [
+  "arayuz",
+  "Difficulty: Veteran",
+  "Zorluk: Veteran",
+  "Zorluk seviyesi: Deneyimli"
+ ],
+ [
+  "arayuz",
+  "Experience: 1200 / 2000",
+  "Experience: 1200 / 2000",
+  "Deneyim: 1200 / 2000"
+ ],
+ [
+  "arayuz",
+  "Fuel: 40%",
+  "Fuel: 40%",
+  "Yakıt: %40"
+ ],
+ [
+  "arayuz",
+  "Release to throw.",
+  "Bırak atsın.",
+  "Atmak için serbest bırak."
+ ],
+ [
+  "resmi",
+  "Let it be known that the crown forgives no traitor.",
+  "Tacın haini affetmediği bilins.",
+  "Taçın hainleri affetmediği bilinsin."
+ ],
+ [
+  "resmi",
+  "A sacrifice is demanded by the ancient law.",
+  "Eski kanun tarafından bir fedakarlık talep edilir.",
+  "Eski yasalarla bir kurbanın verilmesi gerekiyor."
+ ],
+ [
+  "resmi",
+  "Fortune favors the bold.",
+  "Servet cesurları sever.",
+  "Kader cesur olanları destekler."
+ ]
+]

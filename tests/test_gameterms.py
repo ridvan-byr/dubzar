@@ -4,7 +4,7 @@ from dubzar.translate import OpusMtTranslator
 
 # what the model says for a purpose clause ("to open the door"); anything else is not meant to be asked
 PURPOSE = {"to open the door": "Kapıyı açmak için", "to repair": "tamir etmek için", "to continue": "devam etmek için",
-           "to interact": "etkileşim için", "to sprint": "Sprint"}
+           "to interact": "etkileşim için", "to dance": "Dance için"}
 
 
 def purpose(text):
@@ -26,7 +26,8 @@ def test_any_button_and_named_keys():
 
 
 def test_a_model_answer_that_is_not_a_purpose_clause_leaves_the_sentence_to_the_model():
-    assert match_prompt("Press E to sprint.", purpose) is None             # "Sprint" does not end with "için"
+    assert match_prompt("Press E to juggle.", purpose) is None             # not a purpose clause: the model gets the sentence
+    assert match_prompt("Press E to dance.", purpose) is None              # "Dance için": the word was only copied
 
 
 def test_ordinary_text_is_not_a_prompt():
@@ -64,3 +65,8 @@ def test_the_translator_uses_the_prompt_rule_and_the_memory():
     assert translator.translate("Press E to open the door.") == "Kapıyı açmak için E tuşuna bas."
     assert translator.translate("Game saved.") == "Oyun kaydedildi."
     assert seen == ["to open the door"]                  # the memory line never reached the model
+
+
+def test_common_game_verbs_come_from_the_table_not_from_the_model():
+    assert match_prompt("Hold Shift to sprint.", purpose) == "Koşmak için Shift tuşuna basılı tut."
+    assert match_prompt("Press Q to take cover.", purpose) == "Siper almak için Q tuşuna bas."

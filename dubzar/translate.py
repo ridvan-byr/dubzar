@@ -9,6 +9,8 @@ from typing import Callable, Protocol, Sequence
 
 from dubzar.errors import ModelMissingError
 from dubzar.gameterms import match_prompt, memory_lookup
+from dubzar.register import is_command, singular_command
+from dubzar.rewrites import apply_rewrites
 from dubzar.textsplit import split_pieces
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
@@ -166,7 +168,8 @@ class OpusMtTranslator:
         prompt = match_prompt(text, self._translate_plain)       # "Press E to open the door."
         if prompt:
             return prompt
-        return self._translate_plain(text)
+        translated = self._translate_plain(apply_rewrites(text))  # slang and game senses in plainer English first
+        return singular_command(translated) if is_command(text) else translated   # game text speaks to the player as "sen"
 
     def _translate_plain(self, text: str) -> str:
         protected, restore = self._protect_terms(text)

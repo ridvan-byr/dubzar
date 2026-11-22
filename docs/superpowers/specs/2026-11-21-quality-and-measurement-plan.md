@@ -158,6 +158,45 @@ Hepsi gürültü ile yakın (±1): **kod çözme ayarı, sayısal doğruluk ve y
 Dürüst okuma: etiket kuralı ve şablon gerçek kazanç (+1,7, arayüz ve görev yazılarında); bellek yalnızca birebir satırlarda çalışır, kıyastaki kazancı kıyas satırlarıyla örtüştüğü için abartılı. **Argo, kısa ünlem ve resmi türler hiç değişmedi**: onları bu katmanlar çözmez, ancak model uyarlaması ya da başka bir model.
 Şablon, modelin "to X" yapısını doğru çevirmesine dayanır ("to open the door" → "Kapıyı açmak için"); model amaç tümleci vermezse cümle modele bırakılır.
 
+**Sonuç 4: insan puanı, bugünkü gerçek seviye (22 Kasım 2026, 90 yeni satır, kör A/B, puanlayan: ürün sahibi; `experiments/rating/`).**
+
+| | Düzgün | Küçük sorun | Ciddi hata |
+|---|---|---|---|
+| Dubzar (Opus-MT + kurallar) | **%87** (78/90) | %9 | **%4** (4/90) |
+| Claude | %87 (78/90) | %10 | %3 (3/90) |
+
+Tercih: 53 eşit, 23 Claude, 14 Dubzar.
+Dubzar türe göre (düzgün / ciddi): konuşma %93 / 0, görev %90 / 0, kısa %100 / 0, bağlamlı %88 / 0, resmi %80 / %10, argo %78 / %11, **arayüz %75 / %13**.
+
+Dubzar'ın 12 sorunlu satırı: 8'i anlam, 6'sı doğallık (bazı satırlar ikisi birden). Ciddi 4'ü: "Hold Shift to sprint" → "Sprint için…" (şablonun koruması bunu kaçırdı: model amaç yerine yabancı kelime verdi), "got jumped" → "bardan atlamış", "ball-buster" → "top avcısı", "accused of treason against the crown" → "Tacına ihanetle…". Küçük sorunlar: "Your game has been saved" → "kurtarıldı" (save = kaydet), "No dice" → "Zar yok", "stirs" → "karışır", "Then we go around" → bağlamsız "Sonra da dolaşacağız", ve resmi çoğul emir ("kurtarın").
+
+Önemli ölçüm notları: (1) Claude'un kendi çevirisi de %87 düzgün: ölçüt "Claude seviyesi" ise Dubzar zaten orada; hedef artık "Claude'dan iyi" olmalı. (2) 90 satırda tek bir oranın hata payı yaklaşık ±3,5 puan; ±7 puandan küçük farklar bu kümeyle ayırt edilemez, takip için en az 200 satırlık yeni küme gerekir. (3) Bu 90 satıra bakarak kural yazarsak küme "geliştirme kümesi" olur; son ölçüm için yeni bir küme yazılacak.
+
+**Sonuç 5: Seviye 1 işleri uygulandı (22 Kasım 2026; `dubzar/rewrites.py`, `dubzar/register.py`, `dubzar/gameterms.py`).**
+
+1. **Şablon koruması ve fiil tablosu:** "to sprint" → "Sprint için" gibi kopya cevaplar reddediliyor; yaygın oyun fiilleri (sprint, aim, take cover, interact, …) tablodan çevriliyor.
+2. **"save" anlamı:** oyun/ilerleme/veri/dosya bağlamında "save" → "record" yazılıp çevriliyor ("kurtarıldı" yerine "kaydedildi").
+3. **Deyim ve argo yeniden yazımları** (İngilizce tarafta daha sade ifadeye): got jumped, ball-buster, no dice, tip off, tick off, cut the crap, beat it, freaking, son of a gun, "evil stirs", "against the crown", pulling my leg, "this ride", wannabe, "timer expires".
+4. **Emir kipi:** tek yüklemli İngilizce emirlerde son sözcük çoğuldan tekile ("kurtarın" → "kurtar", "ateş etmeyin" → "ateş etme"); virgüllü/"and"li cümlelere dokunulmaz.
+
+Etki: puanlanan 12 sorunlu satırdan 8'i düzeldi (jumped, ball-buster, sprint, crown, stirs, save, timer, no dice), 4'ü değişmedi (nerve, falling apart, wannabe→"sahtekar" kısmen, bağlamsız "Then we go around"). Geliştirme kıyası (120 satır) 68,4 → 70,9, **ama bu artış şişirilmiş**: yeniden yazımlar o kıyastaki hatalardan seçildi. Gerçek ölçüm: `experiments/rating/final.html` (200 yeni satır, tek çeviri, insan puanı; satırlar kurallar yazıldıktan sonra, onlara bakmadan yazıldı). Bu küme kullanıldıktan sonra geliştirme kümesi olur.
+
+**Sonuç 6: son kontrol, 200 yeni satır (22 Kasım 2026, tek çeviri, insan puanı; `experiments/rating/final_results.json`).**
+
+| | Düzgün | Küçük sorun | Ciddi hata |
+|---|---|---|---|
+| Dubzar, Seviye 1 işlerinden sonra | **%62,5** (125) | %20,5 (41) | **%17** (34) |
+
+Türe göre düzgün / ciddi: konuşma %100 / 0, kısa %93 / 0, bağlamlı %93 / 0 (üçü birlikte 65 satır: %97 düzgün, 0 ciddi), arayüz %72 / %18, görev %48 / %16, resmi %47 / %10, **argo %18 / %50**.
+
+Okuma: (1) günlük konuşma çözülmüş durumda; zayıflık deyim/argo, resmi anlatım, görev emirleri ve arayüz etiketleri. (2) İlk 90 satırlık küme (%87 / %4) kolaydı; bu küme bilerek deyim ağırlıklı (argo 40, resmi 30): iki rakam doğrudan kıyaslanamaz. (3) **Seviye 1 hedefi (≥%90 / ≤%2) çok uzak ve kural katmanıyla ulaşılamaz:** yeniden yazım listesindeki deyimlerin hiçbiri bu kümede çıkmadı, deyim açık uçlu; kural yazmak "köstebek vurmaya" dönüyor. (4) Kural katmanında bulunan somut açıklar: "Experience: 1200 / 2000" ve "Fuel: 40%" etiketleri konuşmacı adı sanılıp çevrilmedi (iki nokta sonrası harf içermiyorsa etiket sayılmalı); emir fiili listesi eksik ("Lure" tekile çevrilmedi); "Take out the sniper" → "çıkar"; bir sözcük bozuk üretildi ("bilins").
+
+**Ek ölçümler (aynı 200 satır, yeni):**
+- **Güven ile yönlendirme (router):** Opus-MT'nin kendi toplam log-olasılığı hata tahmin ediyor (AUC 0,81; ciddi hata ile düzgün satır ayrımı). En güvensiz %40'ı (80 satır) ikinci modele yollamak 34 ciddi hatanın **25'ini** yakalıyor (rastgele %40 yollamak 12'sini yakalardı); satır uzunluğu tek başına çok daha zayıf (14/34). Eşik henüz ayarlanmadı ve bu kümede doğrulanmadı.
+- **İkinci model (Hy-MT2-1.8B, "sen" üslup istemiyle), ciddi hatalı 34 argo/görev/arayüz/resmi satırda (Claude yargısı, ana dili Türkçe olan biri değil):** kabaca yarısında belirgin daha iyi ("kicked the bucket" → "vefat etti", "we're toast" → "mahvoluruz", "rip-off" → "dolandırıcılık", "Fuel: 40%" → "Yakıt: %40"), diğer yarısında hâlâ yanlış ("hotshot" → "senatör", "master volume" → "Usta Ses Seviyesi"). Genel kıyasta ise Opus-MT'den kötüydü (chrF 62,0 / 66,7) ve kısa ünlemlerde ciddi hatalar yapıyordu: yani **ikisini birleştiren melez** mantıklı, tek başına ikisi de yetmez.
+
+**Karar önerisi:** hedefi ve yöntemi değiştir: (a) ucuz kural açıklarını kapat (etiket, fiil listesi); (b) melez: Opus-MT hızlı yol, güveni düşük satırlar GPU'da ikinci modele (Yüksek mod); (c) melezin gerçek kazancı için ikinci modelin çıktısını da insan puanıyla ölçmek (yaklaşık 80 satır); (d) sonra ince ayar.
+
 ## Model eğitimi: ne, nasıl, riskler
 
 **Ne eğitilir:** Opus-MT (tc-big, ~230 milyon parametre) oyun diyaloğuna ince ayar (fine-tune). 8 GB'lık RTX 4060'ta mümkün; veri 20-100 bin satır ise birkaç saat. Sonra CTranslate2 int8 biçimine çevrilir (şimdiki gibi), çalışma hızı aynı kalır.

@@ -16,6 +16,22 @@ _PROMPT = re.compile(rf"^(?P<verb>Press|Hold|Tap|Double[- ]tap)\s+{KEY}\s+to\s+(
 _KEY_NAMES = {"space": "Boşluk", "spacebar": "Boşluk", "lmb": "Sol fare", "rmb": "Sağ fare", "mmb": "Orta fare",
               "left click": "Sol fare", "right click": "Sağ fare", "esc": "Esc", "escape": "Esc"}
 _PURPOSE_END = ("için", "amacıyla")
+# the common game verbs the model gets wrong or leaves in English ("to sprint" -> "Sprint için", "to take cover" -> "örtmek için")
+VERB_PURPOSE = {"sprint": "koşmak için", "run": "koşmak için", "aim": "nişan almak için", "take cover": "siper almak için",
+                "cover": "siper almak için", "interact": "etkileşime geçmek için", "crouch": "çömelmek için",
+                "shoot": "ateş etmek için", "fire": "ateş etmek için", "reload": "şarjör değiştirmek için",
+                "jump": "zıplamak için", "climb": "tırmanmak için", "use": "kullanmak için", "open": "açmak için",
+                "open the map": "haritayı açmak için", "open map": "haritayı açmak için",
+                "open the inventory": "envanteri açmak için", "open inventory": "envanteri açmak için",
+                "pick up": "almak için", "talk": "konuşmak için", "skip": "atlamak için", "continue": "devam etmek için",
+                "pause": "duraklatmak için", "cancel": "iptal etmek için", "confirm": "onaylamak için",
+                "select": "seçmek için", "accept": "kabul etmek için", "enter": "girmek için", "exit": "çıkmak için",
+                "enter the vehicle": "araca binmek için", "exit the vehicle": "araçtan inmek için", "drive": "sürmek için",
+                "brake": "fren yapmak için", "swim": "yüzmek için", "dive": "dalmak için", "hide": "saklanmak için",
+                "repair": "tamir etmek için", "heal": "iyileşmek için", "dodge": "kaçınmak için", "roll": "yuvarlanmak için",
+                "throw": "fırlatmak için", "grab": "tutmak için", "drop": "bırakmak için", "inspect": "incelemek için",
+                "search": "aramak için", "loot": "yağmalamak için", "craft": "üretmek için", "switch weapon": "silah değiştirmek için",
+                "change weapon": "silah değiştirmek için", "melee": "yakın dövüşe geçmek için", "attack": "saldırmak için"}
 
 
 def match_prompt(text: str, translate_plain: Callable[[str], str]) -> str | None:
@@ -28,8 +44,11 @@ def match_prompt(text: str, translate_plain: Callable[[str], str]) -> str | None
     # a real key name is written in capitals; "press e to ..." in lower case is not a prompt we want to guess at
     if key.lower() not in ("any button", "any key") and not key[0].isupper():
         return None
-    purpose = translate_plain(f"to {match.group('phrase').strip()}").strip().rstrip(".!")
+    phrase = match.group("phrase").strip()
+    purpose = VERB_PURPOSE.get(phrase.lower()) or translate_plain(f"to {phrase}").strip().rstrip(".!")
     if not purpose.lower().endswith(_PURPOSE_END):
+        return None
+    if purpose.lower().removesuffix(" için").strip() == phrase.lower():           # the word was only copied ("Sprint için")
         return None
     purpose = purpose[0].upper() + purpose[1:]
     if key.lower() in ("any button", "any key"):
@@ -41,6 +60,10 @@ def match_prompt(text: str, translate_plain: Callable[[str], str]) -> str | None
 
 # ---- translation memory (very common whole lines; informal "sen" for commands, as in most game text) ----
 _MEMORY_SOURCE = {
+    "Master Volume": "Ana ses",
+    "Apply changes?": "Değişiklikler uygulansın mı?",
+    "Release to throw": "Fırlatmak için bırak.",
+    "Release to fire": "Ateş etmek için bırak.",
     "Game saved": "Oyun kaydedildi.",
     "Saving": "Kaydediliyor.",
     "Saving...": "Kaydediliyor...",

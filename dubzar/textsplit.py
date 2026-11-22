@@ -55,7 +55,8 @@ def split_pieces(text: str) -> list[Piece]:
     pieces = []
     for sentence in _sentences(re.sub(r"\s+", " ", text).strip()):
         match = _LABEL.match(sentence)
-        if match and not any(word.rstrip(".").lower() in NOT_SPEAKERS for word in match.group(1).split()):
+        if (match and not any(word.rstrip(".").lower() in NOT_SPEAKERS for word in match.group(1).split())
+                and re.search(r"[^\W\d_]", match.group(2))):       # "Fuel: 40%" is a label and a value, not words spoken
             pieces.append(Piece(match.group(1), match.group(2).strip()))
         else:
             pieces.append(Piece(None, sentence))
