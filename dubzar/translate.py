@@ -17,6 +17,9 @@ MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
 # The repository also holds TensorFlow/Flax copies of the weights; we only ever need the PyTorch ones.
 TRANSLATION_VERSION = "3"  # bump when the way text is prepared or translated changes: remembered lines are then redone
 NUM_BEAMS = 4  # Opus-MT default; fewer beams are faster but a little less accurate
+# A sentence whose total log-probability is below this goes to the second (large) model in High mode: about the least sure
+# 40% of the 200-line final set (experiments/rating/hybrid_lines.json), which held about 60% of Opus-MT's serious mistakes.
+UNSURE_BELOW = -3.8
 UNNEEDED_FILES = ["tf_model.h5", "*.h5", "flax_model*", "*.msgpack", "*.zip", "*.md"]
 
 
@@ -89,9 +92,12 @@ def _make_ct2_pipeline(local_only: bool, threads: int = 0) -> Callable[[str], st
         # What the Marian tokenizer does: sentencepiece pieces of the source (the model's vocabulary maps them to ids)
         # plus the end marker; the output pieces are joined by the target sentencepiece model.
         pieces = source_spm.encode(text, out_type=str)[:255] + ["</s>"]
-        best = translator.translate_batch([pieces], beam_size=NUM_BEAMS, max_decoding_length=256)[0].hypotheses[0]
+        result = translator.translate_batch([pieces], beam_size=NUM_BEAMS, max_decoding_length=256, return_scores=True)[0]
+        best = result.hypotheses[0]
+        translate.last_logprob = result.scores[0] * (len(best) + 1)   # how sure the model was: CT2 scores are per token
         return target_spm.decode_pieces([piece for piece in best if piece not in ("</s>", "<pad>")])
 
+    translate.last_logprob = None
     return translate
 
 
@@ -138,6 +144,7 @@ class OpusMtTranslator:
         self._backend = backend
         self._allow_download = allow_download
         self._threads = threads
+        self.second_opinion: Callable[[str, str, dict[str, str]], str | None] | None = None   # High mode: see dubzar.quality_model
 
     def _get_backend(self) -> Callable[[str], str]:
         if self._backend is None:
@@ -169,6 +176,11 @@ class OpusMtTranslator:
         if prompt:
             return prompt
         translated = self._translate_plain(apply_rewrites(text))  # slang and game senses in plainer English first
+        sure = getattr(self._get_backend(), "last_logprob", None)
+        if self.second_opinion is not None and sure is not None and sure < UNSURE_BELOW:
+            better = self.second_opinion(text, translated, self._glossary)    # None when the large model cannot help
+            if better:
+                translated = better
         return singular_command(translated) if is_command(text) else translated   # game text speaks to the player as "sen"
 
     def _translate_plain(self, text: str) -> str:

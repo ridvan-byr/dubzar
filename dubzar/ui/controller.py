@@ -226,7 +226,7 @@ class SettingsController(QObject):
 
     @Slot()
     def cyclePerformance(self) -> None:
-        """light -> medium -> high -> light."""
+        """light -> high -> light."""
         self._s.performance = ORDER[(ORDER.index(self._s.performance) + 1) % len(ORDER)]
         self.activity.emit()
 

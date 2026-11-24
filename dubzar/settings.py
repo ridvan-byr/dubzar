@@ -60,8 +60,10 @@ def _hotkey(value: Any) -> str:
 
 
 def _performance(value: Any) -> str:
-    if value not in ("light", "medium", "high"):
-        raise ValueError(f"performance must be 'light', 'medium' or 'high', got {value!r}")
+    if value == "medium":      # the middle mode was removed; settings saved with it open as Light
+        return "light"
+    if value not in ("light", "high"):
+        raise ValueError(f"performance must be 'light' or 'high', got {value!r}")
     return value
 
 

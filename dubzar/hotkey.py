@@ -1,10 +1,12 @@
 """Global hotkey parsing and registration through the Windows API."""
 
 import ctypes
+import logging
 import sys
 import threading
 from typing import Callable
 
+log = logging.getLogger(__name__)
 MOD_ALT, MOD_CONTROL, MOD_SHIFT, MOD_WIN = 0x1, 0x2, 0x4, 0x8
 _MODIFIERS = {"ctrl": MOD_CONTROL, "control": MOD_CONTROL, "shift": MOD_SHIFT, "alt": MOD_ALT, "win": MOD_WIN}
 
@@ -70,6 +72,8 @@ class GlobalHotkey:
             try:
                 while user32.GetMessageW(ctypes.byref(msg), None, 0, 0) > 0:
                     if msg.message == _WM_HOTKEY:
+                        log.debug("kısayol basıldı (ctrl=%s alt=%s tuş=%s)", bool(user32.GetAsyncKeyState(0x11) & 0x8000),
+                                  bool(user32.GetAsyncKeyState(0x12) & 0x8000), bool(user32.GetAsyncKeyState(key) & 0x8000))
                         self._on_press()
             finally:
                 user32.UnregisterHotKey(None, 1)

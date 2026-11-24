@@ -67,8 +67,62 @@ def foreground_monitor_rect() -> tuple[int, int, int, int] | None:
     return r.left, r.top, r.right, r.bottom
 
 
+def _grab_region(box: tuple[int, int, int, int]) -> np.ndarray | None:
+    """Copies only ``box`` from the screen with GDI. Pillow's ImageGrab copies the whole desktop (about 40 ms) and crops
+    afterwards, however small the box: at ten looks a second that was a large part of Dubzar's processor and graphics-card
+    load. The region copy takes a few milliseconds. None when GDI refuses (the caller falls back to Pillow)."""
+    left, top, right, bottom = box
+    width, height = right - left, bottom - top
+    if sys.platform != "win32" or width <= 0 or height <= 0:
+        return None
+    user32, gdi32 = _user32(), ctypes.WinDLL("gdi32")
+    handle = ctypes.c_void_p
+    user32.GetDC.restype, user32.GetDC.argtypes = handle, [handle]
+    user32.ReleaseDC.argtypes = [handle, handle]
+    gdi32.CreateCompatibleDC.restype, gdi32.CreateCompatibleDC.argtypes = handle, [handle]
+    gdi32.CreateDIBSection.restype = handle
+    gdi32.CreateDIBSection.argtypes = [handle, ctypes.c_void_p, wintypes.UINT, ctypes.POINTER(ctypes.c_void_p), handle, wintypes.DWORD]
+    gdi32.SelectObject.restype, gdi32.SelectObject.argtypes = handle, [handle, handle]
+    gdi32.BitBlt.argtypes = [handle, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int, handle, ctypes.c_int, ctypes.c_int, wintypes.DWORD]
+    gdi32.DeleteObject.argtypes = [handle]
+    gdi32.DeleteDC.argtypes = [handle]
+
+    class Header(ctypes.Structure):
+        _fields_ = [("size", wintypes.DWORD), ("width", wintypes.LONG), ("height", wintypes.LONG), ("planes", wintypes.WORD),
+                    ("bits", wintypes.WORD), ("compression", wintypes.DWORD), ("image_size", wintypes.DWORD),
+                    ("x_ppm", wintypes.LONG), ("y_ppm", wintypes.LONG), ("used", wintypes.DWORD), ("important", wintypes.DWORD)]
+
+    header = Header(ctypes.sizeof(Header), width, -height, 1, 32, 0, 0, 0, 0, 0, 0)   # negative height: top-down rows
+    screen = user32.GetDC(None)
+    if not screen:
+        return None
+    memory = gdi32.CreateCompatibleDC(screen)
+    bitmap = old = None
+    try:
+        bits = ctypes.c_void_p()
+        bitmap = gdi32.CreateDIBSection(screen, ctypes.byref(header), 0, ctypes.byref(bits), None, 0)
+        if not memory or not bitmap or not bits.value:
+            return None
+        old = gdi32.SelectObject(memory, bitmap)
+        if not gdi32.BitBlt(memory, 0, 0, width, height, screen, left, top, 0x00CC0020):    # SRCCOPY
+            return None
+        pixels = np.frombuffer((ctypes.c_ubyte * (width * height * 4)).from_address(bits.value), dtype=np.uint8)
+        return pixels.reshape(height, width, 4)[:, :, 2::-1].copy()                          # BGRA -> RGB
+    finally:
+        if old:
+            gdi32.SelectObject(memory, old)
+        if bitmap:
+            gdi32.DeleteObject(bitmap)
+        if memory:
+            gdi32.DeleteDC(memory)
+        user32.ReleaseDC(None, screen)
+
+
 def grab(box: tuple[int, int, int, int]) -> np.ndarray:
     """RGB screenshot of ``box`` (screen pixels, may be on any monitor)."""
+    region = _grab_region(box)
+    if region is not None:
+        return region
     from PIL import ImageGrab
 
     return np.asarray(ImageGrab.grab(bbox=box, all_screens=True).convert("RGB"))

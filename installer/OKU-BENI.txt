@@ -21,7 +21,9 @@ Kullanım
   - Dubzar simgesine çift tıklayın, sonra oyunu açın.
   - Ctrl+Alt+D : ayarlar paneli (altyazı boyutu, konumu, renkleri, açma/kapama).
     Paneli üst kısmından sürükleyebilirsiniz.
-  - Çıkmak için panelde "Dubzar'dan çık".
+  - Dubzar başlayınca arka planda çalışır; sağ alttaki (bildirim alanı) Dubzar simgesine tıklayınca ayarlar açılır,
+    sağ tıklayınca altyazıyı açıp kapatabilir ya da "Dubzar'dan çık" diyebilirsiniz (panelde de aynı bağlantı var).
+  - Görev Yöneticisi'nde program "Dubzar" adıyla görünür.
   - Oyunu "tam ekran" ya da "pencereli tam ekran" çalıştırabilirsiniz.
   - Altyazı, oyunun KENDİ İngilizce altyazısı açıksa en doğru ve en hızlı
     çıkar (oyunun altyazı ayarını açın). Altyazı yoksa ses dinlenir; bu daha
@@ -32,7 +34,7 @@ Bilmeniz gerekenler (erken sürüm)
     çalan sesi alır. Oyun başka bir cihaza çalıyorsa ses alınamaz.
   - Çeviri küçük bir yerel model olduğu için bazen yanlış çıkar. Bir satır
     bir kez çevrilince hatırlanır ve tekrar çevrilmez.
-  - Hız modu (ayarlar panelinde): Hafif (varsayılan, az işlemci), Orta, Yüksek.
+  - Hız modu (ayarlar panelinde): Hafif (varsayılan, az işlemci) ve Yüksek.
     Yüksek, yazıyı ekran kartıyla okur ve altyazıyı en erken gösterir; ekran
     kartını ve işlemciyi daha fazla kullanır. Oyunu aynı bilgisayarda
     oynuyorsanız Hafif'i önerir, oyun başka cihazdaysa (konsol) Yüksek'i.

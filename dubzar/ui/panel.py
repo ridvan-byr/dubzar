@@ -1,5 +1,7 @@
 """The settings panel window: a frameless, always-on-top, focus-taking Qt Quick view."""
 
+import logging
+import sys
 from pathlib import Path
 
 from PySide6.QtCore import QPoint, QRect, Qt, QUrl
@@ -9,9 +11,21 @@ from PySide6.QtQuick import QQuickView
 from dubzar.ui.controller import SettingsController
 from dubzar.ui.fonts import load_bundled_fonts
 
+log = logging.getLogger(__name__)
 QML_FILE = Path(__file__).with_name("Panel.qml")
 EDGE = 24  # distance from the screen edge, in pixels
 KEEP_VISIBLE = 80  # when dragged, at least this much of the panel stays on the desktop
+
+
+def keep_topmost(hwnd: int) -> None:
+    """Put the window back above every other always-on-top window, without activating it. A game that raises its own
+    (borderless) window over and over pushes Dubzar's windows behind it: the panel then looks as if it closed by itself."""
+    if sys.platform != "win32":
+        return
+    import ctypes
+
+    HWND_TOPMOST, FLAGS = -1, 0x0001 | 0x0002 | 0x0010 | 0x0040       # no move, no size, no activate, show
+    ctypes.windll.user32.SetWindowPos(ctypes.c_void_p(hwnd), ctypes.c_void_p(HWND_TOPMOST), 0, 0, 0, 0, FLAGS)
 
 
 class PanelWindow:
@@ -63,6 +77,7 @@ class PanelWindow:
     def raise_to_top(self) -> None:
         """A window that does not take focus is not brought forward by show(): without this it stays under the veil."""
         self.view.raise_()
+        keep_topmost(int(self.view.winId()))
 
     def move_to(self, screen: QRect) -> None:
         """Put the panel at its usual place on ``screen``, also while it is open (the screen setting changed)."""
@@ -85,6 +100,7 @@ class PanelWindow:
         self.view.setPosition(x, y)
 
     def hide(self) -> None:
+        log.debug("ayarlar paneli kapanıyor")
         self._root.setProperty("open", False)  # the window hides when the fade-out finishes
 
     def close(self) -> None:
