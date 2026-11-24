@@ -1,0 +1,595 @@
+Flank them from the east.
+Sweep the building and report back.
+Lay low until the heat dies down.
+Take out the guards at the gate.
+Hold off the attackers until help arrives.
+Back me up when I breach the door.
+Pull back to the second checkpoint!
+Sneak past the patrol without being seen.
+Hunker down and wait for the storm to pass.
+Find the missing courier and bring him back alive.
+Press and hold Shift to sprint.
+Use the left stick to move the camera.
+Open your inventory and equip the knife.
+Hit the red button to start the engine.
+Cover the stairwell while I reload.
+Don't go in there alone.
+Wait for my signal before you move.
+Mark the target and call in the airstrike.
+Collect ten pelts and bring them to the trader.
+Craft a torch using a stick and some cloth.
+Combine the herbs to make a healing potion.
+Haggle with the merchant for a better price.
+Sell your spare weapons to free up some space.
+Keep the engine running; we may have to leave fast.
+Lose the cops before you head to the safehouse.
+Stay on my tail and don't lose me.
+Hit the brakes before the sharp turn!
+Ration your water; the desert is unforgiving.
+Build a fire before it gets dark.
+Boil the water first or you'll get sick.
+Follow the river until you reach the old mill.
+Check the barn for supplies.
+Deliver this package to the captain at the docks.
+Escort the caravan to the next village.
+Keep the prisoner alive at all costs.
+Disable the alarm before you open the vault.
+Hack the terminal and download the files.
+Stay out of the spotlight.
+Take cover behind the crates!
+Fall back! They're overrunning us!
+Push forward and secure the courtyard.
+Watch your six.
+Eyes up, we've got company.
+Clear the room, then hold the door.
+I'll draw their fire while you go around.
+Split up and cover more ground.
+Rendezvous at the old lighthouse at midnight.
+Get to the roof and wait for pickup.
+Don't fire until you see the whites of their eyes.
+Lock down the entrances and seal the windows.
+Radio in when you reach the target.
+Alpha team, hold your position.
+Command, we have eyes on the package.
+Copy that. Moving to intercept.
+Say again, you're breaking up.
+Roger, standing by for further orders.
+We've lost contact with the second squad.
+Abort the mission, I repeat, abort!
+Your mission is to infiltrate the compound.
+This is a one-way trip, so make it count.
+Trust no one in there.
+Quest accepted: The Lost Crown.
+Return to the elder to claim your reward.
+Quest completed. You gained 250 experience.
+Press F to pay your respects.
+Aim with the right mouse button and fire with the left.
+Crouch to avoid being noticed.
+Walk slowly to keep your footsteps quiet.
+Throw a rock to distract the guard.
+Approach from behind and press Q for a silent takedown.
+Drag the body into the shadows.
+Pick the lock before they come back.
+Stay in the tall grass and move slowly.
+Scout ahead and see what we're up against.
+Follow the blood trail to find the wounded beast.
+Set a trap near the watering hole.
+Skin the deer before the meat spoils.
+Upgrade your armor at the forge.
+Spend your skill points wisely.
+Save your progress before you continue.
+Switch weapons with the mouse wheel.
+Reload when your clip runs dry.
+Heal up before taking on the boss.
+Dodge the attack right before it lands.
+Break their guard, then strike.
+Wear them down with ranged attacks.
+Keep moving, or you're a sitting duck.
+Lure the enemy into the narrow corridor.
+Cut off their escape route.
+Ambush the convoy at the bridge.
+Torch the supply wagons and fall back.
+Defend the gate until sunrise.
+Reinforce the barricades; they're coming.
+Disarm the bomb before the timer runs out.
+Cut the red wire, not the blue one.
+Don't touch anything until the team arrives.
+Take the shot only when you're sure.
+Breathe out slowly before you pull the trigger.
+Gear up, we move out in five minutes.
+Suit up and meet me at the hangar.
+Hang back and let them come to you.
+Don't let them pin you down.
+Stay put until I give the all-clear.
+Check your corners as you go.
+Hold your fire; they haven't spotted us yet.
+Light them up!
+Mow them down before they reach the wall.
+Pick them off one by one from the tower.
+Keep the pressure on and don't give them time to regroup.
+Smoke the room before you go in.
+Toss a flashbang through the window.
+Breach and clear on my mark.
+Cover me, I'm going in!
+Throw me a medkit, I'm bleeding out!
+Drop everything and run!
+Get down! Grenade!
+Move it, move it, move it!
+Keep your head on a swivel out there.
+Shoot the lock!
+Take the high ground and hold it.
+Stack up on the left side of the door.
+Dig in; reinforcements are on the way.
+We can't hold this position much longer.
+Make a run for the truck on my count.
+Leave no witnesses.
+Stand down, soldier. That's an order.
+Stay sharp, the night shift is more careful.
+Don't blow our cover.
+Play it cool and act natural.
+Blend in with the crowd.
+Tail the target, but keep your distance.
+If you get made, abort immediately.
+Plant the bug under the desk.
+Swipe the keycard from the guard's belt.
+Slip out through the back door.
+Shake off anyone following you.
+Dump the car and continue on foot.
+Wait for the guards to change shifts.
+Jam the radio so they can't call for backup.
+Cut the power to the whole block.
+Watch for the camera sweeping left to right.
+Time your move between the searchlights.
+Climb the drainpipe to the second floor.
+Jump across the gap and grab the ledge.
+Swim underwater to avoid the sentries.
+Hold your breath until they pass.
+Use the vents to get to the control room.
+Grab the documents and get out of there.
+Wait here and keep an eye on the door.
+Look sharp, here they come.
+Step on the gas! They're right behind us!
+Take the next left and floor it.
+Ram the gate and keep going.
+Pull over by the gas station.
+Slow down, you'll flip the car.
+Switch lanes and cut through the alley.
+Drift around the corner to shake them.
+Refuel at the next station or we'll run dry.
+Park the truck behind the warehouse.
+Buckle up, it's going to be a bumpy ride.
+Repair the engine before we take off.
+Level the plane and stay on course.
+Drop anchor and secure the ropes.
+Hoist the sails, we're leaving the harbor.
+Steer clear of the rocks.
+Strip the wreck for spare parts.
+Scavenge the abandoned cars for fuel.
+Loot the bodies, but be quick about it.
+Gather wood and stone to build a shelter.
+Plant the seeds and water them every day.
+Feed the horse before you set off.
+Bandage the wound to stop the bleeding.
+Eat something or you'll pass out.
+Dress warmly; the nights get freezing up here.
+Stay away from the glowing mushrooms.
+Mind the traps, they're everywhere.
+Don't drink from that stream.
+Keep an eye on your stamina bar.
+Take shelter before the sandstorm hits.
+Mine the ore and smelt it down into ingots.
+Repair your gear at the anvil.
+Add three iron bars to the recipe.
+Place the idol on the pedestal.
+Step on the plates in the right order.
+Solve the puzzle to unlock the door.
+Examine the painting for hidden clues.
+Talk to the villagers and ask about the stranger.
+Bribe the guard with a few coins.
+Convince him to let us through.
+Keep your promise to the old woman.
+Choose your words carefully.
+Tell the mayor what you saw.
+Don't let him get away!
+Chase him down before he reaches the border.
+Round up the survivors and bring them inside.
+Welcome to the training grounds, recruit.
+Press Space to jump over obstacles.
+Hold the left trigger to aim down sights.
+Tap the button twice to dash.
+Use the scroll wheel to zoom in and out.
+Select an item and press E to use it.
+Hold R to reload faster.
+Try attacking the dummy to practice combos.
+Great job! Now try it on your own.
+You can pause the game at any time.
+Complete all three trials to move on.
+Look for glowing objects; they can be picked up.
+Open the journal to review your active quests.
+Follow the yellow marker on your compass.
+Fast travel is available at any campfire.
+Your health regenerates slowly if you stay out of combat.
+Sleeping at an inn will restore your energy.
+Careful, enemies can hear you if you run.
+Break the crates to find hidden loot.
+Lock on to a target with the middle mouse button.
+Switch to your sidearm when you're out of ammo.
+Take it easy on the throttle.
+Hug the inside of the turn.
+Let go of the gas before you brake.
+Use the handbrake to turn sharply.
+Hit the nitro on the straight.
+Stay in the slipstream of the car ahead.
+Watch the traffic, there's a truck coming!
+Honk if someone blocks your way.
+Merge onto the highway and take the third exit.
+Make a U-turn as soon as possible.
+Hold on tight, this is going to be rough.
+Pick up the passenger outside the hotel.
+Drop him off at the airport and don't ask questions.
+Please remain seated until the vehicle stops.
+Drop your weapon and get on the ground!
+Step away from the vehicle, sir.
+Turn around slowly and don't try anything.
+Keep your mouth shut and let me do the talking.
+Don't say a word about what happened tonight.
+Stay out of sight until I call you.
+Get rid of the evidence before dawn.
+Burn the letters and scatter the ashes.
+Count the rounds you have left.
+Conserve your ammo; we won't find more for a while.
+Lighten your load by dropping the heavy gear.
+You're carrying too much. Drop something.
+Stash the loot in the chest before you leave.
+Trade your furs for supplies at the post.
+Check the shop for new stock.
+Never accept the first offer.
+Name your price and stick to it.
+Buy low, sell high.
+Invest in a better camp before the winter comes.
+Hire a few guards to protect the shipment.
+Gather your crew and head to the harbor.
+Round up some volunteers for the raid.
+Train the new recruits at the barracks.
+Pass the word along to the others.
+Warn the village before it's too late.
+Spread the rumor that the king is dead.
+Let the people know the siege is over.
+Take this letter to the queen.
+Seal the tunnel behind us.
+Light the signal fire on top of the hill.
+Sound the alarm!
+Ring the bell if you see anything strange.
+Keep the torches burning all night.
+Barricade the door with whatever you can find.
+Patch up the hull before we sink.
+Bail out the water, quick!
+Hold the line! Don't let them through!
+Charge!
+Close ranks and raise your shields.
+Archers, loose your arrows on my command.
+Bring up the cavalry on the right flank.
+Spare no one.
+Surrender now and you won't be harmed.
+Don't give up on me now.
+Stay with me! Stay awake!
+Don't look back. Just keep running.
+Take a deep breath and steady your aim.
+Focus on the mission, not the money.
+Do not engage until the convoy is in range.
+Take the long way around to avoid the checkpoint.
+Report to the commander as soon as you land.
+Make contact with our man inside.
+Meet the informant at the train station at noon.
+Memorize the layout; you won't get a second chance.
+Take as many as you can before they notice.
+Listen up, this is the plan.
+We go in quiet, we come out quiet.
+The vault has two layers of security, so go slow.
+I'm picking up movement on the thermal scanner.
+Two hostiles, forty meters, heading your way.
+You're clear to engage.
+Target neutralized. Proceed to the next waypoint.
+All units, converge on the east entrance.
+Base to Echo, do you copy?
+Loud and clear. Go ahead.
+Hold position. Reinforcements are two minutes out.
+Eagle has landed. Repeat, the eagle has landed.
+Be advised, the bridge is heavily guarded.
+Extraction is compromised. Find another way out.
+Chopper's inbound. Get to the landing zone.
+Pop smoke so we can see you.
+Stay off the comms unless it's urgent.
+Keep it down, they'll hear us.
+Keep your voice down and follow me.
+I'll take the left, you take the right.
+You take point. I'll bring up the rear.
+We're sitting ducks out here. Move!
+Take the fall for me, and I'll make it worth your while.
+Lie low for a few weeks, then come see me.
+Don't make waves while the inspectors are here.
+Cover your tracks so nobody can follow you.
+Don't leave any loose ends.
+Let him sweat for a while before you go in.
+Play along until we find out who's behind this.
+Keep him talking while I work on the lock.
+Pretend you didn't see anything.
+Get him to spill the beans.
+Squeeze the thug for information.
+Run a background check on everyone on the list.
+Track the signal back to its source.
+Search the office for anything suspicious.
+Dust the glass for fingerprints.
+Go over the crime scene one more time.
+Interview the witnesses before they change their stories.
+Compare the handwriting on the two notes.
+Check the footage from last night.
+Stake out the warehouse and see who shows up.
+Bring in the suspect for questioning.
+Cuff him and read him his rights.
+Block off the street and keep the crowd back.
+Call it in and wait for the paramedics.
+Take the second door on your right.
+Head down to the cellar and bring me a bottle.
+Make yourself at home, but don't touch anything.
+Come back when you've got the money.
+Show me what you've got.
+Take whatever you need from the shelf.
+Fill your canteen at the well before you go.
+Mind the gap.
+Mind your step; the floor is slippery.
+Watch out for the rotten planks!
+Whatever you do, don't wake the dragon.
+Keep clear of the cliff edge.
+Stay on the path and you'll be fine.
+Take a left at the burnt tree.
+Climb up to the ridge and look for smoke.
+Cross the bridge before it collapses.
+Take the lift to the top floor.
+Swing across on the rope.
+Roll under the closing door!
+Punch through the wall to reveal a secret room.
+Shoot the weak point on its back.
+Aim for the legs to slow it down.
+Wait for it to lunge, then strike.
+Parry the blow and counter-attack.
+Stay on the move and keep your distance.
+Finish him!
+Rest at the shrine to recover your strength.
+Take a moment to catch your breath.
+Rally the troops and prepare for the final push.
+Meet me at the safehouse after dark.
+Bring what you can carry and leave the rest behind.
+Don't touch the artifact with bare hands.
+Wipe your boots before you enter the temple.
+Take off your shoes at the door.
+Show your pass to the guard at the checkpoint.
+Drive carefully; the roads are icy.
+Make sure nobody's following you before you head home.
+You'd better watch your back.
+Pack your bags; we're leaving tonight.
+Fire up the generator and wait for the lights.
+Shut down the reactor before it melts down.
+Flip the breaker to restore power.
+Plug in the cable and wait for the signal.
+Scan the QR code on the wall.
+Enter the four-digit code on the keypad.
+Upload the virus and get out before they trace it.
+Wait for the download to finish before you unplug.
+Don't let the timer hit zero.
+Check the perimeter and report any movement.
+Circle around and hit them from behind.
+Pin them down with suppressing fire.
+Keep their heads down while we advance.
+Take the left corridor and secure the armory.
+We'll push through the main gate while you create a diversion.
+Fan out and search every room.
+Watch the rooftops for snipers.
+Smoke's out. Move in now.
+Hold the bridge until the engineers finish.
+If they break through, fall back to the church.
+Cut down anyone who tries to flee.
+Strike hard and strike fast.
+Don't stop until the whole camp is cleared.
+Mop up whatever's left and meet at the rally point.
+Finish them off before they call for help.
+Tie them up and leave them in the closet.
+Gag him and throw him in the trunk.
+Knock him out and take his uniform.
+Don't kill anyone unless you have to.
+Stay out of trouble for once.
+Keep a low profile in the city.
+Steer clear of the harbor district tonight.
+Keep your nose clean and the guards won't bother you.
+Don't even think about running.
+Stop right there!
+Freeze! Hands in the air!
+Halt in the name of the law!
+Get out of my sight.
+Get over here and give me a hand.
+Lend me your torch for a moment.
+Give me a boost; I can't reach the ledge.
+Help me move this boulder.
+Hand me that wrench.
+Bring me three bottles of rum and I'll tell you everything.
+Go fetch me some firewood, will you?
+Run along now, I'm busy.
+Come back tomorrow, the doctor's out.
+Wait outside and I'll call you in.
+Take a seat and make yourself comfortable.
+Help yourself to some stew.
+Go on, take it. It's yours.
+Keep the change.
+Spread the word that I'm buying.
+Watch the shop for me while I step out.
+Speak to the captain before you board.
+Check in at the front desk.
+Sign here and here.
+Fill out the form and hand it in at window three.
+Sit tight, the doctor will see you shortly.
+Hang on, I'm almost there.
+Hold on to something!
+Hang in there, buddy. Help is coming.
+Heads up!
+Duck!
+Get behind me.
+Back off, or I'll shoot.
+Back away from the door.
+Step back and let the professionals handle it.
+Stand aside, old man.
+Hurry up and finish the job.
+Take your time; there's no rush.
+Think it over and give me your answer tomorrow.
+Hear me out before you decide.
+Don't take it personally.
+Take my advice and leave town.
+Trust your instincts out there.
+Keep faith and keep fighting.
+Remember what I taught you.
+Don't forget to bring a lantern; it's pitch dark down there.
+Pack light; we'll be moving fast.
+Stock up on arrows before you leave.
+Top off the tank before we hit the road.
+Gas up the jeep and check the tires.
+Put on your gas mask; the air is toxic.
+Cover your mouth and don't breathe the dust.
+Take the antidote at the first sign of poison.
+Use the bandages sparingly; they're all we've got.
+Pump the handle until the tank fills up.
+Wring out your clothes and stay warm.
+Lash the logs together to make a raft.
+Sharpen your blade before the fight.
+Tame the wolf by feeding it raw meat.
+Fish in the lake at dawn for the best catch.
+Sift through the ashes for anything useful.
+Dig here and you'll find the treasure.
+Read the map and find the shortest route.
+Use the stars to find your way.
+Climb the lighthouse and signal the ship.
+Follow the tracks to the cave entrance.
+Burn the nest and watch for the swarm.
+Don't let the fire spread to the barn.
+Mission briefing: the target is a courier named Vasquez.
+Your objective is to retrieve the drive without raising the alarm.
+Secondary objective: photograph the shipping manifest.
+Optional: find all five hidden journals.
+Failure is not an option.
+Mission failed. You were spotted.
+Area cleared. You may proceed.
+Enemy reinforcements incoming!
+Enemy spotted at two o'clock.
+Contact! Eleven o'clock, behind the truck.
+They're flanking us on the right!
+I've got you covered. Go!
+Moving up. Cover me.
+Reloading!
+I'm hit! I need a medic!
+Man down!
+Get him to cover and stop the bleeding.
+We've got a runner! Cut him off!
+He's heading for the alley. Don't let him escape.
+Out of ammo! Switch to your pistol!
+Fire in the hole!
+Fall back to the tree line, we'll regroup there.
+Retreat! Everyone to the boats!
+We're going loud. Weapons free.
+Weapons tight. Only fire if fired upon.
+Stay frosty, people.
+Keep your eyes peeled for tripwires.
+Watch your step, the ground is mined.
+I'll hold them off. You get the civilians out.
+Get the wounded out first.
+Leave me. Save yourself.
+Take the south tunnel; it should be unguarded.
+Shut the door behind you.
+Lock the gate and throw away the key.
+Hide in the cupboard and don't make a sound.
+Crawl under the fence and keep low.
+Wait until the dogs are gone, then run for the trees.
+Move only when the light turns green.
+Stay behind the line and wait for the whistle.
+Hold the button to charge your shot.
+Release to fire.
+Match the symbols to unlock the chest.
+Rotate the dial until you hear a click.
+Aim at the glowing barrel and shoot.
+Stand on the platform to activate it.
+Push the crate onto the pressure plate.
+Use the grappling hook to reach the ledge.
+Jump on the enemy's head to defeat it.
+Collect all the coins before the timer ends.
+Choose your class and customize your character.
+Invite a friend to join your party.
+Wait for the other players to be ready.
+Revive downed teammates by holding the use key.
+Ping an enemy to let your team know.
+Cook the fish before you eat it.
+Season the meat with salt to make it last longer.
+Hang the meat to dry for three days.
+Boil the bandages to keep them clean.
+Scrape the bark off the tree to make tinder.
+Rub two sticks together to start a fire.
+Pitch the tent on higher ground.
+Pack the wound with moss to slow the bleeding.
+Wait for low tide before you cross.
+Tie the boat to the post.
+Throw me a rope!
+Start the engine and let it warm up.
+Shift into second gear on the hill.
+Stay in your lane and keep it steady.
+Run the red light; we're being followed.
+Park it and leave the keys in the ignition.
+Take the back roads to avoid the roadblock.
+Rev the engine and wait for my signal.
+Ditch the bike and take cover in the ravine.
+Get in! We're leaving!
+Time to move. Come on, up and at 'em.
+Sound off when you're in position.
+Keep the channel clear for emergency traffic.
+Switch to channel four and wait for orders.
+Confirm your location and status.
+Give me a sitrep.
+Report any suspicious activity immediately.
+Keep me posted.
+Check in every ten minutes.
+Stand by for orders.
+Wait for the green light.
+Good luck out there. You're going to need it.
+Make it count.
+Update your journal once you've talked to the elder.
+Sneak into the manor and steal the ledger.
+Lie in wait by the road and strike when the carriage passes.
+Take down the watchtower to open the way.
+Get in close and use the knife.
+Slow down and let the patrol move on.
+Duck into the alley before they spot you.
+Creep along the wall until you reach the door.
+Sit this one out; you're still hurt.
+Square up with him and see what he wants.
+Look into the disappearance of the baker's son.
+Hunt down the bandits who raided the farm.
+Root out the traitor among the guards.
+Win over the villagers before the election.
+Break into the lab and steal the prototype.
+Blow the door open with the explosives.
+Blow up the bridge once the convoy is across.
+Cut through the fence with the wire cutters.
+Tag along behind the merchants to get past the border.
+Stick together and don't wander off.
+Give the signal when the coast is clear.
+Take the stairs; the elevator is being watched.
+Ease the door open and peek inside.
+Stay calm and let them think they've won.
+Go easy on the potions; they're hard to come by.
+Hand over the goods and nobody gets hurt.
+Throw down your sword and kneel.
+Wrap it up quickly; the boat leaves at dawn.
+Set the charges and clear the area.
+Take a look around and see if you can find another way in.
+Stock the cellar and bar the windows for winter.
+Sort through the pile and keep only the good furs.
+Haul the crates up to the loft.
+Bring the herbs to the healer and ask for a remedy.
+Keep to the shadows and avoid the main square.
+Lead them away from the camp and lose them in the forest.
+Whatever happens, don't open that door.

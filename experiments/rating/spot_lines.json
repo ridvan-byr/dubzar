@@ -1,0 +1,422 @@
+[
+ {
+  "id": 1122,
+  "category": "resmi",
+  "context": "",
+  "en": "The messenger was the bearer of bad news.",
+  "tr": "Haberi getiren kişi kötü haberciydi."
+ },
+ {
+  "id": 1138,
+  "category": "deyim1",
+  "context": "",
+  "en": "Get your act together, or we lose.",
+  "tr": "Toparlan artık, yoksa kaybederiz."
+ },
+ {
+  "id": 5291,
+  "category": "deyim2",
+  "context": "",
+  "en": "Let bygones be bygones.",
+  "tr": "Geçmiş geçmişte kals."
+ },
+ {
+  "id": 5197,
+  "category": "resmi",
+  "context": "",
+  "en": "The enemy would not give an inch.",
+  "tr": "Düşman bir santim bile vermezdi."
+ },
+ {
+  "id": 1023,
+  "category": "deyim2",
+  "context": "",
+  "en": "He ate his words.",
+  "tr": "Sözünü çiğnedi."
+ },
+ {
+  "id": 1022,
+  "category": "deyim1",
+  "context": "",
+  "en": "Steady as she goes, boys.",
+  "tr": "İstikrarı bozmayın çocuklar."
+ },
+ {
+  "id": 1039,
+  "category": "gorev",
+  "context": "",
+  "en": "Trade your furs for supplies at the post.",
+  "tr": "Postanede kürklerini erzakla takas et."
+ },
+ {
+  "id": 5153,
+  "category": "resmi",
+  "context": "",
+  "en": "The council made a mountain out of a molehill.",
+  "tr": "Konsey köstebek yuvasından bir dağ yaptı."
+ },
+ {
+  "id": 1001,
+  "category": "resmi",
+  "context": "",
+  "en": "Let sleeping dogs lie, my friend.",
+  "tr": "Uyuyan köpeği uyandırma dostum."
+ },
+ {
+  "id": 1132,
+  "category": "argo2",
+  "context": "",
+  "en": "I'll bring my A-game tonight.",
+  "tr": "Bu gece elimden gelenin en iyisini yapacağım."
+ },
+ {
+  "id": 5173,
+  "category": "deyim1",
+  "context": "",
+  "en": "Put your money where your mouth is.",
+  "tr": "Paranı ağzının olduğu yere koy."
+ },
+ {
+  "id": 1032,
+  "category": "deyim2",
+  "context": "",
+  "en": "He hit me below the belt.",
+  "tr": "Bana çamur attı."
+ },
+ {
+  "id": 5003,
+  "category": "resmi",
+  "context": "",
+  "en": "Let sleeping dogs lie, my friend.",
+  "tr": "Uyuyan köpekler yalan söylesin dostum."
+ },
+ {
+  "id": 1024,
+  "category": "deyim2",
+  "context": "",
+  "en": "A stitch in time saves nine.",
+  "tr": "Zamanında alınan önlem, sonradan büyük işlere yol açmaz."
+ },
+ {
+  "id": 5167,
+  "category": "argo2",
+  "context": "",
+  "en": "The race is going to come down to the wire.",
+  "tr": "Yarış tellere kadar inecek."
+ },
+ {
+  "id": 5273,
+  "category": "argo1",
+  "context": "",
+  "en": "Dude, you're so extra.",
+  "tr": "Dostum, çok ekstrasın."
+ },
+ {
+  "id": 1145,
+  "category": "deyim2",
+  "context": "",
+  "en": "Let bygones be bygones.",
+  "tr": "Geçmişi geçmişte bırakalım."
+ },
+ {
+  "id": 5265,
+  "category": "argo2",
+  "context": "",
+  "en": "I'll bring my A-game tonight.",
+  "tr": "Bu gece A-oyunumu getireceğim."
+ },
+ {
+  "id": 5005,
+  "category": "deyim1",
+  "context": "",
+  "en": "Speak of the devil, here he comes.",
+  "tr": "Şeytandan bahsetmişken, işte geliyor."
+ },
+ {
+  "id": 1067,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's lost his marbles.",
+  "tr": "Çıldırmış bu adam."
+ },
+ {
+  "id": 5111,
+  "category": "argo2",
+  "context": "",
+  "en": "The accountant cooked the books for years before anyone noticed.",
+  "tr": "Muhasebeci, kimse fark etmeden yıllarca kitapları pişirdi."
+ },
+ {
+  "id": 5089,
+  "category": "gorev",
+  "context": "",
+  "en": "Make a run for the truck on my count.",
+  "tr": "Benim sayemde kamyon için bir koşu yap."
+ },
+ {
+  "id": 5061,
+  "category": "deyim1",
+  "context": "",
+  "en": "Better luck next time, rookie.",
+  "tr": "Bir dahaki sefere iyi şanslar çaylak."
+ },
+ {
+  "id": 5099,
+  "category": "deyim2",
+  "context": "",
+  "en": "I'm shaking like a leaf.",
+  "tr": "Yaprak gibi titriyorum."
+ },
+ {
+  "id": 5079,
+  "category": "gorev",
+  "context": "",
+  "en": "Trade your furs for supplies at the post.",
+  "tr": "Posttaki malzemelerle kürklerinizi takas edin."
+ },
+ {
+  "id": 5049,
+  "category": "deyim2",
+  "context": "",
+  "en": "A stitch in time saves nine.",
+  "tr": "Zamanla yapılan bir dikiş 9'u kurtarır."
+ },
+ {
+  "id": 5215,
+  "category": "argo2",
+  "context": "",
+  "en": "The fight was fixed, and everyone knew it.",
+  "tr": "Mücadele sabitti ve herkes bunu biliyordu."
+ },
+ {
+  "id": 1090,
+  "category": "argo1",
+  "context": "",
+  "en": "Shoot, I plum forgot.",
+  "tr": "Hay aksi, tamamen aklımdan çıkmış."
+ },
+ {
+  "id": 1015,
+  "category": "argo1",
+  "context": "",
+  "en": "He got what was coming to him.",
+  "tr": "Hak etti."
+ },
+ {
+  "id": 5045,
+  "category": "deyim1",
+  "context": "",
+  "en": "Steady as she goes, boys.",
+  "tr": "Devam edin çocuklar."
+ },
+ {
+  "id": 1049,
+  "category": "deyim2",
+  "context": "",
+  "en": "I'm shaking like a leaf.",
+  "tr": "İçim içime sığmıyor, titremekten ölüyorum."
+ },
+ {
+  "id": 1025,
+  "category": "gorev",
+  "context": "",
+  "en": "Bandage the wound to stop the bleeding.",
+  "tr": "Kanamanın durması için yarayı sar."
+ },
+ {
+  "id": 5245,
+  "category": "resmi",
+  "context": "",
+  "en": "The messenger was the bearer of bad news.",
+  "tr": "Peygamber, kötü haber getirenlerdendi."
+ },
+ {
+  "id": 1055,
+  "category": "argo2",
+  "context": "",
+  "en": "The accountant cooked the books for years before anyone noticed.",
+  "tr": "Muhasebeci kimse fark etmeden yıllarca defterleri karaladı."
+ },
+ {
+  "id": 1104,
+  "category": "argo2",
+  "context": "",
+  "en": "Keep your enemies close and your friends closer.",
+  "tr": "Düşmanını yakın tut, dostunu daha yakın."
+ },
+ {
+  "id": 5031,
+  "category": "argo1",
+  "context": "",
+  "en": "He got what was coming to him.",
+  "tr": "Ona gelen şeyi aldı."
+ },
+ {
+  "id": 5165,
+  "category": "argo1",
+  "context": "",
+  "en": "Look at this guy, all swagger and no brains.",
+  "tr": "Şu herife bak, her tarafı kundakçı ve beyni yok."
+ },
+ {
+  "id": 5065,
+  "category": "deyim2",
+  "context": "",
+  "en": "He hit me below the belt.",
+  "tr": "Kemerin altına vurdu."
+ },
+ {
+  "id": 1002,
+  "category": "deyim1",
+  "context": "",
+  "en": "Speak of the devil, here he comes.",
+  "tr": "Nazar değmesin, işte geldi."
+ },
+ {
+  "id": 1044,
+  "category": "gorev",
+  "context": "",
+  "en": "Make a run for the truck on my count.",
+  "tr": "Ben \"başla\" deyince kamyona doğru koş."
+ },
+ {
+  "id": 5277,
+  "category": "deyim1",
+  "context": "",
+  "en": "Get your act together, or we lose.",
+  "tr": "Rolünü yap yoksa kaybederiz."
+ },
+ {
+  "id": 1086,
+  "category": "deyim1",
+  "context": "",
+  "en": "Put your money where your mouth is.",
+  "tr": "Boş konuşma, icraata geç."
+ },
+ {
+  "id": 1083,
+  "category": "argo2",
+  "context": "",
+  "en": "The race is going to come down to the wire.",
+  "tr": "Yarış son ana kadar kafa kafaya gidecek."
+ },
+ {
+  "id": 1088,
+  "category": "gorev",
+  "context": "",
+  "en": "Lay low until the heat dies down.",
+  "tr": "Ortalık sakinleşene kadar sakın."
+ },
+ {
+  "id": 5155,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't get your hopes up.",
+  "tr": "Umudunu kaybetme."
+ },
+ {
+  "id": 5051,
+  "category": "gorev",
+  "context": "",
+  "en": "Bandage the wound to stop the bleeding.",
+  "tr": "Kanamayı durdurmak için yarayı yaralayın."
+ },
+ {
+  "id": 5047,
+  "category": "deyim2",
+  "context": "",
+  "en": "He ate his words.",
+  "tr": "Onun sözlerini yedi."
+ },
+ {
+  "id": 1077,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't get your hopes up.",
+  "tr": "Çok ümitlenme."
+ },
+ {
+  "id": 1030,
+  "category": "deyim1",
+  "context": "",
+  "en": "Better luck next time, rookie.",
+  "tr": "Bir dahaki sefere artık, çaylak."
+ },
+ {
+  "id": 1098,
+  "category": "resmi",
+  "context": "",
+  "en": "The enemy would not give an inch.",
+  "tr": "Düşman adım atmadı."
+ },
+ {
+  "id": 1082,
+  "category": "argo1",
+  "context": "",
+  "en": "Look at this guy, all swagger and no brains.",
+  "tr": "Şu tipe bak, boş boş hava atıyor ama kılıfı yok."
+ },
+ {
+  "id": 5209,
+  "category": "argo2",
+  "context": "",
+  "en": "Keep your enemies close and your friends closer.",
+  "tr": "Düşmanlarınızı ve arkadaşlarınızı yakın tutun."
+ },
+ {
+  "id": 1076,
+  "category": "resmi",
+  "context": "",
+  "en": "The council made a mountain out of a molehill.",
+  "tr": "Konseyin yaptığı şey, samanlıkta saman aramak gibiydi."
+ },
+ {
+  "id": 5135,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's lost his marbles.",
+  "tr": "Mermerlerini kaybetti."
+ },
+ {
+  "id": 5009,
+  "category": "resmi",
+  "context": "",
+  "en": "Let us not squabble while the kingdom burns.",
+  "tr": "Krallık yanarken kavga etmeyelim."
+ },
+ {
+  "id": 5181,
+  "category": "argo1",
+  "context": "",
+  "en": "Shoot, I plum forgot.",
+  "tr": "Kahretsin, erik unuttum."
+ },
+ {
+  "id": 1136,
+  "category": "argo1",
+  "context": "",
+  "en": "Dude, you're so extra.",
+  "tr": "Oğlum, amma abartıyorsun ya."
+ },
+ {
+  "id": 5177,
+  "category": "gorev",
+  "context": "",
+  "en": "Lay low until the heat dies down.",
+  "tr": "Sıcaklık düşene kadar eğilin."
+ },
+ {
+  "id": 1004,
+  "category": "resmi",
+  "context": "",
+  "en": "Let us not squabble while the kingdom burns.",
+  "tr": "Krallık yanarken birbirimizi yiyelim."
+ },
+ {
+  "id": 1107,
+  "category": "argo2",
+  "context": "",
+  "en": "The fight was fixed, and everyone knew it.",
+  "tr": "Dövüş ayarlanmıştı, herkes de bunu biliyordu."
+ }
+]

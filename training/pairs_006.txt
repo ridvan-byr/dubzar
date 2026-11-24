@@ -1,10 +1,8 @@
-Press any button to continue. ||| Devam etmek için herhangi bir tuşa basın.
 Hold the trigger to aim. ||| Nişan almak için tetiği basılı tutun.
 Press X to interact. ||| Etkileşim için X'e bas.
 Tap to jump. ||| Zıplamak için dokun.
 Use the left stick to move. ||| Hareket etmek için sol analogu kullan.
 Hold to sprint. ||| Koşmak için basılı tut.
-Press and hold to open the door. ||| Kapıyı açmak için basılı tut.
 Hit the button as fast as you can. ||| Düğmeye olabildiğince hızlı bas.
 Mash the button to break free. ||| Kurtulmak için tuşa art arda bas.
 Aim at the weak point. ||| Zayıf noktaya nişan al.
@@ -16,16 +14,13 @@ Perfect timing! ||| Mükemmel zamanlama!
 Mission complete. ||| Görev tamamlandı.
 Mission failed. ||| Görev başarısız.
 Objective updated. ||| Hedef güncellendi.
-Reach the extraction point. ||| Tahliye noktasına ulaş.
 Follow the marker. ||| İşareti takip et.
-Return to the safehouse. ||| Güvenli eve dön.
 Talk to the contact. ||| Bağlantı kişisiyle konuş.
 Steal the car. ||| Arabayı çal.
 Lose the cops. ||| Polisten kurtul.
 Wanted level cleared. ||| Aranma seviyesi sıfırlandı.
 You are being chased. ||| Kovalanıyorsun.
 You are out of bounds. Return to the mission area. ||| Sınır dışındasın. Görev alanına dön.
-Game saved. Do not turn off the power. ||| Oyun kaydedildi. Cihazı kapatmayın.
 Autosave in progress. ||| Otomatik kayıt yapılıyor.
 Loading... ||| Yükleniyor...
 Connection lost. ||| Bağlantı kesildi.
@@ -41,7 +36,6 @@ Settings. ||| Ayarlar.
 Controls. ||| Kontroller.
 Audio. ||| Ses.
 Subtitles are on. ||| Altyazılar açık.
-Brightness. ||| Parlaklık.
 Resolution. ||| Çözünürlük.
 Quit to the main menu? ||| Ana menüye çıkılsın mı?
 Exit the game. ||| Oyundan çık.
@@ -50,7 +44,6 @@ Trophy earned. ||| Kupa kazanıldı.
 You found a hidden item. ||| Gizli bir eşya buldun.
 New item added to the inventory. ||| Envantere yeni bir eşya eklendi.
 You can't carry any more. ||| Daha fazla taşıyamazsın.
-This door is locked from the other side. ||| Bu kapı diğer taraftan kilitli.
 You need the red keycard. ||| Kırmızı anahtar karta ihtiyacın var.
 Access denied. ||| Erişim reddedildi.
 Access granted. ||| Erişim onaylandı.
@@ -64,7 +57,6 @@ Examine the note. ||| Notu incele.
 Read the journal. ||| Günlüğü oku.
 The note reads: "Meet me at midnight." ||| Notta şöyle yazıyor: "Gece yarısı bende buluş."
 Collect all the pieces. ||| Tüm parçaları topla.
-Defeat all enemies to open the door. ||| Kapıyı açmak için tüm düşmanları yen.
 Survive for three minutes. ||| Üç dakika hayatta kal.
 Protect the convoy. ||| Konvoyu koru.
 Escort the VIP to the safe zone. ||| VIP'i güvenli bölgeye götür.
@@ -95,7 +87,6 @@ Grab the ledge. ||| Çıkıntıya tutun.
 Slide under the barrier. ||| Bariyerin altından kay.
 Crouch to enter. ||| Girmek için çömel.
 Vault over the fence. ||| Çitin üzerinden atla.
-Drive to the marked location. ||| İşaretli konuma sür.
 Park the vehicle. ||| Aracı park et.
 Refuel at the next gas station. ||| Sonraki benzinlikte yakıt al.
 Fix the engine before the race. ||| Yarıştan önce motoru onar.

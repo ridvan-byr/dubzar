@@ -1,0 +1,613 @@
+Ambient Volume
+Render Scale
+Ambient Occlusion
+View Distance
+Particle Effects
+Depth of Field
+Film Grain
+Chromatic Aberration
+Camera Shake
+Controller Vibration
+Aim Assist
+Toggle Sprint
+Hold to Crouch
+Auto-Save
+Language
+Display Mode
+Fullscreen
+Windowed
+Borderless Window
+Show FPS Counter
+Show Damage Numbers
+Show Minimap
+Colorblind Mode
+Text-to-Speech
+Subtitle Background
+Subtitle Color
+Speaker Names
+High Contrast Mode
+Screen Reader
+Hold Button Time
+Press F to pay respects.
+Hold R to reload.
+Press SPACE to jump.
+Hold SHIFT to sprint.
+Press ESC to skip the cutscene.
+Press X to climb.
+Hold LT to aim.
+Press and hold E to revive your teammate.
+Press M to open the map.
+Press B to build.
+Press C to take cover.
+Tap A to dodge.
+Press Y to interact.
+Press V to use your special ability.
+Press T to talk.
+Hold F to inspect the item.
+Loading...
+Loading level 3 of 12...
+Loading assets, please wait.
+Generating world...
+Autosave in progress.
+Game saved successfully.
+Downloading update 45%...
+Compiling shaders: 72%
+Initializing...
+Synchronizing cloud saves...
+Please wait while the game loads.
+Tip: You can sprint while crouched.
+Tip: Enemies are weak to fire.
+Tip: Check every chest for hidden keys.
+An error has occurred.
+Unable to connect to the server.
+Your session has expired.
+Error code: 404
+Not enough disk space.
+Your game version is out of date.
+The server is full.
+You have been disconnected from the server.
+Login failed. Please check your credentials.
+The file is corrupted.
+Please restart the game.
+Servers are currently under maintenance.
+Your controller was disconnected.
+Please reconnect the controller.
+This action cannot be undone.
+Delete this save file?
+Mission Failed
+Mission Complete
+You Died
+Game Over
+Victory!
+Level Up!
+New Objective
+Objective updated.
+Area Discovered
+Quest accepted.
+Health: 85/100
+Ammo: 24/120
+Stamina: 60%
+Armor: 45
+Mana: 30/50
+Score: 12,450
+Wave 5 of 10
+Level: 14
+XP: 1,250 / 2,000
+Gold: 3,420
+Lives: 3
+Combo x12
+Kills: 7
+Deaths: 2
+Assists: 4
+Distance: 350 m
+Speed: 120 km/h
+Temperature: 36.6°C
+Weight: 45.2 / 60 kg
+Reload: 1.8s
+Cooldown: 12s
+Range: 25 m
+Damage: 150
+Critical Chance: 15%
+Attack Speed: +20%
+Movement Speed: -10%
+Armor Penetration: 30
+Durability: 80/100
+Resistance: Fire +25%
+Bleeding: 3 stacks
+Poisoned for 10 seconds.
+Low ammo.
+Out of ammo!
+Reloading...
+Enemy nearby.
+You have been detected!
+Stealth kill available.
+Objective: Eliminate all enemies.
+Objective: Find the missing scientist.
+Objective: Defend the base for 5 minutes.
+Follow the marker.
+Return to the safe house.
+Talk to the blacksmith.
+Collect 10 herbs.
+Defeat the boss.
+Escort the merchant to the city.
+Bonus objective completed.
+Optional: Find the hidden archive.
+Side quest unlocked.
+Quest failed: the hostage was killed.
+Inventory
+Equipment
+Skills
+Map
+Journal
+Codex
+Bestiary
+Character
+Crafting
+Quests
+Statistics
+Gallery
+Inventory full.
+Item added to inventory.
+Item equipped.
+Drop item
+Use item
+Equip
+Unequip
+Inspect
+Sort by: Rarity
+Sort by: Name
+Filter: Weapons
+Common
+Uncommon
+Rare
+Epic
+Legendary
+Quest item
+Consumable
+Key item
+Heals 50 health over 5 seconds.
+Restores 30 mana instantly.
+Increases damage by 15% for 20 seconds.
+Grants immunity to poison.
+A sword forged in dragon fire.
+This ancient ring hums with power.
+Can be used to open locked doors.
+A rusty key. It might open something nearby.
+Reduces incoming damage by 20%.
+Passive: Regenerate 2 health per second.
+Active: Summon a spectral wolf.
+Strikes all nearby enemies with lightning.
+Throws a smoke bomb, blinding enemies.
+Dash forward, leaving a trail of fire.
+Your next attack is guaranteed to crit.
+Slows enemies in a 10 m radius.
+Unlocks at level 20.
+Requires 15 Strength.
+Requires a level 10 character.
+Skill point available.
+Spend skill points to unlock new abilities.
+Not enough skill points.
+Upgrade complete.
+Max level reached.
+Achievement Unlocked
+Achievement unlocked: First Blood
+Trophy earned: Master Explorer
+New weapon unlocked!
+Complete the game on Hard to unlock.
+Defeat 100 enemies without taking damage.
+Collect all 50 hidden coins.
+Win 10 matches in a row.
+Finish the tutorial.
+Progress: 7/20
+Secret achievement
+Rewards claimed.
+Claim reward
+Daily reward available.
+Login streak: 5 days
+Season 3 begins in 2 days.
+New content available.
+Friend request received.
+Sam wants to join your party.
+Your friend is now online.
+You were kicked from the lobby.
+Player has left the game.
+Player joined the lobby.
+Lobby
+Create Lobby
+Private match
+Public match
+Quick Match
+Ranked Match
+Casual
+Co-op Campaign
+Free for All
+Team Deathmatch
+Capture the Flag
+Select your team.
+Choose your loadout.
+Pick a character.
+Team A
+Spectate
+Players: 6/8
+Ping: 45 ms
+Region: Europe
+Match starts in 10 seconds.
+Waiting for host to start the game.
+All players are ready.
+Start Game
+Leave Party
+Kick player
+Mute player
+Report player
+Block
+Voice chat is enabled.
+Push to Talk
+Open microphone
+Team chat
+Message sent.
+You are muted.
+Your team won the round.
+Round 3 starts now.
+Final Round
+Sudden Death
+Draw
+Defeat
+MVP: Alex
+Leaderboard
+Rank: Gold II
+Rank up!
+You have been promoted to Platinum.
+Matchmaking in progress...
+Estimated wait time: 1:30
+Match canceled.
+Opponent forfeited.
+Shop
+Store
+Buy
+Sell
+Buy for 200 gold
+Sell for 75 gold
+Price: 500
+Not enough gold.
+Purchase successful.
+Confirm purchase?
+Out of stock
+Limited time offer
+Sale ends in 3 days.
+50% off
+Free
+Owned
+Add to wishlist
+Premium Currency
+Buy more gems
+Battle Pass
+Season Pass
+Cosmetics
+Skins
+Bundle
+Restore purchases
+Redeem code
+Enter your promo code.
+Invalid code.
+Repair
+Repair all
+Upgrade
+Enchant
+Salvage
+Craft
+Recipe unlocked: Iron Sword
+Materials required: 3 iron ingots
+Missing materials.
+Crafting complete.
+Crafting time: 30 seconds
+Select a material.
+Subtitles: Off
+Subtitle Size: Large
+Subtitle Opacity
+Closed Captions
+Show sound effect captions.
+Display speaker names in subtitles.
+Adjust the size of the on-screen text.
+Enable this option to hear menu text read aloud.
+Reduce flashing lights for photosensitivity.
+Simplified controls
+One-handed mode
+Auto-aim
+Skip QTE events
+Hold instead of mash
+Slow game speed
+Text Size: Medium
+Interface Scale
+HUD Opacity
+Hide HUD
+Crosshair Style
+Crosshair Color
+Show tutorial hints
+Enable tooltips
+Show button prompts
+Input Device
+Keyboard and Mouse
+Gamepad
+Primary Fire
+Secondary Fire
+Move Forward
+Move Backward
+Strafe Left
+Strafe Right
+Press a key to bind.
+This key is already in use.
+Click to rebind.
+Unbound
+Master volume set to 80%.
+Resolution changed. Keep these settings?
+Reverting in 10 seconds...
+Graphics Preset: Ultra
+Performance Mode
+Quality Mode
+Ray Tracing
+Upscaling
+Your graphics card does not support this feature.
+A restart is required for changes to apply.
+Save Slot 1
+Empty Slot
+Last saved: 2 hours ago
+Play time: 14h 32m
+Chapter 4: The Long Night
+Prologue
+Epilogue
+Skip intro
+Press ENTER to skip.
+Press SPACE to continue.
+Hold to skip dialogue.
+Skip cutscene?
+Auto-advance dialogue
+Dialogue History
+Choose a response.
+Your choice will affect the story.
+This decision cannot be changed later.
+Relationship with Mara has improved.
+The guard will remember this.
+You lost 50 reputation with the Guild.
+Reputation: Friendly
+Reputation: Hostile
+Time: 14:30
+Day 12
+It is getting dark. Find shelter soon.
+Weather: Rain
+The storm is approaching.
+You feel cold. Light a fire.
+You are hungry.
+You are very thirsty.
+You are exhausted and need rest.
+Press Z to sleep until morning.
+Rest complete. Health restored.
+Fast travel unlocked.
+Fast travel to Riverwood?
+You cannot fast travel while in combat.
+Waypoint set.
+Distance to waypoint: 1.2 km
+Marker placed on the map.
+You have entered a restricted area.
+Turn back now or be shot.
+Locked. Requires a key.
+Lockpicking: Hard
+Door unlocked.
+The chest is empty.
+You found 120 gold.
+Picked up: Health Potion x2
+Loot all
+Take
+Nothing to loot.
+Press E to pick up.
+Press E to enter the vehicle.
+Press F to light the torch.
+Press 1 to select the pistol.
+Press RT to accelerate.
+Press LB to brake.
+Release to fire.
+Press Right Mouse Button to aim down sights.
+Use the left stick to move.
+Use WASD to move and the mouse to look around.
+Press the D-pad to use quick items.
+Mash X to break free!
+Time your block just right to parry.
+Hit the button when the bar is in the green zone.
+Stay out of the red zone.
+Watch your step.
+Careful, the floor is unstable.
+Enemies drop loot when defeated.
+Tip: Use the environment to your advantage.
+Tip: Save before big fights.
+Tip: Press and hold the button for a stronger attack.
+Tip: Allies can be given orders from the radial menu.
+Tip: Don't forget to upgrade your armor.
+Did you know? Crows can see in the dark.
+Hint: Look for loose bricks.
+Hint: The code is hidden somewhere in the library.
+Puzzle solved.
+That didn't work. Try something else.
+Nothing happens.
+You can't use that here.
+You need a crowbar.
+It's too heavy to move.
+You can't do that right now.
+Not available in this mode.
+This feature requires an internet connection.
+Waiting for response...
+Request timed out.
+Retry
+Retry connection?
+Check your internet connection and try again.
+Sign in to continue.
+Sign Out
+Create account
+Username
+Password
+Forgot your password?
+Remember me
+Profile
+Friends
+Add friend
+Online
+Offline
+Away
+Do not disturb
+Invisible
+Playing: Dubzar
+Invite sent.
+Invitation declined.
+Notifications
+Mark all as read
+No new notifications.
+Mail
+Inbox
+You have 3 unread messages.
+Settings
+Controls
+Audio
+Video
+Gameplay
+Accessibility
+Network
+Privacy
+Help
+About
+Version 1.2.4
+Check for updates
+An update is available.
+Update and restart
+Later
+Don't show this again
+Close
+Next
+Previous
+Select
+Done
+Skip
+Save
+Save and Exit
+Exit without saving
+Quick Save
+Quick Load
+Reload last save
+Replay
+Play Again
+Next Level
+Main Menu
+Press START
+Press START to begin.
+Tap to start
+Tap to continue
+Swipe up to jump.
+Pinch to zoom.
+Tilt your device to steer.
+Watch an ad to get a free revive.
+Watch an ad to double your reward.
+Energy: 3/5
+Next energy in 12:40
+Out of energy.
+Chest opens in 3h 20m
+Speed up
+Warning: This area is infested with enemies.
+Warning: Radiation levels critical.
+Danger! Toxic gas detected.
+Alert: Intruder in sector 7.
+Your base is under attack!
+Reinforcements have arrived.
+Your ally has fallen.
+Squad member down!
+Ally needs help.
+Revive in 5 seconds or they will die.
+You have been revived.
+Respawning in 3...
+Select a spawn point.
+Spawn protection active.
+Self-destruct sequence initiated.
+Evacuate immediately.
+Time until detonation: 00:45
+The bridge will collapse in 10 seconds.
+Escape before the building explodes!
+Hacking in progress: 68%
+Access granted.
+Access denied. Insufficient clearance.
+Enter the four-digit code.
+Incorrect password. Two attempts remaining.
+System offline.
+Power restored.
+Generator needs fuel.
+Battery low.
+Flashlight battery: 15%
+Oxygen level: 20%
+Shield depleted.
+Shields recharging...
+Overheating! Let the weapon cool down.
+Engine damaged. Repair needed.
+Fuel running low.
+Parked at the garage.
+Race starts in 3, 2, 1...
+Lap 2/3
+Position: 4th
+Best lap: 1:23.456
+New record!
+Wrong way!
+Nitro ready.
+You finished in 2nd place.
+Select your difficulty level. You can change it at any time.
+Hardcore mode: one life only.
+Permadeath is enabled.
+Your progress will be erased if you die.
+Story mode
+Sandbox
+Survival
+Challenge mode
+New Game+
+Training
+Tutorial
+Practice Range
+Arena
+Campaign
+Mission 5: Operation Nightfall
+Boss Fight
+Boss health: 40%
+Phase 2
+Enemy Defeated
+Target eliminated.
+Headshot!
+Critical hit!
+Perfect block!
+Counter attack
+Missed
+Immune
+Stunned
+Frozen
+Burning
+Weakened: Damage reduced by 25%.
+Buff: Haste
+Debuff: Slow
+Effect ends in 15 seconds.
+This ability is on cooldown.
+Not enough mana.
+Target is out of range.
+No line of sight.
+Invalid target.
+Cannot be used while moving.
+Available once per day.
+Stacks up to 5 times.
+Chance to stun on hit.
+Heals nearby allies for 20% of your max health.
+Summons a golem that fights by your side for 30 seconds.
+Teleports you to the last visited campfire.
+Turns invisible until you attack.
+Creates a barrier that absorbs up to 200 damage.
+Passive: Enemies you defeat have a 10% chance to drop extra gold.
+Rare crafting material, found only in deep caves.
+A faded letter, its ink barely legible.
+Once belonged to the king's champion.
+Smells terrible, but it works.
+The Quick Brown Fox Inn
+Thanks for playing!
+To be continued...
+Developed by Nightfall Studios
+All rights reserved.
+Special thanks to our community.
+Please rate the game if you enjoyed it.

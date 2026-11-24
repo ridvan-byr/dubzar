@@ -1,0 +1,293 @@
+Dur orada.
+Oraya girme.
+Ona dokunma.
+Aşağı bakma.
+Korkma.
+Beni bekleme.
+Tek kelime etme.
+Bunu bir daha yapma.
+Beni burada bırakma.
+Pes etme.
+Lütfen gitme.
+Şimdi boş ver.
+Devam et.
+Kapıyı gözle.
+Acele et!
+Yavaşla.
+Dayan!
+Hattı koruyun.
+Bunu benim için tut.
+Geri çekil!
+Arabaya bin.
+Pencereden uzaklaş.
+Kapıyı aç!
+Arkandan kapıyı kapat.
+Al onu.
+Yere bırak.
+Bana ipi at.
+Meşaleyi yak.
+Haritaya bak.
+Sol yoldan git.
+Arkadan dolan.
+Buraya tırman.
+Atla!
+Yüz!
+Buyur, geç.
+Sen devam et, ben yetişirim.
+Şurada, ağacın yanında!
+Yukarıda!
+Aşağıda!
+Solunda!
+Sağında!
+Geliyor!
+Geliyorlar!
+Yere yığıldı.
+Hallettim.
+Bir tane kaldı.
+Düşman var!
+Keskin nişancı!
+Silah değiştiriyorum.
+Canım azaldı!
+İyileştirilmem lazım.
+Seni iyileştiriyorum.
+İyi olacaksın.
+İyi iş çıkardın.
+İşte bu ruh!
+Güzel!
+Fena değil.
+Etkileyici.
+Vay, şuna bak!
+Ah hayır.
+Oh, yapma ya!
+Off, yine mi.
+Sonunda!
+Nihayet.
+Ne karmaşa!
+Ne sürpriz!
+Ne güzel manzara.
+Ne tuhaf.
+Ne korkunç!
+Zavallı şey.
+Tanrılara şükür.
+Aman Tanrım, hayattasın!
+Gerçekten sen misin?
+İnanamıyorum.
+Beni korkuttun.
+Geç kaldın.
+Yorgun görünüyorsun.
+Bugün harika görünüyorsun.
+Hiç değişmemişsin.
+Yapabilirsin.
+O kapı için bir anahtara ihtiyacın olacak.
+Geçiş izni olmadan oraya giremezsin.
+Sen yeni gelen olmalısın.
+Bir ziyaretçin var.
+Tutuklusun.
+Gidebilirsin.
+Buraya girmen yasak.
+Benim yerimdesin.
+Hiçbir yere gitmiyorum.
+Senden korkmuyorum.
+Sadece bakıyorum.
+Şu an meşgulüm.
+Dinliyorum.
+Seninleyim.
+Hallediyorum.
+Burada işim bitti.
+Hazırım.
+Kayboldum.
+Döndüm.
+Evdeyim!
+Anladım.
+Anlıyorum.
+Biliyorum.
+Sanırım kayboldum.
+Bence geri dönmeliyiz.
+Bir fikrim var.
+Başka çarem yok.
+Şimdi gitmem lazım.
+Eve gitmek istiyorum.
+Biraz temiz havaya ihtiyacım var.
+Bir içkiye ihtiyacım var.
+Daha fazla zamana ihtiyacım var.
+Yardımına ihtiyacım var.
+Keşke yardım edebilsem.
+Bu konuda sana yardım edebilirim.
+Bunu tek başıma yapamam.
+Açamıyorum.
+Hiçbir yerde bulamıyorum.
+Ben bir şey yapmadım.
+Hiçbir şey duymadım.
+Kimseyi görmedim.
+Başımı belaya sokmak istemiyorum.
+Hatırlamıyorum.
+Kendimi iyi hissetmiyorum.
+Bu yeri sevmiyorum.
+Ona güvenmiyorum.
+Bu şarkıya bayılıyorum.
+Şapkanı beğendim.
+Ailemi özlüyorum.
+Cüzdanımı kaybettim.
+Unuttum.
+Ben önden gideyim.
+Bir bakayım.
+Hemen dönerim.
+Ben hallederim.
+Elimden geleni yapacağım.
+Sol tarafı ben kollarım.
+İlk nöbeti ben tutarım.
+Ayrılalım.
+Tekrar deneyelim.
+Kalkmana yardım edeyim.
+Bir bakayım.
+Geçmeme izin ver.
+Bırak beni!
+Bana bırak.
+Onu rahat bırak.
+Bak, yardım etmeye çalışıyorum.
+Dinle, fazla vaktimiz yok.
+Hey, bekle!
+Üzgünüm, geciktim.
+Tamam, yapalım şunu.
+Köy ağası, gelir gelmez seninle konuşmak istiyor.
+Bu mektubu gün doğmadan ulaştırırsan sana iki katını öderim.
+Tüccarı geçen hafta dağlara gittiğinden beri kimse görmedi.
+İki sandık daha taşıyabilir misin, yoksa başka birine mi sorayım?
+O köprü çok eskiden yapıldı, o yüzden lütfen dikkatli geç.
+Ben dövüşçü değilim ama bana getirdiğin hemen her şeyi tamir edebilirim.
+Bu iksiri yanında taşı ve yalnızca gerçekten tehlikedeyken iç.
+Kapıdaki nöbetçiler hava karardıktan sonra kimseyi geçirmez.
+Lütfen, devam etmeden önce içeri gel ve ateşin başında ısın.
+Atım dün bacağını incitti, o yüzden korkarım bugün yavaş ilerleyeceğiz.
+O bölgenin en iyi şifacısıdır ve hiçbir hastayı geri çevirmez.
+Bu gece burada kamp kuracağız, yarın da şafakla birlikte nehri geçeceğiz.
+Postanede senin için bir mektup var ama haftalardır orada duruyor.
+Ben bankaya gidene kadar dükkânıma göz kulak olabilir misin?
+Vapur günde yalnızca iki kez çalışır, biri sabah, biri akşam.
+Sana biraz ip ve bir fener satabilirim ama fiyatlar sabit.
+Bu yolda kervana saldırmaları ilk değil.
+Gözcülerimiz nehrin yakınında otuz kadar adamın kamp kurduğunu söylüyor.
+Ormanda kaybolan çocuğu senin bulduğunu söyledi bana.
+Şimdi bir şey söylemek zorunda değilsin, sadece sana anlattıklarımı bir düşün.
+Eski deniz feneri yıllardır çalışmıyor ama gemiler hâlâ onu yön işareti olarak kullanıyor.
+Anahtarları kız kardeşine verdim, sana getireceğini söyledi.
+Kış gelmeden duvarı yeniden yapmaya yardım edecek gönüllülere ihtiyacımız var.
+Kardeşi köyden ayrıldığından beri onunla konuşmadı.
+Sana haritanın bir kopyasını çıkarırım ama ona dikkat etmelisin.
+Pencereyi açıp dinledi ama sokak tamamen sessizdi.
+Üzgünüm ama istediğin oda çoktan tutulmuş.
+Lütfen sesinizi kısın, çünkü bebek yeni uykuya daldı.
+Bir sonraki kasabaya çok yol var, o yüzden yeterince suyun olduğundan emin ol.
+Bütün pazar tezgâhını yapmak için sadece üç güne ihtiyaçları vardı.
+İhtiyacın olan otları kilisenin arkasındaki bahçede bulacaksın.
+Dün gece bodrumdan garip bir ses duydum ama aşağı inmedim.
+İşçilere iki aydır maaş ödenmedi ve öfkeleniyorlar.
+Arkadaşın seni meyhanede bekliyor ve pek memnun görünmüyor.
+Güneş yılın bu zamanında erken batıyor, o yüzden acele etmeliyiz.
+Hayatımda o gece gördüğüm kadar çok yıldız görmemiştim.
+Şimdi ödeyebilirsin ya da iş bittiğinde ödersin.
+Kanyonu geçmenin tek yolu bir ip köprü ve çok eski.
+Bana pazarın yakınında küçük siyah bir köpek görüp görmediğimi sordu.
+Bütün gün atölyede ve yemeğine dokunmadı.
+Hava kararana kadar bekleyelim, sonra avluyu görünmeden geçebiliriz.
+Diğerlerine toplantının yarın sabaha ertelendiğini söyle.
+Çanın üç kez çaldığını duyarsan kasabanın tehlikede olduğu anlamına gelir.
+İzi nehrin yakınında kaybettik ve yağmur bütün ayak izlerini sildi.
+Babam emekli olmadan önce bu gemide otuz yıl çalıştı.
+Gemiye hoş geldiniz; lütfen bir yer bulun ve kemerlerinizi bağlayın.
+Affedersiniz, mağazadan çıkarken bunu düşürmüşsünüz sanırım.
+Bu ilacın tadı berbat ama birkaç gün içinde kendini daha iyi hissetmeni sağlar.
+Evin arkasında taze su alabileceğimiz küçük bir dere var.
+İlk kardan önce çatıyı onarmam gerek ama yeterli çivim yok.
+Küçük çocuk, tren tepelerin ardında kaybolana kadar ona el salladı.
+Bu gece tavan arasında uyuyabilirsin ama odayı kediyle paylaşman gerekecek.
+Buradan hastaneye kısa bir yürüyüş, seni oraya götürebilirim.
+Girişi iki asker koruyor, üçüncüsü de yolu gözlüyor.
+Uzun bir hastalıktan sonra kendini daha iyi hissettiğini görmek beni mutlu ediyor.
+Polis gelene kadar arabada kalmamızı söylediler.
+Çiftçi, bu ay her gece inekleri birer birer kayboluyor dedi.
+Yolculuktan önce bir şeyler yemelisin, çünkü uzun bir gün olacak.
+Bu kılıç eski ama ağzı hâlâ keskin ve dengesi mükemmel.
+Merak etme, kapıları kontrol ettim ve her şey kilitli.
+Kıştan önce döneceğine söz vermişti ama ilk kar çoktan yağdı.
+Hemen yola çıkarsak öğlene kadar kampa varabiliriz.
+Biri ahırda yatıyor, çünkü bir battaniye ve biraz ekmek buldum.
+Öğretmenimiz hep okumanın öğrenmenin en iyi yolu olduğunu söylerdi.
+Pazar bugün kalabalık, o yüzden çantanı yakınında tut.
+Sanırım fırtına geçti ama biraz daha beklemeliyiz.
+Her sabah, kışın bile, kuyudan su taşırdı.
+Bana olan her şeyi anlatan uzun bir mektup yazdı.
+Sağdaki ilk kapı mutfağa çıkıyor, merdivenler de tam karşıda.
+Birkaç dakika önce kapıda bir kadın seni soruyordu.
+Telsizi tamir ettik ama her seferinde sadece birkaç dakika çalışıyor.
+Seninki devam edemeyecek kadar yorgunsa benim atımı ödünç alabilirsin.
+Öğretmen beni kaldırdı ama sorusunun cevabını bilmiyordum.
+Lütfen biletini getirmeyi unutma, yoksa seni trene bindirmezler.
+Kuyunun suyu soğuk ve temiz, istediğin kadar içebilirsin.
+Para üstü burada.
+Başka bir şey?
+Poşet ister misiniz?
+Elimdeki bu kadar.
+Satılık değil.
+Tükendi.
+Taze ekmek, daha sıcacık!
+Buyurun, yaklaşın!
+Şehrin en uygun fiyatları!
+Almak mı satmak mı istiyorsun?
+Bunu karşılayamazsın.
+Daha çok altının olduğunda gel.
+Bizi tercih ettiğin için sağ ol.
+Seninle iş yapmak bir zevkti.
+Lütfen sıranı bekle.
+Sıradaki, lütfen.
+İki kişilik masa mı?
+Ne içmek istersiniz?
+Her zamankinden mi?
+Bir tur daha?
+Şerefe!
+Afiyet olsun.
+Çok lezzetliydi.
+Hesap, lütfen.
+Üstü kalsın.
+Görev tamamlandı.
+Hedef güncellendi.
+İyi şanslar ve hayatta kal.
+Takıma hoş geldin.
+İyi iş çıkardın, çaylak.
+Emirler alındı.
+Anlaşıldı.
+Anlaşıldı.
+Beklemedeyim.
+Pozisyondayım.
+Harekete geçiyoruz.
+Geri çekilin!
+Kapıda toplanın.
+Herkes iyi mi?
+Yaralanan var mı?
+Numara sayın.
+Teyakkuzda kal.
+Birlikte kalın.
+Çatıları gözle.
+Köşeleri kontrol et.
+Silahları hazırlayın.
+Çek elini, o benim.
+Dikkat, sıcak.
+Dikkat, zemin ıslak.
+Aradaki boşluğa dikkat.
+Başına dikkat et.
+Buradaki buz ince.
+Suyu içme.
+Bu çok tehlikeli.
+Bu bir tuzak!
+Boş.
+Gitti.
+Ağır.
+Bitti.
+Fazla sessiz.
+Gitme zamanı.
+Çalışıyor!
+Çalışmıyor.
+Hiçbir şey olmadı.
+Evde kimse yok.
+Her şey kontrol altında.
+Her şey yoluna girecek.

@@ -1,0 +1,56 @@
+3	B	Ortam tıkanıklığı
+10	B	Kumanda titreşimi
+19	A	Kenarlıksız pencere
+87	B	Can: 85/100
+88	B	Mermi: 24/120
+97	B	Can hakkı: 3
+98	B	Kombo x12
+118	B	Mermi azalıyor.
+119	B	Mermin bitti!
+123	A	Sessiz öldürme yapılabilir.
+130	B	10 şifalı ot topla.
+138	B	Ekipman
+142	B	Kodeks
+161	NEW	Yaygın olmayan
+221	NEW	Rahat
+235	B	Ev sahibinin oyunu başlatması bekleniyor.
+263	B	Rakip pes etti.
+264	A	Mağaza
+283	NEW	Savaş bileti
+284	B	Sezon bileti
+286	B	Kostümler
+293	B	Hepsini onar
+300	B	Malzeme eksik.
+321	A	HUD saydamlığı
+323	B	Nişangâh stili
+324	B	Nişangâh rengi
+327	NEW	Tuş ipuçlarını göster
+348	NEW	Çözünürlük ölçekleme
+356	A	Prolog
+357	A	Epilog
+365	B	Bir yanıt seç.
+379	A	Acıktın.
+384	B	Hızlı seyahat açıldı.
+385	B	Riverwood'a hızlı seyahat edilsin mi?
+386	B	Çatışma sırasında hızlı seyahat edemezsin.
+389	B	İşaret haritaya yerleştirildi.
+413	NEW	Savuşturmak için siperini tam zamanında kaldır.
+415	B	Kırmızı bölgeden uzak dur.
+431	B	Bir levye lazım.
+432	A	Hareket ettirmek için fazla ağır.
+438	B	Yeniden dene
+479	A	Daha sonra
+482	A	Sonraki
+483	A	Önceki
+494	B	Tekrar oyna
+518	B	Ekip üyesi yere düştü!
+521	A	Ayağa kaldırıldın.
+530	B	Hackleme sürüyor: %68
+536	B	Güç geri geldi.
+560	A	Serbest mod
+564	A	Antrenman
+565	B	Öğretici
+569	B	Görev 5: Gece Harekâtı
+577	NEW	Kusursuz savuşturma!
+585	A	Güçlendirme: Hız
+595	B	En fazla 5 kez birikir.

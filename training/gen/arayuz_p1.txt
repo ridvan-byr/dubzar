@@ -1,0 +1,93 @@
+Ambient Volume ||| Ortam sesi
+Render Scale ||| Görüntü ölçeği
+Ambient Occlusion ||| Ortam gölgelemesi
+View Distance ||| Görüş mesafesi
+Particle Effects ||| Parçacık efektleri
+Depth of Field ||| Alan derinliği
+Film Grain ||| Film greni
+Chromatic Aberration ||| Renk sapması
+Camera Shake ||| Kamera sarsıntısı
+Controller Vibration ||| Kontrolcü titreşimi
+Aim Assist ||| Nişan yardımı
+Toggle Sprint ||| Koşmayı aç/kapat
+Hold to Crouch ||| Eğilmek için basılı tut
+Auto-Save ||| Otomatik kayıt
+Language ||| Dil
+Display Mode ||| Ekran modu
+Fullscreen ||| Tam ekran
+Windowed ||| Pencereli
+Borderless Window ||| Kenarlıksız pencere
+Show FPS Counter ||| FPS sayacını göster
+Show Damage Numbers ||| Hasar sayılarını göster
+Show Minimap ||| Mini haritayı göster
+Colorblind Mode ||| Renk körlüğü modu
+Text-to-Speech ||| Metinden konuşmaya
+Subtitle Background ||| Altyazı arka planı
+Subtitle Color ||| Altyazı rengi
+Speaker Names ||| Konuşmacı adları
+High Contrast Mode ||| Yüksek kontrast modu
+Screen Reader ||| Ekran okuyucu
+Hold Button Time ||| Düğmeye basılı tutma süresi
+Press F to pay respects. ||| Saygılarını sunmak için F'ye bas.
+Hold R to reload. ||| Silahı doldurmak için R'ye basılı tut.
+Press SPACE to jump. ||| Zıplamak için BOŞLUK tuşuna bas.
+Hold SHIFT to sprint. ||| Koşmak için SHIFT'e basılı tut.
+Press ESC to skip the cutscene. ||| Ara sahneyi geçmek için ESC'ye bas.
+Press X to climb. ||| Tırmanmak için X'e bas.
+Hold LT to aim. ||| Nişan almak için LT'ye basılı tut.
+Press and hold E to revive your teammate. ||| Takım arkadaşını ayağa kaldırmak için E'ye basılı tut.
+Press M to open the map. ||| Haritayı açmak için M'ye bas.
+Press B to build. ||| İnşa etmek için B'ye bas.
+Press C to take cover. ||| Siper almak için C'ye bas.
+Tap A to dodge. ||| Yan atlayıp kaçmak için A'ya dokun.
+Press Y to interact. ||| Etkileşime geçmek için Y'ye bas.
+Press V to use your special ability. ||| Özel yeteneğini kullanmak için V'ye bas.
+Press T to talk. ||| Konuşmak için T'ye bas.
+Hold F to inspect the item. ||| Eşyayı incelemek için F'ye basılı tut.
+Loading... ||| Yükleniyor...
+Loading level 3 of 12... ||| Bölüm yükleniyor: 3/12...
+Loading assets, please wait. ||| Varlıklar yükleniyor, lütfen bekle.
+Generating world... ||| Dünya oluşturuluyor...
+Autosave in progress. ||| Otomatik kayıt yapılıyor.
+Game saved successfully. ||| Oyun başarıyla kaydedildi.
+Downloading update 45%... ||| Güncelleme indiriliyor: %45...
+Compiling shaders: 72% ||| Gölgelendiriciler derleniyor: %72
+Initializing... ||| Başlatılıyor...
+Synchronizing cloud saves... ||| Bulut kayıtları eşitleniyor...
+Please wait while the game loads. ||| Oyun yüklenirken lütfen bekle.
+Tip: You can sprint while crouched. ||| İpucu: Eğilirken de koşabilirsin.
+Tip: Enemies are weak to fire. ||| İpucu: Düşmanlar ateşe karşı zayıftır.
+Tip: Check every chest for hidden keys. ||| İpucu: Gizli anahtarlar için her sandığa bak.
+An error has occurred. ||| Bir hata oluştu.
+Unable to connect to the server. ||| Sunucuya bağlanılamıyor.
+Your session has expired. ||| Oturumunun süresi doldu.
+Error code: 404 ||| Hata kodu: 404
+Not enough disk space. ||| Yeterli disk alanı yok.
+Your game version is out of date. ||| Oyun sürümün güncel değil.
+The server is full. ||| Sunucu dolu.
+You have been disconnected from the server. ||| Sunucu bağlantın kesildi.
+Login failed. Please check your credentials. ||| Giriş başarısız. Lütfen bilgilerini kontrol et.
+The file is corrupted. ||| Dosya bozuk.
+Please restart the game. ||| Lütfen oyunu yeniden başlat.
+Servers are currently under maintenance. ||| Sunucular şu anda bakımda.
+Your controller was disconnected. ||| Kontrolcün bağlantısı kesildi.
+Please reconnect the controller. ||| Lütfen kontrolcüyü yeniden bağla.
+This action cannot be undone. ||| Bu işlem geri alınamaz.
+Delete this save file? ||| Bu kayıt dosyası silinsin mi?
+Mission Failed ||| Görev başarısız
+Mission Complete ||| Görev tamamlandı
+You Died ||| Öldün
+Game Over ||| Oyun bitti
+Victory! ||| Zafer!
+Level Up! ||| Seviye atladın!
+New Objective ||| Yeni hedef
+Objective updated. ||| Hedef güncellendi.
+Area Discovered ||| Yeni bölge keşfedildi
+Quest accepted. ||| Görev kabul edildi.
+Health: 85/100 ||| Sağlık: 85/100
+Ammo: 24/120 ||| Cephane: 24/120
+Stamina: 60% ||| Dayanıklılık: %60
+Armor: 45 ||| Zırh: 45
+Mana: 30/50 ||| Mana: 30/50
+Score: 12,450 ||| Skor: 12.450
+Wave 5 of 10 ||| Dalga 5/10

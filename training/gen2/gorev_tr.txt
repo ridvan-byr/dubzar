@@ -1,0 +1,595 @@
+Onları doğu tarafından çevir.
+Binayı tara ve bana rapor ver.
+Ortalık yatışana kadar ortalıkta görünme.
+Kapıdaki nöbetçileri etkisiz hale getir.
+Yardım gelene kadar saldırganları oyala.
+Kapıyı kırdığımda beni kolla.
+İkinci kontrol noktasına geri çekilin!
+Devriyenin yanından görünmeden sıvış.
+Yerine çömel ve fırtına geçene kadar bekle.
+Kayıp kuryeyi bul ve sağ salim geri getir.
+Koşmak için Shift tuşuna basılı tut.
+Kamerayı hareket ettirmek için sol çubuğu kullan.
+Envanterini aç ve bıçağı kuşan.
+Motoru çalıştırmak için kırmızı düğmeye bas.
+Ben şarjör değiştirirken merdiven boşluğunu kolla.
+Oraya tek başına girme.
+Ben işaret verene kadar hareket etme.
+Hedefi işaretle ve hava saldırısı iste.
+On tane post topla ve tüccara götür.
+Bir sopa ve biraz bezle bir meşale yap.
+Şifalı otları birleştirip bir iyileştirme iksiri yap.
+Daha iyi bir fiyat için tüccarla pazarlık et.
+Yer açmak için yedek silahlarını sat.
+Motor çalışır durumda kalsın; hızla çıkmamız gerekebilir.
+Güvenli eve gitmeden önce polisleri atlat.
+Peşimden ayrılma, beni kaybetme.
+Sert virajdan önce frene bas!
+Suyunu idareli kullan; çöl affetmez.
+Hava kararmadan ateş yak.
+Önce suyu kaynat, yoksa hastalanırsın.
+Eski değirmene varana kadar nehri takip et.
+Ambarda erzak var mı diye bak.
+Bu paketi limandaki kaptana teslim et.
+Kervana bir sonraki köye kadar eşlik et.
+Tutsağı ne pahasına olursa olsun sağ tut.
+Kasayı açmadan önce alarmı devre dışı bırak.
+Terminale sız ve dosyaları indir.
+Dikkat çekme.
+Sandıkların arkasına siper al!
+Geri çekilin! Bizi eziyorlar!
+İlerle ve avluyu ele geçir.
+Arkanı kolla.
+Gözünü dört aç, misafirlerimiz var.
+Odayı temizle, sonra kapıyı tut.
+Ben ateşlerini üzerime çekerim, sen arkadan dolan.
+Ayrılalım, daha geniş alanı tarayalım.
+Gece yarısı eski deniz fenerinde buluşalım.
+Çatıya çık ve helikopteri bekle.
+Gözlerinin akını görmeden ateş etme.
+Girişleri kilitle ve pencereleri mühürle.
+Hedefe ulaşınca telsizle haber ver.
+Alfa takımı, mevzinizi koruyun.
+Komuta, paketi gözümüzün önünde tutuyoruz.
+Anlaşıldı. Müdahale etmek için yola çıkıyorum.
+Tekrar et, sesin kesiliyor.
+Anlaşıldı, yeni emirler için beklemedeyim.
+İkinci mangayla bağlantımız koptu.
+Görevi iptal et, tekrar ediyorum, iptal!
+Görevin, yerleşkeye sızmak.
+Bu yolun dönüşü yok, o yüzden iyi değerlendir.
+Orada hiç kimseye güvenme.
+Görev kabul edildi: Kayıp Taç.
+Ödülünü almak için yaşlıya geri dön.
+Görev tamamlandı. 250 deneyim puanı kazandın.
+Saygını göstermek için F'ye bas.
+Sağ fareyle nişan al, sol fareyle ateş et.
+Fark edilmemek için çömel.
+Ayak seslerini kısmak için yavaş yürü.
+Nöbetçinin dikkatini dağıtmak için bir taş at.
+Arkadan yaklaş ve sessiz etkisiz hale getirmek için Q'ya bas.
+Cesedi gölgelere sürükle.
+Onlar dönmeden önce kilidi aç.
+Uzun otların içinde kal ve yavaş hareket et.
+İleriyi keşfet ve neyle karşı karşıya olduğumuzu gör.
+Yaralı hayvanı bulmak için kan izini takip et.
+Su birikintisinin yakınına bir tuzak kur.
+Et bozulmadan önce geyiğin derisini yüz.
+Zırhını demirhanede geliştir.
+Yetenek puanlarını akıllıca harca.
+Devam etmeden önce ilerlemeni kaydet.
+Silah değiştirmek için fare tekerleğini kullan.
+Şarjörün boşalınca mermi doldur.
+Patronla dövüşmeden önce iyileş.
+Saldırıdan hemen önce kaçın.
+Savunmalarını kır, sonra vur.
+Menzilli saldırılarla onları yor.
+Hareket etmeye devam et, yoksa kolay bir hedef olursun.
+Düşmanı dar koridora çek.
+Kaçış yollarını kes.
+Konvoyu köprüde pusuya düşür.
+Erzak arabalarını yak ve geri çekil.
+Gün doğana kadar kapıyı savun.
+Barikatları güçlendir; geliyorlar.
+Zamanlayıcı bitmeden bombayı etkisiz hale getir.
+Mavi teli değil, kırmızı teli kes.
+Ekip gelene kadar hiçbir şeye dokunma.
+Ancak emin olduğunda ateş et.
+Tetiği çekmeden önce yavaşça nefes ver.
+Hazırlanın, beş dakika sonra yola çıkıyoruz.
+Giyin ve hangarda benimle buluş.
+Geri çekil ve gelmelerine izin ver.
+Seni sıkıştırmalarına izin verme.
+Ben tehlike geçti diyene kadar olduğun yerde kal.
+İlerlerken köşeleri kontrol et.
+Ateş etmeyin; bizi henüz fark etmediler.
+Hepsini indirin!
+Duvara varmadan hepsini biçin.
+Kuleden onları tek tek avla.
+Baskıyı sürdür ve toparlanmaları için onlara zaman tanıma.
+Girmeden önce odayı dumana boğ.
+Pencereden içeri bir flaş bombası at.
+İşaretimle kapıyı kır ve odayı temizle.
+Beni kollayın, giriyorum!
+Bana bir ilk yardım çantası at, kanım akıyor!
+Her şeyi bırak ve kaç!
+Yat! Bomba!
+Kımılda, kımılda, kımılda!
+Orada her an etrafına dikkat et.
+Kilidi vur!
+Yüksek zemini ele geçir ve orayı tut.
+Kapının sol tarafında sıralanın.
+Mevzilenin; takviye yolda.
+Bu mevziyi daha fazla tutamayız.
+Benim sayımla kamyona doğru koş.
+Tanık bırakma.
+Geri çekil asker. Bu bir emirdir.
+Dikkatli ol, gece vardiyası daha tedbirli.
+Kimliğimizi ele verme.
+Sakin ol ve doğal davran.
+Kalabalığa karış.
+Hedefi takip et ama mesafeni koru.
+Fark edilirsen hemen görevi iptal et.
+Dinleme cihazını masanın altına yerleştir.
+Anahtar kartı nöbetçinin kemerinden çal.
+Arka kapıdan sıvış.
+Seni takip eden varsa atlat.
+Arabayı bırak ve yürüyerek devam et.
+Nöbetçilerin vardiya değiştirmesini bekle.
+Takviye çağıramasınlar diye telsizi karıştır.
+Bütün mahallenin elektriğini kes.
+Soldan sağa dönen kameraya dikkat et.
+Hareketini projektörlerin arasına denk getir.
+Yağmur borusundan ikinci kata tırman.
+Boşluğun üzerinden atla ve çıkıntıya tutun.
+Nöbetçilerden kaçmak için su altında yüz.
+Onlar geçene kadar nefesini tut.
+Havalandırmaları kullanarak kontrol odasına ulaş.
+Belgeleri kap ve oradan çık.
+Burada bekle ve kapıya göz kulak ol.
+Dikkatli ol, geliyorlar.
+Gaza bas! Hemen arkamızdalar!
+Bir sonraki soldan dön ve sonuna kadar bas.
+Kapıya çarp ve devam et.
+Benzin istasyonunun yanında kenara çek.
+Yavaşla, arabayı devireceksin.
+Şerit değiştir ve ara sokaktan kısa kes.
+Onları atlatmak için virajda drift yap.
+Bir sonraki istasyonda yakıt al, yoksa yolda kalırız.
+Kamyonu deponun arkasına park et.
+Kemerini tak, yol biraz sarsıntılı olacak.
+Havalanmadan önce motoru onar.
+Uçağı düzelt ve rotanda kal.
+Demiri at ve halatları sağlamlaştır.
+Yelkenleri aç, limandan ayrılıyoruz.
+Kayalardan uzak dur.
+Enkazdan yedek parça sök.
+Terk edilmiş arabalardan yakıt topla.
+Cesetleri soy, ama çabuk ol.
+Barınak yapmak için odun ve taş topla.
+Tohumları ek ve her gün sula.
+Yola çıkmadan önce atı doyur.
+Kanamayı durdurmak için yarayı sar.
+Bir şeyler ye, yoksa bayılırsın.
+Sıcak giyin; burada geceler dondurucu oluyor.
+Parlayan mantarlardan uzak dur.
+Tuzaklara dikkat et, her yerdeler.
+O dereden su içme.
+Dayanıklılık çubuğuna göz kulak ol.
+Kum fırtınası vurmadan önce sığın.
+Cevheri çıkar ve eriterek külçe yap.
+Teçhizatını örste onar.
+Tarife üç demir çubuk ekle.
+Putu kaideye yerleştir.
+Plakalara doğru sırayla bas.
+Kapıyı açmak için bulmacayı çöz.
+Gizli ipuçları için tabloyu incele.
+Köylülerle konuş ve yabancıyı sor.
+Nöbetçiye birkaç parayla rüşvet ver.
+Onu bizi geçirmesi için ikna et.
+Yaşlı kadına verdiğin sözü tut.
+Sözlerini dikkatli seç.
+Gördüklerini belediye başkanına anlat.
+Kaçmasına izin verme!
+Sınıra varmadan onu yakala.
+Hayatta kalanları topla ve içeri getir.
+Eğitim alanına hoş geldin, acemi.
+Engelleri aşmak için Boşluk tuşuna bas.
+Nişan almak için sol tetiği basılı tut.
+Atılmak için tuşa iki kez bas.
+Yakınlaştırıp uzaklaştırmak için kaydırma tekerleğini kullan.
+Bir eşya seç ve kullanmak için E'ye bas.
+Daha hızlı şarjör doldurmak için R'ye basılı tut.
+Kombolarını denemek için antrenman mankenine saldır.
+Aferin! Şimdi bunu kendi başına dene.
+Oyunu istediğin zaman durdurabilirsin.
+İlerlemek için üç denemenin hepsini tamamla.
+Parlayan nesnelere bak; onlar toplanabilir.
+Aktif görevlerine bakmak için günlüğü aç.
+Pusulandaki sarı işareti takip et.
+Hızlı seyahat her kamp ateşinde mevcut.
+Çatışmadan uzak durursan canın yavaş yavaş yenilenir.
+Bir handa uyumak enerjini yeniler.
+Dikkat, koşarsan düşmanlar seni duyabilir.
+Gizli ganimeti bulmak için sandıkları kır.
+Fare orta tuşuyla bir hedefe kilitlen.
+Cephanen bitince yan silahına geç.
+Gaza fazla yüklenme.
+Virajın iç kısmına yakın git.
+Frene basmadan önce gazdan çek.
+Keskin dönmek için el frenini kullan.
+Düzlükte nitroya bas.
+Öndeki arabanın hava akımında kal.
+Trafiğe dikkat et, bir kamyon geliyor!
+Biri yolunu keserse korna çal.
+Otoyola gir ve üçüncü çıkıştan çık.
+Mümkün olan en kısa sürede U dönüşü yap.
+Sıkı tutun, yol çok sarsıntılı olacak.
+Yolcuyu otelin önünden al.
+Onu havalimanında bırak ve soru sorma.
+Lütfen araç durana kadar yerinizde oturun.
+Silahını bırak ve yere yat!
+Araçtan uzaklaşın, efendim.
+Yavaşça dön ve sakın bir şey deneme.
+Çeneni kapalı tut ve konuşmayı bana bırak.
+Bu gece olanlar hakkında tek kelime etme.
+Ben seni arayana kadar gözden uzak dur.
+Sabah olmadan delilleri ortadan kaldır.
+Mektupları yak ve külleri savur.
+Kaç merminin kaldığını say.
+Cephaneni idareli kullan; bir süre daha bulamayız.
+Ağır teçhizatı bırakarak yükünü hafiflet.
+Çok fazla şey taşıyorsun. Bir şey bırak.
+Gitmeden önce ganimeti sandığa sakla.
+Kürklerini ticaret merkezinde erzakla takas et.
+Dükkâna yeni mal gelmiş mi diye bak.
+İlk teklifi asla kabul etme.
+Fiyatını söyle ve onun arkasında dur.
+Ucuza al, pahalıya sat.
+Kış gelmeden daha iyi bir kamp kur.
+Sevkiyatı korumak için birkaç muhafız tut.
+Mürettebatını topla ve limana git.
+Baskın için birkaç gönüllü topla.
+Acemileri kışlada eğit.
+Haberi diğerlerine ilet.
+Çok geç olmadan köyü uyar.
+Kralın öldüğü söylentisini yay.
+Halka kuşatmanın bittiğini duyur.
+Bu mektubu kraliçeye götür.
+Arkamızdaki tüneli kapat.
+Tepenin üstünde işaret ateşini yak.
+Alarmı çal!
+Garip bir şey görürsen çanı çal.
+Meşaleleri bütün gece yanık tut.
+Kapıyı bulabildiğin her şeyle barikatla.
+Batmadan önce gövdedeki deliği kapat.
+Suyu boşalt, çabuk!
+Hattı koruyun! Geçmelerine izin vermeyin!
+Hücum!
+Safları sıklaştırın ve kalkanlarınızı kaldırın.
+Okçular, benim emrimle okları serbest bırakın.
+Atlıları sağ kanada getir.
+Kimseyi esirgeme.
+Şimdi teslim ol, sana zarar gelmez.
+Şimdi beni bırakma.
+Benimle kal! Uyanık kal!
+Arkana bakma. Sadece koşmaya devam et.
+Derin bir nefes al ve nişanını sabitle.
+Paraya değil, göreve odaklan.
+Konvoy menzile girene kadar ateş açma.
+Kontrol noktasından kaçınmak için uzun yoldan git.
+İner inmez komutana rapor ver.
+İçerideki adamımızla temasa geç.
+Muhbirle öğlen tren istasyonunda buluş.
+Planı ezberle; ikinci bir şansın olmayacak.
+Fark etmeden önce olabildiğince çoğunu al.
+Dinleyin, plan şöyle.
+Sessizce girer, sessizce çıkarız.
+Kasanın iki kat güvenliği var, o yüzden yavaş ol.
+Termal tarayıcıda hareket algılıyorum.
+İki düşman, kırk metre, sana doğru geliyorlar.
+Ateş açabilirsin.
+Hedef etkisiz hale getirildi. Bir sonraki noktaya ilerle.
+Tüm birimler, doğu girişinde toplanın.
+Üs'ten Echo'ya, duyuyor musun?
+Gayet net. Devam et.
+Mevzini koru. Takviye iki dakika uzakta.
+Kartal indi. Tekrar ediyorum, kartal indi.
+Bilgin olsun, köprü ağır korunuyor.
+Tahliye tehlikede. Başka bir çıkış yolu bul.
+Helikopter yolda. İniş bölgesine ulaş.
+Duman at ki seni görebilelim.
+Acil olmadıkça telsizi meşgul etme.
+Sessiz ol, bizi duyacaklar.
+Sesini alçalt ve beni takip et.
+Ben sola gidiyorum, sen sağa git.
+Sen önden git. Ben arkayı toplarım.
+Burada kolay hedefiz. Kımılda!
+Benim yerime suçu üstlen, karşılığını fazlasıyla veririm.
+Birkaç hafta ortadan kaybol, sonra bana uğra.
+Müfettişler buradayken ortalığı karıştırma.
+İzlerini sil ki kimse seni takip edemesin.
+Arkada hiçbir açık iş bırakma.
+İçeri girmeden önce onu bir süre terletin.
+Arkasında kimin olduğunu öğrenene kadar oyuna ayak uydur.
+Ben kilitle uğraşırken onu konuştur.
+Hiçbir şey görmemiş gibi yap.
+Onu ağzından laf almak için sıkıştır.
+Serseriyi bilgi almak için sıkıştır.
+Listedeki herkesin sabıka kaydını kontrol et.
+Sinyali kaynağına kadar takip et.
+Ofiste şüpheli bir şey var mı diye ara.
+Camda parmak izi ara.
+Olay yerini bir kez daha gözden geçir.
+Tanıkların ifadelerini değiştirmeden önce onlarla görüş.
+İki notun el yazısını karşılaştır.
+Dün geceki görüntüleri incele.
+Depoyu gözetle ve kimin geleceğini gör.
+Şüpheliyi sorguya getir.
+Kelepçele ve haklarını oku.
+Sokağı kapat ve kalabalığı geri tut.
+Bildir ve sağlık ekibini bekle.
+Sağındaki ikinci kapıyı kullan.
+Mahzene in ve bana bir şişe getir.
+Kendi evinde gibi ol, ama hiçbir şeye dokunma.
+Parayı bulduğunda geri gel.
+Ne var, göster bana.
+Raftan ihtiyacın olanı al.
+Gitmeden önce matarani kuyudan doldur.
+Aradaki boşluğa dikkat et.
+Dikkat et, zemin kaygan.
+Çürük tahtalara dikkat et!
+Ne yaparsan yap, ejderhayı uyandırma.
+Uçurum kenarından uzak dur.
+Patikadan ayrılma, bir şey olmaz.
+Yanmış ağaçtan sola dön.
+Sırta tırman ve duman ara.
+Çökmeden önce köprüden geç.
+Asansörle en üst kata çık.
+İple karşıya sallan.
+Kapanan kapının altından yuvarlan!
+Gizli bir odayı ortaya çıkarmak için duvarı yumrukla.
+Sırtındaki zayıf noktayı vur.
+Yavaşlatmak için bacaklarına nişan al.
+Üzerine atılmasını bekle, sonra vur.
+Darbeyi savuştur ve karşı saldırıya geç.
+Hareket halinde kal ve mesafeni koru.
+Bitir onu!
+Gücünü toparlamak için mabette dinlen.
+Bir an durup nefes al.
+Birlikleri topla ve son hamleye hazırlan.
+Karanlık çöktükten sonra güvenli evde buluşalım.
+Taşıyabildiğini al, gerisini bırak.
+Esere çıplak elle dokunma.
+Tapınağa girmeden önce botlarını sil.
+Kapıda ayakkabılarını çıkar.
+Kontrol noktasındaki nöbetçiye geçiş belgeni göster.
+Dikkatli sür; yollar buzlu.
+Eve gitmeden önce kimsenin seni takip etmediğinden emin ol.
+Arkanı kollasan iyi olur.
+Bavullarını topla; bu gece ayrılıyoruz.
+Jeneratörü çalıştır ve ışıkları bekle.
+Reaktör erimeden önce kapat.
+Elektriği geri vermek için sigortayı kaldır.
+Kabloyu tak ve sinyali bekle.
+Duvardaki QR kodunu tara.
+Tuş takımına dört haneli kodu gir.
+Virüsü yükle ve izlerini bulmadan önce çık.
+Fişi çekmeden önce indirmenin bitmesini bekle.
+Zamanlayıcının sıfıra düşmesine izin verme.
+Çevreyi kontrol et ve herhangi bir hareketi bildir.
+Dolan ve onlara arkadan vur.
+Baskı ateşiyle onları yerinde tut.
+Biz ilerlerken onların başını kaldırmalarına izin verme.
+Sol koridora gir ve cephaneliği güvene al.
+Sen dikkat dağıtırken biz ana kapıdan geçeceğiz.
+Dağılın ve her odayı arayın.
+Çatılarda keskin nişancı var mı diye bak.
+Duman dağıldı. Şimdi girin.
+Mühendisler bitirene kadar köprüyü tutun.
+Yarıp geçerlerse kiliseye çekilin.
+Kaçmaya çalışan herkesi kılıçtan geçir.
+Sert ve hızlı vur.
+Bütün kamp temizlenene kadar durma.
+Geriye kalanları temizle ve toplanma noktasında buluş.
+Yardım çağırmadan önce işlerini bitir.
+Onları bağla ve dolaba kapat.
+Ağzını tıka ve bagaja at.
+Onu bayılt ve üniformasını al.
+Mecbur kalmadıkça kimseyi öldürme.
+Bir kerecik olsun belaya bulaşma.
+Şehirde göze batma.
+Bu gece liman bölgesinden uzak dur.
+Temiz kal, muhafızlar sana bulaşmaz.
+Kaçmayı aklından bile geçirme.
+Dur orada!
+Kımıldama! Eller havaya!
+Kanun adına dur!
+Çık gözümün önünden.
+Gel buraya ve bana yardım et.
+Bir an için meşaleni ödünç ver.
+Beni yukarı it; çıkıntıya yetişemiyorum.
+Bu kayayı oynatmama yardım et.
+Şu İngiliz anahtarını uzat.
+Bana üç şişe rom getir, sana her şeyi anlatayım.
+Git bana biraz odun getir, olur mu?
+Hadi git şimdi, meşgulüm.
+Yarın tekrar gel, doktor yok.
+Dışarıda bekle, seni çağırırım.
+Otur ve rahatına bak.
+Güveçten kendine al.
+Hadi, al. Senin.
+Üstü kalsın.
+Alıcı olduğumu duyur.
+Ben dışarı çıkarken dükkâna göz kulak ol.
+Gemiye binmeden önce kaptanla konuş.
+Resepsiyondan kaydını yaptır.
+Buraya ve şuraya imzala.
+Formu doldur ve üç numaralı gişeye ver.
+Biraz bekle, doktor birazdan seni alacak.
+Dayan, neredeyse geldim.
+Bir şeye tutun!
+Dayan dostum. Yardım geliyor.
+Dikkat!
+Eğil!
+Arkama geç.
+Geri çekil, yoksa vururum.
+Kapıdan uzaklaş.
+Geri çekil ve işi profesyonellere bırak.
+Çekil kenara, koca adam.
+Acele et ve işi bitir.
+Acele etme; telaş yok.
+İyice düşün ve cevabını yarın ver.
+Karar vermeden önce beni dinle.
+Alınma.
+Tavsiyemi dinle ve şehri terk et.
+Orada içgüdülerine güven.
+İnancını koru ve savaşmaya devam et.
+Sana öğrettiklerimi hatırla.
+Fener getirmeyi unutma; aşağısı kapkaranlık.
+Hafif hazırlan; hızlı hareket edeceğiz.
+Gitmeden önce yeterince ok stokla.
+Yola çıkmadan önce depoyu doldur.
+Cipe yakıt doldur ve lastikleri kontrol et.
+Gaz maskeni tak; hava zehirli.
+Ağzını kapat ve tozu soluma.
+Zehirlenmenin ilk belirtisinde panzehiri al.
+Sargıları idareli kullan; elimizdeki tek şey bunlar.
+Depo doluncaya kadar kolu pompala.
+Kıyafetlerini sık ve sıcak kal.
+Kütükleri birbirine bağlayarak bir sal yap.
+Dövüşten önce bıçağını bile.
+Kurdu çiğ etle besleyerek evcilleştir.
+En iyi av için şafakta gölde balık tut.
+Küllerin arasında işe yarar bir şey ara.
+Burayı kaz, hazineyi bulursun.
+Haritayı oku ve en kısa yolu bul.
+Yolunu bulmak için yıldızları kullan.
+Deniz fenerine tırman ve gemiye işaret ver.
+İzleri mağara girişine kadar takip et.
+Yuvayı yak ve arı akınına dikkat et.
+Ateşin ahıra sıçramasına izin verme.
+Görev bilgilendirmesi: hedef Vasquez adında bir kurye.
+Amacın, alarmı çaldırmadan sürücüyü ele geçirmek.
+İkincil hedef: sevkiyat manifestosunun fotoğrafını çek.
+İsteğe bağlı: gizli beş günlüğün hepsini bul.
+Başarısızlık söz konusu bile olamaz.
+Görev başarısız. Fark edildin.
+Bölge temizlendi. İlerleyebilirsin.
+Düşman takviyesi geliyor!
+Saat iki yönünde düşman var.
+Temas! Saat on bir yönünde, kamyonun arkasında.
+Sağdan kuşatıyorlar!
+Seni kolluyorum. Git!
+İlerliyorum. Beni kolla.
+Mermi dolduruyorum!
+Vuruldum! Sıhhiyeci lazım!
+Adam yaralandı!
+Onu siperin arkasına çek ve kanamayı durdur.
+Biri kaçıyor! Yolunu kes!
+Ara sokağa doğru gidiyor. Kaçmasına izin verme.
+Mermim bitti! Tabancana geç!
+Ateş geliyor!
+Ağaç hattına çekilin, orada yeniden toplanırız.
+Geri çekilin! Herkes botlara!
+Gürültülü gireceğiz. Serbest ateş.
+Sıkı ateş kuralı. Yalnızca ateş edilirse karşılık verin.
+Tetikte kalın, millet.
+Tuzak tellerine karşı gözünü dört aç.
+Dikkat et, zemin mayınlı.
+Ben onları oyalarım. Sen siviller çıkar.
+Önce yaralıları çıkar.
+Beni bırak. Kendini kurtar.
+Güney tünelini kullan; orada nöbetçi olmamalı.
+Arkandan kapıyı kapat.
+Kapıyı kilitle ve anahtarı at.
+Dolabın içine saklan ve ses çıkarma.
+Çitin altından sürün ve alçakta kal.
+Köpekler gidene kadar bekle, sonra ağaçlara koş.
+Işık yeşile dönünce hareket et.
+Çizginin arkasında kal ve düdüğü bekle.
+Atışını doldurmak için tuşu basılı tut.
+Ateşlemek için bırak.
+Sandığı açmak için sembolleri eşleştir.
+Bir tık sesi duyana kadar kadranı çevir.
+Parlayan varile nişan al ve ateş et.
+Etkinleştirmek için platformun üzerinde dur.
+Sandığı basınç plakasının üzerine it.
+Çıkıntıya ulaşmak için kanca halatını kullan.
+Düşmanı yenmek için başına zıpla.
+Süre bitmeden bütün altınları topla.
+Sınıfını seç ve karakterini özelleştir.
+Bir arkadaşını grubuna davet et.
+Diğer oyuncuların hazır olmasını bekle.
+Yere düşen takım arkadaşlarını kullanma tuşuna basılı tutarak ayağa kaldır.
+Takımının bilmesi için bir düşmanı işaretle.
+Balığı yemeden önce pişir.
+Daha uzun dayansın diye eti tuzla.
+Eti üç gün kurumaya as.
+Sargıları temiz kalsın diye kaynat.
+Çıra yapmak için ağacın kabuğunu kazı.
+Ateş yakmak için iki çubuğu birbirine sürt.
+Çadırı daha yüksek bir yere kur.
+Kanamayı yavaşlatmak için yarayı yosunla doldur.
+Karşıya geçmeden önce suyun çekilmesini bekle.
+Tekneyi direğe bağla.
+Bana bir ip at!
+Motoru çalıştır ve ısınmasını bekle.
+Yokuşta ikinci vitese geç.
+Şeridinde kal ve sabit git.
+Kırmızı ışıkta geç; takip ediliyoruz.
+Arabayı park et ve anahtarları kontakta bırak.
+Barikattan kaçınmak için ara yolları kullan.
+Motoru yükselt ve benim işaretimi bekle.
+Motosikleti bırak ve vadide siper al.
+Bin! Gidiyoruz!
+Gitme vakti. Hadi, kalkın bakalım.
+Mevzilenince haber ver.
+Acil durum trafiği için kanalı boş tut.
+Dördüncü kanala geç ve emirleri bekle.
+Konumunu ve durumunu doğrula.
+Bana bir durum raporu ver.
+Şüpheli bir hareket olursa hemen bildir.
+Beni haberdar et.
+Her on dakikada bir rapor ver.
+Emirleri bekle.
+Yeşil ışığı bekle.
+Orada bol şans. Sana lazım olacak.
+Değerlendir bu fırsatı.
+Yaşlıyla konuştuktan sonra günlüğünü güncelle.
+Konağa sız ve defteri çal.
+Yolda pusuya yat ve araba geçince saldır.
+Yolu açmak için gözetleme kulesini indir.
+Yaklaş ve bıçağı kullan.
+Yavaşla ve devriyenin geçmesine izin ver.
+Seni görmeden ara sokağa dal.
+Kapıya varana kadar duvar boyunca sürün.
+Bu seferlik kenarda dur; hâlâ yaralısın.
+Onunla yüzleş ve ne istediğine bak.
+Fırıncının oğlunun kayboluşunu araştır.
+Çiftliğe baskın yapan haydutları avla.
+Muhafızlar arasındaki hainin kökünü kazı.
+Seçimden önce köylüleri kazan.
+Laboratuvara gir ve prototipi çal.
+Kapıyı patlayıcıyla havaya uçur.
+Konvoy geçtikten sonra köprüyü havaya uçur.
+Teli tel makasıyla kes.
+Sınırı geçmek için tüccarların peşine takıl.
+Birlikte kalın, dağılmayın.
+Ortalık sakinleşince işaret ver.
+Merdivenleri kullan; asansör gözetleniyor.
+Kapıyı usulca aç ve içeri bak.
+Sakin ol ve kazandıklarını sanmalarına izin ver.
+İksirleri idareli kullan; bulması zor.
+Malları teslim et, kimsenin canı yanmasın.
+Kılıcını bırak ve diz çök.
+İşi çabuk bitir; tekne şafakta kalkıyor.
+Patlayıcıları yerleştir ve bölgeden uzaklaş.
+Etrafa bir bak, içeri girmenin başka bir yolu var mı?
+Kış için mahzeni doldur ve pencerelere sürgü vur.
+Yığını ayıkla ve sadece iyi kürkleri ayır.
+Sandıkları çatı katına çıkar.
+Otları şifacıya götür ve bir ilaç iste.
+Gölgelerde kal ve ana meydandan uzak dur.
+Onları kamptan uzağa çek ve ormanda kaybet.
+Ne olursa olsun o kapıyı açma.

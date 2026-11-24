@@ -1,0 +1,2058 @@
+[
+ {
+  "id": 16,
+  "category": "argo1",
+  "context": "",
+  "en": "You owe me, and I always collect.",
+  "tr": "Bana borçlusun, ben de hep öderim.",
+  "model": "new"
+ },
+ {
+  "id": 266,
+  "category": "argo2",
+  "context": "",
+  "en": "I'll bring my A-game tonight.",
+  "tr": "Bu geceki maçımı getireceğim.",
+  "model": "new"
+ },
+ {
+  "id": 290,
+  "category": "argo2",
+  "context": "",
+  "en": "Anything you say can and will be used against you.",
+  "tr": "Söyleyeceğin her şey aleyhine delil olarak kullanılabilir.",
+  "model": "new"
+ },
+ {
+  "id": 39,
+  "category": "gorev",
+  "context": "",
+  "en": "Ease the door open and peek inside.",
+  "tr": "Kapıyı açın ve içeri bakın.",
+  "model": "old"
+ },
+ {
+  "id": 243,
+  "category": "deyim2",
+  "context": "",
+  "en": "He showed off in front of everyone.",
+  "tr": "Herkesin önünde gösteriş yaptı.",
+  "model": "old"
+ },
+ {
+  "id": 53,
+  "category": "deyim2",
+  "context": "",
+  "en": "I trusted you, and you stabbed me in the back.",
+  "tr": "Sana güvenmiştim ve sen beni sırtımdan bıçakladın.",
+  "model": "old"
+ },
+ {
+  "id": 130,
+  "category": "resmi",
+  "context": "",
+  "en": "The soldiers laid down their arms one by one.",
+  "tr": "Askerler birer birer silahlarını bıraktı.",
+  "model": "new"
+ },
+ {
+  "id": 128,
+  "category": "argo2",
+  "context": "",
+  "en": "We can do this the easy way or the hard way.",
+  "tr": "Bunu kolay yoldan da zor yoldan da yapabiliriz.",
+  "model": "new"
+ },
+ {
+  "id": 71,
+  "category": "gorev",
+  "context": "",
+  "en": "Quest accepted: The Lost Crown.",
+  "tr": "Görev kabul edildi: Kayıp Taç.",
+  "model": "old"
+ },
+ {
+  "id": 65,
+  "category": "deyim2",
+  "context": "",
+  "en": "He hit me below the belt.",
+  "tr": "Kemerin altına vurdu.",
+  "model": "old"
+ },
+ {
+  "id": 189,
+  "category": "deyim2",
+  "context": "",
+  "en": "The old fortress stood the test of time.",
+  "tr": "Eski kale zamanın sınavına dayandı.",
+  "model": "old"
+ },
+ {
+  "id": 184,
+  "category": "gorev",
+  "context": "",
+  "en": "Lock on to a target with the middle mouse button.",
+  "tr": "Orta fare tuşuyla hedefe kilitlen.",
+  "model": "new"
+ },
+ {
+  "id": 117,
+  "category": "deyim2",
+  "context": "",
+  "en": "Back me up on this one.",
+  "tr": "Bu konuda bana destek ol.",
+  "model": "old"
+ },
+ {
+  "id": 176,
+  "category": "deyim2",
+  "context": "",
+  "en": "She's barking up the wrong tree.",
+  "tr": "Yanlış kapıyı çalıyor.",
+  "model": "new"
+ },
+ {
+  "id": 48,
+  "category": "deyim2",
+  "context": "",
+  "en": "He ate his words.",
+  "tr": "Sözlerine kulak verdi.",
+  "model": "new"
+ },
+ {
+  "id": 131,
+  "category": "deyim1",
+  "context": "",
+  "en": "Let that be a lesson. Never trust a thief.",
+  "tr": "Bu bir ders ols. Bir hırsıza asla güvenme.",
+  "model": "old"
+ },
+ {
+  "id": 141,
+  "category": "deyim1",
+  "context": "",
+  "en": "The thief was caught red-handed.",
+  "tr": "Hırsız suçüstü yakalandı.",
+  "model": "old"
+ },
+ {
+  "id": 51,
+  "category": "gorev",
+  "context": "",
+  "en": "Bandage the wound to stop the bleeding.",
+  "tr": "Kanamayı durdurmak için yarayı yaralayın.",
+  "model": "old"
+ },
+ {
+  "id": 67,
+  "category": "argo1",
+  "context": "",
+  "en": "You look like crap.",
+  "tr": "Berbat görünüyorsun.",
+  "model": "old"
+ },
+ {
+  "id": 146,
+  "category": "resmi",
+  "context": "",
+  "en": "You are entitled to a fair hearing.",
+  "tr": "Adil bir duruşma hakkına sahipsin.",
+  "model": "new"
+ },
+ {
+  "id": 192,
+  "category": "argo2",
+  "context": "",
+  "en": "Make it look like an accident.",
+  "tr": "Kazaymış gibi göster.",
+  "model": "new"
+ },
+ {
+  "id": 261,
+  "category": "argo2",
+  "context": "",
+  "en": "Our rivals hit us hard last night, and now we hit back.",
+  "tr": "Rakiplerimiz dün gece bize sert vurdu, şimdi de karşılık verdik.",
+  "model": "old"
+ },
+ {
+  "id": 193,
+  "category": "argo2",
+  "context": "",
+  "en": "He's the kind of man who never forgets a face.",
+  "tr": "Bir yüzü asla unutmayan bir adamdır.",
+  "model": "old"
+ },
+ {
+  "id": 265,
+  "category": "argo2",
+  "context": "",
+  "en": "I'll bring my A-game tonight.",
+  "tr": "Bu gece A-oyunumu getireceğim.",
+  "model": "old"
+ },
+ {
+  "id": 11,
+  "category": "resmi",
+  "context": "",
+  "en": "All parties are hereby summoned to appear in court.",
+  "tr": "Bu vesileyle tüm taraflar mahkemeye çağrılır.",
+  "model": "old"
+ },
+ {
+  "id": 145,
+  "category": "resmi",
+  "context": "",
+  "en": "You are entitled to a fair hearing.",
+  "tr": "Adil bir duruşma hakkına sahipsiniz.",
+  "model": "old"
+ },
+ {
+  "id": 46,
+  "category": "deyim1",
+  "context": "",
+  "en": "Steady as she goes, boys.",
+  "tr": "Devam ederken sabit olun, çocuklar.",
+  "model": "new"
+ },
+ {
+  "id": 21,
+  "category": "resmi",
+  "context": "",
+  "en": "The verdict cannot be appealed.",
+  "tr": "Karar temyiz edilemez.",
+  "model": "old"
+ },
+ {
+  "id": 209,
+  "category": "argo2",
+  "context": "",
+  "en": "Keep your enemies close and your friends closer.",
+  "tr": "Düşmanlarınızı ve arkadaşlarınızı yakın tutun.",
+  "model": "old"
+ },
+ {
+  "id": 279,
+  "category": "deyim2",
+  "context": "",
+  "en": "She's still bitter about what happened.",
+  "tr": "Olanlardan dolayı hala acı çekiyor.",
+  "model": "old"
+ },
+ {
+  "id": 246,
+  "category": "resmi",
+  "context": "",
+  "en": "The messenger was the bearer of bad news.",
+  "tr": "Elçi, kötü haberi getiren kişiydi.",
+  "model": "new"
+ },
+ {
+  "id": 258,
+  "category": "deyim1",
+  "context": "",
+  "en": "He's the cream of the crop.",
+  "tr": "Mahsullerin başında o var.",
+  "model": "new"
+ },
+ {
+  "id": 149,
+  "category": "gorev",
+  "context": "",
+  "en": "Dig in; reinforcements are on the way.",
+  "tr": "Kazın; takviyeler yolda.",
+  "model": "old"
+ },
+ {
+  "id": 85,
+  "category": "argo1",
+  "context": "",
+  "en": "Wow, you're even uglier up close.",
+  "tr": "Vay canına, daha da çirkinleştin.",
+  "model": "old"
+ },
+ {
+  "id": 215,
+  "category": "argo2",
+  "context": "",
+  "en": "The fight was fixed, and everyone knew it.",
+  "tr": "Mücadele sabitti ve herkes bunu biliyordu.",
+  "model": "old"
+ },
+ {
+  "id": 60,
+  "category": "deyim2",
+  "context": "",
+  "en": "They fought like cats and dogs.",
+  "tr": "Kediler ve köpekler gibi savaştılar.",
+  "model": "new"
+ },
+ {
+  "id": 59,
+  "category": "deyim2",
+  "context": "",
+  "en": "They fought like cats and dogs.",
+  "tr": "Kediler ve köpekler gibi dövüştüler.",
+  "model": "old"
+ },
+ {
+  "id": 210,
+  "category": "argo2",
+  "context": "",
+  "en": "Keep your enemies close and your friends closer.",
+  "tr": "Düşmanlarını yakın, arkadaşlarını daha yakın tut.",
+  "model": "new"
+ },
+ {
+  "id": 224,
+  "category": "gorev",
+  "context": "",
+  "en": "Report any suspicious activity immediately.",
+  "tr": "Şüpheli bir olayı derhal bildir.",
+  "model": "new"
+ },
+ {
+  "id": 213,
+  "category": "argo2",
+  "context": "",
+  "en": "Where were you on the night of the fifteenth?",
+  "tr": "On beşinci gece neredeydin?",
+  "model": "old"
+ },
+ {
+  "id": 180,
+  "category": "argo1",
+  "context": "",
+  "en": "That's fire, no cap.",
+  "tr": "Bu ateş, şapka yok.",
+  "model": "new"
+ },
+ {
+  "id": 165,
+  "category": "argo1",
+  "context": "",
+  "en": "Look at this guy, all swagger and no brains.",
+  "tr": "Şu herife bak, her tarafı kundakçı ve beyni yok.",
+  "model": "old"
+ },
+ {
+  "id": 147,
+  "category": "argo1",
+  "context": "",
+  "en": "We showed them who's boss!",
+  "tr": "Onlara kimin patron olduğunu gösterdik!",
+  "model": "old"
+ },
+ {
+  "id": 167,
+  "category": "argo2",
+  "context": "",
+  "en": "The race is going to come down to the wire.",
+  "tr": "Yarış tellere kadar inecek.",
+  "model": "old"
+ },
+ {
+  "id": 166,
+  "category": "argo1",
+  "context": "",
+  "en": "Look at this guy, all swagger and no brains.",
+  "tr": "Şu herife bak, kafasız ve huysuz.",
+  "model": "new"
+ },
+ {
+  "id": 200,
+  "category": "deyim2",
+  "context": "",
+  "en": "I've been working my fingers to the bone.",
+  "tr": "Parmak uçlarıma kadar çalışıyorum.",
+  "model": "new"
+ },
+ {
+  "id": 191,
+  "category": "argo2",
+  "context": "",
+  "en": "Make it look like an accident.",
+  "tr": "Kaza süsü ver.",
+  "model": "old"
+ },
+ {
+  "id": 272,
+  "category": "argo2",
+  "context": "",
+  "en": "Hold your horses, we're not ready yet.",
+  "tr": "Dur bakalım, henüz hazır değiliz.",
+  "model": "new"
+ },
+ {
+  "id": 25,
+  "category": "deyim2",
+  "context": "",
+  "en": "It's all hands on deck, people!",
+  "tr": "Herkes güvertede millet!",
+  "model": "old"
+ },
+ {
+  "id": 161,
+  "category": "gorev",
+  "context": "",
+  "en": "Think it over and give me your answer tomorrow.",
+  "tr": "Bunu bir düşün ve yarın cevabını ver.",
+  "model": "old"
+ },
+ {
+  "id": 190,
+  "category": "deyim2",
+  "context": "",
+  "en": "The old fortress stood the test of time.",
+  "tr": "Eski kale zamanın sınavıydı.",
+  "model": "new"
+ },
+ {
+  "id": 226,
+  "category": "argo1",
+  "context": "",
+  "en": "He's as dumb as a box of rocks.",
+  "tr": "O bir kutu taş gibi aptal.",
+  "model": "new"
+ },
+ {
+  "id": 274,
+  "category": "argo1",
+  "context": "",
+  "en": "Dude, you're so extra.",
+  "tr": "Ahbap, çok ekstrasın.",
+  "model": "new"
+ },
+ {
+  "id": 41,
+  "category": "gorev",
+  "context": "",
+  "en": "Shut down the reactor before it melts down.",
+  "tr": "Erimeden reaktörü kapat.",
+  "model": "old"
+ },
+ {
+  "id": 217,
+  "category": "gorev",
+  "context": "",
+  "en": "Return to the elder to claim your reward.",
+  "tr": "Ödülünü almak için ihtiyara geri dön.",
+  "model": "old"
+ },
+ {
+  "id": 195,
+  "category": "gorev",
+  "context": "",
+  "en": "Chopper's inbound. Get to the landing zone.",
+  "tr": "Chopper geliyor. İniş bölgesine git.",
+  "model": "old"
+ },
+ {
+  "id": 44,
+  "category": "resmi",
+  "context": "",
+  "en": "The fortress has never fallen, and it never shall.",
+  "tr": "Kale hiç düşmedi ve düşmeyecek de.",
+  "model": "new"
+ },
+ {
+  "id": 94,
+  "category": "resmi",
+  "context": "",
+  "en": "The cult worships a being older than time itself.",
+  "tr": "Tarikat, zamanın kendisinden daha yaşlı bir varlığa tapıyor.",
+  "model": "new"
+ },
+ {
+  "id": 33,
+  "category": "gorev",
+  "context": "",
+  "en": "Fan out and search every room.",
+  "tr": "Dağılın ve her odayı arayın.",
+  "model": "old"
+ },
+ {
+  "id": 257,
+  "category": "deyim1",
+  "context": "",
+  "en": "He's the cream of the crop.",
+  "tr": "O mahsulün kreması.",
+  "model": "old"
+ },
+ {
+  "id": 159,
+  "category": "argo2",
+  "context": "",
+  "en": "He's a pickpocket who works the train station.",
+  "tr": "Tren istasyonunda çalışan bir yankesici.",
+  "model": "old"
+ },
+ {
+  "id": 69,
+  "category": "deyim2",
+  "context": "",
+  "en": "He pocketed the whole reward.",
+  "tr": "Ödülün tamamını cebine yatırdı.",
+  "model": "old"
+ },
+ {
+  "id": 35,
+  "category": "resmi",
+  "context": "",
+  "en": "I am but a humble servant of the crown.",
+  "tr": "Ben sadece tacın mütevazı bir hizmetkarıyım.",
+  "model": "old"
+ },
+ {
+  "id": 72,
+  "category": "gorev",
+  "context": "",
+  "en": "Quest accepted: The Lost Crown.",
+  "tr": "Görev kabul edildi: Kayıp taç.",
+  "model": "new"
+ },
+ {
+  "id": 237,
+  "category": "deyim1",
+  "context": "",
+  "en": "I'd bet my head on it.",
+  "tr": "Ben olsam buna bahse girerdim.",
+  "model": "old"
+ },
+ {
+  "id": 252,
+  "category": "resmi",
+  "context": "",
+  "en": "The prisoner has requested a trial by combat.",
+  "tr": "Mahk ⁇ m savaşarak yargılanmak istedi.",
+  "model": "new"
+ },
+ {
+  "id": 289,
+  "category": "argo2",
+  "context": "",
+  "en": "Anything you say can and will be used against you.",
+  "tr": "Söyleyeceğin her şey sana karşı kullanılabilir ve kullanılacaktır.",
+  "model": "old"
+ },
+ {
+  "id": 281,
+  "category": "argo2",
+  "context": "",
+  "en": "The dice are loaded.",
+  "tr": "Zarlar dolu.",
+  "model": "old"
+ },
+ {
+  "id": 173,
+  "category": "deyim1",
+  "context": "",
+  "en": "Put your money where your mouth is.",
+  "tr": "Paranı ağzının olduğu yere koy.",
+  "model": "old"
+ },
+ {
+  "id": 98,
+  "category": "resmi",
+  "context": "",
+  "en": "Wherefore dost thou tarry, good sir?",
+  "tr": "Neden geciktin, iyi efendim?",
+  "model": "new"
+ },
+ {
+  "id": 78,
+  "category": "gorev",
+  "context": "",
+  "en": "Seal the tunnel behind us.",
+  "tr": "Tüneli arkamızdan mühürle.",
+  "model": "new"
+ },
+ {
+  "id": 276,
+  "category": "gorev",
+  "context": "",
+  "en": "Sweep the building and report back.",
+  "tr": "Binayı tara ve geri rapor ver.",
+  "model": "new"
+ },
+ {
+  "id": 182,
+  "category": "argo1",
+  "context": "",
+  "en": "Shoot, I plum forgot.",
+  "tr": "Hay aksi, unuttum.",
+  "model": "new"
+ },
+ {
+  "id": 183,
+  "category": "gorev",
+  "context": "",
+  "en": "Lock on to a target with the middle mouse button.",
+  "tr": "Orta fare tuşu ile bir hedefe kilitle.",
+  "model": "old"
+ },
+ {
+  "id": 151,
+  "category": "gorev",
+  "context": "",
+  "en": "The vault has two layers of security, so go slow.",
+  "tr": "Kasanın iki güvenlik katmanı var, bu yüzden yavaş git.",
+  "model": "old"
+ },
+ {
+  "id": 116,
+  "category": "gorev",
+  "context": "",
+  "en": "Collect ten pelts and bring them to the trader.",
+  "tr": "On post topla ve onları tüccara getir.",
+  "model": "new"
+ },
+ {
+  "id": 127,
+  "category": "argo2",
+  "context": "",
+  "en": "We can do this the easy way or the hard way.",
+  "tr": "Bunu kolay ya da zor yoldan yapabiliriz.",
+  "model": "old"
+ },
+ {
+  "id": 133,
+  "category": "gorev",
+  "context": "",
+  "en": "Watch out for the rotten planks!",
+  "tr": "Çürümüş tahtalara dikkat et!",
+  "model": "old"
+ },
+ {
+  "id": 197,
+  "category": "resmi",
+  "context": "",
+  "en": "The enemy would not give an inch.",
+  "tr": "Düşman bir santim bile vermezdi.",
+  "model": "old"
+ },
+ {
+  "id": 254,
+  "category": "argo1",
+  "context": "",
+  "en": "Stay in your lane, little man.",
+  "tr": "Yolunda kal, küçük adam.",
+  "model": "new"
+ },
+ {
+  "id": 30,
+  "category": "deyim1",
+  "context": "",
+  "en": "You really put your foot in it this time.",
+  "tr": "Bu sefer gerçekten üstüne düşeni yaptın.",
+  "model": "new"
+ },
+ {
+  "id": 280,
+  "category": "deyim2",
+  "context": "",
+  "en": "She's still bitter about what happened.",
+  "tr": "Olanlardan hâlâ acı çekiyor.",
+  "model": "new"
+ },
+ {
+  "id": 255,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't judge a book by its cover. He's tougher than he looks.",
+  "tr": "Bir kitabı kapağına göre yargılamayın. Göründüğünden daha serttir.",
+  "model": "old"
+ },
+ {
+  "id": 208,
+  "category": "argo1",
+  "context": "",
+  "en": "Crap, I think I broke it.",
+  "tr": "Hay aksi, sanırım kırdım.",
+  "model": "new"
+ },
+ {
+  "id": 205,
+  "category": "deyim2",
+  "context": "",
+  "en": "Stick around, you might learn something.",
+  "tr": "Buralarda kal, bir şeyler öğrenebilirsin.",
+  "model": "old"
+ },
+ {
+  "id": 84,
+  "category": "argo1",
+  "context": "",
+  "en": "Yo, I got your back, fam.",
+  "tr": "Yo, arkandayım, dostum.",
+  "model": "new"
+ },
+ {
+  "id": 204,
+  "category": "deyim1",
+  "context": "",
+  "en": "Walls have ears. Speak softly.",
+  "tr": "Duvarların kulağı var. Yumuşak konuş.",
+  "model": "new"
+ },
+ {
+  "id": 269,
+  "category": "argo2",
+  "context": "",
+  "en": "They'll never find the body.",
+  "tr": "Cesedi asla bulamazlar.",
+  "model": "old"
+ },
+ {
+  "id": 219,
+  "category": "argo2",
+  "context": "",
+  "en": "The cops finally nailed him after ten years of chasing.",
+  "tr": "Polisler sonunda on yıllık kovalamacadan sonra onu yakaladılar.",
+  "model": "old"
+ },
+ {
+  "id": 267,
+  "category": "gorev",
+  "context": "",
+  "en": "Area cleared. You may proceed.",
+  "tr": "Bölge temizlendi. Devam edebilirsiniz.",
+  "model": "old"
+ },
+ {
+  "id": 137,
+  "category": "argo1",
+  "context": "",
+  "en": "Alright, big boy, let's see what you've got.",
+  "tr": "Tamam, koca oğlan, bakalım neyin varmış.",
+  "model": "old"
+ },
+ {
+  "id": 93,
+  "category": "resmi",
+  "context": "",
+  "en": "The cult worships a being older than time itself.",
+  "tr": "Tarikat, zamanın kendisinden daha yaşlı bir varlığa tapar.",
+  "model": "old"
+ },
+ {
+  "id": 288,
+  "category": "argo1",
+  "context": "",
+  "en": "Damn right I did.",
+  "tr": "Tabii ki yaptım.",
+  "model": "new"
+ },
+ {
+  "id": 287,
+  "category": "argo1",
+  "context": "",
+  "en": "Damn right I did.",
+  "tr": "Aynen öyle.",
+  "model": "old"
+ },
+ {
+  "id": 155,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't get your hopes up.",
+  "tr": "Umudunu kaybetme.",
+  "model": "old"
+ },
+ {
+  "id": 95,
+  "category": "argo2",
+  "context": "",
+  "en": "You took the money and ran.",
+  "tr": "Parayı alıp kaçtın.",
+  "model": "old"
+ },
+ {
+  "id": 70,
+  "category": "deyim2",
+  "context": "",
+  "en": "He pocketed the whole reward.",
+  "tr": "Ödülün tamamını cebine attı.",
+  "model": "new"
+ },
+ {
+  "id": 247,
+  "category": "argo1",
+  "context": "",
+  "en": "Out of my way, you nitwit!",
+  "tr": "Çekil yolumdan, seni aptal!",
+  "model": "old"
+ },
+ {
+  "id": 54,
+  "category": "deyim2",
+  "context": "",
+  "en": "I trusted you, and you stabbed me in the back.",
+  "tr": "Sana güvenmiştim ve beni sırtından bıçakladın.",
+  "model": "new"
+ },
+ {
+  "id": 123,
+  "category": "deyim2",
+  "context": "",
+  "en": "Hit them hard and fast.",
+  "tr": "Sert ve hızlı vur.",
+  "model": "old"
+ },
+ {
+  "id": 241,
+  "category": "argo1",
+  "context": "",
+  "en": "Stop being a coward and fight me.",
+  "tr": "Korkaklığı bırak ve benimle savaş.",
+  "model": "old"
+ },
+ {
+  "id": 211,
+  "category": "gorev",
+  "context": "",
+  "en": "Finish him!",
+  "tr": "Bitirin onu!",
+  "model": "old"
+ },
+ {
+  "id": 187,
+  "category": "argo2",
+  "context": "",
+  "en": "The crowd is cheering as the drivers line up at the start.",
+  "tr": "Sürücüler başlangıçta sıraya girerken kalabalık tezahürat yapıyor.",
+  "model": "old"
+ },
+ {
+  "id": 62,
+  "category": "deyim1",
+  "context": "",
+  "en": "Better luck next time, rookie.",
+  "tr": "Bir dahaki sefere bol şans, çaylak.",
+  "model": "new"
+ },
+ {
+  "id": 80,
+  "category": "gorev",
+  "context": "",
+  "en": "Trade your furs for supplies at the post.",
+  "tr": "Postanede erzak için kürklerini takas et.",
+  "model": "new"
+ },
+ {
+  "id": 223,
+  "category": "gorev",
+  "context": "",
+  "en": "Report any suspicious activity immediately.",
+  "tr": "Herhangi bir şüpheli aktiviteyi derhal bildirin.",
+  "model": "old"
+ },
+ {
+  "id": 136,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's lost his marbles.",
+  "tr": "Aklını kaçırdı.",
+  "model": "new"
+ },
+ {
+  "id": 8,
+  "category": "resmi",
+  "context": "",
+  "en": "The temple bells fell silent on the night of the plague.",
+  "tr": "Tapınak çanları veba gecesinde sustu.",
+  "model": "new"
+ },
+ {
+  "id": 249,
+  "category": "resmi",
+  "context": "",
+  "en": "Let none say that the throne was taken without a fight.",
+  "tr": "Tahtın savaşmadan alındığını kimse söylemes.",
+  "model": "old"
+ },
+ {
+  "id": 29,
+  "category": "deyim1",
+  "context": "",
+  "en": "You really put your foot in it this time.",
+  "tr": "Bu sefer gerçekten ayağınızı soktunuz.",
+  "model": "old"
+ },
+ {
+  "id": 73,
+  "category": "deyim1",
+  "context": "",
+  "en": "Patience is a virtue, kid.",
+  "tr": "Sabır bir erdemdir evlat.",
+  "model": "old"
+ },
+ {
+  "id": 286,
+  "category": "argo1",
+  "context": "",
+  "en": "Well, I'll swan. That's a big ol' gator.",
+  "tr": "Eh, ben kuğu yaparım. Bu çok büyük bir hata.",
+  "model": "new"
+ },
+ {
+  "id": 171,
+  "category": "gorev",
+  "context": "",
+  "en": "Approach from behind and press Q for a silent takedown.",
+  "tr": "Arkadan yaklaşın ve sessiz bir aşağılama için Q tuşuna basın.",
+  "model": "old"
+ },
+ {
+  "id": 300,
+  "category": "gorev",
+  "context": "",
+  "en": "Eat something or you'll pass out.",
+  "tr": "Bir şeyler ye, yoksa bayılırsın.",
+  "model": "new"
+ },
+ {
+  "id": 27,
+  "category": "deyim2",
+  "context": "",
+  "en": "I thought we were on the same side.",
+  "tr": "Aynı tarafta olduğumuzu sanıyordum.",
+  "model": "old"
+ },
+ {
+  "id": 198,
+  "category": "resmi",
+  "context": "",
+  "en": "The enemy would not give an inch.",
+  "tr": "Düşmanın umurunda bile olmaz.",
+  "model": "new"
+ },
+ {
+  "id": 13,
+  "category": "deyim2",
+  "context": "",
+  "en": "They're closing in on us from all sides.",
+  "tr": "Her taraftan bize yaklaşıyorlar.",
+  "model": "old"
+ },
+ {
+  "id": 119,
+  "category": "gorev",
+  "context": "",
+  "en": "Swing across on the rope.",
+  "tr": "İpin üzerinde sallan.",
+  "model": "old"
+ },
+ {
+  "id": 31,
+  "category": "argo1",
+  "context": "",
+  "en": "He got what was coming to him.",
+  "tr": "Ona gelen şeyi aldı.",
+  "model": "old"
+ },
+ {
+  "id": 143,
+  "category": "argo1",
+  "context": "",
+  "en": "Looking sharp, boss!",
+  "tr": "İyi görünüyorsun, patron!",
+  "model": "old"
+ },
+ {
+  "id": 256,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't judge a book by its cover. He's tougher than he looks.",
+  "tr": "Kitabı kapağına göre yargılama. Göründüğünden daha sert.",
+  "model": "new"
+ },
+ {
+  "id": 150,
+  "category": "gorev",
+  "context": "",
+  "en": "Dig in; reinforcements are on the way.",
+  "tr": "Kazın; takviye yolda.",
+  "model": "new"
+ },
+ {
+  "id": 49,
+  "category": "deyim2",
+  "context": "",
+  "en": "A stitch in time saves nine.",
+  "tr": "Zamanla yapılan bir dikiş 9'u kurtarır.",
+  "model": "old"
+ },
+ {
+  "id": 178,
+  "category": "gorev",
+  "context": "",
+  "en": "Lay low until the heat dies down.",
+  "tr": "Sıcaklık düşene kadar ortalıkta görünme.",
+  "model": "new"
+ },
+ {
+  "id": 81,
+  "category": "gorev",
+  "context": "",
+  "en": "Use the vents to get to the control room.",
+  "tr": "Kontrol odasına ulaşmak için havalandırmayı kullan.",
+  "model": "old"
+ },
+ {
+  "id": 103,
+  "category": "argo1",
+  "context": "",
+  "en": "He's mad cool, that dude.",
+  "tr": "O adam deli gibi havalı.",
+  "model": "old"
+ },
+ {
+  "id": 250,
+  "category": "resmi",
+  "context": "",
+  "en": "Let none say that the throne was taken without a fight.",
+  "tr": "Kimse tahtın savaşmadan alındığını söylemes.",
+  "model": "new"
+ },
+ {
+  "id": 82,
+  "category": "gorev",
+  "context": "",
+  "en": "Use the vents to get to the control room.",
+  "tr": "Kontrol odasına gitmek için havalandırma borularını kullan.",
+  "model": "new"
+ },
+ {
+  "id": 154,
+  "category": "resmi",
+  "context": "",
+  "en": "The council made a mountain out of a molehill.",
+  "tr": "Konsey köstebekten bir dağ yaptı.",
+  "model": "new"
+ },
+ {
+  "id": 218,
+  "category": "gorev",
+  "context": "",
+  "en": "Return to the elder to claim your reward.",
+  "tr": "Ödülünü almak için ihtiyara dön.",
+  "model": "new"
+ },
+ {
+  "id": 221,
+  "category": "gorev",
+  "context": "",
+  "en": "Moving up. Cover me.",
+  "tr": "Yukarı çıkıyoruz. Koru beni.",
+  "model": "old"
+ },
+ {
+  "id": 169,
+  "category": "gorev",
+  "context": "",
+  "en": "Don't give up on me now.",
+  "tr": "Şimdi benden vazgeçme.",
+  "model": "old"
+ },
+ {
+  "id": 101,
+  "category": "deyim1",
+  "context": "",
+  "en": "You expect me to swallow that story?",
+  "tr": "Bu hikayeyi yutmamı mı bekliyorsun?",
+  "model": "old"
+ },
+ {
+  "id": 242,
+  "category": "argo1",
+  "context": "",
+  "en": "Stop being a coward and fight me.",
+  "tr": "Korkaklığı bırak da benimle dövüş.",
+  "model": "new"
+ },
+ {
+  "id": 32,
+  "category": "argo1",
+  "context": "",
+  "en": "He got what was coming to him.",
+  "tr": "Başına gelenleri anladı.",
+  "model": "new"
+ },
+ {
+  "id": 129,
+  "category": "resmi",
+  "context": "",
+  "en": "The soldiers laid down their arms one by one.",
+  "tr": "Askerler birer birer silahlarını bıraktılar.",
+  "model": "old"
+ },
+ {
+  "id": 12,
+  "category": "resmi",
+  "context": "",
+  "en": "All parties are hereby summoned to appear in court.",
+  "tr": "Tüm taraflar bu belgeyle mahkemeye çıkmak üzere çağrıldı.",
+  "model": "new"
+ },
+ {
+  "id": 87,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's a fair-weather friend.",
+  "tr": "Adil bir hava arkadaşıdır.",
+  "model": "old"
+ },
+ {
+  "id": 108,
+  "category": "argo1",
+  "context": "",
+  "en": "Ugh, that smells disgusting.",
+  "tr": "Off, iğrenç kokuyor.",
+  "model": "new"
+ },
+ {
+  "id": 37,
+  "category": "argo2",
+  "context": "",
+  "en": "Count the chips, the house always wins.",
+  "tr": "Cipsleri say, ev her zaman kazanır.",
+  "model": "old"
+ },
+ {
+  "id": 268,
+  "category": "gorev",
+  "context": "",
+  "en": "Area cleared. You may proceed.",
+  "tr": "Bölge temiz. Devam edebilirsiniz.",
+  "model": "new"
+ },
+ {
+  "id": 76,
+  "category": "resmi",
+  "context": "",
+  "en": "The sword sings when evil is near.",
+  "tr": "Kötülük yakınken kılıç şarkı söyler.",
+  "model": "new"
+ },
+ {
+  "id": 156,
+  "category": "deyim1",
+  "context": "",
+  "en": "Don't get your hopes up.",
+  "tr": "Umudunu yitirme.",
+  "model": "new"
+ },
+ {
+  "id": 201,
+  "category": "argo1",
+  "context": "",
+  "en": "Everybody on the ground, now!",
+  "tr": "Herkes yere yatsın, hemen!",
+  "model": "old"
+ },
+ {
+  "id": 153,
+  "category": "resmi",
+  "context": "",
+  "en": "The council made a mountain out of a molehill.",
+  "tr": "Konsey köstebek yuvasından bir dağ yaptı.",
+  "model": "old"
+ },
+ {
+  "id": 102,
+  "category": "deyim1",
+  "context": "",
+  "en": "You expect me to swallow that story?",
+  "tr": "O hikâyeyi yutmamı mı bekliyorsun?",
+  "model": "new"
+ },
+ {
+  "id": 138,
+  "category": "argo1",
+  "context": "",
+  "en": "Alright, big boy, let's see what you've got.",
+  "tr": "Tamam, koca oğlan, bakalım neyin var.",
+  "model": "new"
+ },
+ {
+  "id": 74,
+  "category": "deyim1",
+  "context": "",
+  "en": "Patience is a virtue, kid.",
+  "tr": "Sabır bir erdemdir, evlat.",
+  "model": "new"
+ },
+ {
+  "id": 40,
+  "category": "gorev",
+  "context": "",
+  "en": "Ease the door open and peek inside.",
+  "tr": "Kapıyı aç ve içeri bak.",
+  "model": "new"
+ },
+ {
+  "id": 225,
+  "category": "argo1",
+  "context": "",
+  "en": "He's as dumb as a box of rocks.",
+  "tr": "Bir kutu taş kadar aptal.",
+  "model": "old"
+ },
+ {
+  "id": 227,
+  "category": "deyim2",
+  "context": "",
+  "en": "Stop playing games with me.",
+  "tr": "Benimle oyun oynamayı bırak.",
+  "model": "old"
+ },
+ {
+  "id": 15,
+  "category": "argo1",
+  "context": "",
+  "en": "You owe me, and I always collect.",
+  "tr": "Bana borçlusun ve ben hep para topluyorum.",
+  "model": "old"
+ },
+ {
+  "id": 135,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's lost his marbles.",
+  "tr": "Mermerlerini kaybetti.",
+  "model": "old"
+ },
+ {
+  "id": 4,
+  "category": "resmi",
+  "context": "",
+  "en": "Let sleeping dogs lie, my friend.",
+  "tr": "Uyuyan köpekler yalan söylesin, dostum.",
+  "model": "new"
+ },
+ {
+  "id": 175,
+  "category": "deyim2",
+  "context": "",
+  "en": "She's barking up the wrong tree.",
+  "tr": "Yanlış ağaca havlıyor.",
+  "model": "old"
+ },
+ {
+  "id": 111,
+  "category": "argo2",
+  "context": "",
+  "en": "The accountant cooked the books for years before anyone noticed.",
+  "tr": "Muhasebeci, kimse fark etmeden yıllarca kitapları pişirdi.",
+  "model": "old"
+ },
+ {
+  "id": 107,
+  "category": "argo1",
+  "context": "",
+  "en": "Ugh, that smells disgusting.",
+  "tr": "İğrenç kokuyor.",
+  "model": "old"
+ },
+ {
+  "id": 126,
+  "category": "argo1",
+  "context": "",
+  "en": "Jeez, give me a second to breathe!",
+  "tr": "Tanrım, nefes almam için bir saniye ver!",
+  "model": "new"
+ },
+ {
+  "id": 164,
+  "category": "deyim1",
+  "context": "",
+  "en": "Mind your own business, stranger.",
+  "tr": "Kendi işine bak, yabancı.",
+  "model": "new"
+ },
+ {
+  "id": 6,
+  "category": "deyim1",
+  "context": "",
+  "en": "Speak of the devil, here he comes.",
+  "tr": "Lafı açılmışken, geliyor.",
+  "model": "new"
+ },
+ {
+  "id": 120,
+  "category": "gorev",
+  "context": "",
+  "en": "Swing across on the rope.",
+  "tr": "İple karşıya geç.",
+  "model": "new"
+ },
+ {
+  "id": 105,
+  "category": "resmi",
+  "context": "",
+  "en": "A trial by jury of one's peers is the right of every citizen.",
+  "tr": "Bir kişinin akranlarından oluşan jüri tarafından yargılanması her vatandaşın hakkıdır.",
+  "model": "old"
+ },
+ {
+  "id": 293,
+  "category": "deyim2",
+  "context": "",
+  "en": "Dying is easy. Living is the hard part.",
+  "tr": "Ölmek kolaydır. Yaşamak zor kısmıdır.",
+  "model": "old"
+ },
+ {
+  "id": 77,
+  "category": "gorev",
+  "context": "",
+  "en": "Seal the tunnel behind us.",
+  "tr": "Tüneli arkamızdan kapatın.",
+  "model": "old"
+ },
+ {
+  "id": 19,
+  "category": "deyim1",
+  "context": "",
+  "en": "I slept like a log last night.",
+  "tr": "Dün gece kütük gibi uyudum.",
+  "model": "old"
+ },
+ {
+  "id": 55,
+  "category": "argo2",
+  "context": "",
+  "en": "The thief stole the painting right off the wall.",
+  "tr": "Hırsız tabloyu duvardan çaldı.",
+  "model": "old"
+ },
+ {
+  "id": 275,
+  "category": "gorev",
+  "context": "",
+  "en": "Sweep the building and report back.",
+  "tr": "Binayı tarayın ve rapor verin.",
+  "model": "old"
+ },
+ {
+  "id": 199,
+  "category": "deyim2",
+  "context": "",
+  "en": "I've been working my fingers to the bone.",
+  "tr": "Parmaklarımı kemiğe kadar çalıştırıyorum.",
+  "model": "old"
+ },
+ {
+  "id": 58,
+  "category": "resmi",
+  "context": "",
+  "en": "The crown prince shall wed before the harvest.",
+  "tr": "Veliaht hasattan önce evlenecek.",
+  "model": "new"
+ },
+ {
+  "id": 236,
+  "category": "resmi",
+  "context": "",
+  "en": "These words were carved by the first priests of the sun.",
+  "tr": "Bu sözler güneşin ilk rahipleri tarafından oyuldu.",
+  "model": "new"
+ },
+ {
+  "id": 144,
+  "category": "argo1",
+  "context": "",
+  "en": "Looking sharp, boss!",
+  "tr": "Tetiktesin, patron!",
+  "model": "new"
+ },
+ {
+  "id": 90,
+  "category": "gorev",
+  "context": "",
+  "en": "Make a run for the truck on my count.",
+  "tr": "Benim sayemde kamyon için koşu yap.",
+  "model": "new"
+ },
+ {
+  "id": 104,
+  "category": "argo1",
+  "context": "",
+  "en": "He's mad cool, that dude.",
+  "tr": "O adam delicesine havalı.",
+  "model": "new"
+ },
+ {
+  "id": 91,
+  "category": "deyim1",
+  "context": "",
+  "en": "I'm up to my neck in work.",
+  "tr": "İş yerimde boynuma kadar geldim.",
+  "model": "old"
+ },
+ {
+  "id": 299,
+  "category": "gorev",
+  "context": "",
+  "en": "Eat something or you'll pass out.",
+  "tr": "Bir şeyler ye yoksa bayılacaksın.",
+  "model": "old"
+ },
+ {
+  "id": 99,
+  "category": "deyim2",
+  "context": "",
+  "en": "I'm shaking like a leaf.",
+  "tr": "Yaprak gibi titriyorum.",
+  "model": "old"
+ },
+ {
+  "id": 232,
+  "category": "gorev",
+  "context": "",
+  "en": "I'll draw their fire while you go around.",
+  "tr": "Sen etrafta dolaşırken ben onların ateşini çekerim.",
+  "model": "new"
+ },
+ {
+  "id": 179,
+  "category": "argo1",
+  "context": "",
+  "en": "That's fire, no cap.",
+  "tr": "Ateş var, şapka yok.",
+  "model": "old"
+ },
+ {
+  "id": 245,
+  "category": "resmi",
+  "context": "",
+  "en": "The messenger was the bearer of bad news.",
+  "tr": "Peygamber, kötü haber getirenlerdendi.",
+  "model": "old"
+ },
+ {
+  "id": 177,
+  "category": "gorev",
+  "context": "",
+  "en": "Lay low until the heat dies down.",
+  "tr": "Sıcaklık düşene kadar eğilin.",
+  "model": "old"
+ },
+ {
+  "id": 181,
+  "category": "argo1",
+  "context": "",
+  "en": "Shoot, I plum forgot.",
+  "tr": "Kahretsin, erik unuttum.",
+  "model": "old"
+ },
+ {
+  "id": 89,
+  "category": "gorev",
+  "context": "",
+  "en": "Make a run for the truck on my count.",
+  "tr": "Benim sayemde kamyon için bir koşu yap.",
+  "model": "old"
+ },
+ {
+  "id": 97,
+  "category": "resmi",
+  "context": "",
+  "en": "Wherefore dost thou tarry, good sir?",
+  "tr": "Neden geç kalıyorsunuz, iyi efendim?",
+  "model": "old"
+ },
+ {
+  "id": 23,
+  "category": "resmi",
+  "context": "",
+  "en": "So ended the golden age of the elves.",
+  "tr": "Böylece elflerin altın çağı sona erdi.",
+  "model": "old"
+ },
+ {
+  "id": 79,
+  "category": "gorev",
+  "context": "",
+  "en": "Trade your furs for supplies at the post.",
+  "tr": "Posttaki malzemelerle kürklerinizi takas edin.",
+  "model": "old"
+ },
+ {
+  "id": 47,
+  "category": "deyim2",
+  "context": "",
+  "en": "He ate his words.",
+  "tr": "Onun sözlerini yedi.",
+  "model": "old"
+ },
+ {
+  "id": 238,
+  "category": "deyim1",
+  "context": "",
+  "en": "I'd bet my head on it.",
+  "tr": "Buna bahse girerim.",
+  "model": "new"
+ },
+ {
+  "id": 125,
+  "category": "argo1",
+  "context": "",
+  "en": "Jeez, give me a second to breathe!",
+  "tr": "Tanrım, nefes almak için bana bir saniye ver!",
+  "model": "old"
+ },
+ {
+  "id": 106,
+  "category": "resmi",
+  "context": "",
+  "en": "A trial by jury of one's peers is the right of every citizen.",
+  "tr": "Akranlarından oluşan jüri tarafından yargılanmak her vatandaşın hakkıdır.",
+  "model": "new"
+ },
+ {
+  "id": 7,
+  "category": "resmi",
+  "context": "",
+  "en": "The temple bells fell silent on the night of the plague.",
+  "tr": "Veba gecesi tapınak çanları sustu.",
+  "model": "old"
+ },
+ {
+  "id": 88,
+  "category": "deyim2",
+  "context": "",
+  "en": "He's a fair-weather friend.",
+  "tr": "O adil bir hava arkadaşı.",
+  "model": "new"
+ },
+ {
+  "id": 113,
+  "category": "resmi",
+  "context": "",
+  "en": "Objection, Your Honour. The question is leading.",
+  "tr": "İtiraz ediyorum, Sayın Yargıç. Soru önde gidiyor.",
+  "model": "old"
+ },
+ {
+  "id": 235,
+  "category": "resmi",
+  "context": "",
+  "en": "These words were carved by the first priests of the sun.",
+  "tr": "Bu sözler güneşin ilk rahipleri tarafından oyulmuştur.",
+  "model": "old"
+ },
+ {
+  "id": 297,
+  "category": "gorev",
+  "context": "",
+  "en": "Give me a boost; I can't reach the ledge.",
+  "tr": "Bana bir destek ver, çıkıntıya ulaşamıyorum.",
+  "model": "old"
+ },
+ {
+  "id": 259,
+  "category": "gorev",
+  "context": "",
+  "en": "Start the engine and let it warm up.",
+  "tr": "Motoru çalıştır ve ısınmasına izin ver.",
+  "model": "old"
+ },
+ {
+  "id": 63,
+  "category": "deyim2",
+  "context": "",
+  "en": "That bridge is burned for good.",
+  "tr": "O köprü sonsuza dek yandı.",
+  "model": "old"
+ },
+ {
+  "id": 188,
+  "category": "argo2",
+  "context": "",
+  "en": "The crowd is cheering as the drivers line up at the start.",
+  "tr": "Sürücüler başlangıçta sıralanırken kalabalık tezahürat yapıyor.",
+  "model": "new"
+ },
+ {
+  "id": 203,
+  "category": "deyim1",
+  "context": "",
+  "en": "Walls have ears. Speak softly.",
+  "tr": "Duvarların kulakları vardır. Yumuşak konuş.",
+  "model": "old"
+ },
+ {
+  "id": 162,
+  "category": "gorev",
+  "context": "",
+  "en": "Think it over and give me your answer tomorrow.",
+  "tr": "Bir düşün ve yarın cevabını ver.",
+  "model": "new"
+ },
+ {
+  "id": 61,
+  "category": "deyim1",
+  "context": "",
+  "en": "Better luck next time, rookie.",
+  "tr": "Bir dahaki sefere iyi şanslar çaylak.",
+  "model": "old"
+ },
+ {
+  "id": 92,
+  "category": "deyim1",
+  "context": "",
+  "en": "I'm up to my neck in work.",
+  "tr": "İşte boynuma kadar battım.",
+  "model": "new"
+ },
+ {
+  "id": 86,
+  "category": "argo1",
+  "context": "",
+  "en": "Wow, you're even uglier up close.",
+  "tr": "Vay, daha da çirkinleşiyorsun.",
+  "model": "new"
+ },
+ {
+  "id": 298,
+  "category": "gorev",
+  "context": "",
+  "en": "Give me a boost; I can't reach the ledge.",
+  "tr": "Beni destekle; çıkıntıya ulaşamıyorum.",
+  "model": "new"
+ },
+ {
+  "id": 52,
+  "category": "gorev",
+  "context": "",
+  "en": "Bandage the wound to stop the bleeding.",
+  "tr": "Kanamayı durdurmak için yarayı bandajla.",
+  "model": "new"
+ },
+ {
+  "id": 263,
+  "category": "deyim2",
+  "context": "",
+  "en": "You can't escape your destiny.",
+  "tr": "Kaderinden kaçamazsın.",
+  "model": "old"
+ },
+ {
+  "id": 285,
+  "category": "argo1",
+  "context": "",
+  "en": "Well, I'll swan. That's a big ol' gator.",
+  "tr": "Peki, ben kuğu olacağım. Bu büyük bir gator.",
+  "model": "old"
+ },
+ {
+  "id": 64,
+  "category": "deyim2",
+  "context": "",
+  "en": "That bridge is burned for good.",
+  "tr": "O köprü sonsuza kadar yandı.",
+  "model": "new"
+ },
+ {
+  "id": 3,
+  "category": "resmi",
+  "context": "",
+  "en": "Let sleeping dogs lie, my friend.",
+  "tr": "Uyuyan köpekler yalan söylesin dostum.",
+  "model": "old"
+ },
+ {
+  "id": 1,
+  "category": "resmi",
+  "context": "",
+  "en": "Arise, and be known henceforth as Lady Elara of the Vale.",
+  "tr": "Kalk ve bundan böyle Vadili Leydi Elara olarak tanın.",
+  "model": "old"
+ },
+ {
+  "id": 43,
+  "category": "resmi",
+  "context": "",
+  "en": "The fortress has never fallen, and it never shall.",
+  "tr": "Kale asla düşmedi ve asla da düşmeyecek.",
+  "model": "old"
+ },
+ {
+  "id": 42,
+  "category": "gorev",
+  "context": "",
+  "en": "Shut down the reactor before it melts down.",
+  "tr": "Reaktör erimeden kapat.",
+  "model": "new"
+ },
+ {
+  "id": 132,
+  "category": "deyim1",
+  "context": "",
+  "en": "Let that be a lesson. Never trust a thief.",
+  "tr": "Bu bir ders ols. Hırsıza asla güvenme.",
+  "model": "new"
+ },
+ {
+  "id": 251,
+  "category": "resmi",
+  "context": "",
+  "en": "The prisoner has requested a trial by combat.",
+  "tr": "Mahk ⁇ m savaşarak yargılanmayı talep etti.",
+  "model": "old"
+ },
+ {
+  "id": 185,
+  "category": "resmi",
+  "context": "",
+  "en": "And so the legend of the lost king was born.",
+  "tr": "Ve böylece kayıp kralın efsanesi doğdu.",
+  "model": "old"
+ },
+ {
+  "id": 45,
+  "category": "deyim1",
+  "context": "",
+  "en": "Steady as she goes, boys.",
+  "tr": "Devam edin çocuklar.",
+  "model": "old"
+ },
+ {
+  "id": 26,
+  "category": "deyim2",
+  "context": "",
+  "en": "It's all hands on deck, people!",
+  "tr": "Her şey hazır, millet!",
+  "model": "new"
+ },
+ {
+  "id": 240,
+  "category": "resmi",
+  "context": "",
+  "en": "Bring the main cannon online.",
+  "tr": "Ana topu devreye al.",
+  "model": "new"
+ },
+ {
+  "id": 229,
+  "category": "gorev",
+  "context": "",
+  "en": "Bring me three bottles of rum and I'll tell you everything.",
+  "tr": "Bana üç şişe rom getir, sana her şeyi anlatacağım.",
+  "model": "old"
+ },
+ {
+  "id": 278,
+  "category": "deyim1",
+  "context": "",
+  "en": "Get your act together, or we lose.",
+  "tr": "Kendine gel, yoksa kaybederiz.",
+  "model": "new"
+ },
+ {
+  "id": 115,
+  "category": "gorev",
+  "context": "",
+  "en": "Collect ten pelts and bring them to the trader.",
+  "tr": "On post toplayın ve tüccara getirin.",
+  "model": "old"
+ },
+ {
+  "id": 231,
+  "category": "gorev",
+  "context": "",
+  "en": "I'll draw their fire while you go around.",
+  "tr": "Sen etrafta dolaşırken ben ateşlerini çekerim.",
+  "model": "old"
+ },
+ {
+  "id": 57,
+  "category": "resmi",
+  "context": "",
+  "en": "The crown prince shall wed before the harvest.",
+  "tr": "Veliaht prens hasattan önce evlenecek.",
+  "model": "old"
+ },
+ {
+  "id": 83,
+  "category": "argo1",
+  "context": "",
+  "en": "Yo, I got your back, fam.",
+  "tr": "Arkanı kollarım, dostum.",
+  "model": "old"
+ },
+ {
+  "id": 121,
+  "category": "resmi",
+  "context": "",
+  "en": "He who sheds innocent blood shall be cursed for all eternity.",
+  "tr": "Masum kanı döken sonsuza dek lanetlenecek.",
+  "model": "old"
+ },
+ {
+  "id": 66,
+  "category": "deyim2",
+  "context": "",
+  "en": "He hit me below the belt.",
+  "tr": "Bana kemerin altından vurdu.",
+  "model": "new"
+ },
+ {
+  "id": 220,
+  "category": "argo2",
+  "context": "",
+  "en": "The cops finally nailed him after ten years of chasing.",
+  "tr": "Polis on yıl kovaladıktan sonra sonunda onu çiviledi.",
+  "model": "new"
+ },
+ {
+  "id": 5,
+  "category": "deyim1",
+  "context": "",
+  "en": "Speak of the devil, here he comes.",
+  "tr": "Şeytandan bahsetmişken, işte geliyor.",
+  "model": "old"
+ },
+ {
+  "id": 273,
+  "category": "argo1",
+  "context": "",
+  "en": "Dude, you're so extra.",
+  "tr": "Dostum, çok ekstrasın.",
+  "model": "old"
+ },
+ {
+  "id": 172,
+  "category": "gorev",
+  "context": "",
+  "en": "Approach from behind and press Q for a silent takedown.",
+  "tr": "Arkadan yaklaş ve sessiz bir saldırı için Q'ya bas.",
+  "model": "new"
+ },
+ {
+  "id": 36,
+  "category": "resmi",
+  "context": "",
+  "en": "I am but a humble servant of the crown.",
+  "tr": "Ben sadece tacın mütevazı bir hizmetkârıyım.",
+  "model": "new"
+ },
+ {
+  "id": 163,
+  "category": "deyim1",
+  "context": "",
+  "en": "Mind your own business, stranger.",
+  "tr": "Kendi işine bak yabancı.",
+  "model": "old"
+ },
+ {
+  "id": 112,
+  "category": "argo2",
+  "context": "",
+  "en": "The accountant cooked the books for years before anyone noticed.",
+  "tr": "Muhasebeci kimse fark etmeden önce kitapları yıllarca pişirdi.",
+  "model": "new"
+ },
+ {
+  "id": 284,
+  "category": "gorev",
+  "context": "",
+  "en": "Switch weapons with the mouse wheel.",
+  "tr": "Fare tekerleğiyle silah değiştir.",
+  "model": "new"
+ },
+ {
+  "id": 260,
+  "category": "gorev",
+  "context": "",
+  "en": "Start the engine and let it warm up.",
+  "tr": "Motoru çalıştır ve ısınsın.",
+  "model": "new"
+ },
+ {
+  "id": 140,
+  "category": "argo2",
+  "context": "",
+  "en": "I need a new identity and a one-way ticket out of here.",
+  "tr": "Yeni bir kimliğe ve buradan tek yönlü bir bilete ihtiyacım var.",
+  "model": "new"
+ },
+ {
+  "id": 109,
+  "category": "deyim2",
+  "context": "",
+  "en": "Death comes for us all in the end.",
+  "tr": "Sonunda hepimiz için ölüm gelir.",
+  "model": "old"
+ },
+ {
+  "id": 38,
+  "category": "argo2",
+  "context": "",
+  "en": "Count the chips, the house always wins.",
+  "tr": "Paraları say, ev hep kazanır.",
+  "model": "new"
+ },
+ {
+  "id": 50,
+  "category": "deyim2",
+  "context": "",
+  "en": "A stitch in time saves nine.",
+  "tr": "Zamanda bir dikiş dokuz tane kurtarır.",
+  "model": "new"
+ },
+ {
+  "id": 271,
+  "category": "argo2",
+  "context": "",
+  "en": "Hold your horses, we're not ready yet.",
+  "tr": "Atlarınızı tutun, henüz hazır değiliz.",
+  "model": "old"
+ },
+ {
+  "id": 17,
+  "category": "argo1",
+  "context": "",
+  "en": "Not so brave now, are you?",
+  "tr": "Şimdi o kadar cesur değilsin, değil mi?",
+  "model": "old"
+ },
+ {
+  "id": 291,
+  "category": "deyim2",
+  "context": "",
+  "en": "Let bygones be bygones.",
+  "tr": "Geçmiş geçmişte kals.",
+  "model": "old"
+ },
+ {
+  "id": 75,
+  "category": "resmi",
+  "context": "",
+  "en": "The sword sings when evil is near.",
+  "tr": "Kılıç, kötülük yaklaştığında şarkı söyler.",
+  "model": "old"
+ },
+ {
+  "id": 295,
+  "category": "deyim2",
+  "context": "",
+  "en": "I've got butterflies in my stomach.",
+  "tr": "Midemde kelebekler var.",
+  "model": "old"
+ },
+ {
+  "id": 233,
+  "category": "gorev",
+  "context": "",
+  "en": "Never accept the first offer.",
+  "tr": "İlk teklifi asla kabul etme.",
+  "model": "old"
+ },
+ {
+  "id": 139,
+  "category": "argo2",
+  "context": "",
+  "en": "I need a new identity and a one-way ticket out of here.",
+  "tr": "Yeni bir kimliğe ve buradan tek gidiş biletine ihtiyacım var.",
+  "model": "old"
+ },
+ {
+  "id": 294,
+  "category": "deyim2",
+  "context": "",
+  "en": "Dying is easy. Living is the hard part.",
+  "tr": "Ölmek kolaydır. Zor olan yaşamak.",
+  "model": "new"
+ },
+ {
+  "id": 9,
+  "category": "resmi",
+  "context": "",
+  "en": "Let us not squabble while the kingdom burns.",
+  "tr": "Krallık yanarken kavga etmeyelim.",
+  "model": "old"
+ },
+ {
+  "id": 157,
+  "category": "gorev",
+  "context": "",
+  "en": "Hear me out before you decide.",
+  "tr": "Karar vermeden önce beni dinle.",
+  "model": "old"
+ },
+ {
+  "id": 277,
+  "category": "deyim1",
+  "context": "",
+  "en": "Get your act together, or we lose.",
+  "tr": "Rolünü yap yoksa kaybederiz.",
+  "model": "old"
+ },
+ {
+  "id": 194,
+  "category": "argo2",
+  "context": "",
+  "en": "He's the kind of man who never forgets a face.",
+  "tr": "O, yüzünü hiç unutmayan biri.",
+  "model": "new"
+ },
+ {
+  "id": 222,
+  "category": "gorev",
+  "context": "",
+  "en": "Moving up. Cover me.",
+  "tr": "Yükseliyoruz. Beni koru.",
+  "model": "new"
+ },
+ {
+  "id": 253,
+  "category": "argo1",
+  "context": "",
+  "en": "Stay in your lane, little man.",
+  "tr": "Kendi şeridinde kal, küçük adam.",
+  "model": "old"
+ },
+ {
+  "id": 283,
+  "category": "gorev",
+  "context": "",
+  "en": "Switch weapons with the mouse wheel.",
+  "tr": "Fare tekerleği ile silah değiştir.",
+  "model": "old"
+ },
+ {
+  "id": 207,
+  "category": "argo1",
+  "context": "",
+  "en": "Crap, I think I broke it.",
+  "tr": "Lanet olsun, sanırım kırdım.",
+  "model": "old"
+ },
+ {
+  "id": 239,
+  "category": "resmi",
+  "context": "",
+  "en": "Bring the main cannon online.",
+  "tr": "Ana topu devreye sok.",
+  "model": "old"
+ },
+ {
+  "id": 216,
+  "category": "argo2",
+  "context": "",
+  "en": "The fight was fixed, and everyone knew it.",
+  "tr": "Kavga düzeltildi ve herkes biliyordu.",
+  "model": "new"
+ },
+ {
+  "id": 152,
+  "category": "gorev",
+  "context": "",
+  "en": "The vault has two layers of security, so go slow.",
+  "tr": "Kasanın iki güvenlik katmanı var, o yüzden yavaş git.",
+  "model": "new"
+ }
+]

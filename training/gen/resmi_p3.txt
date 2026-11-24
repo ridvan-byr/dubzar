@@ -1,0 +1,92 @@
+Attention all hands, battle stations. ||| Bütün personel dikkat, muharebe istasyonlarına.
+Captain on the bridge. ||| Kaptan köprüde.
+Fire all weapons on my mark. ||| Benim işaretimle tüm silahlarla ateş.
+Shields are down to twelve percent. ||| Kalkanlar yüzde 12'ye düştü.
+Engage the hyperdrive. ||| Hiper sürücüyü devreye al.
+Hail the enemy vessel and demand their surrender. ||| Düşman gemisini çağır ve teslim olmalarını talep et.
+Commander, we are receiving a distress signal from the outpost. ||| Komutanım, üsten bir imdat sinyali alıyoruz.
+All fleets, hold position and await further orders. ||| Tüm filolar, mevzilerde kalın ve yeni emirleri bekleyin.
+Set a course for the Kepler system. ||| Rotayı Kepler sistemine ayarla.
+Divert all power to the forward shields. ||| Tüm enerjiyi ön kalkanlara aktar.
+That is a direct order, soldier. ||| Bu doğrudan bir emir, asker.
+Seal the airlock and prepare for depressurization. ||| Hava kilidini mühürle ve basınç tahliyesine hazırlan.
+Mission control, we have a problem. ||| Görev kontrol, bir sorunumuz var.
+The reactor core is going critical. ||| Reaktör çekirdeği kritik seviyeye ulaşıyor.
+All personnel, evacuate to the escape pods immediately. ||| Tüm personel, derhal kurtarma kapsüllerine tahliye olsun.
+Lock onto the target and await my command. ||| Hedefe kilitlen ve emrimi bekle.
+Cease fire. I repeat, cease fire. ||| Ateşi kesin. Tekrar ediyorum, ateşi kesin.
+We are being boarded. Repel the intruders. ||| Gemiye çıkarma yapılıyor. Davetsiz misafirleri püskürtün.
+The council has authorized the use of force. ||| Konsey güç kullanımına izin verdi.
+Report to the briefing room in ten minutes. ||| On dakika içinde brifing odasına gel.
+Deploy the drones and sweep the perimeter. ||| Dronları gönder ve çevreyi tara.
+Stand by for atmospheric entry. ||| Atmosfere giriş için hazır olun.
+Fleet command, we have visual on the enemy carrier. ||| Filo komutanlığı, düşman uçak gemisini görüyoruz.
+Sir, the artificial intelligence has refused the order. ||| Efendim, yapay zekâ emri reddetti.
+Weapons are armed. Awaiting your authorization. ||| Silahlar hazır. Onayınızı bekliyoruz.
+Initiate emergency protocol zero. ||| Sıfır numaralı acil durum protokolünü başlat.
+The colony has been quarantined until further notice. ||| Koloni, yeni bir duyuruya kadar karantinaya alındı.
+Prepare for orbital insertion. ||| Yörüngeye girişe hazırlan.
+All units, converge on the central tower. ||| Tüm birlikler, merkez kuleye toplanın.
+Soldier, you will hold this line at all costs. ||| Asker, bu hattı ne pahasına olursa olsun savunacaksın.
+Scramble every fighter we have. ||| Elimizdeki bütün savaş uçaklarını havalandırın.
+The mothership has entered our airspace. ||| Ana gemi hava sahamıza girdi.
+Confirm your identity and clearance code. ||| Kimliğini ve yetki kodunu doğrula.
+Do not approach. This facility is restricted. ||| Yaklaşmayın. Bu tesis girişe kapalıdır.
+Hull breach on deck seven. Seal the bulkheads. ||| Yedinci güvertede gövde yırtılması var. Bölmeleri kapatın.
+We will not negotiate with rebels. ||| İsyancılarla pazarlık yapmayacağız.
+Navigation systems are offline. We are flying blind. ||| Seyir sistemleri çevrimdışı. Kör uçuyoruz.
+The signal is coming from beyond the edge of known space. ||| Sinyal, bilinen uzayın ötesinden geliyor.
+Commander Shepard, the admiral wishes to see you. ||| Komutan Shepard, amiral sizi görmek istiyor.
+Sir, the enemy fleet is twice our size. ||| Efendim, düşman filosu bizimkinin iki katı büyüklükte.
+Bring the main cannon online. ||| Ana topu devreye sok.
+Recalibrate the sensors and run another scan. ||| Sensörleri yeniden ayarla ve bir tarama daha yap.
+Cryo-sleep cycle complete. Welcome back, crew. ||| Kriyo uyku döngüsü tamamlandı. Tekrar hoş geldiniz, mürettebat.
+This is your final warning. Power down your engines. ||| Bu son uyarınız. Motorlarınızı kapatın.
+Negative, the artifact is not to leave this station. ||| Hayır, eser bu istasyondan çıkmayacak.
+Contact with the surface team has been lost. ||| Yüzey ekibiyle bağlantı koptu.
+The treaty prohibits any military presence in this sector. ||| Antlaşma, bu sektörde her türlü askerî varlığı yasaklıyor.
+Order the fleet to retreat to the outer rim. ||| Filoya dış kuşağa çekilmesini emret.
+Understood, Captain. Executing your orders. ||| Anlaşıldı, Kaptan. Emirlerinizi uyguluyorum.
+Wake the colonists. We have arrived. ||| Kolonistleri uyandırın. Vardık.
+The ambassador requests a private audience. ||| Büyükelçi özel bir görüşme talep ediyor.
+My government will not tolerate this provocation. ||| Hükümetim bu provokasyonu hoş görmeyecek.
+We come in peace, and we ask the same of you. ||| Barış için geldik ve sizden de aynısını bekliyoruz.
+The embassy has been placed under diplomatic protection. ||| Büyükelçilik diplomatik korumaya alındı.
+Both parties have agreed to a ceasefire effective immediately. ||| İki taraf da derhal yürürlüğe girecek ateşkes konusunda anlaştı.
+The two nations have signed a non-aggression pact. ||| İki ülke saldırmazlık paktı imzaladı.
+We demand the immediate release of all hostages. ||| Tüm rehinelerin derhal serbest bırakılmasını talep ediyoruz.
+The negotiations have reached a deadlock. ||| Müzakereler çıkmaza girdi.
+I speak on behalf of the Free Colonies. ||| Özgür Koloniler adına konuşuyorum.
+Our terms are non-negotiable. ||| Şartlarımız pazarlığa açık değil.
+Any violation of the treaty will be met with force. ||| Antlaşmanın herhangi bir ihlaline güçle karşılık verilecek.
+The summit will convene at noon in the grand hall. ||| Zirve, öğlen büyük salonda toplanacak.
+Let us seek a peaceful resolution to this dispute. ||| Bu anlaşmazlığa barışçıl bir çözüm arayalım.
+The federation does not recognize your claim to this territory. ||| Federasyon bu topraklar üzerindeki hak iddianızı tanımıyor.
+You have my word as an ambassador. ||| Büyükelçi olarak size söz veriyorum.
+The delegation will arrive on the evening shuttle. ||| Heyet akşam mekiğiyle gelecek.
+We propose a joint expedition to the outer worlds. ||| Dış dünyalara ortak bir keşif seferi öneriyoruz.
+Sanctions will remain in place until the border is reopened. ||| Sınır yeniden açılana kadar yaptırımlar sürecek.
+The alliance stands united against this threat. ||| İttifak bu tehdide karşı tek vücut.
+I must remind you that you are bound by the treaty. ||| Size antlaşmayla bağlı olduğunuzu hatırlatmak zorundayım.
+The prince has offered his hand in friendship. ||| Prens dostluk elini uzattı.
+With all due respect, Ambassador, we cannot accept those terms. ||| Büyükelçi, saygılarımla, bu şartları kabul edemeyiz.
+Our two peoples have been at war for too long. ||| İki halkımız çok uzun süredir savaşıyor.
+This accord will bring peace to a hundred worlds. ||| Bu mutabakat yüz dünyaya barış getirecek.
+The envoy was received with every courtesy. ||| Elçi her türlü nezaketle karşılandı.
+The motion is carried by a vote of seven to four. ||| Önerge yediye karşı dört oyla kabul edildi.
+Let the senator speak. ||| Senatör konuşsun.
+By the authority vested in me, I declare this meeting adjourned. ||| Bana verilen yetkiyle bu toplantının sona erdiğini ilan ediyorum.
+The council demands an explanation for this breach of protocol. ||| Konsey, bu protokol ihlali için bir açıklama talep ediyor.
+The two houses shall be joined in marriage. ||| İki hanedan evlilikle birleşecek.
+We seek no conquest, only security. ||| Fetih istemiyoruz, yalnızca güvenlik istiyoruz.
+The peace talks collapsed after the assassination. ||| Barış görüşmeleri suikastın ardından çöktü.
+You will be granted safe passage through our territory. ||| Topraklarımızdan güvenle geçmenize izin verilecek.
+The prime minister will address the nation tonight. ||| Başbakan bu akşam ulusa hitap edecek.
+A formal declaration of war has been issued. ||| Resmî savaş ilanı yayımlandı.
+Our patience is not without limits. ||| Sabrımızın da bir sınırı var.
+The agreement is void if either party withdraws. ||| Taraflardan biri çekilirse anlaşma geçersiz olur.
+We are prepared to discuss reparations. ||| Tazminat konusunu görüşmeye hazırız.
+The embassy staff have been recalled. ||| Büyükelçilik personeli geri çağrıldı.
+Neutral ground has been designated for the meeting. ||| Görüşme için tarafsız bir bölge belirlendi.
+Peace is only possible if both sides make concessions. ||| Barış, ancak iki taraf da taviz verirse mümkün.
+The treaty was signed in the presence of witnesses. ||| Antlaşma, şahitlerin huzurunda imzalandı.

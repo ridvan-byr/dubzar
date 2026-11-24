@@ -1,0 +1,2602 @@
+[
+ {
+  "set": "final",
+  "id": 1,
+  "category": "konusma",
+  "en": "I can't believe you kept this from me.",
+  "gemma": "Bunu benden sakladığına inanamıyorum."
+ },
+ {
+  "set": "final",
+  "id": 2,
+  "category": "konusma",
+  "en": "Where were you when the lights went out?",
+  "gemma": "Işıklar kesildiğinde neredeydin?"
+ },
+ {
+  "set": "final",
+  "id": 3,
+  "category": "konusma",
+  "en": "We've got about five minutes before they notice.",
+  "gemma": "Fark etmelerine daha beş dakika var."
+ },
+ {
+  "set": "final",
+  "id": 4,
+  "category": "konusma",
+  "en": "I'm not sure that's a good idea.",
+  "gemma": "Bu pek iyi bir fikir gibi gelmiyor."
+ },
+ {
+  "set": "final",
+  "id": 5,
+  "category": "konusma",
+  "en": "He asked me to give this to you.",
+  "gemma": "Bunu sana vermemi istedi."
+ },
+ {
+  "set": "final",
+  "id": 6,
+  "category": "konusma",
+  "en": "Whatever happens, stay close to me.",
+  "gemma": "Ne olursa olsun, yanımda kal."
+ },
+ {
+  "set": "final",
+  "id": 7,
+  "category": "konusma",
+  "en": "I've been looking for you everywhere.",
+  "gemma": "Seni her yerde aradım."
+ },
+ {
+  "set": "final",
+  "id": 8,
+  "category": "konusma",
+  "en": "That doesn't sound like him at all.",
+  "gemma": "Bu hiç ona göre değil."
+ },
+ {
+  "set": "final",
+  "id": 9,
+  "category": "konusma",
+  "en": "She won't talk to anyone but you.",
+  "gemma": "Senden başkasıyla konuşmuyor."
+ },
+ {
+  "set": "final",
+  "id": 10,
+  "category": "konusma",
+  "en": "You'd better have a good explanation.",
+  "gemma": "Mantıklı bir açıklaman olsun bättre."
+ },
+ {
+  "set": "final",
+  "id": 11,
+  "category": "konusma",
+  "en": "I thought we agreed to meet at noon.",
+  "gemma": "Öğlen buluşacağımızı sanıyordum."
+ },
+ {
+  "set": "final",
+  "id": 12,
+  "category": "konusma",
+  "en": "It's not what it looks like.",
+  "gemma": "Öyle sandığın gibi değil."
+ },
+ {
+  "set": "final",
+  "id": 13,
+  "category": "konusma",
+  "en": "I don't have time for riddles.",
+  "gemma": "Bilmece oynamaya vaktim yok."
+ },
+ {
+  "set": "final",
+  "id": 14,
+  "category": "konusma",
+  "en": "Why does everyone keep looking at me like that?",
+  "gemma": "Neden herkes bana öyle bakıyor ki?"
+ },
+ {
+  "set": "final",
+  "id": 15,
+  "category": "konusma",
+  "en": "There's something wrong with the radio.",
+  "gemma": "Radyoda bir terslik var."
+ },
+ {
+  "set": "final",
+  "id": 16,
+  "category": "konusma",
+  "en": "You're lucky I'm in a good mood today.",
+  "gemma": "Bugün keyfim yerinde, şanslısın."
+ },
+ {
+  "set": "final",
+  "id": 17,
+  "category": "konusma",
+  "en": "Nobody has been in this room for years.",
+  "gemma": "Bu odaya yıllardır kimse girmedi."
+ },
+ {
+  "set": "final",
+  "id": 18,
+  "category": "konusma",
+  "en": "Let me handle the talking.",
+  "gemma": "Konuşma işini bana bırak."
+ },
+ {
+  "set": "final",
+  "id": 19,
+  "category": "konusma",
+  "en": "I owe you my life.",
+  "gemma": "Can borçluyum sana."
+ },
+ {
+  "set": "final",
+  "id": 20,
+  "category": "konusma",
+  "en": "We should have turned back an hour ago.",
+  "gemma": "Bir saat önce geri dönmemiz lazımdı."
+ },
+ {
+  "set": "final",
+  "id": 21,
+  "category": "konusma",
+  "en": "They'll be here any minute now.",
+  "gemma": "Her an burada olabilirler."
+ },
+ {
+  "set": "final",
+  "id": 22,
+  "category": "konusma",
+  "en": "I wish things had turned out differently.",
+  "gemma": "Keşke işler böyle sonuçlanmasaydı."
+ },
+ {
+  "set": "final",
+  "id": 23,
+  "category": "konusma",
+  "en": "Do you really expect me to believe that?",
+  "gemma": "Buna gerçekten inanmamı mı bekliyorsun?"
+ },
+ {
+  "set": "final",
+  "id": 24,
+  "category": "konusma",
+  "en": "She was the best pilot I ever knew.",
+  "gemma": "Tanıdığım en iyi pilottu."
+ },
+ {
+  "set": "final",
+  "id": 25,
+  "category": "konusma",
+  "en": "You can't just walk away from this.",
+  "gemma": "Bunu öylece bırakıp gidemezsin."
+ },
+ {
+  "set": "final",
+  "id": 26,
+  "category": "konusma",
+  "en": "I've seen enough to know he's lying.",
+  "gemma": "Yalan söylediğini anlamam için yeterince gördüm."
+ },
+ {
+  "set": "final",
+  "id": 27,
+  "category": "konusma",
+  "en": "Was there anyone with you?",
+  "gemma": "Yanında biri var mıydı?"
+ },
+ {
+  "set": "final",
+  "id": 28,
+  "category": "konusma",
+  "en": "I'll make it up to you, I promise.",
+  "gemma": "Sana telafi edeceğim, söz veriyorum."
+ },
+ {
+  "set": "final",
+  "id": 29,
+  "category": "konusma",
+  "en": "This is bigger than either of us.",
+  "gemma": "Bu ikimizden de büyük bir mesele."
+ },
+ {
+  "set": "final",
+  "id": 30,
+  "category": "konusma",
+  "en": "He left a note on the kitchen table.",
+  "gemma": "Mutfak masasına bir not bırakmış."
+ },
+ {
+  "set": "final",
+  "id": 31,
+  "category": "konusma",
+  "en": "You look like you've seen a ghost.",
+  "gemma": "Yüzün kireç gibi olmuş."
+ },
+ {
+  "set": "final",
+  "id": 32,
+  "category": "konusma",
+  "en": "We're running low on supplies.",
+  "gemma": "İkmalimiz azalıyor."
+ },
+ {
+  "set": "final",
+  "id": 33,
+  "category": "konusma",
+  "en": "I told them everything I knew.",
+  "gemma": "Bildiğim her şeyi onlara anlattım."
+ },
+ {
+  "set": "final",
+  "id": 34,
+  "category": "konusma",
+  "en": "Is that really the best you can do?",
+  "gemma": "Bu kadar mı yapabiliyorsun?"
+ },
+ {
+  "set": "final",
+  "id": 35,
+  "category": "konusma",
+  "en": "It's too quiet out here.",
+  "gemma": "Burası çok sessiz."
+ },
+ {
+  "set": "final",
+  "id": 36,
+  "category": "argo",
+  "en": "Stop acting like a clown and listen up.",
+  "gemma": "Şakayı bırak da beni dinle."
+ },
+ {
+  "set": "final",
+  "id": 37,
+  "category": "argo",
+  "en": "That dude's got a screw loose.",
+  "gemma": "Şu adamın kafayı sıyırmış."
+ },
+ {
+  "set": "final",
+  "id": 38,
+  "category": "argo",
+  "en": "I'm gonna wipe that smirk right off your face.",
+  "gemma": "O sırıtışını yüzünden sileceğim."
+ },
+ {
+  "set": "final",
+  "id": 39,
+  "category": "argo",
+  "en": "She's been giving me the cold shoulder all week.",
+  "gemma": "Bütün hafta bana küs gibi davranıyor."
+ },
+ {
+  "set": "final",
+  "id": 40,
+  "category": "argo",
+  "en": "Get off my back, will you?",
+  "gemma": "Beni rahat bırak artık, olur mu?"
+ },
+ {
+  "set": "final",
+  "id": 41,
+  "category": "argo",
+  "en": "You're full of it, and you know it.",
+  "gemma": "Yalan söylüyorsun, hem de çok iyi biliyorsun."
+ },
+ {
+  "set": "final",
+  "id": 42,
+  "category": "argo",
+  "en": "He's all talk and no action.",
+  "gemma": "Boş konuşuyor, icraata gelmiyor."
+ },
+ {
+  "set": "final",
+  "id": 43,
+  "category": "argo",
+  "en": "Don't try to sweet-talk me.",
+  "gemma": "Bana cilve yapma."
+ },
+ {
+  "set": "final",
+  "id": 44,
+  "category": "argo",
+  "en": "We got played, man. Big time.",
+  "gemma": "Resmen bizi avladılar abi. Fena halde."
+ },
+ {
+  "set": "final",
+  "id": 45,
+  "category": "argo",
+  "en": "That guy is a snake in the grass.",
+  "gemma": "O adam tam bir sinsi."
+ },
+ {
+  "set": "final",
+  "id": 46,
+  "category": "argo",
+  "en": "I'm so done with this nonsense.",
+  "gemma": "Bu saçmalıklardan bıktım artık."
+ },
+ {
+  "set": "final",
+  "id": 47,
+  "category": "argo",
+  "en": "Hand over the cash or things get ugly.",
+  "gemma": "Parayı ver yoksa işler çirkinleşir."
+ },
+ {
+  "set": "final",
+  "id": 48,
+  "category": "argo",
+  "en": "She's out of her league and she knows it.",
+  "gemma": "Kendi çapının çok üstünde ve bunun farkında."
+ },
+ {
+  "set": "final",
+  "id": 49,
+  "category": "argo",
+  "en": "What a bunch of lowlifes.",
+  "gemma": "Ne kadar aşağılık bir grup."
+ },
+ {
+  "set": "final",
+  "id": 50,
+  "category": "argo",
+  "en": "You think I was born yesterday?",
+  "gemma": "Beni çocuk mu sanıyorsun?"
+ },
+ {
+  "set": "final",
+  "id": 51,
+  "category": "argo",
+  "en": "Man, this place gives me the creeps.",
+  "gemma": "Abi, burası insanın tüylerini ürpertiyor."
+ },
+ {
+  "set": "final",
+  "id": 52,
+  "category": "argo",
+  "en": "He kicked the bucket last winter.",
+  "gemma": "Geçen kış canından çıktı."
+ },
+ {
+  "set": "final",
+  "id": 53,
+  "category": "argo",
+  "en": "Nice try, hotshot.",
+  "gemma": "Güzel denemeydi, kahraman."
+ },
+ {
+  "set": "final",
+  "id": 54,
+  "category": "argo",
+  "en": "I'll be damned if I let you take the credit.",
+  "gemma": "Bu başarıyı senin üzerine yıkmana asla izin vermem."
+ },
+ {
+  "set": "final",
+  "id": 55,
+  "category": "argo",
+  "en": "That's a load of garbage and you know it.",
+  "gemma": "Saçmalıyorsun ve bunun farkındasın."
+ },
+ {
+  "set": "final",
+  "id": 56,
+  "category": "argo",
+  "en": "Don't you dare flake on me again.",
+  "gemma": "Bu sefer yine beni yarı yolda bırakmaya kalkma."
+ },
+ {
+  "set": "final",
+  "id": 57,
+  "category": "argo",
+  "en": "He's been dodging me like the plague.",
+  "gemma": "Benden kaçıyor resmen."
+ },
+ {
+  "set": "final",
+  "id": 58,
+  "category": "argo",
+  "en": "This whole thing stinks.",
+  "gemma": "Bu iş çok şüpheli."
+ },
+ {
+  "set": "final",
+  "id": 59,
+  "category": "argo",
+  "en": "I'm gonna make him sweat.",
+  "gemma": "Onu terleteceğim."
+ },
+ {
+  "set": "final",
+  "id": 60,
+  "category": "argo",
+  "en": "You got some guts showing up here.",
+  "gemma": "Buraya gelmeye yüreğin varmış demek."
+ },
+ {
+  "set": "final",
+  "id": 61,
+  "category": "argo",
+  "en": "She dumped him on the spot.",
+  "gemma": "Onu olduğu yerde terk etti."
+ },
+ {
+  "set": "final",
+  "id": 62,
+  "category": "argo",
+  "en": "Quit your whining and move it.",
+  "gemma": "Ağzını topla da hadi yürü."
+ },
+ {
+  "set": "final",
+  "id": 63,
+  "category": "argo",
+  "en": "They were wasted before noon.",
+  "gemma": "Öğlene kadar zıvanadan çıkmışlardı."
+ },
+ {
+  "set": "final",
+  "id": 64,
+  "category": "argo",
+  "en": "Talk about bad luck, huh?",
+  "gemma": "Şanssızlık dedikleri tam da bu olsa gerek, değil mi?"
+ },
+ {
+  "set": "final",
+  "id": 65,
+  "category": "argo",
+  "en": "That's a rip-off and you know it.",
+  "gemma": "Bu resmen soygun, hem de biliyorsun."
+ },
+ {
+  "set": "final",
+  "id": 66,
+  "category": "argo",
+  "en": "Back off, or I swear I'll lose it.",
+  "gemma": "Geri çekil, yoksa yemin ederim kendimi kaybederim."
+ },
+ {
+  "set": "final",
+  "id": 67,
+  "category": "argo",
+  "en": "You're a total pushover.",
+  "gemma": "Tam bir yumuşak karınsın."
+ },
+ {
+  "set": "final",
+  "id": 68,
+  "category": "argo",
+  "en": "The cops were all over us.",
+  "gemma": "Polisler her yerdeydi."
+ },
+ {
+  "set": "final",
+  "id": 69,
+  "category": "argo",
+  "en": "Take a hike, pal.",
+  "gemma": "Defol git başımdan."
+ },
+ {
+  "set": "final",
+  "id": 70,
+  "category": "argo",
+  "en": "He's loaded, but he's cheap as hell.",
+  "gemma": "Çok zengin ama acayip cimri."
+ },
+ {
+  "set": "final",
+  "id": 71,
+  "category": "argo",
+  "en": "Spill it, or I'll make you.",
+  "gemma": "Dökül, yoksa zorla söyletirim."
+ },
+ {
+  "set": "final",
+  "id": 72,
+  "category": "argo",
+  "en": "Man, you're a lifesaver.",
+  "gemma": "Vay be, adamı kurtardın resmen."
+ },
+ {
+  "set": "final",
+  "id": 73,
+  "category": "argo",
+  "en": "We're toast if they find us here.",
+  "gemma": "Bizi burada bulurlarsa bittik."
+ },
+ {
+  "set": "final",
+  "id": 74,
+  "category": "argo",
+  "en": "I ain't buying any of it.",
+  "gemma": "Hiç inanmıyorum."
+ },
+ {
+  "set": "final",
+  "id": 75,
+  "category": "argo",
+  "en": "That's the dumbest thing I've ever heard.",
+  "gemma": "Duyduğum en saçma şey bu."
+ },
+ {
+  "set": "final",
+  "id": 76,
+  "category": "gorev",
+  "en": "Sneak past the guards and reach the vault.",
+  "gemma": "Gardiyanların yanından gizlice geç ve kasaya ulaş."
+ },
+ {
+  "set": "final",
+  "id": 77,
+  "category": "gorev",
+  "en": "Gather information from the locals.",
+  "gemma": "Yerlilerden bilgi topla."
+ },
+ {
+  "set": "final",
+  "id": 78,
+  "category": "gorev",
+  "en": "Escort the convoy to the border.",
+  "gemma": "Konvoyu sınıra kadar koru."
+ },
+ {
+  "set": "final",
+  "id": 79,
+  "category": "gorev",
+  "en": "Destroy the supply truck before it leaves.",
+  "gemma": "İkmal kamyonu gitmeden önce imha et."
+ },
+ {
+  "set": "final",
+  "id": 80,
+  "category": "gorev",
+  "en": "Steal the blueprints from the safe.",
+  "gemma": "Kasadan planları çal."
+ },
+ {
+  "set": "final",
+  "id": 81,
+  "category": "gorev",
+  "en": "Take out the sniper on the roof.",
+  "gemma": "Çatıdaki keskin nişancıyı indir."
+ },
+ {
+  "set": "final",
+  "id": 82,
+  "category": "gorev",
+  "en": "Return to the camp and report to the captain.",
+  "gemma": "Kampa dön ve kaptana haber ver."
+ },
+ {
+  "set": "final",
+  "id": 83,
+  "category": "gorev",
+  "en": "Find the missing engineer.",
+  "gemma": "Kayıp mühendisi bul."
+ },
+ {
+  "set": "final",
+  "id": 84,
+  "category": "gorev",
+  "en": "Lure the guards away from the entrance.",
+  "gemma": "Muhafızları girişten uzaklaştır."
+ },
+ {
+  "set": "final",
+  "id": 85,
+  "category": "gorev",
+  "en": "Reach the next checkpoint within two minutes.",
+  "gemma": "İki dakika içinde bir sonraki kontrol noktasına ulaş."
+ },
+ {
+  "set": "final",
+  "id": 86,
+  "category": "gorev",
+  "en": "Defeat the boss to unlock the gate.",
+  "gemma": "Kapıyı açmak için patronu yen."
+ },
+ {
+  "set": "final",
+  "id": 87,
+  "category": "gorev",
+  "en": "Search the ruins for ancient artifacts.",
+  "gemma": "Harabelerde antik eserler ara."
+ },
+ {
+  "set": "final",
+  "id": 88,
+  "category": "gorev",
+  "en": "Deliver the medicine to the village.",
+  "gemma": "İlacı köye götür."
+ },
+ {
+  "set": "final",
+  "id": 89,
+  "category": "gorev",
+  "en": "Hide in the cargo hold until the ship docks.",
+  "gemma": "Gemi yanaşana kadar kargo bölümünde saklan."
+ },
+ {
+  "set": "final",
+  "id": 90,
+  "category": "gorev",
+  "en": "Plant the explosives on the bridge supports.",
+  "gemma": "Patlayıcıları köprü ayaklarına yerleştir."
+ },
+ {
+  "set": "final",
+  "id": 91,
+  "category": "gorev",
+  "en": "Win the race to earn a new car.",
+  "gemma": "Yeni bir araba kazanmak için yarışı kazan."
+ },
+ {
+  "set": "final",
+  "id": 92,
+  "category": "gorev",
+  "en": "Protect the witness until the trial.",
+  "gemma": "Duruşma bitene kadar tanığı koru."
+ },
+ {
+  "set": "final",
+  "id": 93,
+  "category": "gorev",
+  "en": "Use the radio to call for backup.",
+  "gemma": "Yardım istemek için telsizi kullan."
+ },
+ {
+  "set": "final",
+  "id": 94,
+  "category": "gorev",
+  "en": "Craft a torch to light the tunnel.",
+  "gemma": "Tüneli aydınlatmak için bir meşale yap."
+ },
+ {
+  "set": "final",
+  "id": 95,
+  "category": "gorev",
+  "en": "Defend the gate against three waves of enemies.",
+  "gemma": "Kapıyı üç dalga düşmana karşı koru."
+ },
+ {
+  "set": "final",
+  "id": 96,
+  "category": "gorev",
+  "en": "Bribe the dock worker for information.",
+  "gemma": "Bilgi almak için liman işçisine rüşvet ver."
+ },
+ {
+  "set": "final",
+  "id": 97,
+  "category": "gorev",
+  "en": "Mission objective: Reach the evacuation zone.",
+  "gemma": "Görev hedefi: Tahliye bölgesine ulaş."
+ },
+ {
+  "set": "final",
+  "id": 98,
+  "category": "gorev",
+  "en": "New quest: The Lost Heir.",
+  "gemma": "Yeni görev: Kayıp Varis."
+ },
+ {
+  "set": "final",
+  "id": 99,
+  "category": "gorev",
+  "en": "Warning: Enemy reinforcements approaching.",
+  "gemma": "Dikkat: Düşman takviyesi geliyor."
+ },
+ {
+  "set": "final",
+  "id": 100,
+  "category": "gorev",
+  "en": "Tip: Use stealth to avoid combat.",
+  "gemma": "Çatışmaya girmemek için gizlilikten yararlan."
+ },
+ {
+  "set": "final",
+  "id": 101,
+  "category": "arayuz",
+  "en": "Press Q to switch weapons.",
+  "gemma": "Silah değiştirmek için Q tuşuna bas."
+ },
+ {
+  "set": "final",
+  "id": 102,
+  "category": "arayuz",
+  "en": "Hold Space to charge your jump.",
+  "gemma": "Zıplamanı güçlendirmek için Boşluk tuşuna basılı tut."
+ },
+ {
+  "set": "final",
+  "id": 103,
+  "category": "arayuz",
+  "en": "Press Tab to open your inventory.",
+  "gemma": "Envanterini açmak için Tab tuşuna bas."
+ },
+ {
+  "set": "final",
+  "id": 104,
+  "category": "arayuz",
+  "en": "Press E to talk.",
+  "gemma": "Konuşmak için E'ye bas."
+ },
+ {
+  "set": "final",
+  "id": 105,
+  "category": "arayuz",
+  "en": "Hold R to repair the vehicle.",
+  "gemma": "Aracı tamir etmek için R tuşuna basılı tut."
+ },
+ {
+  "set": "final",
+  "id": 106,
+  "category": "arayuz",
+  "en": "Press F to enter the building.",
+  "gemma": "Binaya girmek için F tuşuna bas."
+ },
+ {
+  "set": "final",
+  "id": 107,
+  "category": "arayuz",
+  "en": "Press G to throw a grenade.",
+  "gemma": "El bombası atmak için G tuşuna bas."
+ },
+ {
+  "set": "final",
+  "id": 108,
+  "category": "arayuz",
+  "en": "Your progress has been saved.",
+  "gemma": "İlerlemen kaydedildi."
+ },
+ {
+  "set": "final",
+  "id": 109,
+  "category": "arayuz",
+  "en": "Save failed. Please try again.",
+  "gemma": "Kaydedilemedi. Lütfen tekrar dene."
+ },
+ {
+  "set": "final",
+  "id": 110,
+  "category": "arayuz",
+  "en": "Are you sure you want to delete this save?",
+  "gemma": "Bu kayıt dosyasını silmek istediğinden emin misin?"
+ },
+ {
+  "set": "final",
+  "id": 111,
+  "category": "arayuz",
+  "en": "You cannot carry any more items.",
+  "gemma": "Çantan doldu."
+ },
+ {
+  "set": "final",
+  "id": 112,
+  "category": "arayuz",
+  "en": "This door is locked.",
+  "gemma": "Bu kapı kilitli."
+ },
+ {
+  "set": "final",
+  "id": 113,
+  "category": "arayuz",
+  "en": "You need a key to open this.",
+  "gemma": "Bunu açmak için anahtar lazım."
+ },
+ {
+  "set": "final",
+  "id": 114,
+  "category": "arayuz",
+  "en": "Weapon broken.",
+  "gemma": "Silah bozuldu."
+ },
+ {
+  "set": "final",
+  "id": 115,
+  "category": "arayuz",
+  "en": "Your health is low.",
+  "gemma": "Canın azaldı."
+ },
+ {
+  "set": "final",
+  "id": 116,
+  "category": "arayuz",
+  "en": "Stamina depleted.",
+  "gemma": "Enerji bitti."
+ },
+ {
+  "set": "final",
+  "id": 117,
+  "category": "arayuz",
+  "en": "New item acquired: Rusty Key",
+  "gemma": "Yeni eşya kazanıldı: Paslı Anahtar"
+ },
+ {
+  "set": "final",
+  "id": 118,
+  "category": "arayuz",
+  "en": "Press Esc to pause the game.",
+  "gemma": "Oyunu duraklatmak için Esc tuşuna basın."
+ },
+ {
+  "set": "final",
+  "id": 119,
+  "category": "arayuz",
+  "en": "Connection lost. Reconnecting...",
+  "gemma": "Bağlantı kesildi. Yeniden bağlanılıyor..."
+ },
+ {
+  "set": "final",
+  "id": 120,
+  "category": "arayuz",
+  "en": "Unable to load saved data.",
+  "gemma": "Kayıtlı veriler yüklenemedi."
+ },
+ {
+  "set": "final",
+  "id": 121,
+  "category": "arayuz",
+  "en": "Apply changes?",
+  "gemma": "Değişiklikleri uygula?"
+ },
+ {
+  "set": "final",
+  "id": 122,
+  "category": "arayuz",
+  "en": "Master Volume",
+  "gemma": "Ana Ses Seviyesi"
+ },
+ {
+  "set": "final",
+  "id": 123,
+  "category": "arayuz",
+  "en": "Invert Y-Axis",
+  "gemma": "Y Eksenini Ters Çevir"
+ },
+ {
+  "set": "final",
+  "id": 124,
+  "category": "arayuz",
+  "en": "Field of View",
+  "gemma": "Bakış Açısı"
+ },
+ {
+  "set": "final",
+  "id": 125,
+  "category": "arayuz",
+  "en": "Subtitles: On",
+  "gemma": "Açık"
+ },
+ {
+  "set": "final",
+  "id": 126,
+  "category": "arayuz",
+  "en": "Resolution: 1920x1080",
+  "gemma": "Çözünürlük: 1920x1080"
+ },
+ {
+  "set": "final",
+  "id": 127,
+  "category": "arayuz",
+  "en": "Brightness: 70%",
+  "gemma": "Parlaklık: %70"
+ },
+ {
+  "set": "final",
+  "id": 128,
+  "category": "arayuz",
+  "en": "Controls: Keyboard and Mouse",
+  "gemma": "Kontroller: Klavye ve Fare"
+ },
+ {
+  "set": "final",
+  "id": 129,
+  "category": "arayuz",
+  "en": "Difficulty: Veteran",
+  "gemma": "Zorluk Seviyesi: Usta"
+ },
+ {
+  "set": "final",
+  "id": 130,
+  "category": "arayuz",
+  "en": "Chapter 3: The Long Way Home",
+  "gemma": "Bölüm 3: Uzun Yolculuk"
+ },
+ {
+  "set": "final",
+  "id": 131,
+  "category": "arayuz",
+  "en": "Experience: 1200 / 2000",
+  "gemma": "Deneyim: 1200 / 2000"
+ },
+ {
+  "set": "final",
+  "id": 132,
+  "category": "arayuz",
+  "en": "Fuel: 40%",
+  "gemma": "Yakıt: %40"
+ },
+ {
+  "set": "final",
+  "id": 133,
+  "category": "arayuz",
+  "en": "Time remaining: 02:30",
+  "gemma": "Kalan süre: 02:30"
+ },
+ {
+  "set": "final",
+  "id": 134,
+  "category": "arayuz",
+  "en": "Press any key to start.",
+  "gemma": "Başlamak için bir tuşa basın."
+ },
+ {
+  "set": "final",
+  "id": 135,
+  "category": "arayuz",
+  "en": "Hold Left Click to aim.",
+  "gemma": "Nişan almak için sol tıkı basılı tut."
+ },
+ {
+  "set": "final",
+  "id": 136,
+  "category": "arayuz",
+  "en": "Release to throw.",
+  "gemma": "Fırlatmak için bırak."
+ },
+ {
+  "set": "final",
+  "id": 137,
+  "category": "arayuz",
+  "en": "Loading next area...",
+  "gemma": "Bir sonraki bölge yükleniyor..."
+ },
+ {
+  "set": "final",
+  "id": 138,
+  "category": "arayuz",
+  "en": "Your vehicle has been destroyed.",
+  "gemma": "Aracın hurdaya döndü."
+ },
+ {
+  "set": "final",
+  "id": 139,
+  "category": "arayuz",
+  "en": "Enemy spotted!",
+  "gemma": "Düşman görüldü!"
+ },
+ {
+  "set": "final",
+  "id": 140,
+  "category": "arayuz",
+  "en": "You are being hunted.",
+  "gemma": "Avlanıyorsun."
+ },
+ {
+  "set": "final",
+  "id": 141,
+  "category": "resmi",
+  "en": "The council has spoken, and its word is final.",
+  "gemma": "Konsey kararını verdi ve bu karar kesindir."
+ },
+ {
+  "set": "final",
+  "id": 142,
+  "category": "resmi",
+  "en": "Let it be known that the crown forgives no traitor.",
+  "gemma": "Bilsinler ki taç, haini asla affetmez."
+ },
+ {
+  "set": "final",
+  "id": 143,
+  "category": "resmi",
+  "en": "Many have fallen in defense of these walls.",
+  "gemma": "Bu duvarları savunurken pek çok kişi can verdi."
+ },
+ {
+  "set": "final",
+  "id": 144,
+  "category": "resmi",
+  "en": "The old kingdom lies buried beneath the sand.",
+  "gemma": "Eski krallık kumların altında gömülü kalmış."
+ },
+ {
+  "set": "final",
+  "id": 145,
+  "category": "resmi",
+  "en": "Our scouts report movement along the northern ridge.",
+  "gemma": "İzleme ekiplerimiz kuzey sırt boyunca hareketlilik bildirdi."
+ },
+ {
+  "set": "final",
+  "id": 146,
+  "category": "resmi",
+  "en": "The ritual must be completed before the eclipse.",
+  "gemma": "Güneş tutulması başlamadan önce ayini tamamlanmalı."
+ },
+ {
+  "set": "final",
+  "id": 147,
+  "category": "resmi",
+  "en": "I pledge my sword to your cause.",
+  "gemma": "Senin davan için kılıcımı adıyorum."
+ },
+ {
+  "set": "final",
+  "id": 148,
+  "category": "resmi",
+  "en": "Only the worthy may pass through these gates.",
+  "gemma": "Bu kapılardan sadece layık olanlar geçebilir."
+ },
+ {
+  "set": "final",
+  "id": 149,
+  "category": "resmi",
+  "en": "The captain's log: day forty-two at sea.",
+  "gemma": "Kaptan günlüğü: denizde kırk ikinci gün."
+ },
+ {
+  "set": "final",
+  "id": 150,
+  "category": "resmi",
+  "en": "Citizens of the republic, tonight we stand together.",
+  "gemma": "Cumhuriyetin vatandaşları, bu gece omuz omuza duruyoruz."
+ },
+ {
+  "set": "final",
+  "id": 151,
+  "category": "resmi",
+  "en": "A sacrifice is demanded by the ancient law.",
+  "gemma": "Kadim kanun bir kurban istiyor."
+ },
+ {
+  "set": "final",
+  "id": 152,
+  "category": "resmi",
+  "en": "The signal originates from deep within the asteroid belt.",
+  "gemma": "Sinyal, asteroid kuşağının derinliklerinden geliyor."
+ },
+ {
+  "set": "final",
+  "id": 153,
+  "category": "resmi",
+  "en": "All hands, brace for impact.",
+  "gemma": "Herkes hazırlansın, darbe geliyor!"
+ },
+ {
+  "set": "final",
+  "id": 154,
+  "category": "resmi",
+  "en": "The prince has vanished without a trace.",
+  "gemma": "Prens izi sürülemez bir şekilde ortadan kayboldu."
+ },
+ {
+  "set": "final",
+  "id": 155,
+  "category": "resmi",
+  "en": "Your loyalty will not be forgotten.",
+  "gemma": "Sadakatin unutulmayacak."
+ },
+ {
+  "set": "final",
+  "id": 156,
+  "category": "resmi",
+  "en": "May the light guide you through the darkness.",
+  "gemma": "Işık karanlıkta yolunu aydınlatsın."
+ },
+ {
+  "set": "final",
+  "id": 157,
+  "category": "resmi",
+  "en": "We regret to inform you that the contract has been terminated.",
+  "gemma": "Üzülerek belirtmek isteriz ki sözleşme feshedilmiştir."
+ },
+ {
+  "set": "final",
+  "id": 158,
+  "category": "resmi",
+  "en": "The experiment has exceeded all expectations.",
+  "gemma": "Deney tüm beklentileri aştı."
+ },
+ {
+  "set": "final",
+  "id": 159,
+  "category": "resmi",
+  "en": "Rumors of a hidden city have reached the capital.",
+  "gemma": "Gizli bir şehre dair söylentiler başkente ulaştı."
+ },
+ {
+  "set": "final",
+  "id": 160,
+  "category": "resmi",
+  "en": "The oracle speaks in riddles, but her words are true.",
+  "gemma": "Kahin bilmece gibi konuşur ama sözleri doğrudur."
+ },
+ {
+  "set": "final",
+  "id": 161,
+  "category": "resmi",
+  "en": "Every soldier knows the cost of freedom.",
+  "gemma": "Özgürlüğün bedelini her asker bilir."
+ },
+ {
+  "set": "final",
+  "id": 162,
+  "category": "resmi",
+  "en": "The archives were sealed over a century ago.",
+  "gemma": "Arşivler yüz yıl önce mühürlendi."
+ },
+ {
+  "set": "final",
+  "id": 163,
+  "category": "resmi",
+  "en": "Fortune favors the bold.",
+  "gemma": "Cesaret ödüllendirilir."
+ },
+ {
+  "set": "final",
+  "id": 164,
+  "category": "resmi",
+  "en": "The tournament will begin at first light.",
+  "gemma": "Turnuva şafak vakti başlayacak."
+ },
+ {
+  "set": "final",
+  "id": 165,
+  "category": "resmi",
+  "en": "Warning, hull integrity at thirty percent.",
+  "gemma": "Uyarı, gövde bütünlüğü yüzde otuzda."
+ },
+ {
+  "set": "final",
+  "id": 166,
+  "category": "resmi",
+  "en": "By decree of the emperor, this city is under quarantine.",
+  "gemma": "İmparatorluk kararıyla bu şehir karantinaya alındı."
+ },
+ {
+  "set": "final",
+  "id": 167,
+  "category": "resmi",
+  "en": "The dragon has not been seen for a thousand years.",
+  "gemma": "Ejderha bin yıldır görülmedi."
+ },
+ {
+  "set": "final",
+  "id": 168,
+  "category": "resmi",
+  "en": "The mission is classified. You will not discuss it.",
+  "gemma": "Görev gizli. Hakkında tek kelime bile konuşmayacaksın."
+ },
+ {
+  "set": "final",
+  "id": 169,
+  "category": "resmi",
+  "en": "Welcome aboard, Commander.",
+  "gemma": "Hoş geldin, Komutan."
+ },
+ {
+  "set": "final",
+  "id": 170,
+  "category": "resmi",
+  "en": "The bells toll for those we have lost.",
+  "gemma": "Kaybettiklerimiz için çanlar çalıyor."
+ },
+ {
+  "set": "final",
+  "id": 171,
+  "category": "kisa",
+  "en": "Hold on!",
+  "gemma": "Dur bakalım!"
+ },
+ {
+  "set": "final",
+  "id": 172,
+  "category": "kisa",
+  "en": "Look out!",
+  "gemma": "Dikkat et!"
+ },
+ {
+  "set": "final",
+  "id": 173,
+  "category": "kisa",
+  "en": "On my mark.",
+  "gemma": "Hazır olduğumda."
+ },
+ {
+  "set": "final",
+  "id": 174,
+  "category": "kisa",
+  "en": "Stay down!",
+  "gemma": "Yere yat!"
+ },
+ {
+  "set": "final",
+  "id": 175,
+  "category": "kisa",
+  "en": "He's got a gun!",
+  "gemma": "Silahlı!"
+ },
+ {
+  "set": "final",
+  "id": 176,
+  "category": "kisa",
+  "en": "Nice work.",
+  "gemma": "Aferin."
+ },
+ {
+  "set": "final",
+  "id": 177,
+  "category": "kisa",
+  "en": "Not so fast.",
+  "gemma": "Dur bakalım."
+ },
+ {
+  "set": "final",
+  "id": 178,
+  "category": "kisa",
+  "en": "Get in!",
+  "gemma": "Hadi gir!"
+ },
+ {
+  "set": "final",
+  "id": 179,
+  "category": "kisa",
+  "en": "Hands up!",
+  "gemma": "Eller yukarı!"
+ },
+ {
+  "set": "final",
+  "id": 180,
+  "category": "kisa",
+  "en": "Wait here.",
+  "gemma": "Burada bekle."
+ },
+ {
+  "set": "final",
+  "id": 181,
+  "category": "kisa",
+  "en": "Keep moving!",
+  "gemma": "Durma, devam et!"
+ },
+ {
+  "set": "final",
+  "id": 182,
+  "category": "kisa",
+  "en": "I'm out of ammo!",
+  "gemma": "Mermim bitti!"
+ },
+ {
+  "set": "final",
+  "id": 183,
+  "category": "kisa",
+  "en": "Enemy down.",
+  "gemma": "Düşman etkisiz hale getirildi."
+ },
+ {
+  "set": "final",
+  "id": 184,
+  "category": "kisa",
+  "en": "Follow me.",
+  "gemma": "Beni takip et."
+ },
+ {
+  "set": "final",
+  "id": 185,
+  "category": "kisa",
+  "en": "Stand back!",
+  "gemma": "Geri çekil!"
+ },
+ {
+  "set": "final",
+  "id": 186,
+  "category": "baglam",
+  "en": "Who has the code?",
+  "gemma": "Kod kimde?"
+ },
+ {
+  "set": "final",
+  "id": 187,
+  "category": "baglam",
+  "en": "Almost. It needs fuel.",
+  "gemma": "Neredeyse. Yakıta ihtiyacı var."
+ },
+ {
+  "set": "final",
+  "id": 188,
+  "category": "baglam",
+  "en": "That's not like him.",
+  "gemma": "O ona hiç yakışmaz."
+ },
+ {
+  "set": "final",
+  "id": 189,
+  "category": "baglam",
+  "en": "Is it deep?",
+  "gemma": "Derin mi?"
+ },
+ {
+  "set": "final",
+  "id": 190,
+  "category": "baglam",
+  "en": "It came from upstairs.",
+  "gemma": "Yukarıdan geldi."
+ },
+ {
+  "set": "final",
+  "id": 191,
+  "category": "baglam",
+  "en": "Then where is she?",
+  "gemma": "Peki, o nerede?"
+ },
+ {
+  "set": "final",
+  "id": 192,
+  "category": "baglam",
+  "en": "Which one?",
+  "gemma": "Hangisi?"
+ },
+ {
+  "set": "final",
+  "id": 193,
+  "category": "baglam",
+  "en": "Be careful.",
+  "gemma": "Dikkat et."
+ },
+ {
+  "set": "final",
+  "id": 194,
+  "category": "baglam",
+  "en": "That gives us ten minutes.",
+  "gemma": "Bu bize on dakika kazandırıyor."
+ },
+ {
+  "set": "final",
+  "id": 195,
+  "category": "baglam",
+  "en": "It's just a scratch.",
+  "gemma": "Sadece bir çizik."
+ },
+ {
+  "set": "final",
+  "id": 196,
+  "category": "baglam",
+  "en": "Then we go through the alley.",
+  "gemma": "Sonra ara sokaktan geçiyoruz."
+ },
+ {
+  "set": "final",
+  "id": 197,
+  "category": "baglam",
+  "en": "Give me a minute.",
+  "gemma": "Bir dakika ver."
+ },
+ {
+  "set": "final",
+  "id": 198,
+  "category": "baglam",
+  "en": "Move aside.",
+  "gemma": "Çekil kenara."
+ },
+ {
+  "set": "final",
+  "id": 199,
+  "category": "baglam",
+  "en": "Nobody sent me.",
+  "gemma": "Beni kimse göndermedi."
+ },
+ {
+  "set": "final",
+  "id": 200,
+  "category": "baglam",
+  "en": "Bad idea.",
+  "gemma": "Kötü fikir."
+ },
+ {
+  "set": "holdout",
+  "id": 0,
+  "category": "resmi",
+  "en": "Arise, and be known henceforth as Lady Elara of the Vale.",
+  "ref": "Kalk, bundan böyle Vadi'nin Leydisi Elara olarak anıl.",
+  "gemma": "Kalk ve bundan böyle Vadi Hanımı Elara olarak tanın."
+ },
+ {
+  "set": "holdout",
+  "id": 1,
+  "category": "resmi",
+  "en": "Let sleeping dogs lie, my friend.",
+  "ref": "Uyuyan yılanın kuyruğuna basma, dostum.",
+  "gemma": "Uyuyan köpeği uyandırma dostum."
+ },
+ {
+  "set": "holdout",
+  "id": 2,
+  "category": "deyim1",
+  "en": "Speak of the devil, here he comes.",
+  "ref": "Lafın üstüne geldi, işte geliyor.",
+  "gemma": "Nazar değmesin, işte geldi."
+ },
+ {
+  "set": "holdout",
+  "id": 3,
+  "category": "resmi",
+  "en": "The temple bells fell silent on the night of the plague.",
+  "ref": "Veba gecesinde tapınak çanları sustu.",
+  "gemma": "Veba gecesinde tapınak çanları susmuştu."
+ },
+ {
+  "set": "holdout",
+  "id": 4,
+  "category": "resmi",
+  "en": "Let us not squabble while the kingdom burns.",
+  "ref": "Krallık yanarken didişmeyelim.",
+  "gemma": "Krallık yanarken birbirimizi yiyelim."
+ },
+ {
+  "set": "holdout",
+  "id": 5,
+  "category": "resmi",
+  "en": "All parties are hereby summoned to appear in court.",
+  "ref": "Tüm taraflar işbu belgeyle mahkemeye çağrılmıştır.",
+  "gemma": "Tüm tarafların mahkemeye çıkması için çağrısı yapılmıştır."
+ },
+ {
+  "set": "holdout",
+  "id": 6,
+  "category": "deyim2",
+  "en": "They're closing in on us from all sides.",
+  "ref": "Her yandan bizi sıkıştırıyorlar.",
+  "gemma": "Her yönden üzerimize çöküyorlar."
+ },
+ {
+  "set": "holdout",
+  "id": 7,
+  "category": "argo1",
+  "en": "You owe me, and I always collect.",
+  "ref": "Bana borçlusun ve ben her zaman alırım.",
+  "gemma": "Borcun var bana, ben de her zaman tahsilimi alırım."
+ },
+ {
+  "set": "holdout",
+  "id": 8,
+  "category": "argo1",
+  "en": "Not so brave now, are you?",
+  "ref": "Şimdi o kadar cesur değilsin, değil mi?",
+  "gemma": "Şimdi pek cesur değilsin, değil mi?"
+ },
+ {
+  "set": "holdout",
+  "id": 9,
+  "category": "deyim1",
+  "en": "I slept like a log last night.",
+  "ref": "Dün gece kütük gibi uyudum.",
+  "gemma": "Dün gece mışıl mışıl uyudum."
+ },
+ {
+  "set": "holdout",
+  "id": 10,
+  "category": "resmi",
+  "en": "The verdict cannot be appealed.",
+  "ref": "Karara itiraz edilemez.",
+  "gemma": "Karar kesinleşti, itiraz edilemez."
+ },
+ {
+  "set": "holdout",
+  "id": 11,
+  "category": "resmi",
+  "en": "So ended the golden age of the elves.",
+  "ref": "Elflerin altın çağı böyle sona erdi.",
+  "gemma": "Böylece elflerin altın çağı sona erdi."
+ },
+ {
+  "set": "holdout",
+  "id": 12,
+  "category": "deyim2",
+  "en": "It's all hands on deck, people!",
+  "ref": "Herkes iş başına, arkadaşlar!",
+  "gemma": "Herkes elini taşın altına koysun!"
+ },
+ {
+  "set": "holdout",
+  "id": 13,
+  "category": "deyim2",
+  "en": "I thought we were on the same side.",
+  "ref": "Aynı tarafta olduğumuzu sanıyordum.",
+  "gemma": "Aynı tarafta olduğumuzu sanıyordum."
+ },
+ {
+  "set": "holdout",
+  "id": 14,
+  "category": "deyim1",
+  "en": "You really put your foot in it this time.",
+  "ref": "Bu sefer gerçekten pot kırdın.",
+  "gemma": "Bu sefer gerçekten ayağını kaydırdın."
+ },
+ {
+  "set": "holdout",
+  "id": 15,
+  "category": "argo1",
+  "en": "He got what was coming to him.",
+  "ref": "Hak ettiğini buldu.",
+  "gemma": "Hak etti."
+ },
+ {
+  "set": "holdout",
+  "id": 16,
+  "category": "gorev",
+  "en": "Fan out and search every room.",
+  "ref": "Etrafa dağılın ve her odayı arayın.",
+  "gemma": "Dağılın ve her odayı arayın."
+ },
+ {
+  "set": "holdout",
+  "id": 17,
+  "category": "resmi",
+  "en": "I am but a humble servant of the crown.",
+  "ref": "Ben tacın mütevazı bir kuluyum.",
+  "gemma": "Ben sadece tacın mütevazı bir hizmetkarıyım."
+ },
+ {
+  "set": "holdout",
+  "id": 18,
+  "category": "argo2",
+  "en": "Count the chips, the house always wins.",
+  "ref": "Fişleri say, kazanan hep kumarhanedir.",
+  "gemma": "Çipleri say, kasanın kazandığı her zaman bellidir."
+ },
+ {
+  "set": "holdout",
+  "id": 19,
+  "category": "gorev",
+  "en": "Ease the door open and peek inside.",
+  "ref": "Kapıyı yavaşça aç ve içeri bak.",
+  "gemma": "Kapıyı hafifçe arala ve içeriye bir göz at."
+ },
+ {
+  "set": "holdout",
+  "id": 20,
+  "category": "gorev",
+  "en": "Shut down the reactor before it melts down.",
+  "ref": "Reaktör erimeden kapat.",
+  "gemma": "Reaktör erimeden kapat."
+ },
+ {
+  "set": "holdout",
+  "id": 21,
+  "category": "resmi",
+  "en": "The fortress has never fallen, and it never shall.",
+  "ref": "Kale hiç düşmedi ve düşmeyecek de.",
+  "gemma": "Kale hiç düşmedi, asla düşmeyecek de."
+ },
+ {
+  "set": "holdout",
+  "id": 22,
+  "category": "deyim1",
+  "en": "Steady as she goes, boys.",
+  "ref": "Böyle devam, çocuklar.",
+  "gemma": "İstikrarı bozmayın çocuklar."
+ },
+ {
+  "set": "holdout",
+  "id": 23,
+  "category": "deyim2",
+  "en": "He ate his words.",
+  "ref": "Söylediklerini yuttu.",
+  "gemma": "Sözünü çiğnedi."
+ },
+ {
+  "set": "holdout",
+  "id": 24,
+  "category": "deyim2",
+  "en": "A stitch in time saves nine.",
+  "ref": "Zamanında atılan bir dikiş dokuz dikişten kurtarır.",
+  "gemma": "Zamanında alınan önlem, sonradan büyük işlere yol açmaz."
+ },
+ {
+  "set": "holdout",
+  "id": 25,
+  "category": "gorev",
+  "en": "Bandage the wound to stop the bleeding.",
+  "ref": "Kanamayı durdurmak için yarayı sar.",
+  "gemma": "Kanamanın durması için yarayı sar."
+ },
+ {
+  "set": "holdout",
+  "id": 26,
+  "category": "deyim2",
+  "en": "I trusted you, and you stabbed me in the back.",
+  "ref": "Sana güvendim, sen de beni arkadan vurdun.",
+  "gemma": "Sana güvendim, sen de arkamdan vurdun."
+ },
+ {
+  "set": "holdout",
+  "id": 27,
+  "category": "argo2",
+  "en": "The thief stole the painting right off the wall.",
+  "ref": "Hırsız tabloyu duvardan alıp götürdü.",
+  "gemma": "Hırsız tabloyu duvardan çekip aldı."
+ },
+ {
+  "set": "holdout",
+  "id": 28,
+  "category": "resmi",
+  "en": "The crown prince shall wed before the harvest.",
+  "ref": "Veliaht, hasattan önce evlenecek.",
+  "gemma": "Veliaht prens hasat vaktinden önce evlenecek."
+ },
+ {
+  "set": "holdout",
+  "id": 29,
+  "category": "deyim2",
+  "en": "They fought like cats and dogs.",
+  "ref": "Kedi köpek gibi kavga ettiler.",
+  "gemma": "Birbirlerine kedi köpek gibi saldırdılar."
+ },
+ {
+  "set": "holdout",
+  "id": 30,
+  "category": "deyim1",
+  "en": "Better luck next time, rookie.",
+  "ref": "Bir dahaki sefere daha şanslı olursun, çaylak.",
+  "gemma": "Bir dahaki sefere artık, çaylak."
+ },
+ {
+  "set": "holdout",
+  "id": 31,
+  "category": "deyim2",
+  "en": "That bridge is burned for good.",
+  "ref": "O köprüyü attık, bir daha dönüş yok.",
+  "gemma": "O köprü artık tamamen yıkıldı."
+ },
+ {
+  "set": "holdout",
+  "id": 32,
+  "category": "deyim2",
+  "en": "He hit me below the belt.",
+  "ref": "Bana alçakça vurdu.",
+  "gemma": "Bana çamur attı."
+ },
+ {
+  "set": "holdout",
+  "id": 33,
+  "category": "argo1",
+  "en": "You look like crap.",
+  "ref": "Berbat görünüyorsun.",
+  "gemma": "Perişan görünüyorsun."
+ },
+ {
+  "set": "holdout",
+  "id": 34,
+  "category": "deyim2",
+  "en": "He pocketed the whole reward.",
+  "ref": "Ödülün hepsini cebe indirdi.",
+  "gemma": "Ödülün tamamını cebine attı."
+ },
+ {
+  "set": "holdout",
+  "id": 35,
+  "category": "gorev",
+  "en": "Quest accepted: The Lost Crown.",
+  "ref": "Görev kabul edildi: Kayıp Taç.",
+  "gemma": "Görev kabul edildi: Kayıp Taç."
+ },
+ {
+  "set": "holdout",
+  "id": 36,
+  "category": "deyim1",
+  "en": "Patience is a virtue, kid.",
+  "ref": "Sabır bir erdemdir, evlat.",
+  "gemma": "Sabırlı ol evlat, sabır erdemdir."
+ },
+ {
+  "set": "holdout",
+  "id": 37,
+  "category": "resmi",
+  "en": "The sword sings when evil is near.",
+  "ref": "Kötülük yakınlaşınca kılıç şarkı söyler.",
+  "gemma": "Kötülük yaklaştığında kılıç şarkı söyler."
+ },
+ {
+  "set": "holdout",
+  "id": 38,
+  "category": "gorev",
+  "en": "Seal the tunnel behind us.",
+  "ref": "Arkamızdaki tüneli kapat.",
+  "gemma": "Arkamızdaki tüneli kapatın."
+ },
+ {
+  "set": "holdout",
+  "id": 39,
+  "category": "gorev",
+  "en": "Trade your furs for supplies at the post.",
+  "ref": "Kürklerini ticaret merkezinde erzakla takas et.",
+  "gemma": "Postanede kürklerini erzakla takas et."
+ },
+ {
+  "set": "holdout",
+  "id": 40,
+  "category": "gorev",
+  "en": "Use the vents to get to the control room.",
+  "ref": "Havalandırmaları kullanarak kontrol odasına ulaş.",
+  "gemma": "Kontrol odasına ulaşmak için havalandırmaları kullan."
+ },
+ {
+  "set": "holdout",
+  "id": 41,
+  "category": "argo1",
+  "en": "Yo, I got your back, fam.",
+  "ref": "Yo, arkandayım kanka.",
+  "gemma": "Merak etme kanka, yanındayım."
+ },
+ {
+  "set": "holdout",
+  "id": 42,
+  "category": "argo1",
+  "en": "Wow, you're even uglier up close.",
+  "ref": "Vay, yakından daha da çirkinsin.",
+  "gemma": "Vay canına, yakından daha da çirkinsin."
+ },
+ {
+  "set": "holdout",
+  "id": 43,
+  "category": "deyim2",
+  "en": "He's a fair-weather friend.",
+  "ref": "O iyi günün dostu.",
+  "gemma": "İyi gününde yanındaki adam."
+ },
+ {
+  "set": "holdout",
+  "id": 44,
+  "category": "gorev",
+  "en": "Make a run for the truck on my count.",
+  "ref": "Ben sayınca kamyona doğru koş.",
+  "gemma": "Ben \"başla\" deyince kamyona doğru koş."
+ },
+ {
+  "set": "holdout",
+  "id": 45,
+  "category": "deyim1",
+  "en": "I'm up to my neck in work.",
+  "ref": "Boğazıma kadar işe battım.",
+  "gemma": "Boğuluyorum işin içinde."
+ },
+ {
+  "set": "holdout",
+  "id": 46,
+  "category": "resmi",
+  "en": "The cult worships a being older than time itself.",
+  "ref": "Tarikat, zamanın kendisinden daha eski bir varlığa tapıyor.",
+  "gemma": "Tarikat, zamanın kendisinden bile daha eski bir varlığa tapıyor."
+ },
+ {
+  "set": "holdout",
+  "id": 47,
+  "category": "argo2",
+  "en": "You took the money and ran.",
+  "ref": "Parayı kaptın ve kaçtın.",
+  "gemma": "Parayı alıp kaçtın."
+ },
+ {
+  "set": "holdout",
+  "id": 48,
+  "category": "resmi",
+  "en": "Wherefore dost thou tarry, good sir?",
+  "ref": "Neden oyalanıyorsun, iyi adam?",
+  "gemma": "Neden bekliyorsun, beyefendi?"
+ },
+ {
+  "set": "holdout",
+  "id": 49,
+  "category": "deyim2",
+  "en": "I'm shaking like a leaf.",
+  "ref": "Yaprak gibi titriyorum.",
+  "gemma": "İçim içime sığmıyor, titremekten ölüyorum."
+ },
+ {
+  "set": "holdout",
+  "id": 50,
+  "category": "deyim1",
+  "en": "You expect me to swallow that story?",
+  "ref": "Bu hikâyeye inanmamı mı bekliyorsun?",
+  "gemma": "Bu hikayeye inanmamı mı bekliyorsun?"
+ },
+ {
+  "set": "holdout",
+  "id": 51,
+  "category": "argo1",
+  "en": "He's mad cool, that dude.",
+  "ref": "O adam çok havalı.",
+  "gemma": "Çok havalı adam ya."
+ },
+ {
+  "set": "holdout",
+  "id": 52,
+  "category": "resmi",
+  "en": "A trial by jury of one's peers is the right of every citizen.",
+  "ref": "Eşitleri tarafından jüri önünde yargılanmak her yurttaşın hakkıdır.",
+  "gemma": "Her vatandaşın kendi akranları önünde yargılanma hakkı vardır."
+ },
+ {
+  "set": "holdout",
+  "id": 53,
+  "category": "argo1",
+  "en": "Ugh, that smells disgusting.",
+  "ref": "Ah, kokusu iğrenç.",
+  "gemma": "Öf, ne kadar kötü kokuyor ya."
+ },
+ {
+  "set": "holdout",
+  "id": 54,
+  "category": "deyim2",
+  "en": "Death comes for us all in the end.",
+  "ref": "Ölüm sonunda hepimizi bulur.",
+  "gemma": "Sonunda hepimiz öleceğiz."
+ },
+ {
+  "set": "holdout",
+  "id": 55,
+  "category": "argo2",
+  "en": "The accountant cooked the books for years before anyone noticed.",
+  "ref": "Muhasebeci yıllarca hesaplarda hile yaptı, kimse fark etmedi.",
+  "gemma": "Muhasebeci kimse fark etmeden yıllarca defterleri karaladı."
+ },
+ {
+  "set": "holdout",
+  "id": 56,
+  "category": "resmi",
+  "en": "Objection, Your Honour. The question is leading.",
+  "ref": "İtiraz ediyorum, sayın hâkim. Soru yönlendirici.",
+  "gemma": "İtiraz ediyorum Sayın Hakim. Bu soru yönlendirici."
+ },
+ {
+  "set": "holdout",
+  "id": 57,
+  "category": "gorev",
+  "en": "Collect ten pelts and bring them to the trader.",
+  "ref": "On post topla ve tüccara götür.",
+  "gemma": "On tane kürk topla ve tüccara götür."
+ },
+ {
+  "set": "holdout",
+  "id": 58,
+  "category": "deyim2",
+  "en": "Back me up on this one.",
+  "ref": "Bu konuda beni destekle.",
+  "gemma": "Bana bu konuda destek ver."
+ },
+ {
+  "set": "holdout",
+  "id": 59,
+  "category": "gorev",
+  "en": "Swing across on the rope.",
+  "ref": "Halatla karşıya sallan.",
+  "gemma": "İpe tutunup sallanarak geç."
+ },
+ {
+  "set": "holdout",
+  "id": 60,
+  "category": "resmi",
+  "en": "He who sheds innocent blood shall be cursed for all eternity.",
+  "ref": "Masum kanı döken, sonsuza dek lanetlenecek.",
+  "gemma": "Masum kan dökenin laneti sonsuza dek sürer."
+ },
+ {
+  "set": "holdout",
+  "id": 61,
+  "category": "deyim2",
+  "en": "Hit them hard and fast.",
+  "ref": "Hızlı ve sert vurun.",
+  "gemma": "Sert ve hızlı vur."
+ },
+ {
+  "set": "holdout",
+  "id": 62,
+  "category": "argo1",
+  "en": "Jeez, give me a second to breathe!",
+  "ref": "Allah aşkına, nefes almam için bir saniye ver!",
+  "gemma": "Of, bir nefes alayım be!"
+ },
+ {
+  "set": "holdout",
+  "id": 63,
+  "category": "argo2",
+  "en": "We can do this the easy way or the hard way.",
+  "ref": "Bunu ya kolay yoldan yaparız ya da zor yoldan.",
+  "gemma": "İster usulüne uygun yapalım, ister zor yoldan."
+ },
+ {
+  "set": "holdout",
+  "id": 64,
+  "category": "resmi",
+  "en": "The soldiers laid down their arms one by one.",
+  "ref": "Askerler silahlarını teker teker bıraktı.",
+  "gemma": "Askerler birer birer silah bıraktı."
+ },
+ {
+  "set": "holdout",
+  "id": 65,
+  "category": "deyim1",
+  "en": "Let that be a lesson. Never trust a thief.",
+  "ref": "Kulağına küpe olsun. Hırsıza asla güvenme.",
+  "gemma": "Bunu dersin olsun. Asla hırsıza güvenme."
+ },
+ {
+  "set": "holdout",
+  "id": 66,
+  "category": "gorev",
+  "en": "Watch out for the rotten planks!",
+  "ref": "Çürük tahtalara dikkat et!",
+  "gemma": "Çürük tahtalara dikkat et!"
+ },
+ {
+  "set": "holdout",
+  "id": 67,
+  "category": "deyim2",
+  "en": "He's lost his marbles.",
+  "ref": "Aklını oynatmış.",
+  "gemma": "Çıldırmış bu adam."
+ },
+ {
+  "set": "holdout",
+  "id": 68,
+  "category": "argo1",
+  "en": "Alright, big boy, let's see what you've got.",
+  "ref": "Pekâlâ, koca adam, bakalım neler yapabiliyorsun.",
+  "gemma": "Hadi bakalım büyük adam, görelim bakalım ne yapabiliyorsun."
+ },
+ {
+  "set": "holdout",
+  "id": 69,
+  "category": "argo2",
+  "en": "I need a new identity and a one-way ticket out of here.",
+  "ref": "Yeni bir kimliğe ve buradan tek yönlü bir bilete ihtiyacım var.",
+  "gemma": "Yeni bir kimliğe ve buradan tek yönlü bir biletle kaçışa ihtiyacım var."
+ },
+ {
+  "set": "holdout",
+  "id": 70,
+  "category": "deyim1",
+  "en": "The thief was caught red-handed.",
+  "ref": "Hırsız suçüstü yakalandı.",
+  "gemma": "Hırsız suçüstü yakalandı."
+ },
+ {
+  "set": "holdout",
+  "id": 71,
+  "category": "argo1",
+  "en": "Looking sharp, boss!",
+  "ref": "Şık görünüyorsun patron!",
+  "gemma": "Harika görünüyorsun şef!"
+ },
+ {
+  "set": "holdout",
+  "id": 72,
+  "category": "resmi",
+  "en": "You are entitled to a fair hearing.",
+  "ref": "Adil bir yargılanma hakkınız var.",
+  "gemma": "Adil yargılanma hakkınız var."
+ },
+ {
+  "set": "holdout",
+  "id": 73,
+  "category": "argo1",
+  "en": "We showed them who's boss!",
+  "ref": "Onlara kimin patron olduğunu gösterdik!",
+  "gemma": "Kimin patron olduğunu gösterdik!"
+ },
+ {
+  "set": "holdout",
+  "id": 74,
+  "category": "gorev",
+  "en": "Dig in; reinforcements are on the way.",
+  "ref": "Mevzilenin; takviye yolda.",
+  "gemma": "Siper alın; takviye geliyor."
+ },
+ {
+  "set": "holdout",
+  "id": 75,
+  "category": "gorev",
+  "en": "The vault has two layers of security, so go slow.",
+  "ref": "Kasada iki kat güvenlik var, o yüzden yavaş git.",
+  "gemma": "Hazinenin iki katmanlı güvenliği var, o yüzden yavaş ilerle."
+ },
+ {
+  "set": "holdout",
+  "id": 76,
+  "category": "resmi",
+  "en": "The council made a mountain out of a molehill.",
+  "ref": "Konsey pireyi deve yaptı.",
+  "gemma": "Konseyin yaptığı şey, samanlıkta saman aramak gibiydi."
+ },
+ {
+  "set": "holdout",
+  "id": 77,
+  "category": "deyim1",
+  "en": "Don't get your hopes up.",
+  "ref": "Fazla umutlanma.",
+  "gemma": "Çok ümitlenme."
+ },
+ {
+  "set": "holdout",
+  "id": 78,
+  "category": "gorev",
+  "en": "Hear me out before you decide.",
+  "ref": "Karar vermeden önce beni sonuna kadar dinle.",
+  "gemma": "Karar vermeden önce beni bir dinle."
+ },
+ {
+  "set": "holdout",
+  "id": 79,
+  "category": "argo2",
+  "en": "He's a pickpocket who works the train station.",
+  "ref": "Tren istasyonunda çalışan bir yankesici.",
+  "gemma": "Tren istasyonunda çalışan bir yankesici."
+ },
+ {
+  "set": "holdout",
+  "id": 80,
+  "category": "gorev",
+  "en": "Think it over and give me your answer tomorrow.",
+  "ref": "İyice düşün ve cevabını yarın bana ver.",
+  "gemma": "Biraz düşün de cevabını yarın ver."
+ },
+ {
+  "set": "holdout",
+  "id": 81,
+  "category": "deyim1",
+  "en": "Mind your own business, stranger.",
+  "ref": "Kendi işine bak, yabancı.",
+  "gemma": "Sana ne, yabancı."
+ },
+ {
+  "set": "holdout",
+  "id": 82,
+  "category": "argo1",
+  "en": "Look at this guy, all swagger and no brains.",
+  "ref": "Şuna bakın, hava var ama beyin yok.",
+  "gemma": "Şu tipe bak, boş boş hava atıyor ama kılıfı yok."
+ },
+ {
+  "set": "holdout",
+  "id": 83,
+  "category": "argo2",
+  "en": "The race is going to come down to the wire.",
+  "ref": "Yarış son ana kadar çekişmeli sürecek.",
+  "gemma": "Yarış son ana kadar kafa kafaya gidecek."
+ },
+ {
+  "set": "holdout",
+  "id": 84,
+  "category": "gorev",
+  "en": "Don't give up on me now.",
+  "ref": "Şimdi beni yarı yolda bırakma.",
+  "gemma": "Şimdi pes etme."
+ },
+ {
+  "set": "holdout",
+  "id": 85,
+  "category": "gorev",
+  "en": "Approach from behind and press Q for a silent takedown.",
+  "ref": "Arkadan yaklaş ve sessiz saldırı için Q tuşuna bas.",
+  "gemma": "Arkadan yaklaş ve sessizce etkisiz hale getirmek için Q tuşuna bas."
+ },
+ {
+  "set": "holdout",
+  "id": 86,
+  "category": "deyim1",
+  "en": "Put your money where your mouth is.",
+  "ref": "Lafın arkasında dur.",
+  "gemma": "Boş konuşma, icraata geç."
+ },
+ {
+  "set": "holdout",
+  "id": 87,
+  "category": "deyim2",
+  "en": "She's barking up the wrong tree.",
+  "ref": "Yanlış kapıyı çalıyorsun.",
+  "gemma": "Yanlış kapıyı çalıyor."
+ },
+ {
+  "set": "holdout",
+  "id": 88,
+  "category": "gorev",
+  "en": "Lay low until the heat dies down.",
+  "ref": "Ortalık yatışana kadar ortalarda görünme.",
+  "gemma": "Ortalık sakinleşene kadar sakın."
+ },
+ {
+  "set": "holdout",
+  "id": 89,
+  "category": "argo1",
+  "en": "That's fire, no cap.",
+  "ref": "Bu efsane, yalan yok.",
+  "gemma": "Harbi çok iyi, yalan yok."
+ },
+ {
+  "set": "holdout",
+  "id": 90,
+  "category": "argo1",
+  "en": "Shoot, I plum forgot.",
+  "ref": "Eyvah, tamamen unutmuşum.",
+  "gemma": "Hay aksi, tamamen aklımdan çıkmış."
+ },
+ {
+  "set": "holdout",
+  "id": 91,
+  "category": "gorev",
+  "en": "Lock on to a target with the middle mouse button.",
+  "ref": "Fare tekerleği tuşuyla bir hedefe kilitlen.",
+  "gemma": "Orta fare düğmesiyle bir hedefe kilitlen."
+ },
+ {
+  "set": "holdout",
+  "id": 92,
+  "category": "resmi",
+  "en": "And so the legend of the lost king was born.",
+  "ref": "Böylece kayıp kralın efsanesi doğdu.",
+  "gemma": "Böylece kayıp kralın efsanesi doğdu."
+ },
+ {
+  "set": "holdout",
+  "id": 93,
+  "category": "argo2",
+  "en": "The crowd is cheering as the drivers line up at the start.",
+  "ref": "Pilotlar start çizgisine dizilirken kalabalık tezahürat yapıyor.",
+  "gemma": "Sürücüler başlangıç çizgisinde dizilirken kalabalık coşkuyla tezahürat yapıyor."
+ },
+ {
+  "set": "holdout",
+  "id": 94,
+  "category": "deyim2",
+  "en": "The old fortress stood the test of time.",
+  "ref": "Eski kale zamana meydan okudu.",
+  "gemma": "Eski kale zamanın yıpratıcı etkisine direnmiş."
+ },
+ {
+  "set": "holdout",
+  "id": 95,
+  "category": "argo2",
+  "en": "Make it look like an accident.",
+  "ref": "Kaza gibi göster.",
+  "gemma": "Kaza gibi göster."
+ },
+ {
+  "set": "holdout",
+  "id": 96,
+  "category": "argo2",
+  "en": "He's the kind of man who never forgets a face.",
+  "ref": "O, hiçbir yüzü unutmayan bir adam.",
+  "gemma": "Gördüğü yüzü asla unutmayan bir adamdır."
+ },
+ {
+  "set": "holdout",
+  "id": 97,
+  "category": "gorev",
+  "en": "Chopper's inbound. Get to the landing zone.",
+  "ref": "Helikopter yolda. İniş bölgesine git.",
+  "gemma": "Helikopter geliyor. İniş bölgesine geçin."
+ },
+ {
+  "set": "holdout",
+  "id": 98,
+  "category": "resmi",
+  "en": "The enemy would not give an inch.",
+  "ref": "Düşman bir adım bile geri atmadı.",
+  "gemma": "Düşman adım atmadı."
+ },
+ {
+  "set": "holdout",
+  "id": 99,
+  "category": "deyim2",
+  "en": "I've been working my fingers to the bone.",
+  "ref": "Kemiklerim sızlayana kadar çalıştım.",
+  "gemma": "Canımı dişime takıp çalışıyorum."
+ },
+ {
+  "set": "holdout",
+  "id": 100,
+  "category": "argo1",
+  "en": "Everybody on the ground, now!",
+  "ref": "Herkes yere, hemen!",
+  "gemma": "Herkes yere!"
+ },
+ {
+  "set": "holdout",
+  "id": 101,
+  "category": "deyim1",
+  "en": "Walls have ears. Speak softly.",
+  "ref": "Duvarların kulağı var. Yavaş konuş.",
+  "gemma": "Duvarların kulağı var. Sesini alçalt."
+ },
+ {
+  "set": "holdout",
+  "id": 102,
+  "category": "deyim2",
+  "en": "Stick around, you might learn something.",
+  "ref": "Etrafta kal, bir şey öğrenebilirsin.",
+  "gemma": "Buralarda takıl, belki bir şeyler öğrenirsin."
+ },
+ {
+  "set": "holdout",
+  "id": 103,
+  "category": "argo1",
+  "en": "Crap, I think I broke it.",
+  "ref": "Eyvah, galiba kırdım.",
+  "gemma": "Hay aksi, sanırım bozdum."
+ },
+ {
+  "set": "holdout",
+  "id": 104,
+  "category": "argo2",
+  "en": "Keep your enemies close and your friends closer.",
+  "ref": "Düşmanlarını yakın tut, dostlarını daha da yakın.",
+  "gemma": "Düşmanını yakın tut, dostunu daha yakın."
+ },
+ {
+  "set": "holdout",
+  "id": 105,
+  "category": "gorev",
+  "en": "Finish him!",
+  "ref": "Bitir onu!",
+  "gemma": "Bitir onu!"
+ },
+ {
+  "set": "holdout",
+  "id": 106,
+  "category": "argo2",
+  "en": "Where were you on the night of the fifteenth?",
+  "ref": "On beşinde gece neredeydin?",
+  "gemma": "On beşinde gece neredeydin?"
+ },
+ {
+  "set": "holdout",
+  "id": 107,
+  "category": "argo2",
+  "en": "The fight was fixed, and everyone knew it.",
+  "ref": "Dövüş şikeliydi ve herkes bunu biliyordu.",
+  "gemma": "Dövüş ayarlanmıştı, herkes de bunu biliyordu."
+ },
+ {
+  "set": "holdout",
+  "id": 108,
+  "category": "gorev",
+  "en": "Return to the elder to claim your reward.",
+  "ref": "Ödülünü almak için ihtiyara dön.",
+  "gemma": "Ödülünü almak için yaşlıya geri dön."
+ },
+ {
+  "set": "holdout",
+  "id": 109,
+  "category": "argo2",
+  "en": "The cops finally nailed him after ten years of chasing.",
+  "ref": "Polis, on yıllık kovalamacanın ardından sonunda onu yakaladı.",
+  "gemma": "Polisler on yıllık kovalamacanın ardından sonunda onu köşeye sıkıştırdı."
+ },
+ {
+  "set": "holdout",
+  "id": 110,
+  "category": "gorev",
+  "en": "Moving up. Cover me.",
+  "ref": "İlerliyorum. Beni kolla.",
+  "gemma": "İlerliyorum. Beni koru."
+ },
+ {
+  "set": "holdout",
+  "id": 111,
+  "category": "gorev",
+  "en": "Report any suspicious activity immediately.",
+  "ref": "Şüpheli bir hareket görürsen hemen bildir.",
+  "gemma": "Şüpheli bir durum fark ederseniz hemen bildirin."
+ },
+ {
+  "set": "holdout",
+  "id": 112,
+  "category": "argo1",
+  "en": "He's as dumb as a box of rocks.",
+  "ref": "Odun gibi aptal.",
+  "gemma": "Kafası basmıyor hiç."
+ },
+ {
+  "set": "holdout",
+  "id": 113,
+  "category": "deyim2",
+  "en": "Stop playing games with me.",
+  "ref": "Benimle oyun oynamayı bırak.",
+  "gemma": "Beni oyununa alet etme."
+ },
+ {
+  "set": "holdout",
+  "id": 114,
+  "category": "gorev",
+  "en": "Bring me three bottles of rum and I'll tell you everything.",
+  "ref": "Bana üç şişe rom getir, sana her şeyi anlatırım.",
+  "gemma": "Bana üç şişe rom getir, her şeyi anlatayım."
+ },
+ {
+  "set": "holdout",
+  "id": 115,
+  "category": "gorev",
+  "en": "I'll draw their fire while you go around.",
+  "ref": "Ben ateşlerini üzerime çekerim, sen arkadan dolan.",
+  "gemma": "Sen arkadan dolanırken ben dikkatlerini üzerime çekerim."
+ },
+ {
+  "set": "holdout",
+  "id": 116,
+  "category": "gorev",
+  "en": "Never accept the first offer.",
+  "ref": "İlk teklifi asla kabul etme.",
+  "gemma": "İlk teklifi hemen kabul etme."
+ },
+ {
+  "set": "holdout",
+  "id": 117,
+  "category": "resmi",
+  "en": "These words were carved by the first priests of the sun.",
+  "ref": "Bu sözleri güneşin ilk rahipleri kazımış.",
+  "gemma": "Bu sözleri güneşin ilk rahipleri kazımış."
+ },
+ {
+  "set": "holdout",
+  "id": 118,
+  "category": "deyim1",
+  "en": "I'd bet my head on it.",
+  "ref": "Başımı koyarım.",
+  "gemma": "Bunun üzerine kafamı koyarım."
+ },
+ {
+  "set": "holdout",
+  "id": 119,
+  "category": "resmi",
+  "en": "Bring the main cannon online.",
+  "ref": "Ana topu devreye sok.",
+  "gemma": "Ana topu devreye sok."
+ },
+ {
+  "set": "holdout",
+  "id": 120,
+  "category": "argo1",
+  "en": "Stop being a coward and fight me.",
+  "ref": "Korkaklığı bırak da benimle dövüş.",
+  "gemma": "Korkaklık yapmayı bırak da karşıma çık."
+ },
+ {
+  "set": "holdout",
+  "id": 121,
+  "category": "deyim2",
+  "en": "He showed off in front of everyone.",
+  "ref": "Herkesin önünde caka sattı.",
+  "gemma": "Herkesin içinde hava attı."
+ },
+ {
+  "set": "holdout",
+  "id": 122,
+  "category": "resmi",
+  "en": "The messenger was the bearer of bad news.",
+  "ref": "Ulak kötü haber getirmişti.",
+  "gemma": "Haberi getiren kişi kötü haberciydi."
+ },
+ {
+  "set": "holdout",
+  "id": 123,
+  "category": "argo1",
+  "en": "Out of my way, you nitwit!",
+  "ref": "Çekil önümden, seni salak!",
+  "gemma": "Çekil önümden, seni aptal!"
+ },
+ {
+  "set": "holdout",
+  "id": 124,
+  "category": "resmi",
+  "en": "Let none say that the throne was taken without a fight.",
+  "ref": "Kimse tahtın savaşmadan alındığını söylemesin.",
+  "gemma": "Tahtın kavgasız alındığını kimse iddia etmesin."
+ },
+ {
+  "set": "holdout",
+  "id": 125,
+  "category": "resmi",
+  "en": "The prisoner has requested a trial by combat.",
+  "ref": "Mahkûm düello ile yargılanmayı talep etti.",
+  "gemma": "Mahkum düello talep etti."
+ },
+ {
+  "set": "holdout",
+  "id": 126,
+  "category": "argo1",
+  "en": "Stay in your lane, little man.",
+  "ref": "Sen sınırını bil, küçük adam.",
+  "gemma": "Sınırını bil, ufaklık."
+ },
+ {
+  "set": "holdout",
+  "id": 127,
+  "category": "deyim1",
+  "en": "Don't judge a book by its cover. He's tougher than he looks.",
+  "ref": "Dış görünüşe aldanma. Göründüğünden çok daha sert.",
+  "gemma": "Dış görünüşe aldanma. Göründüğünden çok daha dişli biri."
+ },
+ {
+  "set": "holdout",
+  "id": 128,
+  "category": "deyim1",
+  "en": "He's the cream of the crop.",
+  "ref": "O seçkinlerin de seçkini.",
+  "gemma": "O tam bir numara."
+ },
+ {
+  "set": "holdout",
+  "id": 129,
+  "category": "gorev",
+  "en": "Start the engine and let it warm up.",
+  "ref": "Motoru çalıştır ve ısınmasına izin ver.",
+  "gemma": "Motoru çalıştır, biraz ısınsın."
+ },
+ {
+  "set": "holdout",
+  "id": 130,
+  "category": "argo2",
+  "en": "Our rivals hit us hard last night, and now we hit back.",
+  "ref": "Rakiplerimiz dün gece bize sert vurdu, şimdi biz karşılık vereceğiz.",
+  "gemma": "Dün gece bize sağlam vurdular, şimdi sıra bizde."
+ },
+ {
+  "set": "holdout",
+  "id": 131,
+  "category": "deyim2",
+  "en": "You can't escape your destiny.",
+  "ref": "Kaderinden kaçamazsın.",
+  "gemma": "Kaderinden kaçamazsın."
+ },
+ {
+  "set": "holdout",
+  "id": 132,
+  "category": "argo2",
+  "en": "I'll bring my A-game tonight.",
+  "ref": "Bu gece elimden gelenin en iyisini sergileyeceğim.",
+  "gemma": "Bu gece elimden gelenin en iyisini yapacağım."
+ },
+ {
+  "set": "holdout",
+  "id": 133,
+  "category": "gorev",
+  "en": "Area cleared. You may proceed.",
+  "ref": "Bölge temizlendi. İlerleyebilirsin.",
+  "gemma": "Bölge temizlendi. İlerleyebilirsiniz."
+ },
+ {
+  "set": "holdout",
+  "id": 134,
+  "category": "argo2",
+  "en": "They'll never find the body.",
+  "ref": "Cesedi asla bulamayacaklar.",
+  "gemma": "Cesedi asla bulamazlar."
+ },
+ {
+  "set": "holdout",
+  "id": 135,
+  "category": "argo2",
+  "en": "Hold your horses, we're not ready yet.",
+  "ref": "Acele etme, daha hazır değiliz.",
+  "gemma": "Biraz sabret, henüz hazır değiliz."
+ },
+ {
+  "set": "holdout",
+  "id": 136,
+  "category": "argo1",
+  "en": "Dude, you're so extra.",
+  "ref": "Ahbap, sen çok abartıyorsun.",
+  "gemma": "Oğlum, amma abartıyorsun ya."
+ },
+ {
+  "set": "holdout",
+  "id": 137,
+  "category": "gorev",
+  "en": "Sweep the building and report back.",
+  "ref": "Binayı tara ve bana rapor ver.",
+  "gemma": "Binayı temizle ve rapor ver."
+ },
+ {
+  "set": "holdout",
+  "id": 138,
+  "category": "deyim1",
+  "en": "Get your act together, or we lose.",
+  "ref": "Kendine çeki düzen ver, yoksa kaybederiz.",
+  "gemma": "Toparlan artık, yoksa kaybederiz."
+ },
+ {
+  "set": "holdout",
+  "id": 139,
+  "category": "deyim2",
+  "en": "She's still bitter about what happened.",
+  "ref": "Olanlara hâlâ kırgın.",
+  "gemma": "Hâlâ olanlara kırgın."
+ },
+ {
+  "set": "holdout",
+  "id": 140,
+  "category": "argo2",
+  "en": "The dice are loaded.",
+  "ref": "Zarlar hileli.",
+  "gemma": "Zarlar hileli."
+ },
+ {
+  "set": "holdout",
+  "id": 141,
+  "category": "gorev",
+  "en": "Switch weapons with the mouse wheel.",
+  "ref": "Silah değiştirmek için fare tekerleğini kullan.",
+  "gemma": "Fare tekerleğiyle silah değiştir."
+ },
+ {
+  "set": "holdout",
+  "id": 142,
+  "category": "argo1",
+  "en": "Well, I'll swan. That's a big ol' gator.",
+  "ref": "Vay canına, ne kocaman bir timsah.",
+  "gemma": "Vay canına! Bu ne kadar büyük bir timsah öyle."
+ },
+ {
+  "set": "holdout",
+  "id": 143,
+  "category": "argo1",
+  "en": "Damn right I did.",
+  "ref": "Evet, kesinlikle yaptım.",
+  "gemma": "Tabii ki yaptım."
+ },
+ {
+  "set": "holdout",
+  "id": 144,
+  "category": "argo2",
+  "en": "Anything you say can and will be used against you.",
+  "ref": "Söyleyeceğin her şey aleyhine kullanılabilir.",
+  "gemma": "Söylediğiniz her şey aleyhinize kullanılabilir ve kullanılacaktır."
+ },
+ {
+  "set": "holdout",
+  "id": 145,
+  "category": "deyim2",
+  "en": "Let bygones be bygones.",
+  "ref": "Geçen geçmişte kalsın.",
+  "gemma": "Geçmişi geçmişte bırakalım."
+ },
+ {
+  "set": "holdout",
+  "id": 146,
+  "category": "deyim2",
+  "en": "Dying is easy. Living is the hard part.",
+  "ref": "Ölmek kolay. Zor olan yaşamak.",
+  "gemma": "Ölmek kolay. Zor olan yaşamak."
+ },
+ {
+  "set": "holdout",
+  "id": 147,
+  "category": "deyim2",
+  "en": "I've got butterflies in my stomach.",
+  "ref": "Karnımda kelebekler uçuşuyor.",
+  "gemma": "İçim kıpır kıpır."
+ },
+ {
+  "set": "holdout",
+  "id": 148,
+  "category": "gorev",
+  "en": "Give me a boost; I can't reach the ledge.",
+  "ref": "Beni yukarı it; çıkıntıya yetişemiyorum.",
+  "gemma": "Beni yukarı çek, kenara ulaşamıyorum."
+ },
+ {
+  "set": "holdout",
+  "id": 149,
+  "category": "gorev",
+  "en": "Eat something or you'll pass out.",
+  "ref": "Bir şeyler ye, yoksa bayılacaksın.",
+  "gemma": "Bir şeyler ye yoksa bayılacaksın."
+ }
+]

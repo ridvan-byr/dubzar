@@ -1,0 +1,132 @@
+1000	minor	mixed singular/plural address
+1001	ok	fine
+1002	bad	wrong idiom, nazar değmesin unrelated
+1003	ok	fine
+1004	bad	negation lost, meaning reversed
+1005	minor	stiff legalese
+1006	ok	fine
+1007	ok	fine
+1008	ok	fine
+1009	ok	fine
+1010	ok	fine
+1012	minor	idiom shifts meaning
+1014	minor	idiom nuance off
+1015	ok	fine
+1018	minor	stiff, clumsy phrasing
+1019	ok	fine
+1021	ok	fine
+1022	bad	nonsense for nautical idiom
+1023	bad	wrong idiom, means broke promise
+1024	bad	garbled proverb meaning
+1025	ok	fine
+1026	ok	fine
+1027	ok	fine
+1028	ok	fine
+1029	minor	fought verb slightly off
+1030	bad	garbled
+1031	minor	yıkıldı instead of burned
+1032	bad	wrong idiom, slander
+1033	ok	fine
+1036	ok	fine
+1037	ok	fine
+1038	ok	fine
+1039	bad	postane means post office
+1040	ok	fine
+1041	ok	fine
+1042	ok	fine
+1043	minor	stiff paraphrase
+1044	ok	fine
+1045	minor	awkward word order
+1046	ok	fine
+1048	minor	archaic register lost
+1049	bad	wrong idiom nuance
+1050	ok	fine
+1051	ok	fine
+1052	minor	jury lost, akranları odd
+1053	ok	fine
+1054	ok	fine
+1055	bad	karaladı wrong idiom
+1056	ok	fine
+1057	ok	fine
+1058	ok	fine
+1059	ok	fine
+1060	minor	meaning shifted slightly
+1062	ok	fine
+1063	minor	usulüne uygun unnatural
+1064	ok	fine
+1065	ok	fine
+1066	ok	fine
+1067	ok	fine
+1068	ok	fine
+1069	minor	awkward phrasing
+1071	ok	fine
+1072	ok	fine
+1073	ok	fine
+1074	ok	fine
+1075	minor	hazine for vault
+1076	bad	wrong idiom
+1077	ok	fine
+1078	ok	fine
+1080	ok	fine
+1081	ok	fine
+1082	bad	nonsense phrase kılıfı yok
+1083	ok	fine
+1084	ok	fine
+1085	ok	fine
+1086	ok	fine
+1088	bad	sakın means don't
+1089	ok	fine
+1090	ok	fine
+1091	ok	fine
+1092	ok	fine
+1093	ok	fine
+1094	minor	tense and phrasing odd
+1095	ok	fine
+1096	ok	fine
+1097	ok	fine
+1098	bad	missing geri, wrong meaning
+1099	ok	fine
+1100	ok	fine
+1101	ok	fine
+1102	minor	takıl too casual
+1103	ok	fine
+1104	ok	fine
+1105	ok	fine
+1106	minor	wrong word order
+1107	ok	fine
+1108	ok	fine
+1109	ok	fine
+1110	minor	koru stiff for cover
+1111	ok	fine
+1112	minor	loses comparison nuance
+1113	minor	oyununa alet etme off
+1114	ok	fine
+1115	ok	fine
+1116	ok	fine
+1117	ok	fine
+1118	minor	not natural idiom
+1120	ok	fine
+1121	ok	fine
+1122	bad	nonsense
+1123	ok	fine
+1124	ok	fine
+1125	minor	düello loses trial nuance
+1126	ok	fine
+1127	ok	fine
+1128	minor	wrong nuance
+1129	ok	fine
+1130	ok	fine
+1132	ok	fine
+1133	ok	fine
+1135	ok	fine
+1136	ok	fine
+1137	minor	sweep rendered as clean
+1138	ok	fine
+1139	ok	fine
+1140	ok	fine
+1142	ok	fine
+1144	ok	fine
+1145	ok	fine
+1146	ok	fine
+1147	ok	fine
+1148	minor	boost mistranslated as pull

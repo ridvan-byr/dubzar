@@ -42,6 +42,7 @@ class SettingsController(QObject):
         self._scan = (0, 0)
         self._dubbing_available = dubbing_available
         self._idle_close_ms = idle_close_ms
+        self._profiles = None            # per-game settings, once the live app has them (see dubzar.profiles)
         settings.on_change(lambda _name: self.changed.emit())
 
     @Property(bool, notify=changed)
@@ -87,6 +88,26 @@ class SettingsController(QObject):
     @Property(str, notify=changed)
     def performanceHint(self) -> str:
         return profile_for(self._s.performance).hint
+
+    @Property(str, notify=changed)
+    def profileGame(self) -> str:
+        """The game the panel is about ("" when none is known): its settings can be made its own."""
+        return (self._profiles.active or "") if self._profiles else ""
+
+    @Property(bool, notify=changed)
+    def profileOn(self) -> bool:
+        return bool(self._profiles and self._profiles.is_on)
+
+    def set_profiles(self, manager) -> None:
+        self._profiles = manager
+        manager.on_change(self.changed.emit)
+        self.changed.emit()
+
+    @Slot(bool)
+    def setProfileOn(self, value: bool) -> None:
+        if self._profiles is not None:
+            self._profiles.set_on(bool(value))
+        self.activity.emit()
 
     @Property(list, notify=changed)
     def hotkeyParts(self) -> list:
@@ -205,7 +226,7 @@ class SettingsController(QObject):
 
     @Slot()
     def cyclePerformance(self) -> None:
-        """light -> medium -> high -> light."""
+        """light -> high -> light."""
         self._s.performance = ORDER[(ORDER.index(self._s.performance) + 1) % len(ORDER)]
         self.activity.emit()
 

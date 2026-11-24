@@ -1,0 +1,159 @@
+Keep going.
+Stay down.
+Get in the car.
+Move out.
+Fall back.
+Cover me.
+Watch your left.
+Reload your weapon.
+Hold your fire.
+Stay behind me.
+Check the corners.
+Follow me.
+Wait here.
+Don't move.
+Drop your weapon.
+Put your hands up.
+Get on the ground.
+Come with me.
+Open the door.
+Close the gate.
+Lock the door behind you.
+Grab the supplies.
+Pick up the key.
+Use the elevator.
+Climb the ladder.
+Jump across the gap.
+Run to the exit.
+Take cover behind the wall.
+Aim for the head.
+Throw the grenade.
+Good job.
+Well done.
+Nice shot.
+Great work, everyone.
+Not bad.
+That was close.
+Thank you.
+You're welcome.
+Excuse me.
+I'm sorry.
+Of course.
+Maybe later.
+I don't know.
+I understand.
+I don't think so.
+Let me think.
+Give me a second.
+Just a moment.
+One more thing.
+What do you want?
+Who are you?
+Where are we going?
+When do we leave?
+Why did you do that?
+How much is it?
+What's your name?
+Where is the exit?
+Is it safe here?
+Are we there yet?
+Did you find anything?
+Enemy spotted.
+Enemy ahead.
+Enemy down.
+Target eliminated.
+Area clear.
+All clear.
+We're under attack.
+They're coming.
+Man down.
+I need a medic.
+I'm hit.
+I'm out of ammo.
+Reloading.
+Grenade!
+Incoming!
+Run!
+Get down!
+Look out!
+Behind you!
+Watch out!
+Hurry up.
+Slow down.
+Be quiet.
+Stay calm.
+Calm down.
+Take it easy.
+Don't worry about it.
+It's not your fault.
+It's over.
+It's time.
+It's getting dark.
+It's cold out here.
+The door is locked.
+The road is blocked.
+The bridge is out.
+The gate is open.
+The power is out.
+The radio is dead.
+The car won't start.
+We're out of fuel.
+We're running out of time.
+We're almost there.
+We made it.
+We did it.
+We lost them.
+We're not alone.
+We need more supplies.
+We have to go back.
+I'll cover you.
+I'll be right back.
+I'll take care of it.
+I'll see you there.
+I can't do this.
+I can't see anything.
+I can't hold on much longer.
+I don't like this.
+I don't trust him.
+I have a bad feeling about this.
+I know what to do.
+I think we're lost.
+You can do it.
+You did well.
+You look tired.
+You should rest.
+You must be careful.
+You can't be serious.
+You'll be fine.
+This is it.
+This way.
+That way.
+Over here.
+Right behind you.
+Not now.
+Not yet.
+Not again.
+Never mind.
+Right away.
+Right on time.
+Welcome back.
+Welcome to the town.
+Good morning.
+Good evening.
+Good night.
+See you tomorrow.
+Goodbye.
+Hello there.
+Save the game.
+Game saved.
+Press any key to continue.
+Select a character.
+Choose your weapon.
+Loading...
+Checkpoint reached.
+Mission complete.
+Objective complete.
+Level up.
+Skill unlocked.
+Item picked up.
+Door unlocked.

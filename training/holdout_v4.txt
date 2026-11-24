@@ -1,0 +1,150 @@
+Arise, and be known henceforth as Lady Elara of the Vale. ||| Kalk, bundan böyle Vadi'nin Leydisi Elara olarak anıl. ||| resmi
+Let sleeping dogs lie, my friend. ||| Uyuyan yılanın kuyruğuna basma, dostum. ||| resmi
+Speak of the devil, here he comes. ||| Lafın üstüne geldi, işte geliyor. ||| deyim1
+The temple bells fell silent on the night of the plague. ||| Veba gecesinde tapınak çanları sustu. ||| resmi
+Let us not squabble while the kingdom burns. ||| Krallık yanarken didişmeyelim. ||| resmi
+All parties are hereby summoned to appear in court. ||| Tüm taraflar işbu belgeyle mahkemeye çağrılmıştır. ||| resmi
+They're closing in on us from all sides. ||| Her yandan bizi sıkıştırıyorlar. ||| deyim2
+You owe me, and I always collect. ||| Bana borçlusun ve ben her zaman alırım. ||| argo1
+Not so brave now, are you? ||| Şimdi o kadar cesur değilsin, değil mi? ||| argo1
+I slept like a log last night. ||| Dün gece kütük gibi uyudum. ||| deyim1
+The verdict cannot be appealed. ||| Karara itiraz edilemez. ||| resmi
+So ended the golden age of the elves. ||| Elflerin altın çağı böyle sona erdi. ||| resmi
+It's all hands on deck, people! ||| Herkes iş başına, arkadaşlar! ||| deyim2
+I thought we were on the same side. ||| Aynı tarafta olduğumuzu sanıyordum. ||| deyim2
+You really put your foot in it this time. ||| Bu sefer gerçekten pot kırdın. ||| deyim1
+He got what was coming to him. ||| Hak ettiğini buldu. ||| argo1
+Fan out and search every room. ||| Etrafa dağılın ve her odayı arayın. ||| gorev
+I am but a humble servant of the crown. ||| Ben tacın mütevazı bir kuluyum. ||| resmi
+Count the chips, the house always wins. ||| Fişleri say, kazanan hep kumarhanedir. ||| argo2
+Ease the door open and peek inside. ||| Kapıyı yavaşça aç ve içeri bak. ||| gorev
+Shut down the reactor before it melts down. ||| Reaktör erimeden kapat. ||| gorev
+The fortress has never fallen, and it never shall. ||| Kale hiç düşmedi ve düşmeyecek de. ||| resmi
+Steady as she goes, boys. ||| Böyle devam, çocuklar. ||| deyim1
+He ate his words. ||| Söylediklerini yuttu. ||| deyim2
+A stitch in time saves nine. ||| Zamanında atılan bir dikiş dokuz dikişten kurtarır. ||| deyim2
+Bandage the wound to stop the bleeding. ||| Kanamayı durdurmak için yarayı sar. ||| gorev
+I trusted you, and you stabbed me in the back. ||| Sana güvendim, sen de beni arkadan vurdun. ||| deyim2
+The thief stole the painting right off the wall. ||| Hırsız tabloyu duvardan alıp götürdü. ||| argo2
+The crown prince shall wed before the harvest. ||| Veliaht, hasattan önce evlenecek. ||| resmi
+They fought like cats and dogs. ||| Kedi köpek gibi kavga ettiler. ||| deyim2
+Better luck next time, rookie. ||| Bir dahaki sefere daha şanslı olursun, çaylak. ||| deyim1
+That bridge is burned for good. ||| O köprüyü attık, bir daha dönüş yok. ||| deyim2
+He hit me below the belt. ||| Bana alçakça vurdu. ||| deyim2
+You look like crap. ||| Berbat görünüyorsun. ||| argo1
+He pocketed the whole reward. ||| Ödülün hepsini cebe indirdi. ||| deyim2
+Quest accepted: The Lost Crown. ||| Görev kabul edildi: Kayıp Taç. ||| gorev
+Patience is a virtue, kid. ||| Sabır bir erdemdir, evlat. ||| deyim1
+The sword sings when evil is near. ||| Kötülük yakınlaşınca kılıç şarkı söyler. ||| resmi
+Seal the tunnel behind us. ||| Arkamızdaki tüneli kapat. ||| gorev
+Trade your furs for supplies at the post. ||| Kürklerini ticaret merkezinde erzakla takas et. ||| gorev
+Use the vents to get to the control room. ||| Havalandırmaları kullanarak kontrol odasına ulaş. ||| gorev
+Yo, I got your back, fam. ||| Yo, arkandayım kanka. ||| argo1
+Wow, you're even uglier up close. ||| Vay, yakından daha da çirkinsin. ||| argo1
+He's a fair-weather friend. ||| O iyi günün dostu. ||| deyim2
+Make a run for the truck on my count. ||| Ben sayınca kamyona doğru koş. ||| gorev
+I'm up to my neck in work. ||| Boğazıma kadar işe battım. ||| deyim1
+The cult worships a being older than time itself. ||| Tarikat, zamanın kendisinden daha eski bir varlığa tapıyor. ||| resmi
+You took the money and ran. ||| Parayı kaptın ve kaçtın. ||| argo2
+Wherefore dost thou tarry, good sir? ||| Neden oyalanıyorsun, iyi adam? ||| resmi
+I'm shaking like a leaf. ||| Yaprak gibi titriyorum. ||| deyim2
+You expect me to swallow that story? ||| Bu hikâyeye inanmamı mı bekliyorsun? ||| deyim1
+He's mad cool, that dude. ||| O adam çok havalı. ||| argo1
+A trial by jury of one's peers is the right of every citizen. ||| Eşitleri tarafından jüri önünde yargılanmak her yurttaşın hakkıdır. ||| resmi
+Ugh, that smells disgusting. ||| Ah, kokusu iğrenç. ||| argo1
+Death comes for us all in the end. ||| Ölüm sonunda hepimizi bulur. ||| deyim2
+The accountant cooked the books for years before anyone noticed. ||| Muhasebeci yıllarca hesaplarda hile yaptı, kimse fark etmedi. ||| argo2
+Objection, Your Honour. The question is leading. ||| İtiraz ediyorum, sayın hâkim. Soru yönlendirici. ||| resmi
+Collect ten pelts and bring them to the trader. ||| On post topla ve tüccara götür. ||| gorev
+Back me up on this one. ||| Bu konuda beni destekle. ||| deyim2
+Swing across on the rope. ||| Halatla karşıya sallan. ||| gorev
+He who sheds innocent blood shall be cursed for all eternity. ||| Masum kanı döken, sonsuza dek lanetlenecek. ||| resmi
+Hit them hard and fast. ||| Hızlı ve sert vurun. ||| deyim2
+Jeez, give me a second to breathe! ||| Allah aşkına, nefes almam için bir saniye ver! ||| argo1
+We can do this the easy way or the hard way. ||| Bunu ya kolay yoldan yaparız ya da zor yoldan. ||| argo2
+The soldiers laid down their arms one by one. ||| Askerler silahlarını teker teker bıraktı. ||| resmi
+Let that be a lesson. Never trust a thief. ||| Kulağına küpe olsun. Hırsıza asla güvenme. ||| deyim1
+Watch out for the rotten planks! ||| Çürük tahtalara dikkat et! ||| gorev
+He's lost his marbles. ||| Aklını oynatmış. ||| deyim2
+Alright, big boy, let's see what you've got. ||| Pekâlâ, koca adam, bakalım neler yapabiliyorsun. ||| argo1
+I need a new identity and a one-way ticket out of here. ||| Yeni bir kimliğe ve buradan tek yönlü bir bilete ihtiyacım var. ||| argo2
+The thief was caught red-handed. ||| Hırsız suçüstü yakalandı. ||| deyim1
+Looking sharp, boss! ||| Şık görünüyorsun patron! ||| argo1
+You are entitled to a fair hearing. ||| Adil bir yargılanma hakkınız var. ||| resmi
+We showed them who's boss! ||| Onlara kimin patron olduğunu gösterdik! ||| argo1
+Dig in; reinforcements are on the way. ||| Mevzilenin; takviye yolda. ||| gorev
+The vault has two layers of security, so go slow. ||| Kasada iki kat güvenlik var, o yüzden yavaş git. ||| gorev
+The council made a mountain out of a molehill. ||| Konsey pireyi deve yaptı. ||| resmi
+Don't get your hopes up. ||| Fazla umutlanma. ||| deyim1
+Hear me out before you decide. ||| Karar vermeden önce beni sonuna kadar dinle. ||| gorev
+He's a pickpocket who works the train station. ||| Tren istasyonunda çalışan bir yankesici. ||| argo2
+Think it over and give me your answer tomorrow. ||| İyice düşün ve cevabını yarın bana ver. ||| gorev
+Mind your own business, stranger. ||| Kendi işine bak, yabancı. ||| deyim1
+Look at this guy, all swagger and no brains. ||| Şuna bakın, hava var ama beyin yok. ||| argo1
+The race is going to come down to the wire. ||| Yarış son ana kadar çekişmeli sürecek. ||| argo2
+Don't give up on me now. ||| Şimdi beni yarı yolda bırakma. ||| gorev
+Approach from behind and press Q for a silent takedown. ||| Arkadan yaklaş ve sessiz saldırı için Q tuşuna bas. ||| gorev
+Put your money where your mouth is. ||| Lafın arkasında dur. ||| deyim1
+She's barking up the wrong tree. ||| Yanlış kapıyı çalıyorsun. ||| deyim2
+Lay low until the heat dies down. ||| Ortalık yatışana kadar ortalarda görünme. ||| gorev
+That's fire, no cap. ||| Bu efsane, yalan yok. ||| argo1
+Shoot, I plum forgot. ||| Eyvah, tamamen unutmuşum. ||| argo1
+Lock on to a target with the middle mouse button. ||| Fare tekerleği tuşuyla bir hedefe kilitlen. ||| gorev
+And so the legend of the lost king was born. ||| Böylece kayıp kralın efsanesi doğdu. ||| resmi
+The crowd is cheering as the drivers line up at the start. ||| Pilotlar start çizgisine dizilirken kalabalık tezahürat yapıyor. ||| argo2
+The old fortress stood the test of time. ||| Eski kale zamana meydan okudu. ||| deyim2
+Make it look like an accident. ||| Kaza gibi göster. ||| argo2
+He's the kind of man who never forgets a face. ||| O, hiçbir yüzü unutmayan bir adam. ||| argo2
+Chopper's inbound. Get to the landing zone. ||| Helikopter yolda. İniş bölgesine git. ||| gorev
+The enemy would not give an inch. ||| Düşman bir adım bile geri atmadı. ||| resmi
+I've been working my fingers to the bone. ||| Kemiklerim sızlayana kadar çalıştım. ||| deyim2
+Everybody on the ground, now! ||| Herkes yere, hemen! ||| argo1
+Walls have ears. Speak softly. ||| Duvarların kulağı var. Yavaş konuş. ||| deyim1
+Stick around, you might learn something. ||| Etrafta kal, bir şey öğrenebilirsin. ||| deyim2
+Crap, I think I broke it. ||| Eyvah, galiba kırdım. ||| argo1
+Keep your enemies close and your friends closer. ||| Düşmanlarını yakın tut, dostlarını daha da yakın. ||| argo2
+Finish him! ||| Bitir onu! ||| gorev
+Where were you on the night of the fifteenth? ||| On beşinde gece neredeydin? ||| argo2
+The fight was fixed, and everyone knew it. ||| Dövüş şikeliydi ve herkes bunu biliyordu. ||| argo2
+Return to the elder to claim your reward. ||| Ödülünü almak için ihtiyara dön. ||| gorev
+The cops finally nailed him after ten years of chasing. ||| Polis, on yıllık kovalamacanın ardından sonunda onu yakaladı. ||| argo2
+Moving up. Cover me. ||| İlerliyorum. Beni kolla. ||| gorev
+Report any suspicious activity immediately. ||| Şüpheli bir hareket görürsen hemen bildir. ||| gorev
+He's as dumb as a box of rocks. ||| Odun gibi aptal. ||| argo1
+Stop playing games with me. ||| Benimle oyun oynamayı bırak. ||| deyim2
+Bring me three bottles of rum and I'll tell you everything. ||| Bana üç şişe rom getir, sana her şeyi anlatırım. ||| gorev
+I'll draw their fire while you go around. ||| Ben ateşlerini üzerime çekerim, sen arkadan dolan. ||| gorev
+Never accept the first offer. ||| İlk teklifi asla kabul etme. ||| gorev
+These words were carved by the first priests of the sun. ||| Bu sözleri güneşin ilk rahipleri kazımış. ||| resmi
+I'd bet my head on it. ||| Başımı koyarım. ||| deyim1
+Bring the main cannon online. ||| Ana topu devreye sok. ||| resmi
+Stop being a coward and fight me. ||| Korkaklığı bırak da benimle dövüş. ||| argo1
+He showed off in front of everyone. ||| Herkesin önünde caka sattı. ||| deyim2
+The messenger was the bearer of bad news. ||| Ulak kötü haber getirmişti. ||| resmi
+Out of my way, you nitwit! ||| Çekil önümden, seni salak! ||| argo1
+Let none say that the throne was taken without a fight. ||| Kimse tahtın savaşmadan alındığını söylemesin. ||| resmi
+The prisoner has requested a trial by combat. ||| Mahkûm düello ile yargılanmayı talep etti. ||| resmi
+Stay in your lane, little man. ||| Sen sınırını bil, küçük adam. ||| argo1
+Don't judge a book by its cover. He's tougher than he looks. ||| Dış görünüşe aldanma. Göründüğünden çok daha sert. ||| deyim1
+He's the cream of the crop. ||| O seçkinlerin de seçkini. ||| deyim1
+Start the engine and let it warm up. ||| Motoru çalıştır ve ısınmasına izin ver. ||| gorev
+Our rivals hit us hard last night, and now we hit back. ||| Rakiplerimiz dün gece bize sert vurdu, şimdi biz karşılık vereceğiz. ||| argo2
+You can't escape your destiny. ||| Kaderinden kaçamazsın. ||| deyim2
+I'll bring my A-game tonight. ||| Bu gece elimden gelenin en iyisini sergileyeceğim. ||| argo2
+Area cleared. You may proceed. ||| Bölge temizlendi. İlerleyebilirsin. ||| gorev
+They'll never find the body. ||| Cesedi asla bulamayacaklar. ||| argo2
+Hold your horses, we're not ready yet. ||| Acele etme, daha hazır değiliz. ||| argo2
+Dude, you're so extra. ||| Ahbap, sen çok abartıyorsun. ||| argo1
+Sweep the building and report back. ||| Binayı tara ve bana rapor ver. ||| gorev
+Get your act together, or we lose. ||| Kendine çeki düzen ver, yoksa kaybederiz. ||| deyim1
+She's still bitter about what happened. ||| Olanlara hâlâ kırgın. ||| deyim2
+The dice are loaded. ||| Zarlar hileli. ||| argo2
+Switch weapons with the mouse wheel. ||| Silah değiştirmek için fare tekerleğini kullan. ||| gorev
+Well, I'll swan. That's a big ol' gator. ||| Vay canına, ne kocaman bir timsah. ||| argo1
+Damn right I did. ||| Evet, kesinlikle yaptım. ||| argo1
+Anything you say can and will be used against you. ||| Söyleyeceğin her şey aleyhine kullanılabilir. ||| argo2
+Let bygones be bygones. ||| Geçen geçmişte kalsın. ||| deyim2
+Dying is easy. Living is the hard part. ||| Ölmek kolay. Zor olan yaşamak. ||| deyim2
+I've got butterflies in my stomach. ||| Karnımda kelebekler uçuşuyor. ||| deyim2
+Give me a boost; I can't reach the ledge. ||| Beni yukarı it; çıkıntıya yetişemiyorum. ||| gorev
+Eat something or you'll pass out. ||| Bir şeyler ye, yoksa bayılacaksın. ||| gorev

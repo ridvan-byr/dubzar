@@ -8,13 +8,22 @@ from dubzar.performance import PROFILES, profile_for
 from dubzar.settings import Settings
 
 
-def test_light_is_the_mode_the_app_always_had_and_each_step_looks_more_often():
-    light, medium, high = (profile_for(name) for name in ("light", "medium", "high"))
+def test_light_is_the_mode_the_app_always_had_and_high_looks_more_often():
+    light, high = (profile_for(name) for name in ("light", "high"))
 
     assert (light.poll_s, light.idle_poll_s, light.ocr_threads, light.gpu_ocr) == (0.12, 0.3, 4, False)
-    assert light.poll_s > medium.poll_s > high.poll_s
-    assert light.idle_poll_s > medium.idle_poll_s > high.idle_poll_s
-    assert high.gpu_ocr and not medium.gpu_ocr
+    assert light.poll_s > high.poll_s and light.idle_poll_s > high.idle_poll_s
+    assert high.gpu_ocr and not light.gpu_ocr
+
+
+def test_only_high_uses_the_large_translation_model():
+    assert profile_for("high").quality_model and not profile_for("light").quality_model
+    assert set(PROFILES) == {"light", "high"}
+
+
+def test_settings_saved_with_the_removed_middle_mode_open_as_light():
+    settings = Settings(performance="medium")
+    assert settings.performance == "light"
 
 
 def test_every_profile_has_a_turkish_name_and_an_honest_hint():
@@ -42,9 +51,9 @@ def test_the_panel_controller_cycles_through_the_modes():
     controller = SettingsController(settings)
 
     seen = [settings.performance]
-    for _ in range(3):
+    for _ in range(2):
         controller.cyclePerformance()
         seen.append(settings.performance)
 
-    assert seen == ["light", "medium", "high", "light"]
+    assert seen == ["light", "high", "light"]
     assert controller.performanceLabel == "Hafif" and controller.performanceHint

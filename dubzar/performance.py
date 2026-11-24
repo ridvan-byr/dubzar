@@ -1,5 +1,6 @@
-"""Performance modes: how often the screen is looked at and what does the reading. Light is what Dubzar always did;
-each step trades more processor and graphics-card use for subtitles that appear sooner."""
+"""Performance modes. Light is what Dubzar always did (Opus-MT on the processor). High reads the screen with the graphics
+card, looks more often and lets a large model (Gemma) re-translate the lines Opus-MT is unsure about: better subtitles for
+more processor, graphics-card and memory use."""
 
 from dataclasses import dataclass
 
@@ -14,18 +15,18 @@ class Profile:
     corner_poll_s: float  # pause between looks at the corners (quest goals)
     ocr_threads: int
     gpu_ocr: bool         # read the text with the graphics card (falls back to the processor when there is none)
+    quality_model: bool = False   # a large model re-translates the lines the fast one is unsure about
 
 
 PROFILES: dict[str, Profile] = {
     "light": Profile("light", "Hafif", "Az işlemci kullanır; oyunun yanında en güvenlisi.",
                      0.12, 0.30, 0.5, 4, False),
-    "medium": Profile("medium", "Orta", "Daha sık bakar: altyazı biraz erken çıkar, işlemci biraz daha çalışır.",
-                      0.08, 0.20, 0.4, 4, False),
-    "high": Profile("high", "Yüksek", "Okumayı ekran kartı yapar, çok sık bakar: en erken altyazı; ekran kartı ve "
-                    "işlemciyi daha fazla kullanır. Oyun başka cihazdaysa (konsol) önerilir.",
-                    0.06, 0.12, 0.3, 2, True),
+    "high": Profile("high", "Yüksek", "Daha iyi çeviri: Opus-MT'nin emin olmadığı satırları büyük bir model yeniden çevirir. "
+                    "Okumayı ekran kartı yapar; ekran kartı belleğini (yaklaşık 8 GB) ve işlemciyi daha fazla kullanır. "
+                    "Oyun başka cihazdaysa ya da güçlü bir kartın varsa önerilir.",
+                    0.06, 0.12, 0.3, 2, True, True),
 }
-ORDER = ("light", "medium", "high")
+ORDER = ("light", "high")
 
 
 def profile_for(name: str) -> Profile:

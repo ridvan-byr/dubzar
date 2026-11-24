@@ -1,0 +1,171 @@
+Anladım, hemen geliyorum.
+Bir saniye bekle.
+Dikkatli adım at.
+Yardımın için çok teşekkür ederim.
+Nereye gidiyorsun?
+Günaydın, yolcu.
+Arkamda kal.
+Yaralandın mı?
+Siper al!
+Şarjör değiştiriyorum!
+Hareket et, hareket et, hareket et!
+Burada bir sağlıkçıya ihtiyacım var!
+Dükkânıma hoş geldin.
+Sana ne verebilirim?
+Tutarı 50 altın.
+Yine bekleriz!
+Üzgünüm, kapalıyız.
+Bunlardan daha var mı?
+Alıyorum.
+Hayır, teşekkürler.
+Bir düşüneyim.
+Rica ederim.
+Bilmiyorum.
+Seni duyamıyorum.
+Tekrar edebilir misin?
+Ne dedin?
+Lütfen, beni bekle.
+Emredersiniz efendim.
+Hemen, hanımefendi.
+Memnun oldum.
+Nasılsın, neler yapıyorsun?
+Uzun zamandır görüşemedik.
+Herkese iyi geceler.
+Tatlı rüyalar.
+Kendine iyi bak.
+Dışarıda dikkatli ol.
+Yoldayım.
+Neredeyse vardık.
+Daha varmadık mı?
+Eğil!
+Koş!
+Kımıldama.
+Silahını bırak!
+Ellerini kaldır.
+Kim var orada?
+Dur!
+Kimliğini göster.
+Geri çekil.
+Serbest ateş!
+Yaralı var!
+El bombası!
+Takviye yolda.
+Hedef etkisiz hale getirildi.
+Bölge temiz.
+Her yer güvenli.
+Burada hiçbir şey yok.
+Bir ses duydum.
+Gördün mü?
+Bu ses neydi?
+Orada kimse var mı?
+Alo? Beni duyan var mı?
+Lütfen, yardım edin bana!
+Çok şükür geldin.
+Beni kurtardığın için sağ ol.
+Sana borcum var.
+Sağ ol, minnettarım.
+Sorun değil.
+Lafı olmaz.
+Ne demek, benim için zevkti.
+Affedersiniz, hanımefendi.
+Pardon.
+Efendim, nasıl?
+Bunun için üzgünüm.
+Benim hatam.
+Beni affet.
+Boş ver.
+Sorun değil.
+İyi misin?
+İyiyim.
+Başım dönüyor.
+Çok yorgunum.
+Karnım aç.
+Susadım.
+Biraz dinlenelim.
+Hadi gidelim.
+Benimle gel.
+Bu taraftan lütfen.
+Önce hanımlar.
+Sen hazır olunca ben hazırım.
+Hazır olunca haber ver.
+Al, bunu al.
+Şunu bana ver.
+Bu senin mi?
+Adın ne?
+Neredeyim ben?
+Sen kimsin?
+Bu kılıç ne kadar?
+Deneyebilir miyim?
+Bozuk para kabul ediyor musunuz?
+Yakınlarda bir han var mı?
+Liman hangi yönde?
+Ne kadar sürer?
+Vapur ne zaman kalkıyor?
+Neden beni takip ediyorsun?
+Burada ne oldu?
+Bunu kim yaptı?
+Kapıyı açabilir misin?
+Anahtar sende mi?
+Bir şey buldun mu?
+Güvenli mi?
+Hazır mısın?
+Yardıma ihtiyacın var mı?
+İçeri girebilir miyim?
+Biraz çay ister misin?
+Bunu taşımama yardım edebilir misin?
+Kardeşimi gördün mü?
+Saat kaç?
+Köprü hâlâ ayakta mı?
+Demirciyi arıyorum.
+Adım Elena.
+Babanın bir arkadaşıyım.
+Daha önce hiç buraya gelmemiştim.
+Anlamıyorum.
+Hiç param yok.
+Anahtarlarımı evde unuttum.
+Geri dönüş yolunu bulamıyorum.
+Seninle konuşmam lazım.
+Sana göstermem gereken bir şey var.
+Bir dakikaya dönerim.
+Yarın görüşürüz.
+Sonra görüşürüz.
+Hoşça kal dostum.
+İyi yolculuklar.
+Orada bol şans.
+İyi ki doğdun!
+Tebrikler!
+Tekrar hoş geldin.
+Kendi evin gibi rahat ol.
+Lütfen, otur.
+Yemeklerden çekinmeden al.
+Yemek hazır.
+Kahvaltı masada.
+Çorba hâlâ sıcak.
+Bu ekmek harika kokuyor.
+Güzel bir gün.
+Hava kararıyor.
+Burası buz gibi.
+Yine yağmur yağıyor.
+Fırtına geliyor.
+Yol kapalı.
+Kapı kilitli.
+Kapı açılmıyor.
+Elektrik kesik.
+Motor aşırı ısınıyor.
+Yakıtımız bitti.
+Hemen gitmemiz lazım.
+Burada kalamayız.
+Başardık!
+Başardık!
+Aferin.
+Hepinize aferin.
+Ucuz atlattık.
+Muhteşemdi!
+Bu berbat.
+Bu hiç komik değil.
+Bu imkânsız.
+Mantıklı.
+Doğru.
+Aynen öyle.
+Elbette.
+Kesinlikle.

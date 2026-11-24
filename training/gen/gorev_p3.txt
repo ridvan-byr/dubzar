@@ -1,0 +1,90 @@
+Welcome to the training grounds, recruit. ||| Eğitim alanına hoş geldin, acemi.
+Press Space to jump over obstacles. ||| Engellerin üzerinden atlamak için Boşluk tuşuna bas.
+Hold the left trigger to aim down sights. ||| Nişangâhtan bakmak için sol tetiği basılı tut.
+Tap the button twice to dash. ||| Atılmak için tuşa iki kez bas.
+Use the scroll wheel to zoom in and out. ||| Yakınlaştırıp uzaklaştırmak için fare tekerleğini kullan.
+Select an item and press E to use it. ||| Bir eşya seç ve kullanmak için E tuşuna bas.
+Hold R to reload faster. ||| Daha hızlı şarjör değiştirmek için R tuşunu basılı tut.
+Try attacking the dummy to practice combos. ||| Kombolarını çalışmak için mankene saldırmayı dene.
+Great job! Now try it on your own. ||| Harika iş! Şimdi bir de kendi başına dene.
+You can pause the game at any time. ||| Oyunu istediğin zaman duraklatabilirsin.
+Complete all three trials to move on. ||| İlerlemek için üç sınavı da tamamla.
+Look for glowing objects; they can be picked up. ||| Parlayan nesnelere bak; bunları alabilirsin.
+Open the journal to review your active quests. ||| Aktif görevlerini görmek için günlüğü aç.
+Follow the yellow marker on your compass. ||| Pusulandaki sarı işareti takip et.
+Fast travel is available at any campfire. ||| Hızlı yolculuk her kamp ateşinde mevcut.
+Your health regenerates slowly if you stay out of combat. ||| Çatışmadan uzak durursan sağlığın yavaş yavaş yenilenir.
+Sleeping at an inn will restore your energy. ||| Bir handa uyumak enerjini geri getirir.
+Careful, enemies can hear you if you run. ||| Dikkat, koşarsan düşmanlar seni duyabilir.
+Break the crates to find hidden loot. ||| Gizli ganimet bulmak için sandıkları kır.
+Lock on to a target with the middle mouse button. ||| Fare tekerleği tuşuyla bir hedefe kilitlen.
+Switch to your sidearm when you're out of ammo. ||| Cephanen bitince yan silahına geç.
+Take it easy on the throttle. ||| Gaza yavaş bas.
+Hug the inside of the turn. ||| Virajın iç tarafına yapış.
+Let go of the gas before you brake. ||| Frene basmadan önce gazdan çekil.
+Use the handbrake to turn sharply. ||| Keskin dönmek için el frenini kullan.
+Hit the nitro on the straight. ||| Düzlükte nitroyu kullan.
+Stay in the slipstream of the car ahead. ||| Öndeki arabanın arkasında kal, hava akımından yararlan.
+Watch the traffic, there's a truck coming! ||| Trafiğe dikkat et, bir kamyon geliyor!
+Honk if someone blocks your way. ||| Biri yolunu keserse korna çal.
+Merge onto the highway and take the third exit. ||| Otoyola gir ve üçüncü çıkıştan çık.
+Make a U-turn as soon as possible. ||| Mümkün olan en kısa sürede U dönüşü yap.
+Hold on tight, this is going to be rough. ||| Sıkı tut, bu iş sert olacak.
+Pick up the passenger outside the hotel. ||| Yolcuyu otelin önünden al.
+Drop him off at the airport and don't ask questions. ||| Onu havalimanına bırak ve soru sorma.
+Please remain seated until the vehicle stops. ||| Araç durana kadar lütfen yerinizde oturun.
+Drop your weapon and get on the ground! ||| Silahını bırak ve yere yat!
+Step away from the vehicle, sir. ||| Araçtan uzaklaşın efendim.
+Turn around slowly and don't try anything. ||| Yavaşça arkanı dön ve akıllıca davran.
+Keep your mouth shut and let me do the talking. ||| Sen çeneni kapat, konuşmayı bana bırak.
+Don't say a word about what happened tonight. ||| Bu gece olanlar hakkında tek kelime etme.
+Stay out of sight until I call you. ||| Seni arayana kadar gözden uzak dur.
+Get rid of the evidence before dawn. ||| Şafaktan önce delilleri ortadan kaldır.
+Burn the letters and scatter the ashes. ||| Mektupları yak ve külleri savur.
+Count the rounds you have left. ||| Kalan mermilerini say.
+Conserve your ammo; we won't find more for a while. ||| Cephaneni idareli kullan; bir süre yenisini bulamayacağız.
+Lighten your load by dropping the heavy gear. ||| Ağır ekipmanları bırakarak yükünü hafiflet.
+You're carrying too much. Drop something. ||| Çok fazla taşıyorsun. Bir şey bırak.
+Stash the loot in the chest before you leave. ||| Ayrılmadan önce ganimeti sandığa sakla.
+Trade your furs for supplies at the post. ||| Postlarını karakoldaki erzakla takas et.
+Check the shop for new stock. ||| Dükkânda yeni mal var mı diye bak.
+Never accept the first offer. ||| İlk teklifi asla kabul etme.
+Name your price and stick to it. ||| Fiyatını söyle ve ondan geri adım atma.
+Buy low, sell high. ||| Ucuza al, pahalıya sat.
+Invest in a better camp before the winter comes. ||| Kış gelmeden önce daha iyi bir kampa yatırım yap.
+Hire a few guards to protect the shipment. ||| Sevkiyatı korumak için birkaç muhafız tut.
+Gather your crew and head to the harbor. ||| Ekibini topla ve limana git.
+Round up some volunteers for the raid. ||| Baskın için birkaç gönüllü topla.
+Train the new recruits at the barracks. ||| Yeni askerleri kışlada eğit.
+Pass the word along to the others. ||| Haberi diğerlerine ilet.
+Warn the village before it's too late. ||| Çok geç olmadan köyü uyar.
+Spread the rumor that the king is dead. ||| Kralın öldüğü söylentisini yay.
+Let the people know the siege is over. ||| Halka kuşatmanın bittiğini bildir.
+Take this letter to the queen. ||| Bu mektubu kraliçeye götür.
+Seal the tunnel behind us. ||| Arkamızdaki tüneli kapat.
+Light the signal fire on top of the hill. ||| Tepenin üstündeki işaret ateşini yak.
+Sound the alarm! ||| Alarmı çal!
+Ring the bell if you see anything strange. ||| Garip bir şey görürsen çanı çal.
+Keep the torches burning all night. ||| Meşaleleri bütün gece yanık tut.
+Barricade the door with whatever you can find. ||| Kapıyı bulabildiğin her şeyle barikatla.
+Patch up the hull before we sink. ||| Batmadan önce gövdeyi yamala.
+Bail out the water, quick! ||| Suyu boşalt, çabuk!
+Hold the line! Don't let them through! ||| Hattı koruyun! Geçmelerine izin vermeyin!
+Charge! ||| Hücum!
+Close ranks and raise your shields. ||| Saflarınızı sıkılaştırın ve kalkanlarınızı kaldırın.
+Archers, loose your arrows on my command. ||| Okçular, benim emrimle okları serbest bırakın.
+Bring up the cavalry on the right flank. ||| Süvarileri sağ kanata getirin.
+Spare no one. ||| Kimseyi sağ bırakma.
+Surrender now and you won't be harmed. ||| Şimdi teslim ol, sana zarar vermeyeceğiz.
+Don't give up on me now. ||| Şimdi beni yarı yolda bırakma.
+Stay with me! Stay awake! ||| Benimle kal! Uyanık kal!
+Don't look back. Just keep running. ||| Arkana bakma. Sadece koşmaya devam et.
+Take a deep breath and steady your aim. ||| Derin bir nefes al ve nişanını sabitle.
+Focus on the mission, not the money. ||| Paraya değil göreve odaklan.
+Do not engage until the convoy is in range. ||| Konvoy menzile girene kadar çatışmaya girme.
+Take the long way around to avoid the checkpoint. ||| Kontrol noktasından kaçınmak için uzun yoldan dolan.
+Report to the commander as soon as you land. ||| İner inmez komutana rapor ver.
+Make contact with our man inside. ||| İçerideki adamımızla temas kur.
+Meet the informant at the train station at noon. ||| Muhbirle öğlen tren istasyonunda buluş.
+Memorize the layout; you won't get a second chance. ||| Planı ezberle; ikinci bir şansın olmayacak.
+Take as many as you can before they notice. ||| Fark etmeden önce alabildiğin kadar al.

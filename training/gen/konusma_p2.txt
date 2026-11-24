@@ -1,0 +1,100 @@
+What's your name? ||| Adın ne?
+Where am I? ||| Neredeyim ben?
+Who are you? ||| Sen kimsin?
+How much is this sword? ||| Bu kılıç ne kadar?
+Can I try it on? ||| Üzerimde deneyebilir miyim?
+Do you accept coins? ||| Bozuk para kabul ediyor musunuz?
+Is there an inn nearby? ||| Yakınlarda bir han var mı?
+Which way is the harbor? ||| Liman hangi tarafta?
+How long will it take? ||| Ne kadar sürer?
+When does the ferry leave? ||| Vapur ne zaman kalkıyor?
+Why are you following me? ||| Neden beni takip ediyorsun?
+What happened here? ||| Burada ne oldu?
+Who did this? ||| Bunu kim yaptı?
+Can you open the door? ||| Kapıyı açabilir misin?
+Do you have the key? ||| Anahtar sende mi?
+Did you find anything? ||| Bir şey buldun mu?
+Is it safe? ||| Güvenli mi?
+Are you ready? ||| Hazır mısın?
+Do you need help? ||| Yardıma ihtiyacın var mı?
+May I come in? ||| İçeri girebilir miyim?
+Would you like some tea? ||| Biraz çay ister misin?
+Could you help me carry this? ||| Bunu taşımama yardım edebilir misin?
+Have you seen my brother? ||| Kardeşimi gördün mü?
+What time is it? ||| Saat kaç?
+Is the bridge still standing? ||| Köprü hâlâ ayakta mı?
+I'm looking for the blacksmith. ||| Demirciyi arıyorum.
+My name is Elena. ||| Adım Elena.
+I'm a friend of your father's. ||| Ben babanın bir arkadaşıyım.
+I've never been here before. ||| Daha önce buraya hiç gelmedim.
+I don't understand. ||| Anlamıyorum.
+I don't have any money. ||| Hiç param yok.
+I forgot my keys at home. ||| Anahtarlarımı evde unuttum.
+I can't find my way back. ||| Geri dönüş yolunu bulamıyorum.
+I need to talk to you. ||| Seninle konuşmam gerek.
+I have something to show you. ||| Sana göstermem gereken bir şey var.
+I'll be back in a minute. ||| Bir dakika sonra döneceğim.
+I'll see you tomorrow. ||| Yarın görüşürüz.
+See you later. ||| Sonra görüşürüz.
+Goodbye, my friend. ||| Hoşça kal, dostum.
+Safe travels. ||| İyi yolculuklar.
+Good luck out there. ||| Orada bol şans.
+Happy birthday! ||| Doğum günün kutlu olsun!
+Congratulations! ||| Tebrikler!
+Welcome back. ||| Tekrar hoş geldin.
+Make yourself at home. ||| Kendi evin gibi düşün.
+Please, sit down. ||| Lütfen, otur.
+Help yourself to some food. ||| Buyur, yemeklerden al.
+Dinner is ready. ||| Yemek hazır.
+Breakfast is on the table. ||| Kahvaltı masada.
+The soup is still hot. ||| Çorba hâlâ sıcak.
+This bread smells wonderful. ||| Bu ekmek harika kokuyor.
+It's a beautiful day. ||| Güzel bir gün.
+It's getting dark. ||| Hava kararıyor.
+It's freezing out here. ||| Burası buz gibi.
+It's raining again. ||| Yine yağmur yağıyor.
+The storm is coming. ||| Fırtına geliyor.
+The road is closed. ||| Yol kapalı.
+The gate is locked. ||| Kapı kilitli.
+The door won't open. ||| Kapı açılmıyor.
+The power is down. ||| Elektrikler kesildi.
+The engine is overheating. ||| Motor ısınıyor.
+We're out of fuel. ||| Yakıtımız bitti.
+We have to leave now. ||| Şimdi gitmemiz lazım.
+We can't stay here. ||| Burada kalamayız.
+We made it! ||| Başardık!
+We did it! ||| Yaptık!
+Well done. ||| Aferin.
+Great job, everyone. ||| Herkese tebrikler, harika iş çıkardınız.
+That was close. ||| Az kalsın.
+That was amazing! ||| Bu inanılmazdı!
+That's terrible. ||| Bu berbat.
+That's not funny. ||| Bu hiç komik değil.
+That's impossible. ||| Bu imkansız.
+That makes sense. ||| Mantıklı.
+That's right. ||| Doğru.
+Exactly. ||| Aynen öyle.
+Of course. ||| Tabii ki.
+Absolutely. ||| Kesinlikle.
+Maybe later. ||| Belki sonra.
+Perhaps you're right. ||| Belki haklısın.
+You're wrong. ||| Yanılıyorsun.
+You're right about that. ||| Bu konuda haklısın.
+I agree with you. ||| Sana katılıyorum.
+I don't think so. ||| Sanmıyorum.
+I think so. ||| Öyle sanıyorum.
+I hope so. ||| Umarım öyledir.
+I'm not sure. ||| Emin değilim.
+I'm sure of it. ||| Bundan eminim.
+I promise. ||| Söz veriyorum.
+Trust me. ||| Bana güven.
+Believe me. ||| İnan bana.
+Listen to me. ||| Beni dinle.
+Look at this. ||| Şuna bak.
+Look over there. ||| Şuraya bak.
+Come and see this. ||| Gel de şuna bak.
+Quiet, someone's coming. ||| Sessiz ol, biri geliyor.
+Keep your voice down. ||| Sesini alçalt.
+Be quiet. ||| Sessiz ol.
+Calm down. ||| Sakin ol.
+Take a deep breath. ||| Derin bir nefes al.

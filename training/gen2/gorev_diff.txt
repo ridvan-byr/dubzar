@@ -1,0 +1,75 @@
+6	Back me up when I breach the door.	Ben kapıyı kırınca bana arka çık.	Kapıyı kırdığımda beni kolla.	
+9	Hunker down and wait for the storm to pass.	Siper al ve fırtınanın geçmesini bekle.	Yerine çömel ve fırtına geçene kadar bekle.	
+17	Wait for my signal before you move.	Hareket etmeden önce işaretimi bekle.	Ben işaret verene kadar hareket etme.	
+21	Combine the herbs to make a healing potion.	Şifa iksiri yapmak için otları birleştir.	Şifalı otları birleştirip bir iyileştirme iksiri yap.	
+38	Stay out of the spotlight.	Projektörün ışığından uzak dur.	Dikkat çekme.	
+45	I'll draw their fire while you go around.	Sen çevreden dolanırken ben ateşi üzerime çekerim.	Ben ateşlerini üzerime çekerim, sen arkadan dolan.	
+54	Copy that. Moving to intercept.	Anlaşıldı. Önlemek için harekete geçiyorum.	Anlaşıldı. Müdahale etmek için yola çıkıyorum.	
+65	Press F to pay your respects.	Saygılarını sunmak için F tuşuna bas.	Saygını göstermek için F'ye bas.	
+83	Heal up before taking on the boss.	Patronla karşılaşmadan önce canını yenile.	Patronla dövüşmeden önce iyileş.	
+103	Stay put until I give the all-clear.	Ben güvenli demeden olduğun yerde kal.	Ben tehlike geçti diyene kadar olduğun yerde kal.	
+106	Light them up!	Hepsini kurşun yağmuruna tut!	Hepsini indirin!	
+108	Pick them off one by one from the tower.	Kuleden birer birer nişan al, hepsini indir.	Kuleden onları tek tek avla.	
+109	Keep the pressure on and don't give them time to regroup.	Baskıyı sürdür, toparlanmalarına fırsat verme.	Baskıyı sürdür ve toparlanmaları için onlara zaman tanıma.	
+112	Breach and clear on my mark.	Benim işaretimle girin ve temizleyin.	İşaretimle kapıyı kır ve odayı temizle.	
+117	Move it, move it, move it!	Hadi, hadi, hadi!	Kımılda, kımılda, kımılda!	
+147	Use the vents to get to the control room.	Kontrol odasına gitmek için havalandırma kanallarını kullan.	Havalandırmaları kullanarak kontrol odasına ulaş.	
+150	Look sharp, here they come.	Gözünü dört aç, geliyorlar.	Dikkatli ol, geliyorlar.	
+167	Scavenge the abandoned cars for fuel.	Yakıt için terk edilmiş arabaları ara.	Terk edilmiş arabalardan yakıt topla.	
+180	Mine the ore and smelt it down into ingots.	Cevheri çıkar ve külçe olması için eritip kalıba dök.	Cevheri çıkar ve eriterek külçe yap.	
+181	Repair your gear at the anvil.	Ekipmanını örs başında onar.	Teçhizatını örste onar.	
+188	Bribe the guard with a few coins.	Muhafızı birkaç bozuk parayla rüşvetle ikna et.	Nöbetçiye birkaç parayla rüşvet ver.	
+203	Try attacking the dummy to practice combos.	Kombolarını çalışmak için mankene saldırmayı dene.	Kombolarını denemek için antrenman mankenine saldır.	
+217	Take it easy on the throttle.	Gaza yavaş bas.	Gaza fazla yüklenme.	
+218	Hug the inside of the turn.	Virajın iç tarafına yapış.	Virajın iç kısmına yakın git.	
+227	Hold on tight, this is going to be rough.	Sıkı tut, bu iş sert olacak.	Sıkı tutun, yol çok sarsıntılı olacak.	
+233	Turn around slowly and don't try anything.	Yavaşça arkanı dön ve akıllıca davran.	Yavaşça dön ve sakın bir şey deneme.	
+239	Count the rounds you have left.	Kalan mermilerini say.	Kaç merminin kaldığını say.	
+244	Trade your furs for supplies at the post.	Postlarını karakoldaki erzakla takas et.	Kürklerini ticaret merkezinde erzakla takas et.	
+247	Name your price and stick to it.	Fiyatını söyle ve ondan geri adım atma.	Fiyatını söyle ve onun arkasında dur.	
+271	Bring up the cavalry on the right flank.	Süvarileri sağ kanata getirin.	Atlıları sağ kanada getir.	
+272	Spare no one.	Kimseyi sağ bırakma.	Kimseyi esirgeme.	
+291	You're clear to engage.	Çatışmaya girmen için yeşil ışık yandı.	Ateş açabilirsin.	
+301	Pop smoke so we can see you.	Seni görebilmemiz için duman bombası at.	Duman at ki seni görebilelim.	
+311	Cover your tracks so nobody can follow you.	Kimse seni izleyemesin diye izlerini sil.	İzlerini sil ki kimse seni takip edemesin.	
+317	Get him to spill the beans.	Ağzındaki baklayı çıkarmasını sağla.	Onu ağzından laf almak için sıkıştır.	
+318	Squeeze the thug for information.	Serseriyi sıkıştırıp bilgi al.	Serseriyi bilgi almak için sıkıştır.	
+319	Run a background check on everyone on the list.	Listedeki herkesin sabıka geçmişini araştır.	Listedeki herkesin sabıka kaydını kontrol et.	
+322	Dust the glass for fingerprints.	Parmak izi için camı tozla.	Camda parmak izi ara.	
+326	Check the footage from last night.	Dün geceki kamera kayıtlarına bak.	Dün geceki görüntüleri incele.	
+344	Stay on the path and you'll be fine.	Yoldan çıkma, sorun yaşamazsın.	Patikadan ayrılma, bir şey olmaz.	
+347	Cross the bridge before it collapses.	Köprü çökmeden karşıya geç.	Çökmeden önce köprüden geç.	
+348	Take the lift to the top floor.	Üst kata asansörle çık.	Asansörle en üst kata çık.	
+359	Take a moment to catch your breath.	Biraz soluklan.	Bir an durup nefes al.	
+361	Meet me at the safehouse after dark.	Hava karardıktan sonra sığınakta benimle buluş.	Karanlık çöktükten sonra güvenli evde buluşalım.	
+369	You'd better watch your back.	Arkana dikkat etsen iyi olur.	Arkanı kollasan iyi olur.	
+381	Circle around and hit them from behind.	Çevrelerinden dolan ve arkadan vur.	Dolan ve onlara arkadan vur.	
+387	Watch the rooftops for snipers.	Çatılara göz at, keskin nişancı olabilir.	Çatılarda keskin nişancı var mı diye bak.	
+390	If they break through, fall back to the church.	Hattı yarmaya kalkarlarsa kiliseye çekilin.	Yarıp geçerlerse kiliseye çekilin.	
+401	Keep a low profile in the city.	Şehirde dikkat çekme.	Şehirde göze batma.	
+405	Stop right there!	Orada dur!	Dur orada!	
+439	Stand aside, old man.	Çekil kenara, ihtiyar.	Çekil kenara, koca adam.	
+441	Take your time; there's no rush.	Acele etme; zamanın var.	Acele etme; telaş yok.	
+444	Don't take it personally.	Kendine alma.	Alınma.	
+445	Take my advice and leave town.	Benden söylemesi, şehri terk et.	Tavsiyemi dinle ve şehri terk et.	
+460	Lash the logs together to make a raft.	Bir sal yapmak için kütükleri birbirine bağla.	Kütükleri birbirine bağlayarak bir sal yap.	
+485	Reloading!	Şarjör değiştiriyorum!	Mermi dolduruyorum!	
+487	Man down!	Yaralı var!	Adam yaralandı!	
+489	We've got a runner! Cut him off!	Kaçan var! Yolunu kesin!	Biri kaçıyor! Yolunu kes!	
+492	Fire in the hole!	Patlıyor, uzak durun!	Ateş geliyor!	
+495	We're going loud. Weapons free.	Sesli gidiyoruz. Ateş serbest.	Gürültülü gireceğiz. Serbest ateş.	
+496	Weapons tight. Only fire if fired upon.	Ateş kısıtlı. Yalnızca karşı ateşe maruz kalırsan ateş et.	Sıkı ateş kuralı. Yalnızca ateş edilirse karşılık verin.	
+503	Take the south tunnel; it should be unguarded.	Güney tünelinden git; korumasız olmalı.	Güney tünelini kullan; orada nöbetçi olmamalı.	
+519	Jump on the enemy's head to defeat it.	Yenmek için düşmanın kafasına zıpla.	Düşmanı yenmek için başına zıpla.	
+522	Invite a friend to join your party.	Partine katılması için bir arkadaşını davet et.	Bir arkadaşını grubuna davet et.	
+527	Season the meat with salt to make it last longer.	Daha uzun dayanması için etin üstüne tuz serp.	Daha uzun dayansın diye eti tuzla.	
+529	Boil the bandages to keep them clean.	Temiz kalsınlar diye sargıları kaynat.	Sargıları temiz kalsın diye kaynat.	
+539	Stay in your lane and keep it steady.	Şeridinde kal ve düzgün sür.	Şeridinde kal ve sabit git.	
+544	Ditch the bike and take cover in the ravine.	Motoru bırak ve dereye sığın.	Motosikleti bırak ve vadide siper al.	
+546	Time to move. Come on, up and at 'em.	Kalkma vakti. Hadi, kalk ve işe koyul.	Gitme vakti. Hadi, kalkın bakalım.	
+548	Keep the channel clear for emergency traffic.	Kanalı acil trafik için boş bırak.	Acil durum trafiği için kanalı boş tut.	
+553	Keep me posted.	Beni bilgilendirmeye devam et.	Beni haberdar et.	
+558	Make it count.	Her şeyini ortaya koy.	Değerlendir bu fırsatı.	
+575	Blow up the bridge once the convoy is across.	Konvoy karşıya geçince köprüyü patlat.	Konvoy geçtikten sonra köprüyü havaya uçur.	
+578	Stick together and don't wander off.	Birlikte kalın ve ayrı düşmeyin.	Birlikte kalın, dağılmayın.	
+584	Hand over the goods and nobody gets hurt.	Malları teslim et, kimse zarar görmesin.	Malları teslim et, kimsenin canı yanmasın.	

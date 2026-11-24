@@ -7,7 +7,19 @@ from dataclasses import dataclass
 ABBREVIATIONS = {"mr", "mrs", "ms", "dr", "st", "jr", "sr", "vs", "etc", "prof", "sgt", "lt", "capt", "col", "gen",
                  "no", "inc", "co", "mt"}
 NOT_SPEAKERS = {"note", "warning", "tip", "objective", "hint", "remember", "mission", "goal", "task", "caution",
-                "important", "attention", "press", "hold", "reminder", "update", "new", "quest"}
+                "important", "attention", "press", "hold", "reminder", "update", "new", "quest",
+                # interface labels ("Difficulty: Hard", "Controls: Move, Aim"): a label word that is an ordinary noun is a
+                # label, not a person. (A real speaker taken for a label costs little: the name just goes through the model.)
+                "difficulty", "controls", "control", "optional", "options", "option", "settings", "setting", "volume",
+                "brightness", "language", "health", "ammo", "level", "score", "time", "status", "mode", "chapter", "goals",
+                "reward", "rewards", "requirement", "requirements", "location", "destination", "distance", "weight",
+                "damage", "speed", "range", "price", "cost", "stats", "name", "class", "type", "skill", "skills", "wanted",
+                "tutorial", "info", "information", "description", "effect", "effects", "duration", "cooldown", "armor",
+                "armour", "attack", "defense", "defence", "strength", "agility", "stamina", "energy", "mana", "gold",
+                "money", "cash", "xp", "rank", "title", "subtitles", "audio", "video", "graphics", "display", "resolution",
+                "quality", "sensitivity", "vibration", "save", "load", "slot", "empty", "continue", "day", "part", "act",
+                "episode", "page", "result", "results", "progress", "target", "targets", "enemies", "bonus", "tasks",
+                "objectives", "missions", "current", "next", "last", "total", "available", "unavailable", "locked"}
 
 _END = re.compile(r"[.!?]+[\"')\]]*\s+")
 _NAME_WORD = r"[A-Z][A-Za-z.'\-]*"
@@ -43,7 +55,8 @@ def split_pieces(text: str) -> list[Piece]:
     pieces = []
     for sentence in _sentences(re.sub(r"\s+", " ", text).strip()):
         match = _LABEL.match(sentence)
-        if match and match.group(1).split()[0].rstrip(".").lower() not in NOT_SPEAKERS:
+        if (match and not any(word.rstrip(".").lower() in NOT_SPEAKERS for word in match.group(1).split())
+                and re.search(r"[^\W\d_]", match.group(2))):       # "Fuel: 40%" is a label and a value, not words spoken
             pieces.append(Piece(match.group(1), match.group(2).strip()))
         else:
             pieces.append(Piece(None, sentence))

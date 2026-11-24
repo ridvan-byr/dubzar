@@ -22,6 +22,7 @@ from dubzar.overlay_window import OverlayWindow
 from dubzar.priority import lower_priority
 from dubzar.screen import (band_box, corner_boxes, exclude_from_capture, foreground_is_fullscreen, foreground_monitor_rect,
                            foreground_process_name, game_in_front, grab)
+from dubzar import quality_model
 from dubzar.performance import profile_for
 from dubzar.region_notes import RegionNoteSource
 from dubzar.screen_source import ScreenSubtitleSource
@@ -31,15 +32,20 @@ from dubzar.translate import Translator
 from dubzar.ui.backdrop import Backdrop
 from dubzar.ui.controller import SettingsController
 from dubzar.ui.intro import IntroWindow
-from dubzar.ui.panel import PanelWindow
+from dubzar.ui.panel import PanelWindow, keep_topmost
+from dubzar.profiles import GameTracker, ProfileManager
 from dubzar.ui.saver import SettingsSaver
 from dubzar.ui.screens import target_screen
 from dubzar.ui.system import animations_enabled
+from dubzar.ui.tray import TrayIcon
 
 log = logging.getLogger(__name__)
 
 HINT_DELAY_MS = 6000   # after the game process appears: let its window come up before the hint shows
 GAME_POLL_MS = 3000
+# full-screen programs that are not games: they never get the "Dubzar is here" hint
+NOT_GAMES = {"explorer.exe", "applicationframehost.exe", "chrome.exe", "msedge.exe", "firefox.exe", "opera.exe", "brave.exe",
+             "vlc.exe", "mpc-hc64.exe", "python.exe", "pythonw.exe", "dubzar.exe", "powerpnt.exe", "code.exe"}
 PREVIEW_TEXT = "Sessiz ol… Birisi geliyor."
 EXCLUSIVE_WARNING = (
     "Bilgi: tam ekran (exclusive) bir oyun algılandı. Çoğu oyunda altyazı görünür; görünmezse "
@@ -122,6 +128,12 @@ class _SharedReader:
         with self._lock:
             return self._reader.read(image)
 
+    def replace(self, reader) -> None:
+        """Another engine (graphics card or processor) takes over; the old one is released."""
+        with self._lock:
+            self._reader = reader
+            self.language = reader.language
+
 
 def make_screen_source(settings: Settings, translator: Translator, bridge):
     """Reads the game's own English subtitles from the screen; None when Windows OCR is unavailable.
@@ -156,14 +168,24 @@ def _make_screen_source(settings: Settings, translator: Translator, bridge):
     corners = RegionNoteSource(grab_corners, ocr, translator, bridge.note.emit, poll_s=profile.corner_poll_s,
                                defer=lambda: subtitles.busy)
 
+    reader_gpu = {"on": profile.gpu_ocr}          # what the running reader uses; the mode may change while it runs
+
     def mode_changed(name: str) -> None:
         if name != "performance":
             return
         chosen = profile_for(settings.performance)
         subtitles.set_rhythm(chosen.poll_s, chosen.idle_poll_s)       # the pace changes at once;
         corners.set_rhythm(chosen.corner_poll_s)
-        if chosen.gpu_ocr != profile.gpu_ocr:                          # the reader that does the work, at the next start
-            log.info("mod değişti: okuyucu (ekran kartı/işlemci) program yeniden başlayınca değişir")
+        if chosen.gpu_ocr != reader_gpu["on"]:                         # the reader that does the work changes at once
+            reader_gpu["on"] = chosen.gpu_ocr
+
+            def swap() -> None:
+                fresh = make_reader(chosen)
+                if fresh is not None and reader_gpu["on"] == chosen.gpu_ocr:
+                    ocr.replace(fresh)
+                    log.info("mod değişti: yazı okuyucu %s ile çalışıyor", "ekran kartı" if chosen.gpu_ocr else "işlemci")
+
+            threading.Thread(target=swap, name="dubzar-reader-swap", daemon=True).start()
 
     settings.on_change(mode_changed)
     return subtitles, corners
@@ -175,9 +197,32 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     qInstallMessageHandler(qt_message_filter)
     lower_priority()  # the game must always win when the processor is busy
     app = QApplication(sys.argv)
+    app.setApplicationName("Dubzar")
+    app.setQuitOnLastWindowClosed(False)         # Dubzar lives in the background; only the tray menu or the panel ends it
     animations = animations_enabled()
     controller = SettingsController(settings, screen_count=len(app.screens()), animations=animations)
     controller.set_live(True)
+    profiles = ProfileManager(settings)                     # before the saver: saving writes the base values
+    controller.set_profiles(profiles)
+    game_tracker = GameTracker(profiles, lambda: (foreground_process_name(), foreground_is_fullscreen()),
+                               is_process_running, lambda: settings.game_exe)
+    game_timer = QTimer()                                   # which game is in front decides whose settings are in use
+    game_timer.setInterval(2000)
+    game_timer.timeout.connect(game_tracker.tick)
+    game_timer.start()
+    game_tracker.tick()
+    quality = quality_model.shared()                        # the large second model belongs to High mode only
+
+    def sync_quality_model(name: str = "performance") -> None:
+        if name != "performance":
+            return
+        if profile_for(settings.performance).quality_model:
+            quality.start()
+        else:
+            quality.stop()
+
+    settings.on_change(sync_quality_model)
+    sync_quality_model()
     overlay = OverlayWindow(settings)
     panel = PanelWindow(controller)
     intro = IntroWindow(animations)
@@ -209,10 +254,26 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         overlay.raise_()
         panel.raise_to_top()
 
+    topmost_timer = QTimer()
+    topmost_timer.setInterval(150)
+
+    def reassert_order() -> None:
+        """While the panel is open keep it, the subtitle preview and the veil above a game that keeps raising its own window."""
+        if not panel.is_open:
+            topmost_timer.stop()
+            return
+        keep_topmost(int(backdrop.winId()))
+        if overlay.isVisible():
+            keep_topmost(int(overlay.winId()))
+        panel.raise_to_top()
+
+    topmost_timer.timeout.connect(reassert_order)
+
     # the veil leaves the subtitle preview clear, so its colours are judged over the real picture
     overlay.placed.connect(lambda rect: backdrop.set_clear_rect(rect) if backdrop.isVisible() else None)
 
     def toggle_panel() -> None:
+        log.debug("ayarlar paneli: %s", "kapatılıyor" if panel.is_open else "açılıyor")
         if panel.is_open:
             panel.hide()
             return
@@ -221,6 +282,7 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
         overlay.set_preview(PREVIEW_TEXT)  # so the user sees what they are adjusting
         panel.show(panel_screen)
         bring_to_front()
+        topmost_timer.start()
 
     def follow_panel_screen_setting(name: str) -> None:
         """Picking another screen in the panel moves the open panel there at once (it used to wait for the next open)."""
@@ -234,6 +296,9 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     settings.on_change(follow_panel_screen_setting)
 
     bridge.toggle_panel.connect(toggle_panel)
+    tray = TrayIcon(settings, toggle_panel, app.quit) if TrayIcon.available() else None
+    if tray is not None:
+        tray.show()
 
     hotkey = GlobalHotkey(bridge.toggle_panel.emit)
     hotkey_ok = hotkey.start(settings.hotkey)
@@ -251,8 +316,22 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     if settings.game_exe:  # like NVIDIA/Discord: the hint appears when the game opens, then fades away
         exe = settings.game_exe
         watcher = GameWatcher(lambda: is_process_running(exe), lambda: QTimer.singleShot(HINT_DELAY_MS, show_hint))
-    else:  # the game is unknown: show the hint once now
+    else:  # the game is unknown: show the hint now, and again whenever a new game takes over the screen
         show_hint()
+        shown_for: dict[str, str | None] = {"game": None}
+
+        def watch_for_new_game() -> None:
+            name, fullscreen = foreground_process_name(), foreground_is_fullscreen()
+            current = shown_for["game"]
+            if current and not is_process_running(current):
+                shown_for["game"] = current = None             # it was closed: its next start shows the hint again
+            if fullscreen and name and name.lower() not in NOT_GAMES and name != current:
+                shown_for["game"] = name
+                QTimer.singleShot(HINT_DELAY_MS, show_hint)
+
+        game_hint_timer = QTimer()
+        game_hint_timer.timeout.connect(watch_for_new_game)
+        game_hint_timer.start(GAME_POLL_MS)
 
     screen_source, corner_source = make_screen_source(settings, translator, bridge) if screen_ocr else (None, None)
     pipeline = LivePipeline(store, transcriber, translator, bridge.cue.emit, segmenter=make_segmenter(),
@@ -307,6 +386,9 @@ def run_live(store: IndexStore, store_path: str, settings: Settings, transcriber
     try:
         app.exec()
     finally:
+        if tray is not None:
+            tray.hide()
+        quality.stop()
         panel.close()       # unload the windows' QML first, so quitting prints no "of null" errors
         intro.close()
         hotkey.stop()

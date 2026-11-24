@@ -16,6 +16,7 @@ from typing import Callable, Iterable
 
 import numpy as np
 
+from dubzar import quality_model
 from dubzar.asr import Transcriber, WhisperTranscriber
 from dubzar.errors import ModelMissingError
 from dubzar.index import IndexStore
@@ -84,6 +85,7 @@ def _build_models(args, glossary: dict[str, str], transcriber: Transcriber | Non
     if translator is None:
         model = OpusMtTranslator(glossary=glossary, allow_download=args.allow_download, threads=args.cpu_threads)
         model.load()
+        model.second_opinion = quality_model.shared().second_opinion   # asked only in High mode, once the large model is up
         translator = MemoizedTranslator(model, _open_memory(getattr(args, "memory", None), glossary))
     return transcriber, ThreadSafeTranslator(translator)
 
@@ -248,8 +250,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--audio-dir", help="çıkarılmış ses dosyaları: oyun kapalıyken arka planda taranır")
     run.add_argument("--game-exe", help="oyunun süreç adı (örn. GTA5.exe): çalışırken arka plan taraması bekler")
     run.add_argument("--scan-model", default="small", help="arka plan taraması için Whisper modeli (varsayılan: small)")
-    run.add_argument("--performance", choices=("light", "medium", "high"),
-                     help="bu çalıştırma için mod: light (varsayılan), medium, high (ekran kartıyla okur)")
+    run.add_argument("--performance", choices=("light", "high"),
+                     help="bu çalıştırma için mod: light (varsayılan), high (ekran kartıyla okur, zor satırları büyük modelle çevirir)")
     run.add_argument("--font-size", type=int, help="bu çalıştırma için yazı boyutu (kayıtlı ayarı geçersiz kılar)")
     run.add_argument("--position", choices=tuple(POSITIONS), help="bu çalıştırma için konum: top, center, bottom")
     run.add_argument("--screen", help="bu çalıştırma için ekran: auto (oyunun ekranı), primary veya 1, 2, ...")

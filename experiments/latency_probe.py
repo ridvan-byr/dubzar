@@ -36,7 +36,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--module")
     ap.add_argument("--trials", type=int, default=6)
-    ap.add_argument("--performance", default="light", choices=("light", "medium", "high"))
+    ap.add_argument("--performance", default="light", choices=("light", "high"))
     ap.add_argument("--frames", default="2,13,18,24,25,29,31")
     args = ap.parse_args()
     sys.stdout.reconfigure(errors="replace", encoding="utf-8")

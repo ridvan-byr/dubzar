@@ -1,0 +1,75 @@
+6	A	Ben kapıyı kırınca bana arka çık.
+9	A	Siper al ve fırtınanın geçmesini bekle.
+17	B	Ben işaret verene kadar hareket etme.
+21	A	Şifa iksiri yapmak için otları birleştir.
+38	B	Dikkat çekme.
+45	B	Ben ateşlerini üzerime çekerim, sen arkadan dolan.
+54	B	Anlaşıldı. Müdahale etmek için yola çıkıyorum.
+65	NEW	Saygılarını sunmak için F'ye bas.
+83	B	Patronla dövüşmeden önce iyileş.
+103	B	Ben tehlike geçti diyene kadar olduğun yerde kal.
+106	NEW	Hepsini haklayın!
+108	B	Kuleden onları tek tek avla.
+109	A	Baskıyı sürdür, toparlanmalarına fırsat verme.
+112	NEW	İşaretimle kapıyı kır, içeriyi temizle.
+117	A	Hadi, hadi, hadi!
+147	B	Havalandırmaları kullanarak kontrol odasına ulaş.
+150	A	Gözünü dört aç, geliyorlar.
+167	B	Terk edilmiş arabalardan yakıt topla.
+180	B	Cevheri çıkar ve eriterek külçe yap.
+181	A	Ekipmanını örs başında onar.
+188	NEW	Muhafıza birkaç kuruş rüşvet ver.
+203	B	Kombolarını denemek için antrenman mankenine saldır.
+217	B	Gaza fazla yüklenme.
+218	NEW	Virajı içten al.
+227	NEW	Sıkı tut, yol sarsıntılı olacak.
+233	B	Yavaşça dön ve sakın bir şey deneme.
+239	B	Kaç merminin kaldığını say.
+244	B	Kürklerini ticaret merkezinde erzakla takas et.
+247	A	Fiyatını söyle ve ondan geri adım atma.
+271	A	Süvarileri sağ kanata getirin.
+272	A	Kimseyi sağ bırakma.
+291	B	Ateş açabilirsin.
+301	B	Duman at ki seni görebilelim.
+311	B	İzlerini sil ki kimse seni takip edemesin.
+317	A	Ağzındaki baklayı çıkarmasını sağla.
+318	A	Serseriyi sıkıştırıp bilgi al.
+319	B	Listedeki herkesin sabıka kaydını kontrol et.
+322	NEW	Camı parmak izi tozuyla tara.
+326	A	Dün geceki kamera kayıtlarına bak.
+344	A	Yoldan çıkma, sorun yaşamazsın.
+347	A	Köprü çökmeden karşıya geç.
+348	B	Asansörle en üst kata çık.
+359	A	Biraz soluklan.
+361	NEW	Hava karardıktan sonra güvenli evde benimle buluş.
+369	B	Arkanı kollasan iyi olur.
+381	B	Dolan ve onlara arkadan vur.
+387	B	Çatılarda keskin nişancı var mı diye bak.
+390	B	Yarıp geçerlerse kiliseye çekilin.
+401	A	Şehirde dikkat çekme.
+405	B	Dur orada!
+439	A	Çekil kenara, ihtiyar.
+441	A	Acele etme; zamanın var.
+444	B	Alınma.
+445	A	Benden söylemesi, şehri terk et.
+460	B	Kütükleri birbirine bağlayarak bir sal yap.
+485	A	Şarjör değiştiriyorum!
+487	A	Yaralı var!
+489	A	Kaçan var! Yolunu kesin!
+492	A	Patlıyor, uzak durun!
+495	B	Gürültülü gireceğiz. Serbest ateş.
+496	B	Sıkı ateş kuralı. Yalnızca ateş edilirse karşılık verin.
+503	B	Güney tünelini kullan; orada nöbetçi olmamalı.
+519	B	Düşmanı yenmek için başına zıpla.
+522	B	Bir arkadaşını grubuna davet et.
+527	A	Daha uzun dayanması için etin üstüne tuz serp.
+529	B	Sargıları temiz kalsın diye kaynat.
+539	A	Şeridinde kal ve düzgün sür.
+544	B	Motosikleti bırak ve vadide siper al.
+546	B	Gitme vakti. Hadi, kalkın bakalım.
+548	B	Acil durum trafiği için kanalı boş tut.
+553	B	Beni haberdar et.
+558	A	Her şeyini ortaya koy.
+575	B	Konvoy geçtikten sonra köprüyü havaya uçur.
+578	B	Birlikte kalın, dağılmayın.
+584	A	Malları teslim et, kimse zarar görmesin.

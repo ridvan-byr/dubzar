@@ -1,0 +1,67 @@
+Here's your change. ||| Paran üstü burada.
+Anything else? ||| Başka bir şey var mı?
+Would you like a bag? ||| Poşet ister misiniz?
+That's all I have. ||| Elimdeki bu kadar.
+It's not for sale. ||| Satılık değil.
+Sold out. ||| Tükendi.
+Fresh bread, still warm! ||| Taze ekmek, hâlâ sıcak!
+Step right up! ||| Buyurun, yaklaşın!
+Best prices in town! ||| Kasabanın en uygun fiyatları!
+Looking to buy or sell? ||| Alıcı mısın satıcı mı?
+You can't afford that. ||| Bunu karşılayamazsın.
+Come back when you have more gold. ||| Daha çok altının olunca gel.
+Thanks for your business. ||| Alışverişiniz için teşekkürler.
+Pleasure doing business with you. ||| Seninle çalışmak bir zevkti.
+Please wait your turn. ||| Lütfen sıranı bekle.
+Next, please. ||| Sıradaki, lütfen.
+Table for two? ||| İki kişilik masa mı?
+What would you like to drink? ||| Ne içmek istersin?
+The usual? ||| Her zamankinden mi?
+Another round? ||| Bir tur daha mı?
+Cheers! ||| Şerefe!
+Bon appétit. ||| Afiyet olsun.
+That was delicious. ||| Çok lezzetliydi.
+The check, please. ||| Hesap, lütfen.
+Keep the change. ||| Üstü kalsın.
+Mission complete. ||| Görev tamamlandı.
+Objective updated. ||| Hedef güncellendi.
+Good luck, and stay alive. ||| İyi şanslar, sağ kal.
+Welcome to the team. ||| Takıma hoş geldin.
+Nice work, rookie. ||| İyi iş, çaylak.
+Orders received. ||| Emir alındı.
+Copy that. ||| Anlaşıldı.
+Roger. ||| Tamam, anlaşıldı.
+Standing by. ||| Beklemedeyim.
+In position. ||| Pozisyondayım.
+Moving out. ||| Harekete geçiyorum.
+Falling back! ||| Geri çekiliyoruz!
+Regroup at the gate. ||| Kapıda toplanın.
+Is everyone okay? ||| Herkes iyi mi?
+Anyone hurt? ||| Yaralanan var mı?
+Count off. ||| Sayın.
+Stay alert. ||| Tetikte kalın.
+Stay together. ||| Birlikte kalın.
+Watch the rooftops. ||| Çatılara dikkat edin.
+Check your corners. ||| Köşeleri kontrol edin.
+Lock and load. ||| Silahlarınızı hazırlayın.
+Hands off, that's mine. ||| Çek elini, o benim.
+Careful, it's hot. ||| Dikkat, sıcak.
+Careful, the floor is wet. ||| Dikkat, zemin ıslak.
+Mind the gap. ||| Boşluğa dikkat.
+Watch your head. ||| Kafana dikkat et.
+The ice is thin here. ||| Buradaki buz ince.
+Don't drink the water. ||| Suyu içme.
+That's too dangerous. ||| Bu çok tehlikeli.
+It's a trap! ||| Bu bir tuzak!
+It's empty. ||| Boş.
+It's gone. ||| Gitmiş.
+It's heavy. ||| Ağır.
+It's over. ||| Bitti.
+It's too quiet. ||| Çok sessiz.
+It's time to go. ||| Gitme zamanı.
+It works! ||| Çalışıyor!
+It doesn't work. ||| Çalışmıyor.
+Nothing happened. ||| Hiçbir şey olmadı.
+Nobody's home. ||| Evde kimse yok.
+Everything is under control. ||| Her şey kontrol altında.
+Everything will be fine. ||| Her şey yoluna girecek.

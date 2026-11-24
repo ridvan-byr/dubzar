@@ -1,0 +1,98 @@
+Flank them from the east. ||| Onları doğu taraftan sar.
+Sweep the building and report back. ||| Binayı tara ve bana rapor ver.
+Lay low until the heat dies down. ||| Ortalık yatışana kadar ortalarda görünme.
+Take out the guards at the gate. ||| Kapıdaki muhafızları etkisiz hale getir.
+Hold off the attackers until help arrives. ||| Yardım gelene kadar saldırganları oyala.
+Back me up when I breach the door. ||| Ben kapıyı kırınca bana arka çık.
+Pull back to the second checkpoint! ||| İkinci kontrol noktasına çekil!
+Sneak past the patrol without being seen. ||| Devriyenin yanından görünmeden sıvış.
+Hunker down and wait for the storm to pass. ||| Siper al ve fırtınanın geçmesini bekle.
+Find the missing courier and bring him back alive. ||| Kayıp kuryeyi bul ve sağ olarak geri getir.
+Press and hold Shift to sprint. ||| Koşmak için Shift tuşuna basılı tut.
+Use the left stick to move the camera. ||| Kamerayı hareket ettirmek için sol çubuğu kullan.
+Open your inventory and equip the knife. ||| Envanterini aç ve bıçağı kuşan.
+Hit the red button to start the engine. ||| Motoru çalıştırmak için kırmızı düğmeye bas.
+Cover the stairwell while I reload. ||| Ben şarjör değiştirirken merdiven boşluğunu kolla.
+Don't go in there alone. ||| Oraya tek başına girme.
+Wait for my signal before you move. ||| Hareket etmeden önce işaretimi bekle.
+Mark the target and call in the airstrike. ||| Hedefi işaretle ve hava saldırısını çağır.
+Collect ten pelts and bring them to the trader. ||| On post topla ve tüccara götür.
+Craft a torch using a stick and some cloth. ||| Bir sopa ve biraz bezle meşale yap.
+Combine the herbs to make a healing potion. ||| Şifa iksiri yapmak için otları birleştir.
+Haggle with the merchant for a better price. ||| Daha iyi bir fiyat için tüccarla pazarlık et.
+Sell your spare weapons to free up some space. ||| Yer açmak için fazla silahlarını sat.
+Keep the engine running; we may have to leave fast. ||| Motoru çalışır halde tut; hızlı çıkmamız gerekebilir.
+Lose the cops before you head to the safehouse. ||| Sığınağa gitmeden önce polisleri atlat.
+Stay on my tail and don't lose me. ||| Peşimden ayrılma, beni gözden kaçırma.
+Hit the brakes before the sharp turn! ||| Keskin virajdan önce frene bas!
+Ration your water; the desert is unforgiving. ||| Suyunu idareli kullan; çöl acımasızdır.
+Build a fire before it gets dark. ||| Hava kararmadan ateş yak.
+Boil the water first or you'll get sick. ||| Önce suyu kaynat, yoksa hastalanırsın.
+Follow the river until you reach the old mill. ||| Eski değirmene varana kadar nehri takip et.
+Check the barn for supplies. ||| Ambarda erzak var mı diye bak.
+Deliver this package to the captain at the docks. ||| Bu paketi limandaki kaptana teslim et.
+Escort the caravan to the next village. ||| Kervanı bir sonraki köye kadar götür.
+Keep the prisoner alive at all costs. ||| Mahkûmu ne pahasına olursa olsun hayatta tut.
+Disable the alarm before you open the vault. ||| Kasayı açmadan önce alarmı devre dışı bırak.
+Hack the terminal and download the files. ||| Terminale sız ve dosyaları indir.
+Stay out of the spotlight. ||| Projektörün ışığından uzak dur.
+Take cover behind the crates! ||| Sandıkların arkasına geç!
+Fall back! They're overrunning us! ||| Geri çekilin! Bizi eziyorlar!
+Push forward and secure the courtyard. ||| İlerle ve avluyu güvene al.
+Watch your six. ||| Arkanı kolla.
+Eyes up, we've got company. ||| Gözünü aç, misafirlerimiz var.
+Clear the room, then hold the door. ||| Odayı temizle, sonra kapıyı tut.
+I'll draw their fire while you go around. ||| Sen çevreden dolanırken ben ateşi üzerime çekerim.
+Split up and cover more ground. ||| Ayrılalım, daha geniş bir alanı tarayalım.
+Rendezvous at the old lighthouse at midnight. ||| Gece yarısı eski deniz fenerinde buluşalım.
+Get to the roof and wait for pickup. ||| Çatıya çık ve alınmayı bekle.
+Don't fire until you see the whites of their eyes. ||| Gözlerinin akını görmeden ateş etme.
+Lock down the entrances and seal the windows. ||| Girişleri kilitle ve pencereleri kapat.
+Radio in when you reach the target. ||| Hedefe ulaşınca telsizle haber ver.
+Alpha team, hold your position. ||| Alfa timi, mevzinizi koruyun.
+Command, we have eyes on the package. ||| Merkez, paketi gözümüzün önünde tutuyoruz.
+Copy that. Moving to intercept. ||| Anlaşıldı. Önlemek için harekete geçiyorum.
+Say again, you're breaking up. ||| Tekrar et, sesin kesiliyor.
+Roger, standing by for further orders. ||| Anlaşıldı, yeni emirler için hazır bekliyorum.
+We've lost contact with the second squad. ||| İkinci mangayla bağlantımız koptu.
+Abort the mission, I repeat, abort! ||| Görevi iptal edin, tekrar ediyorum, iptal edin!
+Your mission is to infiltrate the compound. ||| Görevin kampa sızmak.
+This is a one-way trip, so make it count. ||| Bu, dönüşü olmayan bir yolculuk, o yüzden değerlendir.
+Trust no one in there. ||| Orada hiç kimseye güvenme.
+Quest accepted: The Lost Crown. ||| Görev kabul edildi: Kayıp Taç.
+Return to the elder to claim your reward. ||| Ödülünü almak için ihtiyara dön.
+Quest completed. You gained 250 experience. ||| Görev tamamlandı. 250 deneyim puanı kazandın.
+Press F to pay your respects. ||| Saygılarını sunmak için F tuşuna bas.
+Aim with the right mouse button and fire with the left. ||| Sağ fare tuşuyla nişan al, sol tuşla ateş et.
+Crouch to avoid being noticed. ||| Fark edilmemek için çömel.
+Walk slowly to keep your footsteps quiet. ||| Ayak seslerini kısık tutmak için yavaş yürü.
+Throw a rock to distract the guard. ||| Muhafızın dikkatini dağıtmak için taş fırlat.
+Approach from behind and press Q for a silent takedown. ||| Arkadan yaklaş ve sessiz saldırı için Q tuşuna bas.
+Drag the body into the shadows. ||| Cesedi gölgelere sürükle.
+Pick the lock before they come back. ||| Onlar dönmeden kilidi aç.
+Stay in the tall grass and move slowly. ||| Uzun otların içinde kal ve yavaş hareket et.
+Scout ahead and see what we're up against. ||| İleri git, keşfet; neyle karşı karşıya olduğumuzu görelim.
+Follow the blood trail to find the wounded beast. ||| Yaralı hayvanı bulmak için kan izini takip et.
+Set a trap near the watering hole. ||| Sulak yerin yakınına bir tuzak kur.
+Skin the deer before the meat spoils. ||| Et bozulmadan geyiği yüz.
+Upgrade your armor at the forge. ||| Zırhını demirhanede geliştir.
+Spend your skill points wisely. ||| Beceri puanlarını akıllıca harca.
+Save your progress before you continue. ||| Devam etmeden önce ilerlemeni kaydet.
+Switch weapons with the mouse wheel. ||| Silah değiştirmek için fare tekerleğini kullan.
+Reload when your clip runs dry. ||| Şarjörün boşalınca yenile.
+Heal up before taking on the boss. ||| Patronla karşılaşmadan önce canını yenile.
+Dodge the attack right before it lands. ||| Saldırı isabet etmeden hemen önce kaç.
+Break their guard, then strike. ||| Savunmalarını kır, sonra vur.
+Wear them down with ranged attacks. ||| Menzilli saldırılarla onları yor.
+Keep moving, or you're a sitting duck. ||| Hareket etmeye devam et, yoksa kolay hedef olursun.
+Lure the enemy into the narrow corridor. ||| Düşmanı dar koridora çek.
+Cut off their escape route. ||| Kaçış yollarını kes.
+Ambush the convoy at the bridge. ||| Konvoyu köprüde pusuya düşür.
+Torch the supply wagons and fall back. ||| Erzak arabalarını yak ve geri çekil.
+Defend the gate until sunrise. ||| Gün doğana kadar kapıyı savun.
+Reinforce the barricades; they're coming. ||| Barikatları güçlendir; geliyorlar.
+Disarm the bomb before the timer runs out. ||| Zamanlayıcı bitmeden bombayı etkisiz hale getir.
+Cut the red wire, not the blue one. ||| Mavi teli değil, kırmızı teli kes.
+Don't touch anything until the team arrives. ||| Ekip gelene kadar hiçbir şeye dokunma.
+Take the shot only when you're sure. ||| Ancak emin olduğunda ateş et.
+Breathe out slowly before you pull the trigger. ||| Tetiği çekmeden önce yavaşça nefes ver.

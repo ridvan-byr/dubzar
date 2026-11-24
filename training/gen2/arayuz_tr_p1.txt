@@ -1,0 +1,159 @@
+Ortam sesi
+Çözünürlük ölçeği
+Ortam tıkanıklığı
+Görüş mesafesi
+Parçacık efektleri
+Alan derinliği
+Film greni
+Renk sapması
+Kamera sarsıntısı
+Kumanda titreşimi
+Nişan yardımı
+Koşmayı aç/kapat
+Eğilmek için basılı tut
+Otomatik kayıt
+Dil
+Ekran modu
+Tam ekran
+Pencereli
+Çerçevesiz pencere
+FPS sayacını göster
+Hasar sayılarını göster
+Mini haritayı göster
+Renk körlüğü modu
+Metinden konuşmaya
+Altyazı arka planı
+Altyazı rengi
+Konuşmacı adları
+Yüksek kontrast modu
+Ekran okuyucu
+Basılı tutma süresi
+Saygını göstermek için F'ye bas.
+Yeniden doldurmak için R'ye basılı tut.
+Zıplamak için BOŞLUK tuşuna bas.
+Koşmak için SHIFT'e basılı tut.
+Ara sahneyi geçmek için ESC'ye bas.
+Tırmanmak için X'e bas.
+Nişan almak için LT'ye basılı tut.
+Takım arkadaşını canlandırmak için E'ye basılı tut.
+Haritayı açmak için M'ye bas.
+İnşa etmek için B'ye bas.
+Siper almak için C'ye bas.
+Atlatmak için A'ya dokun.
+Etkileşim için Y'ye bas.
+Özel yeteneğini kullanmak için V'ye bas.
+Konuşmak için T'ye bas.
+Eşyayı incelemek için F'ye basılı tut.
+Yükleniyor...
+Bölüm yükleniyor: 3 / 12...
+Varlıklar yükleniyor, lütfen bekle.
+Dünya oluşturuluyor...
+Otomatik kayıt sürüyor.
+Oyun başarıyla kaydedildi.
+Güncelleme indiriliyor %45...
+Gölgelendiriciler derleniyor: %72
+Başlatılıyor...
+Bulut kayıtları eşitleniyor...
+Oyun yüklenirken lütfen bekle.
+İpucu: Eğilirken de koşabilirsin.
+İpucu: Düşmanlar ateşe karşı zayıf.
+İpucu: Gizli anahtarlar için her sandığa bak.
+Bir hata oluştu.
+Sunucuya bağlanılamıyor.
+Oturumunun süresi doldu.
+Hata kodu: 404
+Yeterli disk alanı yok.
+Oyun sürümün güncel değil.
+Sunucu dolu.
+Sunucuyla bağlantın kesildi.
+Giriş başarısız. Lütfen bilgilerini kontrol et.
+Dosya bozuk.
+Lütfen oyunu yeniden başlat.
+Sunucular şu anda bakımda.
+Kumandanın bağlantısı kesildi.
+Lütfen kumandayı yeniden bağla.
+Bu işlem geri alınamaz.
+Bu kayıt dosyası silinsin mi?
+Görev başarısız
+Görev tamamlandı
+Öldün
+Oyun bitti
+Zafer!
+Seviye atladın!
+Yeni hedef
+Hedef güncellendi.
+Bölge keşfedildi
+Görev kabul edildi.
+Can: 85/100
+Mermi: 24/120
+Dayanıklılık: %60
+Zırh: 45
+Mana: 30/50
+Skor: 12.450
+Dalga 5 / 10
+Seviye: 14
+XP: 1.250 / 2.000
+Altın: 3.420
+Can hakkı: 3
+Kombo x12
+Öldürme: 7
+Ölüm: 2
+Asist: 4
+Mesafe: 350 m
+Hız: 120 km/sa
+Sıcaklık: 36,6°C
+Ağırlık: 45,2 / 60 kg
+Yeniden doldurma: 1,8 sn
+Bekleme süresi: 12 sn
+Menzil: 25 m
+Hasar: 150
+Kritik şansı: %15
+Saldırı hızı: +%20
+Hareket hızı: -%10
+Zırh delme: 30
+Dayanıklılık: 80/100
+Direnç: Ateş +%25
+Kanama: 3 kat
+10 saniye boyunca zehirlendin.
+Mermi azalıyor.
+Mermin bitti!
+Dolduruluyor...
+Yakınlarda düşman var.
+Fark edildin!
+Sessiz öldürme mümkün.
+Hedef: Tüm düşmanları ortadan kaldır.
+Hedef: Kayıp bilim insanını bul.
+Hedef: Üssü 5 dakika boyunca savun.
+İşareti takip et.
+Sığınağa geri dön.
+Demirciyle konuş.
+10 şifalı ot topla.
+Patronu yen.
+Tüccarı şehre kadar eşlik et.
+Bonus hedef tamamlandı.
+İsteğe bağlı: Gizli arşivi bul.
+Yan görev açıldı.
+Görev başarısız: rehine öldürüldü.
+Envanter
+Ekipman
+Yetenekler
+Harita
+Günlük
+Kodeks
+Yaratık rehberi
+Karakter
+Üretim
+Görevler
+İstatistikler
+Galeri
+Envanter dolu.
+Eşya envantere eklendi.
+Eşya kuşanıldı.
+Eşyayı bırak
+Eşyayı kullan
+Kuşan
+Çıkar
+İncele
+Sırala: Nadirlik
+Sırala: Ad
+Filtre: Silahlar

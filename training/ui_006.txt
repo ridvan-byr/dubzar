@@ -1,0 +1,132 @@
+Music Volume ||| Müzik sesi
+Effects Volume ||| Efekt sesi
+Voice Volume ||| Konuşma sesi
+Subtitle Size ||| Altyazı boyutu
+Mouse Sensitivity ||| Fare hassasiyeti
+Screen Resolution ||| Ekran çözünürlüğü
+Texture Quality ||| Doku kalitesi
+Shadow Quality ||| Gölge kalitesi
+Anti-Aliasing ||| Kenar yumuşatma
+Motion Blur ||| Hareket bulanıklığı
+Vertical Sync ||| Dikey eşitleme
+Frame Rate Limit ||| Kare hızı sınırı
+Contrast ||| Kontrast
+Gamma ||| Gama
+Key Bindings ||| Tuş atamaları
+Reset to Default ||| Varsayılana sıfırla
+Restore Defaults ||| Varsayılanları geri yükle
+Apply ||| Uygula
+Cancel ||| İptal
+Back ||| Geri
+Accept ||| Kabul et
+Decline ||| Reddet
+Confirm ||| Onayla
+Yes ||| Evet
+No ||| Hayır
+OK ||| Tamam
+Unsaved progress will be lost. ||| Kaydedilmemiş ilerleme kaybolacak.
+Changes will take effect after restart. ||| Değişiklikler yeniden başlatıldıktan sonra geçerli olacak.
+Settings saved. ||| Ayarlar kaydedildi.
+Failed to save the game. ||| Oyun kaydedilemedi.
+Failed to load the save file. ||| Kayıt dosyası yüklenemedi.
+Connection lost. Returning to the main menu. ||| Bağlantı koptu. Ana menüye dönülüyor.
+Connecting to server... ||| Sunucuya bağlanılıyor...
+Searching for players... ||| Oyuncular aranıyor...
+Waiting for other players. ||| Diğer oyuncular bekleniyor.
+Match found. ||| Maç bulundu.
+Ready ||| Hazır
+Not ready ||| Hazır değil
+Invite a friend ||| Arkadaş davet et
+Join game ||| Oyuna katıl
+Host game ||| Oyun kur
+New Game ||| Yeni oyun
+Load Game ||| Oyunu yükle
+Continue ||| Devam et
+Options ||| Seçenekler
+Extras ||| Ekstralar
+Credits ||| Emeği geçenler
+Quit to Desktop ||| Masaüstüne çık
+Return to Main Menu ||| Ana menüye dön
+Pause ||| Duraklat
+Resume Game ||| Oyuna devam et
+Restart Checkpoint ||| Kontrol noktasından yeniden başlat
+Restart Mission ||| Görevi yeniden başlat
+Select Difficulty ||| Zorluk seç
+Difficulty: Easy ||| Zorluk: Kolay
+Difficulty: Normal ||| Zorluk: Normal
+Easy ||| Kolay
+Normal ||| Normal
+Hard ||| Zor
+Nightmare ||| Kâbus
+Inventory ||| Envanter
+Equipment ||| Teçhizat
+Map ||| Harita
+Journal ||| Günlük
+Quests ||| Görevler
+Skills ||| Yetenekler
+Abilities ||| Yetenekler
+Perks ||| Avantajlar
+Crafting ||| Üretim
+Stats ||| İstatistikler
+Achievements ||| Başarımlar
+Trophies ||| Kupalar
+Codex ||| Kodeks
+Character ||| Karakter
+Weapons ||| Silahlar
+Armor ||| Zırh
+Consumables ||| Tüketilebilirler
+Materials ||| Malzemeler
+Key Items ||| Anahtar eşyalar
+Level 12 ||| Seviye 12
+Level: 12 ||| Seviye: 12
+Health: 75% ||| Can: %75
+Stamina: 40 ||| Dayanıklılık: 40
+Armor: 55 ||| Zırh: 55
+Damage: 120 ||| Hasar: 120
+Ammo: 24 / 90 ||| Cephane: 24 / 90
+Money: $1,250 ||| Para: 1.250 $
+Weight: 32 / 50 ||| Ağırlık: 32 / 50
+Wanted Level ||| Aranma seviyesi
+Score: 15000 ||| Skor: 15000
+Best Time ||| En iyi süre
+New Record! ||| Yeni rekor!
+Rank: Gold ||| Derece: Altın
+Rewards: 500 XP ||| Ödül: 500 XP
+You received 200 gold. ||| 200 altın aldın.
+You obtained a rusty key. ||| Paslı bir anahtar buldun.
+Item added to inventory. ||| Eşya envantere eklendi.
+Inventory full. Drop something first. ||| Envanter dolu. Önce bir şeyi bırak.
+The door is jammed. ||| Kapı sıkışmış.
+You can't do that right now. ||| Şu an bunu yapamazsın.
+Not enough money. ||| Yeterli para yok.
+Not enough energy. ||| Yeterli enerji yok.
+Requires level 15. ||| Seviye 15 gerekir.
+Cooldown: 12 seconds ||| Bekleme süresi: 12 saniye
+Duration: 30 seconds ||| Süre: 30 saniye
+Area completed. ||| Bölge tamamlandı.
+Area unlocked. ||| Bölge açıldı.
+Discovered: Old Mill ||| Keşfedildi: Eski Değirmen
+Entering restricted area. ||| Yasak bölgeye giriliyor.
+You are leaving the mission area. ||| Görev bölgesinden ayrılıyorsun.
+Return to the mission area. ||| Görev bölgesine geri dön.
+Enemies nearby. ||| Yakında düşman var.
+Reloading... ||| Dolduruluyor...
+You are bleeding. Use a bandage. ||| Kanıyorsun. Sargı kullan.
+You are poisoned. ||| Zehirlendin.
+Stealth kill ||| Sessiz öldürme
+Takedown ||| Etkisiz hale getirme
+Headshot! ||| Kafadan vuruş!
+Double kill ||| Çifte öldürme
+Revive teammate ||| Takım arkadaşını canlandır
+Teammate down ||| Takım arkadaşı yere düştü
+Press X to revive ||| Canlandırmak için X'e bas
+Tutorial: Hold the right mouse button to aim. ||| Eğitim: Nişan almak için sağ fare tuşunu basılı tut.
+Tip: Crouch to move quietly. ||| İpucu: Sessiz hareket etmek için çömel.
+Hint: Look for loose boards. ||| İpucu: Gevşek tahtalara bak.
+Note: This area is dangerous. ||| Not: Bu bölge tehlikeli.
+Warning: Low fuel. ||| Uyarı: Yakıt azalıyor.
+Loading level 3... ||| 3. bölüm yükleniyor...
+Downloading update... ||| Güncelleme indiriliyor...
+Update complete. Restart the game. ||| Güncelleme tamamlandı. Oyunu yeniden başlat.
+Press F5 to quick save. ||| Hızlı kayıt için F5'e bas.
+Press Esc to open the menu. ||| Menüyü açmak için Esc'ye bas.

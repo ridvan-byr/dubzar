@@ -1,0 +1,190 @@
+2	I won't cut corners on this job, boss.	Bu işte işi savsaklamayacağım, patron.	Bu işte kestirmeden gitmeyeceğim patron.	
+3	With my back against the wall, I had no choice.	Köşeye sıkışmıştım, başka çarem yoktu.	Sırtım duvara dayanmıştı, başka çarem yoktu.	
+5	Now the tables have turned, haven't they?	Artık roller değişti, değil mi?	Şimdi çarklar tersine döndü, değil mi?	
+6	Let me break the ice before the others arrive.	Diğerleri gelmeden ortamı biraz yumuşatayım.	Diğerleri gelmeden buzları ben eriteyim.	
+9	She's got a lot of nerve showing up here.	Buraya gelmeye cüret etmiş.	Buraya gelmeye yüzü nasıl tuttu?	
+10	Keep your chin up. We'll get through this.	Pes etme. Bunu atlatacağız.	Başını dik tut. Bu işin altından kalkacağız.	
+13	My heart sank when I saw the empty vault.	Boş kasayı görünce içim çöktü.	Boş kasayı görünce yüreğim ağzıma geldi.	
+15	Try not to let it get to you.	Bunun seni etkilemesine izin verme.	Üstüne alınmamaya çalış.	
+20	I'm over the moon about the new job.	Yeni işe öyle sevindim ki havalara uçuyorum.	Yeni işe çok seviniyorum, ayaklarım yerden kesildi.	havalara uçmak
+24	I had a gut feeling something was wrong.	İçime bir kurt düşmüştü, bir şeyler ters gidiyordu.	İçime bir şeylerin ters gittiği doğdu.	içine kurt düşmek
+28	I'm at the end of my rope.	Artık dayanacak halim kalmadı.	Sabrımın sonuna geldim.	
+34	Don't cry over spilled milk.	Olan oldu, boşuna üzülme.	Olmuş olana üzülme.	
+38	He lost his nerve right before the jump.	Atlamadan hemen önce cesaretini yitirdi.	Tam atlayış öncesinde cesareti kırıldı.	
+39	Grow a spine and stand up to him!	Biraz yürek göster de ona karşı dur!	Omurgalı ol da ona karşı dur!	
+42	We were sitting ducks out there in the open.	Orada açıkta kıpırdamadan hedef olmuştuk.	Açık alanda yem olmuştuk.	
+44	He escaped by the skin of his teeth.	Ucuz atlattı.	Kıl payı kurtuldu.	
+49	Don't poke the bear unless you have to.	Mecbur kalmadıkça ayıyı uyandırma.	Gerekmedikçe ayının kuyruğuna basma.	
+50	I smell trouble.	Başımıza iş açılacak gibi kokuyor.	Bir iş çevrildiğini sezdim.	
+51	We're in hot water now.	Başımız belaya girdi.	Şimdi başımız belada.	başı belada olmak
+52	That plan will blow up in our faces.	O plan suratımıza patlayacak.	Bu plan başımıza iş açacak.	
+57	Don't let your guard down for a second.	Bir an bile dikkatini dağıtma.	Bir an bile gardını düşürme.	
+58	They're closing in on us from all sides.	Her yandan bizi sıkıştırıyorlar.	Her yandan üstümüze geliyorlar.	
+64	He's all bark and no bite.	Havlıyor ama ısırmaz.	Çok havlar, ısırmaz.	
+65	You can't back out now, we've come too far.	Şimdi caymak yok, çok ileri geldik.	Şimdi geri adım atamazsın, çok yol geldik.	
+68	Take a leap of faith and trust me.	Cesaretini topla ve bana güven.	Güven bana, bir cesaret göster.	
+70	It takes a brave soul to walk in there.	Oraya girmek için yürekli olmak gerek.	Oraya girmek yürek ister.	
+77	I won't lose any sleep over it.	Bunun yüzünden uykularımı kaçırmayacağım.	Bunun için uykumdan olmam.	uykusu kaçmak
+79	Don't take it personally.	Bunu kişisel algılama.	Alınma.	
+82	I've had it up to here with your excuses!	Bahanelerinden boğazıma kadar doldum!	Bahanelerinden bıktım artık!	
+86	Let's not panic. Panicking won't help.	Panik yapmayalım. Paniğin faydası olmaz.	Paniğe kapılmayalım. Panik işe yaramaz.	
+98	She pulled the wool over my eyes for months.	Aylarca gözlerimi boyadı.	Aylarca beni kandırdı.	göz boyamak
+99	He's leading you on.	Seni oyalıyor, ağzına bir parmak bal çalıyor.	Seni oyalıyor.	
+109	He's a fair-weather friend.	O iyi günün dostu.	O gün dostu, kötü gün düşmanı.	
+112	They don't see eye to eye on anything.	Hiçbir konuda aynı fikirde değiller.	Hiçbir konuda anlaşamıyorlar.	
+118	Let bygones be bygones.	Geçmişi geride bırakalım.	Geçmişi unutalım.	
+119	It's time to bury the hatchet.	Artık barışma zamanı.	Barışma vakti geldi.	
+121	You scratch my back, I'll scratch yours.	Sen bana yardım et, ben de sana.	Sen benim sırtımı kaşı, ben seninkini kaşırım.	
+124	They're thick as thieves.	Birbirlerinden ayrılmaz iki dost gibiler.	Yaka paça birlikteler.	
+128	It takes two to tango.	Tek elin sesi çıkmaz.	Alkışlamak için iki el gerekir.	
+135	Words are cheap. Show me.	Söz kolay. Bana göster.	Söz uçar. Göster bana.	
+139	My lips are sealed.	Ağzım mühürlü, kimseye söylemem.	Ağzım mühürlü.	
+140	Don't spill the beans about the plan.	Plandan kimseye bahsetme.	Plan hakkında ağzından bir şey kaçırma.	
+144	She's been keeping me in the dark.	Beni karanlıkta bırakıyor, hiçbir şey söylemiyor.	Beni hep karanlıkta bırakıyor.	
+145	There's something fishy going on here.	Burada bir şeyler dönüyor.	Burada bir bit yeniği var.	
+146	I smell a rat.	Bir şeylerden şüpheleniyorum.	İşin içinde bir iş var, sezdim.	şüphelenmek
+147	He's hiding something up his sleeve.	Elinde sakladığı bir koz olduğu belli.	Gizlediği bir şey var.	
+150	That's a skeleton in his closet.	Bu onun hep sakladığı utanç verici sırrı.	Bu onun dolabındaki bir iskelet.	
+152	Someone tipped them off.	Biri onlara haber vermiş.	Biri onları uyardı.	
+154	You're not telling me the whole story.	Bana hikâyenin tamamını anlatmıyorsun.	Bana her şeyi anlatmıyorsun.	
+162	This stays in this room.	Bu konuşma bu odadan dışarı çıkmaz.	Bu söylenenler bu odada kalır.	
+163	I'm all ears. Tell me everything.	Seni dinliyorum. Her şeyi anlat.	Tamamen kulağım sende. Hepsini anlat.	
+165	Don't kiss and tell.	Ağzından bir şey kaçırma.	Aşk sırlarını ifşa etme.	
+171	You've made your bed, now lie in it.	Ektiğini biçeceksin.	Ettiğini bulursun, şimdi sonucuna katlan.	ne ekersen onu biçersin
+174	That bridge is burned for good.	O köprüyü attık, bir daha dönüş yok.	O köprüler artık yıkıldı.	köprüleri atmak
+176	He wore a mask of kindness.	Nezaketin maskesini takmıştı.	Yüzünde nezaket maskesi vardı.	
+179	They kissed and made up.	Barıştılar, aralarındaki küslük bitti.	Küslükleri bitirip barıştılar.	barışmak
+181	He's rolling in money these days.	Bu günlerde parada pulda yüzüyor.	Bu aralar paraya para demiyor.	
+183	That ring cost an arm and a leg.	O yüzük bize bir servete mal oldu.	O yüzük çok pahalıya patladı.	
+185	Don't throw your money away on junk.	Paranı boş şeylere saçıp savurma.	Paranı ıvır zıvıra harcama.	saçıp savurmak
+186	He's tight with his money.	Parasına çok düşkün, eli sıkı.	Eli sıkı biridir.	eli sıkı
+188	It's a steal at that price.	Bu fiyata bedava sayılır.	Bu fiyata kelepir.	
+189	You get what you pay for.	Verdiğin paranın karşılığını alırsın.	Parayı veren düdüğü çalar.	
+195	She struck gold with that investment.	Bu yatırımla köşeyi döndü.	O yatırımla jackpot'u vurdu.	köşeyi dönmek
+197	Business is booming.	İşler çok iyi gidiyor.	İşler tıkırında.	
+201	They're ripping us off.	Bizi soyuyorlar.	Bizi dolandırıyorlar.	
+204	I'm all out of cash.	Elimde hiç nakit kalmadı.	Hiç param kalmadı.	
+207	He lives from hand to mouth.	Günü kurtarıyor, eline geçeni yiyor.	Günü gününe geçiniyor.	
+208	Her business is going down the drain.	İşleri iflasın eşiğinde.	İşleri iyice batıyor.	
+210	I've got a few coins to spare.	Cebimde fazladan birkaç kuruş var.	Artıracak birkaç kuruşum var.	
+214	I'll make it worth your while.	Sana zahmetinin karşılığını vereceğim.	Zahmetine değmesini sağlarım.	
+215	They offered me a golden handshake.	Bana yüklü bir kıdem tazminatı teklif ettiler.	Bana altın bir tokalaşma teklif ettiler.	
+218	I'm up to my neck in work.	İşten başımı kaşıyacak vaktim yok.	İşten başımı kaldıramıyorum.	
+220	She's the boss around here.	Burada son söz onda.	Buranın patronu o.	
+221	He got fired for slacking off.	Kaytardığı için kovuldu.	Tembellik ettiği için kovuldu.	
+223	I'm burning the candle at both ends.	Hem gece hem gündüz çalışıp kendimi tüketiyorum.	Mumu iki ucundan yakıyorum.	
+227	We need to hit the ground running.	İşe hemen başlamamız lazım.	İşe hemen koyulmalıyız.	
+231	I've been working my fingers to the bone.	Çalışmaktan elim ayağım yıprandı, kemiklerime kadar yoruldum.	Parmaklarım aşınana kadar çalıştım.	
+232	It's all hands on deck, people!	Herkes iş başına, arkadaşlar!	Herkes görev başına, millet!	
+235	Don't bite off more than you can chew.	Kaldıramayacağın kadar işe girişme.	Isıramayacağın lokmayı ağzına alma.	
+236	I'll take the heat for this one.	Bu işin sorumluluğunu ben üstlenirim.	Bu seferlik sorumluluğu ben alırım.	
+237	He passed the buck to me again.	Yine suçu bana attı.	Sorumluluğu yine bana yıktı.	
+240	It's back to the drawing board.	Yeniden başa dönüyoruz.	Yeniden sıfırdan başlıyoruz.	
+243	He climbed the ladder the hard way.	Basamakları zor yoldan tırmandı.	Yükselmeye zor yoldan çıktı.	
+244	Quit goofing around and get to work.	Aylaklık etmeyi bırak ve işine bak.	Oyalanmayı bırak da işinin başına geç.	
+249	Don't count your chickens before they hatch.	Civcivleri güz gelmeden sayma.	Civcivleri sayma, daha yumurtadan çıkmadı.	
+254	Too many cooks spoil the broth.	Çok aşçı çorbayı bozar.	Aşçı çok olunca çorba tuzlu olur.	
+257	Get your act together or get out.	Toparlan ya da çık git.	Toparlan, yoksa defol.	
+259	Let me give you a hand with that.	Sana bu konuda yardım edeyim.	Şuna bir el atayım.	
+262	It's a dead-end job, honestly.	Dürüst olmak gerekirse, bu iş çıkmaz sokak.	Açıkçası bu çıkmaz bir iş.	
+264	Put your back into it!	Biraz da sen kuvvetini ver!	Var gücünle yüklen!	
+265	You've earned a break, so take it.	Bir mola hak ettin, o yüzden dinlen.	Bir mola hak ettin, ver şunu.	
+271	The old man passed away in his sleep.	Yaşlı adam uykusunda hayatını kaybetti.	İhtiyar uykusunda vefat etti.	
+273	She met her maker peacefully.	Huzur içinde Hakk'a yürüdü.	Huzur içinde hakkın rahmetine kavuştu.	
+277	I'd rather die than surrender.	Teslim olmaktansa ölmeyi tercih ederim.	Teslim olmaktansa ölürüm.	
+284	His time has come.	Ecel geldi, vakti dolmuş.	Eceli geldi.	eceli gelmek
+288	It was meant to be.	Bu kaderde varmış.	Alın yazısıymış.	
+291	That's just the luck of the draw.	Bu tamamen şans işi.	Şans işte, kısmet.	
+301	Against all odds, we made it.	Bütün ihtimallere rağmen başardık.	Tüm imkânsızlıklara rağmen başardık.	
+306	Bad luck follows him everywhere.	Şanssızlık onu her yerde izliyor.	Kötü talih her yerde onu izliyor.	
+307	He had a taste of his own medicine.	Kendi silahıyla vuruldu.	Kendi ilacını tattı.	
+308	Karma has finally caught up with him.	Sonunda yaptıklarının cezasını çekti.	Karma sonunda onu buldu.	
+310	We came to blows over the map.	Harita yüzünden yumruk yumruğa geldik.	Harita yüzünden birbirimize girdik.	
+313	Put up your dukes!	Yumruklarını kaldır!	Yumruklar havada!	
+314	I'll knock your block off!	Seni bir yumrukta yere sererim!	Çeneni dağıtırım!	
+316	She took him down in one blow.	Onu tek hamlede yere serdi.	Tek yumrukta onu yere serdi.	
+317	It was a fair fight.	Adil bir dövüştü.	Adil bir kavgaydı.	
+321	We're outnumbered ten to one.	Sayıca on kata bir geride kaldık.	On kişiye karşı bir kişiyiz.	
+326	The enemy has the upper hand.	Düşmanın eli daha güçlü.	Düşman üstünlüğü ele geçirdi.	
+329	This war is far from over.	Bu savaşın bitmesine daha çok var.	Bu savaş daha bitmedi.	
+335	Hit them hard and fast.	Onlara sert ve hızlı vurun.	Hızlı ve sert vurun.	
+337	He's a hothead who loves a brawl.	Kavgaya bayılan, kafası kızgın biri.	Kavgayı seven bir sıcakkanlı.	
+341	You're driving me up the wall.	Beni çileden çıkarıyorsun.	Beni deli ediyorsun.	çileden çıkarmak
+342	That scared me stiff.	Korkudan taş kesildim.	Korkudan donup kaldım.	taş kesilmek
+345	We were scared out of our wits.	Aklımız başımızdan gitti.	Korkudan ne yapacağımızı şaşırdık.	aklı başından gitmek
+347	Death stared him in the face.	Ölümle yüz yüze geldi.	Ölüm gözlerinin içine baktı.	
+361	Life is short, so make it count.	Hayat kısa, o yüzden değerli kıl.	Hayat kısa, değerlendir.	
+363	We only get one shot at this.	Buna sadece bir şansımız var.	Bu işte tek şansımız var.	
+364	Hold up, I need to catch my breath.	Dur bir dakika, nefesimi toplamam lazım.	Dur, nefes almam gerek.	
+370	Bring it on, I'm not afraid!	Gelsin bakalım, korkmuyorum!	Hadi gel, korkmuyorum!	
+372	Come clean, who did this?	Doğruyu söyle, bunu kim yaptı?	Dürüst ol, bunu kim yaptı?	
+374	Cut it out, you two!	Kesin şunu, ikiniz de!	Yeter artık, ikiniz de!	
+375	Deal with it, kid.	Alış buna, evlat.	Alışacaksın, evlat.	
+376	Don't give up on me now.	Şimdi benden vazgeçme.	Beni bırakma şimdi.	
+378	Fill me in on what I missed.	Neyi kaçırdığımı bana anlat.	Ben yokken ne olduğunu anlat.	
+380	Get a grip on yourself!	Kendini topla!	Kendine gel!	
+382	Get over it, it was years ago.	Atlat artık, yıllar önceydi.	Üstesinden gel, yıllar önceydi.	
+384	Go ahead, I'll cover you.	Sen git, ben seni kollarım.	Devam et, seni korurum.	
+387	Help yourself to whatever you need.	İhtiyacın olan her şeyi al, çekinme.	İhtiyacın olan ne varsa al.	
+388	Hurry up, they're coming!	Acele et, geliyorlar!	Çabuk ol, geliyorlar!	
+395	Keep up, we're losing daylight.	Ayak uydur, gün ışığını kaybediyoruz.	Acele et, gün ışığını kaçırıyoruz.	
+403	Open up, it's the police!	Aç kapıyı, polis!	Aç, polis!	
+406	Pick up the pace, we're late.	Hızını artır, geciktik.	Hızlan, geç kaldık.	
+410	Rule out the east tunnel.	Doğu tünelini ihtimal dışı bırak.	Doğu tüneli hariç.	
+414	Sort it out before he gets back.	O dönmeden bunu hallet.	Adam gelmeden hallet.	
+418	Take care of yourself out there.	Orada kendine dikkat et.	Kendine iyi bak.	
+420	Take my word for it.	Bana güven, doğru söylüyorum.	Bana güven.	
+421	Tell me about it.	Hiç sorma.	Bir bilsen.	
+428	Wipe that smile off your face.	O sırıtışı yüzünden sil.	O gülümsemeyi yüzünden sil.	
+434	You've got to be kidding me!	Dalga geçiyorsun herhalde!	Dalga geçiyor olmalısın!	
+438	We ran into some trouble on the way.	Yolda biraz başımız derde girdi.	Yolda biraz sorunla karşılaştık.	
+443	Don't mess up this time.	Bu sefer hata yapma.	Bu sefer işi berbat etme.	
+444	She talked him into it.	Onu bunu yapmaya ikna etti.	Onu ikna etti.	
+445	He talked his way out of trouble.	Lafla belasından kurtuldu.	Dil dökerek belanın içinden sıyrıldı.	
+446	He showed off in front of everyone.	Herkesin önünde caka sattı.	Herkesin önünde gösteriş yaptı.	caka satmak
+449	He's been hanging out with the wrong crowd.	Kötü arkadaşlarla takılıyor.	Kötü çevreyle takılıyor.	
+450	We're stuck with this junk.	Bu hurdayla baş başa kaldık.	Bu hurdaya mahkûm olduk.	
+451	They let me off easy.	Beni kolay yoldan kurtardılar.	Beni ucuz atlattılar.	
+455	Take it with a grain of salt.	Bunu şüpheyle karşıla.	Bunu tuzla biberle alıp şüpheyle karşıla.	
+456	That's the pot calling the kettle black.	Tencere dibin kara, seninki benden kara.	Deve kendi hörgücünü görmez de başkasınınkine güler.	tencere dibin kara, seninki benden kara
+457	He let the cat out of the bag.	Ağzındaki baklayı çıkardı.	Ağzından kaçırdı, sırrı ifşa etti.	
+460	He's on thin ice with the captain.	Kaptanla arası pamuk ipliğine bağlı.	Kaptanla arası açık, ince buz üzerinde yürüyor.	
+463	Don't shoot the messenger.	Habercinin canına kıyma.	Habercinin suçu yok, ona dokunma.	
+466	Let's not rock the boat.	Ortalığı karıştırmayalım.	Gemiyi sallamayalım.	
+469	The proof of the pudding is in the eating.	Her şey denemekle anlaşılır.	Pudingin lezzeti yenince anlaşılır.	
+471	Look before you leap.	Atlamadan önce bak.	Bakmadan atlama, önce düşün.	
+474	When it rains, it pours.	Dert gelince üst üste gelir.	Bir kötülük gelirse arkasından hep gelir.	
+480	Talk is cheap.	Konuşmak kolay.	Lafla peynir gemisi yürümez.	
+482	Slow and steady wins the race.	Yavaş ve istikrarlı olan kazanır.	Sabreden derviş muradına ermiş.	
+485	You've opened a can of worms.	Arı kovanına çomak soktun.	Yılanın başını kaşıdın, başımıza iş açtın.	
+486	The writing is on the wall.	Sonun nereye varacağı belli.	Yazı duvarda, sonucu görmemek mümkün değil.	
+487	Let sleeping dogs lie.	Uyuyan köpeği uyandırma.	Uyuyan yılanın kuyruğuna basma.	
+488	He put his foot in his mouth.	Pot kırdı.	Ağzını açıp gafı yaptı.	pot kırmak
+491	He's walking on air today.	Bugün havalarda uçuyor.	Bugün yere basmıyor.	
+492	I had to eat humble pie.	Haddimi bildim, özür dilemek zorunda kaldım.	Yediğim lafı yutmak zorunda kaldım.	
+493	He ate his words.	Söylediklerini yuttu.	Sözlerini geri yedi.	
+494	Don't hold your breath.	Boşuna bekleme.	Beklemeye değmez.	
+497	He pulled a fast one on me.	Beni ustaca kandırdı.	Bana hızlı bir oyun oynadı.	
+499	It's a tough nut to crack.	Bu zor bir mesele.	Zor bir ceviz bu.	
+507	Birds of a feather flock together.	Aynı tüyden kuşlar birlikte uçar.	Kendi kuşuna benzeyenle takılır.	
+508	A leopard can't change its spots.	Huylu huyundan vazgeçmez.	Leopar lekelerinden vazgeçmez.	huylu huyundan vazgeçmez
+515	He's barking mad.	Tamamen delirmiş.	Tam bir kaçık.	
+517	Leave no stone unturned.	Her yeri ara, bakmadık yer bırakma.	Hiçbir taşı yerinde bırakma.	
+519	Don't beat yourself up over it.	Bunun için kendini yıpratma.	Kendini üzme.	
+524	We got away scot-free.	Hiçbir bedel ödemeden sıyrıldık.	Yanımıza kâr kalarak kurtulduk.	
+526	They hung him out to dry.	Onu kaderine terk ettiler.	Onu yüzüstü bıraktılar.	
+527	She was thrown to the wolves.	Onu kurtların önüne attılar.	Kurtların ağzına atıldı.	
+529	I'll never live this down.	Bunun utancını asla üzerimden atamayacağım.	Bunu hiçbir zaman unutamayacağım.	
+530	It's my neck on the line here.	Burada kellemi koltuğuma almış durumdayım.	Burada boynumu ipe uzatan benim.	kellesini koltuğuna almak
+534	He gave me the evil eye.	Bana kötü kötü baktı.	Bana kem gözle baktı.	
+538	He has a good head on his shoulders.	Aklı başında biri.	Akıllı biri.	
+541	She's a tough cookie.	Zor biri, kolay pes etmez.	Sert bir kadın.	
+542	He's all talk.	Hep ağız, iş yok.	Lafta kahraman.	
+543	Spare me the speech.	Konuşmayı bırak, boş ver.	Beni nutuktan kurtar.	
+544	You're wasting your breath.	Nefesini boşa harcıyorsun.	Boşuna nefes tüketiyorsun.	
+550	She swept me off my feet.	Beni kendine hayran bıraktı.	Beni ayağımdan süpürdü.	
+557	He drew a blank when I asked him.	Sorduğumda aklı bomboştu, hiçbir şey hatırlamadı.	Ona sorduğumda aklı boşaldı.	
+558	She keeps her cards close to her chest.	Kartlarını kimseye göstermez, planını gizli tutar.	Kartlarını göğsüne yakın tutuyor.	
+561	She's the talk of the town.	Şehrin dilinde o var.	Şehirde dilden dile dolaşıyor.	
+565	Dream on, pal.	Hayal et dur, dostum.	Hayal kurmaya devam et, dostum.	
+566	Just my luck!	Tam da benim şansım!	Şansıma bak!	

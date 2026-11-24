@@ -1,0 +1,190 @@
+2	NEW	Bu işte işi baştan savma yapmayacağım, patron.
+3	A	Köşeye sıkışmıştım, başka çarem yoktu.
+5	A	Artık roller değişti, değil mi?
+6	B	Diğerleri gelmeden buzları ben eriteyim.
+9	B	Buraya gelmeye yüzü nasıl tuttu?
+10	B	Başını dik tut. Bu işin altından kalkacağız.
+13	A	Boş kasayı görünce içim çöktü.
+15	NEW	Bunu fazla kafana takma.
+20	A	Yeni işe öyle sevindim ki havalara uçuyorum.
+24	A	İçime bir kurt düşmüştü, bir şeyler ters gidiyordu.
+28	B	Sabrımın sonuna geldim.
+34	A	Olan oldu, boşuna üzülme.
+38	A	Atlamadan hemen önce cesaretini yitirdi.
+39	A	Biraz yürek göster de ona karşı dur!
+42	NEW	Açık alanda hazır hedeftik.
+44	B	Kıl payı kurtuldu.
+49	NEW	Mecbur kalmadıkça ayıyı kızdırma.
+50	A	Başımıza iş açılacak gibi kokuyor.
+51	B	Şimdi başımız belada.
+52	A	O plan suratımıza patlayacak.
+57	NEW	Bir an bile gardını indirme.
+58	A	Her yandan bizi sıkıştırıyorlar.
+64	B	Çok havlar, ısırmaz.
+65	B	Şimdi geri adım atamazsın, çok yol geldik.
+68	A	Cesaretini topla ve bana güven.
+70	B	Oraya girmek yürek ister.
+77	A	Bunun yüzünden uykularımı kaçırmayacağım.
+79	B	Alınma.
+82	B	Bahanelerinden bıktım artık!
+86	A	Panik yapmayalım. Paniğin faydası olmaz.
+98	A	Aylarca gözlerimi boyadı.
+99	B	Seni oyalıyor.
+109	A	O iyi günün dostu.
+112	B	Hiçbir konuda anlaşamıyorlar.
+118	NEW	Geçen geçmişte kalsın.
+119	A	Artık barışma zamanı.
+121	A	Sen bana yardım et, ben de sana.
+124	A	Birbirlerinden ayrılmaz iki dost gibiler.
+128	A	Tek elin sesi çıkmaz.
+135	A	Söz kolay. Bana göster.
+139	B	Ağzım mühürlü.
+140	B	Plan hakkında ağzından bir şey kaçırma.
+144	B	Beni hep karanlıkta bırakıyor.
+145	A	Burada bir şeyler dönüyor.
+146	B	İşin içinde bir iş var, sezdim.
+147	A	Elinde sakladığı bir koz olduğu belli.
+150	A	Bu onun hep sakladığı utanç verici sırrı.
+152	B	Biri onları uyardı.
+154	A	Bana hikâyenin tamamını anlatmıyorsun.
+162	A	Bu konuşma bu odadan dışarı çıkmaz.
+163	A	Seni dinliyorum. Her şeyi anlat.
+165	B	Aşk sırlarını ifşa etme.
+171	A	Ektiğini biçeceksin.
+174	A	O köprüyü attık, bir daha dönüş yok.
+176	A	Nezaketin maskesini takmıştı.
+179	A	Barıştılar, aralarındaki küslük bitti.
+181	A	Bu günlerde parada pulda yüzüyor.
+183	A	O yüzük bize bir servete mal oldu.
+185	B	Paranı ıvır zıvıra harcama.
+186	B	Eli sıkı biridir.
+188	B	Bu fiyata kelepir.
+189	A	Verdiğin paranın karşılığını alırsın.
+195	A	Bu yatırımla köşeyi döndü.
+197	B	İşler tıkırında.
+201	A	Bizi soyuyorlar.
+204	B	Hiç param kalmadı.
+207	B	Günü gününe geçiniyor.
+208	B	İşleri iyice batıyor.
+210	B	Artıracak birkaç kuruşum var.
+214	B	Zahmetine değmesini sağlarım.
+215	A	Bana yüklü bir kıdem tazminatı teklif ettiler.
+218	B	İşten başımı kaldıramıyorum.
+220	B	Buranın patronu o.
+221	A	Kaytardığı için kovuldu.
+223	A	Hem gece hem gündüz çalışıp kendimi tüketiyorum.
+227	B	İşe hemen koyulmalıyız.
+231	NEW	Kemiklerim sızlayana kadar çalıştım.
+232	A	Herkes iş başına, arkadaşlar!
+235	A	Kaldıramayacağın kadar işe girişme.
+236	B	Bu seferlik sorumluluğu ben alırım.
+237	A	Yine suçu bana attı.
+240	A	Yeniden başa dönüyoruz.
+243	NEW	Kariyerinde zor yoldan yükseldi.
+244	B	Oyalanmayı bırak da işinin başına geç.
+249	A	Civcivleri güz gelmeden sayma.
+254	A	Çok aşçı çorbayı bozar.
+257	A	Toparlan ya da çık git.
+259	A	Sana bu konuda yardım edeyim.
+262	A	Dürüst olmak gerekirse, bu iş çıkmaz sokak.
+264	B	Var gücünle yüklen!
+265	A	Bir mola hak ettin, o yüzden dinlen.
+271	A	Yaşlı adam uykusunda hayatını kaybetti.
+273	A	Huzur içinde Hakk'a yürüdü.
+277	B	Teslim olmaktansa ölürüm.
+284	B	Eceli geldi.
+288	B	Alın yazısıymış.
+291	A	Bu tamamen şans işi.
+301	A	Bütün ihtimallere rağmen başardık.
+306	A	Şanssızlık onu her yerde izliyor.
+307	A	Kendi silahıyla vuruldu.
+308	A	Sonunda yaptıklarının cezasını çekti.
+310	B	Harita yüzünden birbirimize girdik.
+313	A	Yumruklarını kaldır!
+314	B	Çeneni dağıtırım!
+316	B	Tek yumrukta onu yere serdi.
+317	A	Adil bir dövüştü.
+321	B	On kişiye karşı bir kişiyiz.
+326	B	Düşman üstünlüğü ele geçirdi.
+329	A	Bu savaşın bitmesine daha çok var.
+335	B	Hızlı ve sert vurun.
+337	A	Kavgaya bayılan, kafası kızgın biri.
+341	A	Beni çileden çıkarıyorsun.
+342	A	Korkudan taş kesildim.
+345	A	Aklımız başımızdan gitti.
+347	A	Ölümle yüz yüze geldi.
+361	B	Hayat kısa, değerlendir.
+363	A	Buna sadece bir şansımız var.
+364	A	Dur bir dakika, nefesimi toplamam lazım.
+370	A	Gelsin bakalım, korkmuyorum!
+372	A	Doğruyu söyle, bunu kim yaptı?
+374	B	Yeter artık, ikiniz de!
+375	A	Alış buna, evlat.
+376	B	Beni bırakma şimdi.
+378	B	Ben yokken ne olduğunu anlat.
+380	A	Kendini topla!
+382	A	Atlat artık, yıllar önceydi.
+384	A	Sen git, ben seni kollarım.
+387	A	İhtiyacın olan her şeyi al, çekinme.
+388	A	Acele et, geliyorlar!
+395	A	Ayak uydur, gün ışığını kaybediyoruz.
+403	A	Aç kapıyı, polis!
+406	B	Hızlan, geç kaldık.
+410	A	Doğu tünelini ihtimal dışı bırak.
+414	B	Adam gelmeden hallet.
+418	B	Kendine iyi bak.
+420	A	Bana güven, doğru söylüyorum.
+421	A	Hiç sorma.
+428	A	O sırıtışı yüzünden sil.
+434	A	Dalga geçiyorsun herhalde!
+438	B	Yolda biraz sorunla karşılaştık.
+443	B	Bu sefer işi berbat etme.
+444	B	Onu ikna etti.
+445	A	Lafla belasından kurtuldu.
+446	A	Herkesin önünde caka sattı.
+449	A	Kötü arkadaşlarla takılıyor.
+450	A	Bu hurdayla baş başa kaldık.
+451	B	Beni ucuz atlattılar.
+455	A	Bunu şüpheyle karşıla.
+456	A	Tencere dibin kara, seninki benden kara.
+457	A	Ağzındaki baklayı çıkardı.
+460	A	Kaptanla arası pamuk ipliğine bağlı.
+463	A	Habercinin canına kıyma.
+466	A	Ortalığı karıştırmayalım.
+469	A	Her şey denemekle anlaşılır.
+471	NEW	Önce düşün, sonra atla.
+474	A	Dert gelince üst üste gelir.
+480	B	Lafla peynir gemisi yürümez.
+482	A	Yavaş ve istikrarlı olan kazanır.
+485	A	Arı kovanına çomak soktun.
+486	A	Sonun nereye varacağı belli.
+487	A	Uyuyan köpeği uyandırma.
+488	A	Pot kırdı.
+491	A	Bugün havalarda uçuyor.
+492	A	Haddimi bildim, özür dilemek zorunda kaldım.
+493	A	Söylediklerini yuttu.
+494	A	Boşuna bekleme.
+497	A	Beni ustaca kandırdı.
+499	A	Bu zor bir mesele.
+507	A	Aynı tüyden kuşlar birlikte uçar.
+508	A	Huylu huyundan vazgeçmez.
+515	A	Tamamen delirmiş.
+517	A	Her yeri ara, bakmadık yer bırakma.
+519	B	Kendini üzme.
+524	A	Hiçbir bedel ödemeden sıyrıldık.
+526	B	Onu yüzüstü bıraktılar.
+527	A	Onu kurtların önüne attılar.
+529	A	Bunun utancını asla üzerimden atamayacağım.
+530	A	Burada kellemi koltuğuma almış durumdayım.
+534	A	Bana kötü kötü baktı.
+538	A	Aklı başında biri.
+541	A	Zor biri, kolay pes etmez.
+542	A	Hep ağız, iş yok.
+543	B	Beni nutuktan kurtar.
+544	A	Nefesini boşa harcıyorsun.
+550	A	Beni kendine hayran bıraktı.
+557	A	Sorduğumda aklı bomboştu, hiçbir şey hatırlamadı.
+558	A	Kartlarını kimseye göstermez, planını gizli tutar.
+561	A	Şehrin dilinde o var.
+565	A	Hayal et dur, dostum.
+566	B	Şansıma bak!

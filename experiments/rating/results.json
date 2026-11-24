@@ -1,0 +1,1767 @@
+{
+ "state": {
+  "ratings": {
+   "1": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "2": {
+    "b": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "a"
+   },
+   "3": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "4": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "5": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "6": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "7": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "8": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "9": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "10": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "11": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "12": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "a"
+   },
+   "13": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "14": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "15": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "16": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "17": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "18": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "19": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "20": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "21": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "a"
+   },
+   "22": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "23": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "24": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "25": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "26": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "27": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "28": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "a"
+   },
+   "29": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "30": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "31": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "32": {
+    "a": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "b": {
+     "r": "minor",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "33": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "34": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "a"
+   },
+   "35": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "36": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "37": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "38": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "39": {
+    "a": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "40": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "41": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "42": {
+    "a": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "b"
+   },
+   "43": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "44": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "a"
+   },
+   "45": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "46": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "b"
+   },
+   "47": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "48": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "49": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "50": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "b"
+   },
+   "51": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "52": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "53": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "54": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "55": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "56": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "57": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "58": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "bad",
+     "why": [
+      "meaning",
+      "natural"
+     ]
+    },
+    "pref": "b"
+   },
+   "59": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "60": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "61": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "a"
+   },
+   "62": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "63": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "64": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "65": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "66": {
+    "a": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "b": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "a"
+   },
+   "67": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "68": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "69": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "70": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "71": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "72": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "b"
+   },
+   "73": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "a"
+   },
+   "74": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "75": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "76": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "77": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "78": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "79": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "80": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "81": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "82": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "83": {
+    "a": {
+     "r": "bad",
+     "why": [
+      "meaning"
+     ]
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "84": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "eq"
+   },
+   "85": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "86": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "pref": "b"
+   },
+   "87": {
+    "a": {
+     "r": "ok",
+     "why": []
+    },
+    "b": {
+     "r": "minor",
+     "why": [
+      "meaning",
+      "natural"
+     ]
+    },
+    "pref": "a"
+   },
+   "88": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "natural"
+     ]
+    },
+    "pref": "b"
+   },
+   "89": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "b"
+   },
+   "90": {
+    "b": {
+     "r": "ok",
+     "why": []
+    },
+    "a": {
+     "r": "minor",
+     "why": [
+      "meaning"
+     ]
+    },
+    "pref": "b"
+   }
+  },
+  "at": 89
+ },
+ "mapping": [
+  {
+   "id": 1,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "I didn't think you'd actually show up.",
+   "tr_dubzar": "Gerçekten geleceğini sanmıyordum.",
+   "tr_claude": "Gerçekten geleceğini düşünmemiştim."
+  },
+  {
+   "id": 2,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "You've got some nerve coming back here.",
+   "tr_dubzar": "Buraya geri dönmeye cesaretin var.",
+   "tr_claude": "Buraya geri dönmeye cüret ediyorsun."
+  },
+  {
+   "id": 3,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "Tell me you're joking.",
+   "tr_dubzar": "Şaka yaptığını söyle.",
+   "tr_claude": "Şaka yaptığını söyle bana."
+  },
+  {
+   "id": 4,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "We can't keep running forever.",
+   "tr_dubzar": "Sonsuza kadar kaçamayız.",
+   "tr_claude": "Sonsuza kadar kaçamayız."
+  },
+  {
+   "id": 5,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "He never told me about his brother.",
+   "tr_dubzar": "Bana kardeşinden hiç bahsetmedi.",
+   "tr_claude": "Bana kardeşinden hiç bahsetmedi."
+  },
+  {
+   "id": 6,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "It's been three years since I last saw her.",
+   "tr_dubzar": "Onu son gördüğümden beri üç yıl geçti.",
+   "tr_claude": "Onu en son gördüğümden beri üç yıl geçti."
+  },
+  {
+   "id": 7,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "Do you have any idea what you've done?",
+   "tr_dubzar": "Ne yaptığının farkında mısın?",
+   "tr_claude": "Ne yaptığın hakkında bir fikrin var mı?"
+  },
+  {
+   "id": 8,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "I'll be waiting outside if you need me.",
+   "tr_dubzar": "İhtiyacın olursa dışarıda bekliyor olacağım.",
+   "tr_claude": "İhtiyacın olursa dışarıda bekliyor olacağım."
+  },
+  {
+   "id": 9,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "That's the third time this week.",
+   "tr_dubzar": "Bu hafta üçüncü kez oluyor.",
+   "tr_claude": "Bu haftaki üçüncü seferi bu."
+  },
+  {
+   "id": 10,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "I wouldn't touch that if I were you.",
+   "tr_dubzar": "Yerinde olsam ona dokunmazdım.",
+   "tr_claude": "Yerinde olsam ona dokunmazdım."
+  },
+  {
+   "id": 11,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "She's the only one who knows the way.",
+   "tr_dubzar": "Yolu bilen tek kişi o.",
+   "tr_claude": "Yolu bilen tek kişi o."
+  },
+  {
+   "id": 12,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "Let's not make this harder than it has to be.",
+   "tr_dubzar": "Bunu olması gerekenden daha zor hale getirmeyelim.",
+   "tr_claude": "Bunu olduğundan daha zor hâle getirmeyelim."
+  },
+  {
+   "id": 13,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "You can't be serious right now.",
+   "tr_dubzar": "Şu anda ciddi olamazsın.",
+   "tr_claude": "Şu an ciddi olamazsın."
+  },
+  {
+   "id": 14,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "I need you to trust me on this one.",
+   "tr_dubzar": "Bu konuda bana güvenmeni istiyorum.",
+   "tr_claude": "Bu konuda bana güvenmeni istiyorum."
+  },
+  {
+   "id": 15,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "We're almost out of fuel.",
+   "tr_dubzar": "Yakıtımız bitmek üzere.",
+   "tr_claude": "Yakıtımız neredeyse bitti."
+  },
+  {
+   "id": 16,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "I've had enough of your excuses.",
+   "tr_dubzar": "Mazeretlerinden bıktım artık.",
+   "tr_claude": "Bahanelerinden bıktım artık."
+  },
+  {
+   "id": 17,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "He's not coming back, is he?",
+   "tr_dubzar": "Geri dönmeyecek, değil mi?",
+   "tr_claude": "Geri gelmeyecek, değil mi?"
+  },
+  {
+   "id": 18,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "Somebody must have tipped them off.",
+   "tr_dubzar": "Birileri onlara haber vermiş olmalı.",
+   "tr_claude": "Biri onları haberdar etmiş olmalı."
+  },
+  {
+   "id": 19,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "Take a look at this.",
+   "tr_dubzar": "Şuna bir bak.",
+   "tr_claude": "Şuna bir bak."
+  },
+  {
+   "id": 20,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "I never asked for any of this.",
+   "tr_dubzar": "Bunların hiçbirini ben istemedim.",
+   "tr_claude": "Bunların hiçbirini ben istemedim."
+  },
+  {
+   "id": 21,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "The whole place is falling apart.",
+   "tr_dubzar": "Her yer dağılıyor.",
+   "tr_claude": "Bütün bina yıkılıyor."
+  },
+  {
+   "id": 22,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "You were right about him all along.",
+   "tr_dubzar": "Başından beri onun hakkında haklıydın.",
+   "tr_claude": "Başından beri onun hakkında haklıydın."
+  },
+  {
+   "id": 23,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "Keep your voice down, someone's coming.",
+   "tr_dubzar": "Sesini alçalt, biri geliyor.",
+   "tr_claude": "Sesini kıs, biri geliyor."
+  },
+  {
+   "id": 24,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "How did you even get in here?",
+   "tr_dubzar": "Buraya nasıl girdin?",
+   "tr_claude": "Buraya nasıl girdin sen?"
+  },
+  {
+   "id": 25,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "I'd rather die than let them take her.",
+   "tr_dubzar": "Onu almalarına izin vermektense ölmeyi tercih ederim.",
+   "tr_claude": "Onu almalarına izin vermektense ölürüm."
+  },
+  {
+   "id": 26,
+   "a_is": "claude",
+   "category": "konusma",
+   "en": "Just breathe. Everything's going to be fine.",
+   "tr_dubzar": "Nefes al. Her şey yoluna girecek.",
+   "tr_claude": "Sadece nefes al. Her şey yoluna girecek."
+  },
+  {
+   "id": 27,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "We lost the signal about ten minutes ago.",
+   "tr_dubzar": "Sinyali yaklaşık on dakika önce kaybettik.",
+   "tr_claude": "Sinyali yaklaşık on dakika önce kaybettik."
+  },
+  {
+   "id": 28,
+   "a_is": "dubzar",
+   "category": "konusma",
+   "en": "I didn't sign up for this.",
+   "tr_dubzar": "Bunun için kayıt yaptırmadım.",
+   "tr_claude": "Ben buna razı olmamıştım."
+  },
+  {
+   "id": 29,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "Don't be such a baby about it.",
+   "tr_dubzar": "Bu konuda bebek gibi davranma.",
+   "tr_claude": "Bu konuda bebek gibi davranma."
+  },
+  {
+   "id": 30,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "That punk owes me five grand.",
+   "tr_dubzar": "O serserinin bana beş bin borcu var.",
+   "tr_claude": "O serseri bana beş bin borçlu."
+  },
+  {
+   "id": 31,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "Get the hell out of my car.",
+   "tr_dubzar": "Arabamdan defol git.",
+   "tr_claude": "Defol arabamdan."
+  },
+  {
+   "id": 32,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "I'm not about to let some wannabe push me around.",
+   "tr_dubzar": "İsteyen birinin beni itip kakmasına izin vermeyeceğim.",
+   "tr_claude": "Bir özenti herifin beni itip kakmasına izin verecek değilim."
+  },
+  {
+   "id": 33,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "You're dead meat, pal.",
+   "tr_dubzar": "Sen öldün dostum.",
+   "tr_claude": "Sen bittin, ahbap."
+  },
+  {
+   "id": 34,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "What's your damage?",
+   "tr_dubzar": "Zararın ne?",
+   "tr_claude": "Senin derdin ne?"
+  },
+  {
+   "id": 35,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "He's a total sleazebag.",
+   "tr_dubzar": "Tam bir pislik.",
+   "tr_claude": "Tam bir pislik herif."
+  },
+  {
+   "id": 36,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "Cut the crap and tell me where it is.",
+   "tr_dubzar": "Saçmalamayı kes ve nerede olduğunu söyle.",
+   "tr_claude": "Saçmalamayı kes ve nerede olduğunu söyle."
+  },
+  {
+   "id": 37,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "She ratted us out, man.",
+   "tr_dubzar": "Bizi gammazladı, dostum.",
+   "tr_claude": "Bizi ispiyonladı, dostum."
+  },
+  {
+   "id": 38,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "That car's a piece of junk.",
+   "tr_dubzar": "O araba bir hurda parçası.",
+   "tr_claude": "O araba bir hurda."
+  },
+  {
+   "id": 39,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "I'm so wasted right now.",
+   "tr_dubzar": "Şu an çok sarhoşum.",
+   "tr_claude": "Şu an leş gibiyim."
+  },
+  {
+   "id": 40,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "Stop being such a drama queen.",
+   "tr_dubzar": "Drama kraliçesi gibi davranmayı bırak.",
+   "tr_claude": "Şu abartıyı bırak artık."
+  },
+  {
+   "id": 41,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "Beat it, kid. Before I lose my patience.",
+   "tr_dubzar": "Bas git, evlat. Sabrımı kaybetmeden önce.",
+   "tr_claude": "Defol, evlat. Sabrım taşmadan."
+  },
+  {
+   "id": 42,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "He got jumped outside the bar last night.",
+   "tr_dubzar": "Dün gece bardan atlamış.",
+   "tr_claude": "Dün gece barın önünde adama pusu kurdular."
+  },
+  {
+   "id": 43,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "You're really starting to tick me off.",
+   "tr_dubzar": "Beni gerçekten sinirlendirmeye başladın.",
+   "tr_claude": "Beni gerçekten sinirlendirmeye başladın."
+  },
+  {
+   "id": 44,
+   "a_is": "claude",
+   "category": "argo",
+   "en": "No dice. The deal's off.",
+   "tr_dubzar": "Zar yok. Anlaşma iptal.",
+   "tr_claude": "Olmaz. Anlaşma iptal."
+  },
+  {
+   "id": 45,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "Quit stalling and open the safe.",
+   "tr_dubzar": "Oyalanmayı bırak ve kasayı aç.",
+   "tr_claude": "Oyalanmayı bırak da kasayı aç."
+  },
+  {
+   "id": 46,
+   "a_is": "dubzar",
+   "category": "argo",
+   "en": "She's a real ball-buster.",
+   "tr_dubzar": "Gerçek bir top avcısı.",
+   "tr_claude": "O tam bir baş belası."
+  },
+  {
+   "id": 47,
+   "a_is": "claude",
+   "category": "gorev",
+   "en": "Follow the red van without being spotted.",
+   "tr_dubzar": "Kırmızı minibüsü fark edilmeden takip edin.",
+   "tr_claude": "Kırmızı minibüsü fark edilmeden takip et."
+  },
+  {
+   "id": 48,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Find a way into the control room.",
+   "tr_dubzar": "Kontrol odasına girmenin bir yolunu bul.",
+   "tr_claude": "Kontrol odasına girmenin bir yolunu bul."
+  },
+  {
+   "id": 49,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Collect three samples from the lab.",
+   "tr_dubzar": "Laboratuvardan üç örnek alın.",
+   "tr_claude": "Laboratuvardan üç numune topla."
+  },
+  {
+   "id": 50,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Rescue the hostages before the timer expires.",
+   "tr_dubzar": "Zamanlayıcı süresi dolmadan rehineleri kurtarın.",
+   "tr_claude": "Süre dolmadan rehineleri kurtar."
+  },
+  {
+   "id": 51,
+   "a_is": "claude",
+   "category": "gorev",
+   "en": "Disable the security cameras.",
+   "tr_dubzar": "Güvenlik kameralarını devre dışı bırak.",
+   "tr_claude": "Güvenlik kameralarını devre dışı bırak."
+  },
+  {
+   "id": 52,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Reach the rooftop and signal the helicopter.",
+   "tr_dubzar": "Çatıya ulaş ve helikoptere sinyal ver.",
+   "tr_claude": "Çatıya çık ve helikoptere işaret ver."
+  },
+  {
+   "id": 53,
+   "a_is": "claude",
+   "category": "gorev",
+   "en": "Talk to the mechanic about the engine.",
+   "tr_dubzar": "Tamirciyle motor hakkında konuş.",
+   "tr_claude": "Motor hakkında tamirciyle konuş."
+  },
+  {
+   "id": 54,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Capture the enemy outpost.",
+   "tr_dubzar": "Düşman karakolunu ele geçirin.",
+   "tr_claude": "Düşman karakolunu ele geçir."
+  },
+  {
+   "id": 55,
+   "a_is": "claude",
+   "category": "gorev",
+   "en": "Optional: Find all hidden packages.",
+   "tr_dubzar": "İsteğe bağlı: Tüm gizli paketleri bulun.",
+   "tr_claude": "İsteğe bağlı: Gizli paketlerin hepsini bul."
+  },
+  {
+   "id": 56,
+   "a_is": "dubzar",
+   "category": "gorev",
+   "en": "Objective updated: Escort the scientist to safety.",
+   "tr_dubzar": "Amaç güncellendi: Bilim adamına güvenli bir şekilde eşlik edin.",
+   "tr_claude": "Görev güncellendi: Bilim insanını güvenli bir yere ulaştır."
+  },
+  {
+   "id": 57,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Press F to interact.",
+   "tr_dubzar": "Etkileşim için F tuşuna bas.",
+   "tr_claude": "Etkileşim için F tuşuna bas."
+  },
+  {
+   "id": 58,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Hold Shift to sprint.",
+   "tr_dubzar": "Sprint için Shift tuşuna basılı tut.",
+   "tr_claude": "Koşmak için Shift tuşuna basılı tut."
+  },
+  {
+   "id": 59,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Not enough money.",
+   "tr_dubzar": "Yeterli para yok.",
+   "tr_claude": "Yeterli para yok."
+  },
+  {
+   "id": 60,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Weapon wheel: Select a weapon.",
+   "tr_dubzar": "Silah çarkı: Bir silah seçin.",
+   "tr_claude": "Silah çarkı: Bir silah seç."
+  },
+  {
+   "id": 61,
+   "a_is": "claude",
+   "category": "arayuz",
+   "en": "Your game has been saved.",
+   "tr_dubzar": "Oyununuz kurtarıldı.",
+   "tr_claude": "Oyunun kaydedildi."
+  },
+  {
+   "id": 62,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Your vehicle is damaged.",
+   "tr_dubzar": "Aracınız hasar gördü.",
+   "tr_claude": "Aracın hasar gördü."
+  },
+  {
+   "id": 63,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Settings: Audio, Video, Controls",
+   "tr_dubzar": "Ayarlar: Ses, Video, Kontroller",
+   "tr_claude": "Ayarlar: Ses, Görüntü, Kontroller"
+  },
+  {
+   "id": 64,
+   "a_is": "dubzar",
+   "category": "arayuz",
+   "en": "Mission complete. Reward: $500",
+   "tr_dubzar": "Görev tamamlandı. Ödül: 500 $",
+   "tr_claude": "Görev tamamlandı. Ödül: 500 $"
+  },
+  {
+   "id": 65,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "The empire will rise again, mark my words.",
+   "tr_dubzar": "İmparatorluk yeniden yükselecek, sözlerimi yaz.",
+   "tr_claude": "İmparatorluk yeniden yükselecek, sözlerimi unutma."
+  },
+  {
+   "id": 66,
+   "a_is": "claude",
+   "category": "resmi",
+   "en": "You stand accused of treason against the crown.",
+   "tr_dubzar": "Tacına ihanetle suçlanıyorsun.",
+   "tr_claude": "Taca karşı vatana ihanetle suçlanıyorsun."
+  },
+  {
+   "id": 67,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "Long live the king!",
+   "tr_dubzar": "Çok yaşa kral!",
+   "tr_claude": "Yaşasın kral!"
+  },
+  {
+   "id": 68,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "The ancient seals are breaking one by one.",
+   "tr_dubzar": "Eski mühürler teker teker kırılıyor.",
+   "tr_claude": "Kadim mühürler tek tek kırılıyor."
+  },
+  {
+   "id": 69,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "Honored guests, please take your seats.",
+   "tr_dubzar": "Saygıdeğer misafirler, lütfen yerlerinize oturun.",
+   "tr_claude": "Sayın misafirler, lütfen yerlerinizi alın."
+  },
+  {
+   "id": 70,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "Our ship will reach orbit in ten minutes.",
+   "tr_dubzar": "Gemimiz 10 dakika içinde yörüngeye ulaşacak.",
+   "tr_claude": "Gemimiz on dakika içinde yörüngeye ulaşacak."
+  },
+  {
+   "id": 71,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "The storm has been raging for three days.",
+   "tr_dubzar": "Fırtına üç gündür devam ediyor.",
+   "tr_claude": "Fırtına üç gündür dinmeden sürüyor."
+  },
+  {
+   "id": 72,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "A great evil stirs beneath the mountain.",
+   "tr_dubzar": "Dağın altında büyük bir kötülük karışır.",
+   "tr_claude": "Dağın altında büyük bir kötülük kıpırdanıyor."
+  },
+  {
+   "id": 73,
+   "a_is": "dubzar",
+   "category": "resmi",
+   "en": "By my oath, I will see this through.",
+   "tr_dubzar": "Yemin ederim ki, bu işi bitireceğim.",
+   "tr_claude": "Yeminim olsun ki bunu sonuna kadar götüreceğim."
+  },
+  {
+   "id": 74,
+   "a_is": "claude",
+   "category": "resmi",
+   "en": "Dr. Hayes, please report to the control deck.",
+   "tr_dubzar": "Dr. Hayes, lütfen kontrol güvertesine gelin.",
+   "tr_claude": "Dr. Hayes, lütfen kontrol güvertesine gelin."
+  },
+  {
+   "id": 75,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Incoming!",
+   "tr_dubzar": "Geliyor!",
+   "tr_claude": "Geliyor!"
+  },
+  {
+   "id": 76,
+   "a_is": "claude",
+   "category": "kisa",
+   "en": "Reloading!",
+   "tr_dubzar": "Dolduruyorum!",
+   "tr_claude": "Şarjör değiştiriyorum!"
+  },
+  {
+   "id": 77,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Clear!",
+   "tr_dubzar": "Temiz!",
+   "tr_claude": "Temiz!"
+  },
+  {
+   "id": 78,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Target down.",
+   "tr_dubzar": "Hedef vuruldu.",
+   "tr_claude": "Hedef vuruldu."
+  },
+  {
+   "id": 79,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Fall back!",
+   "tr_dubzar": "Geri çekilin!",
+   "tr_claude": "Geri çekilin!"
+  },
+  {
+   "id": 80,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Take cover!",
+   "tr_dubzar": "Siper alın!",
+   "tr_claude": "Siper al!"
+  },
+  {
+   "id": 81,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Let's go!",
+   "tr_dubzar": "Haydi gidelim!",
+   "tr_claude": "Hadi gidelim!"
+  },
+  {
+   "id": 82,
+   "a_is": "dubzar",
+   "category": "kisa",
+   "en": "Don't shoot!",
+   "tr_dubzar": "Ateş etmeyin!",
+   "tr_claude": "Ateş etme!"
+  },
+  {
+   "id": 83,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "Which one?",
+   "tr_dubzar": "Hangisini?",
+   "tr_claude": "Hangi rıhtıma?"
+  },
+  {
+   "id": 84,
+   "a_is": "dubzar",
+   "category": "baglam",
+   "en": "Not yet. Give me a minute.",
+   "tr_dubzar": "Daha değil. Bana bir dakika ver.",
+   "tr_claude": "Henüz değil. Bana bir dakika ver."
+  },
+  {
+   "id": 85,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "That's him.",
+   "tr_dubzar": "Bu o.",
+   "tr_claude": "İşte o."
+  },
+  {
+   "id": 86,
+   "a_is": "dubzar",
+   "category": "baglam",
+   "en": "I know. I've got it.",
+   "tr_dubzar": "Farkındayım. Ben hallederim.",
+   "tr_claude": "Biliyorum. Hallettim."
+  },
+  {
+   "id": 87,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "Then we go around.",
+   "tr_dubzar": "Sonra da dolaşacağız.",
+   "tr_claude": "O zaman etrafından dolaşırız."
+  },
+  {
+   "id": 88,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "You are.",
+   "tr_dubzar": "Öylesin.",
+   "tr_claude": "Sensin."
+  },
+  {
+   "id": 89,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "You don't have to.",
+   "tr_dubzar": "Buna gerek yok.",
+   "tr_claude": "Yüzmene gerek yok."
+  },
+  {
+   "id": 90,
+   "a_is": "claude",
+   "category": "baglam",
+   "en": "We don't have it.",
+   "tr_dubzar": "Bizde yok.",
+   "tr_claude": "Zamanımız yok."
+  }
+ ]
+}

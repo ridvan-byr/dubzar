@@ -139,6 +139,15 @@ if ($wantGpu) {
     }
 }
 
+# --- 3c. Görev Yöneticisi'nde "Python" yerine "Dubzar" yazması -------------------------------------------------
+$dubzarExe = Join-Path $venv "Scripts\Dubzar.exe"
+if (-not $SkipPip) {
+    Push-Location $appTarget
+    try { & $venvPython -m dubzar.branding $venv } catch { } finally { Pop-Location }
+    $LASTEXITCODE = 0
+}
+$launcher = if (Test-Path $dubzarExe) { $dubzarExe } else { $venvPythonW }   # without it the old name stays: Dubzar still works
+
 # --- 4. Modeller ---------------------------------------------------------------------------------------------
 if (-not $SkipModels -and $offline) {
     Write-Host "Modeller kopyalanıyor..."
@@ -171,8 +180,8 @@ function New-Shortcut([string]$path, [string]$target, [string]$arguments, [strin
 }
 
 New-Item -ItemType Directory -Force -Path $DesktopDir, $StartMenuDir | Out-Null
-New-Shortcut (Join-Path $DesktopDir "Dubzar.lnk") $venvPythonW "-m dubzar run" "Dubzar: oyunlara Türkçe altyazı"
-New-Shortcut (Join-Path $StartMenuDir "Dubzar.lnk") $venvPythonW "-m dubzar run" "Dubzar: oyunlara Türkçe altyazı"
+New-Shortcut (Join-Path $DesktopDir "Dubzar.lnk") $launcher "-m dubzar run" "Dubzar: oyunlara Türkçe altyazı"
+New-Shortcut (Join-Path $StartMenuDir "Dubzar.lnk") $launcher "-m dubzar run" "Dubzar: oyunlara Türkçe altyazı"
 New-Shortcut (Join-Path $StartMenuDir "Dubzar (hata ayiklama).lnk") $venvPython "-m dubzar run --debug" "Dubzar, konsol penceresiyle (sorun olursa)"
 Write-Host "Kısayollar oluşturuldu (Masaüstü ve Başlat menüsü)."
 

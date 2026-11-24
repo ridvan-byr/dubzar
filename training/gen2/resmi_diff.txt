@@ -1,0 +1,74 @@
+4	Let it be recorded in the royal annals.	Kayda geçirilsin, krallık vakayinamesine yazılsın.	Kraliyet vakayinamesine kaydedilsin.	
+6	The court is now in session.	Mahkeme oturumu açılmıştır.	Mahkeme şimdi oturumdadır.	
+9	Who dares enter the throne room unannounced?	Tahta salonuna habersiz girmeye kim cüret ediyor?	Taht odasına kim izinsiz girmeye cüret eder?	
+13	I swear upon my honour to serve the crown until my last breath.	Şerefim üzerine yemin ederim, son nefesime kadar tacın hizmetinde olacağım.	Son nefesime dek tacın hizmetinde olacağıma şerefim üzerine yemin ederim.	
+14	Thou hast betrayed the trust of thy lord.	Efendinin güvenini boşa çıkardın.	Efendinin güvenine ihanet ettin.	
+15	Let the heralds sound the horns!	Haberciler boruları çalsın!	Boru çalıcılar borularını öttürsün!	
+20	Your audacity astonishes me, my lord.	Cüretiniz beni şaşırtıyor, lordum.	Küstahlığınız beni şaşkına çeviriyor, lordum.	
+32	Present the petitioner to the court.	Dilekçi kişiyi mahkemeye takdim edin.	Dilekçiyi mahkemenin huzuruna çıkarın.	
+44	The lady's honour has been grievously insulted.	Leydinin onuru ağır biçimde zedelendi.	Hanımefendinin onuru ağır biçimde hakarete uğradı.	
+47	How do you plead?	Suçunuzu kabul ediyor musunuz?	Savunman nedir?	
+62	I am but a humble servant of the crown.	Ben tacın mütevazı bir kuluyum.	Ben tacın alçakgönüllü bir kulundan başka bir şey değilim.	
+69	Our enemies tremble at the sound of our banners.	Düşmanlarımız sancaklarımızın sesini duyunca titriyor.	Sancaklarımızın sesi düşmanlarımızı titretir.	
+70	By my father's crown, I will see justice done.	Babamın tacı adına, adaletin yerini bulmasını sağlayacağım.	Babamın tacı hakkı için, adaletin yerini bulduğunu göreceğim.	
+71	The heir has come of age.	Veliaht yaşına geldi.	Varis reşit oldu.	
+75	Thou hast my leave to depart.	Gitmen için iznim var.	Gitmene izin veriyorum.	
+82	The envoy brings gifts from the eastern empire.	Elçi, doğudaki imparatorluktan hediyeler getirdi.	Elçi, doğu imparatorluğundan armağanlar getiriyor.	
+87	So it has been ordained, and so it shall be.	Böyle yazılmış, böyle olacak.	Böyle takdir edildi, böyle de olacak.	
+91	Pray, what brings you to my humble court?	Söyleyin bakalım, sizi mütevazı sarayıma getiren nedir?	Buyurun, alçakgönüllü sarayıma hangi rüzgâr attı sizi?	
+94	The throne room falls silent as the queen enters.	Kraliçe içeri girerken tahta salonu sessizliğe gömülür.	Kraliçe girince taht odasına sessizlik çöker.	
+103	Cast out the heretic!	Kâfiri kovun!	Dinsizi kovun!	
+112	Heaven help us all.	Allah hepimizin yardımcısı olsun.	Tanrı yardımcımız olsun.	
+143	The sanctuary will shelter any soul who seeks it.	Sığınak, arayan her ruha kucak açar.	Sığınak, kendisine yönelen her ruhu barındıracak.	
+144	Our lady of sorrows, hear our prayer.	Kederli Ana, duamızı işit.	Acıların Hanımı, duamızı işit.	
+148	It is said that the mountain was once a sleeping god.	Dağın bir zamanlar uyuyan bir tanrı olduğu söylenir.	Söylenene göre dağ bir zamanlar uyuyan bir tanrıydı.	
+150	For three hundred years, the kingdom knew peace.	Krallık üç yüz yıl boyunca barış içinde yaşadı.	Üç yüz yıl boyunca krallık huzuru tattı.	
+160	Winter came early that year, and with it, hunger.	O yıl kış erken geldi, onunla birlikte de kıtlık.	O yıl kış erken bastırdı, beraberinde kıtlığı da getirdi.	
+195	Set a course for the Kepler system.	Rotayı Kepler sistemine ayarla.	Kepler sistemine rota çizin.	
+220	Do not approach. This facility is restricted.	Yaklaşmayın. Bu tesis girişe kapalıdır.	Yaklaşmayın. Bu tesis yasak bölgedir.	
+221	Hull breach on deck seven. Seal the bulkheads.	Yedinci güvertede gövde yırtılması var. Bölmeleri kapatın.	Yedinci güvertede gövde yarığı. Bölme kapaklarını mühürleyin.	
+234	Order the fleet to retreat to the outer rim.	Filoya dış kuşağa çekilmesini emret.	Filoya dış çembere çekilmesi emrini verin.	
+238	My government will not tolerate this provocation.	Hükümetim bu provokasyonu hoş görmeyecek.	Hükümetim bu tahrike müsamaha göstermeyecek.	
+254	Sanctions will remain in place until the border is reopened.	Sınır yeniden açılana kadar yaptırımlar sürecek.	Yaptırımlar sınır yeniden açılana dek sürecek.	
+268	The peace talks collapsed after the assassination.	Barış görüşmeleri suikastın ardından çöktü.	Suikastten sonra barış görüşmeleri çöktü.	
+270	The prime minister will address the nation tonight.	Başbakan bu akşam ulusa hitap edecek.	Başbakan bu akşam millete seslenecek.	
+279	The defendant is hereby sentenced to ten years of imprisonment.	Sanık işbu kararla on yıl hapis cezasına çarptırılmıştır.	Sanık işbu kararla on yıl hapse mahkûm edilmiştir.	
+287	The evidence will be presented before the tribunal.	Deliller mahkeme heyetine sunulacak.	Deliller heyetin huzuruna getirilecek.	
+290	He was tried and hanged for his crimes.	Yargılandı ve işlediği suçlar yüzünden asıldı.	Suçları yüzünden yargılandı ve asıldı.	
+292	The magistrate has ordered your arrest.	Sulh hâkimi tutuklanmanıza karar verdi.	Sulh yargıcı tutuklanmanı emretti.	
+306	He was granted a full pardon by the governor.	Vali tarafından tamamen affedildi.	Vali tarafından tam bir af çıkarıldı.	
+307	The law makes no exceptions for the rich or the poor.	Kanun zengine de yoksula da istisna tanımaz.	Yasa, zengin ile yoksul arasında ayrım yapmaz.	
+314	The old laws still apply in this province.	Eski kanunlar bu eyalette hâlâ geçerli.	Bu eyalette eski yasalar hâlâ geçerli.	
+321	Order in the court!	Mahkemede sessizlik!	Mahkemede düzen!	
+324	The council of elders will settle this dispute.	Ağsakallar meclisi bu anlaşmazlığı çözecek.	Bu anlaşmazlığı ihtiyarlar meclisi çözecek.	
+331	The treasury will compensate you for your loss.	Hazine, kaybınızı karşılayacak.	Hazine kaybınızı tazmin edecek.	
+332	Thieves shall lose a hand under this law.	Bu kanuna göre hırsızın eli kesilir.	Bu yasaya göre hırsızlar bir ellerini kaybedecek.	
+338	Notice is hereby given that all taxes are due by month's end.	İşbu bildiri ile tüm vergilerin ay sonuna kadar ödenmesi gerektiği duyurulur.	İşbu belgeyle ilan olunur ki tüm vergiler ay sonuna kadar ödenecektir.	
+349	He claims the land by right of birth.	Toprağın doğum hakkıyla kendisine ait olduğunu iddia ediyor.	Toprağı doğuştan gelen hakla talep ediyor.	
+391	Fear not the dark, for I am with you.	Karanlıktan korkma, ben yanındayım.	Karanlıktan korkma, çünkü ben seninleyim.	
+416	Many a brave knight has fallen to this wyrm.	Nice cesur şövalye bu ejderhaya yenik düştü.	Nice yiğit şövalye bu ejderin elinde can verdi.	
+418	All who drink from this cup will know no sorrow.	Bu kâseden içen hiç keder görmez.	Bu kadehten içen her kişi acıyı unutacak.	
+429	We shall meet again, in this life or the next.	Tekrar karşılaşacağız, bu hayatta ya da öbüründe.	Bu hayatta ya da öbüründe yine buluşacağız.	
+434	I would sooner die than betray my lord.	Efendime ihanet edeceğime ölürüm daha iyi.	Efendime ihanet etmektense ölmeyi yeğlerim.	
+438	Bury him with full honours.	Onu bütün şeref törenleriyle gömün.	Onu tüm onurlarla toprağa verin.	
+471	The baron kept his cards close to his chest.	Baron planlarını kimseye açmadı.	Baron kozlarını gizli tuttu.	
+479	You have made your bed, now lie in it.	Ektiğini biçeceksin.	Yatağını kendin yaptın, şimdi içinde yat.	
+480	The crown prince had his head in the clouds.	Veliaht hep hayal âlemindeydi.	Veliaht prensin başı bulutlardaydı.	
+484	He died with his boots on.	Savaşırken öldü.	Çizmeleri ayağında öldü.	
+486	The queen has the whole court wrapped around her finger.	Kraliçe bütün sarayı parmağında oynatıyor.	Kraliyet sarayını kraliçe parmağında oynatıyor.	
+492	The village was left high and dry by the retreating army.	Köy, geri çekilen ordu tarafından kaderine terk edildi.	Köyü geri çekilen ordu ortada bıraktı.	
+498	Her loyalty was never in doubt.	Sadakatinden hiç şüphe edilmedi.	Onun sadakatinden hiç kuşku duyulmadı.	
+510	Many have tried and failed to cross the northern pass.	Pek çok kişi kuzey geçidini aşmaya çalıştı ve başarısız oldu.	Çoğu kuzey geçidini aşmayı denedi ve başaramadı.	
+518	He has bitten off more than he can chew.	Kaldıramayacağı bir lokmaya ağzını açtı.	Ağzından büyük laf etti, şimdi altından kalkamaz.	
+519	There is no use crying over spilled milk, my lord.	Olan oldu, lordum, boş yere üzülmenin anlamı yok.	Dökülmüş süte ağlamanın âlemi yok, lordum.	
+523	The messenger was the bearer of bad news.	Ulak kötü haber getirmişti.	Ulak kötü haberin taşıyıcısıydı.	
+525	Let sleeping dogs lie, my friend.	Uyuyan yılanın kuyruğuna basma, dostum.	Uyuyan köpeği uyandırma, dostum.	
+526	Your lord's name is mud in this town.	Lordunun adı bu kasabada kötüye çıkmış.	Lordunun adı bu kentte lekeli.	
+537	I'll be there with bells on, Your Grace.	Seve seve geleceğim, ekselansları.	Davetinize koşarak geleceğim, Haşmetmeapları.	
+538	The queen kicked the bucket in her sleep.	Kraliçe uykusunda öldü.	Kraliçe uykusunda hayata gözlerini yumdu.	
+540	The knight kept a stiff upper lip.	Şövalye dimdik durdu, acısını belli etmedi.	Şövalye soğukkanlılığını korudu.	
+546	The rebels played right into the enemy's hands.	İsyancılar tam düşmanın istediği gibi davrandı.	İsyancılar tam düşmanın tuzağına düştü.	
+554	Let bygones be bygones, and drink with me.	Geçmişi geçmişte bırak da gel benimle iç.	Geçmiş olsun, geçen geçmişte kalsın, gel de benimle iç.	
+557	Out of sight, out of mind, as the old saying goes.	Eski söz der ki, gözden ırak olan gönülden de ırak olur.	Gözden ırak olan gönülden de ırak olur, eski söz böyle der.	
+561	The prince had to eat humble pie before the court.	Prens, sarayın önünde yaptığına pişman olup özür dilemek zorunda kaldı.	Prens, saray önünde yerin dibine girdi.	
+570	Brace yourselves, we are about to be hit!	Tutunun, vurulmak üzereyiz!	Hazır olun, bir darbe yemek üzereyiz!	

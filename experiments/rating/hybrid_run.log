@@ -1,0 +1,85 @@
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='dynamic': {'mscale_all_dim', 'alpha', 'mscale', 'beta_slow', 'beta_fast'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='dynamic': {'mscale_all_dim', 'alpha', 'mscale', 'beta_slow', 'beta_fast'}
+Loading weights:   0%|          | 0/355 [00:00<?, ?it/s]Loading weights:   1%|1         | 5/355 [00:00<00:07, 48.28it/s]Loading weights:   3%|2         | 10/355 [00:00<00:37,  9.09it/s]Loading weights:   4%|3         | 13/355 [00:01<00:43,  7.78it/s]Loading weights:   4%|4         | 15/355 [00:01<00:41,  8.13it/s]Loading weights:   5%|4         | 17/355 [00:01<00:39,  8.61it/s]Loading weights:   6%|5         | 20/355 [00:02<00:31, 10.50it/s]Loading weights:   6%|6         | 22/355 [00:02<00:29, 11.16it/s]Loading weights: 100%|##########| 355/355 [00:02<00:00, 161.96it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+3 We've got about five minutes before they notice. | Onlar fark etmeden önce beş dakikamız var. | Fark edeceklerinden önce yaklaşık beş dakikaımız var.
+8 That doesn't sound like him at all. | Bu hiç de onun tarzı değil. | Bu, onun sesi gibi değil.
+11 I thought we agreed to meet at noon. | Öğlen buluşmayı kabul ettiğimizi sanıyordum. | Öğlen saatinde buluşmakta anlaştığımızı sanıyordum.
+17 Nobody has been in this room for years. | Yıllardır kimse bu odaya girmedi. | Yıllardır kimse bu odada bulunmamıştır.
+25 You can't just walk away from this. | Bundan öylece çekip gidemezsin. | Bundan sadece uzaklaşamazsınız.
+32 We're running low on supplies. | Erzakımız azalıyor. | Malzeme stoklarımız azalıyor.
+34 Is that really the best you can do? | Elinden gelenin en iyisi bu mu? | Bu gerçekten yapabileceğiniz en iyisi mi?
+36 Stop acting like a clown and listen up. | Palyaço gibi davranmayı bırak ve dinle. | Palyaço gibi davranmayı bırakın ve dinleyin.
+37 That dude's got a screw loose. | O herifin başı belada. | O adamın bir sorunu var.
+38 I'm gonna wipe that smirk right off your face. | O sırıtışı suratından sileceğim. | Yüzündeki o gülümsemeyi silip atacağım.
+39 She's been giving me the cold shoulder all week. | Bütün hafta boyunca bana soğuk bir omuz verdi. | Tüm hafta boyunca bana soğuk davranıyor.
+40 Get off my back, will you? | Çekil sırtımdan, olur mu? | Sırtımı yormayın, olur mu?
+41 You're full of it, and you know it. | Sen bununla dolusun ve bunu biliyorsun. | Bundan dolayısın ve bunu biliyorsun.
+42 He's all talk and no action. | Her şeyi konuşuyor ve hiçbir şey yapmıyor. | Sadece konuşuyor, hiçbir eylemde bulunmuyor.
+43 Don't try to sweet-talk me. | Benimle tatlı tatlı konuşmaya çalışma. | Bana tatlı sözler söylemeye çalışma.
+44 We got played, man. Big time. | Oyuna geldik, dostum. Hem de çok. | Yenildik, dostum. Çok büyük bir yenilgi.
+45 That guy is a snake in the grass. | Bu adam çimenlerin arasında bir yılan. | O adam, otların arasındaki bir yılan.
+47 Hand over the cash or things get ugly. | Parayı teslim et yoksa işler çirkinleşir. | Nakit parayı verin, yoksa durum kötüleşir.
+48 She's out of her league and she knows it. | Kendi liginden çıktı ve bunu biliyor. | O, onun seviyesinin dışında ve bunu biliyor.
+49 What a bunch of lowlifes. | Ne serseriler ama. | Ne kadar kötü insanlar.
+51 Man, this place gives me the creeps. | Dostum, burası beni ürkütüyor. | Aman, bu yer beni ürkütüyor.
+54 I'll be damned if I let you take the credit. | Eğer sana izin verirsem lanetlenirim. | Sana bu ödülü vermeme asla izin vermeyeceğim.
+55 That's a load of garbage and you know it. | Bu bir yığın çöp ve bunu biliyorsun. | Bu tam bir saçmalık ve bunu biliyorsunuz.
+56 Don't you dare flake on me again. | Sakın bir daha beni ekmeye kalkışma. | Bir daha bana gelme.
+57 He's been dodging me like the plague. | Veba gibi benden kaçıyor. | Beni tıpkı bir veba gibi kaçınıyor.
+60 You got some guts showing up here. | Burada gözükecek cesaretin var. | Buraya gelmek için biraz cesaretin var.
+61 She dumped him on the spot. | Onu oracıkta terk etti. | Onu oracıkta terk etti.
+62 Quit your whining and move it. | Sızlanmayı bırak ve hareket et. | Şikayet etmeyi bırak ve harekete geç.
+63 They were wasted before noon. | Öğleden önce boşa gitmişler. | Öğlenden önce boşa harcandılar.
+64 Talk about bad luck, huh? | Kötü şanstan bahsediyorsun, değil mi? | Şanssızlık hakkında konuşuyoruz, değil mi?
+65 That's a rip-off and you know it. | Bu bir soygun ve bunu sen de biliyorsun. | Bu bir dolandırıcılık, bunu biliyorsunuz.
+67 You're a total pushover. | Tam bir çapkınsın. | Tamamen kolayca yenilebilir birisiniz.
+68 The cops were all over us. | Polisler her yanımızı sarmıştı. | Polisler her yerdeydi.
+69 Take a hike, pal. | Yürüyüşe çık, dostum. | Git başka bir yere, dostum.
+70 He's loaded, but he's cheap as hell. | Dolu ama çok ucuz. | Çok güçlü, ama aynı zamanda çok ucuz.
+71 Spill it, or I'll make you. | Dökül yoksa ben yaparım. | Söyle, yoksa seni cezalandıracağım.
+72 Man, you're a lifesaver. | Dostum, sen hayat kurtarıcısın. | Aman, sen gerçekten bir kurtarıcısın.
+73 We're toast if they find us here. | Bizi burada bulurlarsa kadeh kaldıracağız. | Eğer bizi burada bulurlarsa mahvoluruz.
+76 Sneak past the guards and reach the vault. | Gardiyanların yanından geç ve kasaya ulaş. | Nöbetçilerin yanından süzülerek kasaya ulaşın.
+79 Destroy the supply truck before it leaves. | Gitmeden önce ikmal kamyonunu yok et. | Teslimat kamyonu ayrılmadan önce yok edin.
+82 Return to the camp and report to the captain. | Kampa dön ve kaptana rapor ver. | Kampa geri dönün ve kaptana rapor verin.
+84 Lure the guards away from the entrance. | Gardiyanları girişten uzaklaştırın. | Nöbetçileri girişten uzaklaştırın.
+85 Reach the next checkpoint within two minutes. | İki dakika içinde bir sonraki kontrol noktasına ulaş. | İki dakika içinde bir sonraki kontrol noktasına ulaşın.
+86 Defeat the boss to unlock the gate. | Kapının kilidini açmak için patronu yen. | Boss’u yendikten sonra kapıyı açabilirsiniz.
+87 Search the ruins for ancient artifacts. | Harabeleri antik eserler için ara. | Harabelerde eski eserler arayın.
+88 Deliver the medicine to the village. | İlaçları köye teslim et. | İlaçı köye teslim edin.
+89 Hide in the cargo hold until the ship docks. | Gemi yanana kadar kargo ambarında saklan. | Geminin limana yanaşmasını bekleyerek kargo bölmesinde saklanın.
+90 Plant the explosives on the bridge supports. | Patlayıcıları köprünün desteklerine yerleştir. | Patlayıcıları köprü desteklerine yerleştirin.
+94 Craft a torch to light the tunnel. | Tüneli aydınlatmak için bir meşale hazırla. | Tüneli aydınlatmak için bir meşale yapın.
+96 Bribe the dock worker for information. | Rıhtım çalışanına rüşvet ver. | Demiryolu işçisinden bilgi almak için rüşvet verin.
+98 New quest: The Lost Heir. | Yeni Görev: Kayıp Kahraman. | Yeni görev: Kayıp Varis
+100 Tip: Use stealth to avoid combat. | İpucu: Savaşmayı önlemek için gizlilik kullanın. | İpucu: Savaştan kaçınmak için gizlilik kullanın.
+102 Hold Space to charge your jump. | Atlayışını şarj etmek için Boşluk tuşuna basılı tut. | Atlamanızı yapmak için yer açın.
+103 Press Tab to open your inventory. | Envanterinizi açmak için Tab tuşuna bas. | Envanterinizi açmak için Tab tuşuna basın.
+117 New item acquired: Rusty Key | Satın alınan yeni ürün: Rusty Key | Yeni öğe edinildi: Rusty Key
+123 Invert Y-Axis | Y- Eksenini Tersine Çevir | Y eksenini tersine çevirin
+130 Chapter 3: The Long Way Home | Bölüm 3: Eve Dönüş Yolu | 3. Bölüm: Uzun Yol Evine
+135 Hold Left Click to aim. | Nişan almak için Sol fare tuşuna basılı tut. | Hedefi belirlemek için sol tıklayın.
+141 The council has spoken, and its word is final. | Konsey konuştu ve sözü kesinleşti. | Konsey karar verdi ve onun sözü kesindir.
+142 Let it be known that the crown forgives no traitor. | Tacın haini affetmediği bilins. | Taçın hainleri affetmediği bilinsin.
+143 Many have fallen in defense of these walls. | Birçoğu bu duvarların savunmasında düştü. | Birçok kişi bu duvarları savunmak için canını verdi.
+144 The old kingdom lies buried beneath the sand. | Eski krallık kumun altında gömülüdür. | Eski krallık kumların altında gömülü.
+145 Our scouts report movement along the northern ridge. | Gözcülerimiz kuzey sırtındaki hareketi bildiriyorlar. | Keşif birliklerimiz, kuzey sırtında hareketlilik olduğunu bildiriyor.
+147 I pledge my sword to your cause. | Kılıcımı davana adadım. | Kılıcımı sizin amacınıza adarım.
+148 Only the worthy may pass through these gates. | Sadece layık olanlar bu kapılardan geçebilir. | Sadece değerli olanlar bu kapılardan geçebilir.
+149 The captain's log: day forty-two at sea. | Kaptanın seyir defteri: denizde kırk iki gün. | Kaptanın günlüğü: Denizdeki kırk ikinci gün.
+150 Citizens of the republic, tonight we stand together. | Cumhuriyet vatandaşları, bu gece hep birlikte duruyoruz. | Cumhuriyetin vatandaşları, bu gece birlikteyiz.
+151 A sacrifice is demanded by the ancient law. | Eski kanun tarafından bir fedakarlık talep edilir. | Eski yasalar gereği bir kurban sunulmalıdır.
+152 The signal originates from deep within the asteroid belt. | Sinyal, asteroit kuşağının derinliklerinden kaynaklanır. | Sinyal, asteroit kuşağının derinliklerinden geliyor.
+153 All hands, brace for impact. | Herkes çarpışmaya hazır olsun. | Herkes, darbeye hazırlanın.
+156 May the light guide you through the darkness. | Işık karanlıklar içinde size yol göstersin. | Işık, sizi karanlıkta yönlendirsin.
+157 We regret to inform you that the contract has been terminated. | Sözleşmenin sona erdiğini bildirmekten üzüntü duyuyoruz. | Sözleşmenin sonlandırıldığını bildirmekten üzgünüz.
+160 The oracle speaks in riddles, but her words are true. | Kahin bilmecelerle konuşur, ama sözleri doğrudur. | Kehanetçi bilmecelerle konuşur, ancak sözleri doğrudur.
+162 The archives were sealed over a century ago. | Arşivler yüz yıl önce mühürlenmişti. | Arşivler bir yüzyıl önce mühürlenmiştir.
+163 Fortune favors the bold. | Servet cesurları sever. | Kader cesur olanları destekler.
+166 By decree of the emperor, this city is under quarantine. | İmparatorun emriyle bu şehir karantina altında. | İmparatorun emriyle bu şehir karantina altında.
+168 The mission is classified. You will not discuss it. | Görev gizlidir. Bunu tartışmayacaksınız. | Görev gizlidır. Bu konuda hiçbir şey konuşmayacaksınız.
+170 The bells toll for those we have lost. | Kaybettiklerimiz için çanlar çalıyor. | Kaybettiğimiz insanlar için çanlar çalıyor.
+194 That gives us ten minutes. | Bu bize 10 dakika verir. | Bu bize on dakika veriyor.
+196 Then we go through the alley. | Sonra ara sokaktan geçiyoruz. | Sonra sokağı geçeriz.
+80 routed lines -> hybrid_lines.json

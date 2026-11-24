@@ -1,0 +1,108 @@
+4	NEW	Sakın bir numara yapmaya kalkma, ukala herif.
+6	NEW	Muhasebeci yıllarca hesaplarda hile yaptı, kimse fark etmedi.
+9	B	Hapse bir daha dönmeyeceğim, asla.
+11	B	Beni sağ yakalayamazsın, polis!
+14	B	Polise kim haber verdi?
+16	A	Polis peşimizde, bir süre ortalıkta görünme.
+21	NEW	Polisler bütün mahalleyi sarmış.
+25	A	Ona en ağır cezayı verecekler.
+26	B	Mal alıcımız mücevherleri sabaha kadar elden çıkarır.
+30	A	Görünüşe göre anlaşma suya düştü.
+32	B	Ekmek yediğin eli ısırma.
+40	A	Beni yine hücreye atacaklar.
+44	B	Fişleri say, kazanan hep kumarhanedir.
+50	NEW	Kumarhane müdürü masamızı gözlüyor.
+52	A	Tek elde beni soyup soğana çevirdi.
+56	B	Malı yemek sodasıyla kestik.
+59	B	Sevkiyat gece yarısı rıhtıma ulaşacak.
+61	A	Önce parayı görmeden anlaşma yok.
+62	A	Gümrük memuruna rüşvet verip görmezden gelmesini sağladık.
+66	A	Capo sabırlı bir adam değil.
+70	A	Bu işin cezasını senin çekmeni sağlayacağım.
+94	B	İçerideki adamımız ödü patlayıp geri adım atıyor.
+102	A	İhtiyacın olan her şeyi bulurum, ama bir bedeli var.
+104	B	Ötersen ölürsün.
+106	B	Yıllardır kirli parayla geçiniyor.
+122	B	Çocuklara söyle, geri çekilsinler.
+130	B	Bütün daireye dinleme koydular.
+146	A	Beş dakika sonra ışıklar kapanacak, hücrelerinize dönün.
+158	B	Ya katla ya çekil, karar ver artık.
+164	NEW	Dövüş şikeliydi ve herkes bunu biliyordu.
+178	B	Beni enayi mi sanıyorsun?
+179	B	Bana kazık attığın güne pişman edeceğim seni.
+180	NEW	Ekipte bir hain olduğunu seziyorum.
+183	B	Adamlarıma para verebilecekken neden vergi ödeyeyim ki?
+190	A	Kurbanın katilini tanıdığını düşünüyoruz.
+197	A	Müebbetten kurtulmak için itirafçı oldu.
+200	B	Hâkim satın alınmış.
+205	A	Önde temas var, ateş açın!
+213	A	Çavuş, köprüye patlayıcı yerleştirilmiş.
+216	A	Olumsuz, hedefi göremiyoruz.
+222	A	Açık konuşabilir miyim, komutanım?
+228	B	Konvoy, üsse iki mil kala el yapımı bombayla vuruldu.
+231	B	Acemilerin yeri burası değil.
+242	A	Bundan daha az baskı altında çöken adamlar gördüm.
+250	A	Para hesaba geçtiği sürece kimin ödediği umurumda değil.
+254	NEW	Paralı askerlerin silahı milislerin iki katıydı.
+258	B	Oda oda girip temizleyin.
+265	A	Telsiz kontrolü, beni duyuyor musunuz?
+266	A	Net ve açık duyuyorum.
+268	B	Komutanım, üstümüze geliyorlar!
+276	NEW	Fox iki, füze fırlatıldı.
+284	A	Çömel, nefes al, iki dakikaya hareket ediyoruz.
+287	B	Patlıyor, kaçın!
+288	B	Gövdeye nişan al ve cephane harcama.
+294	A	Ateşinizi kesin, o bizim adam!
+296	B	Komuta kademesinin sahada neler olduğundan haberi yok.
+297	A	Savaşırken zorlanmayalım diye çok sert eğitim yapıyoruz.
+304	B	O araba sınırına kadar ayarlanmış.
+305	A	Ruhsatlar için seninle yarışırım.
+311	B	Depon bitiyor, hemen pite gir!
+317	NEW	Şikandan geçişin kusursuzdu.
+325	A	Pole pozisyonu çaylağın!
+326	B	Son turda yetişiyor.
+328	A	Son virajda baş başa gidiyoruz.
+331	B	Sürücümüz motoru patlayınca yarıştan çekildi.
+350	NEW	Top orada, müdahale et!
+351	A	Ne gol! Stadyum yerinden oynuyor!
+359	B	Devreyi altı farkla önde kapatıyor ev sahibi.
+360	B	Tertemiz sayı!
+361	B	Yılın çaylağı, tartışmasız.
+362	B	Serbest atışlarda elin titremesin.
+366	B	Savunmanı sıkı tut ve iplerden uzak dur.
+368	B	Meydan okuyan, hakem kararıyla kemeri aldı.
+369	B	O sol kroşe ansızın geldi!
+371	B	Fırsatı yakalayana kadar on yıl alt liglerde oynadım.
+372	A	Favori değil ama yüreği var.
+374	NEW	Özensiz oyunundan sonra antrenör onu yedeğe aldı.
+375	A	Play-off'a kalmak için hepsini kazanmamız lazım.
+377	B	Transfer süresi yarın doluyor ve herkes gergin.
+383	B	Pas ver, topu tek başına götürme!
+385	NEW	Yarış son ana kadar çekişmeli sürecek.
+387	B	Son tur, elinden gelen her şeyi yap!
+393	B	Sonuna kadar gitme zamanı.
+398	NEW	Yarın adamlarım sana uğrayacak.
+403	B	Sana dikkat çekmemeni söylemiştim.
+414	B	Yine polisin elinden kaydı.
+423	A	Lokantaya girdi ve hiçbir şey olmamış gibi kahve söyledi.
+434	B	Karanlık çöküyor, bu sokaklar bizim.
+442	B	Tren istasyonunda çalışan bir yankesici.
+476	B	Camı kır ve kaptığın her şeyi al.
+499	A	Elebaşı cezasız kurtuldu.
+506	A	Bu işe boynuna kadar battın.
+507	NEW	Yozlaşmış polis görmezden geldi.
+508	A	Zahmetine değmesini sağlarım.
+509	B	Hırsızlar arasında bile verilen söz sözdür.
+510	B	Fazla biliyor, sağ bırakılamaz.
+511	B	Bu hafta bizi soymaya çalışan üçüncü kişi bu.
+515	A	Eksik paranın farkına varmayacağımı mı sandın?
+530	B	Gerekirse burayı yerle bir ederiz.
+532	B	Kurye gelmedi ve patron öfkeden deliriyor.
+534	B	Bavul dolusu parayla ülkeden kaçtı.
+539	NEW	Bu işte bir tuhaflık var.
+540	B	O anlaşmaya yanaşmazdım bile.
+541	B	Biliyorsun, her zaman serseri değildi.
+548	NEW	Takviye geldi.
+553	A	Toparlanın, albay geliyor.
+554	B	Emriniz, yerine nöbetçi gelene kadar bu mevziyi tutmak.
+569	B	Yeni bir gün, yeni bir savaş.

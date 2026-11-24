@@ -1,0 +1,66 @@
+Take out the guard at the gate. ||| Kapıdaki muhafızı etkisiz hale getir.
+Take out the generator to cut the lights. ||| Işıkları kesmek için jeneratörü devre dışı bırak.
+Take out the patrol without raising the alarm. ||| Alarmı çaldırmadan devriyeyi temizle.
+Clear the building of enemies. ||| Binayı düşmanlardan temizle.
+Secure the perimeter before the convoy arrives. ||| Konvoy gelmeden çevreyi güvene al.
+Hold this position until reinforcements arrive. ||| Takviye gelene kadar bu noktayı koru.
+Defend the generator for three minutes. ||| Jeneratörü üç dakika boyunca savun.
+Escort the courier to the safe house. ||| Kuryeyi sığınağa kadar götür.
+Protect the witness at all costs. ||| Tanığı ne pahasına olursa olsun koru.
+Follow the truck without being seen. ||| Kamyonu fark edilmeden takip et.
+Tail the suspect to his hideout. ||| Şüpheliyi gizlendiği yere kadar izle.
+Find the key hidden in the old library. ||| Eski kütüphanede saklı anahtarı bul.
+Search the room for clues. ||| Odada ipucu ara.
+Check the bodies for useful items. ||| Cesetlerde işe yarar eşya var mı diye bak.
+Collect five herbs from the forest. ||| Ormandan beş şifalı ot topla.
+Gather enough wood to repair the bridge. ||| Köprüyü onarmak için yeterince odun topla.
+Bring the medicine back to the village. ||| İlacı köye geri getir.
+Talk to the blacksmith about the broken sword. ||| Kırık kılıç için demirciyle konuş.
+Speak with the innkeeper to learn about the missing girl. ||| Kayıp kız hakkında bilgi almak için hancıyla konuş.
+Ask around town for anyone who saw the thief. ||| Hırsızı gören var mı diye kasabada sor.
+Get to the helicopter before it leaves. ||| Helikopter kalkmadan ona ulaş.
+Escape the city before the police close the bridges. ||| Polis köprüleri kapatmadan şehirden kaç.
+Lose the cops in the back streets. ||| Polisleri arka sokaklarda atlat.
+Shake off your pursuers. ||| Peşindekilerden kurtul.
+Steal the prototype from the lab. ||| Prototipi laboratuvardan çal.
+Disable the alarm system. ||| Alarm sistemini devre dışı bırak.
+Cut the power to the east wing. ||| Doğu kanadının elektriğini kes.
+Defuse the bomb before it explodes. ||| Bombayı patlamadan etkisiz hale getir.
+Burn the enemy camp to the ground. ||| Düşman kampını yerle bir et.
+Blow up the fuel depot. ||| Yakıt deposunu havaya uçur.
+Rescue the hostages from the bank. ||| Rehineleri bankadan kurtar.
+Free the prisoners from the cells. ||| Mahpusları hücrelerden çıkar.
+Don't let the target get away. ||| Hedefin kaçmasına izin verme.
+Do not alert the guards. ||| Muhafızları uyandırma.
+Stay out of sight until the signal. ||| Sinyale kadar gözden uzak dur.
+Avoid the main road. It's being watched. ||| Ana yoldan kaçın. Gözetim altında.
+Stay close to the wall and keep moving. ||| Duvara yakın dur ve hareket etmeye devam et.
+Wait for my signal before you move in. ||| İçeri girmeden önce işaretimi bekle.
+Use the rope to climb to the ledge. ||| Çıkıntıya tırmanmak için ipi kullan.
+Press the button on the control panel. ||| Kontrol panelindeki düğmeye bas.
+Open the chest to claim your reward. ||| Ödülünü almak için sandığı aç.
+Equip the shield before entering the arena. ||| Arenaya girmeden önce kalkanı kuşan.
+Craft a healing potion at the workbench. ||| Çalışma masasında bir iyileştirme iksiri üret.
+Upgrade your weapon at the forge. ||| Silahını demirhanede geliştir.
+Repair the radio tower to restore the signal. ||| Sinyali geri getirmek için telsiz kulesini onar.
+Refuel the generator. ||| Jeneratöre yakıt koy.
+Tame the wild horse. ||| Yabani atı evcilleştir.
+Hunt down the beast terrorizing the village. ||| Köyü dehşete düşüren canavarı avla.
+Survive until dawn. ||| Şafağa kadar hayatta kal.
+Defeat the captain to end the siege. ||| Kuşatmayı bitirmek için kaptanı yen.
+Finish the delivery in under ten minutes. ||| Teslimatı on dakikadan kısa sürede tamamla.
+Chase down the getaway car. ||| Kaçış arabasını kovala.
+Park the car in the marked spot. ||| Arabayı işaretli yere park et.
+Find a new ride. This one's too hot. ||| Yeni bir araba bul. Bu fazla dikkat çekiyor.
+Mission accomplished. Return to base. ||| Görev tamamlandı. Üsse dön.
+Objective updated: find the exit. ||| Görev güncellendi: çıkışı bul.
+New objective: reach the lighthouse. ||| Yeni görev: deniz fenerine ulaş.
+Optional objective: stay undetected. ||| İsteğe bağlı görev: fark edilme.
+Side quest started: The Lost Heirloom. ||| Yan görev başladı: Kayıp Yadigâr.
+Quest completed: The Merchant's Debt. ||| Görev tamamlandı: Tüccarın Borcu.
+Bonus objective completed. ||| Bonus görev tamamlandı.
+Mission failed. The hostage was killed. ||| Görev başarısız. Rehine öldürüldü.
+You were spotted. Mission failed. ||| Fark edildin. Görev başarısız.
+Press and hold to reload. ||| Doldurmak için basılı tut.
+Hold to sprint. ||| Koşmak için basılı tut.
+Press Space to jump. ||| Zıplamak için Boşluk'a bas.

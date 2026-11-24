@@ -1,0 +1,100 @@
+Good evening, welcome. ||| İyi akşamlar, hoş geldiniz.
+Hello there. ||| Merhaba.
+Hey, you! ||| Hey, sen!
+Hi, how are you? ||| Selam, nasılsın?
+Morning, boss. ||| Günaydın, patron.
+Nice weather today, isn't it? ||| Bugün hava güzel, değil mi?
+Thanks for coming. ||| Geldiğin için teşekkürler.
+Thank you, kind stranger. ||| Teşekkürler, nazik yabancı.
+Thanks anyway. ||| Yine de teşekkürler.
+Many thanks. ||| Çok teşekkürler.
+I'm so sorry for your loss. ||| Kaybınız için çok üzgünüm.
+Sorry to bother you. ||| Rahatsız ettiğim için özür dilerim.
+I apologize for the delay. ||| Gecikme için özür dilerim.
+Please accept my apologies. ||| Lütfen özürlerimi kabul edin.
+I was wrong, and I'm sorry. ||| Yanılmışım, özür dilerim.
+What do you need? ||| Neye ihtiyacın var?
+What are you looking for? ||| Ne arıyorsun?
+What's in the box? ||| Kutunun içinde ne var?
+What's going on? ||| Neler oluyor?
+What do you mean? ||| Ne demek istiyorsun?
+How did you get in? ||| İçeri nasıl girdin?
+How many are there? ||| Kaç kişiler?
+How far is it? ||| Ne kadar uzakta?
+Where is everyone? ||| Herkes nerede?
+Where are we going? ||| Nereye gidiyoruz?
+Where does this road lead? ||| Bu yol nereye çıkıyor?
+Who's in charge here? ||| Burada sorumlu kim?
+Who's there? ||| Kim o?
+Whose coat is this? ||| Bu kimin paltosu?
+Which one do you want? ||| Hangisini istiyorsun?
+Is this seat taken? ||| Bu yer dolu mu?
+Is he coming? ||| O geliyor mu?
+Is dinner ready yet? ||| Akşam yemeği hazır mı?
+Is there a doctor here? ||| Burada doktor var mı?
+Are they friendly? ||| Dost canlılar mı?
+Are you coming with us? ||| Bizimle geliyor musun?
+Are you sure about this? ||| Bundan emin misin?
+Do you know him? ||| Onu tanıyor musun?
+Do you hear that? ||| Bunu duyuyor musun?
+Do you speak English? ||| İngilizce konuşuyor musun?
+Can I help you? ||| Yardımcı olabilir miyim?
+Can we talk? ||| Konuşabilir miyiz?
+Can you hear me now? ||| Şimdi beni duyuyor musun?
+Can you show me the way? ||| Bana yolu gösterebilir misin?
+Could you speak more slowly? ||| Daha yavaş konuşabilir misin?
+Could I have some water? ||| Biraz su alabilir miyim?
+Would you like to sit? ||| Oturmak ister misin?
+Will you be staying long? ||| Uzun süre kalacak mısın?
+Shall we begin? ||| Başlayalım mı?
+Should we wait for them? ||| Onları bekleyelim mi?
+Is it far from here? ||| Buradan uzak mı?
+Stop right there. ||| Tam orada dur.
+Don't go in there. ||| Oraya girme.
+Don't touch that. ||| Ona dokunma.
+Don't look down. ||| Aşağı bakma.
+Don't be afraid. ||| Korkma.
+Don't wait for me. ||| Beni bekleme.
+Don't say a word. ||| Tek kelime etme.
+Don't do that again. ||| Bunu bir daha yapma.
+Don't leave me here. ||| Beni burada bırakma.
+Don't give up. ||| Pes etme.
+Please don't go. ||| Lütfen gitme.
+Never mind that now. ||| Şimdi onu bırak.
+Keep going. ||| Devam et.
+Keep an eye on the door. ||| Kapıya göz kulak ol.
+Hurry up! ||| Acele et!
+Slow down. ||| Yavaşla.
+Hang on! ||| Tutun!
+Hold the line. ||| Hattı koruyun.
+Hold this for me. ||| Bunu benim için tut.
+Get back! ||| Geri çekil!
+Get in the car. ||| Arabaya bin.
+Get away from the window. ||| Pencereden uzaklaş.
+Open the gate! ||| Kapıyı açın!
+Close the door behind you. ||| Arkandan kapıyı kapat.
+Pick it up. ||| Onu al.
+Put it down. ||| Onu yere bırak.
+Throw me the rope. ||| Halatı at bana.
+Light the torch. ||| Meşaleyi yak.
+Check the map. ||| Haritaya bak.
+Take the left path. ||| Soldaki yolu tut.
+Go around the back. ||| Arkadan dolan.
+Climb up here. ||| Buraya tırman.
+Jump! ||| Atla!
+Swim! ||| Yüz!
+Go ahead. ||| Buyur, geç.
+Go on, I'll catch up. ||| Sen git, ben yetişirim.
+Over there, by the tree! ||| Şurada, ağacın yanında!
+Up there! ||| Yukarıda!
+Down here! ||| Aşağıda!
+On your left! ||| Solunda!
+On your right! ||| Sağında!
+Incoming! ||| Geliyorlar!
+They're coming! ||| Geliyorlar!
+He's down. ||| Düştü.
+I got him. ||| Onu vurdum.
+One more to go. ||| Bir tane kaldı.
+Contact! ||| Temas var!
+Sniper! ||| Keskin nişancı!
+Switching weapons. ||| Silah değiştiriyorum.

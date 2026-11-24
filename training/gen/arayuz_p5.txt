@@ -1,0 +1,106 @@
+Press RT to accelerate. ||| Hızlanmak için RT'ye bas.
+Press LB to brake. ||| Fren yapmak için LB'ye bas.
+Release to fire. ||| Ateş etmek için bırak.
+Press Right Mouse Button to aim down sights. ||| Nişangâhtan bakmak için sağ fare tuşuna bas.
+Use the left stick to move. ||| Hareket etmek için sol çubuğu kullan.
+Use WASD to move and the mouse to look around. ||| Hareket etmek için WASD'yi, etrafa bakmak için fareyi kullan.
+Press the D-pad to use quick items. ||| Hızlı eşyaları kullanmak için yön tuşlarına bas.
+Mash X to break free! ||| Kurtulmak için X'e art arda bas!
+Time your block just right to parry. ||| Karşılık vermek için savunmanı tam zamanında yap.
+Hit the button when the bar is in the green zone. ||| Çubuk yeşil bölgedeyken düğmeye bas.
+Stay out of the red zone. ||| Kırmızı bölgenin dışında kal.
+Watch your step. ||| Adımlarına dikkat et.
+Careful, the floor is unstable. ||| Dikkat, zemin sağlam değil.
+Enemies drop loot when defeated. ||| Düşmanlar yenildiğinde ganimet bırakır.
+Tip: Use the environment to your advantage. ||| İpucu: Çevreyi kendi lehine kullan.
+Tip: Save before big fights. ||| İpucu: Büyük savaşlardan önce kaydet.
+Tip: Press and hold the button for a stronger attack. ||| İpucu: Daha güçlü bir saldırı için düğmeye basılı tut.
+Tip: Allies can be given orders from the radial menu. ||| İpucu: Müttefiklere daire menüden emir verebilirsin.
+Tip: Don't forget to upgrade your armor. ||| İpucu: Zırhını geliştirmeyi unutma.
+Did you know? Crows can see in the dark. ||| Biliyor muydun? Kargalar karanlıkta görebilir.
+Hint: Look for loose bricks. ||| İpucu: Gevşek tuğlalara bak.
+Hint: The code is hidden somewhere in the library. ||| İpucu: Şifre kütüphanenin bir yerinde saklı.
+Puzzle solved. ||| Bulmaca çözüldü.
+That didn't work. Try something else. ||| Bu işe yaramadı. Başka bir şey dene.
+Nothing happens. ||| Hiçbir şey olmuyor.
+You can't use that here. ||| Bunu burada kullanamazsın.
+You need a crowbar. ||| Bir levyeye ihtiyacın var.
+It's too heavy to move. ||| Hareket ettirmek için fazla ağır.
+You can't do that right now. ||| Şu an bunu yapamazsın.
+Not available in this mode. ||| Bu modda kullanılamıyor.
+This feature requires an internet connection. ||| Bu özellik internet bağlantısı gerektiriyor.
+Waiting for response... ||| Yanıt bekleniyor...
+Request timed out. ||| İstek zaman aşımına uğradı.
+Retry ||| Tekrar dene
+Retry connection? ||| Bağlantı yeniden denensin mi?
+Check your internet connection and try again. ||| İnternet bağlantını kontrol edip tekrar dene.
+Sign in to continue. ||| Devam etmek için giriş yap.
+Sign Out ||| Çıkış yap
+Create account ||| Hesap oluştur
+Username ||| Kullanıcı adı
+Password ||| Şifre
+Forgot your password? ||| Şifreni mi unuttun?
+Remember me ||| Beni hatırla
+Profile ||| Profil
+Friends ||| Arkadaşlar
+Add friend ||| Arkadaş ekle
+Online ||| Çevrimiçi
+Offline ||| Çevrimdışı
+Away ||| Uzakta
+Do not disturb ||| Rahatsız etme
+Invisible ||| Görünmez
+Playing: Dubzar ||| Oynuyor: Dubzar
+Invite sent. ||| Davet gönderildi.
+Invitation declined. ||| Davet reddedildi.
+Notifications ||| Bildirimler
+Mark all as read ||| Tümünü okundu say
+No new notifications. ||| Yeni bildirim yok.
+Mail ||| Posta
+Inbox ||| Gelen kutusu
+You have 3 unread messages. ||| 3 okunmamış mesajın var.
+Settings ||| Ayarlar
+Controls ||| Kontroller
+Audio ||| Ses
+Video ||| Görüntü
+Gameplay ||| Oynanış
+Accessibility ||| Erişilebilirlik
+Network ||| Ağ
+Privacy ||| Gizlilik
+Help ||| Yardım
+About ||| Hakkında
+Version 1.2.4 ||| Sürüm 1.2.4
+Check for updates ||| Güncellemeleri denetle
+An update is available. ||| Bir güncelleme mevcut.
+Update and restart ||| Güncelle ve yeniden başlat
+Later ||| Daha sonra
+Don't show this again ||| Bunu bir daha gösterme
+Close ||| Kapat
+Next ||| Sonraki
+Previous ||| Önceki
+Select ||| Seç
+Done ||| Bitti
+Skip ||| Geç
+Save ||| Kaydet
+Save and Exit ||| Kaydet ve çık
+Exit without saving ||| Kaydetmeden çık
+Quick Save ||| Hızlı kayıt
+Quick Load ||| Hızlı yükle
+Reload last save ||| Son kaydı yeniden yükle
+Replay ||| Tekrar oyna
+Play Again ||| Yeniden oyna
+Next Level ||| Sonraki seviye
+Main Menu ||| Ana menü
+Press START ||| START'a bas
+Press START to begin. ||| Başlamak için START'a bas.
+Tap to start ||| Başlamak için dokun
+Tap to continue ||| Devam etmek için dokun
+Swipe up to jump. ||| Zıplamak için yukarı kaydır.
+Pinch to zoom. ||| Yakınlaştırmak için iki parmağını birleştir.
+Tilt your device to steer. ||| Direksiyonu çevirmek için cihazını yatır.
+Watch an ad to get a free revive. ||| Ücretsiz yeniden doğmak için bir reklam izle.
+Watch an ad to double your reward. ||| Ödülünü ikiye katlamak için bir reklam izle.
+Energy: 3/5 ||| Enerji: 3/5
+Next energy in 12:40 ||| Sonraki enerji: 12:40
+Out of energy. ||| Enerjin bitti.
+Chest opens in 3h 20m ||| Sandık 3 sa 20 dk sonra açılacak
+Speed up ||| Hızlandır

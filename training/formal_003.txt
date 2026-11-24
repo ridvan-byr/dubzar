@@ -1,0 +1,78 @@
+The senate has voted, and the decision is binding. ||| Senato oylamayı yaptı ve karar bağlayıcıdır.
+You are hereby ordered to surrender your weapons. ||| Silahlarınızı teslim etmeniz işbu belgeyle emredilmiştir.
+By the authority vested in me, I declare this meeting adjourned. ||| Bana verilen yetkiyle bu toplantının sona erdiğini ilan ediyorum.
+The accused will rise and face the court. ||| Sanık ayağa kalkıp mahkemeye dönsün.
+The court finds the defendant guilty on all counts. ||| Mahkeme sanığı tüm suçlamalardan suçlu bulmuştur.
+Your Majesty, the enemy has crossed the river. ||| Majesteleri, düşman nehri geçti.
+My lord, the gates have fallen. ||| Efendim, kapılar düştü.
+Forgive my intrusion, but the matter is urgent. ||| Müdahalemi bağışlayın, ama mesele acil.
+I beg your pardon, madam. I did not see you there. ||| Affedersiniz hanımefendi. Sizi orada görmedim.
+It is with great sorrow that I deliver this news. ||| Bu haberi büyük bir üzüntüyle iletiyorum.
+We are gathered here today to honor the fallen. ||| Bugün burada düşenleri anmak için toplandık.
+Let us bow our heads for those who gave their lives. ||| Canlarını verenler için başlarımızı eğelim.
+The kingdom mourns the loss of its beloved queen. ||| Krallık sevgili kraliçesinin kaybını yas tutuyor.
+Our armies march at dawn. ||| Ordularımız şafakta yürüyüşe geçiyor.
+The siege has lasted for three long months. ||| Kuşatma üç uzun ay sürdü.
+The walls will not hold much longer. ||| Surlar daha fazla dayanmayacak.
+Prepare the catapults. We attack at first light. ||| Mancınıkları hazırlayın. İlk ışıkta saldırıyoruz.
+Hold the line! Do not let them break through! ||| Hattı koruyun! Yarıp geçmelerine izin vermeyin!
+Archers, ready your bows! ||| Okçular, yaylarınızı hazırlayın!
+Sound the horn. The enemy approaches. ||| Boruyu çalın. Düşman yaklaşıyor.
+No man living has ever laid eyes on the treasure. ||| Hayatta olan hiç kimse hazineyi görmedi.
+Legend tells of a sword forged in dragon fire. ||| Efsane, ejderha ateşinde dövülmüş bir kılıcı anlatır.
+It is said that the forest remembers every footstep. ||| Orman her ayak sesini hatırlarmış, derler.
+Few return from the Valley of Shadows. ||| Gölgeler Vadisi'nden geri dönen çok az kişi vardır.
+The ancient prophecy is about to be fulfilled. ||| Kadim kehanet gerçekleşmek üzere.
+Darkness will fall upon the land when the last seal breaks. ||| Son mühür kırıldığında diyarın üzerine karanlık çökecek.
+The gods have turned their backs on us. ||| Tanrılar bize sırtını döndü.
+Pray that the gods are merciful. ||| Tanrıların merhametli olması için dua edin.
+Swear on your honor that you will keep this secret. ||| Bu sırrı saklayacağına şerefin üzerine yemin et.
+I swear by all that I hold dear. ||| Değer verdiğim her şeye yemin ederim.
+You have my word as a knight. ||| Bir şövalye olarak sana söz veriyorum.
+Honor demands that we answer this insult. ||| Onur, bu hakarete karşılık vermemizi gerektiriyor.
+A true warrior never abandons his comrades. ||| Gerçek bir savaşçı yoldaşlarını asla terk etmez.
+Blood must be answered with blood. ||| Kanın karşılığı kanla ödenir.
+The price of betrayal is death. ||| İhanetin bedeli ölümdür.
+Traitors will be dealt with swiftly. ||| Hainlere hızla gereken yapılacak.
+You will answer for your crimes. ||| Suçlarının hesabını vereceksin.
+Justice will be served, one way or another. ||| Adalet er ya da geç yerini bulacak.
+The council demands your immediate presence. ||| Konsey derhal huzurunuzda bulunmanızı talep ediyor.
+You are requested to remain calm and follow instructions. ||| Sakin kalmanız ve talimatlara uymanız rica olunur.
+All personnel must evacuate the building immediately. ||| Tüm personel binayı derhal tahliye etmelidir.
+Attention all crew members: this is not a drill. ||| Tüm mürettebatın dikkatine: bu bir tatbikat değildir.
+Emergency protocols have been activated. ||| Acil durum protokolleri etkinleştirildi.
+Life support is failing on deck three. ||| Üçüncü güvertede yaşam destek sistemi çöküyor.
+We are losing power to the main engines. ||| Ana motorlara giden güç azalıyor.
+Shields are down to ten percent. ||| Kalkanlar yüzde ona düştü.
+Incoming transmission from an unknown source. ||| Bilinmeyen bir kaynaktan gelen iletim var.
+The anomaly is growing faster than expected. ||| Anomali beklenenden daha hızlı büyüyor.
+Scans indicate no signs of life on the surface. ||| Taramalar yüzeyde yaşam belirtisi olmadığını gösteriyor.
+The colony has been out of contact for six months. ||| Koloniyle altı aydır iletişim kurulamıyor.
+Subject exhibits unusual levels of aggression. ||| Denek olağandışı düzeyde saldırganlık sergiliyor.
+The specimen escaped from containment last night. ||| Numune dün gece muhafazadan kaçtı.
+Authorization has been granted for lethal force. ||| Ölümcül güç kullanımı için yetki verildi.
+This facility is restricted to authorized personnel only. ||| Bu tesise yalnızca yetkili personel girebilir.
+Access denied. Please present your credentials. ||| Erişim reddedildi. Lütfen kimlik bilgilerinizi gösterin.
+Your clearance level is insufficient. ||| Yetki düzeyiniz yetersiz.
+The vault is sealed with a triple lock. ||| Kasa üçlü kilitle mühürlü.
+The documents were forged by a skilled hand. ||| Belgeler usta bir elle sahtelenmiş.
+The investigation has uncovered a vast conspiracy. ||| Soruşturma geniş çaplı bir komployu ortaya çıkardı.
+We have reason to believe the witness is lying. ||| Tanığın yalan söylediğine inanmak için nedenimiz var.
+The suspect was last seen heading east. ||| Şüpheli en son doğuya doğru giderken görüldü.
+Nobody leaves until we find the culprit. ||| Suçluyu bulana kadar kimse ayrılamaz.
+The evidence points to someone within the household. ||| Deliller hane halkından birini işaret ediyor.
+I regret to say that the patient did not survive. ||| Üzülerek söylemeliyim ki hasta hayatta kalamadı.
+Please accept our deepest condolences. ||| Lütfen en derin taziyelerimizi kabul edin.
+We deeply appreciate your cooperation. ||| İş birliğiniz için çok teşekkür ederiz.
+Thank you for your service. The nation is in your debt. ||| Hizmetiniz için teşekkürler. Ulus size borçlu.
+You have served this realm well. ||| Bu diyara iyi hizmet ettin.
+Rise, Sir Aldric, knight of the realm. ||| Kalk, Sör Aldric, krallığın şövalyesi.
+Your courage has not gone unnoticed. ||| Cesaretiniz gözden kaçmadı.
+We shall not forget this sacrifice. ||| Bu fedakârlığı unutmayacağız.
+The festival begins at sundown. All are welcome. ||| Şenlik gün batımında başlıyor. Herkes davetlidir.
+Please, sit. You are our honored guest. ||| Lütfen, oturun. Siz bizim şerefli misafirimizsiniz.
+Our humble village is at your disposal. ||| Mütevazı köyümüz emrinizde.
+It would be an honor to have you at our table. ||| Sizi sofamızda ağırlamak bir onur olur.
+May fortune smile upon your journey. ||| Yolculuğunuzda talih size gülsün.
+Safe travels, my friend. May we meet again. ||| İyi yolculuklar dostum. Tekrar buluşalım.
+Farewell. Until the stars align once more. ||| Elveda. Yıldızlar yeniden hizalanana dek.
