@@ -8,8 +8,14 @@ from pathlib import Path
 HERE = Path(__file__).parent
 FINAL = "--final" in sys.argv                                  # the 200-line final check: final.html, final_results.json
 HYBRID = "--hybrid" in sys.argv                                # the second model's output on the routed lines
-PAGE = HERE / ("hybrid.html" if HYBRID else "final.html" if FINAL else "index.html")
-RESULTS = HERE / ("hybrid_results.json" if HYBRID else "final_results.json" if FINAL else "results.json")
+V3 = "--v3" in sys.argv
+V4 = "--v4" in sys.argv
+HO = "--holdout" in sys.argv
+HG = "--holdout-gemma" in sys.argv
+SP = "--spot" in sys.argv
+V2 = "--v2" in sys.argv                                        # the fine-tuned model's output on the lines that changed
+PAGE = HERE / ("spot.html" if SP else "holdout_gemma.html" if HG else "holdout_v4.html" if HO else "v4.html" if V4 else "v3.html" if V3 else "v2.html" if V2 else "hybrid.html" if HYBRID else "final.html" if FINAL else "index.html")
+RESULTS = HERE / ("spot_results.json" if SP else "holdout_gemma_results.json" if HG else "holdout_v4_results.json" if HO else "v4_results.json" if V4 else "v3_results.json" if V3 else "v2_results.json" if V2 else "hybrid_results.json" if HYBRID else "final_results.json" if FINAL else "results.json")
 
 
 class Handler(BaseHTTPRequestHandler):

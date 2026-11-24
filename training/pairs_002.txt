@@ -101,11 +101,9 @@ We don't have enough to hold him. ||| Onu tutmak için yeterli delilimiz yok.
 The case was closed years ago. ||| Dava yıllar önce kapandı.
 Take it from the top. ||| Baştan anlat.
 Another day, another dollar. ||| Her gün aynı şey, yine bir gün daha.
-It's not what it looks like. ||| Göründüğü gibi değil.
 You've got some nerve showing up here. ||| Buraya gelmeye cüret etmişsin.
 I'm warning you for the last time. ||| Seni son kez uyarıyorum.
 You have no idea who you're dealing with. ||| Kiminle uğraştığını bilmiyorsun.
-I don't have time for this. ||| Bunun için vaktim yok.
 That's none of your concern. ||| Bu seni ilgilendirmez.
 Let's not do anything stupid. ||| Aptalca bir şey yapmayalım.
 Calm down. Nobody wants a fight. ||| Sakin ol. Kimse kavga istemiyor.
@@ -134,7 +132,6 @@ He's in solitary for a month. ||| Bir aydır tecritte.
 Nobody escapes from this place. ||| Buradan kimse kaçamaz.
 We tunneled through the wall. ||| Duvardan tünel kazdık.
 The warden knows everything. ||| Müdür her şeyi biliyor.
-I've got a bad knee and a worse temper. ||| Dizim kötü, huyum daha da kötü.
 I used to be somebody. ||| Eskiden biriydim.
 Everybody has a price. ||| Herkesin bir fiyatı vardır.
 What's your price? ||| Senin fiyatın ne?
@@ -176,7 +173,6 @@ Slow down. There's a cop behind us. ||| Yavaşla. Arkamızda bir polis var.
 He ran the red light. ||| Kırmızı ışıkta geçti.
 We lost him in the tunnel. ||| Onu tünelde kaybettik.
 Don't stop for anything. ||| Hiçbir şey için durma.
-The bridge is out. ||| Köprü yıkılmış.
 We're out of options. ||| Seçeneklerimiz tükendi.
 It's too quiet. I don't like it. ||| Fazla sessiz. Hoşuma gitmiyor.
 Something's not right here. ||| Burada bir şeyler ters.
@@ -202,7 +198,6 @@ It's a dead end. ||| Çıkmaz sokak bu.
 We're wasting time. ||| Vakit kaybediyoruz.
 Let's get moving. ||| Hadi yola çıkalım.
 This is going to be a long night. ||| Bu uzun bir gece olacak.
-Get some rest. You look terrible. ||| Biraz dinlen. Berbat görünüyorsun.
 I haven't slept in two days. ||| İki gündür uyumadım.
 I could use a coffee. ||| Bir kahve iyi giderdi.
 The coffee here is awful. ||| Buranın kahvesi berbat.
@@ -226,7 +221,6 @@ Where am I? What happened? ||| Neredeyim? Ne oldu?
 You were out for hours. ||| Saatlerce baygındın.
 My head is killing me. ||| Başım çatlıyor.
 Don't move. You're hurt. ||| Kıpırdama. Yaralısın.
-It's just a scratch. ||| Sadece bir sıyrık.
 You're bleeding. ||| Kanıyorsun.
 Hold this against the wound. ||| Bunu yaranın üzerine bastır.
 I need a doctor. ||| Bir doktora ihtiyacım var.

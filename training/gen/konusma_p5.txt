@@ -1,0 +1,102 @@
+I'm low on health! ||| Canım azaldı!
+I need healing. ||| İyileşmem lazım.
+Healing you now. ||| Seni iyileştiriyorum.
+You're going to be fine. ||| İyi olacaksın.
+You did well. ||| İyi iş çıkardın.
+That's the spirit! ||| İşte bu!
+Good one! ||| Güzel!
+Not bad. ||| Fena değil.
+Impressive. ||| Etkileyici.
+Wow, look at that! ||| Vay, şuna bak!
+Oh no. ||| Eyvah.
+Oh, come on! ||| Yapma ya!
+Ugh, not again. ||| Off, yine mi.
+Finally! ||| Sonunda!
+At last. ||| Nihayet.
+What a mess. ||| Ne karmaşa.
+What a surprise! ||| Ne sürpriz!
+What a beautiful view. ||| Ne güzel bir manzara.
+How strange. ||| Ne tuhaf.
+How terrible! ||| Ne korkunç!
+Poor thing. ||| Zavallıcık.
+Thank the gods. ||| Tanrılara şükür.
+Oh my gosh, you're alive! ||| Aman Tanrım, hayattasın!
+Is that really you? ||| Gerçekten sen misin?
+I can't believe it. ||| İnanamıyorum.
+You scared me. ||| Beni korkuttun.
+You're late. ||| Geç kaldın.
+You look tired. ||| Yorgun görünüyorsun.
+You look great today. ||| Bugün harika görünüyorsun.
+You haven't changed a bit. ||| Hiç değişmemişsin.
+You can do this. ||| Bunu yapabilirsin.
+You'll need a key for that door. ||| O kapı için bir anahtara ihtiyacın olacak.
+You can't go in there without a pass. ||| Geçiş izni olmadan oraya giremezsin.
+You must be the new guy. ||| Sen yeni gelen olmalısın.
+You have a visitor. ||| Bir ziyaretçin var.
+You're under arrest. ||| Tutuklusun.
+You're free to go. ||| Gidebilirsin.
+You're not allowed in here. ||| Buraya girmen yasak.
+You're in my seat. ||| Benim yerimdesin.
+I'm not going anywhere. ||| Hiçbir yere gitmiyorum.
+I'm not afraid of you. ||| Senden korkmuyorum.
+I'm just looking. ||| Sadece bakıyorum.
+I'm busy right now. ||| Şu an meşgulüm.
+I'm listening. ||| Dinliyorum.
+I'm with you. ||| Seninleyim.
+I'm on it. ||| Hallediyorum.
+I'm done here. ||| Burada işim bitti.
+I'm ready. ||| Hazırım.
+I'm lost. ||| Kayboldum.
+I'm back. ||| Döndüm.
+I'm home! ||| Eve geldim!
+I got it. ||| Anladım.
+I see. ||| Anlıyorum.
+I know. ||| Biliyorum.
+I think I'm lost. ||| Galiba kayboldum.
+I think we should go back. ||| Bence geri dönmeliyiz.
+I have an idea. ||| Bir fikrim var.
+I have no choice. ||| Başka çarem yok.
+I have to go now. ||| Şimdi gitmem lazım.
+I want to go home. ||| Eve gitmek istiyorum.
+I need some air. ||| Biraz hava almam lazım.
+I need a drink. ||| Bir içkiye ihtiyacım var.
+I need more time. ||| Daha fazla zamana ihtiyacım var.
+I need your help. ||| Yardımına ihtiyacım var.
+I wish I could help. ||| Keşke yardım edebilsem.
+I can help you with that. ||| Bu konuda sana yardım edebilirim.
+I can't do this alone. ||| Bunu tek başıma yapamam.
+I can't open it. ||| Onu açamıyorum.
+I can't find it anywhere. ||| Onu hiçbir yerde bulamıyorum.
+I didn't do anything. ||| Ben bir şey yapmadım.
+I didn't hear anything. ||| Hiçbir şey duymadım.
+I didn't see anyone. ||| Kimseyi görmedim.
+I don't want any trouble. ||| Başımı belaya sokmak istemiyorum.
+I don't remember. ||| Hatırlamıyorum.
+I don't feel well. ||| Kendimi iyi hissetmiyorum.
+I don't like this place. ||| Bu yeri sevmedim.
+I don't trust him. ||| Ona güvenmiyorum.
+I love this song. ||| Bu şarkıyı çok seviyorum.
+I like your hat. ||| Şapkanı beğendim.
+I miss my family. ||| Ailemi özlüyorum.
+I lost my wallet. ||| Cüzdanımı kaybettim.
+I forgot. ||| Unuttum.
+I'll go first. ||| Önce ben gideyim.
+I'll check it out. ||| Bir bakacağım.
+I'll be right back. ||| Hemen döneceğim.
+I'll handle it. ||| Ben hallederim.
+I'll do my best. ||| Elimden geleni yapacağım.
+I'll cover the left side. ||| Sol tarafı ben tutuyorum.
+I'll take the first watch. ||| İlk nöbeti ben tutarım.
+Let's split up. ||| Ayrılalım.
+Let's try again. ||| Tekrar deneyelim.
+Let me help you up. ||| Kalkmana yardım edeyim.
+Let me see. ||| Bir bakayım.
+Let me through. ||| Geçmeme izin ver.
+Let go of me! ||| Bırak beni!
+Leave it to me. ||| Bunu bana bırak.
+Leave him alone. ||| Onu rahat bırak.
+Look, I'm trying to help. ||| Bak, yardım etmeye çalışıyorum.
+Listen, we don't have much time. ||| Dinle, fazla vaktimiz yok.
+Hey, wait up! ||| Hey, bekle!
+Sorry, I'm late. ||| Pardon, geciktim.
+Okay, let's do it. ||| Tamam, yapalım şunu.

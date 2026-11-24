@@ -1,0 +1,93 @@
+Got it, I'll be right there. ||| Anladım, hemen geliyorum.
+Hold on a second. ||| Bir saniye bekle.
+Watch your step. ||| Dikkatli bas.
+Thank you so much for your help. ||| Yardımın için çok teşekkür ederim.
+Where are you going? ||| Nereye gidiyorsun?
+Good morning, traveler. ||| Günaydın, yolcu.
+Stay behind me. ||| Arkamda kal.
+Are you hurt? ||| Yaralandın mı?
+Take cover! ||| Siperlere!
+Reloading! ||| Şarjör değiştiriyorum!
+Move, move, move! ||| Hadi, hadi, hadi!
+I need a medic here! ||| Burada bir sıhhiyeciye ihtiyacım var!
+Welcome to my shop. ||| Dükkanıma hoş geldin.
+What can I get for you? ||| Sana ne verebilirim?
+That will be 50 gold. ||| Tutarı 50 altın.
+Come back soon! ||| Yine bekleriz!
+Sorry, we're closed. ||| Üzgünüm, kapalıyız.
+Do you have any more of these? ||| Bunlardan daha var mı?
+I'll take it. ||| Alıyorum.
+No, thanks. ||| Hayır, teşekkürler.
+Let me think about it. ||| Bir düşüneyim.
+You're welcome. ||| Rica ederim.
+I don't know. ||| Bilmiyorum.
+I can't hear you. ||| Seni duyamıyorum.
+Can you repeat that? ||| Tekrar edebilir misin?
+What did you say? ||| Ne dedin?
+Please, wait for me. ||| Lütfen, beni bekle.
+Yes, sir. ||| Emredersiniz.
+Right away, ma'am. ||| Hemen, hanımefendi.
+Nice to meet you. ||| Tanıştığımıza memnun oldum.
+How have you been? ||| Nasılsın, neler yapıyorsun?
+Long time no see. ||| Uzun zamandır görüşemedik.
+Good night, everyone. ||| Herkese iyi geceler.
+Sweet dreams. ||| Tatlı rüyalar.
+Take care of yourself. ||| Kendine iyi bak.
+Be careful out there. ||| Dışarıda dikkatli ol.
+I'm on my way. ||| Yoldayım.
+We're almost there. ||| Neredeyse vardık.
+Are we there yet? ||| Geldik mi?
+Duck! ||| Eğil!
+Run! ||| Kaç!
+Don't move. ||| Kıpırdama.
+Drop your weapon! ||| Silahını bırak!
+Put your hands up. ||| Ellerini kaldır.
+Who goes there? ||| Kim var orada?
+Halt! ||| Dur!
+Identify yourself. ||| Kimliğini göster.
+Stand down. ||| Geri çekil.
+Fire at will! ||| Serbest ateş!
+Man down! ||| Adam yaralandı!
+Grenade! ||| El bombası!
+Reinforcements are on the way. ||| Takviye birlikler yolda.
+Target eliminated. ||| Hedef etkisiz hale getirildi.
+Area clear. ||| Bölge temiz.
+All clear. ||| Her taraf temiz.
+Nothing here. ||| Burada hiçbir şey yok.
+I heard something. ||| Bir ses duydum.
+Did you see that? ||| Bunu gördün mü?
+What was that noise? ||| O ses neydi?
+Is anyone there? ||| Orada kimse var mı?
+Hello? Can anyone hear me? ||| Alo? Beni duyan var mı?
+Help me, please! ||| Lütfen, yardım edin!
+Thank goodness you're here. ||| İyi ki geldin.
+Thanks for saving me. ||| Beni kurtardığın için sağ ol.
+I owe you one. ||| Sana borçluyum.
+I appreciate it. ||| Minnettarım.
+No problem. ||| Sorun değil.
+Don't mention it. ||| Lafı bile olmaz.
+My pleasure. ||| Benim için zevkti.
+Excuse me, miss. ||| Pardon, bayan.
+Pardon me. ||| Affedersiniz.
+I beg your pardon? ||| Efendim, ne dediniz?
+Sorry about that. ||| Bunun için özür dilerim.
+It's my fault. ||| Benim hatam.
+Forgive me. ||| Beni affet.
+Never mind. ||| Boş ver.
+It's okay. ||| Önemli değil.
+Are you all right? ||| İyi misin?
+I'm fine. ||| İyiyim.
+I feel dizzy. ||| Başım dönüyor.
+I'm so tired. ||| Çok yorgunum.
+I'm hungry. ||| Acıktım.
+I'm thirsty. ||| Susadım.
+Let's rest for a while. ||| Biraz dinlenelim.
+Let's go. ||| Hadi gidelim.
+Come with me. ||| Benimle gel.
+This way, please. ||| Bu taraftan, lütfen.
+Ladies first. ||| Önce hanımlar.
+Ready when you are. ||| Sen hazır olunca ben de hazırım.
+Let me know when you're ready. ||| Hazır olunca haber ver.
+Here, take this. ||| Al, bunu al.
+Give me that. ||| Onu bana ver.
+Is this yours? ||| Bu senin mi?

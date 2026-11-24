@@ -1,0 +1,94 @@
+Listen up, this is the plan. ||| Dinle, plan şu.
+We go in quiet, we come out quiet. ||| Sessizce girip sessizce çıkacağız.
+The vault has two layers of security, so go slow. ||| Kasada iki kat güvenlik var, o yüzden yavaş git.
+I'm picking up movement on the thermal scanner. ||| Termal tarayıcıda hareket görüyorum.
+Two hostiles, forty meters, heading your way. ||| İki düşman, kırk metre, sana doğru geliyorlar.
+You're clear to engage. ||| Çatışmaya girmen için yeşil ışık yandı.
+Target neutralized. Proceed to the next waypoint. ||| Hedef etkisiz hale getirildi. Sıradaki noktaya ilerle.
+All units, converge on the east entrance. ||| Tüm birimler, doğu girişine toplansın.
+Base to Echo, do you copy? ||| Üs'ten Eko'ya, duyuyor musun?
+Loud and clear. Go ahead. ||| Gayet net. Devam et.
+Hold position. Reinforcements are two minutes out. ||| Pozisyonunu koru. Takviye iki dakika uzakta.
+Eagle has landed. Repeat, the eagle has landed. ||| Kartal indi. Tekrar ediyorum, kartal indi.
+Be advised, the bridge is heavily guarded. ||| Bilgin olsun, köprü ağır şekilde korunuyor.
+Extraction is compromised. Find another way out. ||| Tahliye tehlikede. Başka bir çıkış yolu bul.
+Chopper's inbound. Get to the landing zone. ||| Helikopter yolda. İniş bölgesine git.
+Pop smoke so we can see you. ||| Seni görebilmemiz için duman bombası at.
+Stay off the comms unless it's urgent. ||| Acil değilse telsizi meşgul etme.
+Keep it down, they'll hear us. ||| Sesini kıs, bizi duyacaklar.
+Keep your voice down and follow me. ||| Sesini alçalt ve beni takip et.
+I'll take the left, you take the right. ||| Ben soldan gidiyorum, sen sağdan git.
+You take point. I'll bring up the rear. ||| Sen önden git. Ben arkayı kollarım.
+We're sitting ducks out here. Move! ||| Burada açık hedefiz. Kımılda!
+Take the fall for me, and I'll make it worth your while. ||| Suçu benim yerime üstlen, sana bunun karşılığını veririm.
+Lie low for a few weeks, then come see me. ||| Birkaç hafta ortadan kaybol, sonra gel beni gör.
+Don't make waves while the inspectors are here. ||| Müfettişler buradayken ortalığı karıştırma.
+Cover your tracks so nobody can follow you. ||| Kimse seni izleyemesin diye izlerini sil.
+Don't leave any loose ends. ||| Arkada açık kalan hiçbir şey bırakma.
+Let him sweat for a while before you go in. ||| İçeri girmeden önce biraz terlemesine izin ver.
+Play along until we find out who's behind this. ||| Bunun arkasında kim var öğrenene kadar oyuna ayak uydur.
+Keep him talking while I work on the lock. ||| Ben kilitle uğraşırken onu konuştur.
+Pretend you didn't see anything. ||| Hiçbir şey görmemiş gibi davran.
+Get him to spill the beans. ||| Ağzındaki baklayı çıkarmasını sağla.
+Squeeze the thug for information. ||| Serseriyi sıkıştırıp bilgi al.
+Run a background check on everyone on the list. ||| Listedeki herkesin sabıka geçmişini araştır.
+Track the signal back to its source. ||| Sinyalin kaynağını bulana kadar izini sür.
+Search the office for anything suspicious. ||| Ofiste şüpheli bir şey var mı diye ara.
+Dust the glass for fingerprints. ||| Parmak izi için camı tozla.
+Go over the crime scene one more time. ||| Olay yerine bir kez daha bak.
+Interview the witnesses before they change their stories. ||| Tanıklar ifadelerini değiştirmeden önce onlarla görüş.
+Compare the handwriting on the two notes. ||| İki notun el yazısını karşılaştır.
+Check the footage from last night. ||| Dün geceki kamera kayıtlarına bak.
+Stake out the warehouse and see who shows up. ||| Depoyu gözetle ve kimin geldiğini gör.
+Bring in the suspect for questioning. ||| Şüpheliyi sorgulanmak üzere getir.
+Cuff him and read him his rights. ||| Kelepçele ve haklarını oku.
+Block off the street and keep the crowd back. ||| Sokağı kapat ve kalabalığı geride tut.
+Call it in and wait for the paramedics. ||| Bildir ve sağlık ekibini bekle.
+Take the second door on your right. ||| Sağındaki ikinci kapıdan gir.
+Head down to the cellar and bring me a bottle. ||| Mahzene in ve bana bir şişe getir.
+Make yourself at home, but don't touch anything. ||| Kendi evin gibi davran ama hiçbir şeye dokunma.
+Come back when you've got the money. ||| Parayı bulunca geri gel.
+Show me what you've got. ||| Neyin var göster bakalım.
+Take whatever you need from the shelf. ||| Raftan ihtiyacın olanı al.
+Fill your canteen at the well before you go. ||| Gitmeden önce matarani kuyudan doldur.
+Mind the gap. ||| Boşluğa dikkat.
+Mind your step; the floor is slippery. ||| Adımına dikkat et; zemin kaygan.
+Watch out for the rotten planks! ||| Çürük tahtalara dikkat et!
+Whatever you do, don't wake the dragon. ||| Ne yaparsan yap, ejderhayı uyandırma.
+Keep clear of the cliff edge. ||| Uçurum kenarından uzak dur.
+Stay on the path and you'll be fine. ||| Yoldan çıkma, sorun yaşamazsın.
+Take a left at the burnt tree. ||| Yanık ağaçtan sola dön.
+Climb up to the ridge and look for smoke. ||| Sırta tırman ve duman var mı diye bak.
+Cross the bridge before it collapses. ||| Köprü çökmeden karşıya geç.
+Take the lift to the top floor. ||| Üst kata asansörle çık.
+Swing across on the rope. ||| Halatla karşıya sallan.
+Roll under the closing door! ||| Kapanan kapının altından yuvarlan!
+Punch through the wall to reveal a secret room. ||| Gizli odayı ortaya çıkarmak için duvarı yumrukla.
+Shoot the weak point on its back. ||| Sırtındaki zayıf noktayı vur.
+Aim for the legs to slow it down. ||| Yavaşlatmak için bacaklarına nişan al.
+Wait for it to lunge, then strike. ||| Üzerine atılmasını bekle, sonra vur.
+Parry the blow and counter-attack. ||| Darbeyi savuştur ve karşı saldırıya geç.
+Stay on the move and keep your distance. ||| Hareket etmeye devam et ve mesafeni koru.
+Finish him! ||| Bitir onu!
+Rest at the shrine to recover your strength. ||| Gücünü toplamak için tapınakta dinlen.
+Take a moment to catch your breath. ||| Biraz soluklan.
+Rally the troops and prepare for the final push. ||| Askerleri topla ve son hamleye hazırlan.
+Meet me at the safehouse after dark. ||| Hava karardıktan sonra sığınakta benimle buluş.
+Bring what you can carry and leave the rest behind. ||| Taşıyabildiğini al, gerisini bırak.
+Don't touch the artifact with bare hands. ||| Eserle çıplak elle temas etme.
+Wipe your boots before you enter the temple. ||| Tapınağa girmeden önce çizmelerini sil.
+Take off your shoes at the door. ||| Kapıda ayakkabılarını çıkar.
+Show your pass to the guard at the checkpoint. ||| Kontrol noktasındaki muhafıza geçiş belgeni göster.
+Drive carefully; the roads are icy. ||| Dikkatli sür; yollar buz tutmuş.
+Make sure nobody's following you before you head home. ||| Eve gitmeden önce kimsenin seni takip etmediğinden emin ol.
+You'd better watch your back. ||| Arkana dikkat etsen iyi olur.
+Pack your bags; we're leaving tonight. ||| Bavullarını hazırla; bu gece gidiyoruz.
+Fire up the generator and wait for the lights. ||| Jeneratörü çalıştır ve ışıkları bekle.
+Shut down the reactor before it melts down. ||| Reaktör erimeden kapat.
+Flip the breaker to restore power. ||| Elektriği geri getirmek için sigortayı kaldır.
+Plug in the cable and wait for the signal. ||| Kabloyu tak ve sinyali bekle.
+Scan the QR code on the wall. ||| Duvardaki QR kodunu tara.
+Enter the four-digit code on the keypad. ||| Tuş takımına dört haneli kodu gir.
+Upload the virus and get out before they trace it. ||| Virüsü yükle ve izlerini sürmeden çık.
+Wait for the download to finish before you unplug. ||| Fişi çekmeden önce indirmenin bitmesini bekle.
+Don't let the timer hit zero. ||| Zamanlayıcının sıfıra düşmesine izin verme.

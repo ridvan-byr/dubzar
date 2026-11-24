@@ -1,0 +1,108 @@
+4	Don't try anything funny, wiseguy.	Sakın bir numara çevirmeye kalkma, şımarık herif.	Bana kafa tutmaya kalkma, ukala herif.	
+6	The accountant cooked the books for years before anyone noticed.	Muhasebeci yıllarca defterlerle oynadı ve kimse fark etmedi.	Muhasebeci, kimse fark etmeden yıllarca defterleri çarpıttı.	
+9	I'm not going back to prison, not ever.	Hapse geri dönmüyorum, asla.	Hapse bir daha dönmeyeceğim, asla.	
+11	You'll never take me alive, copper!	Beni asla sağ ele geçiremezsin, polis!	Beni sağ yakalayamazsın, polis!	
+14	Who tipped off the cops?	Polise ihbarı kim yaptı?	Polise kim haber verdi?	
+16	The heat's on, so lay low for a while.	Polis peşimizde, bir süre ortalıkta görünme.	Ortalık ısındı, bir süre ortadan kaybol.	
+21	The fuzz are crawling all over the block.	Polisler bütün sokağı sarmış durumda.	Mahallenin her yeri aşağılık polis kaynıyor.	
+25	They're going to throw the book at him.	Ona en ağır cezayı verecekler.	Bütün ağırlıklarıyla üstüne gidecekler.	
+26	Our fence will move the jewels by morning.	Çaldığımız malı alan adamımız sabaha kadar mücevherleri elden çıkarır.	Mal alıcımız mücevherleri sabaha kadar elden çıkarır.	
+30	Looks like the deal went south.	Görünüşe göre anlaşma suya düştü.	Anlaşma sanırım suya düştü.	
+32	Don't bite the hand that feeds you.	Seni besleyen ele ihanet etme.	Ekmek yediğin eli ısırma.	
+40	They're sending me to solitary again.	Beni yine hücreye atacaklar.	Beni yine tek kişilik hücreye gönderiyorlar.	
+44	Count the chips, the house always wins.	Fişleri say, kasa her zaman kazanır.	Fişleri say, kazanan hep kumarhanedir.	
+50	The pit boss is watching our table.	Salon müdürü masamızı izliyor.	Kumar masası şefi masamızı gözlüyor.	
+52	He cleaned me out in one hand.	Tek elde beni soyup soğana çevirdi.	Tek elde beni tüketti.	
+56	We cut the supply with baking soda.	Malı kabartma tozuyla kestik.	Malı yemek sodasıyla kestik.	
+59	The shipment arrives at the docks at midnight.	Sevkiyat gece yarısı limana geliyor.	Sevkiyat gece yarısı rıhtıma ulaşacak.	
+61	The deal's off unless I see the money first.	Önce parayı görmeden anlaşma yok.	Parayı önce görmezsem anlaşma iptal.	
+62	We bribed the customs officer to look the other way.	Gümrük memuruna rüşvet verip görmezden gelmesini sağladık.	Gümrük memuruna rüşvet verip gözünü yumdurduk.	
+66	The capo is not a patient man.	Capo sabırlı bir adam değil.	Kaporegime sabır namına bir şey yok.	
+70	I'll make sure you take the fall for this.	Bu işin cezasını senin çekmeni sağlayacağım.	Bunun bedelini senin ödemen için elimden geleni yapacağım.	
+94	Our inside man is getting cold feet.	İçerideki adamımız cesaretini yitiriyor.	İçerideki adamımız ödü patlayıp geri adım atıyor.	
+102	I can get you whatever you need, for a price.	İhtiyacın olan her şeyi bulurum, ama bir bedeli var.	Karşılığında her şeyi ayarlarım.	
+104	If you squeal, you're a dead man.	Ağzından bir kelime kaçırırsan ölürsün.	Ötersen ölürsün.	
+106	He's been living off dirty money for years.	Yıllardır kirli paranın üstüne yatıyor.	Yıllardır kirli parayla geçiniyor.	
+122	Tell the boys to stand down.	Çocuklara geri çekilmelerini söyle.	Çocuklara söyle, geri çekilsinler.	
+130	They bugged the whole apartment.	Bütün daireye dinleme cihazı yerleştirmişler.	Bütün daireye dinleme koydular.	
+146	Lights out in five minutes, get back to your cells.	Beş dakika sonra ışıklar kapanacak, hücrelerinize dönün.	Beş dakika sonra ışıklar sönüyor, koğuşlarınıza dönün.	
+158	Double down or fold, make up your mind.	Ya iki katına çıkar ya da paso de, karar ver.	Ya katla ya çekil, karar ver artık.	
+164	The fight was fixed, and everyone knew it.	Maç şikeliydi ve herkes bunu biliyordu.	Dövüş ayarlıydı ve bunu herkes biliyordu.	
+178	You think you can play me for a fool?	Beni enayi yerine koyabileceğini mi sanıyorsun?	Beni enayi mi sanıyorsun?	
+179	I'll make you regret the day you crossed me.	Bana ihanet ettiğin güne pişman olacaksın.	Bana kazık attığın güne pişman edeceğim seni.	
+180	I smell a rat in our crew.	Ekipte bir hainin kokusunu alıyorum.	Ekibimizde bir kokuşmuşluk var.	
+183	Why bother paying taxes when I can pay my guys instead?	Vergi ödeyeceğime adamlarıma ödeyebilecekken neden uğraşayım?	Adamlarıma para verebilecekken neden vergi ödeyeyim ki?	
+190	We think the victim knew his killer.	Kurbanın katilini tanıdığını düşünüyoruz.	Bize göre kurban katilini tanıyormuş.	
+197	She turned state's witness to avoid a life sentence.	Müebbetten kurtulmak için itirafçı oldu.	Ömür boyu hapisten kurtulmak için devlet tanığı oldu.	
+200	The judge has been bought and paid for.	Yargıç satın alınmış ve parası ödenmiş.	Hâkim satın alınmış.	
+205	Contact front, open fire!	Önde temas var, ateş açın!	Ön hatta temas, ateş serbest!	
+213	Sergeant, the bridge is rigged to blow.	Çavuş, köprüye patlayıcı yerleştirilmiş.	Çavuş, köprü patlamaya hazır.	
+216	Negative, we have no visual on the target.	Olumsuz, hedefi göremiyoruz.	Hayır, hedefi görmüyoruz.	
+222	Permission to speak freely, sir?	Açık konuşabilir miyim, komutanım?	Serbest konuşma izni, komutanım?	
+228	The convoy was hit by an IED two miles from the base.	Konvoy üsten iki mil uzakta el yapımı bir patlayıcıya çarptı.	Konvoy, üsse iki mil kala el yapımı bombayla vuruldu.	
+231	This is no place for rookies.	Burası acemilere göre bir yer değil.	Acemilerin yeri burası değil.	
+242	I've seen men crack under less pressure than this.	Bundan daha az baskı altında çöken adamlar gördüm.	İnsanların bundan daha azında çöktüğünü gördüm.	
+250	I don't care who's paying, as long as the money clears.	Para hesaba geçtiği sürece kimin ödediği umurumda değil.	Kimin ödediği umurumda değil, para hesaba geçtikten sonra.	
+254	The mercs outgunned the militia two to one.	Paralı askerler milisleri silah bakımından iki kat geride bıraktı.	Paralı askerler milisleri iki kat silah gücüyle ezdi.	
+258	Breach and clear, room by room.	Kapıyı kırın ve oda oda temizleyin.	Oda oda girip temizleyin.	
+265	Radio check, how copy?	Telsiz kontrolü, beni duyuyor musunuz?	Telsiz kontrolü, anlaşıldı mı?	
+266	Loud and clear.	Net ve açık duyuyorum.	Net ve temiz.	
+268	Sir, we've got incoming!	Komutanım, üzerimize atış geliyor!	Komutanım, üstümüze geliyorlar!	
+276	Fox two, missile away.	Fox iki, füze atıldı.	Füze ateşlendi.	
+284	Take a knee, catch your breath, we move in two.	Çömel, nefes al, iki dakikaya hareket ediyoruz.	Diz çök, nefes al, iki dakika sonra çıkıyoruz.	
+287	Fire in the hole!	Patlıyor, kendinizi koruyun!	Patlıyor, kaçın!	
+288	Aim for the center mass and don't waste ammo.	Gövdeyi hedefle ve mermiyi boşa harcama.	Gövdeye nişan al ve cephane harcama.	
+294	Check your fire, that's a friendly!	Ateşinizi kesin, o bizim adam!	Ateşi kesin, onlar bizden!	
+296	The brass has no idea what's happening on the ground.	Üst rütbeliler sahada neler olduğunu hiç bilmiyor.	Komuta kademesinin sahada neler olduğundan haberi yok.	
+297	We train hard so we can fight easy.	Savaşırken zorlanmayalım diye çok sert eğitim yapıyoruz.	Savaşta rahat edelim diye eğitimde canımızdan oluruz.	
+304	That car's tuned to the limit.	O araba son sınırına kadar modifiye edilmiş.	O araba sınırına kadar ayarlanmış.	
+305	I'll race you for pink slips.	Ruhsatlar için seninle yarışırım.	Pembe belgeye yarışırım seninle.	
+311	You're running on empty, pit now!	Yakıtın bitmek üzere, hemen pite gir!	Depon bitiyor, hemen pite gir!	
+317	That was a perfect line through the chicane.	Şikandan geçişin kusursuz bir çizgiydi.	Şikanda tam bir mükemmel çizgiydi.	
+325	Pole position goes to the rookie!	Pole pozisyonu çaylağın!	Pol pozisyon acemiye gidiyor!	
+326	He's catching up on the final lap.	Son turda aradaki farkı kapatıyor.	Son turda yetişiyor.	
+328	We're neck and neck coming into the last turn.	Son virajda baş başa gidiyoruz.	Son virajda kafa kafayayız.	
+331	Our driver is out of the race with a blown engine.	Pilotumuz motor patlaması yüzünden yarıştan çekildi.	Sürücümüz motoru patlayınca yarıştan çekildi.	
+350	There's the ball, go for the tackle!	Top orada, ayağını vur!	Top orada, ona hamle yap!	
+351	What a goal! The stadium erupts!	Ne gol! Stadyum yerinden oynuyor!	Ne gol! Stadyum yıkılıyor!	
+359	Home team's up by six at the half.	Ev sahibi takım devrede altı farkla önde.	Devreyi altı farkla önde kapatıyor ev sahibi.	
+360	Nothing but net!	Ağları bile oynatmadan girdi!	Tertemiz sayı!	
+361	Rookie of the year, no question.	Yılın çaylağı, hiç şüphe yok.	Yılın çaylağı, tartışmasız.	
+362	Don't choke on the free throws.	Serbest atışlarda sıkışma.	Serbest atışlarda elin titremesin.	
+366	Keep your guard up and stay off the ropes.	Savunmanı koru ve ipler tarafında kalma.	Savunmanı sıkı tut ve iplerden uzak dur.	
+368	The challenger took the belt by split decision.	Meydan okuyan kemeri oy çokluğuyla aldı.	Meydan okuyan, hakem kararıyla kemeri aldı.	
+369	That left hook came out of nowhere!	O sol kroşe nereden çıktı!	O sol kroşe ansızın geldi!	
+371	I played a decade in the minor leagues before getting my break.	Şansımı bulmadan önce on yıl alt liglerde oynadım.	Fırsatı yakalayana kadar on yıl alt liglerde oynadım.	
+372	He's the underdog, but he's got heart.	Favori değil ama yüreği var.	Çok yetenekli ama herkesin gözünde ezik.	
+374	The coach benched him after the sloppy performance.	Antrenör özensiz performanstan sonra onu yedek kulübesine çekti.	Hantal oyunundan sonra antrenör onu yedeğe aldı.	
+375	We need a clean sweep to make the playoffs.	Play-off'a kalmak için hepsini kazanmamız lazım.	Play-off'a kalmak için tam bir temizlik lazım.	
+377	The trade deadline is tomorrow, and everyone is nervous.	Transfer süresinin bitimine bir gün var ve herkes gergin.	Transfer süresi yarın doluyor ve herkes gergin.	
+383	Pass the ball, don't be a ball hog!	Topu paslasana, topu kendine saklama!	Pas ver, topu tek başına götürme!	
+385	The race is going to come down to the wire.	Yarış son saniyeye kadar sürecek.	Yarış son metrelere kadar çekişmeli geçecek.	
+387	Last lap, give it everything you've got!	Son tur, bütün gücünü ver!	Son tur, elinden gelen her şeyi yap!	
+393	Time to go all out.	Bütün gücümüzle girişme zamanı.	Sonuna kadar gitme zamanı.	
+398	I'll have my guys pay you a visit tomorrow.	Yarın adamlarımı sana ziyarete göndereceğim.	Yarın adamlarım sana uğrasın.	
+403	I told you to keep a low profile.	Sana göze batmamanı söylemiştim.	Sana dikkat çekmemeni söylemiştim.	
+414	He slipped through the cops' fingers again.	Polisin elinden yine kayıp gitti.	Yine polisin elinden kaydı.	
+423	He walked into the diner and ordered coffee, cool as a cucumber.	Lokantaya girdi ve hiçbir şey olmamış gibi kahve söyledi.	Lokantaya girdi, soğukkanlılıkla kahve söyledi.	
+434	We rule these streets after dark.	Gece olunca bu sokakları biz yönetiriz.	Karanlık çöküyor, bu sokaklar bizim.	
+442	He's a pickpocket who works the train station.	Gar bölgesinde çalışan bir yankesici o.	Tren istasyonunda çalışan bir yankesici.	
+476	Smash the window and grab whatever you can.	Camı kır ve ne bulursan al.	Camı kır ve kaptığın her şeyi al.	
+499	The ringleader got away scot-free.	Elebaşı cezasız kurtuldu.	Elebaşı yırtmayı başardı.	
+506	You're in this up to your neck.	Bu işe boynuna kadar battın.	Sen bu işin tam içindesin.	
+507	The crooked cop looked the other way.	Yolsuz polis başını öbür tarafa çevirdi.	Çürük polis görmezden geldi.	
+508	I'll make it worth your while.	Zahmetine değmesini sağlarım.	Sana bunun karşılığını veririm.	
+509	A deal's a deal, even among thieves.	Anlaşma anlaşmadır, hırsızlar arasında bile.	Hırsızlar arasında bile verilen söz sözdür.	
+510	He knows too much to be left alive.	Sağ bırakılamayacak kadar çok şey biliyor.	Fazla biliyor, sağ bırakılamaz.	
+511	That's the third time this week someone tried to rob us.	Bu hafta bize üçüncü soygun girişimi bu.	Bu hafta bizi soymaya çalışan üçüncü kişi bu.	
+515	You think I wouldn't notice the missing cash?	Eksik paranın farkına varmayacağımı mı sandın?	Kayıp paranın fark edilmeyeceğini mi sandın?	
+530	We'll tear the place apart if we have to.	Gerekirse burayı baştan aşağı arayacağız.	Gerekirse burayı yerle bir ederiz.	
+532	The courier never showed up, and now the boss is furious.	Kurye hiç gelmedi ve şimdi patron çok kızgın.	Kurye gelmedi ve patron öfkeden deliriyor.	
+534	He fled the country with a suitcase full of cash.	Ülkeyi para dolu bir bavulla terk etti.	Bavul dolusu parayla ülkeden kaçtı.	
+539	The whole thing smells fishy.	Her şey tuhaf kokuyor.	Bütün bu iş şüpheli kokuyor.	
+540	I wouldn't touch that deal with a ten-foot pole.	O anlaşmanın yanına bile yaklaşmam.	O anlaşmaya yanaşmazdım bile.	
+541	He wasn't always a thug, you know.	Eskiden holigan değildi, biliyorsun.	Biliyorsun, her zaman serseri değildi.	
+548	The cavalry has arrived.	Yardım geldi.	Kurtarıcılar geldi.	
+553	Look sharp, the colonel's coming.	Toparlanın, albay geliyor.	Dikkatli ol, albay geliyor.	
+554	Your orders are to hold this position until relieved.	Emriniz, yerinizi değiştirilene kadar korumak.	Emriniz, yerine nöbetçi gelene kadar bu mevziyi tutmak.	
+569	Another day, another war.	Bir gün daha, bir savaş daha.	Yeni bir gün, yeni bir savaş.	

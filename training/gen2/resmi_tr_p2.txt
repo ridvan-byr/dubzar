@@ -1,0 +1,179 @@
+Tüm personel, muharebe istasyonlarına.
+Kaptan köprüde.
+İşaretimle tüm silahlara ateş.
+Kalkanlar yüzde on ikiye düştü.
+Hiper sürücüyü devreye alın.
+Düşman gemisine seslenin ve teslim olmalarını isteyin.
+Komutan, karakoldan bir tehlike sinyali alıyoruz.
+Tüm filolar, mevzide kalın ve yeni emirleri bekleyin.
+Kepler sistemine rota çizin.
+Tüm gücü ön kalkanlara aktarın.
+Bu doğrudan bir emirdir, asker.
+Hava kilidini mühürleyin ve basınç boşaltmaya hazırlanın.
+Görev kontrol, bir sorunumuz var.
+Reaktör çekirdeği kritik seviyeye ulaşıyor.
+Tüm personel, derhal kaçış kapsüllerine tahliye olsun.
+Hedefe kilitlen ve emrimi bekle.
+Ateşi kesin. Tekrar ediyorum, ateşi kesin.
+Gemiye çıkarma yapılıyor. Davetsiz misafirleri püskürtün.
+Konsey güç kullanımına izin verdi.
+On dakika içinde brifing odasına gelin.
+Dronları gönderin ve çevreyi tarayın.
+Atmosfere giriş için hazır olun.
+Filo komutanlığı, düşman uçak gemisini gözle görüyoruz.
+Efendim, yapay zekâ emri reddetti.
+Silahlar hazır. Yetkilendirmenizi bekliyoruz.
+Sıfır numaralı acil durum protokolünü başlatın.
+Koloni, bir sonraki emre kadar karantinaya alındı.
+Yörüngeye girişe hazırlanın.
+Tüm birlikler, merkez kuleye toplansın.
+Asker, bu hattı ne pahasına olursa olsun tutacaksın.
+Elimizdeki tüm avcı uçaklarını havalandırın.
+Ana gemi hava sahamıza girdi.
+Kimliğinizi ve geçiş kodunuzu doğrulayın.
+Yaklaşmayın. Bu tesis yasak bölgedir.
+Yedinci güvertede gövde yarığı. Bölme kapaklarını mühürleyin.
+İsyancılarla pazarlık yapmayacağız.
+Seyrüsefer sistemleri devre dışı. Kör uçuyoruz.
+Sinyal, bilinen uzayın sınırlarının ötesinden geliyor.
+Komutan Shepard, amiral sizi görmek istiyor.
+Efendim, düşman filosu bizimkinin iki katı.
+Ana topu devreye alın.
+Sensörleri yeniden ayarlayın ve bir tarama daha yapın.
+Kriyo uyku döngüsü tamamlandı. Tekrar hoş geldiniz, mürettebat.
+Bu son uyarınız. Motorlarınızı kapatın.
+Hayır, eser bu istasyondan çıkmayacak.
+Yüzeydeki ekiple bağlantı koptu.
+Antlaşma bu bölgede her türlü askerî varlığı yasaklıyor.
+Filoya dış çembere çekilmesi emrini verin.
+Anlaşıldı, Kaptan. Emirlerinizi yerine getiriyorum.
+Kolonistleri uyandırın. Vardık.
+Büyükelçi özel bir görüşme talep ediyor.
+Hükümetim bu tahrike müsamaha göstermeyecek.
+Barış için geldik ve sizden de aynısını bekliyoruz.
+Elçilik diplomatik koruma altına alındı.
+İki taraf da derhal yürürlüğe girmek üzere ateşkes konusunda anlaştı.
+İki ulus saldırmazlık paktı imzaladı.
+Tüm rehinelerin derhal serbest bırakılmasını talep ediyoruz.
+Müzakereler çıkmaza girdi.
+Özgür Koloniler adına konuşuyorum.
+Şartlarımız pazarlığa açık değildir.
+Antlaşmanın her ihlali güçle karşılanacaktır.
+Zirve öğlen büyük salonda toplanacak.
+Bu anlaşmazlığa barışçıl bir çözüm arayalım.
+Federasyon, bu topraklar üzerindeki hak iddianızı tanımıyor.
+Bir büyükelçi olarak sözümü veriyorum.
+Heyet akşam servisiyle varacak.
+Dış dünyalara ortak bir keşif seferi öneriyoruz.
+Yaptırımlar sınır yeniden açılana dek sürecek.
+İttifak bu tehdide karşı tek vücut.
+Size antlaşmayla bağlı olduğunuzu hatırlatmak zorundayım.
+Prens dostluk elini uzattı.
+Tüm saygımla, Büyükelçi, bu şartları kabul edemeyiz.
+İki halkımız çok uzun zamandır savaşıyor.
+Bu mutabakat yüz dünyaya barış getirecek.
+Elçi her türlü nezaketle karşılandı.
+Önerge yedi oya karşı dört oyla kabul edildi.
+Bırakın senatör konuşsun.
+Bana verilen yetkiyle toplantının sona erdiğini ilan ediyorum.
+Konsey bu usul ihlali için açıklama talep ediyor.
+İki hanedan evlilikle birleşecek.
+Fetih değil, yalnızca güvenlik istiyoruz.
+Suikastten sonra barış görüşmeleri çöktü.
+Topraklarımızdan güvenle geçmenize izin verilecek.
+Başbakan bu akşam millete seslenecek.
+Resmî savaş ilanı yayımlandı.
+Sabrımızın da bir sınırı var.
+Taraflardan biri çekilirse anlaşma hükümsüzdür.
+Tazminatları görüşmeye hazırız.
+Elçilik personeli geri çağrıldı.
+Toplantı için tarafsız bir zemin belirlendi.
+Barış ancak iki taraf da taviz verirse mümkündür.
+Antlaşma tanıklar huzurunda imzalandı.
+Sanık işbu kararla on yıl hapse mahkûm edilmiştir.
+İtiraz ediyorum, Sayın Hâkim. Soru yönlendirici.
+Kabul edildi. Jüri bu sözü dikkate almayacak.
+Tanık çekilebilir.
+Doğruyu, yalnızca doğruyu söyleyeceğine yemin ediyor musun?
+Sanığı tüm suçlamalardan beraat ettiriyorum.
+Bu sözleşme geçersiz ve hükümsüzdür.
+Bu ülkenin yasalarına göre unvanını yitirdin.
+Deliller heyetin huzuruna getirilecek.
+Bana verilen yetkiyle seni suçlu ilan ediyorum.
+Mahkeme yarın sabaha kadar ara veriyor.
+Suçları yüzünden yargılandı ve asıldı.
+Kanunu bilmemek mazeret değildir.
+Sulh yargıcı tutuklanmanı emretti.
+Lord Harrow'u öldürmekle suçlanıyorsun.
+Jüri kararını verdi.
+Yasa yolunu izlesin.
+Mahkûmun tüm malvarlığına tac tarafından el konuldu.
+Ülkenin en yüksek mahkemesine başvuruyorum.
+Yasa böyle bir uygulamayı açıkça yasaklıyor.
+Şimdi son savunmanızı yapabilirsiniz.
+Kimin doğru söylediğine hâkim karar verecek.
+İşbu belgeyle meslek ruhsatını iptal ediyorum.
+Anlaşmanın şartları her iki tarafı da bağlar.
+Şuraya imza at, tapu senin olsun.
+Savcılık sözlerini tamamlamıştır.
+Vasiyetname bütün ailenin önünde yüksek sesle okundu.
+Vali tarafından tam bir af çıkarıldı.
+Yasa, zengin ile yoksul arasında ayrım yapmaz.
+Cezanız şafakta infaz edilecek.
+Cumhuriyete karşı vatan hainliğinden suçlu bulundunuz.
+Her tanıktan imzalı bir ifade almamız gerek.
+Bu toprak tacındır, senin değil.
+Mahkeme rüşvet kabul etmez.
+Tüm taraflar işbu belgeyle mahkemede hazır bulunmaya çağrılmıştır.
+Bu eyalette eski yasalar hâlâ geçerli.
+Adalet geç olabilir, ama kesindir.
+Berat, loncaya özel ticaret hakkı tanır.
+Mahkûm, düelloyla yargılanmayı talep etti.
+Mahkeme, sanığın krallığa yaptığı hizmeti kayda geçirsin.
+Tutuklama emri imzalandı ve mühürlendi.
+Yasa can karşılığı can ister.
+Mahkemede düzen!
+Kendi sözleriyle mahkûm oldu.
+Davacı zararının tazmin edilmesini talep ediyor.
+Bu anlaşmazlığı ihtiyarlar meclisi çözecek.
+Sözleşmenin yerine getirildiğini ilan ediyorum.
+Seyirciler sessiz olsun, yoksa salonu boşaltırım.
+Sanık olay yerinden kaçarken görüldü.
+Tanıklar yemin ettirilsin.
+Karar temyiz edilemez.
+Krallığın yasalarını korumaya dair ciddiyetle yemin ederim.
+Hazine kaybınızı tazmin edecek.
+Bu yasaya göre hırsızlar bir ellerini kaybedecek.
+Adil bir yargılanma hakkınız var.
+Yargıç kararını Pazartesi gününe bıraktı.
+Bu belge sahte.
+Ceza, ömür boyu sürgündür.
+Kaptanın seyir defteri resmî kayıtlara geçirilecek.
+İşbu belgeyle ilan olunur ki tüm vergiler ay sonuna kadar ödenecektir.
+Şehir surları içinde silah taşımak yasaktır.
+Konsey, işbu belgeyle meseleyi takip etmeniz için size izin veriyor.
+Taraflardan biri yemini bozarsa sözleşme hükümsüz olacaktır.
+Sıkıyönetim altında her türlü toplantı yasaktır.
+Bu mahkemenin din adamları üzerinde yargı yetkisi yoktur.
+Hırsız suçüstü yakalandı.
+Ferman derhal yürürlüğe girer.
+Bir kaçağa kim sığınak verirse onun kaderini paylaşır.
+Hâkim çiftçilerin lehine karar verdi.
+Kâtip savunmayı tutanağa geçirecek.
+Toprağı doğuştan gelen hakla talep ediyor.
+Kimse yasanın üstünde değildir, kral bile.
+Borç, bir sonraki dolunaya kadar tamamen ödenmeli.
+Bu şartları özgürce ve kendi iradenizle kabul ediyor musunuz?
+Sulh yargıcı kâğıtlarınızı görmek istiyor.
+Bundan böyle tüm yurttaşlar yasa önünde eşit olacaktır.
+Kaptanın ifadesi geçersiz sayıldı.
+İtirazınız reddedildi.
+Ferman büyücülük uygulamasını yasaklıyor.
+Haklarınızı size bildirmek benim için ciddi bir görevdir.
+Emsalleri tarafından jüri önünde yargılanmak her yurttaşın hakkıdır.
+Mübaşir mahkûmu dışarı çıkaracak.
+Bu yemin ölüme dek bağlayıcıdır.
+Varis, kraliyet kanından olmalıdır.
+İdam, ileri bir soruşturmaya kadar ertelendi.
+Kaçak mallara sınırda el konulacak.
+Mahkeme sizi zarardan sorumlu buluyor.

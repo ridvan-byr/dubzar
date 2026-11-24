@@ -1,0 +1,56 @@
+3	Ambient Occlusion	Ortam gölgelemesi	Ortam tıkanıklığı	
+10	Controller Vibration	Kontrolcü titreşimi	Kumanda titreşimi	
+19	Borderless Window	Kenarlıksız pencere	Çerçevesiz pencere	
+87	Health: 85/100	Sağlık: 85/100	Can: 85/100	
+88	Ammo: 24/120	Cephane: 24/120	Mermi: 24/120	
+97	Lives: 3	Can: 3	Can hakkı: 3	
+98	Combo x12	12'li kombo	Kombo x12	
+118	Low ammo.	Cephane azaldı.	Mermi azalıyor.	
+119	Out of ammo!	Cephane bitti!	Mermin bitti!	
+123	Stealth kill available.	Sessiz öldürme yapılabilir.	Sessiz öldürme mümkün.	
+130	Collect 10 herbs.	10 bitki topla.	10 şifalı ot topla.	
+138	Equipment	Teçhizat	Ekipman	
+142	Codex	Ansiklopedi	Kodeks	
+161	Uncommon	Seyrek	Nadir değil	
+221	Casual	Rahat mod	Eğlencelik	
+235	Waiting for host to start the game.	Oyunu başlatması için kurucu bekleniyor.	Ev sahibinin oyunu başlatması bekleniyor.	
+263	Opponent forfeited.	Rakip hükmen yenilgiyi kabul etti.	Rakip pes etti.	
+264	Shop	Mağaza	Dükkân	
+283	Battle Pass	Sezon bileti	Savaş bileti	
+284	Season Pass	Sezon geçişi	Sezon bileti	
+286	Skins	Görünümler	Kostümler	
+293	Repair all	Tümünü onar	Hepsini onar	
+300	Missing materials.	Eksik malzemeler var.	Malzeme eksik.	
+321	HUD Opacity	HUD saydamlığı	HUD opaklığı	
+323	Crosshair Style	Artı imleç stili	Nişangâh stili	
+324	Crosshair Color	Artı imleç rengi	Nişangâh rengi	
+327	Show button prompts	Düğme ipuçlarını göster	Tuş istemlerini göster	
+348	Upscaling	Çözünürlük artırma	Yükseltme ölçekleme	
+356	Prologue	Prolog	Önsöz	
+357	Epilogue	Epilog	Sonsöz	
+365	Choose a response.	Bir cevap seç.	Bir yanıt seç.	
+379	You are hungry.	Acıktın.	Açsın.	
+384	Fast travel unlocked.	Hızlı yolculuk açıldı.	Hızlı seyahat açıldı.	
+385	Fast travel to Riverwood?	Riverwood'a hızlı yolculuk yapılsın mı?	Riverwood'a hızlı seyahat edilsin mi?	
+386	You cannot fast travel while in combat.	Savaş sırasında hızlı yolculuk yapamazsın.	Çatışma sırasında hızlı seyahat edemezsin.	
+389	Marker placed on the map.	Harita üzerine işaret konuldu.	İşaret haritaya yerleştirildi.	
+413	Time your block just right to parry.	Karşılık vermek için savunmanı tam zamanında yap.	Siperini tam zamanında yaparak savuş.	
+415	Stay out of the red zone.	Kırmızı bölgenin dışında kal.	Kırmızı bölgeden uzak dur.	
+431	You need a crowbar.	Bir levyeye ihtiyacın var.	Bir levye lazım.	
+432	It's too heavy to move.	Hareket ettirmek için fazla ağır.	Taşımak için fazla ağır.	
+438	Retry	Tekrar dene	Yeniden dene	
+479	Later	Daha sonra	Sonra	
+482	Next	Sonraki	İleri	
+483	Previous	Önceki	Geri	
+494	Play Again	Yeniden oyna	Tekrar oyna	
+518	Squad member down!	Takım arkadaşı yere düştü!	Ekip üyesi yere düştü!	
+521	You have been revived.	Ayağa kaldırıldın.	Canlandırıldın.	
+530	Hacking in progress: 68%	Sistem kırılıyor: %68	Hackleme sürüyor: %68	
+536	Power restored.	Elektrik geri geldi.	Güç geri geldi.	
+560	Sandbox	Serbest mod	Kum havuzu	
+564	Training	Antrenman	Eğitim	
+565	Tutorial	Eğitim	Öğretici	
+569	Mission 5: Operation Nightfall	Görev 5: Gece Baskını Operasyonu	Görev 5: Gece Harekâtı	
+577	Perfect block!	Kusursuz savunma!	Mükemmel savuşturma!	
+585	Buff: Haste	Güçlendirme: Hız	Güçlendirme: Çeviklik	
+595	Stacks up to 5 times.	5 kata kadar birikir.	En fazla 5 kez birikir.	

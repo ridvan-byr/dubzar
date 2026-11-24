@@ -1,0 +1,621 @@
+Got it, I'll be right there.
+Hold on a second.
+Watch your step.
+Thank you so much for your help.
+Where are you going?
+Good morning, traveler.
+Stay behind me.
+Are you hurt?
+Take cover!
+Reloading!
+Move, move, move!
+I need a medic here!
+Welcome to my shop.
+What can I get for you?
+That will be 50 gold.
+Come back soon!
+Sorry, we're closed.
+Do you have any more of these?
+I'll take it.
+No, thanks.
+Let me think about it.
+You're welcome.
+I don't know.
+I can't hear you.
+Can you repeat that?
+What did you say?
+Please, wait for me.
+Yes, sir.
+Right away, ma'am.
+Nice to meet you.
+How have you been?
+Long time no see.
+Good night, everyone.
+Sweet dreams.
+Take care of yourself.
+Be careful out there.
+I'm on my way.
+We're almost there.
+Are we there yet?
+Duck!
+Run!
+Don't move.
+Drop your weapon!
+Put your hands up.
+Who goes there?
+Halt!
+Identify yourself.
+Stand down.
+Fire at will!
+Man down!
+Grenade!
+Reinforcements are on the way.
+Target eliminated.
+Area clear.
+All clear.
+Nothing here.
+I heard something.
+Did you see that?
+What was that noise?
+Is anyone there?
+Hello? Can anyone hear me?
+Help me, please!
+Thank goodness you're here.
+Thanks for saving me.
+I owe you one.
+I appreciate it.
+No problem.
+Don't mention it.
+My pleasure.
+Excuse me, miss.
+Pardon me.
+I beg your pardon?
+Sorry about that.
+It's my fault.
+Forgive me.
+Never mind.
+It's okay.
+Are you all right?
+I'm fine.
+I feel dizzy.
+I'm so tired.
+I'm hungry.
+I'm thirsty.
+Let's rest for a while.
+Let's go.
+Come with me.
+This way, please.
+Ladies first.
+Ready when you are.
+Let me know when you're ready.
+Here, take this.
+Give me that.
+Is this yours?
+What's your name?
+Where am I?
+Who are you?
+How much is this sword?
+Can I try it on?
+Do you accept coins?
+Is there an inn nearby?
+Which way is the harbor?
+How long will it take?
+When does the ferry leave?
+Why are you following me?
+What happened here?
+Who did this?
+Can you open the door?
+Do you have the key?
+Did you find anything?
+Is it safe?
+Are you ready?
+Do you need help?
+May I come in?
+Would you like some tea?
+Could you help me carry this?
+Have you seen my brother?
+What time is it?
+Is the bridge still standing?
+I'm looking for the blacksmith.
+My name is Elena.
+I'm a friend of your father's.
+I've never been here before.
+I don't understand.
+I don't have any money.
+I forgot my keys at home.
+I can't find my way back.
+I need to talk to you.
+I have something to show you.
+I'll be back in a minute.
+I'll see you tomorrow.
+See you later.
+Goodbye, my friend.
+Safe travels.
+Good luck out there.
+Happy birthday!
+Congratulations!
+Welcome back.
+Make yourself at home.
+Please, sit down.
+Help yourself to some food.
+Dinner is ready.
+Breakfast is on the table.
+The soup is still hot.
+This bread smells wonderful.
+It's a beautiful day.
+It's getting dark.
+It's freezing out here.
+It's raining again.
+The storm is coming.
+The road is closed.
+The gate is locked.
+The door won't open.
+The power is down.
+The engine is overheating.
+We're out of fuel.
+We have to leave now.
+We can't stay here.
+We made it!
+We did it!
+Well done.
+Great job, everyone.
+That was close.
+That was amazing!
+That's terrible.
+That's not funny.
+That's impossible.
+That makes sense.
+That's right.
+Exactly.
+Of course.
+Absolutely.
+Maybe later.
+Perhaps you're right.
+You're wrong.
+You're right about that.
+I agree with you.
+I don't think so.
+I think so.
+I hope so.
+I'm not sure.
+I'm sure of it.
+I promise.
+Trust me.
+Believe me.
+Listen to me.
+Look at this.
+Look over there.
+Come and see this.
+Quiet, someone's coming.
+Keep your voice down.
+Be quiet.
+Calm down.
+Take a deep breath.
+The merchant said the road to the north is blocked by snow.
+I went to the market this morning, but the baker was already sold out of bread.
+My sister is coming to visit us next week, so we need to clean the house.
+Please tell the captain that the supplies have arrived at the dock.
+I haven't eaten since yesterday, and my legs are shaking.
+There are three guards at the front gate and two more on the roof.
+If you walk straight down this street, you will see the library on your left.
+The doctor says you need to rest for at least a week before you travel again.
+Our village was small, but everybody knew each other and helped when it was needed.
+She left a letter on the table before she went out this morning.
+We're going to need more wood if we want the fire to last through the night.
+The lake is beautiful in the summer, especially at sunset.
+Could you please tell me where the train station is? I'm a little lost.
+I will give you the map if you promise to bring it back.
+The children were playing in the yard when the thunder started.
+He didn't say a word during the whole journey, and I didn't ask him anything.
+This room is cold, but the bed is clean and the price is fair.
+I can see smoke coming from the forest, so somebody must be camping there.
+Please don't touch anything in this room until the inspector arrives.
+The ship will leave at dawn, so we should get some sleep now.
+I used to come here with my grandfather when I was a little boy.
+You can leave your bag over there, and I'll take it upstairs later.
+The old man has been waiting for his son at the harbor for three years.
+Take the second left after the bridge, and then follow the river.
+My brother and I are going fishing tomorrow if the weather is good.
+I wanted to tell you earlier, but I didn't want to worry you.
+She's been working in the garden since early morning.
+We have enough food for two days, but only one bottle of water.
+Your horse is in the stable, and it has already been fed.
+The teacher asked us to read the first chapter before the next lesson.
+There was a loud knock at the door in the middle of the night.
+I tried to call you three times, but your phone was switched off.
+The mayor will give a speech in the square at noon.
+Our supplies are low, but the next town is only a day's walk away.
+I'm sorry for being late; the bus broke down on the way.
+You should wear a warm coat, because the nights are cold in the mountains.
+He bought a small house near the sea and moved there last spring.
+The soldiers marched through the village without stopping once.
+We found a small cave behind the waterfall, and it was completely dry inside.
+Do you know whether the shop opens before noon, or do we have to wait?
+The little girl showed me a shiny stone she found by the river.
+My mother taught me how to bake bread when I was ten years old.
+I'm afraid the doctor is not available today, but you can come back tomorrow.
+The path gets narrower ahead, so we have to walk one by one.
+She wrote down the address on a small piece of paper and handed it to me.
+We should check the engine before we start the journey.
+This is the first time I've seen snow in my whole life.
+The bakery on the corner makes the best cakes in the entire city.
+The wind is so strong tonight that I can hardly keep my eyes open.
+They closed the market early because of the festival.
+I think the key is somewhere in this drawer, but I can't see it.
+Please wait outside while I speak with the captain in private.
+The river was calm in the morning, but by the afternoon it had risen.
+We have been walking for hours, and I don't see any sign of the village.
+You'd better take an umbrella with you, because it might rain later.
+The boy was so excited that he couldn't sleep the night before the trip.
+I'll show you around the town after we drop off our bags at the inn.
+Her voice was soft, and everyone in the room listened carefully.
+The merchants arrive from the east every autumn with spices and silk.
+He is a quiet man who lives alone at the edge of the forest.
+Don't forget to close the window before you go to bed.
+We will take the east road, as it's shorter and safer than the mountain pass.
+I cooked some rice and vegetables, if you want to eat with us.
+The guard told us that nobody has entered or left the castle since last night.
+This old book has been in my family for more than a hundred years.
+Please be patient; the repairs will be finished by the end of the week.
+The lantern is almost out of oil, so we should find a safe place to stop.
+I didn't know you could play the piano so well.
+He gave me a warm blanket and a cup of hot milk.
+They say the old mine has been abandoned for twenty years.
+Come to the kitchen when you're done, and I'll make you something to eat.
+It took us almost six hours to cross the desert on foot.
+The doctor will see you as soon as she finishes with the other patient.
+I'm sure we left the map on the table, but now it's gone.
+You must be tired after such a long trip, so please come in and sit down.
+Our neighbors were very kind to us when we first moved here.
+The captain wants to see all the crew on deck in ten minutes.
+I found this old coin on the beach, and I think it's very valuable.
+Is it true that the king has left the capital and gone to the south?
+We were told to wait here until somebody comes to get us.
+It's a long story, and I'll tell you everything once we're safe.
+She smiled at me and said she would be waiting at the station.
+Two of the horses ran away during the night, and we couldn't find them.
+The town is quiet now, but it used to be full of travelers and traders.
+Good evening, welcome.
+Hello there.
+Hey, you!
+Hi, how are you?
+Morning, boss.
+Nice weather today, isn't it?
+Thanks for coming.
+Thank you, kind stranger.
+Thanks anyway.
+Many thanks.
+I'm so sorry for your loss.
+Sorry to bother you.
+I apologize for the delay.
+Please accept my apologies.
+I was wrong, and I'm sorry.
+What do you need?
+What are you looking for?
+What's in the box?
+What's going on?
+What do you mean?
+How did you get in?
+How many are there?
+How far is it?
+Where is everyone?
+Where are we going?
+Where does this road lead?
+Who's in charge here?
+Who's there?
+Whose coat is this?
+Which one do you want?
+Is this seat taken?
+Is he coming?
+Is dinner ready yet?
+Is there a doctor here?
+Are they friendly?
+Are you coming with us?
+Are you sure about this?
+Do you know him?
+Do you hear that?
+Do you speak English?
+Can I help you?
+Can we talk?
+Can you hear me now?
+Can you show me the way?
+Could you speak more slowly?
+Could I have some water?
+Would you like to sit?
+Will you be staying long?
+Shall we begin?
+Should we wait for them?
+Is it far from here?
+Stop right there.
+Don't go in there.
+Don't touch that.
+Don't look down.
+Don't be afraid.
+Don't wait for me.
+Don't say a word.
+Don't do that again.
+Don't leave me here.
+Don't give up.
+Please don't go.
+Never mind that now.
+Keep going.
+Keep an eye on the door.
+Hurry up!
+Slow down.
+Hang on!
+Hold the line.
+Hold this for me.
+Get back!
+Get in the car.
+Get away from the window.
+Open the gate!
+Close the door behind you.
+Pick it up.
+Put it down.
+Throw me the rope.
+Light the torch.
+Check the map.
+Take the left path.
+Go around the back.
+Climb up here.
+Jump!
+Swim!
+Go ahead.
+Go on, I'll catch up.
+Over there, by the tree!
+Up there!
+Down here!
+On your left!
+On your right!
+Incoming!
+They're coming!
+He's down.
+I got him.
+One more to go.
+Contact!
+Sniper!
+Switching weapons.
+I'm low on health!
+I need healing.
+Healing you now.
+You're going to be fine.
+You did well.
+That's the spirit!
+Good one!
+Not bad.
+Impressive.
+Wow, look at that!
+Oh no.
+Oh, come on!
+Ugh, not again.
+Finally!
+At last.
+What a mess.
+What a surprise!
+What a beautiful view.
+How strange.
+How terrible!
+Poor thing.
+Thank the gods.
+Oh my gosh, you're alive!
+Is that really you?
+I can't believe it.
+You scared me.
+You're late.
+You look tired.
+You look great today.
+You haven't changed a bit.
+You can do this.
+You'll need a key for that door.
+You can't go in there without a pass.
+You must be the new guy.
+You have a visitor.
+You're under arrest.
+You're free to go.
+You're not allowed in here.
+You're in my seat.
+I'm not going anywhere.
+I'm not afraid of you.
+I'm just looking.
+I'm busy right now.
+I'm listening.
+I'm with you.
+I'm on it.
+I'm done here.
+I'm ready.
+I'm lost.
+I'm back.
+I'm home!
+I got it.
+I see.
+I know.
+I think I'm lost.
+I think we should go back.
+I have an idea.
+I have no choice.
+I have to go now.
+I want to go home.
+I need some air.
+I need a drink.
+I need more time.
+I need your help.
+I wish I could help.
+I can help you with that.
+I can't do this alone.
+I can't open it.
+I can't find it anywhere.
+I didn't do anything.
+I didn't hear anything.
+I didn't see anyone.
+I don't want any trouble.
+I don't remember.
+I don't feel well.
+I don't like this place.
+I don't trust him.
+I love this song.
+I like your hat.
+I miss my family.
+I lost my wallet.
+I forgot.
+I'll go first.
+I'll check it out.
+I'll be right back.
+I'll handle it.
+I'll do my best.
+I'll cover the left side.
+I'll take the first watch.
+Let's split up.
+Let's try again.
+Let me help you up.
+Let me see.
+Let me through.
+Let go of me!
+Leave it to me.
+Leave him alone.
+Look, I'm trying to help.
+Listen, we don't have much time.
+Hey, wait up!
+Sorry, I'm late.
+Okay, let's do it.
+The village elder wants to speak with you as soon as you arrive.
+I'll pay you double if you can deliver this letter before sunrise.
+Nobody has seen the merchant since he went into the mountains last week.
+Can you carry two more crates, or should I ask somebody else?
+That bridge was built a long time ago, so please cross it carefully.
+I'm not a fighter, but I can fix almost anything you bring me.
+Take this potion with you, and drink it only when you're really in danger.
+The guards at the gate won't let anyone through after dark.
+Please, come inside and warm yourself by the fire before you continue.
+My horse hurt its leg yesterday, so I'm afraid we'll move slowly today.
+She is the best healer in the region, and she never refuses a patient.
+We will camp here tonight, and tomorrow we'll cross the river at first light.
+There is a letter for you at the post office, but it's been there for weeks.
+Could you keep an eye on my shop while I go to the bank?
+The ferry only runs twice a day, once in the morning and once in the evening.
+I can sell you some rope and a lantern, but the prices are fixed.
+This isn't the first time they've attacked the caravan on this road.
+Our scouts say there are about thirty men camped near the river.
+He told me you were the one who found the lost child in the forest.
+You don't have to say anything now; just think about what I told you.
+The old lighthouse hasn't worked for years, but the ships still use it as a landmark.
+I gave the keys to your sister, and she said she'd bring them to you.
+We need volunteers to help rebuild the wall before winter comes.
+She hasn't spoken to her brother since the day he left the village.
+I'll make a copy of the map for you, but you must be careful with it.
+He opened the window and listened, but the street was completely silent.
+I'm sorry, but the room you wanted has already been taken.
+Please keep the noise down, because the baby has just fallen asleep.
+It's a long way to the next town, so make sure you have enough water.
+They only needed three days to build the whole market stall.
+You will find the herbs you need in the garden behind the church.
+I heard a strange sound from the cellar last night, but I didn't go down.
+The workers haven't been paid for two months, and they're getting angry.
+Your friend is waiting for you in the tavern, and he doesn't look happy.
+The sun sets early this time of year, so we have to hurry.
+I've never seen so many stars in my life as I did that night.
+You can pay me now, or you can pay me when the job is done.
+The only way across the canyon is a rope bridge, and it's very old.
+She asked me whether I had seen a small black dog near the market.
+He's been in the workshop all day and hasn't touched his food.
+Let's wait until it gets dark, then we can cross the yard without being seen.
+Tell the others that the meeting has been moved to tomorrow morning.
+If you hear the bell ring three times, it means the town is in danger.
+We lost the trail near the river, and the rain washed away all the tracks.
+My father worked on this ship for thirty years before he retired.
+Welcome aboard, everyone; please find a seat and fasten your belts.
+Excuse me, I think you dropped this when you were leaving the store.
+This medicine tastes terrible, but it will make you feel better in a few days.
+There's a small stream behind the house where we can get fresh water.
+I need to repair the roof before the first snow, but I don't have enough nails.
+The little boy waved at the train until it disappeared behind the hills.
+You can sleep in the attic tonight, but you'll have to share the room with the cat.
+It's only a short walk from here to the hospital, and I can take you there.
+Two soldiers are guarding the entrance, and a third one is watching the road.
+I'm happy to see that you're feeling better after the long illness.
+They told us to stay in the car until the police arrived.
+The farmer said his cows disappeared one by one every night this month.
+You should eat something before the journey, because it will be a long day.
+This sword is old, but the blade is still sharp and the balance is perfect.
+Don't worry, I've checked the doors, and everything is locked.
+He promised to return before winter, but the first snow has already fallen.
+We should be able to reach the camp by noon if we leave right now.
+Someone has been sleeping in the barn, because I found a blanket and some bread.
+Our teacher always told us that reading is the best way to learn.
+The market is crowded today, so keep your bag close to you.
+I think the storm has passed, but we should wait a little longer.
+She carried the water from the well every morning, even in the winter.
+He wrote me a long letter to explain everything that had happened.
+The first door on the right leads to the kitchen, and the stairs are straight ahead.
+A woman was asking about you at the gate a few minutes ago.
+We've repaired the radio, but it only works for a few minutes at a time.
+You can borrow my horse if yours is too tired to continue.
+The teacher called on me, but I didn't know the answer to her question.
+Please remember to bring your ticket, or they won't let you on the train.
+The water in the well is cold and clean, and you can drink as much as you like.
+Here's your change.
+Anything else?
+Would you like a bag?
+That's all I have.
+It's not for sale.
+Sold out.
+Fresh bread, still warm!
+Step right up!
+Best prices in town!
+Looking to buy or sell?
+You can't afford that.
+Come back when you have more gold.
+Thanks for your business.
+Pleasure doing business with you.
+Please wait your turn.
+Next, please.
+Table for two?
+What would you like to drink?
+The usual?
+Another round?
+Cheers!
+Bon appétit.
+That was delicious.
+The check, please.
+Keep the change.
+Mission complete.
+Objective updated.
+Good luck, and stay alive.
+Welcome to the team.
+Nice work, rookie.
+Orders received.
+Copy that.
+Roger.
+Standing by.
+In position.
+Moving out.
+Falling back!
+Regroup at the gate.
+Is everyone okay?
+Anyone hurt?
+Count off.
+Stay alert.
+Stay together.
+Watch the rooftops.
+Check your corners.
+Lock and load.
+Hands off, that's mine.
+Careful, it's hot.
+Careful, the floor is wet.
+Mind the gap.
+Watch your head.
+The ice is thin here.
+Don't drink the water.
+That's too dangerous.
+It's a trap!
+It's empty.
+It's gone.
+It's heavy.
+It's over.
+It's too quiet.
+It's time to go.
+It works!
+It doesn't work.
+Nothing happened.
+Nobody's home.
+Everything is under control.
+Everything will be fine.

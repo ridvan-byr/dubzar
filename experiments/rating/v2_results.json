@@ -1,0 +1,1345 @@
+{
+ "state": {
+  "ratings": {
+   "2": {
+    "r": "ok",
+    "why": []
+   },
+   "8": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "10": {
+    "r": "ok",
+    "why": []
+   },
+   "14": {
+    "r": "ok",
+    "why": []
+   },
+   "16": {
+    "r": "ok",
+    "why": []
+   },
+   "17": {
+    "r": "ok",
+    "why": []
+   },
+   "18": {
+    "r": "ok",
+    "why": []
+   },
+   "22": {
+    "r": "ok",
+    "why": []
+   },
+   "23": {
+    "r": "ok",
+    "why": []
+   },
+   "25": {
+    "r": "ok",
+    "why": []
+   },
+   "30": {
+    "r": "ok",
+    "why": []
+   },
+   "32": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "34": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "36": {
+    "r": "bad",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "39": {
+    "r": "ok",
+    "why": []
+   },
+   "40": {
+    "r": "minor",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "41": {
+    "r": "ok",
+    "why": []
+   },
+   "42": {
+    "r": "minor",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "43": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "45": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "47": {
+    "r": "ok",
+    "why": []
+   },
+   "48": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "50": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "51": {
+    "r": "ok",
+    "why": []
+   },
+   "53": {
+    "r": "ok",
+    "why": []
+   },
+   "54": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "55": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "56": {
+    "r": "ok",
+    "why": []
+   },
+   "57": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "58": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "61": {
+    "r": "bad",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "62": {
+    "r": "ok",
+    "why": []
+   },
+   "63": {
+    "r": "ok",
+    "why": []
+   },
+   "64": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "65": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "66": {
+    "r": "minor",
+    "why": [
+     "missing"
+    ]
+   },
+   "67": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "68": {
+    "r": "ok",
+    "why": []
+   },
+   "69": {
+    "r": "ok",
+    "why": []
+   },
+   "70": {
+    "r": "minor",
+    "why": [
+     "meaning"
+    ]
+   },
+   "71": {
+    "r": "minor",
+    "why": [
+     "missing",
+     "meaning"
+    ]
+   },
+   "72": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "73": {
+    "r": "ok",
+    "why": []
+   },
+   "74": {
+    "r": "ok",
+    "why": []
+   },
+   "76": {
+    "r": "ok",
+    "why": []
+   },
+   "79": {
+    "r": "ok",
+    "why": []
+   },
+   "84": {
+    "r": "ok",
+    "why": []
+   },
+   "85": {
+    "r": "ok",
+    "why": []
+   },
+   "86": {
+    "r": "minor",
+    "why": [
+     "term"
+    ]
+   },
+   "88": {
+    "r": "ok",
+    "why": []
+   },
+   "90": {
+    "r": "ok",
+    "why": []
+   },
+   "91": {
+    "r": "ok",
+    "why": []
+   },
+   "92": {
+    "r": "bad",
+    "why": []
+   },
+   "94": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "96": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "97": {
+    "r": "ok",
+    "why": []
+   },
+   "98": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "99": {
+    "r": "ok",
+    "why": []
+   },
+   "100": {
+    "r": "ok",
+    "why": []
+   },
+   "102": {
+    "r": "minor",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "105": {
+    "r": "ok",
+    "why": []
+   },
+   "107": {
+    "r": "ok",
+    "why": []
+   },
+   "109": {
+    "r": "ok",
+    "why": []
+   },
+   "111": {
+    "r": "ok",
+    "why": []
+   },
+   "113": {
+    "r": "ok",
+    "why": []
+   },
+   "115": {
+    "r": "ok",
+    "why": []
+   },
+   "116": {
+    "r": "ok",
+    "why": []
+   },
+   "117": {
+    "r": "bad",
+    "why": [
+     "meaning"
+    ]
+   },
+   "120": {
+    "r": "ok",
+    "why": []
+   },
+   "123": {
+    "r": "ok",
+    "why": []
+   },
+   "124": {
+    "r": "ok",
+    "why": []
+   },
+   "130": {
+    "r": "minor",
+    "why": [
+     "missing"
+    ]
+   },
+   "131": {
+    "r": "ok",
+    "why": []
+   },
+   "132": {
+    "r": "ok",
+    "why": []
+   },
+   "137": {
+    "r": "ok",
+    "why": []
+   },
+   "138": {
+    "r": "ok",
+    "why": []
+   },
+   "140": {
+    "r": "ok",
+    "why": []
+   },
+   "141": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "142": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "143": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "144": {
+    "r": "ok",
+    "why": []
+   },
+   "145": {
+    "r": "ok",
+    "why": []
+   },
+   "147": {
+    "r": "bad",
+    "why": [
+     "meaning",
+     "natural"
+    ]
+   },
+   "148": {
+    "r": "ok",
+    "why": []
+   },
+   "150": {
+    "r": "ok",
+    "why": []
+   },
+   "151": {
+    "r": "ok",
+    "why": []
+   },
+   "152": {
+    "r": "ok",
+    "why": []
+   },
+   "153": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "154": {
+    "r": "ok",
+    "why": []
+   },
+   "155": {
+    "r": "ok",
+    "why": []
+   },
+   "156": {
+    "r": "ok",
+    "why": []
+   },
+   "157": {
+    "r": "ok",
+    "why": []
+   },
+   "160": {
+    "r": "ok",
+    "why": []
+   },
+   "162": {
+    "r": "ok",
+    "why": []
+   },
+   "163": {
+    "r": "ok",
+    "why": []
+   },
+   "165": {
+    "r": "ok",
+    "why": []
+   },
+   "167": {
+    "r": "ok",
+    "why": []
+   },
+   "168": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "170": {
+    "r": "ok",
+    "why": []
+   },
+   "171": {
+    "r": "ok",
+    "why": []
+   },
+   "172": {
+    "r": "ok",
+    "why": []
+   },
+   "174": {
+    "r": "ok",
+    "why": []
+   },
+   "176": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "178": {
+    "r": "ok",
+    "why": []
+   },
+   "181": {
+    "r": "minor",
+    "why": [
+     "natural"
+    ]
+   },
+   "183": {
+    "r": "minor",
+    "why": [
+     "meaning"
+    ]
+   },
+   "184": {
+    "r": "ok",
+    "why": []
+   },
+   "187": {
+    "r": "ok",
+    "why": []
+   },
+   "188": {
+    "r": "bad",
+    "why": [
+     "natural",
+     "meaning"
+    ]
+   },
+   "190": {
+    "r": "ok",
+    "why": []
+   },
+   "193": {
+    "r": "ok",
+    "why": []
+   },
+   "194": {
+    "r": "ok",
+    "why": []
+   },
+   "199": {
+    "r": "ok",
+    "why": []
+   }
+  },
+  "at": 112
+ },
+ "mapping": [
+  {
+   "id": 2,
+   "category": "konusma",
+   "context": "",
+   "en": "Where were you when the lights went out?",
+   "tr": "Işıklar sönünce neredeydin?"
+  },
+  {
+   "id": 8,
+   "category": "konusma",
+   "context": "",
+   "en": "That doesn't sound like him at all.",
+   "tr": "Bu hiç de onun gibi gelmiyor."
+  },
+  {
+   "id": 10,
+   "category": "konusma",
+   "context": "",
+   "en": "You'd better have a good explanation.",
+   "tr": "İyi bir açıklaman olsa iyi olur."
+  },
+  {
+   "id": 14,
+   "category": "konusma",
+   "context": "",
+   "en": "Why does everyone keep looking at me like that?",
+   "tr": "Neden herkes bana sürekli böyle bakıyor?"
+  },
+  {
+   "id": 16,
+   "category": "konusma",
+   "context": "",
+   "en": "You're lucky I'm in a good mood today.",
+   "tr": "Bugün havamda olduğum için şanslısın."
+  },
+  {
+   "id": 17,
+   "category": "konusma",
+   "context": "",
+   "en": "Nobody has been in this room for years.",
+   "tr": "Bu odaya yıllardır kimse girmedi."
+  },
+  {
+   "id": 18,
+   "category": "konusma",
+   "context": "",
+   "en": "Let me handle the talking.",
+   "tr": "Konuşmayı bana bırak."
+  },
+  {
+   "id": 22,
+   "category": "konusma",
+   "context": "",
+   "en": "I wish things had turned out differently.",
+   "tr": "Keşke işler farklı olsaydı."
+  },
+  {
+   "id": 23,
+   "category": "konusma",
+   "context": "",
+   "en": "Do you really expect me to believe that?",
+   "tr": "Buna gerçekten inanmamı mı bekliyorsun?"
+  },
+  {
+   "id": 25,
+   "category": "konusma",
+   "context": "",
+   "en": "You can't just walk away from this.",
+   "tr": "Bundan öylece kurtulamazsın."
+  },
+  {
+   "id": 30,
+   "category": "konusma",
+   "context": "",
+   "en": "He left a note on the kitchen table.",
+   "tr": "Mutfak masasında bir not bıraktı."
+  },
+  {
+   "id": 32,
+   "category": "konusma",
+   "context": "",
+   "en": "We're running low on supplies.",
+   "tr": "Yeterli erzağımız azalıyor."
+  },
+  {
+   "id": 34,
+   "category": "konusma",
+   "context": "",
+   "en": "Is that really the best you can do?",
+   "tr": "Gerçekten yapabileceğin en iyi şey bu mu?"
+  },
+  {
+   "id": 36,
+   "category": "argo",
+   "context": "",
+   "en": "Stop acting like a clown and listen up.",
+   "tr": "Palyaço gibi davranmayı bırak da dinle."
+  },
+  {
+   "id": 39,
+   "category": "argo",
+   "context": "",
+   "en": "She's been giving me the cold shoulder all week.",
+   "tr": "Bütün hafta bana soğuk davranıp durdu."
+  },
+  {
+   "id": 40,
+   "category": "argo",
+   "context": "",
+   "en": "Get off my back, will you?",
+   "tr": "Arkamdan çekil, olur mu?"
+  },
+  {
+   "id": 41,
+   "category": "argo",
+   "context": "",
+   "en": "You're full of it, and you know it.",
+   "tr": "Palavra atıyorsun ve bunu biliyorsun."
+  },
+  {
+   "id": 42,
+   "category": "argo",
+   "context": "",
+   "en": "He's all talk and no action.",
+   "tr": "Hep konuşur ama hareket etmez."
+  },
+  {
+   "id": 43,
+   "category": "argo",
+   "context": "",
+   "en": "Don't try to sweet-talk me.",
+   "tr": "Benimle tatlı konuşmaya çalışma."
+  },
+  {
+   "id": 45,
+   "category": "argo",
+   "context": "",
+   "en": "That guy is a snake in the grass.",
+   "tr": "O herif çimlerin arasında bir yılan."
+  },
+  {
+   "id": 47,
+   "category": "argo",
+   "context": "",
+   "en": "Hand over the cash or things get ugly.",
+   "tr": "Parayı teslim et, yoksa işler çirkinleşir."
+  },
+  {
+   "id": 48,
+   "category": "argo",
+   "context": "",
+   "en": "She's out of her league and she knows it.",
+   "tr": "O kendine ait değil ve bunu biliyor."
+  },
+  {
+   "id": 50,
+   "category": "argo",
+   "context": "",
+   "en": "You think I was born yesterday?",
+   "tr": "Sence dün mü doğdum?"
+  },
+  {
+   "id": 51,
+   "category": "argo",
+   "context": "",
+   "en": "Man, this place gives me the creeps.",
+   "tr": "Dostum, burası beni ürpertiyor."
+  },
+  {
+   "id": 53,
+   "category": "argo",
+   "context": "",
+   "en": "Nice try, hotshot.",
+   "tr": "İyi deneme, şapşal."
+  },
+  {
+   "id": 54,
+   "category": "argo",
+   "context": "",
+   "en": "I'll be damned if I let you take the credit.",
+   "tr": "Krediyi almana izin verirsem lanetlenirim."
+  },
+  {
+   "id": 55,
+   "category": "argo",
+   "context": "",
+   "en": "That's a load of garbage and you know it.",
+   "tr": "Bu çok fazla çöp ve sen de biliyorsun."
+  },
+  {
+   "id": 56,
+   "category": "argo",
+   "context": "",
+   "en": "Don't you dare flake on me again.",
+   "tr": "Sakın bir daha beni kazıklamaya kalkma."
+  },
+  {
+   "id": 57,
+   "category": "argo",
+   "context": "",
+   "en": "He's been dodging me like the plague.",
+   "tr": "Beni veba gibi atlatıyor."
+  },
+  {
+   "id": 58,
+   "category": "argo",
+   "context": "",
+   "en": "This whole thing stinks.",
+   "tr": "Bütün bu iş berbat."
+  },
+  {
+   "id": 61,
+   "category": "argo",
+   "context": "",
+   "en": "She dumped him on the spot.",
+   "tr": "Onu yerinde terk etti."
+  },
+  {
+   "id": 62,
+   "category": "argo",
+   "context": "",
+   "en": "Quit your whining and move it.",
+   "tr": "Sızlanmayı bırak da hareket et."
+  },
+  {
+   "id": 63,
+   "category": "argo",
+   "context": "",
+   "en": "They were wasted before noon.",
+   "tr": "Öğleden önce sarhoştular."
+  },
+  {
+   "id": 64,
+   "category": "argo",
+   "context": "",
+   "en": "Talk about bad luck, huh?",
+   "tr": "Kötü şanstan söz et, ha?"
+  },
+  {
+   "id": 65,
+   "category": "argo",
+   "context": "",
+   "en": "That's a rip-off and you know it.",
+   "tr": "Bu bir kazık ve sen de bunu biliyorsun."
+  },
+  {
+   "id": 66,
+   "category": "argo",
+   "context": "",
+   "en": "Back off, or I swear I'll lose it.",
+   "tr": "Geri çekil, yoksa yemin ederim kaybedeceğim."
+  },
+  {
+   "id": 67,
+   "category": "argo",
+   "context": "",
+   "en": "You're a total pushover.",
+   "tr": "Tam bir iticisin."
+  },
+  {
+   "id": 68,
+   "category": "argo",
+   "context": "",
+   "en": "The cops were all over us.",
+   "tr": "Polis her yanımızı sarmıştı."
+  },
+  {
+   "id": 69,
+   "category": "argo",
+   "context": "",
+   "en": "Take a hike, pal.",
+   "tr": "Hadi git, dostum."
+  },
+  {
+   "id": 70,
+   "category": "argo",
+   "context": "",
+   "en": "He's loaded, but he's cheap as hell.",
+   "tr": "Parası var ama çok ucuz."
+  },
+  {
+   "id": 71,
+   "category": "argo",
+   "context": "",
+   "en": "Spill it, or I'll make you.",
+   "tr": "Söyle, yoksa seni döverim."
+  },
+  {
+   "id": 72,
+   "category": "argo",
+   "context": "",
+   "en": "Man, you're a lifesaver.",
+   "tr": "Dostum, sen bir cankurtaransın."
+  },
+  {
+   "id": 73,
+   "category": "argo",
+   "context": "",
+   "en": "We're toast if they find us here.",
+   "tr": "Bizi burada bulurlarsa yandık."
+  },
+  {
+   "id": 74,
+   "category": "argo",
+   "context": "",
+   "en": "I ain't buying any of it.",
+   "tr": "Hiçbirine inanmıyorum."
+  },
+  {
+   "id": 76,
+   "category": "gorev",
+   "context": "",
+   "en": "Sneak past the guards and reach the vault.",
+   "tr": "Nöbetçilerin yanından geçip kasaya ulaş."
+  },
+  {
+   "id": 79,
+   "category": "gorev",
+   "context": "",
+   "en": "Destroy the supply truck before it leaves.",
+   "tr": "Teçhizat kamyonunu ayrılmadan yok et."
+  },
+  {
+   "id": 84,
+   "category": "gorev",
+   "context": "",
+   "en": "Lure the guards away from the entrance.",
+   "tr": "Nöbetçileri girişten uzaklaştır."
+  },
+  {
+   "id": 85,
+   "category": "gorev",
+   "context": "",
+   "en": "Reach the next checkpoint within two minutes.",
+   "tr": "Bir sonraki kontrol noktasına iki dakika içinde ulaş."
+  },
+  {
+   "id": 86,
+   "category": "gorev",
+   "context": "",
+   "en": "Defeat the boss to unlock the gate.",
+   "tr": "Kapıyı açmak için patronu yen."
+  },
+  {
+   "id": 88,
+   "category": "gorev",
+   "context": "",
+   "en": "Deliver the medicine to the village.",
+   "tr": "İlacı köye teslim et."
+  },
+  {
+   "id": 90,
+   "category": "gorev",
+   "context": "",
+   "en": "Plant the explosives on the bridge supports.",
+   "tr": "Patlayıcıları köprü desteklerine yerleştir."
+  },
+  {
+   "id": 91,
+   "category": "gorev",
+   "context": "",
+   "en": "Win the race to earn a new car.",
+   "tr": "Yeni bir araba kazanmak için yarışı kazan."
+  },
+  {
+   "id": 92,
+   "category": "gorev",
+   "context": "",
+   "en": "Protect the witness until the trial.",
+   "tr": "Tanık duruşmaya kadar koruns."
+  },
+  {
+   "id": 94,
+   "category": "gorev",
+   "context": "",
+   "en": "Craft a torch to light the tunnel.",
+   "tr": "Tüneli yakmak için bir meşale üret."
+  },
+  {
+   "id": 96,
+   "category": "gorev",
+   "context": "",
+   "en": "Bribe the dock worker for information.",
+   "tr": "Bilgi için rıhtıma rüşvet ver."
+  },
+  {
+   "id": 97,
+   "category": "gorev",
+   "context": "",
+   "en": "Mission objective: Reach the evacuation zone.",
+   "tr": "Görev amacı: Tahliye bölgesine ulaş."
+  },
+  {
+   "id": 98,
+   "category": "gorev",
+   "context": "",
+   "en": "New quest: The Lost Heir.",
+   "tr": "Yeni görev: Kayıp Yadigâr."
+  },
+  {
+   "id": 99,
+   "category": "gorev",
+   "context": "",
+   "en": "Warning: Enemy reinforcements approaching.",
+   "tr": "Uyarı: Düşman takviyesi yaklaşıyor."
+  },
+  {
+   "id": 100,
+   "category": "gorev",
+   "context": "",
+   "en": "Tip: Use stealth to avoid combat.",
+   "tr": "İpucu: Savaşmayı önlemek için gizlilik kullan."
+  },
+  {
+   "id": 102,
+   "category": "arayuz",
+   "context": "",
+   "en": "Hold Space to charge your jump.",
+   "tr": "Zıplamanı şarj etmek için Boşluk'u tut."
+  },
+  {
+   "id": 105,
+   "category": "arayuz",
+   "context": "",
+   "en": "Hold R to repair the vehicle.",
+   "tr": "Aracı onarmak için R tuşuna basılı tut."
+  },
+  {
+   "id": 107,
+   "category": "arayuz",
+   "context": "",
+   "en": "Press G to throw a grenade.",
+   "tr": "El bombası atmak için G tuşuna bas."
+  },
+  {
+   "id": 109,
+   "category": "arayuz",
+   "context": "",
+   "en": "Save failed. Please try again.",
+   "tr": "Kaydetme başarısız. Lütfen tekrar deneyin."
+  },
+  {
+   "id": 111,
+   "category": "arayuz",
+   "context": "",
+   "en": "You cannot carry any more items.",
+   "tr": "Daha fazla eşya taşıyamazsın."
+  },
+  {
+   "id": 113,
+   "category": "arayuz",
+   "context": "",
+   "en": "You need a key to open this.",
+   "tr": "Bunu açmak için bir anahtara ihtiyacın var."
+  },
+  {
+   "id": 115,
+   "category": "arayuz",
+   "context": "",
+   "en": "Your health is low.",
+   "tr": "Sağlığın düşük."
+  },
+  {
+   "id": 116,
+   "category": "arayuz",
+   "context": "",
+   "en": "Stamina depleted.",
+   "tr": "Dayanıklılık tükendi."
+  },
+  {
+   "id": 117,
+   "category": "arayuz",
+   "context": "",
+   "en": "New item acquired: Rusty Key",
+   "tr": "Yeni eşya alındı: Rusty Key"
+  },
+  {
+   "id": 120,
+   "category": "arayuz",
+   "context": "",
+   "en": "Unable to load saved data.",
+   "tr": "Kaydedilen veri yüklenemedi."
+  },
+  {
+   "id": 123,
+   "category": "arayuz",
+   "context": "",
+   "en": "Invert Y-Axis",
+   "tr": "Y eksenini tersine çevir"
+  },
+  {
+   "id": 124,
+   "category": "arayuz",
+   "context": "",
+   "en": "Field of View",
+   "tr": "Görüş alanı"
+  },
+  {
+   "id": 130,
+   "category": "arayuz",
+   "context": "",
+   "en": "Chapter 3: The Long Way Home",
+   "tr": "Bölüm 3: Eve Uzun Yol"
+  },
+  {
+   "id": 131,
+   "category": "arayuz",
+   "context": "",
+   "en": "Experience: 1200 / 2000",
+   "tr": "Deneyim: 1200 / 2000"
+  },
+  {
+   "id": 132,
+   "category": "arayuz",
+   "context": "",
+   "en": "Fuel: 40%",
+   "tr": "Yakıt:% 40"
+  },
+  {
+   "id": 137,
+   "category": "arayuz",
+   "context": "",
+   "en": "Loading next area...",
+   "tr": "Sonraki bölge yükleniyor..."
+  },
+  {
+   "id": 138,
+   "category": "arayuz",
+   "context": "",
+   "en": "Your vehicle has been destroyed.",
+   "tr": "Aracın yok edildi."
+  },
+  {
+   "id": 140,
+   "category": "arayuz",
+   "context": "",
+   "en": "You are being hunted.",
+   "tr": "Avlanıyorsun."
+  },
+  {
+   "id": 141,
+   "category": "resmi",
+   "context": "",
+   "en": "The council has spoken, and its word is final.",
+   "tr": "Konsey konuştu ve sözü kesin."
+  },
+  {
+   "id": 142,
+   "category": "resmi",
+   "context": "",
+   "en": "Let it be known that the crown forgives no traitor.",
+   "tr": "Herkes tacın haini affetmediğini bilmeli."
+  },
+  {
+   "id": 143,
+   "category": "resmi",
+   "context": "",
+   "en": "Many have fallen in defense of these walls.",
+   "tr": "Bu duvarların savunmasında birçok kişi düştü."
+  },
+  {
+   "id": 144,
+   "category": "resmi",
+   "context": "",
+   "en": "The old kingdom lies buried beneath the sand.",
+   "tr": "Eski krallık kumun altında gömülü yatıyor."
+  },
+  {
+   "id": 145,
+   "category": "resmi",
+   "context": "",
+   "en": "Our scouts report movement along the northern ridge.",
+   "tr": "Gözcülerimiz kuzey sırtı boyunca hareket olduğunu bildirdi."
+  },
+  {
+   "id": 147,
+   "category": "resmi",
+   "context": "",
+   "en": "I pledge my sword to your cause.",
+   "tr": "Kılıcımı davana söz veriyorum."
+  },
+  {
+   "id": 148,
+   "category": "resmi",
+   "context": "",
+   "en": "Only the worthy may pass through these gates.",
+   "tr": "Bu kapılardan yalnızca layık olanlar geçebilir."
+  },
+  {
+   "id": 150,
+   "category": "resmi",
+   "context": "",
+   "en": "Citizens of the republic, tonight we stand together.",
+   "tr": "Cumhuriyet vatandaşları, bu gece birlikte duruyoruz."
+  },
+  {
+   "id": 151,
+   "category": "resmi",
+   "context": "",
+   "en": "A sacrifice is demanded by the ancient law.",
+   "tr": "Kadim yasa tarafından bir fedakârlık talep edilir."
+  },
+  {
+   "id": 152,
+   "category": "resmi",
+   "context": "",
+   "en": "The signal originates from deep within the asteroid belt.",
+   "tr": "Sinyal asteroit kuşağının derinlerinden geliyor."
+  },
+  {
+   "id": 153,
+   "category": "resmi",
+   "context": "",
+   "en": "All hands, brace for impact.",
+   "tr": "Herkes, darbe için hazırlanın."
+  },
+  {
+   "id": 154,
+   "category": "resmi",
+   "context": "",
+   "en": "The prince has vanished without a trace.",
+   "tr": "Prens iz bırakmadan kayboldu."
+  },
+  {
+   "id": 155,
+   "category": "resmi",
+   "context": "",
+   "en": "Your loyalty will not be forgotten.",
+   "tr": "Sadakatiniz unutulmayacak."
+  },
+  {
+   "id": 156,
+   "category": "resmi",
+   "context": "",
+   "en": "May the light guide you through the darkness.",
+   "tr": "Işık karanlıkta sana yol göstersin."
+  },
+  {
+   "id": 157,
+   "category": "resmi",
+   "context": "",
+   "en": "We regret to inform you that the contract has been terminated.",
+   "tr": "Sözleşmenin sona erdiğini size bildirmekten üzüntü duyuyoruz."
+  },
+  {
+   "id": 160,
+   "category": "resmi",
+   "context": "",
+   "en": "The oracle speaks in riddles, but her words are true.",
+   "tr": "Kâhin bilmecelerle konuşur ama sözleri doğrudur."
+  },
+  {
+   "id": 162,
+   "category": "resmi",
+   "context": "",
+   "en": "The archives were sealed over a century ago.",
+   "tr": "Arşivler yüz yıldan daha önce mühürlendi."
+  },
+  {
+   "id": 163,
+   "category": "resmi",
+   "context": "",
+   "en": "Fortune favors the bold.",
+   "tr": "Talih cesurları kayırır."
+  },
+  {
+   "id": 165,
+   "category": "resmi",
+   "context": "",
+   "en": "Warning, hull integrity at thirty percent.",
+   "tr": "Uyarı, gövde bütünlüğü yüzde otuz."
+  },
+  {
+   "id": 167,
+   "category": "resmi",
+   "context": "",
+   "en": "The dragon has not been seen for a thousand years.",
+   "tr": "Ejderha bin yıldır görülmedi."
+  },
+  {
+   "id": 168,
+   "category": "resmi",
+   "context": "",
+   "en": "The mission is classified. You will not discuss it.",
+   "tr": "Görev gizli. Bunu konuşmayacaksın."
+  },
+  {
+   "id": 170,
+   "category": "resmi",
+   "context": "",
+   "en": "The bells toll for those we have lost.",
+   "tr": "Kaybettiklerimiz için ziller çalıyor."
+  },
+  {
+   "id": 171,
+   "category": "kisa",
+   "context": "",
+   "en": "Hold on!",
+   "tr": "Dayan!"
+  },
+  {
+   "id": 172,
+   "category": "kisa",
+   "context": "",
+   "en": "Look out!",
+   "tr": "Dikkat!"
+  },
+  {
+   "id": 174,
+   "category": "kisa",
+   "context": "",
+   "en": "Stay down!",
+   "tr": "Yere yat!"
+  },
+  {
+   "id": 176,
+   "category": "kisa",
+   "context": "",
+   "en": "Nice work.",
+   "tr": "Aferin."
+  },
+  {
+   "id": 178,
+   "category": "kisa",
+   "context": "",
+   "en": "Get in!",
+   "tr": "Gir!"
+  },
+  {
+   "id": 181,
+   "category": "kisa",
+   "context": "",
+   "en": "Keep moving!",
+   "tr": "Harekete devam!"
+  },
+  {
+   "id": 183,
+   "category": "kisa",
+   "context": "",
+   "en": "Enemy down.",
+   "tr": "Düşman yaralı."
+  },
+  {
+   "id": 184,
+   "category": "kisa",
+   "context": "",
+   "en": "Follow me.",
+   "tr": "Beni takip et."
+  },
+  {
+   "id": 187,
+   "category": "baglam",
+   "context": "Is the car ready?",
+   "en": "Almost. It needs fuel.",
+   "tr": "Az kaldı. Yakıta ihtiyacı var."
+  },
+  {
+   "id": 188,
+   "category": "baglam",
+   "context": "He's been missing for two days.",
+   "en": "That's not like him.",
+   "tr": "Bu onun gibi değil."
+  },
+  {
+   "id": 190,
+   "category": "baglam",
+   "context": "Did you hear that?",
+   "en": "It came from upstairs.",
+   "tr": "Yukarıdan geldi."
+  },
+  {
+   "id": 193,
+   "category": "baglam",
+   "context": "I'll go first.",
+   "en": "Be careful.",
+   "tr": "Dikkat et."
+  },
+  {
+   "id": 194,
+   "category": "baglam",
+   "context": "The guards change shifts at midnight.",
+   "en": "That gives us ten minutes.",
+   "tr": "Bu bize on dakika verir."
+  },
+  {
+   "id": 199,
+   "category": "baglam",
+   "context": "Who sent you?",
+   "en": "Nobody sent me.",
+   "tr": "Beni kimse göndermedi."
+  }
+ ]
+}

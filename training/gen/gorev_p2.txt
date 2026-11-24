@@ -1,0 +1,97 @@
+Gear up, we move out in five minutes. ||| Hazırlan, beş dakika sonra yola çıkıyoruz.
+Suit up and meet me at the hangar. ||| Giyin ve hangarda benimle buluş.
+Hang back and let them come to you. ||| Geride kal ve onların sana gelmesine izin ver.
+Don't let them pin you down. ||| Seni sıkıştırmalarına izin verme.
+Stay put until I give the all-clear. ||| Ben güvenli demeden olduğun yerde kal.
+Check your corners as you go. ||| İlerlerken köşeleri kontrol et.
+Hold your fire; they haven't spotted us yet. ||| Ateş etme; bizi henüz fark etmediler.
+Light them up! ||| Hepsini kurşun yağmuruna tut!
+Mow them down before they reach the wall. ||| Duvara varmadan hepsini biç.
+Pick them off one by one from the tower. ||| Kuleden birer birer nişan al, hepsini indir.
+Keep the pressure on and don't give them time to regroup. ||| Baskıyı sürdür, toparlanmalarına fırsat verme.
+Smoke the room before you go in. ||| İçeri girmeden önce odaya duman at.
+Toss a flashbang through the window. ||| Pencereden bir flaş bombası at.
+Breach and clear on my mark. ||| Benim işaretimle girin ve temizleyin.
+Cover me, I'm going in! ||| Beni kolla, giriyorum!
+Throw me a medkit, I'm bleeding out! ||| Bana bir ilk yardım çantası at, kan kaybediyorum!
+Drop everything and run! ||| Ne varsa bırak ve kaç!
+Get down! Grenade! ||| Yat! El bombası!
+Move it, move it, move it! ||| Hadi, hadi, hadi!
+Keep your head on a swivel out there. ||| Orada her an etrafına bakın.
+Shoot the lock! ||| Kilidi vur!
+Take the high ground and hold it. ||| Yüksek zemini al ve tut.
+Stack up on the left side of the door. ||| Kapının sol tarafında sıralanın.
+Dig in; reinforcements are on the way. ||| Mevzilenin; takviye yolda.
+We can't hold this position much longer. ||| Bu mevziyi daha fazla tutamayız.
+Make a run for the truck on my count. ||| Ben sayınca kamyona doğru koş.
+Leave no witnesses. ||| Tek bir tanık bırakma.
+Stand down, soldier. That's an order. ||| Dur asker. Bu bir emir.
+Stay sharp, the night shift is more careful. ||| Dikkatli ol, gece vardiyası daha tetikte.
+Don't blow our cover. ||| Kimliğimizi ele verme.
+Play it cool and act natural. ||| Soğukkanlı ol ve doğal davran.
+Blend in with the crowd. ||| Kalabalığa karış.
+Tail the target, but keep your distance. ||| Hedefi takip et ama mesafeni koru.
+If you get made, abort immediately. ||| Fark edilirsen hemen çekil.
+Plant the bug under the desk. ||| Dinleme cihazını masanın altına yerleştir.
+Swipe the keycard from the guard's belt. ||| Anahtar kartı muhafızın kemerinden aşır.
+Slip out through the back door. ||| Arka kapıdan sıvış.
+Shake off anyone following you. ||| Seni takip eden varsa onları atlat.
+Dump the car and continue on foot. ||| Arabayı bırak ve yaya devam et.
+Wait for the guards to change shifts. ||| Muhafızların vardiya değiştirmesini bekle.
+Jam the radio so they can't call for backup. ||| Yardım çağıramasınlar diye telsizi karıştır.
+Cut the power to the whole block. ||| Bütün blokta elektriği kes.
+Watch for the camera sweeping left to right. ||| Soldan sağa dönen kameraya dikkat et.
+Time your move between the searchlights. ||| Hareketini projektörlerin arasına denk getir.
+Climb the drainpipe to the second floor. ||| Yağmur borusundan ikinci kata tırman.
+Jump across the gap and grab the ledge. ||| Boşluğun üzerinden atla ve çıkıntıya tutun.
+Swim underwater to avoid the sentries. ||| Nöbetçilerden kaçınmak için su altından yüz.
+Hold your breath until they pass. ||| Onlar geçene kadar nefesini tut.
+Use the vents to get to the control room. ||| Kontrol odasına gitmek için havalandırma kanallarını kullan.
+Grab the documents and get out of there. ||| Belgeleri kap ve oradan çık.
+Wait here and keep an eye on the door. ||| Burada bekle ve kapıya göz kulak ol.
+Look sharp, here they come. ||| Gözünü dört aç, geliyorlar.
+Step on the gas! They're right behind us! ||| Gaza bas! Hemen arkamızdalar!
+Take the next left and floor it. ||| Bir sonraki soldan dön ve gazı kökle.
+Ram the gate and keep going. ||| Kapıya çarp ve devam et.
+Pull over by the gas station. ||| Benzin istasyonunun yanına çek.
+Slow down, you'll flip the car. ||| Yavaşla, arabayı devireceksin.
+Switch lanes and cut through the alley. ||| Şerit değiştir ve ara sokaktan kes.
+Drift around the corner to shake them. ||| Onları atlatmak için virajı kayarak dön.
+Refuel at the next station or we'll run dry. ||| Bir sonraki istasyonda yakıt al, yoksa yolda kalırız.
+Park the truck behind the warehouse. ||| Kamyonu depoyun arkasına park et.
+Buckle up, it's going to be a bumpy ride. ||| Kemerini tak, yol çok inişli çıkışlı olacak.
+Repair the engine before we take off. ||| Havalanmadan önce motoru tamir et.
+Level the plane and stay on course. ||| Uçağı dengele ve rotanda kal.
+Drop anchor and secure the ropes. ||| Demir at ve halatları sabitle.
+Hoist the sails, we're leaving the harbor. ||| Yelkenleri aç, limandan ayrılıyoruz.
+Steer clear of the rocks. ||| Kayalardan uzak dur.
+Strip the wreck for spare parts. ||| Enkazı yedek parça için soy.
+Scavenge the abandoned cars for fuel. ||| Yakıt için terk edilmiş arabaları ara.
+Loot the bodies, but be quick about it. ||| Cesetleri yağmala ama çabuk ol.
+Gather wood and stone to build a shelter. ||| Bir barınak yapmak için odun ve taş topla.
+Plant the seeds and water them every day. ||| Tohumları ek ve her gün sula.
+Feed the horse before you set off. ||| Yola çıkmadan önce atı doyur.
+Bandage the wound to stop the bleeding. ||| Kanamayı durdurmak için yarayı sar.
+Eat something or you'll pass out. ||| Bir şeyler ye, yoksa bayılacaksın.
+Dress warmly; the nights get freezing up here. ||| Sıkı giyin; burada geceler buz gibi oluyor.
+Stay away from the glowing mushrooms. ||| Parlayan mantarlardan uzak dur.
+Mind the traps, they're everywhere. ||| Tuzaklara dikkat et, her yerdeler.
+Don't drink from that stream. ||| O dereden su içme.
+Keep an eye on your stamina bar. ||| Dayanıklılık çubuğuna göz at.
+Take shelter before the sandstorm hits. ||| Kum fırtınası vurmadan önce sığın.
+Mine the ore and smelt it down into ingots. ||| Cevheri çıkar ve külçe olması için eritip kalıba dök.
+Repair your gear at the anvil. ||| Ekipmanını örs başında onar.
+Add three iron bars to the recipe. ||| Tarife üç demir külçe ekle.
+Place the idol on the pedestal. ||| Putu kaideye yerleştir.
+Step on the plates in the right order. ||| Plakalara doğru sırayla bas.
+Solve the puzzle to unlock the door. ||| Kapının kilidini açmak için bulmacayı çöz.
+Examine the painting for hidden clues. ||| Gizli ipuçları için tabloyu incele.
+Talk to the villagers and ask about the stranger. ||| Köylülerle konuş ve yabancıyı sor.
+Bribe the guard with a few coins. ||| Muhafızı birkaç bozuk parayla rüşvetle ikna et.
+Convince him to let us through. ||| Onu bizi geçirmeye ikna et.
+Keep your promise to the old woman. ||| Yaşlı kadına verdiğin sözü tut.
+Choose your words carefully. ||| Sözlerini dikkatli seç.
+Tell the mayor what you saw. ||| Gördüklerini belediye başkanına anlat.
+Don't let him get away! ||| Kaçmasına izin verme!
+Chase him down before he reaches the border. ||| Sınıra varmadan onu yakala.
+Round up the survivors and bring them inside. ||| Hayatta kalanları topla ve içeri getir.

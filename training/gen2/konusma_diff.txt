@@ -1,0 +1,61 @@
+11	Move, move, move!	Hadi, hadi, hadi!	Hareket et, hareket et, hareket et!	
+30	Nice to meet you.	Tanıştığımıza memnun oldum.	Memnun oldum.	
+39	Are we there yet?	Geldik mi?	Daha varmadık mı?	
+41	Run!	Kaç!	Koş!	
+50	Man down!	Adam yaralandı!	Yaralı var!	
+55	All clear.	Her taraf temiz.	Her yer güvenli.	
+63	Thank goodness you're here.	İyi ki geldin.	Çok şükür geldin.	
+65	I owe you one.	Sana borçluyum.	Sana borcum var.	
+70	Excuse me, miss.	Pardon, bayan.	Affedersiniz, hanımefendi.	
+71	Pardon me.	Affedersiniz.	Pardon.	
+72	I beg your pardon?	Efendim, ne dediniz?	Efendim, nasıl?	
+73	Sorry about that.	Bunun için özür dilerim.	Bunun için üzgünüm.	
+77	It's okay.	Önemli değil.	Sorun değil.	
+82	I'm hungry.	Acıktım.	Karnım aç.	
+101	Which way is the harbor?	Liman hangi tarafta?	Liman hangi yönde?	
+135	Happy birthday!	Doğum günün kutlu olsun!	İyi ki doğdun!	
+140	Help yourself to some food.	Buyur, yemeklerden al.	Yemeklerden çekinmeden al.	
+159	We did it!	Yaptık!	Başardık!	
+161	Great job, everyone.	Herkese tebrikler, harika iş çıkardınız.	Hepinize aferin.	
+162	That was close.	Az kalsın.	Ucuz atlattık.	
+163	That was amazing!	Bu inanılmazdı!	Muhteşemdi!	
+170	Of course.	Tabii ki.	Elbette.	
+178	I think so.	Öyle sanıyorum.	Sanırım öyle.	
+181	I'm sure of it.	Bundan eminim.	Eminim.	
+183	Trust me.	Bana güven.	Güven bana.	
+191	Be quiet.	Sessiz ol.	Sus.	
+284	Thanks for coming.	Geldiğin için teşekkürler.	Geldiğin için sağ ol.	
+285	Thank you, kind stranger.	Teşekkürler, nazik yabancı.	Sağ ol, nazik yabancı.	
+286	Thanks anyway.	Yine de teşekkürler.	Yine de sağ ol.	
+288	I'm so sorry for your loss.	Kaybınız için çok üzgünüm.	Başınız sağ olsun.	
+299	How many are there?	Kaç kişiler?	Kaç tane var?	
+305	Who's there?	Kim o?	Kim var orada?	
+306	Whose coat is this?	Bu kimin paltosu?	Bu palto kimin?	
+312	Are they friendly?	Dost canlılar mı?	Dostane davranıyorlar mı?	
+329	Stop right there.	Tam orada dur.	Dur orada.	
+340	Never mind that now.	Şimdi onu bırak.	Şimdi boş ver.	
+342	Keep an eye on the door.	Kapıya göz kulak ol.	Kapıyı gözle.	
+345	Hang on!	Tutun!	Dayan!	
+353	Pick it up.	Onu al.	Al onu.	
+355	Throw me the rope.	Halatı at bana.	Bana ipi at.	
+358	Take the left path.	Soldaki yolu tut.	Sol yoldan git.	
+372	He's down.	Düştü.	Yere yığıldı.	
+373	I got him.	Onu vurdum.	Hallettim.	
+375	Contact!	Temas var!	Düşman var!	
+388	Oh no.	Eyvah.	Ah hayır.	
+398	Poor thing.	Zavallıcık.	Zavallı şey.	
+428	I'm home!	Eve geldim!	Evdeyim!	
+432	I think I'm lost.	Galiba kayboldum.	Sanırım kayboldum.	
+438	I need some air.	Biraz hava almam lazım.	Biraz temiz havaya ihtiyacım var.	
+455	I love this song.	Bu şarkıyı çok seviyorum.	Bu şarkıya bayılıyorum.	
+478	Sorry, I'm late.	Pardon, geciktim.	Üzgünüm, geciktim.	
+498	He told me you were the one who found the lost child in the forest.	Kayıp çocuğu ormanda bulanın sen olduğunu söyledi.	Ormanda kaybolan çocuğu senin bulduğunu söyledi bana.	
+499	You don't have to say anything now; just think about what I told you.	Şimdi bir şey söylemen gerekmiyor, sadece sana söylediklerimi düşün.	Şimdi bir şey söylemek zorunda değilsin, sadece sana anlattıklarımı bir düşün.	
+503	She hasn't spoken to her brother since the day he left the village.	Köyden ayrıldığı günden beri erkek kardeşiyle konuşmadı.	Kardeşi köyden ayrıldığından beri onunla konuşmadı.	
+526	Excuse me, I think you dropped this when you were leaving the store.	Pardon, sanırım mağazadan çıkarken bunu düşürdünüz.	Affedersiniz, mağazadan çıkarken bunu düşürmüşsünüz sanırım.	
+564	Looking to buy or sell?	Alıcı mısın satıcı mı?	Almak mı satmak mı istiyorsun?	
+567	Thanks for your business.	Alışverişiniz için teşekkürler.	Bizi tercih ettiğin için sağ ol.	
+595	Count off.	Sayın.	Numara sayın.	
+596	Stay alert.	Tetikte kalın.	Teyakkuzda kal.	
+598	Watch the rooftops.	Çatılara dikkat edin.	Çatıları gözle.	
+614	It's too quiet.	Çok sessiz.	Fazla sessiz.	

@@ -1,0 +1,101 @@
+Subtitles: Off ||| Altyazılar: Kapalı
+Subtitle Size: Large ||| Altyazı boyutu: Büyük
+Subtitle Opacity ||| Altyazı opaklığı
+Closed Captions ||| Kapalı altyazı
+Show sound effect captions. ||| Ses efekti altyazılarını göster.
+Display speaker names in subtitles. ||| Altyazılarda konuşmacı adlarını göster.
+Adjust the size of the on-screen text. ||| Ekrandaki yazının boyutunu ayarla.
+Enable this option to hear menu text read aloud. ||| Menü metinlerinin sesli okunması için bu seçeneği aç.
+Reduce flashing lights for photosensitivity. ||| Işığa duyarlılık için yanıp sönen ışıkları azalt.
+Simplified controls ||| Basitleştirilmiş kontroller
+One-handed mode ||| Tek elle oynama modu
+Auto-aim ||| Otomatik nişan
+Skip QTE events ||| Hızlı tuş olaylarını atla
+Hold instead of mash ||| Art arda basmak yerine basılı tut
+Slow game speed ||| Oyun hızını yavaşlat
+Text Size: Medium ||| Yazı boyutu: Orta
+Interface Scale ||| Arayüz ölçeği
+HUD Opacity ||| HUD saydamlığı
+Hide HUD ||| HUD'u gizle
+Crosshair Style ||| Artı imleç stili
+Crosshair Color ||| Artı imleç rengi
+Show tutorial hints ||| Eğitim ipuçlarını göster
+Enable tooltips ||| Araç ipuçlarını etkinleştir
+Show button prompts ||| Düğme ipuçlarını göster
+Input Device ||| Giriş aygıtı
+Keyboard and Mouse ||| Klavye ve fare
+Gamepad ||| Oyun kolu
+Primary Fire ||| Birincil ateş
+Secondary Fire ||| İkincil ateş
+Move Forward ||| İleri git
+Move Backward ||| Geri git
+Strafe Left ||| Sola kay
+Strafe Right ||| Sağa kay
+Press a key to bind. ||| Atamak için bir tuşa bas.
+This key is already in use. ||| Bu tuş zaten kullanımda.
+Click to rebind. ||| Yeniden atamak için tıkla.
+Unbound ||| Atanmamış
+Master volume set to 80%. ||| Ana ses %80'e ayarlandı.
+Resolution changed. Keep these settings? ||| Çözünürlük değişti. Bu ayarlar korunsun mu?
+Reverting in 10 seconds... ||| 10 saniye içinde eski haline dönülüyor...
+Graphics Preset: Ultra ||| Grafik ön ayarı: Ultra
+Performance Mode ||| Performans modu
+Quality Mode ||| Kalite modu
+Ray Tracing ||| Işın izleme
+Upscaling ||| Çözünürlük artırma
+Your graphics card does not support this feature. ||| Ekran kartın bu özelliği desteklemiyor.
+A restart is required for changes to apply. ||| Değişikliklerin uygulanması için yeniden başlatma gerekiyor.
+Save Slot 1 ||| Kayıt yuvası 1
+Empty Slot ||| Boş yuva
+Last saved: 2 hours ago ||| Son kayıt: 2 saat önce
+Play time: 14h 32m ||| Oynama süresi: 14 sa 32 dk
+Chapter 4: The Long Night ||| Bölüm 4: Uzun gece
+Prologue ||| Prolog
+Epilogue ||| Epilog
+Skip intro ||| Girişi geç
+Press ENTER to skip. ||| Geçmek için ENTER'a bas.
+Press SPACE to continue. ||| Devam etmek için BOŞLUK'a bas.
+Hold to skip dialogue. ||| Diyaloğu geçmek için basılı tut.
+Skip cutscene? ||| Ara sahne geçilsin mi?
+Auto-advance dialogue ||| Diyaloğu otomatik ilerlet
+Dialogue History ||| Diyalog geçmişi
+Choose a response. ||| Bir cevap seç.
+Your choice will affect the story. ||| Seçimin hikâyeyi etkileyecek.
+This decision cannot be changed later. ||| Bu karar daha sonra değiştirilemez.
+Relationship with Mara has improved. ||| Mara ile ilişkin gelişti.
+The guard will remember this. ||| Muhafız bunu unutmayacak.
+You lost 50 reputation with the Guild. ||| Loncadaki itibarından 50 puan kaybettin.
+Reputation: Friendly ||| İtibar: Dostane
+Reputation: Hostile ||| İtibar: Düşmanca
+Time: 14:30 ||| Saat: 14:30
+Day 12 ||| 12. gün
+It is getting dark. Find shelter soon. ||| Hava kararıyor. Yakında bir barınak bul.
+Weather: Rain ||| Hava: Yağmurlu
+The storm is approaching. ||| Fırtına yaklaşıyor.
+You feel cold. Light a fire. ||| Üşüyorsun. Bir ateş yak.
+You are hungry. ||| Acıktın.
+You are very thirsty. ||| Çok susadın.
+You are exhausted and need rest. ||| Bitkinsin ve dinlenmen gerek.
+Press Z to sleep until morning. ||| Sabaha kadar uyumak için Z'ye bas.
+Rest complete. Health restored. ||| Dinlenme tamamlandı. Can yenilendi.
+Fast travel unlocked. ||| Hızlı yolculuk açıldı.
+Fast travel to Riverwood? ||| Riverwood'a hızlı yolculuk yapılsın mı?
+You cannot fast travel while in combat. ||| Savaş sırasında hızlı yolculuk yapamazsın.
+Waypoint set. ||| Yol noktası belirlendi.
+Distance to waypoint: 1.2 km ||| Yol noktasına mesafe: 1,2 km
+Marker placed on the map. ||| Harita üzerine işaret konuldu.
+You have entered a restricted area. ||| Yasak bölgeye girdin.
+Turn back now or be shot. ||| Hemen geri dön, yoksa vurulursun.
+Locked. Requires a key. ||| Kilitli. Anahtar gerekiyor.
+Lockpicking: Hard ||| Kilit açma: Zor
+Door unlocked. ||| Kapının kilidi açıldı.
+The chest is empty. ||| Sandık boş.
+You found 120 gold. ||| 120 altın buldun.
+Picked up: Health Potion x2 ||| Alındı: Can iksiri x2
+Loot all ||| Hepsini al
+Take ||| Al
+Nothing to loot. ||| Yağmalanacak bir şey yok.
+Press E to pick up. ||| Almak için E'ye bas.
+Press E to enter the vehicle. ||| Araca binmek için E'ye bas.
+Press F to light the torch. ||| Meşaleyi yakmak için F'ye bas.
+Press 1 to select the pistol. ||| Tabancayı seçmek için 1'e bas.

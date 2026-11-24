@@ -1,0 +1,37 @@
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\marian\tokenization_marian.py:176: UserWarning: Recommended: pip install sacremoses.
+  warnings.warn("Recommended: pip install sacremoses.")
+Loading weights:   0%|          | 0/257 [00:00<?, ?it/s]Loading weights:  45%|####4     | 115/257 [00:00<00:00, 1082.99it/s]Loading weights:  87%|########7 | 224/257 [00:00<00:00, 761.34it/s] Loading weights: 100%|##########| 257/257 [00:00<00:00, 717.33it/s]
+2196 eğitim (1856 oyun + 340 tekrar), 206 doğrulama, cihaz: cuda
+      Brian: But the count was good. Right, Donnie? I mean, the count was good?  ->  Brian: Ama kont iyiydi. Değil mi Donnie? Yani, kont iyi miydi?
+      We need to make the drop before sunrise.  ->  Güneş doğmadan önce damlayı yapmamız lazım.
+      Heat's on us. Cops are everywhere.  ->  Isı bizden. Polisler her yerde.
+      This job is a clean score. No witnesses.  ->  Bu iş temiz bir iş. Tanık yok.
+      Drop the gun! Now!  ->  At silahını! Şimdi!
+      Watch your six! Behind you!  ->  Altınıza dikkat edin! Arkanda!
+[eğitimsiz] zor satırlar (test)  59.7 | doğrulama  60.8 | genel konuşma  90.0 | eski davranışı koruma 100.0
+-- tur 1: eğitim kaybı 0.801 (39 sn)
+      Brian: But the count was good. Right, Donnie? I mean, the count was good?  ->  Brian: Ama kont iyiydi. Değil mi Donnie? Kont iyi miydi?
+      We need to make the drop before sunrise.  ->  Gün doğmadan damlayı düşürmemiz lazım.
+      Heat's on us. Cops are everywhere.  ->  Üzerimizde ateş var. Polis her yerde.
+      This job is a clean score. No witnesses.  ->  Bu iş temiz bir skor. Tanık yok.
+      Drop the gun! Now!  ->  Silahı bırak! Şimdi!
+      Watch your six! Behind you!  ->  Altına dikkat et! Arkanda!
+[tur 1] zor satırlar (test)  59.0 | doğrulama  65.5 | genel konuşma  87.0 | eski davranışı koruma  91.4
+-- tur 2: eğitim kaybı 0.478 (39 sn)
+      Brian: But the count was good. Right, Donnie? I mean, the count was good?  ->  Brian: Ama kont iyiydi. Değil mi Donnie? Kont iyi miydi?
+      We need to make the drop before sunrise.  ->  Gün doğmadan damlayı düşürmemiz lazım.
+      Heat's on us. Cops are everywhere.  ->  Üzerimizde ateş var. Polis her yerde.
+      This job is a clean score. No witnesses.  ->  Bu iş temiz bir skor. Tanık yok.
+      Drop the gun! Now!  ->  Silahı bırak! Şimdi!
+      Watch your six! Behind you!  ->  Altına dikkat et! Arkanda!
+[tur 2] zor satırlar (test)  61.1 | doğrulama  66.4 | genel konuşma  83.6 | eski davranışı koruma  90.6
+-- tur 3: eğitim kaybı 0.350 (39 sn)
+      Brian: But the count was good. Right, Donnie? I mean, the count was good?  ->  Brian: Ama kont iyiydi. Değil mi Donnie? Kont iyi miydi?
+      We need to make the drop before sunrise.  ->  Gün doğmadan damlayı düşürmemiz lazım.
+      Heat's on us. Cops are everywhere.  ->  Üzerimizde ateş var. Polis her yerde.
+      This job is a clean score. No witnesses.  ->  Bu iş temiz bir skor. Tanık yok.
+      Drop the gun! Now!  ->  Silahı bırak! Şimdi!
+      Watch your six! Behind you!  ->  Altına dikkat et! Arkanda!
+[tur 3] zor satırlar (test)  61.8 | doğrulama  66.9 | genel konuşma  79.4 | eski davranışı koruma  90.0
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|##########| 1/1 [00:01<00:00,  1.14s/it]Writing model shards: 100%|##########| 1/1 [00:01<00:00,  1.14s/it]
+kaydedildi: models_ft/opus-mt-en-tr-games-v3

@@ -1,0 +1,87 @@
+Mission briefing: the target is a courier named Vasquez. ||| Görev bilgilendirmesi: Hedef, Vasquez adında bir kurye.
+Your objective is to retrieve the drive without raising the alarm. ||| Amacın alarmı çaldırmadan sürücüyü ele geçirmek.
+Secondary objective: photograph the shipping manifest. ||| İkincil hedef: Sevkiyat belgesinin fotoğrafını çek.
+Optional: find all five hidden journals. ||| İsteğe bağlı: Gizlenmiş beş günlüğün hepsini bul.
+Failure is not an option. ||| Başarısızlık söz konusu bile değil.
+Mission failed. You were spotted. ||| Görev başarısız. Fark edildin.
+Area cleared. You may proceed. ||| Bölge temizlendi. İlerleyebilirsin.
+Enemy reinforcements incoming! ||| Düşman takviyesi geliyor!
+Enemy spotted at two o'clock. ||| Saat ikide düşman var.
+Contact! Eleven o'clock, behind the truck. ||| Temas! Saat on birde, kamyonun arkasında.
+They're flanking us on the right! ||| Sağdan bizi kuşatıyorlar!
+I've got you covered. Go! ||| Seni kolluyorum. Git!
+Moving up. Cover me. ||| İlerliyorum. Beni kolla.
+Reloading! ||| Şarjör değiştiriyorum!
+I'm hit! I need a medic! ||| Vuruldum! Bir sıhhiyeci lazım!
+Man down! ||| Yaralı var!
+Get him to cover and stop the bleeding. ||| Onu sığınağa götür ve kanamayı durdur.
+We've got a runner! Cut him off! ||| Kaçan var! Yolunu kesin!
+He's heading for the alley. Don't let him escape. ||| Ara sokağa doğru gidiyor. Kaçmasına izin verme.
+Out of ammo! Switch to your pistol! ||| Mermim bitti! Tabancana geç!
+Fire in the hole! ||| Patlıyor, uzak durun!
+Fall back to the tree line, we'll regroup there. ||| Ağaç hattına çekilin, orada toparlanırız.
+Retreat! Everyone to the boats! ||| Geri çekilin! Herkes botlara!
+We're going loud. Weapons free. ||| Sesli gidiyoruz. Ateş serbest.
+Weapons tight. Only fire if fired upon. ||| Ateş kısıtlı. Yalnızca karşı ateşe maruz kalırsan ateş et.
+Stay frosty, people. ||| Tetikte kalın, millet.
+Keep your eyes peeled for tripwires. ||| Tuzak teline karşı gözlerini dört aç.
+Watch your step, the ground is mined. ||| Nereye bastığına dikkat et, zemin mayınlı.
+I'll hold them off. You get the civilians out. ||| Onları ben oyalarım. Sen sivilleri dışarı çıkar.
+Get the wounded out first. ||| Önce yaralıları dışarı çıkar.
+Leave me. Save yourself. ||| Beni bırak. Kendini kurtar.
+Take the south tunnel; it should be unguarded. ||| Güney tünelinden git; korumasız olmalı.
+Shut the door behind you. ||| Arkandan kapıyı kapat.
+Lock the gate and throw away the key. ||| Kapıyı kilitle ve anahtarı at.
+Hide in the cupboard and don't make a sound. ||| Dolaba saklan ve ses çıkarma.
+Crawl under the fence and keep low. ||| Çitin altından sürün ve alçak kal.
+Wait until the dogs are gone, then run for the trees. ||| Köpekler gidene kadar bekle, sonra ağaçlara doğru koş.
+Move only when the light turns green. ||| Işık yeşile dönünce hareket et.
+Stay behind the line and wait for the whistle. ||| Çizginin arkasında kal ve düdüğü bekle.
+Hold the button to charge your shot. ||| Atışını doldurmak için tuşu basılı tut.
+Release to fire. ||| Ateş etmek için bırak.
+Match the symbols to unlock the chest. ||| Sandığın kilidini açmak için sembolleri eşleştir.
+Rotate the dial until you hear a click. ||| Tık sesi duyana kadar kadranı çevir.
+Aim at the glowing barrel and shoot. ||| Parlayan varile nişan al ve ateş et.
+Stand on the platform to activate it. ||| Etkinleştirmek için platforma çık.
+Push the crate onto the pressure plate. ||| Sandığı basınç plakasına doğru it.
+Use the grappling hook to reach the ledge. ||| Çıkıntıya ulaşmak için kancalı halatı kullan.
+Jump on the enemy's head to defeat it. ||| Yenmek için düşmanın kafasına zıpla.
+Collect all the coins before the timer ends. ||| Süre bitmeden bütün altınları topla.
+Choose your class and customize your character. ||| Sınıfını seç ve karakterini özelleştir.
+Invite a friend to join your party. ||| Partine katılması için bir arkadaşını davet et.
+Wait for the other players to be ready. ||| Diğer oyuncuların hazır olmasını bekle.
+Revive downed teammates by holding the use key. ||| Yere düşmüş takım arkadaşlarını kullan tuşunu basılı tutarak ayağa kaldır.
+Ping an enemy to let your team know. ||| Takımına haber vermek için düşmanı işaretle.
+Cook the fish before you eat it. ||| Balığı yemeden önce pişir.
+Season the meat with salt to make it last longer. ||| Daha uzun dayanması için etin üstüne tuz serp.
+Hang the meat to dry for three days. ||| Eti üç gün kurumaya asılı bırak.
+Boil the bandages to keep them clean. ||| Temiz kalsınlar diye sargıları kaynat.
+Scrape the bark off the tree to make tinder. ||| Çıra yapmak için ağacın kabuğunu kazı.
+Rub two sticks together to start a fire. ||| Ateş yakmak için iki çubuğu birbirine sürt.
+Pitch the tent on higher ground. ||| Çadırı yüksek bir yere kur.
+Pack the wound with moss to slow the bleeding. ||| Kanamayı yavaşlatmak için yarayı yosunla doldur.
+Wait for low tide before you cross. ||| Karşıya geçmeden önce cezirin çekilmesini bekle.
+Tie the boat to the post. ||| Tekneyi direğe bağla.
+Throw me a rope! ||| Bana bir ip at!
+Start the engine and let it warm up. ||| Motoru çalıştır ve ısınmasına izin ver.
+Shift into second gear on the hill. ||| Yokuşta ikinci vitese geç.
+Stay in your lane and keep it steady. ||| Şeridinde kal ve düzgün sür.
+Run the red light; we're being followed. ||| Kırmızı ışıkta geç; takip ediliyoruz.
+Park it and leave the keys in the ignition. ||| Park et ve anahtarları kontakta bırak.
+Take the back roads to avoid the roadblock. ||| Barikattan kaçınmak için arka yolları kullan.
+Rev the engine and wait for my signal. ||| Motoru yükselt ve işaretimi bekle.
+Ditch the bike and take cover in the ravine. ||| Motoru bırak ve dereye sığın.
+Get in! We're leaving! ||| Bin! Gidiyoruz!
+Time to move. Come on, up and at 'em. ||| Kalkma vakti. Hadi, kalk ve işe koyul.
+Sound off when you're in position. ||| Mevzilenince haber ver.
+Keep the channel clear for emergency traffic. ||| Kanalı acil trafik için boş bırak.
+Switch to channel four and wait for orders. ||| Dördüncü kanala geç ve emir bekle.
+Confirm your location and status. ||| Konumunu ve durumunu doğrula.
+Give me a sitrep. ||| Bana durum raporu ver.
+Report any suspicious activity immediately. ||| Şüpheli bir hareket görürsen hemen bildir.
+Keep me posted. ||| Beni bilgilendirmeye devam et.
+Check in every ten minutes. ||| Her on dakikada bir yoklama ver.
+Stand by for orders. ||| Emirler için hazır bekle.
+Wait for the green light. ||| Yeşil ışığı bekle.
+Good luck out there. You're going to need it. ||| Orada bol şans. Buna ihtiyacın olacak.
+Make it count. ||| Her şeyini ortaya koy.

@@ -1,0 +1,37 @@
+Update your journal once you've talked to the elder. ||| Büyükle konuştuktan sonra günlüğünü güncelle.
+Sneak into the manor and steal the ledger. ||| Konağa gizlice gir ve defteri çal.
+Lie in wait by the road and strike when the carriage passes. ||| Yolda pusu kur ve araba geçerken saldır.
+Take down the watchtower to open the way. ||| Yolu açmak için gözetleme kulesini yık.
+Get in close and use the knife. ||| Yakına sokul ve bıçağı kullan.
+Slow down and let the patrol move on. ||| Yavaşla ve devriyenin geçip gitmesine izin ver.
+Duck into the alley before they spot you. ||| Seni görmeden önce ara sokağa dal.
+Creep along the wall until you reach the door. ||| Kapıya varana kadar duvar boyunca sinsice ilerle.
+Sit this one out; you're still hurt. ||| Bu seferlik sen oturma; hâlâ yaralısın.
+Square up with him and see what he wants. ||| Onunla yüzleş ve ne istediğini gör.
+Look into the disappearance of the baker's son. ||| Fırıncının oğlunun kayboluşunu araştır.
+Hunt down the bandits who raided the farm. ||| Çiftliği basan haydutları avla.
+Root out the traitor among the guards. ||| Muhafızlar arasındaki hainin kökünü kurut.
+Win over the villagers before the election. ||| Seçimden önce köylülerin gönlünü kazan.
+Break into the lab and steal the prototype. ||| Laboratuvara sız ve prototipi çal.
+Blow the door open with the explosives. ||| Kapıyı patlayıcıyla havaya uçur.
+Blow up the bridge once the convoy is across. ||| Konvoy karşıya geçince köprüyü patlat.
+Cut through the fence with the wire cutters. ||| Tel makasıyla çiti kes.
+Tag along behind the merchants to get past the border. ||| Sınırı geçmek için tüccarların peşine takıl.
+Stick together and don't wander off. ||| Birlikte kalın ve ayrı düşmeyin.
+Give the signal when the coast is clear. ||| Ortalık sakinleşince işareti ver.
+Take the stairs; the elevator is being watched. ||| Merdivenleri kullan; asansör izleniyor.
+Ease the door open and peek inside. ||| Kapıyı yavaşça aç ve içeri bak.
+Stay calm and let them think they've won. ||| Sakin kal ve kazandıklarını sanmalarına izin ver.
+Go easy on the potions; they're hard to come by. ||| İksirleri idareli kullan; bulması zor.
+Hand over the goods and nobody gets hurt. ||| Malları teslim et, kimse zarar görmesin.
+Throw down your sword and kneel. ||| Kılıcını yere at ve diz çök.
+Wrap it up quickly; the boat leaves at dawn. ||| İşi çabuk bitir; tekne şafakta kalkıyor.
+Set the charges and clear the area. ||| Patlayıcıları yerleştir ve bölgeyi boşalt.
+Take a look around and see if you can find another way in. ||| Etrafa bir göz at ve içeri girmek için başka bir yol bulabilecek misin bak.
+Stock the cellar and bar the windows for winter. ||| Kışa hazırlık olarak mahzeni doldur ve pencerelere sürgü vur.
+Sort through the pile and keep only the good furs. ||| Yığını ayıkla ve sadece iyi postları tut.
+Haul the crates up to the loft. ||| Sandıkları çatı katına taşı.
+Bring the herbs to the healer and ask for a remedy. ||| Otları şifacıya götür ve ondan bir ilaç iste.
+Keep to the shadows and avoid the main square. ||| Gölgelerde kal ve ana meydandan kaçın.
+Lead them away from the camp and lose them in the forest. ||| Onları kamptan uzaklaştır ve ormanda atlat.
+Whatever happens, don't open that door. ||| Ne olursa olsun, o kapıyı açma.

@@ -1,0 +1,124 @@
+Görev bilgilendirmesi: hedef Vasquez adında bir kurye.
+Amacın, alarmı çaldırmadan sürücüyü ele geçirmek.
+İkincil hedef: sevkiyat manifestosunun fotoğrafını çek.
+İsteğe bağlı: gizli beş günlüğün hepsini bul.
+Başarısızlık söz konusu bile olamaz.
+Görev başarısız. Fark edildin.
+Bölge temizlendi. İlerleyebilirsin.
+Düşman takviyesi geliyor!
+Saat iki yönünde düşman var.
+Temas! Saat on bir yönünde, kamyonun arkasında.
+Sağdan kuşatıyorlar!
+Seni kolluyorum. Git!
+İlerliyorum. Beni kolla.
+Mermi dolduruyorum!
+Vuruldum! Sıhhiyeci lazım!
+Adam yaralandı!
+Onu siperin arkasına çek ve kanamayı durdur.
+Biri kaçıyor! Yolunu kes!
+Ara sokağa doğru gidiyor. Kaçmasına izin verme.
+Mermim bitti! Tabancana geç!
+Ateş geliyor!
+Ağaç hattına çekilin, orada yeniden toplanırız.
+Geri çekilin! Herkes botlara!
+Gürültülü gireceğiz. Serbest ateş.
+Sıkı ateş kuralı. Yalnızca ateş edilirse karşılık verin.
+Tetikte kalın, millet.
+Tuzak tellerine karşı gözünü dört aç.
+Dikkat et, zemin mayınlı.
+Ben onları oyalarım. Sen siviller çıkar.
+Önce yaralıları çıkar.
+Beni bırak. Kendini kurtar.
+Güney tünelini kullan; orada nöbetçi olmamalı.
+Arkandan kapıyı kapat.
+Kapıyı kilitle ve anahtarı at.
+Dolabın içine saklan ve ses çıkarma.
+Çitin altından sürün ve alçakta kal.
+Köpekler gidene kadar bekle, sonra ağaçlara koş.
+Işık yeşile dönünce hareket et.
+Çizginin arkasında kal ve düdüğü bekle.
+Atışını doldurmak için tuşu basılı tut.
+Ateşlemek için bırak.
+Sandığı açmak için sembolleri eşleştir.
+Bir tık sesi duyana kadar kadranı çevir.
+Parlayan varile nişan al ve ateş et.
+Etkinleştirmek için platformun üzerinde dur.
+Sandığı basınç plakasının üzerine it.
+Çıkıntıya ulaşmak için kanca halatını kullan.
+Düşmanı yenmek için başına zıpla.
+Süre bitmeden bütün altınları topla.
+Sınıfını seç ve karakterini özelleştir.
+Bir arkadaşını grubuna davet et.
+Diğer oyuncuların hazır olmasını bekle.
+Yere düşen takım arkadaşlarını kullanma tuşuna basılı tutarak ayağa kaldır.
+Takımının bilmesi için bir düşmanı işaretle.
+Balığı yemeden önce pişir.
+Daha uzun dayansın diye eti tuzla.
+Eti üç gün kurumaya as.
+Sargıları temiz kalsın diye kaynat.
+Çıra yapmak için ağacın kabuğunu kazı.
+Ateş yakmak için iki çubuğu birbirine sürt.
+Çadırı daha yüksek bir yere kur.
+Kanamayı yavaşlatmak için yarayı yosunla doldur.
+Karşıya geçmeden önce suyun çekilmesini bekle.
+Tekneyi direğe bağla.
+Bana bir ip at!
+Motoru çalıştır ve ısınmasını bekle.
+Yokuşta ikinci vitese geç.
+Şeridinde kal ve sabit git.
+Kırmızı ışıkta geç; takip ediliyoruz.
+Arabayı park et ve anahtarları kontakta bırak.
+Barikattan kaçınmak için ara yolları kullan.
+Motoru yükselt ve benim işaretimi bekle.
+Motosikleti bırak ve vadide siper al.
+Bin! Gidiyoruz!
+Gitme vakti. Hadi, kalkın bakalım.
+Mevzilenince haber ver.
+Acil durum trafiği için kanalı boş tut.
+Dördüncü kanala geç ve emirleri bekle.
+Konumunu ve durumunu doğrula.
+Bana bir durum raporu ver.
+Şüpheli bir hareket olursa hemen bildir.
+Beni haberdar et.
+Her on dakikada bir rapor ver.
+Emirleri bekle.
+Yeşil ışığı bekle.
+Orada bol şans. Sana lazım olacak.
+Değerlendir bu fırsatı.
+Yaşlıyla konuştuktan sonra günlüğünü güncelle.
+Konağa sız ve defteri çal.
+Yolda pusuya yat ve araba geçince saldır.
+Yolu açmak için gözetleme kulesini indir.
+Yaklaş ve bıçağı kullan.
+Yavaşla ve devriyenin geçmesine izin ver.
+Seni görmeden ara sokağa dal.
+Kapıya varana kadar duvar boyunca sürün.
+Bu seferlik kenarda dur; hâlâ yaralısın.
+Onunla yüzleş ve ne istediğine bak.
+Fırıncının oğlunun kayboluşunu araştır.
+Çiftliğe baskın yapan haydutları avla.
+Muhafızlar arasındaki hainin kökünü kazı.
+Seçimden önce köylüleri kazan.
+Laboratuvara gir ve prototipi çal.
+Kapıyı patlayıcıyla havaya uçur.
+Konvoy geçtikten sonra köprüyü havaya uçur.
+Teli tel makasıyla kes.
+Sınırı geçmek için tüccarların peşine takıl.
+Birlikte kalın, dağılmayın.
+Ortalık sakinleşince işaret ver.
+Merdivenleri kullan; asansör gözetleniyor.
+Kapıyı usulca aç ve içeri bak.
+Sakin ol ve kazandıklarını sanmalarına izin ver.
+İksirleri idareli kullan; bulması zor.
+Malları teslim et, kimsenin canı yanmasın.
+Kılıcını bırak ve diz çök.
+İşi çabuk bitir; tekne şafakta kalkıyor.
+Patlayıcıları yerleştir ve bölgeden uzaklaş.
+Etrafa bir bak, içeri girmenin başka bir yolu var mı?
+Kış için mahzeni doldur ve pencerelere sürgü vur.
+Yığını ayıkla ve sadece iyi kürkleri ayır.
+Sandıkları çatı katına çıkar.
+Otları şifacıya götür ve bir ilaç iste.
+Gölgelerde kal ve ana meydandan uzak dur.
+Onları kamptan uzağa çek ve ormanda kaybet.
+Ne olursa olsun o kapıyı açma.

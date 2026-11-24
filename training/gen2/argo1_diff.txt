@@ -1,0 +1,221 @@
+1	Damn, that was close.	Hay aksi, ucuz atlattık.	Kahretsin, ucuz kurtulduk.	
+5	That's sick, man! Do it again!	Çok manyakça, abi! Bir daha yap!	Müthiş be adam! Bir daha yap!	
+7	Oh, shit. Here they come.	Hay sıçtığım, geliyorlar.	Ah, siktir. Geliyorlar.	
+9	Get lost, you little twerp.	Defol git, ufaklık.	Defol git, seni küçük pislik.	
+12	Man, this place is a dump.	Abi, burası tam bir çöplük.	Ahbap, burası çöplük gibi.	
+13	Y'all better git on outta here.	Siz bence hemen buradan sıvışın.	Hepiniz çekip gitseniz iyi olur.	
+15	Well, ain't you just a ray of sunshine.	Vay, sen tam bir neşe kaynağısın bakıyorum.	Vay, tam bir güneş ışığısın.	
+17	Nice shot, buddy!	Güzel atış, dostum!	Güzel atış, ahbap!	
+18	That was dope, bro.	Efsaneydi kardeşim.	Bu çok baba, kardeşim.	
+20	You're dead meat, pal.	Sen öldün, dostum.	Ölü etisin, dostum.	
+22	Cheeky bastard, aren't you?	Pek de yüzsüzmüşsün.	Terbiyesiz herif, değil mi?	
+27	Yo, what's good, homie?	Yo, ne haber ahbap?	Ey, ne var ne yok, kanka?	
+34	Told you so, genius.	Sana demiştim, dahi seni.	Demiştim sana, dahi.	
+35	Take that, you coward!	Al sana, alçak herif!	Al sana, korkak!	
+37	Sod off, you wanker.	Defol, seni pislik.	Siktir git, seni pislik.	
+41	He's absolutely knackered.	Adam tamamen bitmiş durumda.	Adamın canı çıkmış.	
+42	Right, you lot, listen up.	Pekâlâ, hepiniz beni dinleyin.	Pekâlâ, dinleyin bakalım.	
+43	Cut the crap and tell me where he is.	Boş lafı bırak da bana onun nerede olduğunu söyle.	Saçmalamayı kes de nerede olduğunu söyle.	
+44	Is that all you've got?	Bütün gücün bu mu?	Elindeki bu kadar mı?	
+47	That's messed up, man.	Bu çok iğrenç, abi.	Bu çok rezil, adamım.	
+48	Don't you dare walk away from me.	Sakın yanımdan öyle gitmeye kalkma.	Sakın benden uzaklaşayım deme.	
+59	Lay off me, will you?	Yakamı bırak, olur mu?	Çek elini üstümden, tamam mı?	
+62	Nobody messes with my crew.	Kimse ekibimle uğraşamaz.	Çetemle kimse uğraşamaz.	
+66	That boy ain't got the sense he was born with.	O çocukta zerre akıl yok.	O çocuğun aklı yok.	
+67	Bless your heart, you tried.	Allah razı olsun, denedin bari.	Aferin sana, denedin ya.	
+69	Pipe down, will ya?	Sesini kes artık, tamam mı?	Sus bakalım, tamam mı?	
+74	That was a sweet move!	Harika bir hamleydi!	Çok iyi hamleydi!	
+76	Get a load of this guy!	Şu herife bakın hele!	Şu adama bak!	
+78	You're toast now.	Artık işin bitti.	Şimdi yandın.	
+81	What a jerk!	Ne ahmak adam!	Ne pislik herif!	
+83	Do I look like I care?	Umurumda gibi mi görünüyor?	Umurumda mı sanıyorsun?	
+89	Don't be so dramatic.	Bu kadar dramatik olma.	O kadar abartma.	
+90	Whoa, easy now, I didn't mean it.	Hop, yavaş ol, öyle demek istemedim.	Hoop, sakin ol, kastetmedim.	
+92	Hell yeah, let's go!	Kesinlikle, haydi gidelim!	Evet be, hadi gidelim!	
+95	You've lost your marbles, haven't you?	Sen iyice kafayı yemişsin, değil mi?	Aklını kaçırmışsın, değil mi?	kafayı yemek
+96	He totally lost it when he saw the bill.	Hesabı görünce tepesi attı.	Hesabı görünce tamamen çıldırdı.	tepesi atmak
+99	Bro, you killed it out there!	Abi, orada ortalığı kırıp geçirdin!	Kardeşim, orada ortalığı yıktın!	
+105	Looks like somebody woke up on the wrong side of the bed.	Birisi yataktan ters tarafından kalkmış galiba.	Sanki biri yataktan sol ayağıyla kalkmış.	
+106	You wish!	Hadi ordan!	Hayal gör!	
+107	Quit yapping and move.	Gevezeliği bırak ve hareket et.	Çenen kapat da yürü.	
+108	Man, he's loaded.	Abi, adamın parası dibine kadar var.	Ahbap, adamın cebi dolu.	
+110	She's got a mouth on her.	Kızın dili de bir yaman.	Ağzı bozuk bir kız.	
+115	No cap, that was the best fight I've ever seen.	Yalan yok, bu şimdiye kadar gördüğüm en iyi dövüştü.	Yemin ederim, hayatımda gördüğüm en iyi dövüştü.	
+117	You're such a snob.	Burnun ne kadar havada.	Ne kadar züppesin.	
+119	Oh, you've got to be kidding me.	Şaka yapıyor olmalısın.	Dalga geçiyorsun herhalde.	
+122	Don't mess with the best, punk.	En iyiyle uğraşma, ufaklık.	En iyisiyle uğraşma, serseri.	
+124	Get out of my face.	Çık karşımdan.	Çekil gözümün önünden.	
+127	I'll bet you five bucks he chickens out.	Beş dolara iddiaya girerim, korkup vazgeçecek.	Beş papele bahse girerim korkup kaçacak.	
+129	Hell, I've seen worse.	Valla daha kötüsünü de gördüm.	Daha kötülerini gördüm.	
+130	That's what I'm talking about!	İşte bundan bahsediyorum!	İşte ben buna derim!	
+132	What a mess you've made.	Ne büyük bir karmaşa çıkardın.	Ne ortalık bırakmışsın.	
+134	Yeah, you better run!	Evet, kaçsan iyi edersin!	Evet, kaç bakalım!	
+137	You're pathetic, you know that?	Acınacak haldesin, biliyor musun?	Zavallısın, biliyor musun?	
+139	Gee whiz, that's a big dog.	Vay be, ne kadar büyük köpek.	Ooo, ne büyük köpek.	
+141	You better watch your back.	Arkana dikkat etsen iyi olur.	Sırtını kollasan iyi olur.	
+147	He's a pushover.	Adam çok yumuşak başlı.	Adam kolay lokma.	
+148	This stinks, man. We're stuck.	Bu berbat, abi. Sıkıştık.	Bu iğrenç, ahbap. Sıkıştık kaldık.	
+150	What a rip-off!	Ne büyük soygun!	Tam bir kazık!	
+154	That's cold, man. Really cold.	Bu çok acımasızca, abi. Gerçekten çok.	Bu soğukkanlılık, adamım. Gerçekten soğuk.	
+155	Shove it, I'm not interested.	Boş ver, ilgilenmiyorum.	Siktir git, ilgilenmiyorum.	
+159	Don't be such a drama queen.	Bu kadar drama yapma.	O kadar da dramatik olma.	
+161	Crikey, that's a big spider!	Aman Allahım, ne kadar büyük bir örümcek!	Eyvah, ne büyük örümcek!	
+166	That's the spirit, kiddo!	İşte bu, ufaklık!	İşte bu, evlat!	
+167	Alright, enough chit-chat. Let's roll.	Tamam, yeter sohbet. Yola koyulalım.	Pekâlâ, yeter laf. Gidelim.	
+169	Hey, no hard feelings, right?	Hey, kırgınlık yok, değil mi?	Hey, küs değiliz, değil mi?	
+170	You're so full of it.	Sen çok palavracısın.	Çok boş konuşuyorsun.	
+172	Wipe that smirk off your face.	O sırıtmayı yüzünden sil.	Şu sırıtışını sil yüzünden.	
+173	Damn right I did.	Evet, kesinlikle yaptım.	Evet, yaptım, doğru.	
+175	I'm not buying it, pal.	Buna inanmıyorum, dostum.	Yemiyorum, ahbap.	
+177	Out of my way, you nitwit!	Çekil önümden, seni salak!	Çekil yolumdan, aptal!	
+187	Stay in your lane, little man.	Sen sınırını bil, küçük adam.	Kendi şeridinde kal, ufaklık.	
+189	He's all bark and no bite.	Çok havlıyor ama ısırmıyor.	Havlar ama ısırmaz.	
+190	I'm gonna tear this place apart.	Burayı yerle bir edeceğim.	Bu etrafı param parça edeceğim.	
+192	Man, that car is straight fire.	Abi, bu araba tam bir ateş.	Ahbap, şu araba bomba gibi.	
+193	Listen up, you scrubs.	Dinleyin beni, bir hiçler.	Dinleyin, siz acemiler.	
+195	Nobody crosses us and lives.	Kimse bizi atlatıp yaşayamaz.	Bize kimse kafa tutup da sağ çıkamaz.	
+205	This block belongs to us.	Bu sokak bizim.	Bu mahalle bizim.	
+207	You're lame, bro.	Sen ezik birisin kardeşim.	Sen sönüksün, kardeşim.	
+212	Whoa, take it easy on the new guy.	Hop, yeni gelene fazla yüklenme.	Hoop, yeni çocuğa yumuşak ol.	
+213	I'll send my boys after you.	Çocukları peşine takacağım.	Adamlarımı peşine salarım.	
+218	Man, he's gonna lose his mind when he finds out.	Abi, öğrenince kafayı yiyecek.	Ahbap, öğrenince çıldıracak.	kafayı yemek
+220	That's one hell of a shot!	Bu inanılmaz bir atıştı!	İşte bu harika bir atış!	
+221	Aww, did I hurt your feelings?	Ah, gururunu mu kırdım?	Ooo, kalbini mi kırdım?	
+222	You've got a lot of nerve, mister.	Çok yüzsüzsün bayım.	Çok cüretkârsın, bayım.	
+225	Man, I can't stand that guy.	Abi, o herife dayanamıyorum.	Ahbap, o adama katlanamıyorum.	
+229	Spare me the sob story.	Bana o dramı anlatma.	Bana dertlerini anlatma.	
+230	You couldn't fight your way out of a paper bag.	Islak kâğıt torbadan bile çıkamazsın.	Kendi başının çaresine bakamazsın bile.	
+231	That fool is crazy.	O budala çılgın.	O ayı delidir.	
+236	Oh, bugger, I've left it at home.	Hay aksi, evde unutmuşum.	Eyvah, evde bıraktım.	
+238	Pack it in, you two!	Kesin şunu, ikiniz de!	Yeter artık, siz ikiniz!	
+239	Brilliant! Absolutely brilliant!	Harika! Kesinlikle harika!	Harika! Muhteşem!	
+244	I'm gutted, absolutely gutted.	Çok üzgünüm, resmen yıkıldım.	Çok üzgünüm, çok.	
+245	That's a bit rich coming from you.	Bunu senin ağzından duymak biraz fazla.	Bunu senin söylemen ayıp oluyor.	
+247	Don't be a muppet, hand it over.	Salak olma, onu ver.	Aptal olma, ver onu.	
+249	Get stuffed, I'm not helping you.	Defol, sana yardım etmeyeceğim.	Siktir git, sana yardım etmiyorum.	
+250	Ooh, you cheeky sod.	Ooo, seni yüzsüz.	Ooo, seni arsız.	
+252	Right, who's up for a scrap?	Pekâlâ, kim kavga etmek ister?	Eee, kim kapışmak istiyor?	
+254	Bloody brilliant!	Lanet olsun, harika!	Çok harika!	
+256	Oh, do shut up, you absolute plonker.	Oh, kes sesini, seni koca salak.	Ah, kapa çeneni, seni salak.	
+257	I can't be arsed with this.	Bununla uğraşacak halim yok.	Buna tahammülüm yok.	
+262	Hush now, they'll hear us.	Sus artık, bizi duyacaklar.	Sus şimdi, duyarlar bizi.	
+264	I'll tan your hide, boy!	Derini yüzeceğim senin, oğlum!	Derini yüzerim, evlat!	
+267	Come on over here, partner.	Gel buraya, ortak.	Gel bakalım buraya, ahbap.	
+268	Don't get your britches in a twist.	Bu kadar kızma, sakin ol.	Sinirlenme, yavaş ol.	
+271	Dadgum, it's hot out here.	Allah kahretsin, burası çok sıcak.	Of, burası çok sıcak.	
+272	This town ain't big enough for the both of us.	Bu kasaba ikimize de yetmez.	Bu kasaba ikimize yetecek kadar büyük değil.	
+275	Like, literally nobody asked you.	Yani, sana soran bile olmadı.	Yani, kimse sana sormadı.	
+276	That's lowkey kind of awesome.	Bu bir bakıma gerçekten muhteşem.	Bu aslında biraz hoş.	
+278	She totally ghosted me.	Beni tamamen ortada bıraktı, hiç cevap vermedi.	O beni tamamen görmezden geldi.	
+280	That's fire, no cap.	Bu efsane, yalan yok.	Bu çok iyi, yemin ederim.	
+283	He's such a try-hard.	O tam bir çabalayan adam.	O tam bir gayretkeş.	
+284	I can't even right now.	Şu an gerçekten kelime bulamıyorum.	Şu anda dayanamıyorum.	
+287	Dude, you absolutely crushed it!	Ahbap, tam anlamıyla bitirdin!	Ahbap, tamamen ezdin!	
+288	That outfit is a vibe.	O kıyafet ayrı bir hava katmış.	Bu kıyafet çok hoş.	
+289	Get good, noob!	Gelişmeye bak, çaylak!	Biraz daha iyi ol, acemi!	
+291	What a noob move.	Tam bir çaylak hamlesi.	Ne acemi hareketi.	
+292	Stop camping and come out!	Pusuda beklemeyi bırak ve çık ortaya!	Pusu kurmayı bırak da dışarı çık!	
+293	Ha! Ez win.	Ha! Çocuk oyuncağı.	Ha! Kolay zafer.	
+294	You got rekt, buddy.	Dağıldın dostum.	Ezildin, ahbap.	
+295	Whoa, nice clutch!	Vay, harika kurtarış!	Vay, güzel dönüş!	
+299	Bro, that headshot was insane!	Abi, o kafa atışı delilikti!	Kardeşim, o kafadan vuruş çılgıncaydı!	
+300	What a sweat. Calm down, it's casual.	Ne kadar kasıyorsun. Sakin ol, eğlence amaçlı.	Ne terleyen biri. Sakin ol, bu sadece eğlence.	
+301	That's rough, buddy. Better luck next time.	Zor olmuş dostum. Bir dahaki sefere daha şanslı olursun.	Zor, ahbap. Bir dahaki sefere iyi şanslar.	
+304	That was a close call, bro.	Çok yaklaştık kardeşim.	Ucuz kurtuldun, kardeşim.	
+308	You wanna fight about it?	Bunun için kapışmak mı istiyorsun?	Bu konuda kavga mı etmek istiyorsun?	
+310	You make me sick.	Beni hasta ediyorsun.	Midemi bulandırıyorsun.	
+315	You complete moron.	Seni koca aptal.	Seni tam bir geri zekâlı.	
+317	Aww, look at the baby crying.	Ah, bak, bebek ağlıyor.	Aww, bak ağlayan bebeğe.	
+322	You got me, fair and square.	Beni dürüstçe yendin.	Beni adil bir şekilde yakaladın.	
+324	Man, I'm so stoked for tonight!	Abi, bu geceye bayılıyorum!	Ahbap, bu akşam için çok heyecanlıyım!	
+325	Don't get cocky, kid.	Küstahlaşma, evlat.	Kibirlenme, evlat.	
+331	Little brat. Come back here!	Seni velet. Geri gel!	Küçük velet. Buraya gel!	
+333	Ooh, that's gotta hurt.	Ooo, bu çok acımış olmalı.	Ooo, bu canını yakar.	
+337	This guy again? Ugh.	Yine bu herif mi? Off.	Yine bu adam mı? Of.	
+338	So, what's the deal, big shot?	Eee, derdin ne, kabadayı?	Eee, ne var, büyük adam?	
+345	Damn, you clean up nice.	Vay, temizlenince hiç fena değilsin.	Vay, temizlenince şahane oluyorsun.	
+348	That was smooth, real smooth.	Çok ustaca oldu, gerçekten.	Bu çok zarifti, gerçekten zarif.	
+349	Now that's what I call a plan!	İşte bu plana plan derim!	İşte bu bir plan!	
+355	He's totally wasted.	Adam zil zurna sarhoş.	Adam tamamen sarhoş.	
+357	She's out cold.	Baygın yatıyor.	O bayılmış.	
+358	You absolute weapon!	Sen tam bir silahsın!	Seni efsane adam!	
+363	Ugh, that smells disgusting.	Off, çok iğrenç kokuyor.	Ah, kokusu iğrenç.	
+364	Sorry not sorry.	Üzgünüm ama üzgün değilim.	Pişman değilim.	
+368	Go ahead, make my day.	Hadi, cesaretin varsa dene bakalım.	Haydi, günümü güzelleştir.	
+369	I've had it up to here with you people.	Sizden bıkıp usandım artık.	Sizden gına geldi.	
+370	You've got a big mouth for someone so small.	Bu kadar küçük biri için ağzın çok büyük.	Bu kadar ufak biri için çok büyük bir ağzın var.	
+372	What a waste of space.	Ne büyük bir yer işgali.	Ne boşuna yer kaplayan biri.	
+373	Who the hell do you think you are?	Sen kendini kim sanıyorsun be?	Sen kim olduğunu sanıyorsun lan?	
+377	I could kick your ass with one hand tied behind my back.	Bir elim arkamda bağlıyken bile seni dövebilirim.	Bir elim bağlı olsa bile sana posta koyarım.	
+380	Oh, bite me, you jackass.	Oh, git başımdan, seni eşek.	Hadi ısır beni, seni aptal.	
+385	What a load of horse manure.	Ne büyük bir saçmalık.	Ne saçmalık!	
+391	Who died and made you boss?	Seni kim patron yaptı?	Sen kimsin de patron kesildin?	
+394	You want a piece of me? Come and get it!	Benden bir parça mı istiyorsun? Gel de al!	Benimle işin mi var? Gel de al!	
+403	He came in guns blazing, like some kind of action hero.	Bir aksiyon kahramanı gibi, silahlar patlayarak girdi içeri.	Silahlar patlayarak içeri girdi, sanki aksiyon kahramanı gibi.	
+409	Better late than never, I suppose.	Hiç gelmemesinden iyidir herhalde.	Hiç yoktan iyidir, sanırım.	
+412	Oh, you're a fast one, aren't you?	Oh, sen çabuk birisin, değil mi?	Ooo, sen hızlısın, değil mi?	
+414	Man, you really know how to ruin a party.	Abi, partiyi mahvetmeyi gerçekten biliyorsun.	Ahbap, partiyi nasıl bozacağını çok iyi biliyorsun.	
+415	He's as dumb as a box of rocks.	Taş gibi aptal biri.	Odun gibi aptal.	
+421	I was just messing with you, relax.	Sadece seninle uğraşıyordum, rahatla.	Sadece seninle dalga geçiyordum, sakin ol.	
+425	Think you're slick, huh? We'll see about that.	Kendini çok kurnaz sanıyorsun, ha? Göreceğiz bakalım.	Kurnaz olduğunu sanıyorsun, ha? Göreceğiz.	
+427	Don't make me come over there.	Beni oraya gelmek zorunda bırakma.	Oraya gelmemi isteme.	
+434	I smell a rat.	Bu işte bir bit yeniği var.	Bir şeylerin kokusunu alıyorum.	bit yeniği
+435	He's been sitting on that treasure for years.	Yıllardır o hazinenin üstünde oturuyor.	O hazineyi yıllardır saklıyor.	
+436	I'm tellin' ya, that guy's bad news.	Sana söylüyorum, o adam başımıza dert açar.	Diyorum sana, o adam bela.	
+438	Listen here, you little punk.	Bak buraya, seni ufaklık.	Dinle beni, seni küçük serseri.	
+439	That's a nice mess you've got yourself into.	Kendini sokmuş olduğun şu karmaşaya bak.	Kendini iyi bir pisliğe soktun.	
+442	Wake up, you lazy bum!	Kalk, tembel herif!	Uyan, seni tembel serseri!	
+444	They don't make 'em like they used to.	Eskisi gibi adamlar kalmadı.	Eskisi gibi yapmıyorlar artık.	
+446	Alright, big boy, let's see what you've got.	Pekâlâ koca çocuk, bakalım neyin var.	Pekâlâ, koca adam, bakalım neler yapabiliyorsun.	
+450	Holy moly, would you look at that!	Aman Allahım, şuna bak!	Vay canına, şuna bak!	
+452	Yikes, that's a long way down.	Hiii, aşağısı çok derin.	Of, çok yüksek burası.	
+453	Whoa, whoa, whoa, slow down!	Hop, hop, hop, yavaş ol!	Dur dur dur, yavaş ol!	
+455	Oops, my bad.	Pardon, benim hatam.	Hay aksi, benim hatam.	
+457	Ew, gross! What is that?	Öff, iğrenç! Nedir bu?	Öf, iğrenç! Bu da ne?	
+461	Gosh, you startled me!	Aman, beni korkuttun!	Ay, korkuttun beni!	
+462	Ha-ha! Serves you right!	Ha-ha! Oh olsun sana!	Ha-ha! Hak ettin!	
+474	Sheesh, tough crowd.	Off, zor seyirci.	Hay Allah, zor seyirci.	
+477	Come again?	Efendim, ne dedin?	Efendim?	
+480	Good riddance to bad rubbish.	Başımızdan defolup gitti, hayırlısı.	Çok şükür, kurtulduk.	
+489	Rats! They got away.	Hay aksi! Kaçtılar.	Eyvah! Kaçtılar.	
+492	Hey! Hands off the merchandise!	Hey! Mala dokunma!	Hey! Mallara elini sürme!	
+500	Holy smokes, he's huge!	Aman Allahım, adam kocaman!	Hay Allah, çok büyük!	
+501	Well, would you look at that!	Vay, şuna bakın!	Hele şuna bak!	
+502	Hey, that stings!	Hey, bu acıttı!	Hey, canım yandı!	
+503	Get a room, you two!	Bir oda tutun artık, ikiniz!	Odanıza gidin, siz ikiniz!	
+506	Nice! That's one for the books.	Güzel! Tarihe geçecek bir şey bu.	Güzel! Bu tarihe geçer.	
+510	Pfft, big deal.	Pff, çok önemli sanki.	Pfft, ne var yani.	
+511	Crap, I think I broke it.	Hay sıçtığım, sanırım kırdım.	Eyvah, galiba bozdum.	
+512	Oh dear, what a mess.	Aman Allahım, ne karışıklık.	Ay ay, ne dağınıklık.	
+513	Ha, you wish, pal.	Ha, hayal et dostum.	Ha, hayal gör, ahbap.	
+518	Alright, who farted?	Pekâlâ, kim osurdu?	Pekâlâ, kim yellendi?	
+519	Man, he's totally sloshed.	Abi, adam fitil olmuş.	Ahbap, adam tamamen küfelik olmuş.	
+520	You old dog, you did it!	Seni eski kurt, yaptın!	Seni yaşlı kurt, başardın!	
+523	She's a keeper, that one.	O elde tutulacak bir kız.	O bir cevher, bu kız.	
+524	He's got the hots for her.	Adam ona aşık olmuş.	Adam ona abayı yakmış.	
+526	Hey, easy on the merchandise!	Hey, mallara dikkat et!	Hey, mallara yavaş!	
+527	That dude's a trip!	Şu adam çok komik!	Bu adam tam bir komik!	
+531	Crumbs, that's heavy!	Aman, bu ağır!	Eyvah, ne ağır!	
+532	Righto, let's crack on.	Pekâlâ, başlayalım.	Tamam, hadi başlayalım.	
+533	Brilliant, that's us sorted.	Harika, işimiz tamam.	Harika, hallettik.	
+534	Strewth, that's a big one!	Vay canına, ne kocaman!	Vay be, ne büyük!	
+535	Bad luck, old chap.	Şanssızlık, ihtiyar.	Şanssızlık, eski dostum.	
+541	I can't stand the sight of you.	Yüzünü görmeye bile tahammül edemiyorum.	Seni görmeye bile dayanamıyorum.	
+546	You dirty double-crosser!	Seni pis hain!	Seni sahtekâr!	
+552	We got ourselves a hotshot here.	Burada bir kendini bilmez var.	Burada bir hovarda var.	
+554	Let's go, you maggots, move it!	Haydi kurtçuklar, kımıldayın!	Hadi, kurtçuklar, hareket!	
+555	He's a gutless wonder.	O ödlek biri.	Korkak bir zavallı.	
+567	Oh, shut your trap, you fat slob.	Çeneni kapat, seni şişko tembel.	Ah, kapa çeneni, seni şişko.	
+568	Jeez, you're slow.	Allah Allah, çok yavaşsın.	Of, yavaşsın.	
+573	What a creep.	Ne tuhaf bir adam.	Ne yapışkan herif.	
+576	Bite me.	Siktir et.	Beni ısır.	
+578	That's enough out of you.	Senden yeterince dinledim.	Yeter artık.	
+579	Man, you got game!	Abi, sende yetenek var!	Ahbap, bu oyun sende var!	
+581	You're a pain in my backside.	Sen benim başıma bela oldun.	Kıçımdaki ağrısın.	
+582	Hey, you stole my line!	Hey, benim lafımı çaldın!	Hey, repliğimi çaldın!	
+588	Oh, don't flatter yourself.	Oh, kendini pohpohlama.	Ah, kendini beğenme.	
+592	Whatever floats your boat.	Sana ne yarıyorsa.	Ne istersen.	
+596	Lame excuse, even for you.	Senin için bile zayıf bir bahane.	Bahane bile değil, senin için bile.	
+600	He couldn't carry a tune in a bucket.	Adamın kulağı hiç müziğe uymuyor.	Adam kovayla bile melodi tutturamaz.	
+602	That's cold-blooded, even for you.	Bu senin için bile soğukkanlılıktı.	Bu soğukkanlılık, senin için bile.	
+604	Mind your language, young man!	Ağzını topla, genç adam!	Dilini tut, genç adam!	

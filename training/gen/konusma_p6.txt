@@ -1,0 +1,75 @@
+The village elder wants to speak with you as soon as you arrive. ||| Köyün yaşlısı, gelir gelmez seninle konuşmak istiyor.
+I'll pay you double if you can deliver this letter before sunrise. ||| Bu mektubu gün doğmadan ulaştırabilirsen sana iki katını öderim.
+Nobody has seen the merchant since he went into the mountains last week. ||| Tüccar geçen hafta dağlara girdiğinden beri kimse onu görmedi.
+Can you carry two more crates, or should I ask somebody else? ||| İki sandık daha taşıyabilir misin, yoksa başkasına mı sorayım?
+That bridge was built a long time ago, so please cross it carefully. ||| O köprü çok uzun zaman önce yapıldı, o yüzden lütfen dikkatli geç.
+I'm not a fighter, but I can fix almost anything you bring me. ||| Ben dövüşçü değilim ama bana getirdiğin hemen her şeyi tamir edebilirim.
+Take this potion with you, and drink it only when you're really in danger. ||| Bu iksiri yanına al ve sadece gerçekten tehlikedeyken iç.
+The guards at the gate won't let anyone through after dark. ||| Kapıdaki nöbetçiler hava karardıktan sonra kimseyi geçirmiyor.
+Please, come inside and warm yourself by the fire before you continue. ||| Lütfen içeri gel ve yola devam etmeden önce ateşin başında ısın.
+My horse hurt its leg yesterday, so I'm afraid we'll move slowly today. ||| Atım dün bacağını incitti, o yüzden korkarım bugün yavaş ilerleyeceğiz.
+She is the best healer in the region, and she never refuses a patient. ||| O bölgenin en iyi şifacısı ve hiçbir hastayı geri çevirmez.
+We will camp here tonight, and tomorrow we'll cross the river at first light. ||| Bu gece burada kamp kuracağız, yarın da ilk ışıkla nehri geçeceğiz.
+There is a letter for you at the post office, but it's been there for weeks. ||| Postanede senin için bir mektup var ama haftalardır orada duruyor.
+Could you keep an eye on my shop while I go to the bank? ||| Ben bankaya giderken dükkanıma göz kulak olabilir misin?
+The ferry only runs twice a day, once in the morning and once in the evening. ||| Vapur günde yalnızca iki sefer yapıyor, biri sabah, biri akşam.
+I can sell you some rope and a lantern, but the prices are fixed. ||| Sana biraz halat ve bir fener satabilirim ama fiyatlar sabit.
+This isn't the first time they've attacked the caravan on this road. ||| Karavana bu yolda saldırışları ilk değil.
+Our scouts say there are about thirty men camped near the river. ||| Keşif kollarımız nehrin yakınında otuz kadar adamın kamp kurduğunu söylüyor.
+He told me you were the one who found the lost child in the forest. ||| Kayıp çocuğu ormanda bulanın sen olduğunu söyledi.
+You don't have to say anything now; just think about what I told you. ||| Şimdi bir şey söylemen gerekmiyor, sadece sana söylediklerimi düşün.
+The old lighthouse hasn't worked for years, but the ships still use it as a landmark. ||| Eski deniz feneri yıllardır çalışmıyor ama gemiler hâlâ onu yer işareti olarak kullanıyor.
+I gave the keys to your sister, and she said she'd bring them to you. ||| Anahtarları kız kardeşine verdim, sana getireceğini söyledi.
+We need volunteers to help rebuild the wall before winter comes. ||| Kış gelmeden duvarı yeniden yapmak için gönüllülere ihtiyacımız var.
+She hasn't spoken to her brother since the day he left the village. ||| Köyden ayrıldığı günden beri erkek kardeşiyle konuşmadı.
+I'll make a copy of the map for you, but you must be careful with it. ||| Senin için haritanın bir kopyasını çıkaracağım ama ona dikkat etmen lazım.
+He opened the window and listened, but the street was completely silent. ||| Pencereyi açıp dinledi ama sokak tamamen sessizdi.
+I'm sorry, but the room you wanted has already been taken. ||| Üzgünüm ama istediğiniz oda zaten tutulmuş.
+Please keep the noise down, because the baby has just fallen asleep. ||| Lütfen sesi kısın, çünkü bebek yeni uyudu.
+It's a long way to the next town, so make sure you have enough water. ||| Sonraki kasabaya giden yol uzun, o yüzden yeterince suyun olduğundan emin ol.
+They only needed three days to build the whole market stall. ||| Bütün pazar tezgahını yapmak için yalnızca üç güne ihtiyaçları vardı.
+You will find the herbs you need in the garden behind the church. ||| İhtiyacın olan otları kilisenin arkasındaki bahçede bulacaksın.
+I heard a strange sound from the cellar last night, but I didn't go down. ||| Dün gece bodrumdan garip bir ses duydum ama aşağı inmedim.
+The workers haven't been paid for two months, and they're getting angry. ||| İşçilere iki aydır maaş verilmedi ve sinirleniyorlar.
+Your friend is waiting for you in the tavern, and he doesn't look happy. ||| Arkadaşın seni meyhanede bekliyor ve pek mutlu görünmüyor.
+The sun sets early this time of year, so we have to hurry. ||| Yılın bu zamanında güneş erken batıyor, o yüzden acele etmeliyiz.
+I've never seen so many stars in my life as I did that night. ||| O gece gördüğüm kadar çok yıldızı hayatımda hiç görmemiştim.
+You can pay me now, or you can pay me when the job is done. ||| Bana şimdi ödeyebilirsin ya da iş bitince ödeyebilirsin.
+The only way across the canyon is a rope bridge, and it's very old. ||| Kanyonu geçmenin tek yolu bir halat köprü ve çok eski.
+She asked me whether I had seen a small black dog near the market. ||| Pazarın yakınında küçük, siyah bir köpek görüp görmediğimi sordu.
+He's been in the workshop all day and hasn't touched his food. ||| Bütün gün atölyede ve yemeğine dokunmadı.
+Let's wait until it gets dark, then we can cross the yard without being seen. ||| Hava kararana kadar bekleyelim, sonra avluyu görülmeden geçebiliriz.
+Tell the others that the meeting has been moved to tomorrow morning. ||| Diğerlerine toplantının yarın sabaha ertelendiğini söyle.
+If you hear the bell ring three times, it means the town is in danger. ||| Çanın üç kez çaldığını duyarsan, bu kasabanın tehlikede olduğu anlamına gelir.
+We lost the trail near the river, and the rain washed away all the tracks. ||| İzi nehrin yakınında kaybettik ve yağmur bütün izleri sildi.
+My father worked on this ship for thirty years before he retired. ||| Babam emekli olmadan önce bu gemide otuz yıl çalıştı.
+Welcome aboard, everyone; please find a seat and fasten your belts. ||| Hepiniz hoş geldiniz, lütfen bir yer bulup kemerlerinizi bağlayın.
+Excuse me, I think you dropped this when you were leaving the store. ||| Pardon, sanırım mağazadan çıkarken bunu düşürdünüz.
+This medicine tastes terrible, but it will make you feel better in a few days. ||| Bu ilacın tadı berbat ama birkaç gün içinde kendini daha iyi hissettirecek.
+There's a small stream behind the house where we can get fresh water. ||| Evin arkasında taze su alabileceğimiz küçük bir dere var.
+I need to repair the roof before the first snow, but I don't have enough nails. ||| İlk kardan önce çatıyı onarmam gerekiyor ama yeterince çivim yok.
+The little boy waved at the train until it disappeared behind the hills. ||| Küçük çocuk tren tepelerin ardında kaybolana kadar ona el salladı.
+You can sleep in the attic tonight, but you'll have to share the room with the cat. ||| Bu gece tavan arasında yatabilirsin ama odayı kediyle paylaşmak zorunda kalacaksın.
+It's only a short walk from here to the hospital, and I can take you there. ||| Buradan hastaneye kısa bir yürüyüş mesafesi var, seni oraya götürebilirim.
+Two soldiers are guarding the entrance, and a third one is watching the road. ||| İki asker girişi koruyor, üçüncüsü de yolu gözetliyor.
+I'm happy to see that you're feeling better after the long illness. ||| Uzun bir hastalıktan sonra daha iyi olduğunu görmek beni mutlu ediyor.
+They told us to stay in the car until the police arrived. ||| Polis gelene kadar arabada kalmamızı söylediler.
+The farmer said his cows disappeared one by one every night this month. ||| Çiftçi, bu ay her gece ineklerinin birer birer kaybolduğunu söyledi.
+You should eat something before the journey, because it will be a long day. ||| Yolculuktan önce bir şeyler yemelisin, çünkü uzun bir gün olacak.
+This sword is old, but the blade is still sharp and the balance is perfect. ||| Bu kılıç eski ama ağzı hâlâ keskin ve dengesi mükemmel.
+Don't worry, I've checked the doors, and everything is locked. ||| Merak etme, kapıları kontrol ettim ve her şey kilitli.
+He promised to return before winter, but the first snow has already fallen. ||| Kıştan önce döneceğine söz vermişti ama ilk kar çoktan düştü.
+We should be able to reach the camp by noon if we leave right now. ||| Hemen yola çıkarsak öğlene kadar kampa ulaşabiliriz.
+Someone has been sleeping in the barn, because I found a blanket and some bread. ||| Biri ahırda uyuyor, çünkü bir battaniye ve biraz ekmek buldum.
+Our teacher always told us that reading is the best way to learn. ||| Öğretmenimiz bize hep okumanın öğrenmenin en iyi yolu olduğunu söylerdi.
+The market is crowded today, so keep your bag close to you. ||| Pazar bugün kalabalık, o yüzden çantanı yakınında tut.
+I think the storm has passed, but we should wait a little longer. ||| Sanırım fırtına geçti ama biraz daha beklemeliyiz.
+She carried the water from the well every morning, even in the winter. ||| Kışın bile her sabah kuyudan su taşırdı.
+He wrote me a long letter to explain everything that had happened. ||| Olan her şeyi açıklamak için bana uzun bir mektup yazdı.
+The first door on the right leads to the kitchen, and the stairs are straight ahead. ||| Sağdaki ilk kapı mutfağa açılıyor, merdivenler de tam karşıda.
+A woman was asking about you at the gate a few minutes ago. ||| Birkaç dakika önce kapıda bir kadın seni soruyordu.
+We've repaired the radio, but it only works for a few minutes at a time. ||| Radyoyu tamir ettik ama her seferinde sadece birkaç dakika çalışıyor.
+You can borrow my horse if yours is too tired to continue. ||| Seninki devam edemeyecek kadar yorgunsa benim atımı ödünç alabilirsin.
+The teacher called on me, but I didn't know the answer to her question. ||| Öğretmen beni kaldırdı ama sorusunun cevabını bilmiyordum.
+Please remember to bring your ticket, or they won't let you on the train. ||| Lütfen biletini getirmeyi unutma, yoksa seni trene almazlar.
+The water in the well is cold and clean, and you can drink as much as you like. ||| Kuyudaki su soğuk ve temiz, istediğin kadar içebilirsin.

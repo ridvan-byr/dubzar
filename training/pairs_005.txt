@@ -153,7 +153,6 @@ Get a room. ||| Bir oda tutun.
 Get over it. ||| Atlat artık.
 Get real. ||| Gerçekçi ol.
 Get out of my way. ||| Çekil yolumdan.
-Get down! ||| Yere yat!
 Get ready. ||| Hazır ol.
 Hang tight. ||| Biraz dayan.
 Hang in there. ||| Dayan.
@@ -175,7 +174,6 @@ Cut him some slack. ||| Ona biraz esneklik tanı.
 Bring it on. ||| Gelsin bakalım.
 Bring him in alive. ||| Onu sağ getirin.
 Bring the car around. ||| Arabayı getir.
-Shut up and drive. ||| Sus ve sür.
 Shut it down. ||| Kapatın şunu.
 Shut your mouth. ||| Çeneni kapa.
 Step aside. ||| Kenara çekil.
@@ -243,7 +241,6 @@ She's got guts. ||| Yüreği var.
 He's out of his league. ||| Onun harcı değil.
 That's not my department. ||| Bu benim işim değil.
 I don't buy it. ||| İnanmıyorum.
-You're pulling my leg. ||| Benimle dalga geçiyorsun.
 It's a piece of cake. ||| Çocuk oyuncağı.
 It's a long story. ||| Uzun hikâye.
 It's not rocket science. ||| Roket bilimi değil ki.

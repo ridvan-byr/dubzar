@@ -1,0 +1,97 @@
+Floor it, they're right behind us! ||| Gazla, hemen arkamızdalar!
+Take the next left and lose them in the alley. ||| Sonraki sokaktan sola dön ve onları ara sokakta atlat.
+Nitro's ready, hit it on the straight. ||| Nitro hazır, düzlükte bas.
+That car's tuned to the limit. ||| O araba son sınırına kadar modifiye edilmiş.
+I'll race you for pink slips. ||| Ruhsatlar için seninle yarışırım.
+Don't brake in the corner, drift through it. ||| Virajda fren yapma, drift atarak geç.
+He slid through the hairpin like it was nothing. ||| Saç tokası virajdan sanki hiçmiş gibi kaydı.
+This engine's got a lot more power than it looks. ||| Bu motorun gücü göründüğünden çok daha fazla.
+Run the red light, nobody's watching. ||| Kırmızıda geç, kimse bakmıyor.
+Welcome to the underground racing scene. ||| Yeraltı yarış sahnesine hoş geldin.
+You're running on empty, pit now! ||| Yakıtın bitmek üzere, hemen pite gir!
+Her car is a street legend. ||| Onun arabası sokakların efsanesi.
+I want to see you burn rubber! ||| Lastik yakmanı görmek istiyorum!
+The tires are shot, we need new ones. ||| Lastikler bitti, yenilerine ihtiyacımız var.
+Watch out for the cops at the intersection. ||| Kavşaktaki polislere dikkat et.
+You were riding my bumper the whole way. ||| Bütün yol boyunca arkama yapıştın.
+That was a perfect line through the chicane. ||| Şikandan geçişin kusursuz bir çizgiydi.
+He cut me off at the last second. ||| Son saniyede önümü kesti.
+Heads up, there's a police checkpoint ahead. ||| Dikkat, ileride polis kontrol noktası var.
+Red light, green light, go! ||| Kırmızı ışık, yeşil ışık, başla!
+We need a faster car for the next race. ||| Bir sonraki yarış için daha hızlı bir arabaya ihtiyacımız var.
+The track is slick after the rain. ||| Yağmurdan sonra pist kaygan.
+Gear up, we're hitting the mountain pass. ||| Hazırlan, dağ geçidine çıkıyoruz.
+That turbo is going to blow if you push it any harder. ||| Daha fazla zorlarsan o turbo patlayacak.
+Pole position goes to the rookie! ||| Pole pozisyonu çaylağın!
+He's catching up on the final lap. ||| Son turda aradaki farkı kapatıyor.
+The crowd goes wild as he crosses the finish line. ||| O bitiş çizgisini geçerken kalabalık çıldırıyor.
+We're neck and neck coming into the last turn. ||| Son virajda baş başa gidiyoruz.
+Lap record broken by half a second! ||| Tur rekoru yarım saniyeyle kırıldı!
+Pit crew, in and out in eight seconds. ||| Pit ekibi, sekiz saniyede içeri girip çıkın.
+Our driver is out of the race with a blown engine. ||| Pilotumuz motor patlaması yüzünden yarıştan çekildi.
+Tell the mechanic to check the brakes before the start. ||| Tamirciye söyle, startı vermeden önce frenleri kontrol etsin.
+He's driving like a man with nothing to lose. ||| Kaybedecek hiçbir şeyi yokmuş gibi sürüyor.
+A drag race at midnight, winner takes all. ||| Gece yarısı drag yarışı, kazanan her şeyi alır.
+You can't catch me in that junker. ||| O hurdayla beni yakalayamazsın.
+The old muscle car still has some life left in it. ||| Eski güçlü araba hâlâ biraz can taşıyor.
+Slow down, you'll wrap us around a tree! ||| Yavaşla, bizi ağaca sardıracaksın!
+We tuned this beast for three months straight. ||| Bu canavarı üç ay boyunca durmadan ayarladık.
+The crowd is cheering as the drivers line up at the start. ||| Pilotlar start çizgisine dizilirken kalabalık tezahürat yapıyor.
+Hold the wheel steady and don't look at the speedometer. ||| Direksiyonu sabit tut ve hız göstergesine bakma.
+We hit two hundred and the engine's still screaming for more. ||| İki yüze çıktık ve motor hâlâ daha fazlasını istiyor.
+He's the king of the street circuit. ||| Sokak pistinin kralı o.
+A wrong shift and the engine is gone. ||| Yanlış bir vites ve motor gitti.
+The clutch is slipping, we won't make it. ||| Debriyaj kayıyor, yetişemeyeceğiz.
+Who's in for a quick sprint around the block? ||| Mahallenin etrafında hızlı bir tura kim var?
+He blew past me like I was standing still. ||| Ben duruyormuşum gibi yanımdan fırlayıp geçti.
+Check the oil, check the tires, and say a prayer. ||| Yağı kontrol et, lastikleri kontrol et ve dua et.
+She won three straight races in a car she built herself. ||| Kendi yaptığı arabayla üst üste üç yarış kazandı.
+The kid's got natural talent behind the wheel. ||| Çocuğun direksiyon başında doğuştan yeteneği var.
+There's the ball, go for the tackle! ||| Top orada, ayağını vur!
+What a goal! The stadium erupts! ||| Ne gol! Stadyum yerinden oynuyor!
+He hit the crossbar with his shot. ||| Şutu üst direğe çarptı.
+The referee blows the whistle for halftime. ||| Hakem devre arası için düdüğü çalıyor.
+The striker is offside, no goal. ||| Forvet ofsaytta, gol yok.
+The goalkeeper pulled off an incredible save. ||| Kaleci inanılmaz bir kurtarış yaptı.
+We're down by two with ten minutes left. ||| Bitmesine on dakika kala iki gol gerideyiz.
+The coach called a timeout to rally the team. ||| Antrenör takımı toparlamak için mola istedi.
+He scored a hat trick in the final. ||| Finalde hat-trick yaptı.
+Home team's up by six at the half. ||| Ev sahibi takım devrede altı farkla önde.
+Nothing but net! ||| Ağları bile oynatmadan girdi!
+Rookie of the year, no question. ||| Yılın çaylağı, hiç şüphe yok.
+Don't choke on the free throws. ||| Serbest atışlarda sıkışma.
+She takes the lead in the last two hundred meters. ||| Son iki yüz metrede liderliği ele geçiriyor.
+He's been training day and night for this fight. ||| Bu dövüş için gece gündüz çalışıyor.
+Down goes the champion! ||| Şampiyon yere düştü!
+Keep your guard up and stay off the ropes. ||| Savunmanı koru ve ipler tarafında kalma.
+He threw in the towel in the fourth round. ||| Dördüncü rauntta havlu attı. ||| havlu atmak
+The challenger took the belt by split decision. ||| Meydan okuyan kemeri oy çokluğuyla aldı.
+That left hook came out of nowhere! ||| O sol kroşe nereden çıktı!
+We ran the clock out and took the win. ||| Süreyi eritip galibiyeti aldık.
+I played a decade in the minor leagues before getting my break. ||| Şansımı bulmadan önce on yıl alt liglerde oynadım.
+He's the underdog, but he's got heart. ||| Favori değil ama yüreği var.
+I'll bring my A-game tonight. ||| Bu gece elimden gelenin en iyisini sergileyeceğim.
+The coach benched him after the sloppy performance. ||| Antrenör özensiz performanstan sonra onu yedek kulübesine çekti.
+We need a clean sweep to make the playoffs. ||| Play-off'a kalmak için hepsini kazanmamız lazım.
+Victory is ours, we're the champions! ||| Zafer bizim, şampiyon biziz!
+The trade deadline is tomorrow, and everyone is nervous. ||| Transfer süresinin bitimine bir gün var ve herkes gergin.
+The whole team was on fire tonight. ||| Bütün takım bu gece çok formdaydı.
+That slide tackle was a clear foul. ||| O kayarak müdahale açık bir faulüydü.
+A penalty kick decides the match. ||| Maçı bir penaltı atışı belirliyor.
+You can't win a championship with a weak defense. ||| Zayıf bir savunmayla şampiyon olamazsın.
+He broke his leg in the second quarter. ||| İkinci çeyrekte bacağını kırdı.
+Pass the ball, don't be a ball hog! ||| Topu paslasana, topu kendine saklama!
+I'm sick of watching from the sidelines. ||| Kenardan seyretmekten bıktım.
+The race is going to come down to the wire. ||| Yarış son saniyeye kadar sürecek.
+Everyone wants a piece of the prize money. ||| Herkes ödül parasından pay almak istiyor.
+Last lap, give it everything you've got! ||| Son tur, bütün gücünü ver!
+Anyone who beats him gets a free drink. ||| Onu yenen herkes bedava içki kazanır.
+The stands are full and the noise is deafening. ||| Tribünler dolu ve gürültü kulakları sağır ediyor.
+They disqualified him for using illegal parts. ||| Yasadışı parça kullandığı için onu diskalifiye ettiler.
+We have a new leader on the scoreboard. ||| Skor tablosunda yeni bir lider var.
+I'll take second place, but I'm not going to like it. ||| İkinciliği kabul ederim ama hoşuma gitmeyecek.
+Time to go all out. ||| Bütün gücümüzle girişme zamanı.
+He took the corner way too fast. ||| Virajı fazla hızlı aldı.
+Mind the speed bumps, you'll tear off the exhaust. ||| Hız kesicilere dikkat et, egzozu koparırsın.
+The crew chief waves the green flag. ||| Ekip şefi yeşil bayrağı sallıyor.
+The yellow flag is out, there's debris on the track. ||| Sarı bayrak çıktı, pistte enkaz var.

@@ -1,0 +1,1602 @@
+[
+ {
+  "id": 1,
+  "category": "konusma",
+  "context": "",
+  "en": "I can't believe you kept this from me.",
+  "old": "Bunu benden sakladığına inanamıyorum.",
+  "tr": "Bunu benden sakladığına inanamıyorum."
+ },
+ {
+  "id": 2,
+  "category": "konusma",
+  "context": "",
+  "en": "Where were you when the lights went out?",
+  "old": "Işıklar söndüğünde neredeydin?",
+  "tr": "Işıklar sönünce neredeydin?"
+ },
+ {
+  "id": 3,
+  "category": "konusma",
+  "context": "",
+  "en": "We've got about five minutes before they notice.",
+  "old": "Onlar fark etmeden önce beş dakikamız var.",
+  "tr": "Onlar fark etmeden önce beş dakikamız var."
+ },
+ {
+  "id": 4,
+  "category": "konusma",
+  "context": "",
+  "en": "I'm not sure that's a good idea.",
+  "old": "Bunun iyi bir fikir olduğundan emin değilim.",
+  "tr": "Bunun iyi bir fikir olduğundan emin değilim."
+ },
+ {
+  "id": 5,
+  "category": "konusma",
+  "context": "",
+  "en": "He asked me to give this to you.",
+  "old": "Bunu sana vermemi istedi.",
+  "tr": "Bunu sana vermemi istedi."
+ },
+ {
+  "id": 6,
+  "category": "konusma",
+  "context": "",
+  "en": "Whatever happens, stay close to me.",
+  "old": "Ne olursa olsun, bana yakın dur.",
+  "tr": "Ne olursa olsun, bana yakın dur."
+ },
+ {
+  "id": 7,
+  "category": "konusma",
+  "context": "",
+  "en": "I've been looking for you everywhere.",
+  "old": "Her yerde seni arıyordum.",
+  "tr": "Her yerde seni arıyordum."
+ },
+ {
+  "id": 8,
+  "category": "konusma",
+  "context": "",
+  "en": "That doesn't sound like him at all.",
+  "old": "Bu hiç de onun tarzı değil.",
+  "tr": "Bu hiç de onun gibi gelmiyor."
+ },
+ {
+  "id": 9,
+  "category": "konusma",
+  "context": "",
+  "en": "She won't talk to anyone but you.",
+  "old": "Senden başka kimseyle konuşmaz.",
+  "tr": "Senden başka kimseyle konuşmaz."
+ },
+ {
+  "id": 10,
+  "category": "konusma",
+  "context": "",
+  "en": "You'd better have a good explanation.",
+  "old": "İyi bir açıklama yapsan iyi olur.",
+  "tr": "İyi bir açıklaman olsa iyi olur."
+ },
+ {
+  "id": 11,
+  "category": "konusma",
+  "context": "",
+  "en": "I thought we agreed to meet at noon.",
+  "old": "Öğlen buluşmayı kabul ettiğimizi sanıyordum.",
+  "tr": "Öğlen buluşmayı kabul ettiğimizi sanıyordum."
+ },
+ {
+  "id": 12,
+  "category": "konusma",
+  "context": "",
+  "en": "It's not what it looks like.",
+  "old": "Göründüğü gibi değil.",
+  "tr": "Göründüğü gibi değil."
+ },
+ {
+  "id": 13,
+  "category": "konusma",
+  "context": "",
+  "en": "I don't have time for riddles.",
+  "old": "Bilmeceler için zamanım yok.",
+  "tr": "Bilmeceler için zamanım yok."
+ },
+ {
+  "id": 14,
+  "category": "konusma",
+  "context": "",
+  "en": "Why does everyone keep looking at me like that?",
+  "old": "Neden herkes bana öyle bakıp duruyor?",
+  "tr": "Neden herkes bana sürekli böyle bakıyor?"
+ },
+ {
+  "id": 15,
+  "category": "konusma",
+  "context": "",
+  "en": "There's something wrong with the radio.",
+  "old": "Radyoda bir sorun var.",
+  "tr": "Radyoda bir sorun var."
+ },
+ {
+  "id": 16,
+  "category": "konusma",
+  "context": "",
+  "en": "You're lucky I'm in a good mood today.",
+  "old": "Bugün keyfim yerinde olduğu için şanslısın.",
+  "tr": "Bugün havamda olduğum için şanslısın."
+ },
+ {
+  "id": 17,
+  "category": "konusma",
+  "context": "",
+  "en": "Nobody has been in this room for years.",
+  "old": "Yıllardır kimse bu odaya girmedi.",
+  "tr": "Bu odaya yıllardır kimse girmedi."
+ },
+ {
+  "id": 18,
+  "category": "konusma",
+  "context": "",
+  "en": "Let me handle the talking.",
+  "old": "Konuşmayı ben halledeyim.",
+  "tr": "Konuşmayı bana bırak."
+ },
+ {
+  "id": 19,
+  "category": "konusma",
+  "context": "",
+  "en": "I owe you my life.",
+  "old": "Sana hayatımı borçluyum.",
+  "tr": "Sana hayatımı borçluyum."
+ },
+ {
+  "id": 20,
+  "category": "konusma",
+  "context": "",
+  "en": "We should have turned back an hour ago.",
+  "old": "Bir saat önce geri dönmeliydik.",
+  "tr": "Bir saat önce geri dönmeliydik."
+ },
+ {
+  "id": 21,
+  "category": "konusma",
+  "context": "",
+  "en": "They'll be here any minute now.",
+  "old": "Her an burada olabilirler.",
+  "tr": "Her an burada olabilirler."
+ },
+ {
+  "id": 22,
+  "category": "konusma",
+  "context": "",
+  "en": "I wish things had turned out differently.",
+  "old": "Keşke her şey farklı olsaydı.",
+  "tr": "Keşke işler farklı olsaydı."
+ },
+ {
+  "id": 23,
+  "category": "konusma",
+  "context": "",
+  "en": "Do you really expect me to believe that?",
+  "old": "Gerçekten buna inanmamı mı bekliyorsun?",
+  "tr": "Buna gerçekten inanmamı mı bekliyorsun?"
+ },
+ {
+  "id": 24,
+  "category": "konusma",
+  "context": "",
+  "en": "She was the best pilot I ever knew.",
+  "old": "Tanıdığım en iyi pilottu.",
+  "tr": "Tanıdığım en iyi pilottu."
+ },
+ {
+  "id": 25,
+  "category": "konusma",
+  "context": "",
+  "en": "You can't just walk away from this.",
+  "old": "Bundan öylece çekip gidemezsin.",
+  "tr": "Bundan öylece kurtulamazsın."
+ },
+ {
+  "id": 26,
+  "category": "konusma",
+  "context": "",
+  "en": "I've seen enough to know he's lying.",
+  "old": "Yalan söylediğini bilecek kadar gördüm.",
+  "tr": "Yalan söylediğini bilecek kadar gördüm."
+ },
+ {
+  "id": 27,
+  "category": "konusma",
+  "context": "",
+  "en": "Was there anyone with you?",
+  "old": "Yanında kimse var mıydı?",
+  "tr": "Yanında kimse var mıydı?"
+ },
+ {
+  "id": 28,
+  "category": "konusma",
+  "context": "",
+  "en": "I'll make it up to you, I promise.",
+  "old": "Bunu telafi edeceğim, söz veriyorum.",
+  "tr": "Bunu telafi edeceğim, söz veriyorum."
+ },
+ {
+  "id": 29,
+  "category": "konusma",
+  "context": "",
+  "en": "This is bigger than either of us.",
+  "old": "Bu ikimizden de büyük.",
+  "tr": "Bu ikimizden de büyük."
+ },
+ {
+  "id": 30,
+  "category": "konusma",
+  "context": "",
+  "en": "He left a note on the kitchen table.",
+  "old": "Mutfak masasına bir not bıraktı.",
+  "tr": "Mutfak masasında bir not bıraktı."
+ },
+ {
+  "id": 31,
+  "category": "konusma",
+  "context": "",
+  "en": "You look like you've seen a ghost.",
+  "old": "Bir hayalet görmüş gibisin.",
+  "tr": "Bir hayalet görmüş gibisin."
+ },
+ {
+  "id": 32,
+  "category": "konusma",
+  "context": "",
+  "en": "We're running low on supplies.",
+  "old": "Erzakımız azalıyor.",
+  "tr": "Yeterli erzağımız azalıyor."
+ },
+ {
+  "id": 33,
+  "category": "konusma",
+  "context": "",
+  "en": "I told them everything I knew.",
+  "old": "Onlara bildiğim her şeyi anlattım.",
+  "tr": "Onlara bildiğim her şeyi anlattım."
+ },
+ {
+  "id": 34,
+  "category": "konusma",
+  "context": "",
+  "en": "Is that really the best you can do?",
+  "old": "Elinden gelenin en iyisi bu mu?",
+  "tr": "Gerçekten yapabileceğin en iyi şey bu mu?"
+ },
+ {
+  "id": 35,
+  "category": "konusma",
+  "context": "",
+  "en": "It's too quiet out here.",
+  "old": "Burası çok sessiz.",
+  "tr": "Burası çok sessiz."
+ },
+ {
+  "id": 36,
+  "category": "argo",
+  "context": "",
+  "en": "Stop acting like a clown and listen up.",
+  "old": "Palyaço gibi davranmayı bırak ve dinle.",
+  "tr": "Palyaço gibi davranmayı bırak da dinle."
+ },
+ {
+  "id": 37,
+  "category": "argo",
+  "context": "",
+  "en": "That dude's got a screw loose.",
+  "old": "O herifin başı belada.",
+  "tr": "O herifin başı belada."
+ },
+ {
+  "id": 38,
+  "category": "argo",
+  "context": "",
+  "en": "I'm gonna wipe that smirk right off your face.",
+  "old": "O sırıtışı suratından sileceğim.",
+  "tr": "O sırıtışı suratından sileceğim."
+ },
+ {
+  "id": 39,
+  "category": "argo",
+  "context": "",
+  "en": "She's been giving me the cold shoulder all week.",
+  "old": "Bütün hafta boyunca bana soğuk bir omuz verdi.",
+  "tr": "Bütün hafta bana soğuk davranıp durdu."
+ },
+ {
+  "id": 40,
+  "category": "argo",
+  "context": "",
+  "en": "Get off my back, will you?",
+  "old": "Çekil sırtımdan, olur mu?",
+  "tr": "Arkamdan çekil, olur mu?"
+ },
+ {
+  "id": 41,
+  "category": "argo",
+  "context": "",
+  "en": "You're full of it, and you know it.",
+  "old": "Sen bununla dolusun ve bunu biliyorsun.",
+  "tr": "Palavra atıyorsun ve bunu biliyorsun."
+ },
+ {
+  "id": 42,
+  "category": "argo",
+  "context": "",
+  "en": "He's all talk and no action.",
+  "old": "Her şeyi konuşuyor ve hiçbir şey yapmıyor.",
+  "tr": "Hep konuşur ama hareket etmez."
+ },
+ {
+  "id": 43,
+  "category": "argo",
+  "context": "",
+  "en": "Don't try to sweet-talk me.",
+  "old": "Benimle tatlı tatlı konuşmaya çalışma.",
+  "tr": "Benimle tatlı konuşmaya çalışma."
+ },
+ {
+  "id": 44,
+  "category": "argo",
+  "context": "",
+  "en": "We got played, man. Big time.",
+  "old": "Oyuna geldik, dostum. Hem de çok.",
+  "tr": "Oyuna geldik, dostum. Hem de çok."
+ },
+ {
+  "id": 45,
+  "category": "argo",
+  "context": "",
+  "en": "That guy is a snake in the grass.",
+  "old": "Bu adam çimenlerin arasında bir yılan.",
+  "tr": "O herif çimlerin arasında bir yılan."
+ },
+ {
+  "id": 46,
+  "category": "argo",
+  "context": "",
+  "en": "I'm so done with this nonsense.",
+  "old": "Bu saçmalıkla işim bitti.",
+  "tr": "Bu saçmalıkla işim bitti."
+ },
+ {
+  "id": 47,
+  "category": "argo",
+  "context": "",
+  "en": "Hand over the cash or things get ugly.",
+  "old": "Parayı teslim et yoksa işler çirkinleşir.",
+  "tr": "Parayı teslim et, yoksa işler çirkinleşir."
+ },
+ {
+  "id": 48,
+  "category": "argo",
+  "context": "",
+  "en": "She's out of her league and she knows it.",
+  "old": "Kendi liginden çıktı ve bunu biliyor.",
+  "tr": "O kendine ait değil ve bunu biliyor."
+ },
+ {
+  "id": 49,
+  "category": "argo",
+  "context": "",
+  "en": "What a bunch of lowlifes.",
+  "old": "Ne serseriler ama.",
+  "tr": "Ne serseriler ama."
+ },
+ {
+  "id": 50,
+  "category": "argo",
+  "context": "",
+  "en": "You think I was born yesterday?",
+  "old": "Dün doğduğumu mu düşünüyorsun?",
+  "tr": "Sence dün mü doğdum?"
+ },
+ {
+  "id": 51,
+  "category": "argo",
+  "context": "",
+  "en": "Man, this place gives me the creeps.",
+  "old": "Dostum, burası beni ürkütüyor.",
+  "tr": "Dostum, burası beni ürpertiyor."
+ },
+ {
+  "id": 52,
+  "category": "argo",
+  "context": "",
+  "en": "He kicked the bucket last winter.",
+  "old": "Geçen kış kovayı tekmeledi.",
+  "tr": "Geçen kış kovayı tekmeledi."
+ },
+ {
+  "id": 53,
+  "category": "argo",
+  "context": "",
+  "en": "Nice try, hotshot.",
+  "old": "İyi denemeydi, yakışıklı.",
+  "tr": "İyi deneme, şapşal."
+ },
+ {
+  "id": 54,
+  "category": "argo",
+  "context": "",
+  "en": "I'll be damned if I let you take the credit.",
+  "old": "Eğer sana izin verirsem lanetlenirim.",
+  "tr": "Krediyi almana izin verirsem lanetlenirim."
+ },
+ {
+  "id": 55,
+  "category": "argo",
+  "context": "",
+  "en": "That's a load of garbage and you know it.",
+  "old": "Bu bir yığın çöp ve bunu biliyorsun.",
+  "tr": "Bu çok fazla çöp ve sen de biliyorsun."
+ },
+ {
+  "id": 56,
+  "category": "argo",
+  "context": "",
+  "en": "Don't you dare flake on me again.",
+  "old": "Sakın bir daha beni ekmeye kalkışma.",
+  "tr": "Sakın bir daha beni kazıklamaya kalkma."
+ },
+ {
+  "id": 57,
+  "category": "argo",
+  "context": "",
+  "en": "He's been dodging me like the plague.",
+  "old": "Veba gibi benden kaçıyor.",
+  "tr": "Beni veba gibi atlatıyor."
+ },
+ {
+  "id": 58,
+  "category": "argo",
+  "context": "",
+  "en": "This whole thing stinks.",
+  "old": "Her şey berbat.",
+  "tr": "Bütün bu iş berbat."
+ },
+ {
+  "id": 59,
+  "category": "argo",
+  "context": "",
+  "en": "I'm gonna make him sweat.",
+  "old": "Onu terleteceğim.",
+  "tr": "Onu terleteceğim."
+ },
+ {
+  "id": 60,
+  "category": "argo",
+  "context": "",
+  "en": "You got some guts showing up here.",
+  "old": "Burada gözükecek cesaretin var.",
+  "tr": "Burada gözükecek cesaretin var."
+ },
+ {
+  "id": 61,
+  "category": "argo",
+  "context": "",
+  "en": "She dumped him on the spot.",
+  "old": "Onu oracıkta terk etti.",
+  "tr": "Onu yerinde terk etti."
+ },
+ {
+  "id": 62,
+  "category": "argo",
+  "context": "",
+  "en": "Quit your whining and move it.",
+  "old": "Sızlanmayı bırak ve hareket et.",
+  "tr": "Sızlanmayı bırak da hareket et."
+ },
+ {
+  "id": 63,
+  "category": "argo",
+  "context": "",
+  "en": "They were wasted before noon.",
+  "old": "Öğleden önce boşa gitmişler.",
+  "tr": "Öğleden önce sarhoştular."
+ },
+ {
+  "id": 64,
+  "category": "argo",
+  "context": "",
+  "en": "Talk about bad luck, huh?",
+  "old": "Kötü şanstan bahsediyorsun, değil mi?",
+  "tr": "Kötü şanstan söz et, ha?"
+ },
+ {
+  "id": 65,
+  "category": "argo",
+  "context": "",
+  "en": "That's a rip-off and you know it.",
+  "old": "Bu bir soygun ve bunu sen de biliyorsun.",
+  "tr": "Bu bir kazık ve sen de bunu biliyorsun."
+ },
+ {
+  "id": 66,
+  "category": "argo",
+  "context": "",
+  "en": "Back off, or I swear I'll lose it.",
+  "old": "Geri çekil yoksa yemin ederim kaybederim.",
+  "tr": "Geri çekil, yoksa yemin ederim kaybedeceğim."
+ },
+ {
+  "id": 67,
+  "category": "argo",
+  "context": "",
+  "en": "You're a total pushover.",
+  "old": "Tam bir çapkınsın.",
+  "tr": "Tam bir iticisin."
+ },
+ {
+  "id": 68,
+  "category": "argo",
+  "context": "",
+  "en": "The cops were all over us.",
+  "old": "Polisler her yanımızı sarmıştı.",
+  "tr": "Polis her yanımızı sarmıştı."
+ },
+ {
+  "id": 69,
+  "category": "argo",
+  "context": "",
+  "en": "Take a hike, pal.",
+  "old": "Yürüyüşe çık, dostum.",
+  "tr": "Hadi git, dostum."
+ },
+ {
+  "id": 70,
+  "category": "argo",
+  "context": "",
+  "en": "He's loaded, but he's cheap as hell.",
+  "old": "Dolu ama çok ucuz.",
+  "tr": "Parası var ama çok ucuz."
+ },
+ {
+  "id": 71,
+  "category": "argo",
+  "context": "",
+  "en": "Spill it, or I'll make you.",
+  "old": "Dökül yoksa ben yaparım.",
+  "tr": "Söyle, yoksa seni döverim."
+ },
+ {
+  "id": 72,
+  "category": "argo",
+  "context": "",
+  "en": "Man, you're a lifesaver.",
+  "old": "Dostum, sen hayat kurtarıcısın.",
+  "tr": "Dostum, sen bir cankurtaransın."
+ },
+ {
+  "id": 73,
+  "category": "argo",
+  "context": "",
+  "en": "We're toast if they find us here.",
+  "old": "Bizi burada bulurlarsa kadeh kaldıracağız.",
+  "tr": "Bizi burada bulurlarsa yandık."
+ },
+ {
+  "id": 74,
+  "category": "argo",
+  "context": "",
+  "en": "I ain't buying any of it.",
+  "old": "Hiçbirini satın almıyorum.",
+  "tr": "Hiçbirine inanmıyorum."
+ },
+ {
+  "id": 75,
+  "category": "argo",
+  "context": "",
+  "en": "That's the dumbest thing I've ever heard.",
+  "old": "Bu duyduğum en aptalca şey.",
+  "tr": "Bu duyduğum en aptalca şey."
+ },
+ {
+  "id": 76,
+  "category": "gorev",
+  "context": "",
+  "en": "Sneak past the guards and reach the vault.",
+  "old": "Gardiyanların yanından geç ve kasaya ulaş.",
+  "tr": "Nöbetçilerin yanından geçip kasaya ulaş."
+ },
+ {
+  "id": 77,
+  "category": "gorev",
+  "context": "",
+  "en": "Gather information from the locals.",
+  "old": "Yerel halktan bilgi topla.",
+  "tr": "Yerel halktan bilgi topla."
+ },
+ {
+  "id": 78,
+  "category": "gorev",
+  "context": "",
+  "en": "Escort the convoy to the border.",
+  "old": "Konvoya sınıra kadar eşlik et.",
+  "tr": "Konvoya sınıra kadar eşlik et."
+ },
+ {
+  "id": 79,
+  "category": "gorev",
+  "context": "",
+  "en": "Destroy the supply truck before it leaves.",
+  "old": "Gitmeden önce ikmal kamyonunu yok et.",
+  "tr": "Teçhizat kamyonunu ayrılmadan yok et."
+ },
+ {
+  "id": 80,
+  "category": "gorev",
+  "context": "",
+  "en": "Steal the blueprints from the safe.",
+  "old": "Planları kasadan çal.",
+  "tr": "Planları kasadan çal."
+ },
+ {
+  "id": 81,
+  "category": "gorev",
+  "context": "",
+  "en": "Take out the sniper on the roof.",
+  "old": "Çatıdaki keskin nişancıyı öldür.",
+  "tr": "Çatıdaki keskin nişancıyı öldür."
+ },
+ {
+  "id": 82,
+  "category": "gorev",
+  "context": "",
+  "en": "Return to the camp and report to the captain.",
+  "old": "Kampa dön ve kaptana rapor ver.",
+  "tr": "Kampa dön ve kaptana rapor ver."
+ },
+ {
+  "id": 83,
+  "category": "gorev",
+  "context": "",
+  "en": "Find the missing engineer.",
+  "old": "Kayıp mühendisi bul.",
+  "tr": "Kayıp mühendisi bul."
+ },
+ {
+  "id": 84,
+  "category": "gorev",
+  "context": "",
+  "en": "Lure the guards away from the entrance.",
+  "old": "Gardiyanları girişten uzaklaştır.",
+  "tr": "Nöbetçileri girişten uzaklaştır."
+ },
+ {
+  "id": 85,
+  "category": "gorev",
+  "context": "",
+  "en": "Reach the next checkpoint within two minutes.",
+  "old": "İki dakika içinde bir sonraki kontrol noktasına ulaş.",
+  "tr": "Bir sonraki kontrol noktasına iki dakika içinde ulaş."
+ },
+ {
+  "id": 86,
+  "category": "gorev",
+  "context": "",
+  "en": "Defeat the boss to unlock the gate.",
+  "old": "Kapının kilidini açmak için patronu yen.",
+  "tr": "Kapıyı açmak için patronu yen."
+ },
+ {
+  "id": 87,
+  "category": "gorev",
+  "context": "",
+  "en": "Search the ruins for ancient artifacts.",
+  "old": "Harabeleri antik eserler için ara.",
+  "tr": "Harabeleri antik eserler için ara."
+ },
+ {
+  "id": 88,
+  "category": "gorev",
+  "context": "",
+  "en": "Deliver the medicine to the village.",
+  "old": "İlaçları köye teslim et.",
+  "tr": "İlacı köye teslim et."
+ },
+ {
+  "id": 89,
+  "category": "gorev",
+  "context": "",
+  "en": "Hide in the cargo hold until the ship docks.",
+  "old": "Gemi yanana kadar kargo ambarında saklan.",
+  "tr": "Gemi yanana kadar kargo ambarında saklan."
+ },
+ {
+  "id": 90,
+  "category": "gorev",
+  "context": "",
+  "en": "Plant the explosives on the bridge supports.",
+  "old": "Patlayıcıları köprünün desteklerine yerleştir.",
+  "tr": "Patlayıcıları köprü desteklerine yerleştir."
+ },
+ {
+  "id": 91,
+  "category": "gorev",
+  "context": "",
+  "en": "Win the race to earn a new car.",
+  "old": "Yeni bir araba kazanmak için yarışı kazanın.",
+  "tr": "Yeni bir araba kazanmak için yarışı kazan."
+ },
+ {
+  "id": 92,
+  "category": "gorev",
+  "context": "",
+  "en": "Protect the witness until the trial.",
+  "old": "Duruşmaya kadar tanığı koru.",
+  "tr": "Tanık duruşmaya kadar koruns."
+ },
+ {
+  "id": 93,
+  "category": "gorev",
+  "context": "",
+  "en": "Use the radio to call for backup.",
+  "old": "Destek çağırmak için telsizi kullan.",
+  "tr": "Destek çağırmak için telsizi kullan."
+ },
+ {
+  "id": 94,
+  "category": "gorev",
+  "context": "",
+  "en": "Craft a torch to light the tunnel.",
+  "old": "Tüneli aydınlatmak için bir meşale hazırla.",
+  "tr": "Tüneli yakmak için bir meşale üret."
+ },
+ {
+  "id": 95,
+  "category": "gorev",
+  "context": "",
+  "en": "Defend the gate against three waves of enemies.",
+  "old": "Kapıyı üç düşman dalgasına karşı sav.",
+  "tr": "Kapıyı üç düşman dalgasına karşı sav."
+ },
+ {
+  "id": 96,
+  "category": "gorev",
+  "context": "",
+  "en": "Bribe the dock worker for information.",
+  "old": "Rıhtım çalışanına rüşvet ver.",
+  "tr": "Bilgi için rıhtıma rüşvet ver."
+ },
+ {
+  "id": 97,
+  "category": "gorev",
+  "context": "",
+  "en": "Mission objective: Reach the evacuation zone.",
+  "old": "Görev amacı: Tahliye bölgesine ulaşmak.",
+  "tr": "Görev amacı: Tahliye bölgesine ulaş."
+ },
+ {
+  "id": 98,
+  "category": "gorev",
+  "context": "",
+  "en": "New quest: The Lost Heir.",
+  "old": "Yeni Görev: Kayıp Kahraman.",
+  "tr": "Yeni görev: Kayıp Yadigâr."
+ },
+ {
+  "id": 99,
+  "category": "gorev",
+  "context": "",
+  "en": "Warning: Enemy reinforcements approaching.",
+  "old": "Uyarı: Düşman takviye kuvvetleri yaklaşıyor.",
+  "tr": "Uyarı: Düşman takviyesi yaklaşıyor."
+ },
+ {
+  "id": 100,
+  "category": "gorev",
+  "context": "",
+  "en": "Tip: Use stealth to avoid combat.",
+  "old": "İpucu: Savaşmayı önlemek için gizlilik kullanın.",
+  "tr": "İpucu: Savaşmayı önlemek için gizlilik kullan."
+ },
+ {
+  "id": 101,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press Q to switch weapons.",
+  "old": "Silah değiştirmek için Q tuşuna bas.",
+  "tr": "Silah değiştirmek için Q tuşuna bas."
+ },
+ {
+  "id": 102,
+  "category": "arayuz",
+  "context": "",
+  "en": "Hold Space to charge your jump.",
+  "old": "Atlayışını şarj etmek için Boşluk tuşuna basılı tut.",
+  "tr": "Zıplamanı şarj etmek için Boşluk'u tut."
+ },
+ {
+  "id": 103,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press Tab to open your inventory.",
+  "old": "Envanterinizi açmak için Tab tuşuna bas.",
+  "tr": "Envanterinizi açmak için Tab tuşuna bas."
+ },
+ {
+  "id": 104,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press E to talk.",
+  "old": "Konuşmak için E tuşuna bas.",
+  "tr": "Konuşmak için E tuşuna bas."
+ },
+ {
+  "id": 105,
+  "category": "arayuz",
+  "context": "",
+  "en": "Hold R to repair the vehicle.",
+  "old": "Aracın tamiri için R tuşuna basılı tut.",
+  "tr": "Aracı onarmak için R tuşuna basılı tut."
+ },
+ {
+  "id": 106,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press F to enter the building.",
+  "old": "Binaya girmek için F tuşuna bas.",
+  "tr": "Binaya girmek için F tuşuna bas."
+ },
+ {
+  "id": 107,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press G to throw a grenade.",
+  "old": "Bir el bombası atmak için G tuşuna bas.",
+  "tr": "El bombası atmak için G tuşuna bas."
+ },
+ {
+  "id": 108,
+  "category": "arayuz",
+  "context": "",
+  "en": "Your progress has been saved.",
+  "old": "İlerlemen kaydedildi.",
+  "tr": "İlerlemen kaydedildi."
+ },
+ {
+  "id": 109,
+  "category": "arayuz",
+  "context": "",
+  "en": "Save failed. Please try again.",
+  "old": "Kaydetme başarısız oldu. Lütfen tekrar deneyin.",
+  "tr": "Kaydetme başarısız. Lütfen tekrar deneyin."
+ },
+ {
+  "id": 110,
+  "category": "arayuz",
+  "context": "",
+  "en": "Are you sure you want to delete this save?",
+  "old": "Bu kaydı silmek istediğinizden emin misiniz?",
+  "tr": "Bu kaydı silmek istediğinizden emin misiniz?"
+ },
+ {
+  "id": 111,
+  "category": "arayuz",
+  "context": "",
+  "en": "You cannot carry any more items.",
+  "old": "Daha fazla eşya taşıyamazsınız.",
+  "tr": "Daha fazla eşya taşıyamazsın."
+ },
+ {
+  "id": 112,
+  "category": "arayuz",
+  "context": "",
+  "en": "This door is locked.",
+  "old": "Bu kapı kilitli.",
+  "tr": "Bu kapı kilitli."
+ },
+ {
+  "id": 113,
+  "category": "arayuz",
+  "context": "",
+  "en": "You need a key to open this.",
+  "old": "Bunu açmak için bir anahtara ihtiyacınız var.",
+  "tr": "Bunu açmak için bir anahtara ihtiyacın var."
+ },
+ {
+  "id": 114,
+  "category": "arayuz",
+  "context": "",
+  "en": "Weapon broken.",
+  "old": "Silah kırıldı.",
+  "tr": "Silah kırıldı."
+ },
+ {
+  "id": 115,
+  "category": "arayuz",
+  "context": "",
+  "en": "Your health is low.",
+  "old": "Sağlığınız düşük.",
+  "tr": "Sağlığın düşük."
+ },
+ {
+  "id": 116,
+  "category": "arayuz",
+  "context": "",
+  "en": "Stamina depleted.",
+  "old": "Stamina tükendi.",
+  "tr": "Dayanıklılık tükendi."
+ },
+ {
+  "id": 117,
+  "category": "arayuz",
+  "context": "",
+  "en": "New item acquired: Rusty Key",
+  "old": "Satın alınan yeni ürün: Rusty Key",
+  "tr": "Yeni eşya alındı: Rusty Key"
+ },
+ {
+  "id": 118,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press Esc to pause the game.",
+  "old": "Oyunu duraklatmak için Esc tuşuna bas.",
+  "tr": "Oyunu duraklatmak için Esc tuşuna bas."
+ },
+ {
+  "id": 119,
+  "category": "arayuz",
+  "context": "",
+  "en": "Connection lost. Reconnecting...",
+  "old": "Bağlantı koptu. Yeniden bağlanılıyor...",
+  "tr": "Bağlantı koptu. Yeniden bağlanılıyor..."
+ },
+ {
+  "id": 120,
+  "category": "arayuz",
+  "context": "",
+  "en": "Unable to load saved data.",
+  "old": "Kaydedilen veriler yüklenemedi.",
+  "tr": "Kaydedilen veri yüklenemedi."
+ },
+ {
+  "id": 121,
+  "category": "arayuz",
+  "context": "",
+  "en": "Apply changes?",
+  "old": "Değişiklikler uygulansın mı?",
+  "tr": "Değişiklikler uygulansın mı?"
+ },
+ {
+  "id": 122,
+  "category": "arayuz",
+  "context": "",
+  "en": "Master Volume",
+  "old": "Ana ses",
+  "tr": "Ana ses"
+ },
+ {
+  "id": 123,
+  "category": "arayuz",
+  "context": "",
+  "en": "Invert Y-Axis",
+  "old": "Y- Eksenini Tersine Çevir",
+  "tr": "Y eksenini tersine çevir"
+ },
+ {
+  "id": 124,
+  "category": "arayuz",
+  "context": "",
+  "en": "Field of View",
+  "old": "Görüş Alanı",
+  "tr": "Görüş alanı"
+ },
+ {
+  "id": 125,
+  "category": "arayuz",
+  "context": "",
+  "en": "Subtitles: On",
+  "old": "Altyazılar: Açık",
+  "tr": "Altyazılar: Açık"
+ },
+ {
+  "id": 126,
+  "category": "arayuz",
+  "context": "",
+  "en": "Resolution: 1920x1080",
+  "old": "Çözünürlük: 1920x1080",
+  "tr": "Çözünürlük: 1920x1080"
+ },
+ {
+  "id": 127,
+  "category": "arayuz",
+  "context": "",
+  "en": "Brightness: 70%",
+  "old": "Parlaklık:% 70",
+  "tr": "Parlaklık:% 70"
+ },
+ {
+  "id": 128,
+  "category": "arayuz",
+  "context": "",
+  "en": "Controls: Keyboard and Mouse",
+  "old": "Kontroller: Klavye ve Fare",
+  "tr": "Kontroller: Klavye ve Fare"
+ },
+ {
+  "id": 129,
+  "category": "arayuz",
+  "context": "",
+  "en": "Difficulty: Veteran",
+  "old": "Zorluk: Veteran",
+  "tr": "Zorluk: Veteran"
+ },
+ {
+  "id": 130,
+  "category": "arayuz",
+  "context": "",
+  "en": "Chapter 3: The Long Way Home",
+  "old": "Bölüm 3: Eve Dönüş Yolu",
+  "tr": "Bölüm 3: Eve Uzun Yol"
+ },
+ {
+  "id": 131,
+  "category": "arayuz",
+  "context": "",
+  "en": "Experience: 1200 / 2000",
+  "old": "Tecrübe: 1200 / 2000",
+  "tr": "Deneyim: 1200 / 2000"
+ },
+ {
+  "id": 132,
+  "category": "arayuz",
+  "context": "",
+  "en": "Fuel: 40%",
+  "old": "Yakıt: 40%",
+  "tr": "Yakıt:% 40"
+ },
+ {
+  "id": 133,
+  "category": "arayuz",
+  "context": "",
+  "en": "Time remaining: 02:30",
+  "old": "Kalan süre: 02:30",
+  "tr": "Kalan süre: 02:30"
+ },
+ {
+  "id": 134,
+  "category": "arayuz",
+  "context": "",
+  "en": "Press any key to start.",
+  "old": "Başlatmak için herhangi bir tuşa bas.",
+  "tr": "Başlatmak için herhangi bir tuşa bas."
+ },
+ {
+  "id": 135,
+  "category": "arayuz",
+  "context": "",
+  "en": "Hold Left Click to aim.",
+  "old": "Nişan almak için Sol fare tuşuna basılı tut.",
+  "tr": "Nişan almak için Sol fare tuşuna basılı tut."
+ },
+ {
+  "id": 136,
+  "category": "arayuz",
+  "context": "",
+  "en": "Release to throw.",
+  "old": "Fırlatmak için bırak.",
+  "tr": "Fırlatmak için bırak."
+ },
+ {
+  "id": 137,
+  "category": "arayuz",
+  "context": "",
+  "en": "Loading next area...",
+  "old": "Sonraki alan yükleniyor...",
+  "tr": "Sonraki bölge yükleniyor..."
+ },
+ {
+  "id": 138,
+  "category": "arayuz",
+  "context": "",
+  "en": "Your vehicle has been destroyed.",
+  "old": "Aracınız yok edildi.",
+  "tr": "Aracın yok edildi."
+ },
+ {
+  "id": 139,
+  "category": "arayuz",
+  "context": "",
+  "en": "Enemy spotted!",
+  "old": "Düşman görüldü!",
+  "tr": "Düşman görüldü!"
+ },
+ {
+  "id": 140,
+  "category": "arayuz",
+  "context": "",
+  "en": "You are being hunted.",
+  "old": "Avlanıyorsunuz.",
+  "tr": "Avlanıyorsun."
+ },
+ {
+  "id": 141,
+  "category": "resmi",
+  "context": "",
+  "en": "The council has spoken, and its word is final.",
+  "old": "Konsey konuştu ve sözü kesinleşti.",
+  "tr": "Konsey konuştu ve sözü kesin."
+ },
+ {
+  "id": 142,
+  "category": "resmi",
+  "context": "",
+  "en": "Let it be known that the crown forgives no traitor.",
+  "old": "Herkes bilmelidir ki tacın haini affetmez.",
+  "tr": "Herkes tacın haini affetmediğini bilmeli."
+ },
+ {
+  "id": 143,
+  "category": "resmi",
+  "context": "",
+  "en": "Many have fallen in defense of these walls.",
+  "old": "Birçoğu bu duvarların savunmasında düştü.",
+  "tr": "Bu duvarların savunmasında birçok kişi düştü."
+ },
+ {
+  "id": 144,
+  "category": "resmi",
+  "context": "",
+  "en": "The old kingdom lies buried beneath the sand.",
+  "old": "Eski krallık kumun altında gömülüdür.",
+  "tr": "Eski krallık kumun altında gömülü yatıyor."
+ },
+ {
+  "id": 145,
+  "category": "resmi",
+  "context": "",
+  "en": "Our scouts report movement along the northern ridge.",
+  "old": "Gözcülerimiz kuzey sırtındaki hareketi bildiriyorlar.",
+  "tr": "Gözcülerimiz kuzey sırtı boyunca hareket olduğunu bildirdi."
+ },
+ {
+  "id": 146,
+  "category": "resmi",
+  "context": "",
+  "en": "The ritual must be completed before the eclipse.",
+  "old": "Ayin tutulmadan önce tamamlanmalıdır.",
+  "tr": "Ayin tutulmadan önce tamamlanmalıdır."
+ },
+ {
+  "id": 147,
+  "category": "resmi",
+  "context": "",
+  "en": "I pledge my sword to your cause.",
+  "old": "Kılıcımı davana adadım.",
+  "tr": "Kılıcımı davana söz veriyorum."
+ },
+ {
+  "id": 148,
+  "category": "resmi",
+  "context": "",
+  "en": "Only the worthy may pass through these gates.",
+  "old": "Sadece layık olanlar bu kapılardan geçebilir.",
+  "tr": "Bu kapılardan yalnızca layık olanlar geçebilir."
+ },
+ {
+  "id": 149,
+  "category": "resmi",
+  "context": "",
+  "en": "The captain's log: day forty-two at sea.",
+  "old": "Kaptanın seyir defteri: denizde kırk iki gün.",
+  "tr": "Kaptanın seyir defteri: denizde kırk iki gün."
+ },
+ {
+  "id": 150,
+  "category": "resmi",
+  "context": "",
+  "en": "Citizens of the republic, tonight we stand together.",
+  "old": "Cumhuriyet vatandaşları, bu gece hep birlikte duruyoruz.",
+  "tr": "Cumhuriyet vatandaşları, bu gece birlikte duruyoruz."
+ },
+ {
+  "id": 151,
+  "category": "resmi",
+  "context": "",
+  "en": "A sacrifice is demanded by the ancient law.",
+  "old": "Eski kanun tarafından bir fedakarlık talep edilir.",
+  "tr": "Kadim yasa tarafından bir fedakârlık talep edilir."
+ },
+ {
+  "id": 152,
+  "category": "resmi",
+  "context": "",
+  "en": "The signal originates from deep within the asteroid belt.",
+  "old": "Sinyal, asteroit kuşağının derinliklerinden kaynaklanır.",
+  "tr": "Sinyal asteroit kuşağının derinlerinden geliyor."
+ },
+ {
+  "id": 153,
+  "category": "resmi",
+  "context": "",
+  "en": "All hands, brace for impact.",
+  "old": "Herkes çarpışmaya hazır olsun.",
+  "tr": "Herkes, darbe için hazırlanın."
+ },
+ {
+  "id": 154,
+  "category": "resmi",
+  "context": "",
+  "en": "The prince has vanished without a trace.",
+  "old": "Prens iz bırakmadan ortadan kayboldu.",
+  "tr": "Prens iz bırakmadan kayboldu."
+ },
+ {
+  "id": 155,
+  "category": "resmi",
+  "context": "",
+  "en": "Your loyalty will not be forgotten.",
+  "old": "Sadakatin unutulmayacak.",
+  "tr": "Sadakatiniz unutulmayacak."
+ },
+ {
+  "id": 156,
+  "category": "resmi",
+  "context": "",
+  "en": "May the light guide you through the darkness.",
+  "old": "Işık karanlıklar içinde size yol göstersin.",
+  "tr": "Işık karanlıkta sana yol göstersin."
+ },
+ {
+  "id": 157,
+  "category": "resmi",
+  "context": "",
+  "en": "We regret to inform you that the contract has been terminated.",
+  "old": "Sözleşmenin sona erdiğini bildirmekten üzüntü duyuyoruz.",
+  "tr": "Sözleşmenin sona erdiğini size bildirmekten üzüntü duyuyoruz."
+ },
+ {
+  "id": 158,
+  "category": "resmi",
+  "context": "",
+  "en": "The experiment has exceeded all expectations.",
+  "old": "Deney tüm beklentileri aştı.",
+  "tr": "Deney tüm beklentileri aştı."
+ },
+ {
+  "id": 159,
+  "category": "resmi",
+  "context": "",
+  "en": "Rumors of a hidden city have reached the capital.",
+  "old": "Gizli bir şehrin söylentileri başkente ulaştı.",
+  "tr": "Gizli bir şehrin söylentileri başkente ulaştı."
+ },
+ {
+  "id": 160,
+  "category": "resmi",
+  "context": "",
+  "en": "The oracle speaks in riddles, but her words are true.",
+  "old": "Kahin bilmecelerle konuşur, ama sözleri doğrudur.",
+  "tr": "Kâhin bilmecelerle konuşur ama sözleri doğrudur."
+ },
+ {
+  "id": 161,
+  "category": "resmi",
+  "context": "",
+  "en": "Every soldier knows the cost of freedom.",
+  "old": "Her asker özgürlüğün bedelini bilir.",
+  "tr": "Her asker özgürlüğün bedelini bilir."
+ },
+ {
+  "id": 162,
+  "category": "resmi",
+  "context": "",
+  "en": "The archives were sealed over a century ago.",
+  "old": "Arşivler yüz yıl önce mühürlenmişti.",
+  "tr": "Arşivler yüz yıldan daha önce mühürlendi."
+ },
+ {
+  "id": 163,
+  "category": "resmi",
+  "context": "",
+  "en": "Fortune favors the bold.",
+  "old": "Servet cesurları sever.",
+  "tr": "Talih cesurları kayırır."
+ },
+ {
+  "id": 164,
+  "category": "resmi",
+  "context": "",
+  "en": "The tournament will begin at first light.",
+  "old": "Turnuva ilk ışıkta başlayacak.",
+  "tr": "Turnuva ilk ışıkta başlayacak."
+ },
+ {
+  "id": 165,
+  "category": "resmi",
+  "context": "",
+  "en": "Warning, hull integrity at thirty percent.",
+  "old": "Uyarı, gövde bütünlüğü yüzde otuzda.",
+  "tr": "Uyarı, gövde bütünlüğü yüzde otuz."
+ },
+ {
+  "id": 166,
+  "category": "resmi",
+  "context": "",
+  "en": "By decree of the emperor, this city is under quarantine.",
+  "old": "İmparatorun emriyle bu şehir karantina altında.",
+  "tr": "İmparatorun emriyle bu şehir karantina altında."
+ },
+ {
+  "id": 167,
+  "category": "resmi",
+  "context": "",
+  "en": "The dragon has not been seen for a thousand years.",
+  "old": "Ejderha bin yıldır görülmemiştir.",
+  "tr": "Ejderha bin yıldır görülmedi."
+ },
+ {
+  "id": 168,
+  "category": "resmi",
+  "context": "",
+  "en": "The mission is classified. You will not discuss it.",
+  "old": "Görev gizlidir. Bunu tartışmayacaksınız.",
+  "tr": "Görev gizli. Bunu konuşmayacaksın."
+ },
+ {
+  "id": 169,
+  "category": "resmi",
+  "context": "",
+  "en": "Welcome aboard, Commander.",
+  "old": "Gemiye hoş geldiniz, Komutan.",
+  "tr": "Gemiye hoş geldiniz, Komutan."
+ },
+ {
+  "id": 170,
+  "category": "resmi",
+  "context": "",
+  "en": "The bells toll for those we have lost.",
+  "old": "Kaybettiklerimiz için çanlar çalıyor.",
+  "tr": "Kaybettiklerimiz için ziller çalıyor."
+ },
+ {
+  "id": 171,
+  "category": "kisa",
+  "context": "",
+  "en": "Hold on!",
+  "old": "Sıkı tut!",
+  "tr": "Dayan!"
+ },
+ {
+  "id": 172,
+  "category": "kisa",
+  "context": "",
+  "en": "Look out!",
+  "old": "Dikkat et!",
+  "tr": "Dikkat!"
+ },
+ {
+  "id": 173,
+  "category": "kisa",
+  "context": "",
+  "en": "On my mark.",
+  "old": "İşaretimle.",
+  "tr": "İşaretimle."
+ },
+ {
+  "id": 174,
+  "category": "kisa",
+  "context": "",
+  "en": "Stay down!",
+  "old": "Yerde kal!",
+  "tr": "Yere yat!"
+ },
+ {
+  "id": 175,
+  "category": "kisa",
+  "context": "",
+  "en": "He's got a gun!",
+  "old": "Silahı var!",
+  "tr": "Silahı var!"
+ },
+ {
+  "id": 176,
+  "category": "kisa",
+  "context": "",
+  "en": "Nice work.",
+  "old": "İyi işti.",
+  "tr": "Aferin."
+ },
+ {
+  "id": 177,
+  "category": "kisa",
+  "context": "",
+  "en": "Not so fast.",
+  "old": "O kadar hızlı değil.",
+  "tr": "O kadar hızlı değil."
+ },
+ {
+  "id": 178,
+  "category": "kisa",
+  "context": "",
+  "en": "Get in!",
+  "old": "Atla!",
+  "tr": "Gir!"
+ },
+ {
+  "id": 179,
+  "category": "kisa",
+  "context": "",
+  "en": "Hands up!",
+  "old": "Eller yukarı!",
+  "tr": "Eller yukarı!"
+ },
+ {
+  "id": 180,
+  "category": "kisa",
+  "context": "",
+  "en": "Wait here.",
+  "old": "Burada bekle.",
+  "tr": "Burada bekle."
+ },
+ {
+  "id": 181,
+  "category": "kisa",
+  "context": "",
+  "en": "Keep moving!",
+  "old": "Devam et!",
+  "tr": "Harekete devam!"
+ },
+ {
+  "id": 182,
+  "category": "kisa",
+  "context": "",
+  "en": "I'm out of ammo!",
+  "old": "Cephanem bitti!",
+  "tr": "Cephanem bitti!"
+ },
+ {
+  "id": 183,
+  "category": "kisa",
+  "context": "",
+  "en": "Enemy down.",
+  "old": "Düşman vuruldu.",
+  "tr": "Düşman yaralı."
+ },
+ {
+  "id": 184,
+  "category": "kisa",
+  "context": "",
+  "en": "Follow me.",
+  "old": "Beni izle.",
+  "tr": "Beni takip et."
+ },
+ {
+  "id": 185,
+  "category": "kisa",
+  "context": "",
+  "en": "Stand back!",
+  "old": "Geri çekil!",
+  "tr": "Geri çekil!"
+ },
+ {
+  "id": 186,
+  "category": "baglam",
+  "context": "The safe is in the basement.",
+  "en": "Who has the code?",
+  "old": "Şifre kimde?",
+  "tr": "Şifre kimde?"
+ },
+ {
+  "id": 187,
+  "category": "baglam",
+  "context": "Is the car ready?",
+  "en": "Almost. It needs fuel.",
+  "old": "Neredeyse. Yakıta ihtiyacı var.",
+  "tr": "Az kaldı. Yakıta ihtiyacı var."
+ },
+ {
+  "id": 188,
+  "category": "baglam",
+  "context": "He's been missing for two days.",
+  "en": "That's not like him.",
+  "old": "Bu onun tarzı değil.",
+  "tr": "Bu onun gibi değil."
+ },
+ {
+  "id": 189,
+  "category": "baglam",
+  "context": "We have to cross the river.",
+  "en": "Is it deep?",
+  "old": "Derin mi?",
+  "tr": "Derin mi?"
+ },
+ {
+  "id": 190,
+  "category": "baglam",
+  "context": "Did you hear that?",
+  "en": "It came from upstairs.",
+  "old": "Üst kattan geldi.",
+  "tr": "Yukarıdan geldi."
+ },
+ {
+  "id": 191,
+  "category": "baglam",
+  "context": "She said she'd meet us here.",
+  "en": "Then where is she?",
+  "old": "O zaman nerede?",
+  "tr": "O zaman nerede?"
+ },
+ {
+  "id": 192,
+  "category": "baglam",
+  "context": "Hand me the key.",
+  "en": "Which one?",
+  "old": "Hangisini?",
+  "tr": "Hangisini?"
+ },
+ {
+  "id": 193,
+  "category": "baglam",
+  "context": "I'll go first.",
+  "en": "Be careful.",
+  "old": "Dikkatli ol.",
+  "tr": "Dikkat et."
+ },
+ {
+  "id": 194,
+  "category": "baglam",
+  "context": "The guards change shifts at midnight.",
+  "en": "That gives us ten minutes.",
+  "old": "Bu bize 10 dakika verir.",
+  "tr": "Bu bize on dakika verir."
+ },
+ {
+  "id": 195,
+  "category": "baglam",
+  "context": "You're bleeding.",
+  "en": "It's just a scratch.",
+  "old": "Sadece bir çizik.",
+  "tr": "Sadece bir çizik."
+ },
+ {
+  "id": 196,
+  "category": "baglam",
+  "context": "They have the whole street blocked.",
+  "en": "Then we go through the alley.",
+  "old": "Sonra ara sokaktan geçiyoruz.",
+  "tr": "Sonra ara sokaktan geçiyoruz."
+ },
+ {
+  "id": 197,
+  "category": "baglam",
+  "context": "Can you fix it?",
+  "en": "Give me a minute.",
+  "old": "Bana bir dakika ver.",
+  "tr": "Bana bir dakika ver."
+ },
+ {
+  "id": 198,
+  "category": "baglam",
+  "context": "He's not breathing.",
+  "en": "Move aside.",
+  "old": "Kenara çekil.",
+  "tr": "Kenara çekil."
+ },
+ {
+  "id": 199,
+  "category": "baglam",
+  "context": "Who sent you?",
+  "en": "Nobody sent me.",
+  "old": "Kimse beni göndermedi.",
+  "tr": "Beni kimse göndermedi."
+ },
+ {
+  "id": 200,
+  "category": "baglam",
+  "context": "Let's split up.",
+  "en": "Bad idea.",
+  "old": "Kötü fikir.",
+  "tr": "Kötü fikir."
+ }
+]

@@ -1,0 +1,97 @@
+Squad, check your corners and watch your sectors. ||| Takım, köşelerinizi kontrol edin ve sektörlerinizi gözleyin.
+Contact front, open fire! ||| Önde temas var, ateş açın!
+Enemy tanks are advancing from the north ridge. ||| Düşman tankları kuzey sırtından ilerliyor.
+Hold the line until reinforcements arrive. ||| Takviye gelene kadar hattı tutun.
+We're pinned down, requesting air support. ||| Sıkıştık, hava desteği talep ediyoruz.
+Medic! We've got a man down! ||| Sağlıkçı! Yaralı var!
+Fall back to the second position. ||| İkinci mevziye çekilin.
+Cover me while I reload. ||| Ben şarjör değiştirirken beni koru.
+Flank them from the left and cut off their retreat. ||| Onları soldan kuşatın ve geri çekilme yollarını kesin.
+Sergeant, the bridge is rigged to blow. ||| Çavuş, köprüye patlayıcı yerleştirilmiş.
+Roger that, moving to the rally point. ||| Anlaşıldı, toplanma noktasına ilerliyorum.
+Alpha team, report your status. ||| Alfa timi, durumunuzu bildirin.
+Negative, we have no visual on the target. ||| Olumsuz, hedefi göremiyoruz.
+All units, weapons free. ||| Tüm birlikler, serbest ateş.
+Hold your fire until you see the whites of their eyes. ||| Gözlerinin akını görene kadar ateş etmeyin.
+We lost half the platoon in the first hour. ||| İlk saatte müfrezenin yarısını kaybettik.
+The lieutenant is dead, you're in command now. ||| Teğmen öldü, artık komuta sende.
+That's an order, soldier! ||| Bu bir emir, asker!
+Permission to speak freely, sir? ||| Açık konuşabilir miyim, komutanım?
+Move out, we're burning daylight. ||| Harekete geçin, vakit kaybediyoruz.
+Smoke grenade out, break contact now. ||| Sis bombası atıldı, hemen teması kesin.
+We're taking fire from the rooftops. ||| Çatılardan ateş alıyoruz.
+Mortar rounds are landing short of our position. ||| Havan atışları mevzimizin biraz önüne düşüyor.
+Eyes up, sniper on the church tower. ||| Dikkat, kilise kulesinde keskin nişancı var.
+The convoy was hit by an IED two miles from the base. ||| Konvoy üsten iki mil uzakta el yapımı bir patlayıcıya çarptı.
+Extraction is five minutes out, hold on! ||| Tahliye beş dakika uzakta, dayanın!
+We're out of ammo and out of time. ||| Mermimiz de zamanımız da bitti.
+This is no place for rookies. ||| Burası acemilere göre bir yer değil.
+Dig in, they'll hit us at dawn. ||| Siper kazın, şafakta bize saldıracaklar.
+Check your gear, we ship out at 0600. ||| Teçhizatınızı kontrol edin, saat 06.00'da yola çıkıyoruz.
+Soldier, you're on latrine duty until further notice. ||| Asker, bir sonraki emre kadar tuvalet nöbetindesin.
+The colonel doesn't take excuses. ||| Albay bahane kabul etmez.
+We are the last line of defense. ||| Biz son savunma hattıyız.
+Nobody gets left behind. ||| Kimse geride bırakılmaz.
+The general ordered a full retreat. ||| General tam bir geri çekilme emri verdi.
+Secure the perimeter and set up a watch rotation. ||| Çevreyi güvenceye alın ve nöbet sırası düzenleyin.
+Choppers inbound, pop the flares. ||| Helikopterler yaklaşıyor, işaret fişeklerini atın.
+Command, we've lost contact with the second squad. ||| Komuta, ikinci takımla bağlantıyı kaybettik.
+I've seen men crack under less pressure than this. ||| Bundan daha az baskı altında çöken adamlar gördüm.
+Our job is to hold this hill, no matter the cost. ||| Bizim görevimiz bu tepeyi ne pahasına olursa olsun tutmak.
+You'll be on the front line by morning. ||| Sabaha kadar cephe hattında olacaksın.
+The war is over, but the fighting never stopped. ||| Savaş bitti ama çatışma hiç durmadı.
+I spent twelve years in the army before I became a mercenary. ||| Paralı asker olmadan önce on iki yıl orduda kaldım.
+We're guns for hire, we don't pick sides. ||| Biz kiralık silahlarız, taraf seçmeyiz.
+Half up front, half when the job is done. ||| Yarısı peşin, yarısı iş bitince.
+The contract says nothing about civilians. ||| Sözleşmede siviller hakkında hiçbir şey yazmıyor.
+I don't care who's paying, as long as the money clears. ||| Para hesaba geçtiği sürece kimin ödediği umurumda değil.
+This private army answers to no government. ||| Bu özel ordu hiçbir hükümete bağlı değil.
+Our employer wants the minister alive, if possible. ||| İşverenimiz mümkünse bakanın sağ olmasını istiyor.
+Don't get attached to the locals, we leave in a week. ||| Yerlilere alışma, bir hafta sonra gidiyoruz.
+The mercs outgunned the militia two to one. ||| Paralı askerler milisleri silah bakımından iki kat geride bıraktı.
+We move at night and sleep in shifts. ||| Geceleri hareket ediyor ve vardiyayla uyuyoruz.
+They sent a drone to scout the compound. ||| Yerleşkeyi keşfetmek için bir dron gönderdiler.
+Get me eyes on that building. ||| O binayı gözetleyecek birini bulun.
+Breach and clear, room by room. ||| Kapıyı kırın ve oda oda temizleyin.
+Flashbang out, go go go! ||| Şok bombası atıldı, gidin gidin gidin!
+Tango down, area is secure. ||| Hedef etkisiz, bölge güvende.
+Weapons check, safeties on until we're inside. ||| Silah kontrolü, içeri girene kadar emniyetler kapalı.
+We'll rappel from the roof and take the east window. ||| Çatıdan ip atlayıp doğu penceresinden gireceğiz.
+Boss, the hostages are in the basement. ||| Patron, rehineler bodrumda.
+Nightvision on, thermals are showing six hostiles. ||| Gece görüşü açık, termal altı düşman gösteriyor.
+Radio check, how copy? ||| Telsiz kontrolü, beni duyuyor musunuz?
+Loud and clear. ||| Net ve açık duyuyorum.
+Say again, you're breaking up. ||| Tekrar edin, sesiniz kesiliyor.
+Sir, we've got incoming! ||| Komutanım, üzerimize atış geliyor!
+Dive, dive, dive! ||| Dalış, dalış, dalış!
+Torpedoes in the water, brace for impact! ||| Suda torpidolar var, darbeye hazırlanın!
+Eagle One, you are cleared for takeoff. ||| Kartal Bir, kalkış için izniniz var.
+I've got a tone, missile lock! ||| Sinyal aldım, füze kilitlendi!
+Pull up, pull up! You're too low! ||| Yüksel, yüksel! Çok alçaksın!
+Bandits at two o'clock, closing fast. ||| Saat ikide düşman uçaklar, hızla yaklaşıyorlar.
+Break left, I'll take the one on your six. ||| Sola kır, ben senin arkandakini alırım.
+Fox two, missile away. ||| Fox iki, füze atıldı.
+The carrier group is sailing into the strait tomorrow. ||| Uçak gemisi grubu yarın boğaza giriyor.
+Captain, we've lost power to the aft engines. ||| Kaptan, kıç motorlarının gücü gitti.
+Man the guns, all hands on deck! ||| Toplara geçin, herkes güverteye!
+They'll court-martial you for this. ||| Bunun için seni askeri mahkemeye çıkaracaklar.
+I'm only following orders. ||| Ben sadece emirlere uyuyorum.
+A good soldier knows when to retreat. ||| İyi bir asker ne zaman geri çekileceğini bilir.
+He earned a medal for bravery under fire. ||| Ateş altındaki cesareti için madalya aldı.
+Take a knee, catch your breath, we move in two. ||| Çömel, nefes al, iki dakikaya hareket ediyoruz.
+That sniper has pinned us down for hours. ||| O keskin nişancı bizi saatlerdir yere çiviledi.
+Watch your six, they're coming from behind! ||| Arkanı kolla, arkadan geliyorlar!
+Fire in the hole! ||| Patlıyor, kendinizi koruyun!
+Aim for the center mass and don't waste ammo. ||| Gövdeyi hedefle ve mermiyi boşa harcama.
+The rebels have taken the radio station. ||| İsyancılar radyo istasyonunu ele geçirdi.
+The enemy outnumbers us ten to one. ||| Düşman sayıca bizi on kat aşıyor.
+The base was overrun before sunrise. ||| Üs, gün doğmadan basıldı.
+Raise the white flag, we're surrendering. ||| Beyaz bayrağı çekin, teslim oluyoruz.
+Prisoners will be treated according to the rules of war. ||| Esirlere savaş kurallarına göre davranılacak.
+Check your fire, that's a friendly! ||| Ateşinizi kesin, o bizim adam!
+Roger, standing by for further orders. ||| Anlaşıldı, yeni emirler için hazırda bekliyorum.
+The brass has no idea what's happening on the ground. ||| Üst rütbeliler sahada neler olduğunu hiç bilmiyor.
+We train hard so we can fight easy. ||| Savaşırken zorlanmayalım diye çok sert eğitim yapıyoruz.
+Drop and give me fifty! ||| Çök ve elli şınav çek!
+The recruits are green, but they learn fast. ||| Acemiler toy ama çabuk öğreniyorlar.
+Lock and load, we're going in. ||| Silahları doldurun, giriyoruz.

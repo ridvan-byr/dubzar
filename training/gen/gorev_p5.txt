@@ -1,0 +1,92 @@
+Check the perimeter and report any movement. ||| Çevreyi kontrol et ve herhangi bir hareket olursa bildir.
+Circle around and hit them from behind. ||| Çevrelerinden dolan ve arkadan vur.
+Pin them down with suppressing fire. ||| Baskı ateşiyle onları yerlerine çivile.
+Keep their heads down while we advance. ||| Biz ilerlerken onları başını kaldıramaz halde tut.
+Take the left corridor and secure the armory. ||| Sol koridora gir ve cephaneliği güvene al.
+We'll push through the main gate while you create a diversion. ||| Sen oyalama yaparken biz ana kapıdan geçeceğiz.
+Fan out and search every room. ||| Etrafa dağılın ve her odayı arayın.
+Watch the rooftops for snipers. ||| Çatılara göz at, keskin nişancı olabilir.
+Smoke's out. Move in now. ||| Duman çıktı. Şimdi girin.
+Hold the bridge until the engineers finish. ||| Mühendisler bitirene kadar köprüyü tutun.
+If they break through, fall back to the church. ||| Hattı yarmaya kalkarlarsa kiliseye çekilin.
+Cut down anyone who tries to flee. ||| Kaçmaya çalışan herkesi biç.
+Strike hard and strike fast. ||| Sert ve hızlı vur.
+Don't stop until the whole camp is cleared. ||| Bütün kamp temizlenene kadar durma.
+Mop up whatever's left and meet at the rally point. ||| Geriye kalanları temizle ve toplanma noktasında buluşalım.
+Finish them off before they call for help. ||| Yardım çağırmadan işlerini bitir.
+Tie them up and leave them in the closet. ||| Onları bağla ve dolaba kapat.
+Gag him and throw him in the trunk. ||| Ağzını tıka ve onu bagaja at.
+Knock him out and take his uniform. ||| Onu bayılt ve üniformasını al.
+Don't kill anyone unless you have to. ||| Zorunda kalmadıkça kimseyi öldürme.
+Stay out of trouble for once. ||| Bir kereliğine belaya bulaşma.
+Keep a low profile in the city. ||| Şehirde dikkat çekme.
+Steer clear of the harbor district tonight. ||| Bu gece liman bölgesinden uzak dur.
+Keep your nose clean and the guards won't bother you. ||| Temiz kal, muhafızlar seni rahatsız etmez.
+Don't even think about running. ||| Kaçmayı aklından bile geçirme.
+Stop right there! ||| Orada dur!
+Freeze! Hands in the air! ||| Kıpırdama! Eller havaya!
+Halt in the name of the law! ||| Kanun adına dur!
+Get out of my sight. ||| Defol gözümün önünden.
+Get over here and give me a hand. ||| Gel buraya ve bana bir el ver.
+Lend me your torch for a moment. ||| Bir an için meşaleni bana ödünç ver.
+Give me a boost; I can't reach the ledge. ||| Beni yukarı it; çıkıntıya yetişemiyorum.
+Help me move this boulder. ||| Şu kayayı itmeme yardım et.
+Hand me that wrench. ||| Şu anahtarı bana uzat.
+Bring me three bottles of rum and I'll tell you everything. ||| Bana üç şişe rom getir, sana her şeyi anlatırım.
+Go fetch me some firewood, will you? ||| Git bana biraz odun getir, olur mu?
+Run along now, I'm busy. ||| Hadi şimdi git, meşgulüm.
+Come back tomorrow, the doctor's out. ||| Yarın gel, doktor yok.
+Wait outside and I'll call you in. ||| Dışarıda bekle, seni içeri çağırırım.
+Take a seat and make yourself comfortable. ||| Otur ve rahatına bak.
+Help yourself to some stew. ||| Güveçten buyur, kendin al.
+Go on, take it. It's yours. ||| Hadi al, senin.
+Keep the change. ||| Üstü kalsın.
+Spread the word that I'm buying. ||| Alıcı olduğumu duyur.
+Watch the shop for me while I step out. ||| Ben dışarı çıkarken dükkâna göz kulak ol.
+Speak to the captain before you board. ||| Gemiye binmeden önce kaptanla konuş.
+Check in at the front desk. ||| Resepsiyonda kayıt yaptır.
+Sign here and here. ||| Burayı ve burayı imzala.
+Fill out the form and hand it in at window three. ||| Formu doldur ve üç numaralı gişeye ver.
+Sit tight, the doctor will see you shortly. ||| Biraz sabret, doktor birazdan seni görecek.
+Hang on, I'm almost there. ||| Dayan, neredeyse geldim.
+Hold on to something! ||| Bir yere tutun!
+Hang in there, buddy. Help is coming. ||| Dayan dostum. Yardım geliyor.
+Heads up! ||| Dikkat!
+Duck! ||| Eğil!
+Get behind me. ||| Arkama geç.
+Back off, or I'll shoot. ||| Geri çekil, yoksa ateş ederim.
+Back away from the door. ||| Kapıdan uzaklaş.
+Step back and let the professionals handle it. ||| Geri çekil ve işi profesyonellere bırak.
+Stand aside, old man. ||| Çekil kenara, ihtiyar.
+Hurry up and finish the job. ||| Acele et ve işi bitir.
+Take your time; there's no rush. ||| Acele etme; zamanın var.
+Think it over and give me your answer tomorrow. ||| İyice düşün ve cevabını yarın bana ver.
+Hear me out before you decide. ||| Karar vermeden önce beni sonuna kadar dinle.
+Don't take it personally. ||| Kendine alma.
+Take my advice and leave town. ||| Benden söylemesi, şehri terk et.
+Trust your instincts out there. ||| Orada içgüdülerine güven.
+Keep faith and keep fighting. ||| İnancını koru ve savaşmaya devam et.
+Remember what I taught you. ||| Sana öğrettiklerimi hatırla.
+Don't forget to bring a lantern; it's pitch dark down there. ||| Fener getirmeyi unutma; orası zifiri karanlık.
+Pack light; we'll be moving fast. ||| Hafif git; hızlı hareket edeceğiz.
+Stock up on arrows before you leave. ||| Gitmeden önce ok stokla.
+Top off the tank before we hit the road. ||| Yola çıkmadan önce depoyu doldur.
+Gas up the jeep and check the tires. ||| Cipin deposunu doldur ve lastikleri kontrol et.
+Put on your gas mask; the air is toxic. ||| Gaz maskeni tak; hava zehirli.
+Cover your mouth and don't breathe the dust. ||| Ağzını kapat ve tozu soluma.
+Take the antidote at the first sign of poison. ||| Zehirlenmenin ilk belirtisinde panzehiri iç.
+Use the bandages sparingly; they're all we've got. ||| Sargıları idareli kullan; elimizde sadece bunlar var.
+Pump the handle until the tank fills up. ||| Depo dolana kadar kolu pompala.
+Wring out your clothes and stay warm. ||| Kıyafetlerini sık ve sıcak kal.
+Lash the logs together to make a raft. ||| Bir sal yapmak için kütükleri birbirine bağla.
+Sharpen your blade before the fight. ||| Kavgadan önce bıçağını bileyle.
+Tame the wolf by feeding it raw meat. ||| Kurdu çiğ etle besleyerek evcilleştir.
+Fish in the lake at dawn for the best catch. ||| En iyi av için şafakta gölde balık tut.
+Sift through the ashes for anything useful. ||| Küllerin arasında işe yarar bir şey var mı diye eşele.
+Dig here and you'll find the treasure. ||| Burayı kaz, hazineyi bulursun.
+Read the map and find the shortest route. ||| Haritayı oku ve en kısa yolu bul.
+Use the stars to find your way. ||| Yönünü bulmak için yıldızları kullan.
+Climb the lighthouse and signal the ship. ||| Deniz fenerine çık ve gemiye işaret ver.
+Follow the tracks to the cave entrance. ||| İzleri mağara girişine kadar takip et.
+Burn the nest and watch for the swarm. ||| Yuvayı yak ve sürüye dikkat et.
+Don't let the fire spread to the barn. ||| Ateşin ahıra sıçramasına izin verme.

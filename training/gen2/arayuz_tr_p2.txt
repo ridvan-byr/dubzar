@@ -1,0 +1,454 @@
+Yaygın
+Nadir değil
+Nadir
+Destansı
+Efsanevi
+Görev eşyası
+Tüketilebilir
+Anahtar eşya
+5 saniyede 50 can yeniler.
+Anında 30 mana yeniler.
+20 saniye boyunca hasarı %15 artırır.
+Zehire karşı bağışıklık sağlar.
+Ejderha ateşinde dövülmüş bir kılıç.
+Bu kadim yüzük güçle uğulduyor.
+Kilitli kapıları açmak için kullanılabilir.
+Paslı bir anahtar. Yakınlarda bir şeyi açabilir.
+Gelen hasarı %20 azaltır.
+Pasif: Saniyede 2 can yeniler.
+Aktif: Hayalet bir kurt çağırır.
+Yakındaki tüm düşmanlara yıldırım çarptırır.
+Duman bombası atarak düşmanları kör eder.
+İleri atılır ve arkasında ateş izi bırakır.
+Bir sonraki saldırın kesin kritik vurur.
+10 m yarıçaptaki düşmanları yavaşlatır.
+20. seviyede açılır.
+15 Güç gerekir.
+10. seviye bir karakter gerekir.
+Yetenek puanı mevcut.
+Yeni yeteneklerin kilidini açmak için yetenek puanı harca.
+Yeterli yetenek puanı yok.
+Geliştirme tamamlandı.
+Maksimum seviyeye ulaşıldı.
+Başarım kilidi açıldı
+Başarım kilidi açıldı: İlk Kan
+Kupa kazanıldı: Usta Kâşif
+Yeni silah açıldı!
+Açmak için oyunu Zor seviyede bitir.
+Hasar almadan 100 düşman yen.
+Gizli 50 madeni paranın hepsini topla.
+Üst üste 10 maç kazan.
+Eğitimi bitir.
+İlerleme: 7/20
+Gizli başarım
+Ödüller alındı.
+Ödülü al
+Günlük ödül hazır.
+Giriş serisi: 5 gün
+3. sezon 2 gün sonra başlıyor.
+Yeni içerik mevcut.
+Arkadaşlık isteği geldi.
+Sam grubuna katılmak istiyor.
+Arkadaşın artık çevrimiçi.
+Lobiden atıldın.
+Oyuncu oyundan ayrıldı.
+Oyuncu lobiye katıldı.
+Lobi
+Lobi oluştur
+Özel maç
+Herkese açık maç
+Hızlı maç
+Dereceli maç
+Eğlencelik
+Ortak kampanya
+Herkes tek başına
+Takım ölüm maçı
+Bayrak kapma
+Takımını seç.
+Teçhizatını seç.
+Bir karakter seç.
+A Takımı
+İzle
+Oyuncular: 6/8
+Ping: 45 ms
+Bölge: Avrupa
+Maç 10 saniye içinde başlıyor.
+Ev sahibinin oyunu başlatması bekleniyor.
+Tüm oyuncular hazır.
+Oyunu başlat
+Gruptan ayrıl
+Oyuncuyu at
+Oyuncuyu sustur
+Oyuncuyu bildir
+Engelle
+Sesli sohbet açık.
+Bas-konuş
+Açık mikrofon
+Takım sohbeti
+Mesaj gönderildi.
+Susturuldun.
+Takımın turu kazandı.
+3. tur şimdi başlıyor.
+Son tur
+Ani ölüm
+Beraberlik
+Yenilgi
+MVP: Alex
+Skor tablosu
+Rütbe: Altın II
+Rütbe atladın!
+Platin'e yükseldin.
+Eşleşme aranıyor...
+Tahmini bekleme süresi: 1:30
+Maç iptal edildi.
+Rakip pes etti.
+Dükkân
+Mağaza
+Satın al
+Sat
+200 altına satın al
+75 altına sat
+Fiyat: 500
+Yeterli altının yok.
+Satın alma başarılı.
+Satın alma onaylansın mı?
+Stokta yok
+Sınırlı süreli teklif
+İndirim 3 gün sonra bitiyor.
+%50 indirim
+Ücretsiz
+Sahip
+İstek listesine ekle
+Premium para birimi
+Daha fazla elmas al
+Savaş bileti
+Sezon bileti
+Kozmetikler
+Kostümler
+Paket
+Satın alımları geri yükle
+Kodu kullan
+Promosyon kodunu gir.
+Geçersiz kod.
+Onar
+Hepsini onar
+Geliştir
+Büyüle
+Parçala
+Üret
+Tarif açıldı: Demir Kılıç
+Gerekli malzemeler: 3 demir külçe
+Malzeme eksik.
+Üretim tamamlandı.
+Üretim süresi: 30 saniye
+Bir malzeme seç.
+Altyazılar: Kapalı
+Altyazı boyutu: Büyük
+Altyazı opaklığı
+Açıklamalı altyazılar
+Ses efekti açıklamalarını göster.
+Altyazılarda konuşmacı adlarını göster.
+Ekrandaki metnin boyutunu ayarla.
+Menü metinlerinin sesli okunması için bu seçeneği aç.
+Işığa duyarlılık için yanıp sönen ışıkları azalt.
+Basitleştirilmiş kontroller
+Tek elle oynama modu
+Otomatik nişan
+Hızlı tuşlama olaylarını atla
+Ezmek yerine basılı tut
+Oyun hızını yavaşlat
+Metin boyutu: Orta
+Arayüz ölçeği
+HUD opaklığı
+HUD'u gizle
+Nişangâh stili
+Nişangâh rengi
+Eğitim ipuçlarını göster
+Araç ipuçlarını etkinleştir
+Tuş istemlerini göster
+Giriş aygıtı
+Klavye ve fare
+Oyun kolu
+Birincil ateş
+İkincil ateş
+İleri git
+Geri git
+Sola kay
+Sağa kay
+Atamak için bir tuşa bas.
+Bu tuş zaten kullanılıyor.
+Yeniden atamak için tıkla.
+Atanmamış
+Ana ses %80'e ayarlandı.
+Çözünürlük değişti. Bu ayarlar korunsun mu?
+10 saniye içinde eski haline dönülecek...
+Grafik ön ayarı: Ultra
+Performans modu
+Kalite modu
+Işın izleme
+Yükseltme ölçekleme
+Ekran kartın bu özelliği desteklemiyor.
+Değişikliklerin uygulanması için yeniden başlatma gerekiyor.
+Kayıt yuvası 1
+Boş yuva
+Son kayıt: 2 saat önce
+Oynama süresi: 14 sa 32 dk
+4. Bölüm: Uzun Gece
+Önsöz
+Sonsöz
+Girişi geç
+Geçmek için ENTER'a bas.
+Devam etmek için BOŞLUK tuşuna bas.
+Diyaloğu geçmek için basılı tut.
+Ara sahne geçilsin mi?
+Diyaloğu otomatik ilerlet
+Diyalog geçmişi
+Bir yanıt seç.
+Seçimin hikâyeyi etkileyecek.
+Bu karar sonradan değiştirilemez.
+Mara ile ilişkin düzeldi.
+Muhafız bunu unutmayacak.
+Loncada 50 itibar kaybettin.
+İtibar: Dostane
+İtibar: Düşmanca
+Saat: 14:30
+12. gün
+Hava kararıyor. Çabuk bir barınak bul.
+Hava: Yağmur
+Fırtına yaklaşıyor.
+Üşüyorsun. Bir ateş yak.
+Açsın.
+Çok susadın.
+Bitkinsin ve dinlenmen lazım.
+Sabaha kadar uyumak için Z'ye bas.
+Dinlenme tamamlandı. Can yenilendi.
+Hızlı seyahat açıldı.
+Riverwood'a hızlı seyahat edilsin mi?
+Çatışma sırasında hızlı seyahat edemezsin.
+Yol noktası belirlendi.
+Yol noktasına uzaklık: 1,2 km
+İşaret haritaya yerleştirildi.
+Yasak bölgeye girdin.
+Şimdi geri dön yoksa vurulursun.
+Kilitli. Anahtar gerekiyor.
+Kilit açma: Zor
+Kapının kilidi açıldı.
+Sandık boş.
+120 altın buldun.
+Alındı: İyileştirme İksiri x2
+Hepsini topla
+Al
+Yağmalanacak bir şey yok.
+Almak için E'ye bas.
+Araca binmek için E'ye bas.
+Meşaleyi yakmak için F'ye bas.
+Tabancayı seçmek için 1'e bas.
+Hızlanmak için RT'ye bas.
+Fren yapmak için LB'ye bas.
+Ateş etmek için bırak.
+Nişangâhtan nişan almak için sağ fare tuşuna bas.
+Hareket etmek için sol çubuğu kullan.
+Hareket etmek için WASD'yi, etrafa bakmak için fareyi kullan.
+Hızlı eşyaları kullanmak için yön tuşlarına bas.
+Kurtulmak için X'e art arda bas!
+Siperini tam zamanında yaparak savuş.
+Çubuk yeşil bölgedeyken tuşa bas.
+Kırmızı bölgeden uzak dur.
+Adımına dikkat et.
+Dikkat, zemin sağlam değil.
+Düşmanlar yenilince ganimet bırakır.
+İpucu: Çevreyi avantajına kullan.
+İpucu: Büyük savaşlardan önce kaydet.
+İpucu: Daha güçlü saldırı için tuşa basılı tut.
+İpucu: Müttefiklere daire menüsünden emir verebilirsin.
+İpucu: Zırhını geliştirmeyi unutma.
+Biliyor muydun? Kargalar karanlıkta görebilir.
+İpucu: Gevşek tuğlaları ara.
+İpucu: Şifre kütüphanede bir yere gizlenmiş.
+Bulmaca çözüldü.
+Olmadı. Başka bir şey dene.
+Hiçbir şey olmuyor.
+Bunu burada kullanamazsın.
+Bir levye lazım.
+Taşımak için fazla ağır.
+Şu an bunu yapamazsın.
+Bu modda kullanılamaz.
+Bu özellik internet bağlantısı gerektiriyor.
+Yanıt bekleniyor...
+İstek zaman aşımına uğradı.
+Yeniden dene
+Bağlantı yeniden denensin mi?
+İnternet bağlantını kontrol edip tekrar dene.
+Devam etmek için giriş yap.
+Çıkış yap
+Hesap oluştur
+Kullanıcı adı
+Şifre
+Şifreni mi unuttun?
+Beni hatırla
+Profil
+Arkadaşlar
+Arkadaş ekle
+Çevrimiçi
+Çevrimdışı
+Uzakta
+Rahatsız etmeyin
+Görünmez
+Oynuyor: Dubzar
+Davet gönderildi.
+Davet reddedildi.
+Bildirimler
+Tümünü okundu say
+Yeni bildirim yok.
+Posta
+Gelen kutusu
+3 okunmamış mesajın var.
+Ayarlar
+Kontroller
+Ses
+Görüntü
+Oynanış
+Erişilebilirlik
+Ağ
+Gizlilik
+Yardım
+Hakkında
+Sürüm 1.2.4
+Güncellemeleri denetle
+Bir güncelleme mevcut.
+Güncelle ve yeniden başlat
+Sonra
+Bunu bir daha gösterme
+Kapat
+İleri
+Geri
+Seç
+Bitti
+Geç
+Kaydet
+Kaydet ve çık
+Kaydetmeden çık
+Hızlı kayıt
+Hızlı yükleme
+Son kaydı yeniden yükle
+Tekrar oynat
+Tekrar oyna
+Sonraki seviye
+Ana menü
+START'a bas
+Başlamak için START'a bas.
+Başlamak için dokun
+Devam etmek için dokun
+Zıplamak için yukarı kaydır.
+Yakınlaştırmak için iki parmakla sıkıştır.
+Direksiyon için cihazını eğ.
+Ücretsiz canlanmak için reklam izle.
+Ödülünü ikiye katlamak için reklam izle.
+Enerji: 3/5
+Sonraki enerji: 12:40
+Enerjin bitti.
+Sandık 3 sa 20 dk sonra açılacak
+Hızlandır
+Uyarı: Bu bölge düşmanlarla dolu.
+Uyarı: Radyasyon seviyesi kritik.
+Tehlike! Zehirli gaz tespit edildi.
+Alarm: 7. sektörde izinsiz giren var.
+Üssün saldırı altında!
+Takviye kuvvetler geldi.
+Müttefikin düştü.
+Ekip üyesi yere düştü!
+Müttefikin yardıma ihtiyaç duyuyor.
+5 saniye içinde canlandır yoksa ölecek.
+Canlandırıldın.
+3 saniye sonra yeniden doğuyorsun...
+Bir doğma noktası seç.
+Doğma koruması etkin.
+Kendini imha dizisi başlatıldı.
+Hemen tahliye edin.
+Patlamaya kalan süre: 00:45
+Köprü 10 saniye içinde çökecek.
+Bina patlamadan kaç!
+Hackleme sürüyor: %68
+Erişim verildi.
+Erişim reddedildi. Yetki yetersiz.
+Dört haneli kodu gir.
+Yanlış şifre. İki hakkın kaldı.
+Sistem çevrimdışı.
+Güç geri geldi.
+Jeneratöre yakıt lazım.
+Pil azalıyor.
+El feneri pili: %15
+Oksijen seviyesi: %20
+Kalkan tükendi.
+Kalkanlar yeniden doluyor...
+Aşırı ısınma! Silahın soğumasını bekle.
+Motor hasarlı. Tamir gerekiyor.
+Yakıt azalıyor.
+Garaja park edildi.
+Yarış 3, 2, 1 sonra başlıyor...
+Tur 2/3
+Sıra: 4.
+En iyi tur: 1:23,456
+Yeni rekor!
+Yanlış yön!
+Nitro hazır.
+2. sırada bitirdin.
+Zorluk seviyeni seç. İstediğin zaman değiştirebilirsin.
+Hardcore modu: tek can hakkı.
+Kalıcı ölüm etkin.
+Ölürsen ilerlemen silinecek.
+Hikâye modu
+Kum havuzu
+Hayatta kalma
+Meydan okuma modu
+Yeni Oyun+
+Eğitim
+Öğretici
+Atış poligonu
+Arena
+Kampanya
+Görev 5: Gece Harekâtı
+Patron savaşı
+Patronun canı: %40
+2. aşama
+Düşman yenildi
+Hedef etkisiz hale getirildi.
+Kafadan vuruş!
+Kritik vuruş!
+Mükemmel savuşturma!
+Karşı saldırı
+Iskaladın
+Bağışık
+Sersemlemiş
+Donmuş
+Yanıyor
+Zayıflamış: Hasar %25 azaldı.
+Güçlendirme: Çeviklik
+Zayıflatma: Yavaşlık
+Etki 15 saniye sonra bitiyor.
+Bu yetenek bekleme süresinde.
+Yeterli mana yok.
+Hedef menzil dışında.
+Görüş hattı yok.
+Geçersiz hedef.
+Hareket halindeyken kullanılamaz.
+Günde bir kez kullanılabilir.
+En fazla 5 kez birikir.
+Vurunca sersemletme şansı.
+Yakındaki müttefikleri maksimum canının %20'si kadar iyileştirir.
+30 saniye boyunca yanında savaşan bir golem çağırır.
+Seni en son uğradığın kamp ateşine ışınlar.
+Saldırana kadar görünmez olur.
+200 hasara kadar emen bir bariyer oluşturur.
+Pasif: Yendiğin düşmanların %10 ihtimalle fazladan altın düşürür.
+Nadir üretim malzemesi, yalnızca derin mağaralarda bulunur.
+Solmuş bir mektup, mürekkebi zar zor okunuyor.
+Bir zamanlar kralın şampiyonuna aitti.
+Berbat kokuyor ama işe yarıyor.
+Çevik Kahverengi Tilki Hanı
+Oynadığın için teşekkürler!
+Devam edecek...
+Nightfall Studios tarafından geliştirildi
+Tüm hakları saklıdır.
+Topluluğumuza özel teşekkürler.
+Oyunu beğendiysen lütfen puanla.

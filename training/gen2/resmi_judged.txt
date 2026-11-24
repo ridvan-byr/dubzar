@@ -1,0 +1,74 @@
+4	B	Kraliyet vakayinamesine kaydedilsin.
+6	A	Mahkeme oturumu açılmıştır.
+9	NEW	Taht odasına habersiz girmeye kim cüret ediyor?
+13	A	Şerefim üzerine yemin ederim, son nefesime kadar tacın hizmetinde olacağım.
+14	B	Efendinin güvenine ihanet ettin.
+15	NEW	Haberciler borazanları çalsın!
+20	A	Cüretiniz beni şaşırtıyor, lordum.
+32	B	Dilekçiyi mahkemenin huzuruna çıkarın.
+44	A	Leydinin onuru ağır biçimde zedelendi.
+47	A	Suçunuzu kabul ediyor musunuz?
+62	A	Ben tacın mütevazı bir kuluyum.
+69	B	Sancaklarımızın sesi düşmanlarımızı titretir.
+70	A	Babamın tacı adına, adaletin yerini bulmasını sağlayacağım.
+71	NEW	Veliaht reşit oldu.
+75	B	Gitmene izin veriyorum.
+82	B	Elçi, doğu imparatorluğundan armağanlar getiriyor.
+87	A	Böyle yazılmış, böyle olacak.
+91	A	Söyleyin bakalım, sizi mütevazı sarayıma getiren nedir?
+94	B	Kraliçe girince taht odasına sessizlik çöker.
+103	NEW	Sapkını kovun!
+112	B	Tanrı yardımcımız olsun.
+143	A	Sığınak, arayan her ruha kucak açar.
+144	B	Acıların Hanımı, duamızı işit.
+148	B	Söylenene göre dağ bir zamanlar uyuyan bir tanrıydı.
+150	A	Krallık üç yüz yıl boyunca barış içinde yaşadı.
+160	B	O yıl kış erken bastırdı, beraberinde kıtlığı da getirdi.
+195	A	Rotayı Kepler sistemine ayarla.
+220	B	Yaklaşmayın. Bu tesis yasak bölgedir.
+221	B	Yedinci güvertede gövde yarığı. Bölme kapaklarını mühürleyin.
+234	A	Filoya dış kuşağa çekilmesini emret.
+238	A	Hükümetim bu provokasyonu hoş görmeyecek.
+254	A	Sınır yeniden açılana kadar yaptırımlar sürecek.
+268	A	Barış görüşmeleri suikastın ardından çöktü.
+270	A	Başbakan bu akşam ulusa hitap edecek.
+279	A	Sanık işbu kararla on yıl hapis cezasına çarptırılmıştır.
+287	A	Deliller mahkeme heyetine sunulacak.
+290	B	Suçları yüzünden yargılandı ve asıldı.
+292	A	Sulh hâkimi tutuklanmanıza karar verdi.
+306	A	Vali tarafından tamamen affedildi.
+307	A	Kanun zengine de yoksula da istisna tanımaz.
+314	A	Eski kanunlar bu eyalette hâlâ geçerli.
+321	A	Mahkemede sessizlik!
+324	A	Ağsakallar meclisi bu anlaşmazlığı çözecek.
+331	B	Hazine kaybınızı tazmin edecek.
+332	A	Bu kanuna göre hırsızın eli kesilir.
+338	A	İşbu bildiri ile tüm vergilerin ay sonuna kadar ödenmesi gerektiği duyurulur.
+349	NEW	Toprağın doğuştan kendisine ait olduğunu iddia ediyor.
+391	A	Karanlıktan korkma, ben yanındayım.
+416	A	Nice cesur şövalye bu ejderhaya yenik düştü.
+418	A	Bu kâseden içen hiç keder görmez.
+429	A	Tekrar karşılaşacağız, bu hayatta ya da öbüründe.
+434	B	Efendime ihanet etmektense ölmeyi yeğlerim.
+438	B	Onu tüm onurlarla toprağa verin.
+471	A	Baron planlarını kimseye açmadı.
+479	A	Ektiğini biçeceksin.
+480	A	Veliaht hep hayal âlemindeydi.
+484	A	Savaşırken öldü.
+486	A	Kraliçe bütün sarayı parmağında oynatıyor.
+492	B	Köyü geri çekilen ordu ortada bıraktı.
+498	A	Sadakatinden hiç şüphe edilmedi.
+510	A	Pek çok kişi kuzey geçidini aşmaya çalıştı ve başarısız oldu.
+518	NEW	Altından kalkamayacağı bir işe girişti.
+519	A	Olan oldu, lordum, boş yere üzülmenin anlamı yok.
+523	A	Ulak kötü haber getirmişti.
+525	A	Uyuyan yılanın kuyruğuna basma, dostum.
+526	A	Lordunun adı bu kasabada kötüye çıkmış.
+537	A	Seve seve geleceğim, ekselansları.
+538	A	Kraliçe uykusunda öldü.
+540	A	Şövalye dimdik durdu, acısını belli etmedi.
+546	B	İsyancılar tam düşmanın tuzağına düştü.
+554	A	Geçmişi geçmişte bırak da gel benimle iç.
+557	A	Eski söz der ki, gözden ırak olan gönülden de ırak olur.
+561	NEW	Prens, saray önünde boynunu büküp özür dilemek zorunda kaldı.
+570	A	Tutunun, vurulmak üzereyiz!

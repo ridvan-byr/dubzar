@@ -1,0 +1,61 @@
+11	A	Hadi, hadi, hadi!
+30	A	Tanıştığımıza memnun oldum.
+39	B	Daha varmadık mı?
+41	B	Koş!
+50	B	Yaralı var!
+55	NEW	Ortalık temiz.
+63	A	İyi ki geldin.
+65	A	Sana borçluyum.
+70	B	Affedersiniz, hanımefendi.
+71	A	Affedersiniz.
+72	A	Efendim, ne dediniz?
+73	A	Bunun için özür dilerim.
+77	A	Önemli değil.
+82	A	Acıktım.
+101	A	Liman hangi tarafta?
+135	B	İyi ki doğdun!
+140	NEW	Buyur, çekinme, yemeklerden al.
+159	B	Başardık!
+161	A	Herkese tebrikler, harika iş çıkardınız.
+162	B	Ucuz atlattık.
+163	B	Muhteşemdi!
+170	A	Tabii ki.
+178	B	Sanırım öyle.
+181	B	Eminim.
+183	A	Bana güven.
+191	A	Sessiz ol.
+284	A	Geldiğin için teşekkürler.
+285	B	Sağ ol, nazik yabancı.
+286	B	Yine de sağ ol.
+288	B	Başınız sağ olsun.
+299	B	Kaç tane var?
+305	A	Kim o?
+306	B	Bu palto kimin?
+312	A	Dost canlılar mı?
+329	B	Dur orada.
+340	B	Şimdi boş ver.
+342	A	Kapıya göz kulak ol.
+345	A	Tutun!
+353	A	Onu al.
+355	A	Halatı at bana.
+358	A	Soldaki yolu tut.
+372	B	Yere yığıldı.
+373	B	Hallettim.
+375	A	Temas var!
+388	A	Eyvah.
+398	A	Zavallıcık.
+428	A	Eve geldim!
+432	A	Galiba kayboldum.
+438	A	Biraz hava almam lazım.
+455	B	Bu şarkıya bayılıyorum.
+478	A	Pardon, geciktim.
+498	B	Ormanda kaybolan çocuğu senin bulduğunu söyledi bana.
+499	A	Şimdi bir şey söylemen gerekmiyor, sadece sana söylediklerimi düşün.
+503	B	Kardeşi köyden ayrıldığından beri onunla konuşmadı.
+526	B	Affedersiniz, mağazadan çıkarken bunu düşürmüşsünüz sanırım.
+564	B	Almak mı satmak mı istiyorsun?
+567	NEW	Bizi tercih ettiğin için teşekkürler.
+595	B	Numara sayın.
+596	A	Tetikte kalın.
+598	A	Çatılara dikkat edin.
+614	A	Çok sessiz.

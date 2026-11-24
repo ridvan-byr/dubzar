@@ -1,0 +1,103 @@
+Warning: This area is infested with enemies. ||| Uyarı: Bu bölge düşmanla dolu.
+Warning: Radiation levels critical. ||| Uyarı: Radyasyon seviyesi kritik.
+Danger! Toxic gas detected. ||| Tehlike! Zehirli gaz tespit edildi.
+Alert: Intruder in sector 7. ||| Alarm: 7. sektörde davetsiz misafir var.
+Your base is under attack! ||| Üssün saldırı altında!
+Reinforcements have arrived. ||| Takviye kuvvetler geldi.
+Your ally has fallen. ||| Müttefikin düştü.
+Squad member down! ||| Takım arkadaşı yere düştü!
+Ally needs help. ||| Müttefikin yardıma ihtiyacı var.
+Revive in 5 seconds or they will die. ||| 5 saniye içinde ayağa kaldırmazsan ölecek.
+You have been revived. ||| Ayağa kaldırıldın.
+Respawning in 3... ||| 3 saniye içinde yeniden doğacaksın...
+Select a spawn point. ||| Bir doğma noktası seç.
+Spawn protection active. ||| Doğma koruması etkin.
+Self-destruct sequence initiated. ||| Kendini imha dizisi başlatıldı.
+Evacuate immediately. ||| Derhal tahliye edin.
+Time until detonation: 00:45 ||| Patlamaya kalan süre: 00:45
+The bridge will collapse in 10 seconds. ||| Köprü 10 saniye içinde çökecek.
+Escape before the building explodes! ||| Bina patlamadan kaç!
+Hacking in progress: 68% ||| Sistem kırılıyor: %68
+Access granted. ||| Erişim izni verildi.
+Access denied. Insufficient clearance. ||| Erişim reddedildi. Yetki seviyesi yetersiz.
+Enter the four-digit code. ||| Dört haneli kodu gir.
+Incorrect password. Two attempts remaining. ||| Şifre yanlış. İki hakkın kaldı.
+System offline. ||| Sistem çevrimdışı.
+Power restored. ||| Elektrik geri geldi.
+Generator needs fuel. ||| Jeneratöre yakıt lazım.
+Battery low. ||| Pil azaldı.
+Flashlight battery: 15% ||| Fener pili: %15
+Oxygen level: 20% ||| Oksijen seviyesi: %20
+Shield depleted. ||| Kalkan tükendi.
+Shields recharging... ||| Kalkanlar şarj oluyor...
+Overheating! Let the weapon cool down. ||| Aşırı ısınıyor! Silahın soğumasını bekle.
+Engine damaged. Repair needed. ||| Motor hasarlı. Tamir gerekiyor.
+Fuel running low. ||| Yakıt azalıyor.
+Parked at the garage. ||| Garajda park edildi.
+Race starts in 3, 2, 1... ||| Yarış 3, 2, 1 sonra başlıyor...
+Lap 2/3 ||| Tur 2/3
+Position: 4th ||| Sıra: 4.
+Best lap: 1:23.456 ||| En iyi tur: 1:23,456
+New record! ||| Yeni rekor!
+Wrong way! ||| Yanlış yön!
+Nitro ready. ||| Nitro hazır.
+You finished in 2nd place. ||| 2. sırada bitirdin.
+Select your difficulty level. You can change it at any time. ||| Zorluk seviyeni seç. İstediğin zaman değiştirebilirsin.
+Hardcore mode: one life only. ||| Hardcore modu: tek canın var.
+Permadeath is enabled. ||| Kalıcı ölüm açık.
+Your progress will be erased if you die. ||| Ölürsen ilerlemen silinecek.
+Story mode ||| Hikâye modu
+Sandbox ||| Serbest mod
+Survival ||| Hayatta kalma
+Challenge mode ||| Meydan okuma modu
+New Game+ ||| Yeni oyun+
+Training ||| Antrenman
+Tutorial ||| Eğitim
+Practice Range ||| Atış poligonu
+Arena ||| Arena
+Campaign ||| Kampanya
+Mission 5: Operation Nightfall ||| Görev 5: Gece Baskını Operasyonu
+Boss Fight ||| Patron savaşı
+Boss health: 40% ||| Patronun canı: %40
+Phase 2 ||| 2. aşama
+Enemy Defeated ||| Düşman yenildi
+Target eliminated. ||| Hedef etkisiz hale getirildi.
+Headshot! ||| Kafadan vuruş!
+Critical hit! ||| Kritik vuruş!
+Perfect block! ||| Kusursuz savunma!
+Counter attack ||| Karşı saldırı
+Missed ||| Iskaladın
+Immune ||| Bağışık
+Stunned ||| Sersemledi
+Frozen ||| Dondu
+Burning ||| Yanıyor
+Weakened: Damage reduced by 25%. ||| Zayıfladın: Hasarın %25 azaldı.
+Buff: Haste ||| Güçlendirme: Hız
+Debuff: Slow ||| Zayıflatma: Yavaşlık
+Effect ends in 15 seconds. ||| Etki 15 saniye sonra bitecek.
+This ability is on cooldown. ||| Bu yetenek bekleme süresinde.
+Not enough mana. ||| Yeterli manan yok.
+Target is out of range. ||| Hedef menzil dışında.
+No line of sight. ||| Görüş hattı yok.
+Invalid target. ||| Geçersiz hedef.
+Cannot be used while moving. ||| Hareket halindeyken kullanılamaz.
+Available once per day. ||| Günde bir kez kullanılabilir.
+Stacks up to 5 times. ||| 5 kata kadar birikir.
+Chance to stun on hit. ||| Vuruşta sersemletme şansı verir.
+Heals nearby allies for 20% of your max health. ||| Yakındaki müttefikleri maksimum canının %20'si kadar iyileştirir.
+Summons a golem that fights by your side for 30 seconds. ||| 30 saniye boyunca yanında savaşan bir golem çağırır.
+Teleports you to the last visited campfire. ||| Seni en son uğradığın kamp ateşine ışınlar.
+Turns invisible until you attack. ||| Saldırana kadar görünmez olursun.
+Creates a barrier that absorbs up to 200 damage. ||| 200 hasara kadar emen bir bariyer oluşturur.
+Passive: Enemies you defeat have a 10% chance to drop extra gold. ||| Pasif: Yendiğin düşmanlar %10 ihtimalle fazladan altın bırakır.
+Rare crafting material, found only in deep caves. ||| Nadir bir üretim malzemesi, yalnızca derin mağaralarda bulunur.
+A faded letter, its ink barely legible. ||| Solmuş bir mektup, mürekkebi güçlükle okunuyor.
+Once belonged to the king's champion. ||| Bir zamanlar kralın şampiyonuna aitti.
+Smells terrible, but it works. ||| Berbat kokuyor ama işe yarıyor.
+The Quick Brown Fox Inn ||| Hızlı Kahverengi Tilki Hanı
+Thanks for playing! ||| Oynadığın için teşekkürler!
+To be continued... ||| Devam edecek...
+Developed by Nightfall Studios ||| Nightfall Studios tarafından geliştirildi
+All rights reserved. ||| Tüm hakları saklıdır.
+Special thanks to our community. ||| Topluluğumuza özel teşekkürler.
+Please rate the game if you enjoyed it. ||| Oyunu beğendiysen lütfen puan ver.

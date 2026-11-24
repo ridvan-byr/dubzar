@@ -24,6 +24,7 @@ from translation_refs import REFS  # noqa: E402
 from translation_testset import TESTSET  # noqa: E402
 
 from dubzar.textsplit import split_pieces  # noqa: E402
+from status import log, stage  # noqa: E402
 
 GENERAL = [
     ("Good morning, how are you?", "Günaydın, nasılsın?"),
@@ -46,7 +47,7 @@ def read_pairs(paths) -> list[tuple[str, str]]:
     for path in paths:
         for line in Path(path).read_text(encoding="utf-8").splitlines():
             if " ||| " in line:
-                en, tr = line.split(" ||| ", 1)
+                en, tr = line.split(" ||| ")[:2]           # an optional third field names the Turkish idiom (checked by verify_idioms.py)
                 pairs.append((en.strip(), tr.strip()))
     return pairs
 
@@ -134,6 +135,8 @@ def main() -> int:
     steps = args.epochs * ((len(train) + args.batch - 1) // args.batch)
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda s: min(1.0, (s + 1) / 10) * max(0.0, 1 - s / steps))
 
+    batches = (len(train) + args.batch - 1) // args.batch
+    stage("egitim", percent=1, detail=f"{len(train)} çift, {args.epochs} tur")
     for epoch in range(1, args.epochs + 1):
         model.train()
         random.shuffle(train)
@@ -149,7 +152,11 @@ def main() -> int:
             torch.nn.utils.clip_grad_norm_(params, 1.0)
             optimizer.step(); scheduler.step(); optimizer.zero_grad()
             total += loss.item() * len(batch)
+            if (i // args.batch) % 10 == 0:
+                done = (epoch - 1) * batches + i // args.batch
+                stage("egitim", percent=100 * done / (args.epochs * batches), detail=f"tur {epoch} / {args.epochs}, kayıp {loss.item():.2f}")
         print(f"-- tur {epoch}: eğitim kaybı {total / len(train):.3f} ({time.time() - started:.0f} sn)", flush=True)
+        log(f"tur {epoch} / {args.epochs} bitti: kayıp {total / len(train):.3f} ({time.time() - started:.0f} sn)")
         if not args.final_only or epoch == args.epochs:
             report(f"tur {epoch}")
 
@@ -158,6 +165,7 @@ def main() -> int:
         model.save_pretrained(args.out)
         tok.save_pretrained(args.out)
         print("kaydedildi:", args.out)
+        stage("egitim", percent=100, detail="model kaydedildi")
     return 0
 
 

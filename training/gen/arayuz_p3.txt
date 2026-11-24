@@ -1,0 +1,112 @@
+Achievement Unlocked ||| Başarım kazanıldı
+Achievement unlocked: First Blood ||| Başarım kazanıldı: İlk kan
+Trophy earned: Master Explorer ||| Kupa kazanıldı: Usta kâşif
+New weapon unlocked! ||| Yeni silahın kilidi açıldı!
+Complete the game on Hard to unlock. ||| Kilidi açmak için oyunu Zor seviyede bitir.
+Defeat 100 enemies without taking damage. ||| Hiç hasar almadan 100 düşmanı yen.
+Collect all 50 hidden coins. ||| Gizli 50 madeni paranın hepsini topla.
+Win 10 matches in a row. ||| Üst üste 10 maç kazan.
+Finish the tutorial. ||| Eğitimi bitir.
+Progress: 7/20 ||| İlerleme: 7/20
+Secret achievement ||| Gizli başarım
+Rewards claimed. ||| Ödüller alındı.
+Claim reward ||| Ödülü al
+Daily reward available. ||| Günlük ödül hazır.
+Login streak: 5 days ||| Giriş serisi: 5 gün
+Season 3 begins in 2 days. ||| 3. sezon 2 gün sonra başlıyor.
+New content available. ||| Yeni içerik mevcut.
+Friend request received. ||| Arkadaşlık isteği alındı.
+Sam wants to join your party. ||| Sam grubuna katılmak istiyor.
+Your friend is now online. ||| Arkadaşın çevrimiçi oldu.
+You were kicked from the lobby. ||| Lobiden atıldın.
+Player has left the game. ||| Oyuncu oyundan ayrıldı.
+Player joined the lobby. ||| Oyuncu lobiye katıldı.
+Lobby ||| Lobi
+Create Lobby ||| Lobi oluştur
+Private match ||| Özel maç
+Public match ||| Herkese açık maç
+Quick Match ||| Hızlı maç
+Ranked Match ||| Dereceli maç
+Casual ||| Rahat mod
+Co-op Campaign ||| Ortak kampanya
+Free for All ||| Herkes tek başına
+Team Deathmatch ||| Takım ölüm maçı
+Capture the Flag ||| Bayrak kapmaca
+Select your team. ||| Takımını seç.
+Choose your loadout. ||| Teçhizatını seç.
+Pick a character. ||| Bir karakter seç.
+Team A ||| A Takımı
+Spectate ||| İzle
+Players: 6/8 ||| Oyuncular: 6/8
+Ping: 45 ms ||| Ping: 45 ms
+Region: Europe ||| Bölge: Avrupa
+Match starts in 10 seconds. ||| Maç 10 saniye içinde başlıyor.
+Waiting for host to start the game. ||| Oyunu başlatması için kurucu bekleniyor.
+All players are ready. ||| Tüm oyuncular hazır.
+Start Game ||| Oyunu başlat
+Leave Party ||| Gruptan ayrıl
+Kick player ||| Oyuncuyu at
+Mute player ||| Oyuncuyu sustur
+Report player ||| Oyuncuyu bildir
+Block ||| Engelle
+Voice chat is enabled. ||| Sesli sohbet açık.
+Push to Talk ||| Bas konuş
+Open microphone ||| Açık mikrofon
+Team chat ||| Takım sohbeti
+Message sent. ||| Mesaj gönderildi.
+You are muted. ||| Susturuldun.
+Your team won the round. ||| Takımın turu kazandı.
+Round 3 starts now. ||| 3. tur şimdi başlıyor.
+Final Round ||| Son tur
+Sudden Death ||| Ani ölüm
+Draw ||| Berabere
+Defeat ||| Yenilgi
+MVP: Alex ||| MVP: Alex
+Leaderboard ||| Skor tablosu
+Rank: Gold II ||| Derece: Altın II
+Rank up! ||| Derece atladın!
+You have been promoted to Platinum. ||| Platin lige yükseldin.
+Matchmaking in progress... ||| Eşleşme aranıyor...
+Estimated wait time: 1:30 ||| Tahmini bekleme süresi: 1:30
+Match canceled. ||| Maç iptal edildi.
+Opponent forfeited. ||| Rakip hükmen yenilgiyi kabul etti.
+Shop ||| Mağaza
+Store ||| Mağaza
+Buy ||| Satın al
+Sell ||| Sat
+Buy for 200 gold ||| 200 altına satın al
+Sell for 75 gold ||| 75 altına sat
+Price: 500 ||| Fiyat: 500
+Not enough gold. ||| Yeterli altının yok.
+Purchase successful. ||| Satın alma başarılı.
+Confirm purchase? ||| Satın alma onaylansın mı?
+Out of stock ||| Stokta yok
+Limited time offer ||| Sınırlı süreli teklif
+Sale ends in 3 days. ||| İndirim 3 gün sonra bitiyor.
+50% off ||| %50 indirim
+Free ||| Ücretsiz
+Owned ||| Sahipsin
+Add to wishlist ||| İstek listesine ekle
+Premium Currency ||| Premium para birimi
+Buy more gems ||| Daha fazla elmas al
+Battle Pass ||| Sezon bileti
+Season Pass ||| Sezon geçişi
+Cosmetics ||| Kozmetikler
+Skins ||| Görünümler
+Bundle ||| Paket
+Restore purchases ||| Satın alımları geri yükle
+Redeem code ||| Kodu kullan
+Enter your promo code. ||| Promosyon kodunu gir.
+Invalid code. ||| Geçersiz kod.
+Repair ||| Onar
+Repair all ||| Tümünü onar
+Upgrade ||| Geliştir
+Enchant ||| Büyüle
+Salvage ||| Parçala
+Craft ||| Üret
+Recipe unlocked: Iron Sword ||| Tarif açıldı: Demir kılıç
+Materials required: 3 iron ingots ||| Gerekli malzemeler: 3 demir külçe
+Missing materials. ||| Eksik malzemeler var.
+Crafting complete. ||| Üretim tamamlandı.
+Crafting time: 30 seconds ||| Üretim süresi: 30 saniye
+Select a material. ||| Bir malzeme seç.

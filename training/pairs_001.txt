@@ -41,7 +41,6 @@ We're gonna hit the bank on Monday. ||| Pazartesi bankayı vuracağız.
 Run! They're coming! ||| Koş! Geliyorlar!
 I'll run the cameras from the van. ||| Kameraları minibüsten yöneteceğim.
 He runs this whole town. ||| Bu kasabayı o yönetiyor.
-We're running low on ammo. ||| Cephanemiz azalıyor.
 Run it by me one more time. ||| Bir kez daha anlat bana.
 The engine runs rough in the cold. ||| Motor soğukta düzensiz çalışıyor.
 He ran out on us when things got ugly. ||| İşler çirkinleşince bizi terk edip gitti.
@@ -83,14 +82,12 @@ He's been charged with murder. ||| Cinayetle suçlandı.
 Charge the battery before we go. ||| Gitmeden pili şarj et.
 Fire another round. ||| Bir el daha ateş et.
 I'll buy the next round. ||| Bir sonraki turu ben ısmarlıyorum.
-The second round is about to begin. ||| İkinci raunt başlamak üzere.
 Take cover! ||| Siper alın!
 Cover me while I move. ||| Ben hareket ederken beni koru.
 He used the florist as a cover. ||| Çiçekçiyi paravan olarak kullandı.
 Her cover is blown. ||| Kimliği deşifre oldu.
 I need a clip for this gun. ||| Bu silah için şarjöre ihtiyacım var.
 Take the shot. Now! ||| Ateş et. Şimdi!
-Nice shot! ||| Güzel atış!
 I'll pay for the shots. ||| İçkileri ben ödeyeceğim.
 He's got a lead on the shipment. ||| Sevkiyatla ilgili bir ipucu buldu.
 Lead the way. ||| Yolu göster.
@@ -135,7 +132,6 @@ Light the fuse and run. ||| Fitili ateşle ve kaç.
 The fuse is blown. ||| Sigorta attı.
 Stay frosty. ||| Tetikte kal.
 Eyes up. Movement on the ridge. ||| Gözünüzü açın. Sırtta hareket var.
-Hold your fire! ||| Ateş etmeyin!
 Hold the line! ||| Hattı koruyun!
 Hold on tight. ||| Sıkı tutun.
 Fall back to the second position. ||| İkinci mevziye çekilin.
@@ -155,7 +151,6 @@ Radio silence until we hit the beach. ||| Sahile çıkana kadar telsiz sessizli�
 The enemy is dug in on the hill. ||| Düşman tepede siper almış.
 We outnumber them three to one. ||| Sayıca onlardan üç kat fazlayız.
 Their defenses are crumbling. ||| Savunmaları çöküyor.
-I swear on my mother's grave. ||| Annemin mezarı üzerine yemin ederim.
 By the gods, what is that creature? ||| Tanrılar aşkına, bu yaratık da ne?
 Your quest ends here, adventurer. ||| Macerana burada son, maceracı.
 The ancient seal has been broken. ||| Kadim mühür kırıldı.
@@ -191,7 +186,6 @@ Give me a break. ||| Yapma ya.
 Cut me some slack. ||| Bana biraz anlayış göster.
 Knock it off. ||| Bırak şunu.
 I'm all ears. ||| Seni dinliyorum.
-That's a load of crap. ||| Bunlar saçmalık.
 He's full of it. ||| Palavra atıyor.
 Mind your own business. ||| Kendi işine bak.
 Get lost. ||| Kaybol.
@@ -213,7 +207,6 @@ Let's call it a night. ||| Bu geceye bu kadar yeter.
 I owe you one. ||| Sana bir borcum var.
 You're on your own. ||| Kendi başınasın.
 Keep your voice down. ||| Sesini alçak tut.
-Look out! ||| Dikkat et!
 Be careful with that. ||| Ona dikkat et.
 Follow me and stay close. ||| Beni takip et ve yakın dur.
 Don't look back. ||| Arkana bakma.
@@ -229,7 +222,6 @@ We did it. We actually did it. ||| Başardık. Gerçekten başardık.
 You've changed, you know that? ||| Değişmişsin, biliyor musun?
 I trusted you. ||| Sana güvenmiştim.
 Tell me the truth. ||| Bana doğruyu söyle.
-What do you want from me? ||| Benden ne istiyorsun?
 Why are you doing this? ||| Bunu neden yapıyorsun?
 Because it's the right thing to do. ||| Çünkü yapılması gereken şey bu.
 Time to pay the piper. ||| Bedelini ödeme vakti.
@@ -257,8 +249,6 @@ Nice work, rookie. ||| Aferin, çaylak.
 You're hired. ||| İşe alındın.
 You're fired. ||| Kovuldun.
 You're under arrest. ||| Tutuklusun.
-You have the right to remain silent. ||| Susma hakkına sahipsin.
-Put your hands where I can see them. ||| Ellerini görebileceğim yerde tut.
 Stop right there! ||| Orada dur!
 Freeze! Police! ||| Kımıldama! Polis!
 I want a lawyer. ||| Avukat istiyorum.

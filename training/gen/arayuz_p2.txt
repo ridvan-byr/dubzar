@@ -1,0 +1,98 @@
+Level: 14 ||| Seviye: 14
+XP: 1,250 / 2,000 ||| XP: 1.250 / 2.000
+Gold: 3,420 ||| Altın: 3.420
+Lives: 3 ||| Can: 3
+Combo x12 ||| 12'li kombo
+Kills: 7 ||| Öldürme: 7
+Deaths: 2 ||| Ölüm: 2
+Assists: 4 ||| Asist: 4
+Distance: 350 m ||| Mesafe: 350 m
+Speed: 120 km/h ||| Hız: 120 km/s
+Temperature: 36.6°C ||| Sıcaklık: 36,6°C
+Weight: 45.2 / 60 kg ||| Ağırlık: 45,2 / 60 kg
+Reload: 1.8s ||| Doldurma: 1,8 sn
+Cooldown: 12s ||| Bekleme süresi: 12 sn
+Range: 25 m ||| Menzil: 25 m
+Damage: 150 ||| Hasar: 150
+Critical Chance: 15% ||| Kritik şansı: %15
+Attack Speed: +20% ||| Saldırı hızı: +%20
+Movement Speed: -10% ||| Hareket hızı: -%10
+Armor Penetration: 30 ||| Zırh delme: 30
+Durability: 80/100 ||| Dayanıklılık: 80/100
+Resistance: Fire +25% ||| Direnç: Ateş +%25
+Bleeding: 3 stacks ||| Kanama: 3 kat
+Poisoned for 10 seconds. ||| 10 saniye boyunca zehirlendin.
+Low ammo. ||| Cephane azaldı.
+Out of ammo! ||| Cephane bitti!
+Reloading... ||| Dolduruluyor...
+Enemy nearby. ||| Yakınlarda düşman var.
+You have been detected! ||| Fark edildin!
+Stealth kill available. ||| Sessiz öldürme yapılabilir.
+Objective: Eliminate all enemies. ||| Hedef: Tüm düşmanları etkisiz hale getir.
+Objective: Find the missing scientist. ||| Hedef: Kayıp bilim insanını bul.
+Objective: Defend the base for 5 minutes. ||| Hedef: Üssü 5 dakika boyunca savun.
+Follow the marker. ||| İşareti takip et.
+Return to the safe house. ||| Sığınağa geri dön.
+Talk to the blacksmith. ||| Demirciyle konuş.
+Collect 10 herbs. ||| 10 bitki topla.
+Defeat the boss. ||| Patronu yen.
+Escort the merchant to the city. ||| Tüccara şehre kadar eşlik et.
+Bonus objective completed. ||| Ek hedef tamamlandı.
+Optional: Find the hidden archive. ||| İsteğe bağlı: Gizli arşivi bul.
+Side quest unlocked. ||| Yan görev açıldı.
+Quest failed: the hostage was killed. ||| Görev başarısız: Rehine öldürüldü.
+Inventory ||| Envanter
+Equipment ||| Teçhizat
+Skills ||| Yetenekler
+Map ||| Harita
+Journal ||| Günlük
+Codex ||| Ansiklopedi
+Bestiary ||| Yaratık rehberi
+Character ||| Karakter
+Crafting ||| Üretim
+Quests ||| Görevler
+Statistics ||| İstatistikler
+Gallery ||| Galeri
+Inventory full. ||| Envanter dolu.
+Item added to inventory. ||| Eşya envantere eklendi.
+Item equipped. ||| Eşya kuşanıldı.
+Drop item ||| Eşyayı bırak
+Use item ||| Eşyayı kullan
+Equip ||| Kuşan
+Unequip ||| Çıkar
+Inspect ||| İncele
+Sort by: Rarity ||| Sırala: Nadirlik
+Sort by: Name ||| Sırala: Ad
+Filter: Weapons ||| Filtre: Silahlar
+Common ||| Yaygın
+Uncommon ||| Seyrek
+Rare ||| Nadir
+Epic ||| Destansı
+Legendary ||| Efsanevi
+Quest item ||| Görev eşyası
+Consumable ||| Tüketilebilir
+Key item ||| Anahtar eşya
+Heals 50 health over 5 seconds. ||| 5 saniyede 50 can yeniler.
+Restores 30 mana instantly. ||| Anında 30 mana yeniler.
+Increases damage by 15% for 20 seconds. ||| 20 saniye boyunca hasarı %15 artırır.
+Grants immunity to poison. ||| Zehire karşı bağışıklık sağlar.
+A sword forged in dragon fire. ||| Ejderha ateşinde dövülmüş bir kılıç.
+This ancient ring hums with power. ||| Bu kadim yüzük güçle uğulduyor.
+Can be used to open locked doors. ||| Kilitli kapıları açmak için kullanılabilir.
+A rusty key. It might open something nearby. ||| Paslı bir anahtar. Yakınlardaki bir şeyi açabilir.
+Reduces incoming damage by 20%. ||| Gelen hasarı %20 azaltır.
+Passive: Regenerate 2 health per second. ||| Pasif: Saniyede 2 can yeniler.
+Active: Summon a spectral wolf. ||| Aktif: Hayalet bir kurt çağırır.
+Strikes all nearby enemies with lightning. ||| Yakındaki tüm düşmanlara yıldırım çarptırır.
+Throws a smoke bomb, blinding enemies. ||| Duman bombası atarak düşmanları kör eder.
+Dash forward, leaving a trail of fire. ||| İleri atılıp arkanda ateşten bir iz bırakır.
+Your next attack is guaranteed to crit. ||| Bir sonraki saldırın kesinlikle kritik vurur.
+Slows enemies in a 10 m radius. ||| 10 m yarıçaptaki düşmanları yavaşlatır.
+Unlocks at level 20. ||| 20. seviyede açılır.
+Requires 15 Strength. ||| 15 Güç gerektirir.
+Requires a level 10 character. ||| 10. seviye bir karakter gerektirir.
+Skill point available. ||| Yetenek puanı mevcut.
+Spend skill points to unlock new abilities. ||| Yeni yetenekler açmak için yetenek puanı harca.
+Not enough skill points. ||| Yeterli yetenek puanın yok.
+Upgrade complete. ||| Geliştirme tamamlandı.
+Max level reached. ||| En yüksek seviyeye ulaşıldı.

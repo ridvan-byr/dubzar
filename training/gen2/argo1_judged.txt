@@ -1,0 +1,221 @@
+1	B	Kahretsin, ucuz kurtulduk.
+5	B	Müthiş be adam! Bir daha yap!
+7	B	Ah, siktir. Geliyorlar.
+9	NEW	Defol git, seni küçük velet.
+12	A	Abi, burası tam bir çöplük.
+13	B	Hepiniz çekip gitseniz iyi olur.
+15	A	Vay, sen tam bir neşe kaynağısın bakıyorum.
+17	A	Güzel atış, dostum!
+18	A	Efsaneydi kardeşim.
+20	A	Sen öldün, dostum.
+22	B	Terbiyesiz herif, değil mi?
+27	B	Ey, ne var ne yok, kanka?
+34	B	Demiştim sana, dahi.
+35	B	Al sana, korkak!
+37	B	Siktir git, seni pislik.
+41	A	Adam tamamen bitmiş durumda.
+42	B	Pekâlâ, dinleyin bakalım.
+43	B	Saçmalamayı kes de nerede olduğunu söyle.
+44	A	Bütün gücün bu mu?
+47	NEW	Bu çok rezil, abi.
+48	A	Sakın yanımdan öyle gitmeye kalkma.
+59	B	Çek elini üstümden, tamam mı?
+62	B	Çetemle kimse uğraşamaz.
+66	NEW	O çocukta akıl namına bir şey yok.
+67	B	Aferin sana, denedin ya.
+69	B	Sus bakalım, tamam mı?
+74	B	Çok iyi hamleydi!
+76	A	Şu herife bakın hele!
+78	B	Şimdi yandın.
+81	B	Ne pislik herif!
+83	B	Umurumda mı sanıyorsun?
+89	B	O kadar abartma.
+90	B	Hoop, sakin ol, kastetmedim.
+92	B	Evet be, hadi gidelim!
+95	A	Sen iyice kafayı yemişsin, değil mi?
+96	A	Hesabı görünce tepesi attı.
+99	B	Kardeşim, orada ortalığı yıktın!
+105	A	Birisi yataktan ters tarafından kalkmış galiba.
+106	B	Hayal gör!
+107	NEW	Çeneni kapat da yürü.
+108	NEW	Abi, adam para içinde yüzüyor.
+110	NEW	Bu kızın dili çok sivri.
+115	NEW	Yalan yok, hayatımda gördüğüm en iyi dövüştü.
+117	A	Burnun ne kadar havada.
+119	B	Dalga geçiyorsun herhalde.
+122	B	En iyisiyle uğraşma, serseri.
+124	NEW	Çekil karşımdan.
+127	NEW	Beş dolara bahse girerim, korkup kaçacak.
+129	A	Valla daha kötüsünü de gördüm.
+130	B	İşte ben buna derim!
+132	NEW	Ortalığı ne hale getirmişsin.
+134	B	Evet, kaç bakalım!
+137	B	Zavallısın, biliyor musun?
+139	NEW	Vay be, ne büyük köpek!
+141	A	Arkana dikkat etsen iyi olur.
+147	B	Adam kolay lokma.
+148	NEW	Bu çok kötü, abi. Sıkışıp kaldık.
+150	B	Tam bir kazık!
+154	A	Bu çok acımasızca, abi. Gerçekten çok.
+155	B	Siktir git, ilgilenmiyorum.
+159	A	Bu kadar drama yapma.
+161	B	Eyvah, ne büyük örümcek!
+166	B	İşte bu, evlat!
+167	A	Tamam, yeter sohbet. Yola koyulalım.
+169	A	Hey, kırgınlık yok, değil mi?
+170	B	Çok boş konuşuyorsun.
+172	B	Şu sırıtışını sil yüzünden.
+173	A	Evet, kesinlikle yaptım.
+175	B	Yemiyorum, ahbap.
+177	A	Çekil önümden, seni salak!
+187	A	Sen sınırını bil, küçük adam.
+189	B	Havlar ama ısırmaz.
+190	A	Burayı yerle bir edeceğim.
+192	B	Ahbap, şu araba bomba gibi.
+193	B	Dinleyin, siz acemiler.
+195	NEW	Bize bulaşan sağ çıkamaz.
+205	B	Bu mahalle bizim.
+207	A	Sen ezik birisin kardeşim.
+212	A	Hop, yeni gelene fazla yüklenme.
+213	B	Adamlarımı peşine salarım.
+218	A	Abi, öğrenince kafayı yiyecek.
+220	A	Bu inanılmaz bir atıştı!
+221	B	Ooo, kalbini mi kırdım?
+222	A	Çok yüzsüzsün bayım.
+225	A	Abi, o herife dayanamıyorum.
+229	NEW	Bana o acıklı hikâyeni anlatma.
+230	NEW	Kâğıt torbayı bile yırtıp çıkamazsın.
+231	NEW	O adam delinin teki.
+236	A	Hay aksi, evde unutmuşum.
+238	B	Yeter artık, siz ikiniz!
+239	B	Harika! Muhteşem!
+244	A	Çok üzgünüm, resmen yıkıldım.
+245	NEW	Bunu bir de sen söylüyorsun, ha!
+247	A	Salak olma, onu ver.
+249	A	Defol, sana yardım etmeyeceğim.
+250	B	Ooo, seni arsız.
+252	B	Eee, kim kapışmak istiyor?
+254	B	Çok harika!
+256	B	Ah, kapa çeneni, seni salak.
+257	A	Bununla uğraşacak halim yok.
+262	B	Sus şimdi, duyarlar bizi.
+264	B	Derini yüzerim, evlat!
+267	A	Gel buraya, ortak.
+268	A	Bu kadar kızma, sakin ol.
+271	B	Of, burası çok sıcak.
+272	A	Bu kasaba ikimize de yetmez.
+275	B	Yani, kimse sana sormadı.
+276	NEW	Bu aslında baya havalı.
+278	A	Beni tamamen ortada bıraktı, hiç cevap vermedi.
+280	A	Bu efsane, yalan yok.
+283	NEW	Tam bir kasıntı.
+284	A	Şu an gerçekten kelime bulamıyorum.
+287	NEW	Dostum, resmen ezip geçtin!
+288	A	O kıyafet ayrı bir hava katmış.
+289	NEW	Önce oynamayı öğren, çaylak!
+291	A	Tam bir çaylak hamlesi.
+292	A	Pusuda beklemeyi bırak ve çık ortaya!
+293	A	Ha! Çocuk oyuncağı.
+294	B	Ezildin, ahbap.
+295	A	Vay, harika kurtarış!
+299	NEW	Abi, o kafadan vuruş efsaneydi!
+300	A	Ne kadar kasıyorsun. Sakin ol, eğlence amaçlı.
+301	A	Zor olmuş dostum. Bir dahaki sefere daha şanslı olursun.
+304	B	Ucuz kurtuldun, kardeşim.
+308	A	Bunun için kapışmak mı istiyorsun?
+310	B	Midemi bulandırıyorsun.
+315	A	Seni koca aptal.
+317	NEW	Ooo, şu ağlayan bebeğe bak.
+322	A	Beni dürüstçe yendin.
+324	NEW	Abi, bu gece için çok heyecanlıyım!
+325	NEW	Havalara girme, evlat.
+331	A	Seni velet. Geri gel!
+333	A	Ooo, bu çok acımış olmalı.
+337	B	Yine bu adam mı? Of.
+338	A	Eee, derdin ne, kabadayı?
+345	A	Vay, temizlenince hiç fena değilsin.
+348	A	Çok ustaca oldu, gerçekten.
+349	A	İşte bu plana plan derim!
+355	A	Adam zil zurna sarhoş.
+357	A	Baygın yatıyor.
+358	B	Seni efsane adam!
+363	B	Ah, kokusu iğrenç.
+364	NEW	Pardon ama hiç pişman değilim.
+368	A	Hadi, cesaretin varsa dene bakalım.
+369	B	Sizden gına geldi.
+370	A	Bu kadar küçük biri için ağzın çok büyük.
+372	NEW	Boşuna yer kaplıyor.
+373	A	Sen kendini kim sanıyorsun be?
+377	B	Bir elim bağlı olsa bile sana posta koyarım.
+380	A	Oh, git başımdan, seni eşek.
+385	A	Ne büyük bir saçmalık.
+391	B	Sen kimsin de patron kesildin?
+394	A	Benden bir parça mı istiyorsun? Gel de al!
+403	A	Bir aksiyon kahramanı gibi, silahlar patlayarak girdi içeri.
+409	A	Hiç gelmemesinden iyidir herhalde.
+412	B	Ooo, sen hızlısın, değil mi?
+414	A	Abi, partiyi mahvetmeyi gerçekten biliyorsun.
+415	B	Odun gibi aptal.
+421	B	Sadece seninle dalga geçiyordum, sakin ol.
+425	A	Kendini çok kurnaz sanıyorsun, ha? Göreceğiz bakalım.
+427	B	Oraya gelmemi isteme.
+434	A	Bu işte bir bit yeniği var.
+435	A	Yıllardır o hazinenin üstünde oturuyor.
+436	A	Sana söylüyorum, o adam başımıza dert açar.
+438	B	Dinle beni, seni küçük serseri.
+439	NEW	Kendini güzel bir belaya sokmuşsun.
+442	A	Kalk, tembel herif!
+444	B	Eskisi gibi yapmıyorlar artık.
+446	B	Pekâlâ, koca adam, bakalım neler yapabiliyorsun.
+450	B	Vay canına, şuna bak!
+452	NEW	Aman, aşağısı çok yüksek.
+453	B	Dur dur dur, yavaş ol!
+455	A	Pardon, benim hatam.
+457	B	Öf, iğrenç! Bu da ne?
+461	B	Ay, korkuttun beni!
+462	B	Ha-ha! Hak ettin!
+474	A	Off, zor seyirci.
+477	B	Efendim?
+480	B	Çok şükür, kurtulduk.
+489	A	Hay aksi! Kaçtılar.
+492	B	Hey! Mallara elini sürme!
+500	NEW	Vay canına, adam kocaman!
+501	A	Vay, şuna bakın!
+502	B	Hey, canım yandı!
+503	A	Bir oda tutun artık, ikiniz!
+506	A	Güzel! Tarihe geçecek bir şey bu.
+510	B	Pfft, ne var yani.
+511	NEW	Eyvah, galiba kırdım.
+512	B	Ay ay, ne dağınıklık.
+513	B	Ha, hayal gör, ahbap.
+518	A	Pekâlâ, kim osurdu?
+519	A	Abi, adam fitil olmuş.
+520	A	Seni eski kurt, yaptın!
+523	NEW	Bu kız tam bir hazine.
+524	B	Adam ona abayı yakmış.
+526	A	Hey, mallara dikkat et!
+527	A	Şu adam çok komik!
+531	A	Aman, bu ağır!
+532	A	Pekâlâ, başlayalım.
+533	A	Harika, işimiz tamam.
+534	A	Vay canına, ne kocaman!
+535	B	Şanssızlık, eski dostum.
+541	A	Yüzünü görmeye bile tahammül edemiyorum.
+546	A	Seni pis hain!
+552	NEW	Burada kendini bir şey sanan biri var.
+554	A	Haydi kurtçuklar, kımıldayın!
+555	A	O ödlek biri.
+567	A	Çeneni kapat, seni şişko tembel.
+568	A	Allah Allah, çok yavaşsın.
+573	NEW	Ne ürkütücü herif.
+576	A	Siktir et.
+578	A	Senden yeterince dinledim.
+579	A	Abi, sende yetenek var!
+581	NEW	Sen tam bir baş belasısın.
+582	A	Hey, benim lafımı çaldın!
+588	NEW	Hadi canım, kendini bir şey sanma.
+592	NEW	Sen nasıl rahat edersen.
+596	A	Senin için bile zayıf bir bahane.
+600	NEW	Adamın müzik kulağı yok.
+602	NEW	Bu kadarı senin için bile fazla acımasızca.
+604	A	Ağzını topla, genç adam!

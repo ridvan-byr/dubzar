@@ -1,0 +1,12 @@
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\marian\tokenization_marian.py:176: UserWarning: Recommended: pip install sacremoses.
+  warnings.warn("Recommended: pip install sacremoses.")
+Loading weights:   0%|          | 0/257 [00:00<?, ?it/s]Loading weights:  48%|####7     | 123/257 [00:00<00:00, 1221.83it/s]Loading weights:  96%|#########5| 246/257 [00:00<00:00, 832.20it/s] Loading weights: 100%|##########| 257/257 [00:00<00:00, 759.53it/s]
+2041 eğitim (1856 oyun + 185 tekrar), 206 doğrulama, cihaz: cuda
+[eğitimsiz] zor satırlar (test)  59.7 | doğrulama  60.8 | genel konuşma  90.0 | eski davranışı koruma 100.0
+-- tur 1: eğitim kaybı 0.815 (38 sn)
+-- tur 2: eğitim kaybı 0.350 (37 sn)
+-- tur 3: eğitim kaybı 0.175 (37 sn)
+-- tur 4: eğitim kaybı 0.104 (37 sn)
+[tur 4] zor satırlar (test)  57.9 | doğrulama  67.3 | genel konuşma  84.9 | eski davranışı koruma  85.9
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|##########| 1/1 [00:01<00:00,  1.61s/it]Writing model shards: 100%|##########| 1/1 [00:01<00:00,  1.61s/it]
+kaydedildi: models_ft/opus-mt-en-tr-games-v2
